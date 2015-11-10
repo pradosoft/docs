@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TActivePageAdapter | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li class="active"><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li class="active"><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Web.UI.ActiveControls.html" title="Summary of System\Web\UI\ActiveControls"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActivePageAdapter</h1>
+
+
+	<div class="description">
+	
+<p>TActivePageAdapter class.</p>
+
+<p>Callback request handler.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TControlAdapter.html"><span>TControlAdapter</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TActivePageAdapter</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Wei Zhuo &lt;weizhuo[at]gamil[dot]com&gt;<br />
+				<b>Author:</b>
+				Gabor Berczi &lt;<a
+href="mailto:gabor.berczi&#64;devworx.hu">gabor.berczi&#64;<!-- -->devworx.hu</a>&gt;
+(lazyload additions &amp; progressive rendering)<br />
+				<b>Since:</b>
+				3.1<br />
+		<b>Located at</b> Web/UI/ActiveControls/TActivePageAdapter.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TPage.html">TPage</a></code> <var>$control</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor, trap errors and exception to let the callback response handle
+them.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor, trap errors and exception to let the callback response handle
+them.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd><code><code><a href="class-TControl.html">TControl</a></code></code><br>the control to which the adapter is attached</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControlAdapter.html#___construct">TControlAdapter::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processCallbackEvent" id="_processCallbackEvent">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processCallbackEvent">#</a>
+		<code>processCallbackEvent( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Process the callback request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Process the callback request.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd><code><code><a href="class-THtmlWriter.html">THtmlWriter</a></code></code><br>html content writer.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerControlToRender" id="_registerControlToRender">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerControlToRender">#</a>
+		<code>registerControlToRender( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span>, <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register a control for defered render() call.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register a control for defered render() call.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd><code><code><a href="class-TControl.html">TControl</a></code></code><br>control for defered rendering</dd>
+					<dt><var>$writer</var></dt>
+					<dd><code><code><a href="class-THtmlWriter.html">THtmlWriter</a></code></code><br>the renderer</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trapCallbackErrorsExceptions" id="_trapCallbackErrorsExceptions">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trapCallbackErrorsExceptions">#</a>
+		<code>trapCallbackErrorsExceptions( )</code>
+
+		<div class="description short">
+			
+<p>Trap errors and exceptions to be handled by TCallbackErrorHandler.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Trap errors and exceptions to be handled by TCallbackErrorHandler.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderCallbackResponse" id="_renderCallbackResponse">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderCallbackResponse">#</a>
+		<code>renderCallbackResponse( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Render the callback response.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Render the callback response.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd><code><code><a href="class-THtmlWriter.html">THtmlWriter</a></code></code><br>html content writer.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="redirect" id="_redirect">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_redirect">#</a>
+		<code>redirect( <span>string <var>$url</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Redirect url on the client-side using javascript.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Redirect url on the client-side using javascript.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code><br>new url to load.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderResponse" id="_renderResponse">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderResponse">#</a>
+		<code>renderResponse( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Renders the callback response by adding additional callback data and
+javascript actions in the header and page state if required.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renders the callback response by adding additional callback data and
+javascript actions in the header and page state if required.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd><code><code><a href="class-THtmlWriter.html">THtmlWriter</a></code></code><br>html content writer.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCallbackEventTarget" id="_getCallbackEventTarget">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TControl.html">TControl</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCallbackEventTarget">#</a>
+		<code>getCallbackEventTarget( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TControl.html">TControl</a></code></code><br>the control responsible for the current callback event, null if nonexistent<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCallbackEventTarget" id="_setCallbackEventTarget">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCallbackEventTarget">#</a>
+		<code>setCallbackEventTarget( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers a control to raise callback event in the current request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers a control to raise callback event in the current request.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd><code><code><a href="class-TControl.html">TControl</a></code></code><br>control registered to raise callback event.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCallbackEventParameter" id="_getCallbackEventParameter">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCallbackEventParameter">#</a>
+		<code>getCallbackEventParameter( )</code>
+
+		<div class="description short">
+			
+<p>Gets callback parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets callback parameter.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>postback event parameter<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCallbackEventParameter" id="_setCallbackEventParameter">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCallbackEventParameter">#</a>
+		<code>setCallbackEventParameter( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>postback event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCallbackClientHandler" id="_getCallbackClientHandler">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TCallbackClientScript.html">TCallbackClientScript</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCallbackClientHandler">#</a>
+		<code>getCallbackClientHandler( )</code>
+
+		<div class="description short">
+			
+<p>Gets the callback client script handler. It handlers the javascript functions
+to be executed during the callback response.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the callback client script handler. It handlers the javascript functions
+to be executed during the callback response.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TCallbackClientScript.html">TCallbackClientScript</a></code></code><br>callback client handler.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TControlAdapter.html#methods">TControlAdapter</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControlAdapter.html#_createChildControls">createChildControls()</a>, 
+			<a href="class-TControlAdapter.html#_getControl">getControl()</a>, 
+			<a href="class-TControlAdapter.html#_getPage">getPage()</a>, 
+			<a href="class-TControlAdapter.html#_loadState">loadState()</a>, 
+			<a href="class-TControlAdapter.html#_onInit">onInit()</a>, 
+			<a href="class-TControlAdapter.html#_onLoad">onLoad()</a>, 
+			<a href="class-TControlAdapter.html#_onPreRender">onPreRender()</a>, 
+			<a href="class-TControlAdapter.html#_onUnload">onUnload()</a>, 
+			<a href="class-TControlAdapter.html#_render">render()</a>, 
+			<a href="class-TControlAdapter.html#_renderChildren">renderChildren()</a>, 
+			<a href="class-TControlAdapter.html#_saveState">saveState()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CALLBACK_DATA_HEADER" id="CALLBACK_DATA_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_DATA_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-DATA'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_DATA_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Callback response data header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback response data header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_ACTION_HEADER" id="CALLBACK_ACTION_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_ACTION_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-ACTIONS'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_ACTION_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Callback response client-side action header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback response client-side action header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_ERROR_HEADER" id="CALLBACK_ERROR_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_ERROR_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-ERROR'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_ERROR_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Callback error header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback error header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_PAGESTATE_HEADER" id="CALLBACK_PAGESTATE_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_PAGESTATE_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-PAGESTATE'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_PAGESTATE_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Callback page state header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback page state header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_SCRIPTLIST_HEADER" id="CALLBACK_SCRIPTLIST_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_SCRIPTLIST_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-SCRIPTLIST'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_SCRIPTLIST_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Script list header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Script list header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_STYLESHEETLIST_HEADER" id="CALLBACK_STYLESHEETLIST_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_STYLESHEETLIST_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-STYLESHEETLIST'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_STYLESHEETLIST_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Stylesheet list header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Stylesheet list header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_STYLESHEET_HEADER" id="CALLBACK_STYLESHEET_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_STYLESHEET_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-STYLESHEET'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_STYLESHEET_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Stylesheet header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Stylesheet header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_HIDDENFIELDLIST_HEADER" id="CALLBACK_HIDDENFIELDLIST_HEADER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_HIDDENFIELDLIST_HEADER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-HIDDENFIELDLIST'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_HIDDENFIELDLIST_HEADER" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Hidden field list header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Hidden field list header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CALLBACK_REDIRECT" id="CALLBACK_REDIRECT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CALLBACK_REDIRECT</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'X-PRADO-REDIRECT'</span></code></td>
+		<td class="description"><div>
+			<a href="#CALLBACK_REDIRECT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Callback redirect url header name.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback redirect url header name.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-TControlAdapter.html#properties">TControlAdapter</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControlAdapter.html#$_control"><var>$_control</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

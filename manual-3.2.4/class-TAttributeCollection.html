@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TAttributeCollection | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li class="active"><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Collections.html" title="Summary of System\Collections"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TAttributeCollection</h1>
+
+
+	<div class="description">
+	
+<p>TAttributeCollection class</p>
+
+<p>TAttributeCollection implements a collection for storing attribute names and
+values.</p>
+
+<p>Besides all functionalities provided by <code><a href="class-TMap.html">TMap</a></code>, TAttributeCollection
+allows you to get and set attribute values like getting and setting properties.
+For example, the following usages are all valid for a TAttributeCollection
+object:</p>
+
+<pre>
+<span class="php-var">$collection</span>-&gt;Text=<span
+class="php-quote">'text'</span>;
+<span class="php-keyword1">echo</span> <span
+class="php-var">$collection</span>-&gt;Text;
+</pre>
+
+<p>They are equivalent to the following:</p>
+
+<pre>
+<span class="php-var">$collection</span>-&gt;add(<span
+class="php-quote">'Text'</span>,<span class="php-quote">'text'</span>);
+<span
+class="php-keyword1">echo</span> <span
+class="php-var">$collection</span>-&gt;itemAt(<span
+class="php-quote">'Text'</span>);
+</pre>
+
+<p>Note, attribute names are case-insensitive. They are converted to lower-case
+in the collection storage.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TMap.html"><span>TMap</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TAttributeCollection</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Collections.html">Collections</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0<br />
+		<b>Located at</b> Collections/TAttributeCollection.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code>__get( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a property value or an event handler list by property or event name.
+This method overrides the parent implementation by returning a key value if the
+key exists in the collection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a property value or an event handler list by property or event name.
+This method overrides the parent implementation by returning a key value if the
+key exists in the collection.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name or the event name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the property value or the event handler list<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the property/event is not defined.<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___get">TComponent::__get()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set">#</a>
+		<code>__set( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets value of a component property. This method overrides the parent
+implementation by adding a new key value to the collection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets value of a component property. This method overrides the parent
+implementation by adding a new key value to the collection.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name or event name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>the property value or event handler</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>If the property is not defined or read-only.<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___set">TComponent::__set()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCaseSensitive" id="_getCaseSensitive">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCaseSensitive">#</a>
+		<code>getCaseSensitive( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the keys are case-sensitive. Defaults to false.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCaseSensitive" id="_setCaseSensitive">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCaseSensitive">#</a>
+		<code>setCaseSensitive( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>whether the keys are case-sensitive.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="itemAt" id="_itemAt">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_itemAt">#</a>
+		<code>itemAt( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the item with the specified key. This overrides the parent
+implementation by converting the key to lower case first if CaseSensitive is
+false.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the item with the specified key. This overrides the parent
+implementation by converting the key to lower case first if CaseSensitive is
+false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>the key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the element at the offset, null if no element is found at the offset<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_itemAt">TMap::itemAt()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add">#</a>
+		<code>add( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds an item into the map. This overrides the parent implementation by
+converting the key to lower case first if CaseSensitive is false.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds an item into the map. This overrides the parent implementation by
+converting the key to lower case first if CaseSensitive is false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>key</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>value</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the map is read-only<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_add">TMap::add()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="_remove">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remove">#</a>
+		<code>remove( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes an item from the map by its key. This overrides the parent
+implementation by converting the key to lower case first if CaseSensitive is
+false.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes an item from the map by its key. This overrides the parent
+implementation by converting the key to lower case first if CaseSensitive is
+false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>the key of the item to be removed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the removed value, null if no such key exists.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the map is read-only<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_remove">TMap::remove()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="contains" id="_contains">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_contains">#</a>
+		<code>contains( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns whether the specified is in the map. This overrides the parent
+implementation by converting the key to lower case first if CaseSensitive is
+false.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns whether the specified is in the map. This overrides the parent
+implementation by converting the key to lower case first if CaseSensitive is
+false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>mixed</code><br>the key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the map contains an item with the specified key<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_contains">TMap::contains()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasProperty" id="_hasProperty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasProperty">#</a>
+		<code>hasProperty( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a property is defined. This method overrides parent
+implementation by returning true if the collection contains the named key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a property is defined. This method overrides parent
+implementation by returning true if the collection contains the named key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the property is defined<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#_hasProperty">TComponent::hasProperty()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="canGetProperty" id="_canGetProperty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_canGetProperty">#</a>
+		<code>canGetProperty( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a property can be read. This method overrides parent
+implementation by returning true if the collection contains the named key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a property can be read. This method overrides parent
+implementation by returning true if the collection contains the named key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the property can be read<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#_canGetProperty">TComponent::canGetProperty()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="canSetProperty" id="_canSetProperty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_canSetProperty">#</a>
+		<code>canSetProperty( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a property can be set. This method overrides parent
+implementation by always returning true because you can always add a new value
+to the collection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a property can be set. This method overrides parent
+implementation by always returning true because you can always add a new value
+to the collection.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#_canSetProperty">TComponent::canSetProperty()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TMap.html#methods">TMap</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TMap.html#___construct">__construct()</a>, 
+			<a href="class-TMap.html#_clear">clear()</a>, 
+			<a href="class-TMap.html#_copyFrom">copyFrom()</a>, 
+			<a href="class-TMap.html#_count">count()</a>, 
+			<a href="class-TMap.html#_getCount">getCount()</a>, 
+			<a href="class-TMap.html#_getIterator">getIterator()</a>, 
+			<a href="class-TMap.html#_getKeys">getKeys()</a>, 
+			<a href="class-TMap.html#_getReadOnly">getReadOnly()</a>, 
+			<a href="class-TMap.html#_mergeWith">mergeWith()</a>, 
+			<a href="class-TMap.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-TMap.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-TMap.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-TMap.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="class-TMap.html#_setReadOnly">setReadOnly()</a>, 
+			<a href="class-TMap.html#_toArray">toArray()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

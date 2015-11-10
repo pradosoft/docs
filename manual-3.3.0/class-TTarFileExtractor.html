@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TTarFileExtractor | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-TTarFileExtractor.html">TTarFileExtractor</a></li>
+				<li><a href="class-TTextWriter.html">TTextWriter</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TTarFileExtractor</h1>
+
+
+	<div class="description">
+	<p>TTarFileExtractor class</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.IO.html">IO</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 1997-2003 The PHP Group<br>
+				<b>Author:</b>
+				Vincent Blavet <a href="mail&#116;&#111;&#58;&#118;&#105;&#110;&#99;&#101;&#110;&#116;&#64;&#112;&#104;&#112;&#99;&#111;&#110;&#99;&#101;&#112;&#116;&#46;&#110;&#x65;&#x74;">&#118;&#105;&#110;&#99;&#101;&#110;&#116;&#64;&#112;&#104;&#112;&#99;&#111;&#110;&#99;&#101;&#112;&#116;&#46;&#110;&#x65;&#x74;</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> IO/TTarFileExtractor.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>string <var>$p_tarname</var></span> )</code>
+
+		<div class="description short">
+			<p>Archive_Tar Class constructor. This flavour of the constructor only
+declare a new Archive_Tar object, identifying it by the name of the
+tar file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Archive_Tar Class constructor. This flavour of the constructor only
+declare a new Archive_Tar object, identifying it by the name of the
+tar file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$p_tarname</var></dt>
+					<dd>The name of the tar archive to create</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code>__destruct( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extract" id="_extract">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extract">#</a>
+		<code>extract( <span> <var>$p_path</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extractModify" id="_extractModify">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extractModify">#</a>
+		<code>extractModify( <span>string <var>$p_path</var></span>, <span>string <var>$p_remove_path</var></span> )</code>
+
+		<div class="description short">
+			<p>This method extract all the content of the archive in the directory
+indicated by $p_path. When relevant the memorized path of the
+files/dir can be modified by removing the $p_remove_path path at the
+beginning of the file/dir path.
+While extracting a file, if the directory path does not exists it is
+created.
+While extracting a file, if the file already exists it is replaced
+without looking for last modification date.
+While extracting a file, if the file already exists and is write
+protected, the extraction is aborted.
+While extracting a file, if a directory with the same name already
+exists, the extraction is aborted.
+While extracting a directory, if a file with the same name already
+exists, the extraction is aborted.
+While extracting a file/directory if the destination directory exist
+and is write protected, or does not exist but can not be created,
+the extraction is aborted.
+If after extraction an extracted file does not show the correct
+stored file size, the extraction is aborted.
+When the extraction is aborted, a PEAR error text is set and false
+is returned. However the result can be a partial extraction that may
+need to be manually cleaned.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method extract all the content of the archive in the directory
+indicated by $p_path. When relevant the memorized path of the
+files/dir can be modified by removing the $p_remove_path path at the
+beginning of the file/dir path.
+While extracting a file, if the directory path does not exists it is
+created.
+While extracting a file, if the file already exists it is replaced
+without looking for last modification date.
+While extracting a file, if the file already exists and is write
+protected, the extraction is aborted.
+While extracting a file, if a directory with the same name already
+exists, the extraction is aborted.
+While extracting a directory, if a file with the same name already
+exists, the extraction is aborted.
+While extracting a file/directory if the destination directory exist
+and is write protected, or does not exist but can not be created,
+the extraction is aborted.
+If after extraction an extracted file does not show the correct
+stored file size, the extraction is aborted.
+When the extraction is aborted, a PEAR error text is set and false
+is returned. However the result can be a partial extraction that may
+need to be manually cleaned.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$p_path</var></dt>
+					<dd><p>The path of the directory where the
+                              files/dir need to by extracted.</p></dd>
+					<dt><var>$p_remove_path</var></dt>
+					<dd><p>Part of the memorized path that can be
+                              removed if present at the beginning of
+                              the file/dir path.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true on success, false on error.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_error" id="__error">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__error">#</a>
+		<code>_error( <span> <var>$p_message</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_extractList" id="__extractList">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__extractList">#</a>
+		<code>_extractList( <span> <var>$p_path</var></span>, <span> <var>&amp; $p_list_detail</var></span>, <span> <var>$p_mode</var></span>, <span> <var>$p_file_list</var></span>, <span> <var>$p_remove_path</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_dirCheck" id="__dirCheck">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__dirCheck">#</a>
+		<code>_dirCheck( <span>string <var>$p_dir</var></span> )</code>
+
+		<div class="description short">
+			<p>Check if a directory exists and create it (including parent
+dirs) if not.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if a directory exists and create it (including parent
+dirs) if not.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$p_dir</var></dt>
+					<dd>directory to check</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the directory exists or was created
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_translateWinPath" id="__translateWinPath">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__translateWinPath">#</a>
+		<code>_translateWinPath( <span> <var>$p_path</var></span>, <span> <var>$p_remove_disk_letter</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

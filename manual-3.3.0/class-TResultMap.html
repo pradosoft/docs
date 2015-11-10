@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TResultMap | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TDiscriminator.html">TDiscriminator</a></li>
+				<li><a href="class-TInlineParameterMapParser.html">TInlineParameterMapParser</a></li>
+				<li><a href="class-TParameterMap.html">TParameterMap</a></li>
+				<li><a href="class-TParameterProperty.html">TParameterProperty</a></li>
+				<li class="active"><a href="class-TResultMap.html">TResultMap</a></li>
+				<li><a href="class-TResultProperty.html">TResultProperty</a></li>
+				<li><a href="class-TSimpleDynamicParser.html">TSimpleDynamicParser</a></li>
+				<li><a href="class-TSqlMapCacheKey.html">TSqlMapCacheKey</a></li>
+				<li><a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a></li>
+				<li><a href="class-TSqlMapCacheTypes.html">TSqlMapCacheTypes</a></li>
+				<li><a href="class-TSqlMapDelete.html">TSqlMapDelete</a></li>
+				<li><a href="class-TSqlMapInsert.html">TSqlMapInsert</a></li>
+				<li><a href="class-TSqlMapSelectKey.html">TSqlMapSelectKey</a></li>
+				<li><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></li>
+				<li><a href="class-TSqlMapUpdate.html">TSqlMapUpdate</a></li>
+				<li><a href="class-TSqlMapXmlConfigBuilder.html">TSqlMapXmlConfigBuilder</a></li>
+				<li><a href="class-TSqlMapXmlConfiguration.html">TSqlMapXmlConfiguration</a></li>
+				<li><a href="class-TSqlMapXmlMappingConfiguration.html">TSqlMapXmlMappingConfiguration</a></li>
+				<li><a href="class-TSubMap.html">TSubMap</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TResultMap</h1>
+
+
+	<div class="description">
+	<p>TResultMap corresponds to <resultMap> mapping tag.</p>
+
+<p>A TResultMap lets you control how data is extracted from the result of a
+query, and how the columns are mapped to object properties. A TResultMap
+can describe the column type, a null value replacement, and complex property
+mappings including Collections.</p>
+
+<p>The <resultMap> can contain any number of property mappings that map object
+properties to the columns of a result element. The property mappings are
+applied, and the columns are read, in the order that they are defined.
+Maintaining the element order ensures consistent results between different
+drivers and providers.</p>
+
+<p>The Class setClass() property must be a PHP class object or array instance.</p>
+
+<p>The optional Extends setExtends() attribute can be set to the ID of
+another <resultMap> upon which to base this <resultMap>. All properties of the
+"parent" <resultMap> will be included as part of this <resultMap>, and values
+from the "parent" <resultMap> are set before any values specified by this <resultMap>.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TResultMap</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.SqlMap.html">SqlMap</a>\<a href="package-System.Data.SqlMap.Configuration.html">Configuration</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Data/SqlMap/Configuration/TResultMap.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( )</code>
+
+		<div class="description short">
+			<p>Initialize the columns collection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initialize the columns collection.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getID" id="_getID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getID">#</a>
+		<code>getID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>a unique identifier for the <resultMap>.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setID" id="_setID">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setID">#</a>
+		<code>setID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>unique identifier for the <resultMap>.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClass" id="_getClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClass">#</a>
+		<code>getClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>result class name.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setClass" id="_setClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setClass">#</a>
+		<code>setClass( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>class name.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getColumns" id="_getColumns">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TMap.html">TMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getColumns">#</a>
+		<code>getColumns( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TMap.html">TMap</a></code><br>result columns.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getExtends" id="_getExtends">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getExtends">#</a>
+		<code>getExtends( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>result map extends another result map.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setExtends" id="_setExtends">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setExtends">#</a>
+		<code>setExtends( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>map extends another result map.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getGroupBy" id="_getGroupBy">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getGroupBy">#</a>
+		<code>getGroupBy( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>result map groups by.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setGroupBy" id="_setGroupBy">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setGroupBy">#</a>
+		<code>setGroupBy( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>map group by</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDiscriminator" id="_getDiscriminator">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDiscriminator.html">TDiscriminator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDiscriminator">#</a>
+		<code>getDiscriminator( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDiscriminator.html">TDiscriminator</a></code><br>result class discriminator.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDiscriminator" id="_setDiscriminator">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDiscriminator">#</a>
+		<code>setDiscriminator( <span><code><a href="class-TDiscriminator.html">TDiscriminator</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>class discriminator.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addResultProperty" id="_addResultProperty">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addResultProperty">#</a>
+		<code>addResultProperty( <span><code><a href="class-TResultProperty.html">TResultProperty</a></code> <var>$property</var></span> )</code>
+
+		<div class="description short">
+			<p>Add a TResultProperty to result mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a TResultProperty to result mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$property</var></dt>
+					<dd>property.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createInstanceOfResult" id="_createInstanceOfResult">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createInstanceOfResult">#</a>
+		<code>createInstanceOfResult( <span><code><a href="class-TSqlMapTypeHandlerRegistry.html">TSqlMapTypeHandlerRegistry</a></code> <var>$registry</var></span> )</code>
+
+		<div class="description short">
+			<p>Create a new instance of the class of this result map.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new instance of the class of this result map.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$registry</var></dt>
+					<dd>handler registry.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>new result object.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapException.html">TSqlMapException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resolveSubMap" id="_resolveSubMap">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TResultMap.html">TResultMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resolveSubMap">#</a>
+		<code>resolveSubMap( <span><code><a href="class-TSqlMapTypeHandlerRegistry.html">TSqlMapTypeHandlerRegistry</a></code> <var>$registry</var></span>, <span>array <var>$row</var></span> )</code>
+
+		<div class="description short">
+			<p>Result sub-mappings using the discriminiator column.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Result sub-mappings using the discriminiator column.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$registry</var></dt>
+					<dd>handler registry</dd>
+					<dt><var>$row</var></dt>
+					<dd>data.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TResultMap.html">TResultMap</a></code><br>result sub-map.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

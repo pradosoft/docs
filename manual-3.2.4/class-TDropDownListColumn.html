@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TDropDownListColumn | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li class="active"><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Web.UI.WebControls.html" title="Summary of System\Web\UI\WebControls"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TDropDownListColumn</h1>
+
+
+	<div class="description">
+	
+<p>TDropDownListColumn class</p>
+
+<p>TDropDownListColumn represents a column that is bound to a field in a data
+source. The cells in the column will be displayed using the data indexed by
+setDataTextField DataTextField. You can customize the display by setting
+setDataTextFormatString DataTextFormatString.</p>
+
+<p>If setReadOnly ReadOnly is false, TDropDownListColumn will display
+cells in edit mode with dropdown lists. Otherwise, a static text is displayed.
+The currently selected dropndown list item is specified by the data indexed with
+setDataValueField DataValueField.</p>
+
+<p>There are two approaches to specify the list items available for selection.
+The first approach uses template syntax as follows,</p>
+
+<pre>
+&lt;com:TDropDownListColumn ....&gt;
+  &lt;com:TListItem Value=<span
+class="php-quote">&quot;1&quot;</span> Text=<span
+class="php-quote">&quot;first item&quot;</span> /&gt;
+  &lt;com:TListItem Value=<span
+class="php-quote">&quot;2&quot;</span> Text=<span
+class="php-quote">&quot;second item&quot;</span> /&gt;
+  &lt;com:TListItem Value=<span
+class="php-quote">&quot;3&quot;</span> Text=<span
+class="php-quote">&quot;third item&quot;</span> /&gt;
+&lt;/com:TDropDownListColumn&gt;
+</pre>
+
+<p>The second approach specifies a data source to be bound to the dropdown lists
+by setting setListDataSource ListDataSource. Like generic list controls,
+you may also want to specify which data fields are used for item values and
+texts by setting setListValueField ListValueField and setListTextField ListTextField, respectively. Furthermore, the item texts may
+be formatted by using setListTextFormatString ListTextFormatString.
+Note, if you specify setListDataSource ListDataSource, do it before
+calling the datagrid's dataBind().</p>
+
+<p>The dropdown list control in the TDropDownListColumn can be accessed by one
+of the following two methods:</p>
+
+<pre>
+<span
+class="php-var">$datagridItem</span>-&gt;DropDownListColumnID-&gt;DropDownList
+<span
+class="php-var">$datagridItem</span>-&gt;DropDownListColumnID-&gt;Controls[<span
+class="php-num">0</span>]
+</pre>
+
+<p>The second method is possible because the dropdown list control created
+within the datagrid cell is the first child.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TDataGridColumn.html"><span>TDataGridColumn</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TDropDownListColumn</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TActiveDropDownListColumn.html">TActiveDropDownListColumn</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0.4<br />
+		<b>Located at</b> Web/UI/WebControls/TDropDownListColumn.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( )</code>
+
+		<div class="description short">
+			
+<p>The common __construct If desired by the new object, this will auto install
+and listen to global event functions as defined by the object via 'fx' methods.
+This also attaches any predefined behaviors. This function installs all class
+behaviors in a class hierarchy from the deepest subclass through each parent to
+the top most class, TComponent.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The common __construct If desired by the new object, this will auto install
+and listen to global event functions as defined by the object via 'fx' methods.
+This also attaches any predefined behaviors. This function installs all class
+behaviors in a class hierarchy from the deepest subclass through each parent to
+the top most class, TComponent.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadState" id="_loadState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadState">#</a>
+		<code>loadState( <span>mixed <var>$state</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Loads items from viewstate. This method overrides the parent implementation
+by loading list items</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads items from viewstate. This method overrides the parent implementation
+by loading list items</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$state</var></dt>
+					<dd><code>mixed</code><br>state values</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TDataGridColumn.html#_loadState">TDataGridColumn::loadState()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveState" id="_saveState">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveState">#</a>
+		<code>saveState( )</code>
+
+		<div class="description short">
+			
+<p>Saves items into viewstate. This method overrides the parent implementation
+by saving list items</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Saves items into viewstate. This method overrides the parent implementation
+by saving list items</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>values to be saved<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TDataGridColumn.html#_saveState">TDataGridColumn::saveState()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addParsedObject" id="_addParsedObject">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addParsedObject">#</a>
+		<code>addParsedObject( <span>mixed <var>$object</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds object parsed from template to the control. This method adds only <code><a href="class-TListItem.html">TListItem</a></code> objects into the getItems Items collection. All other objects
+are ignored.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds object parsed from template to the control. This method adds only <code><a href="class-TListItem.html">TListItem</a></code> objects into the getItems Items collection. All other objects
+are ignored.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$object</var></dt>
+					<dd><code>mixed</code><br>object parsed from template</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#_addParsedObject">TComponent::addParsedObject()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDataTextField" id="_getDataTextField">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDataTextField">#</a>
+		<code>getDataTextField( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the field of the data source that provides the text content of the column.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDataTextField" id="_setDataTextField">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDataTextField">#</a>
+		<code>setDataTextField( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the field of the data source that provides the text content of the
+column. If this is not set, the data specified via getDataValueField
+DataValueField will be displayed in the column.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the field of the data source that provides the text content of the
+column. If this is not set, the data specified via getDataValueField
+DataValueField will be displayed in the column.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the field of the data source that provides the text content of the column.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDataTextFormatString" id="_getDataTextFormatString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDataTextFormatString">#</a>
+		<code>getDataTextFormatString( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the formatting string used to control how the bound data will be displayed.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDataTextFormatString" id="_setDataTextFormatString">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDataTextFormatString">#</a>
+		<code>setDataTextFormatString( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the formatting string used to control how the bound data will be displayed.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDataValueField" id="_getDataValueField">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDataValueField">#</a>
+		<code>getDataValueField( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the field of the data source that provides the key selecting an item in dropdown
+list.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDataValueField" id="_setDataValueField">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDataValueField">#</a>
+		<code>setDataValueField( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the field of the data source that provides the key selecting an item in
+dropdown list. If this is not present, the data specified via getDataTextField DataTextField (without applying the formatting string) will be
+used for selection, instead.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the field of the data source that provides the key selecting an item in
+dropdown list. If this is not present, the data specified via getDataTextField DataTextField (without applying the formatting string) will be
+used for selection, instead.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the field of the data source that provides the key selecting an item in dropdown
+list.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReadOnly" id="_getReadOnly">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReadOnly">#</a>
+		<code>getReadOnly( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the items in the column can be edited. Defaults to false.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setReadOnly" id="_setReadOnly">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setReadOnly">#</a>
+		<code>setReadOnly( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>whether the items in the column can be edited</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getListDataSource" id="_getListDataSource">
+
+		<td class="attributes"><code>
+			 public 
+			Traversable
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getListDataSource">#</a>
+		<code>getListDataSource( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Traversable</code><br>data source to be bound to the dropdown list boxes.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setListDataSource" id="_setListDataSource">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setListDataSource">#</a>
+		<code>setListDataSource( <span>Traversable|array|string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>Traversable|array|string</code><br>data source to be bound to the dropdown list boxes.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getListValueField" id="_getListValueField">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getListValueField">#</a>
+		<code>getListValueField( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the data field used to populate the values of the dropdown list items. Defaults
+to empty.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setListValueField" id="_setListValueField">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setListValueField">#</a>
+		<code>setListValueField( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the data field used to populate the values of the dropdown list items</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getListTextField" id="_getListTextField">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getListTextField">#</a>
+		<code>getListTextField( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the data field used to populate the texts of the dropdown list items. Defaults
+to empty.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setListTextField" id="_setListTextField">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setListTextField">#</a>
+		<code>setListTextField( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the data field used to populate the texts of the dropdown list items</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getListTextFormatString" id="_getListTextFormatString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getListTextFormatString">#</a>
+		<code>getListTextFormatString( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the formatting string used to control how the list item texts will be displayed.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setListTextFormatString" id="_setListTextFormatString">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setListTextFormatString">#</a>
+		<code>setListTextFormatString( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the formatting string used to control how the list item texts will be displayed.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initializeCell" id="_initializeCell">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeCell">#</a>
+		<code>initializeCell( <span><code><a href="class-TTableCell.html">TTableCell</a></code> <var>$cell</var></span>, <span>integer <var>$columnIndex</var></span>, <span>string <var>$itemType</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initializes the specified cell to its initial values. This method overrides
+the parent implementation. It creates a textbox for item in edit mode and the
+column is not read-only. Otherwise it displays a static text. The caption of the
+button and the static text are retrieved from the datasource.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes the specified cell to its initial values. This method overrides
+the parent implementation. It creates a textbox for item in edit mode and the
+column is not read-only. Otherwise it displays a static text. The caption of the
+button and the static text are retrieved from the datasource.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cell</var></dt>
+					<dd><code><code><a href="class-TTableCell.html">TTableCell</a></code></code><br>the cell to be initialized.</dd>
+					<dt><var>$columnIndex</var></dt>
+					<dd><code>integer</code><br>the index to the Columns property that the cell resides in.</dd>
+					<dt><var>$itemType</var></dt>
+					<dd><code>string</code><br>the type of cell (Header,Footer,Item,AlternatingItem,EditItem,SelectedItem)</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TDataGridColumn.html#_initializeCell">TDataGridColumn::initializeCell()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataBindColumn" id="_dataBindColumn">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dataBindColumn">#</a>
+		<code>dataBindColumn( <span>mixed <var>$sender</var></span>, <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Databinds a cell in the column. This method is invoked when datagrid performs
+databinding. It populates the content of the cell with the relevant data from
+data source.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Databinds a cell in the column. This method is invoked when datagrid performs
+databinding. It populates the content of the cell with the relevant data from
+data source.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TDataGridColumn.html#methods">TDataGridColumn</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TDataGridColumn.html#_formatDataValue">formatDataValue()</a>, 
+			<a href="class-TDataGridColumn.html#_getAllowSorting">getAllowSorting()</a>, 
+			<a href="class-TDataGridColumn.html#_getDataFieldValue">getDataFieldValue()</a>, 
+			<a href="class-TDataGridColumn.html#_getEnableCellGrouping">getEnableCellGrouping()</a>, 
+			<a href="class-TDataGridColumn.html#_getFooterRenderer">getFooterRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_getFooterStyle">getFooterStyle()</a>, 
+			<a href="class-TDataGridColumn.html#_getFooterText">getFooterText()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderImageUrl">getHeaderImageUrl()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderRenderer">getHeaderRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderStyle">getHeaderStyle()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderText">getHeaderText()</a>, 
+			<a href="class-TDataGridColumn.html#_getID">getID()</a>, 
+			<a href="class-TDataGridColumn.html#_getItemStyle">getItemStyle()</a>, 
+			<a href="class-TDataGridColumn.html#_getOwner">getOwner()</a>, 
+			<a href="class-TDataGridColumn.html#_getSortExpression">getSortExpression()</a>, 
+			<a href="class-TDataGridColumn.html#_getViewState">getViewState()</a>, 
+			<a href="class-TDataGridColumn.html#_getVisible">getVisible()</a>, 
+			<a href="class-TDataGridColumn.html#_initialize">initialize()</a>, 
+			<a href="class-TDataGridColumn.html#_initializeFooterCell">initializeFooterCell()</a>, 
+			<a href="class-TDataGridColumn.html#_initializeHeaderCell">initializeHeaderCell()</a>, 
+			<a href="class-TDataGridColumn.html#_setEnableCellGrouping">setEnableCellGrouping()</a>, 
+			<a href="class-TDataGridColumn.html#_setFooterRenderer">setFooterRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_setFooterText">setFooterText()</a>, 
+			<a href="class-TDataGridColumn.html#_setHeaderImageUrl">setHeaderImageUrl()</a>, 
+			<a href="class-TDataGridColumn.html#_setHeaderRenderer">setHeaderRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_setHeaderText">setHeaderText()</a>, 
+			<a href="class-TDataGridColumn.html#_setID">setID()</a>, 
+			<a href="class-TDataGridColumn.html#_setOwner">setOwner()</a>, 
+			<a href="class-TDataGridColumn.html#_setSortExpression">setSortExpression()</a>, 
+			<a href="class-TDataGridColumn.html#_setViewState">setViewState()</a>, 
+			<a href="class-TDataGridColumn.html#_setVisible">setVisible()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

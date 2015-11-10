@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TCacheHttpSession | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAssetManager.html">TAssetManager</a></li>
+				<li class="active"><a href="class-TCacheHttpSession.html">TCacheHttpSession</a></li>
+				<li><a href="class-THttpCookie.html">THttpCookie</a></li>
+				<li><a href="class-THttpCookieCollection.html">THttpCookieCollection</a></li>
+				<li><a href="class-THttpRequest.html">THttpRequest</a></li>
+				<li><a href="class-THttpRequestUrlFormat.html">THttpRequestUrlFormat</a></li>
+				<li><a href="class-THttpResponse.html">THttpResponse</a></li>
+				<li><a href="class-THttpResponseAdapter.html">THttpResponseAdapter</a></li>
+				<li><a href="class-THttpSession.html">THttpSession</a></li>
+				<li><a href="class-THttpSessionCookieMode.html">THttpSessionCookieMode</a></li>
+				<li><a href="class-THttpUtility.html">THttpUtility</a></li>
+				<li><a href="class-TSessionIterator.html">TSessionIterator</a></li>
+				<li><a href="class-TUri.html">TUri</a></li>
+				<li><a href="class-TUrlManager.html">TUrlManager</a></li>
+				<li><a href="class-TUrlMapping.html">TUrlMapping</a></li>
+				<li><a href="class-TUrlMappingPattern.html">TUrlMappingPattern</a></li>
+				<li><a href="class-TUrlMappingPatternSecureConnection.html">TUrlMappingPatternSecureConnection</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TCacheHttpSession</h1>
+
+
+	<div class="description">
+	<p>TCacheHttpSession class</p>
+
+<p>TCacheHttpSession provides access for storing session data using a cache module (e.g. TMemCache, TDbCache).
+To specify the cache module for data storage, set the setCacheModuleID CacheModuleID property
+which should refer to a valid cache module configured in the application configuration.</p>
+
+<p>The following example shows how we configure TCacheHttpSession:</p>
+
+<pre>&lt;modules&gt;
+   &lt;module id=<span class="php-quote">&quot;cache&quot;</span> <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Caching.TMemCache&quot;</span> Host=<span class="php-quote">&quot;localhost&quot;</span> Port=<span class="php-quote">&quot;11211&quot;</span> /&gt;
+   &lt;module id=<span class="php-quote">&quot;session&quot;</span> <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Web.TCacheHttpSession&quot;</span>
+        CacheModuleID=<span class="php-quote">&quot;cache&quot;</span> SessionName=<span class="php-quote">&quot;SSID&quot;</span>
+        CookieMode=<span class="php-quote">&quot;Allow&quot;</span> AutoStart=<span class="php-quote">&quot;true&quot;</span> GCProbability=<span class="php-quote">&quot;1&quot;</span>
+        UseTransparentSessionID=<span class="php-quote">&quot;true&quot;</span> TimeOut=<span class="php-quote">&quot;3600&quot;</span> /&gt;
+ &lt;/modules&gt;</pre>
+
+<p>Beware, by definition cache storage are volatile, which means the data stored on them
+may be swapped out and get lost. This may not be the case for certain cache storage,
+such as database. So make sure you manage your cache properly to avoid loss of session data.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-THttpSession.html"><span>THttpSession</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Countable</span>, 
+			
+				<a href="class-IModule.html"><span>IModule</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TCacheHttpSession</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Carl G. Mathisen <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#99;&#97;&#x72;&#x6c;&#x67;m&#97;&#116;&#x68;&#x69;&#x73;e&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#99;&#97;&#x72;&#x6c;&#x67;m&#97;&#116;&#x68;&#x69;&#x73;e&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.1.1<br>
+			<b>Located at</b> Web/TCacheHttpSession.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the module.
+This method is required by IModule.
+It reads the CacheModule property.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the module.
+This method is required by IModule.
+It reads the CacheModule property.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>configuration</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-THttpSession.html#_init">THttpSession::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheModuleID" id="_getCacheModuleID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheModuleID">#</a>
+		<code>getCacheModuleID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the ID of the cache module.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCacheModuleID" id="_setCacheModuleID">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCacheModuleID">#</a>
+		<code>setCacheModuleID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>ID of the cache module.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCache" id="_getCache">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-ICache.html">ICache</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCache">#</a>
+		<code>getCache( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-ICache.html">ICache</a></code><br>the cache module being used for data storage
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_read" id="__read">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__read">#</a>
+		<code>_read( <span>string <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Session read handler.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Session read handler.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>ID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the session data
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-THttpSession.html#__read">THttpSession::_read()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_write" id="__write">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__write">#</a>
+		<code>_write( <span>string <var>$id</var></span>, <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Session write handler.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Session write handler.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>ID</dd>
+					<dt><var>$data</var></dt>
+					<dd>data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether session write is successful
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-THttpSession.html#__write">THttpSession::_write()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_destroy" id="__destroy">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__destroy">#</a>
+		<code>_destroy( <span>string <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Session destroy handler.
+This method should be overriden if setUseCustomStorage UseCustomStorage is set true.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Session destroy handler.
+This method should be overriden if setUseCustomStorage UseCustomStorage is set true.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>ID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether session is destroyed successfully
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-THttpSession.html#__destroy">THttpSession::_destroy()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getKeyPrefix" id="_getKeyPrefix">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getKeyPrefix">#</a>
+		<code>getKeyPrefix( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>prefix of session variable name to avoid conflict with other cache data. Defaults to 'session'.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setKeyPrefix" id="_setKeyPrefix">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setKeyPrefix">#</a>
+		<code>setKeyPrefix( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>of session variable name to avoid conflict with other cache data</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="calculateKey" id="_calculateKey">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_calculateKey">#</a>
+		<code>calculateKey( <span>string <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>variable name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>a safe cache key associated with the session variable name
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-THttpSession.html#methods">THttpSession</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-THttpSession.html#__close">_close()</a>, 
+			<a href="class-THttpSession.html#__gc">_gc()</a>, 
+			<a href="class-THttpSession.html#__open">_open()</a>, 
+			<a href="class-THttpSession.html#_add">add()</a>, 
+			<a href="class-THttpSession.html#_clear">clear()</a>, 
+			<a href="class-THttpSession.html#_close">close()</a>, 
+			<a href="class-THttpSession.html#_contains">contains()</a>, 
+			<a href="class-THttpSession.html#_count">count()</a>, 
+			<a href="class-THttpSession.html#_destroy">destroy()</a>, 
+			<a href="class-THttpSession.html#_getAutoStart">getAutoStart()</a>, 
+			<a href="class-THttpSession.html#_getCookie">getCookie()</a>, 
+			<a href="class-THttpSession.html#_getCookieMode">getCookieMode()</a>, 
+			<a href="class-THttpSession.html#_getCount">getCount()</a>, 
+			<a href="class-THttpSession.html#_getGCProbability">getGCProbability()</a>, 
+			<a href="class-THttpSession.html#_getID">getID()</a>, 
+			<a href="class-THttpSession.html#_getIsStarted">getIsStarted()</a>, 
+			<a href="class-THttpSession.html#_getIterator">getIterator()</a>, 
+			<a href="class-THttpSession.html#_getKeys">getKeys()</a>, 
+			<a href="class-THttpSession.html#_getSavePath">getSavePath()</a>, 
+			<a href="class-THttpSession.html#_getSessionID">getSessionID()</a>, 
+			<a href="class-THttpSession.html#_getSessionName">getSessionName()</a>, 
+			<a href="class-THttpSession.html#_getTimeout">getTimeout()</a>, 
+			<a href="class-THttpSession.html#_getUseCustomStorage">getUseCustomStorage()</a>, 
+			<a href="class-THttpSession.html#_getUseTransparentSessionID">getUseTransparentSessionID()</a>, 
+			<a href="class-THttpSession.html#_itemAt">itemAt()</a>, 
+			<a href="class-THttpSession.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-THttpSession.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-THttpSession.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-THttpSession.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="class-THttpSession.html#_open">open()</a>, 
+			<a href="class-THttpSession.html#_regenerate">regenerate()</a>, 
+			<a href="class-THttpSession.html#_remove">remove()</a>, 
+			<a href="class-THttpSession.html#_setAutoStart">setAutoStart()</a>, 
+			<a href="class-THttpSession.html#_setCookieMode">setCookieMode()</a>, 
+			<a href="class-THttpSession.html#_setGCProbability">setGCProbability()</a>, 
+			<a href="class-THttpSession.html#_setID">setID()</a>, 
+			<a href="class-THttpSession.html#_setSavePath">setSavePath()</a>, 
+			<a href="class-THttpSession.html#_setSessionID">setSessionID()</a>, 
+			<a href="class-THttpSession.html#_setSessionName">setSessionName()</a>, 
+			<a href="class-THttpSession.html#_setTimeout">setTimeout()</a>, 
+			<a href="class-THttpSession.html#_setUseCustomStorage">setUseCustomStorage()</a>, 
+			<a href="class-THttpSession.html#_setUseTransparentSessionID">setUseTransparentSessionID()</a>, 
+			<a href="class-THttpSession.html#_toArray">toArray()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

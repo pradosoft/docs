@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TActiveRecordHasManyAssociation | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li class="active"><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li class="active"><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li class="active"><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Data.ActiveRecord.Relations.html" title="Summary of System\Data\ActiveRecord\Relations"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActiveRecordHasManyAssociation</h1>
+
+
+	<div class="description">
+	
+<p>Implements the M-N (many to many) relationship via association table.
+Consider the <b>entity</b> relationship between Articles and Categories via the
+association table <tt>Article_Category</tt>.</p>
+
+<pre>
++---------+            +------------------+            +----------+
+| Article | * -----&gt; * | Article_Category | * &lt;----- * | Category |
++---------+            +------------------+            +----------+
+</pre>
+
+<p>Where one article may have 0 or more categories and each category may have 0
+or more articles. We may model Article-Category <b>object</b> relationship as
+active record as follows.</p>
+
+<pre>
+<span class="php-keyword1">class</span> ArticleRecord
+{
+    <span
+class="php-keyword1">const</span> TABLE=<span
+class="php-quote">'Article'</span>;
+    <span
+class="php-keyword1">public</span> <span
+class="php-var">$article_id</span>;
+
+<span
+class="php-keyword1">public</span> <span
+class="php-var">$Categories</span>=<span
+class="php-keyword1">array</span>(); <span
+class="php-comment">//foreign object collection.</span>
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span
+class="php-var">$RELATIONS</span> = <span
+class="php-keyword1">array</span>
+    (
+        <span
+class="php-quote">'Categories'</span> =&gt; <span
+class="php-keyword1">array</span>(self::MANY_TO_MANY, <span
+class="php-quote">'CategoryRecord'</span>, <span
+class="php-quote">'Article_Category'</span>)
+    );
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span
+class="php-keyword1">function</span> finder(<span
+class="php-var">$className</span>=__CLASS__)
+    {
+        <span
+class="php-keyword1">return</span> parent::finder(<span
+class="php-var">$className</span>);
+    }
+}
+<span
+class="php-keyword1">class</span> CategoryRecord
+{
+    <span
+class="php-keyword1">const</span> TABLE=<span
+class="php-quote">'Category'</span>;
+    <span
+class="php-keyword1">public</span> <span
+class="php-var">$category_id</span>;
+
+    <span
+class="php-keyword1">public</span> <span class="php-var">$Articles</span>=<span
+class="php-keyword1">array</span>();
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span
+class="php-var">$RELATIONS</span> = <span
+class="php-keyword1">array</span>
+    (
+        <span
+class="php-quote">'Articles'</span> =&gt; <span
+class="php-keyword1">array</span>(self::MANY_TO_MANY, <span
+class="php-quote">'ArticleRecord'</span>, <span
+class="php-quote">'Article_Category'</span>)
+    );
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span
+class="php-keyword1">function</span> finder(<span
+class="php-var">$className</span>=__CLASS__)
+    {
+        <span
+class="php-keyword1">return</span> parent::finder(<span
+class="php-var">$className</span>);
+    }
+}
+</pre>
+
+<p>The static <tt>$RELATIONS</tt> property of ArticleRecord defines that the
+property <tt>$Categories</tt> has many <tt>CategoryRecord</tt>s. Similar, the
+static <tt>$RELATIONS</tt> property of CategoryRecord defines many
+ArticleRecords.</p>
+
+<p>The articles with categories list may be fetched as follows.</p>
+
+<pre>
+<span
+class="php-var">$articles</span> = TeamRecord::finder()-&gt;withCategories()-&gt;findAll();
+</pre>
+
+<p>The method <tt>with_xxx()</tt> (where <tt>xxx</tt> is the relationship
+property name, in this case, <tt>Categories</tt>) fetchs the corresponding
+CategoryRecords using a second query (not by using a join). The
+<tt>with_xxx()</tt> accepts the same arguments as other finder methods of
+TActiveRecord.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TActiveRecordRelation.html"><span>TActiveRecordRelation</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TActiveRecordHasManyAssociation</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.ActiveRecord.html">ActiveRecord</a>\<a href="package-System.Data.ActiveRecord.Relations.html">Relations</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com&gt;<br />
+				<b>Version:</b>
+				$Id$<br />
+				<b>Since:</b>
+				3.1<br />
+		<b>Located at</b> Data/ActiveRecord/Relations/TActiveRecordHasManyAssociation.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="collectForeignObjects" id="_collectForeignObjects">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_collectForeignObjects">#</a>
+		<code>collectForeignObjects( <span>array <var>&amp; $results</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the foreign key index values from the results and make calls to the
+database to find the corresponding foreign objects using association table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the foreign key index values from the results and make calls to the
+database to find the corresponding foreign objects using association table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$results</var></dt>
+					<dd><code>array</code><br>original results.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelationForeignKeys" id="_getRelationForeignKeys">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelationForeignKeys">#</a>
+		<code>getRelationForeignKeys( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>2 arrays of source keys and foreign keys from the association table.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAssociationTable" id="_getAssociationTable">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAssociationTable">#</a>
+		<code>getAssociationTable( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code></code><br>association table information.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSourceTable" id="_getSourceTable">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSourceTable">#</a>
+		<code>getSourceTable( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code></code><br>source table information.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getForeignTable" id="_getForeignTable">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getForeignTable">#</a>
+		<code>getForeignTable( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code></code><br>foreign table information.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCommandBuilder" id="_getCommandBuilder">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TDataGatewayCommand.html">TDataGatewayCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCommandBuilder">#</a>
+		<code>getCommandBuilder( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDataGatewayCommand.html">TDataGatewayCommand</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getForeignCommandBuilder" id="_getForeignCommandBuilder">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TDataGatewayCommand.html">TDataGatewayCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getForeignCommandBuilder">#</a>
+		<code>getForeignCommandBuilder( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDataGatewayCommand.html">TDataGatewayCommand</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchForeignObjects" id="_fetchForeignObjects">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchForeignObjects">#</a>
+		<code>fetchForeignObjects( <span>array <var>&amp; $results</var></span>, <span>array <var>$foreignKeys</var></span>, <span>mixed <var>$indexValues</var></span>, <span>mixed <var>$sourceKeys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetches the foreign objects using TActiveRecord::findAllByIndex()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetches the foreign objects using TActiveRecord::findAllByIndex()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$results</var></dt>
+					<dd><code>array</code><br>field names</dd>
+					<dt><var>$foreignKeys</var></dt>
+					<dd><code>array</code><br>foreign key index values.</dd>
+					<dt><var>$indexValues</var></dt>
+					<dd></dd>
+					<dt><var>$sourceKeys</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFkObject" id="_createFkObject">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TActiveRecord.html">TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFkObject">#</a>
+		<code>createFkObject( <span>string <var>$type</var></span>, <span>array <var>$row</var></span>, <span>array <var>$foreignKeys</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>active record class name.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>row data</dd>
+					<dt><var>$foreignKeys</var></dt>
+					<dd><code>array</code><br>foreign key column names</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createCommand" id="_createCommand">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createCommand">#</a>
+		<code>createCommand( <span><code><a href="class-TSqlCriteria.html">TSqlCriteria</a></code> <var>$criteria</var></span>, <span>TTableInfo <var>$foreignKeys</var></span>, <span>array <var>$indexValues</var></span>, <span>array <var>$sourceKeys</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd><code><code><a href="class-TSqlCriteria.html">TSqlCriteria</a></code></code></dd>
+					<dt><var>$foreignKeys</var></dt>
+					<dd><code>TTableInfo</code><br>association table info</dd>
+					<dt><var>$indexValues</var></dt>
+					<dd><code>array</code><br>field names</dd>
+					<dt><var>$sourceKeys</var></dt>
+					<dd><code>array</code><br>field values</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSourceColumns" id="_getSourceColumns">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSourceColumns">#</a>
+		<code>getSourceColumns( <span>array <var>$sourceKeys</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sourceKeys</var></dt>
+					<dd><code>array</code><br>source table column names.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>comma separated source column names.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAssociationJoin" id="_getAssociationJoin">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAssociationJoin">#</a>
+		<code>getAssociationJoin( <span>array <var>$foreignKeys</var></span>, <span>array <var>$indexValues</var></span>, <span>array <var>$sourceKeys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>SQL inner join for M-N relationship via association table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>SQL inner join for M-N relationship via association table.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$foreignKeys</var></dt>
+					<dd><code>array</code><br>foreign table column key names.</dd>
+					<dt><var>$indexValues</var></dt>
+					<dd><code>array</code><br>source table index values.</dd>
+					<dt><var>$sourceKeys</var></dt>
+					<dd><code>array</code><br>source table column names.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>inner join condition for M-N relationship via association table.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateAssociatedRecords" id="_updateAssociatedRecords">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateAssociatedRecords">#</a>
+		<code>updateAssociatedRecords( )</code>
+
+		<div class="description short">
+			
+<p>Updates the associated foreign objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Updates the associated foreign objects.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if all update are success (including if no update was required), false
+otherwise .<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAssociationTableCommandBuilder" id="_getAssociationTableCommandBuilder">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TDbCommandBuilder.html">TDbCommandBuilder</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAssociationTableCommandBuilder">#</a>
+		<code>getAssociationTableCommandBuilder( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDbCommandBuilder.html">TDbCommandBuilder</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TActiveRecordRelation.html#methods">TActiveRecordRelation</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TActiveRecordRelation.html#___call">__call()</a>, 
+			<a href="class-TActiveRecordRelation.html#___construct">__construct()</a>, 
+			<a href="class-TActiveRecordRelation.html#_fetchResultsInto">fetchResultsInto()</a>, 
+			<a href="class-TActiveRecordRelation.html#_findForeignKeys">findForeignKeys()</a>, 
+			<a href="class-TActiveRecordRelation.html#_findForeignObjects">findForeignObjects()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getContext">getContext()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getCriteria">getCriteria()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getIndexValues">getIndexValues()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getObjectHash">getObjectHash()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getSourceRecord">getSourceRecord()</a>, 
+			<a href="class-TActiveRecordRelation.html#_populateResult">populateResult()</a>, 
+			<a href="class-TActiveRecordRelation.html#_setObjectProperty">setObjectProperty()</a>, 
+			<a href="class-TActiveRecordRelation.html#_setResultCollection">setResultCollection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

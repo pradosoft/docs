@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TDbUserManager | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAuthManager.html">TAuthManager</a></li>
+				<li><a href="class-TAuthorizationRule.html">TAuthorizationRule</a></li>
+				<li><a href="class-TAuthorizationRuleCollection.html">TAuthorizationRuleCollection</a></li>
+				<li><a href="class-TDbUser.html">TDbUser</a></li>
+				<li class="active"><a href="class-TDbUserManager.html">TDbUserManager</a></li>
+				<li><a href="class-TSecurityManager.html">TSecurityManager</a></li>
+				<li><a href="class-TSecurityManagerValidationMode.html">TSecurityManagerValidationMode</a></li>
+				<li><a href="class-TUser.html">TUser</a></li>
+				<li><a href="class-TUserManager.html">TUserManager</a></li>
+				<li><a href="class-TUserManagerPasswordMode.html">TUserManagerPasswordMode</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IUserManager.html">IUserManager</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TDbUserManager</h1>
+
+
+	<div class="description">
+	<p>TDbUserManager class</p>
+
+<p>TDbUserManager manages user accounts that are stored in a database.
+TDbUserManager is mainly designed to be used together with <code><a href="class-TAuthManager.html">TAuthManager</a></code>
+which manages how users are authenticated and authorized in a Prado application.</p>
+
+<p>To use TDbUserManager together with TAuthManager, configure them in
+the application configuration like following:</p>
+
+<pre>&lt;module id=<span class="php-quote">&quot;db&quot;</span>
+    <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Data.TDataSourceConfig&quot;</span> ..../&gt;
+&lt;module id=<span class="php-quote">&quot;users&quot;</span>
+    <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Security.TDbUserManager&quot;</span>
+    UserClass=<span class="php-quote">&quot;Path.To.MyUserClass&quot;</span>
+    ConnectionID=<span class="php-quote">&quot;db&quot;</span> /&gt;
+&lt;module id=<span class="php-quote">&quot;auth&quot;</span>
+    <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Security.TAuthManager&quot;</span>
+    UserManager=<span class="php-quote">&quot;users&quot;</span> LoginPage=<span class="php-quote">&quot;Path.To.LoginPage&quot;</span> /&gt;</pre>
+
+<p>In the above, setUserClass UserClass specifies what class will be used
+to create user instance. The class must extend from <code><a href="class-TDbUser.html">TDbUser</a></code>.
+setConnectionID ConnectionID refers to the ID of a <code><a href="class-TDataSourceConfig.html">TDataSourceConfig</a></code> module
+which specifies how to establish database connection to retrieve user information.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TModule.html"><span>TModule</span></a>
+			
+			 implements 
+				<a href="class-IModule.html"><span>IModule</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TDbUserManager</span></b>			
+			 implements 
+				<a href="class-IUserManager.html"><span>IUserManager</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Security.html">Security</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.1.0<br>
+			<b>Located at</b> Security/TDbUserManager.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the module.
+This method is required by IModule and is invoked by application.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the module.
+This method is required by IModule and is invoked by application.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>configuration</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TModule.html#_init">TModule::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUserClass" id="_getUserClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUserClass">#</a>
+		<code>getUserClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the user class name in namespace format. Defaults to empty string, meaning not set.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUserClass" id="_setUserClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUserClass">#</a>
+		<code>setUserClass( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>user class name in namespace format. The user class must extend from <code><a href="class-TDbUser.html">TDbUser</a></code>.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getGuestName" id="_getGuestName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getGuestName">#</a>
+		<code>getGuestName( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>guest name, defaults to 'Guest'
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IUserManager.html#_getGuestName">IUserManager::getGuestName()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setGuestName" id="_setGuestName">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setGuestName">#</a>
+		<code>setGuestName( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>to be used for guest users.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateUser" id="_validateUser">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateUser">#</a>
+		<code>validateUser( <span>string <var>$username</var></span>, <span>string <var>$password</var></span> )</code>
+
+		<div class="description short">
+			<p>Validates if the username and password are correct.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Validates if the username and password are correct.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$username</var></dt>
+					<dd>name</dd>
+					<dt><var>$password</var></dt>
+					<dd>password</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if validation is successful, false otherwise.
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IUserManager.html#_validateUser">IUserManager::validateUser()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUser" id="_getUser">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TUser.html">TUser</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUser">#</a>
+		<code>getUser( <span>string <var>$username</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns a user instance given the user name.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a user instance given the user name.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$username</var></dt>
+					<dd>name, null if it is a guest.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TUser.html">TUser</a></code><br>the user instance, null if the specified username is not in the user database.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TApplicationComponent.html#_getUser">TApplicationComponent::getUser()</a></code></div>
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IUserManager.html#_getUser">IUserManager::getUser()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnectionID" id="_getConnectionID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnectionID">#</a>
+		<code>getConnectionID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the ID of a TDataSourceConfig module. Defaults to empty string, meaning not set.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setConnectionID" id="_setConnectionID">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setConnectionID">#</a>
+		<code>setConnectionID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the ID of a TDataSourceConfig module.
+The datasource module will be used to establish the DB connection
+that will be used by the user manager.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the ID of a TDataSourceConfig module.
+The datasource module will be used to establish the DB connection
+that will be used by the user manager.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>ID.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDbConnection" id="_getDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDbConnection">#</a>
+		<code>getDbConnection( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbConnection.html">TDbConnection</a></code><br>the database connection that may be used to retrieve user data.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createDbConnection" id="_createDbConnection">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createDbConnection">#</a>
+		<code>createDbConnection( <span>string <var>$connectionID</var></span> )</code>
+
+		<div class="description short">
+			<p>Creates the DB connection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates the DB connection.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connectionID</var></dt>
+					<dd>module ID for TDataSourceConfig</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbConnection.html">TDbConnection</a></code><br>the created DB connection
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TConfigurationException.html">TConfigurationException</a></code><br>if module ID is invalid or empty
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUserFromCookie" id="_getUserFromCookie">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbUser.html">TDbUser</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUserFromCookie">#</a>
+		<code>getUserFromCookie( <span><code><a href="class-THttpCookie.html">THttpCookie</a></code> <var>$cookie</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns a user instance according to auth data stored in a cookie.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a user instance according to auth data stored in a cookie.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cookie</var></dt>
+					<dd>cookie storing user authentication information</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbUser.html">TDbUser</a></code><br>the user instance generated based on the cookie auth data, null if the cookie does not have valid auth data.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IUserManager.html#_getUserFromCookie">IUserManager::getUserFromCookie()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveUserToCookie" id="_saveUserToCookie">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveUserToCookie">#</a>
+		<code>saveUserToCookie( <span><code><a href="class-THttpCookie.html">THttpCookie</a></code> <var>$cookie</var></span> )</code>
+
+		<div class="description short">
+			<p>Saves user auth data into a cookie.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Saves user auth data into a cookie.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cookie</var></dt>
+					<dd>cookie to receive the user auth data.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IUserManager.html#_saveUserToCookie">IUserManager::saveUserToCookie()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TModule.html#methods">TModule</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TModule.html#_getID">getID()</a>, 
+			<a href="class-TModule.html#_setID">setID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

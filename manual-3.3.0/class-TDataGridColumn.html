@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TDataGridColumn | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAccordion.html">TAccordion</a></li>
+				<li><a href="class-TAccordionView.html">TAccordionView</a></li>
+				<li><a href="class-TAccordionViewCollection.html">TAccordionViewCollection</a></li>
+				<li><a href="class-TBaseDataList.html">TBaseDataList</a></li>
+				<li><a href="class-TBaseValidator.html">TBaseValidator</a></li>
+				<li><a href="class-TBoundColumn.html">TBoundColumn</a></li>
+				<li><a href="class-TBulletedList.html">TBulletedList</a></li>
+				<li><a href="class-TBulletedListDisplayMode.html">TBulletedListDisplayMode</a></li>
+				<li><a href="class-TBulletedListEventParameter.html">TBulletedListEventParameter</a></li>
+				<li><a href="class-TBulletStyle.html">TBulletStyle</a></li>
+				<li><a href="class-TButton.html">TButton</a></li>
+				<li><a href="class-TButtonColumn.html">TButtonColumn</a></li>
+				<li><a href="class-TButtonColumnType.html">TButtonColumnType</a></li>
+				<li><a href="class-TButtonTag.html">TButtonTag</a></li>
+				<li><a href="class-TButtonType.html">TButtonType</a></li>
+				<li><a href="class-TCaptcha.html">TCaptcha</a></li>
+				<li><a href="class-TCaptchaValidator.html">TCaptchaValidator</a></li>
+				<li><a href="class-TCheckBox.html">TCheckBox</a></li>
+				<li><a href="class-TCheckBoxColumn.html">TCheckBoxColumn</a></li>
+				<li><a href="class-TCheckBoxItem.html">TCheckBoxItem</a></li>
+				<li><a href="class-TCheckBoxList.html">TCheckBoxList</a></li>
+				<li><a href="class-TCircleHotSpot.html">TCircleHotSpot</a></li>
+				<li><a href="class-TClientScript.html">TClientScript</a></li>
+				<li><a href="class-TClientSideValidationSummaryOptions.html">TClientSideValidationSummaryOptions</a></li>
+				<li><a href="class-TColorPicker.html">TColorPicker</a></li>
+				<li><a href="class-TColorPickerClientSide.html">TColorPickerClientSide</a></li>
+				<li><a href="class-TColorPickerMode.html">TColorPickerMode</a></li>
+				<li><a href="class-TCompareValidator.html">TCompareValidator</a></li>
+				<li><a href="class-TCompleteWizardStep.html">TCompleteWizardStep</a></li>
+				<li><a href="class-TConditional.html">TConditional</a></li>
+				<li><a href="class-TContent.html">TContent</a></li>
+				<li><a href="class-TContentDirection.html">TContentDirection</a></li>
+				<li><a href="class-TContentPlaceHolder.html">TContentPlaceHolder</a></li>
+				<li><a href="class-TCustomValidator.html">TCustomValidator</a></li>
+				<li><a href="class-TDataBoundControl.html">TDataBoundControl</a></li>
+				<li><a href="class-TDataGrid.html">TDataGrid</a></li>
+				<li class="active"><a href="class-TDataGridColumn.html">TDataGridColumn</a></li>
+				<li><a href="class-TDataGridColumnCollection.html">TDataGridColumnCollection</a></li>
+				<li><a href="class-TDataGridCommandEventParameter.html">TDataGridCommandEventParameter</a></li>
+				<li><a href="class-TDataGridItem.html">TDataGridItem</a></li>
+				<li><a href="class-TDataGridItemCollection.html">TDataGridItemCollection</a></li>
+				<li><a href="class-TDataGridItemEventParameter.html">TDataGridItemEventParameter</a></li>
+				<li><a href="class-TDataGridItemRenderer.html">TDataGridItemRenderer</a></li>
+				<li><a href="class-TDataGridPageChangedEventParameter.html">TDataGridPageChangedEventParameter</a></li>
+				<li><a href="class-TDataGridPager.html">TDataGridPager</a></li>
+				<li><a href="class-TDataGridPagerButtonType.html">TDataGridPagerButtonType</a></li>
+				<li><a href="class-TDataGridPagerEventParameter.html">TDataGridPagerEventParameter</a></li>
+				<li><a href="class-TDataGridPagerMode.html">TDataGridPagerMode</a></li>
+				<li><a href="class-TDataGridPagerPosition.html">TDataGridPagerPosition</a></li>
+				<li><a href="class-TDataGridPagerStyle.html">TDataGridPagerStyle</a></li>
+				<li><a href="class-TDataGridSortCommandEventParameter.html">TDataGridSortCommandEventParameter</a></li>
+				<li><a href="class-TDataList.html">TDataList</a></li>
+				<li><a href="class-TDataListCommandEventParameter.html">TDataListCommandEventParameter</a></li>
+				<li><a href="class-TDataListItem.html">TDataListItem</a></li>
+				<li><a href="class-TDataListItemCollection.html">TDataListItemCollection</a></li>
+				<li><a href="class-TDataListItemEventParameter.html">TDataListItemEventParameter</a></li>
+				<li><a href="class-TDataListItemRenderer.html">TDataListItemRenderer</a></li>
+				<li><a href="class-TDataRenderer.html">TDataRenderer</a></li>
+				<li><a href="class-TDataSourceControl.html">TDataSourceControl</a></li>
+				<li><a href="class-TDataSourceSelectParameters.html">TDataSourceSelectParameters</a></li>
+				<li><a href="class-TDataSourceView.html">TDataSourceView</a></li>
+				<li><a href="class-TDataTypeValidator.html">TDataTypeValidator</a></li>
+				<li><a href="class-TDatePicker.html">TDatePicker</a></li>
+				<li><a href="class-TDatePickerClientScript.html">TDatePickerClientScript</a></li>
+				<li><a href="class-TDatePickerInputMode.html">TDatePickerInputMode</a></li>
+				<li><a href="class-TDatePickerMode.html">TDatePickerMode</a></li>
+				<li><a href="class-TDatePickerPositionMode.html">TDatePickerPositionMode</a></li>
+				<li><a href="class-TDisplayStyle.html">TDisplayStyle</a></li>
+				<li><a href="class-TDropDownList.html">TDropDownList</a></li>
+				<li><a href="class-TDropDownListColumn.html">TDropDownListColumn</a></li>
+				<li><a href="class-TEditCommandColumn.html">TEditCommandColumn</a></li>
+				<li><a href="class-TEmailAddressValidator.html">TEmailAddressValidator</a></li>
+				<li><a href="class-TExpression.html">TExpression</a></li>
+				<li><a href="class-TFileUpload.html">TFileUpload</a></li>
+				<li><a href="class-TFlushOutput.html">TFlushOutput</a></li>
+				<li><a href="class-TFont.html">TFont</a></li>
+				<li><a href="class-THeader1.html">THeader1</a></li>
+				<li><a href="class-THeader2.html">THeader2</a></li>
+				<li><a href="class-THeader3.html">THeader3</a></li>
+				<li><a href="class-THeader4.html">THeader4</a></li>
+				<li><a href="class-THeader5.html">THeader5</a></li>
+				<li><a href="class-THeader6.html">THeader6</a></li>
+				<li><a href="class-THiddenField.html">THiddenField</a></li>
+				<li><a href="class-THorizontalAlign.html">THorizontalAlign</a></li>
+				<li><a href="class-THotSpot.html">THotSpot</a></li>
+				<li><a href="class-THotSpotCollection.html">THotSpotCollection</a></li>
+				<li><a href="class-THotSpotMode.html">THotSpotMode</a></li>
+				<li><a href="class-THtmlArea.html">THtmlArea</a></li>
+				<li><a href="class-THtmlArea4.html">THtmlArea4</a></li>
+				<li><a href="class-THtmlElement.html">THtmlElement</a></li>
+				<li><a href="class-THyperLink.html">THyperLink</a></li>
+				<li><a href="class-THyperLinkColumn.html">THyperLinkColumn</a></li>
+				<li><a href="class-TImage.html">TImage</a></li>
+				<li><a href="class-TImageButton.html">TImageButton</a></li>
+				<li><a href="class-TImageClickEventParameter.html">TImageClickEventParameter</a></li>
+				<li><a href="class-TImageMap.html">TImageMap</a></li>
+				<li><a href="class-TImageMapEventParameter.html">TImageMapEventParameter</a></li>
+				<li><a href="class-TInlineFrame.html">TInlineFrame</a></li>
+				<li><a href="class-TInlineFrameAlign.html">TInlineFrameAlign</a></li>
+				<li><a href="class-TInlineFrameScrollBars.html">TInlineFrameScrollBars</a></li>
+				<li><a href="class-TItemDataRenderer.html">TItemDataRenderer</a></li>
+				<li><a href="class-TJavascriptLogger.html">TJavascriptLogger</a></li>
+				<li><a href="class-TKeyboard.html">TKeyboard</a></li>
+				<li><a href="class-TLabel.html">TLabel</a></li>
+				<li><a href="class-TLinkButton.html">TLinkButton</a></li>
+				<li><a href="class-TListBox.html">TListBox</a></li>
+				<li><a href="class-TListControl.html">TListControl</a></li>
+				<li><a href="class-TListControlValidator.html">TListControlValidator</a></li>
+				<li><a href="class-TListItem.html">TListItem</a></li>
+				<li><a href="class-TListItemType.html">TListItemType</a></li>
+				<li><a href="class-TListSelectionMode.html">TListSelectionMode</a></li>
+				<li><a href="class-TLiteral.html">TLiteral</a></li>
+				<li><a href="class-TLiteralColumn.html">TLiteralColumn</a></li>
+				<li><a href="class-TMarkdown.html">TMarkdown</a></li>
+				<li><a href="class-TMetaTag.html">TMetaTag</a></li>
+				<li><a href="class-TMetaTagCollection.html">TMetaTagCollection</a></li>
+				<li><a href="class-TMultiView.html">TMultiView</a></li>
+				<li><a href="class-TOutputCache.html">TOutputCache</a></li>
+				<li><a href="class-TOutputCacheCalculateKeyEventParameter.html">TOutputCacheCalculateKeyEventParameter</a></li>
+				<li><a href="class-TOutputCacheCheckDependencyEventParameter.html">TOutputCacheCheckDependencyEventParameter</a></li>
+				<li><a href="class-TOutputCacheTextWriterMulti.html">TOutputCacheTextWriterMulti</a></li>
+				<li><a href="class-TPager.html">TPager</a></li>
+				<li><a href="class-TPagerButtonType.html">TPagerButtonType</a></li>
+				<li><a href="class-TPagerMode.html">TPagerMode</a></li>
+				<li><a href="class-TPagerPageChangedEventParameter.html">TPagerPageChangedEventParameter</a></li>
+				<li><a href="class-TPanel.html">TPanel</a></li>
+				<li><a href="class-TPanelStyle.html">TPanelStyle</a></li>
+				<li><a href="class-TPlaceHolder.html">TPlaceHolder</a></li>
+				<li><a href="class-TPolygonHotSpot.html">TPolygonHotSpot</a></li>
+				<li><a href="class-TRadioButton.html">TRadioButton</a></li>
+				<li><a href="class-TRadioButtonItem.html">TRadioButtonItem</a></li>
+				<li><a href="class-TRadioButtonList.html">TRadioButtonList</a></li>
+				<li><a href="class-TRangeValidationDataType.html">TRangeValidationDataType</a></li>
+				<li><a href="class-TRangeValidator.html">TRangeValidator</a></li>
+				<li><a href="class-TRatingList.html">TRatingList</a></li>
+				<li><a href="class-TReadOnlyDataSource.html">TReadOnlyDataSource</a></li>
+				<li><a href="class-TReadOnlyDataSourceView.html">TReadOnlyDataSourceView</a></li>
+				<li><a href="class-TReCaptcha.html">TReCaptcha</a></li>
+				<li><a href="class-TReCaptchaValidator.html">TReCaptchaValidator</a></li>
+				<li><a href="class-TRectangleHotSpot.html">TRectangleHotSpot</a></li>
+				<li><a href="class-TRegularExpressionValidator.html">TRegularExpressionValidator</a></li>
+				<li><a href="class-TRepeatDirection.html">TRepeatDirection</a></li>
+				<li><a href="class-TRepeater.html">TRepeater</a></li>
+				<li><a href="class-TRepeaterCommandEventParameter.html">TRepeaterCommandEventParameter</a></li>
+				<li><a href="class-TRepeaterItem.html">TRepeaterItem</a></li>
+				<li><a href="class-TRepeaterItemCollection.html">TRepeaterItemCollection</a></li>
+				<li><a href="class-TRepeaterItemEventParameter.html">TRepeaterItemEventParameter</a></li>
+				<li><a href="class-TRepeaterItemRenderer.html">TRepeaterItemRenderer</a></li>
+				<li><a href="class-TRepeatInfo.html">TRepeatInfo</a></li>
+				<li><a href="class-TRepeatLayout.html">TRepeatLayout</a></li>
+				<li><a href="class-TRequiredFieldValidator.html">TRequiredFieldValidator</a></li>
+				<li><a href="class-TSafeHtml.html">TSafeHtml</a></li>
+				<li><a href="class-TScrollBars.html">TScrollBars</a></li>
+				<li><a href="class-TServerValidateEventParameter.html">TServerValidateEventParameter</a></li>
+				<li><a href="class-TSlider.html">TSlider</a></li>
+				<li><a href="class-TSliderClientScript.html">TSliderClientScript</a></li>
+				<li><a href="class-TSliderDirection.html">TSliderDirection</a></li>
+				<li><a href="class-TStatements.html">TStatements</a></li>
+				<li><a href="class-TStyle.html">TStyle</a></li>
+				<li><a href="class-TStyleSheet.html">TStyleSheet</a></li>
+				<li><a href="class-TTable.html">TTable</a></li>
+				<li><a href="class-TTableCaptionAlign.html">TTableCaptionAlign</a></li>
+				<li><a href="class-TTableCell.html">TTableCell</a></li>
+				<li><a href="class-TTableCellCollection.html">TTableCellCollection</a></li>
+				<li><a href="class-TTableFooterRow.html">TTableFooterRow</a></li>
+				<li><a href="class-TTableGridLines.html">TTableGridLines</a></li>
+				<li><a href="class-TTableHeaderCell.html">TTableHeaderCell</a></li>
+				<li><a href="class-TTableHeaderRow.html">TTableHeaderRow</a></li>
+				<li><a href="class-TTableHeaderScope.html">TTableHeaderScope</a></li>
+				<li><a href="class-TTableItemStyle.html">TTableItemStyle</a></li>
+				<li><a href="class-TTableRow.html">TTableRow</a></li>
+				<li><a href="class-TTableRowCollection.html">TTableRowCollection</a></li>
+				<li><a href="class-TTableRowSection.html">TTableRowSection</a></li>
+				<li><a href="class-TTableStyle.html">TTableStyle</a></li>
+				<li><a href="class-TTabPanel.html">TTabPanel</a></li>
+				<li><a href="class-TTabView.html">TTabView</a></li>
+				<li><a href="class-TTabViewCollection.html">TTabViewCollection</a></li>
+				<li><a href="class-TTemplateColumn.html">TTemplateColumn</a></li>
+				<li><a href="class-TTemplatedWizardStep.html">TTemplatedWizardStep</a></li>
+				<li><a href="class-TTextAlign.html">TTextAlign</a></li>
+				<li><a href="class-TTextBox.html">TTextBox</a></li>
+				<li><a href="class-TTextBoxAutoCompleteType.html">TTextBoxAutoCompleteType</a></li>
+				<li><a href="class-TTextBoxMode.html">TTextBoxMode</a></li>
+				<li><a href="class-TTextHighlighter.html">TTextHighlighter</a></li>
+				<li><a href="class-TTextHighlighterLineNumberStyle.html">TTextHighlighterLineNumberStyle</a></li>
+				<li><a href="class-TValidationCompareOperator.html">TValidationCompareOperator</a></li>
+				<li><a href="class-TValidationDataType.html">TValidationDataType</a></li>
+				<li><a href="class-TValidationSummary.html">TValidationSummary</a></li>
+				<li><a href="class-TValidationSummaryDisplayMode.html">TValidationSummaryDisplayMode</a></li>
+				<li><a href="class-TValidationSummaryDisplayStyle.html">TValidationSummaryDisplayStyle</a></li>
+				<li><a href="class-TValidatorClientSide.html">TValidatorClientSide</a></li>
+				<li><a href="class-TValidatorDisplayStyle.html">TValidatorDisplayStyle</a></li>
+				<li><a href="class-TVerticalAlign.html">TVerticalAlign</a></li>
+				<li><a href="class-TView.html">TView</a></li>
+				<li><a href="class-TViewCollection.html">TViewCollection</a></li>
+				<li><a href="class-TWebControl.html">TWebControl</a></li>
+				<li><a href="class-TWebControlAdapter.html">TWebControlAdapter</a></li>
+				<li><a href="class-TWebControlDecorator.html">TWebControlDecorator</a></li>
+				<li><a href="class-TWizard.html">TWizard</a></li>
+				<li><a href="class-TWizardFinishNavigationTemplate.html">TWizardFinishNavigationTemplate</a></li>
+				<li><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></li>
+				<li><a href="class-TWizardNavigationButtonType.html">TWizardNavigationButtonType</a></li>
+				<li><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></li>
+				<li><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></li>
+				<li><a href="class-TWizardNavigationTemplate.html">TWizardNavigationTemplate</a></li>
+				<li><a href="class-TWizardSideBarListItemTemplate.html">TWizardSideBarListItemTemplate</a></li>
+				<li><a href="class-TWizardSideBarTemplate.html">TWizardSideBarTemplate</a></li>
+				<li><a href="class-TWizardStartNavigationTemplate.html">TWizardStartNavigationTemplate</a></li>
+				<li><a href="class-TWizardStep.html">TWizardStep</a></li>
+				<li><a href="class-TWizardStepCollection.html">TWizardStepCollection</a></li>
+				<li><a href="class-TWizardStepNavigationTemplate.html">TWizardStepNavigationTemplate</a></li>
+				<li><a href="class-TWizardStepType.html">TWizardStepType</a></li>
+				<li><a href="class-TXmlTransform.html">TXmlTransform</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IDataSource.html">IDataSource</a></li>
+				<li><a href="class-IItemDataRenderer.html">IItemDataRenderer</a></li>
+				<li><a href="class-IRepeatInfoUser.html">IRepeatInfoUser</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TDataGridColumn</h1>
+
+
+	<div class="description">
+	<p>TDataGridColumn class</p>
+
+<p>TDataGridColumn serves as the base class for the different column types of
+the <code><a href="class-TDataGrid.html">TDataGrid</a></code> control.
+TDataGridColumn defines the properties and methods that are common among
+all datagrid column types. In particular, it initializes header and footer
+cells according to setHeaderText HeaderText and getHeaderStyle HeaderStyle
+setFooterText FooterText and getFooterStyle FooterStyle properties.
+If setHeaderImageUrl HeaderImageUrl is specified, the image
+will be displayed instead in the header cell.
+The getItemStyle ItemStyle is applied to cells that belong to
+non-header and -footer datagrid items.</p>
+
+<p>When the datagrid enables sorting, if the setSortExpression SortExpression
+is not empty, the header cell will display a button (linkbutton or imagebutton)
+that will bubble the sort command event to the datagrid.</p>
+
+<p>Since v3.1.0, TDataGridColumn has introduced two new properties setHeaderRenderer HeaderRenderer
+and setFooterRenderer FooterRenderer which can be used to specify
+the layout of header and footer column cells.
+A renderer refers to a control class that is to be instantiated as a control.
+For more details, see <code><a href="class-TRepeater.html">TRepeater</a></code> and <code><a href="class-TDataList.html">TDataList</a></code>.</p>
+
+<p>Since v3.1.1, TDataGridColumn has introduced setEnableCellGrouping EnableCellGrouping.
+If a column has this property set true, consecutive cells having the same content in this
+column will be grouped into one cell.
+Note, there are some limitations to cell grouping. We determine the cell content according to
+the cell's <a href="TTableCell::getText">Text</a> property. If the text is empty and the cell has
+some child controls, we will pick up the first control who implements <code><a href="class-IDataRenderer.html">IDataRenderer</a></code>
+and obtain its <a href="IDataRenderer::getData">Data</a> property.</p>
+
+<p>The following datagrid column types are provided by the framework currently,
+- <code><a href="class-TBoundColumn.html">TBoundColumn</a></code>, associated with a specific field in datasource and displays the corresponding data.
+- <code><a href="class-TEditCommandColumn.html">TEditCommandColumn</a></code>, displaying edit/update/cancel command buttons
+- <code><a href="class-TDropDownListColumn.html">TDropDownListColumn</a></code>, displaying a dropdown list when the item is in edit state
+- <code><a href="class-TButtonColumn.html">TButtonColumn</a></code>, displaying generic command buttons that may be bound to specific field in datasource.
+- <code><a href="class-THyperLinkColumn.html">THyperLinkColumn</a></code>, displaying a hyperlink that may be bound to specific field in datasource.
+- <code><a href="class-TCheckBoxColumn.html">TCheckBoxColumn</a></code>, displaying a checkbox that may be bound to specific field in datasource.
+- <code><a href="class-TTemplateColumn.html">TTemplateColumn</a></code>, displaying content based on templates.</p>
+
+<p>To create your own column class, simply override <code><a href="class-TDataGridColumn.html#_initializeCell">TDataGridColumn::initializeCell()</a></code> method,
+which is the major logic for managing the data and presentation of cells in the column.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TDataGridColumn</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TBoundColumn.html">TBoundColumn</a>, 
+			<a href="class-TButtonColumn.html">TButtonColumn</a>, 
+			<a href="class-TCheckBoxColumn.html">TCheckBoxColumn</a>, 
+			<a href="class-TDropDownListColumn.html">TDropDownListColumn</a>, 
+			<a href="class-TEditCommandColumn.html">TEditCommandColumn</a>, 
+			<a href="class-THyperLinkColumn.html">THyperLinkColumn</a>, 
+			<a href="class-TLiteralColumn.html">TLiteralColumn</a>, 
+			<a href="class-TTemplateColumn.html">TTemplateColumn</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-TActiveBoundColumn.html">TActiveBoundColumn</a>, 
+			<a href="class-TActiveButtonColumn.html">TActiveButtonColumn</a>, 
+			<a href="class-TActiveCheckBoxColumn.html">TActiveCheckBoxColumn</a>, 
+			<a href="class-TActiveDropDownListColumn.html">TActiveDropDownListColumn</a>, 
+			<a href="class-TActiveEditCommandColumn.html">TActiveEditCommandColumn</a>, 
+			<a href="class-TActiveHyperLinkColumn.html">TActiveHyperLinkColumn</a>, 
+			<a href="class-TActiveLiteralColumn.html">TActiveLiteralColumn</a>, 
+			<a href="class-TActiveTemplateColumn.html">TActiveTemplateColumn</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Web/UI/WebControls/TDataGridColumn.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getID" id="_getID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getID">#</a>
+		<code>getID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the ID of the column.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setID" id="_setID">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setID">#</a>
+		<code>setID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the ID of the column.
+By explicitly specifying the column ID, one can access the column
+by $templateControl->ColumnID.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the ID of the column.
+By explicitly specifying the column ID, one can access the column
+by $templateControl->ColumnID.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>ID of the column.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if the ID is of bad format
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaderText" id="_getHeaderText">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaderText">#</a>
+		<code>getHeaderText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the text to be displayed in the header of this column
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHeaderText" id="_setHeaderText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHeaderText">#</a>
+		<code>setHeaderText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>to be displayed in the header of this column</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaderImageUrl" id="_getHeaderImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaderImageUrl">#</a>
+		<code>getHeaderImageUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the url of the image to be displayed in header
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHeaderImageUrl" id="_setHeaderImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHeaderImageUrl">#</a>
+		<code>setHeaderImageUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>url of the image to be displayed in header</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaderRenderer" id="_getHeaderRenderer">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaderRenderer">#</a>
+		<code>getHeaderRenderer( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the class name for the column header cell renderer. Defaults to empty, meaning not set.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.0<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHeaderRenderer" id="_setHeaderRenderer">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHeaderRenderer">#</a>
+		<code>setHeaderRenderer( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the column header cell renderer class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the column header cell renderer class.</p>
+
+<p>If not empty, the class will be used to instantiate as a child control in the column header cell.
+If the class implements <code><a href="class-IDataRenderer.html">IDataRenderer</a></code>, the <b>Data</b> property
+will be set as the getFooterText FooterText.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>renderer class name in namespace format.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.0<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaderStyle" id="_getHeaderStyle">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTableItemStyle.html">TTableItemStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaderStyle">#</a>
+		<code>getHeaderStyle( <span>boolean <var>$createStyle</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$createStyle</var></dt>
+					<dd>to create a style if previously not existing</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTableItemStyle.html">TTableItemStyle</a></code><br>the style for header
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFooterText" id="_getFooterText">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFooterText">#</a>
+		<code>getFooterText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the text to be displayed in the footer of this column
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFooterText" id="_setFooterText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFooterText">#</a>
+		<code>setFooterText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>to be displayed in the footer of this column</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFooterRenderer" id="_getFooterRenderer">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFooterRenderer">#</a>
+		<code>getFooterRenderer( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the class name for the column footer cell renderer. Defaults to empty, meaning not set.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.0<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFooterRenderer" id="_setFooterRenderer">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFooterRenderer">#</a>
+		<code>setFooterRenderer( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the column footer cell renderer class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the column footer cell renderer class.</p>
+
+<p>If not empty, the class will be used to instantiate as a child control in the column footer cell.
+If the class implements <code><a href="class-IDataRenderer.html">IDataRenderer</a></code>, the <b>Data</b> property
+will be set as the getFooterText FooterText.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>renderer class name in namespace format.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.0<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFooterStyle" id="_getFooterStyle">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTableItemStyle.html">TTableItemStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFooterStyle">#</a>
+		<code>getFooterStyle( <span>boolean <var>$createStyle</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$createStyle</var></dt>
+					<dd>to create a style if previously not existing</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTableItemStyle.html">TTableItemStyle</a></code><br>the style for footer
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getItemStyle" id="_getItemStyle">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTableItemStyle.html">TTableItemStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getItemStyle">#</a>
+		<code>getItemStyle( <span>boolean <var>$createStyle</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$createStyle</var></dt>
+					<dd>to create a style if previously not existing</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTableItemStyle.html">TTableItemStyle</a></code><br>the style for item
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSortExpression" id="_getSortExpression">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSortExpression">#</a>
+		<code>getSortExpression( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the name of the field or expression for sorting
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSortExpression" id="_setSortExpression">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSortExpression">#</a>
+		<code>setSortExpression( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>name of the field or expression for sorting</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEnableCellGrouping" id="_getEnableCellGrouping">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnableCellGrouping">#</a>
+		<code>getEnableCellGrouping( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether cells having the same content should be grouped together. Defaults to false.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEnableCellGrouping" id="_setEnableCellGrouping">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEnableCellGrouping">#</a>
+		<code>setEnableCellGrouping( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>cells having the same content should be grouped together.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVisible" id="_getVisible">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVisible">#</a>
+		<code>getVisible( <span> <var>$checkParents</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the column is visible. Defaults to true.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setVisible" id="_setVisible">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setVisible">#</a>
+		<code>setVisible( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the column is visible</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getViewState" id="_getViewState">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getViewState">#</a>
+		<code>getViewState( <span>string <var>$key</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns a viewstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a viewstate value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the viewstate value to be returned</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd>default value. If $key is not found in viewstate, $defaultValue will be returned</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the viewstate value corresponding to $key
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setViewState" id="_setViewState">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setViewState">#</a>
+		<code>setViewState( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sets a viewstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets a viewstate value.</p>
+
+<p>Make sure that the viewstate value must be serializable and unserializable.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the viewstate value</dd>
+					<dt><var>$value</var></dt>
+					<dd>viewstate value to be set</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd>value. If $value===$defaultValue, the item will be cleared from the viewstate.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadState" id="_loadState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadState">#</a>
+		<code>loadState( <span>mixed <var>$state</var></span> )</code>
+
+		<div class="description short">
+			<p>Loads persistent state values.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Loads persistent state values.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$state</var></dt>
+					<dd>values</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveState" id="_saveState">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveState">#</a>
+		<code>saveState( )</code>
+
+		<div class="description short">
+			<p>Saves persistent state values.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Saves persistent state values.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>values to be saved
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOwner" id="_getOwner">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDataGrid.html">TDataGrid</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOwner">#</a>
+		<code>getOwner( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDataGrid.html">TDataGrid</a></code><br>datagrid that owns this column
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setOwner" id="_setOwner">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setOwner">#</a>
+		<code>setOwner( <span><code><a href="class-TDataGrid.html">TDataGrid</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>object that owns this column</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialize" id="_initialize">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialize">#</a>
+		<code>initialize( )</code>
+
+		<div class="description short">
+			<p>Initializes the column.
+This method is invoked by <code><a href="class-TDataGrid.html">TDataGrid</a></code> when the column
+is about to be used to initialize datagrid items.
+Derived classes may override this method to do additional initialization.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the column.
+This method is invoked by <code><a href="class-TDataGrid.html">TDataGrid</a></code> when the column
+is about to be used to initialize datagrid items.
+Derived classes may override this method to do additional initialization.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDataFieldValue" id="_getDataFieldValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDataFieldValue">#</a>
+		<code>getDataFieldValue( <span>mixed <var>$data</var></span>, <span>string <var>$field</var></span> )</code>
+
+		<div class="description short">
+			<p>Fetches the value of the data at the specified field.
+If the data is an array, the field is used as an array key.
+If the data is an of <code><a href="class-TMap.html">TMap</a></code>, <code><a href="class-TList.html">TList</a></code> or their derived class,
+the field is used as a key value.
+If the data is a component, the field is used as the name of a property.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetches the value of the data at the specified field.
+If the data is an array, the field is used as an array key.
+If the data is an of <code><a href="class-TMap.html">TMap</a></code>, <code><a href="class-TList.html">TList</a></code> or their derived class,
+the field is used as a key value.
+If the data is a component, the field is used as the name of a property.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>containing the field of value</dd>
+					<dt><var>$field</var></dt>
+					<dd>data field</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>data value at the specified field
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if the data or the field is invalid.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initializeCell" id="_initializeCell">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeCell">#</a>
+		<code>initializeCell( <span><code><a href="class-TTableCell.html">TTableCell</a></code> <var>$cell</var></span>, <span>integer <var>$columnIndex</var></span>, <span>string <var>$itemType</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the specified cell to its initial values.
+The default implementation sets the content of header and footer cells.
+If sorting is enabled by the grid and sort expression is specified in the column,
+the header cell will show a link/image button. Otherwise, the header/footer cell
+will only show static text/image.
+This method can be overriden to provide customized intialization to column cells.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the specified cell to its initial values.
+The default implementation sets the content of header and footer cells.
+If sorting is enabled by the grid and sort expression is specified in the column,
+the header cell will show a link/image button. Otherwise, the header/footer cell
+will only show static text/image.
+This method can be overriden to provide customized intialization to column cells.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cell</var></dt>
+					<dd>cell to be initialized.</dd>
+					<dt><var>$columnIndex</var></dt>
+					<dd>index to the Columns property that the cell resides in.</dd>
+					<dt><var>$itemType</var></dt>
+					<dd>type of cell (Header,Footer,Item,AlternatingItem,EditItem,SelectedItem)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAllowSorting" id="_getAllowSorting">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllowSorting">#</a>
+		<code>getAllowSorting( )</code>
+
+		<div class="description short">
+			<p>Returns a value indicating whether this column allows sorting.
+The column allows sorting only when getSortExpression SortExpression
+is not empty and the datagrid allows sorting.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a value indicating whether this column allows sorting.
+The column allows sorting only when getSortExpression SortExpression
+is not empty and the datagrid allows sorting.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether this column allows sorting
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initializeHeaderCell" id="_initializeHeaderCell">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeHeaderCell">#</a>
+		<code>initializeHeaderCell( <span><code><a href="class-TTableCell.html">TTableCell</a></code> <var>$cell</var></span>, <span>integer <var>$columnIndex</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the header cell.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the header cell.</p>
+
+<p>This method attempts to use getHeaderRenderer HeaderRenderer to
+instantiate the header cell. If that is not available, it will populate
+the cell with an image or a text string, depending on getHeaderImageUrl HeaderImageUrl
+and getHeaderText HeaderText property values.</p>
+
+<p>If the column allows sorting, image or text will be created as
+a button which issues <b>Sort</b> command upon user click.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cell</var></dt>
+					<dd>cell to be initialized</dd>
+					<dt><var>$columnIndex</var></dt>
+					<dd>index to the Columns property that the cell resides in.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initializeFooterCell" id="_initializeFooterCell">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeFooterCell">#</a>
+		<code>initializeFooterCell( <span><code><a href="class-TTableCell.html">TTableCell</a></code> <var>$cell</var></span>, <span>integer <var>$columnIndex</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the footer cell.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the footer cell.</p>
+
+<p>This method attempts to use getFooterRenderer FooterRenderer to
+instantiate the footer cell. If that is not available, it will populate
+the cell with a text string specified by getFooterImageUrl FooterImageUrl</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cell</var></dt>
+					<dd>cell to be initialized</dd>
+					<dt><var>$columnIndex</var></dt>
+					<dd>index to the Columns property that the cell resides in.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatDataValue" id="_formatDataValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_formatDataValue">#</a>
+		<code>formatDataValue( <span>string <var>$formatString</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Formats the text value according to a format string.
+If the format string is empty, the original value is converted into
+a string and returned.
+If the format string starts with '#', the string is treated as a PHP expression
+within which the token '{0}' is translated with the data value to be formated.
+Otherwise, the format string and the data value are passed
+as the first and second parameters in sprintf.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Formats the text value according to a format string.
+If the format string is empty, the original value is converted into
+a string and returned.
+If the format string starts with '#', the string is treated as a PHP expression
+within which the token '{0}' is translated with the data value to be formated.
+Otherwise, the format string and the data value are passed
+as the first and second parameters in sprintf.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$formatString</var></dt>
+					<dd>string</dd>
+					<dt><var>$value</var></dt>
+					<dd>data to be formatted</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the formatted result
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,3158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TActiveRecord | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li class="active"><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li class="active"><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Data.ActiveRecord.html" title="Summary of System\Data\ActiveRecord"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActiveRecord</h1>
+
+
+	<div class="description">
+	
+<p>Base class for active records.</p>
+
+<p>An active record creates an object that wraps a row in a database table or
+view, encapsulates the database access, and adds domain logic on that data.</p>
+
+<p>Active record objects are stateful, this is main difference between the
+TActiveRecord implementation and the TTableGateway implementation.</p>
+
+<p>The essence of an Active Record is an object model of the domain (e.g.
+products, items) that incorporates both behavior and data in which the classes
+match very closely the record structure of an underlying database. Each Active
+Record is responsible for saving and loading to the database and also for any
+domain logic that acts on the data.</p>
+
+<p>The Active Record provides methods that do the following: 1. Construct an
+instance of the Active Record from a SQL result set row. 2. Construct a new
+instance for later insertion into the table. 3. Finder methods to wrap commonly
+used SQL queries and return Active Record objects. 4. Update the database and
+insert into it the data in the Active Record.</p>
+
+<p>Example:</p>
+
+<pre>
+<span class="php-keyword1">class</span> UserRecord <span
+class="php-keyword1">extends</span> TActiveRecord
+{
+    <span
+class="php-keyword1">const</span> TABLE=<span
+class="php-quote">'users'</span>; <span
+class="php-comment">//optional table name.</span>
+
+    <span
+class="php-keyword1">public</span> <span class="php-var">$username</span>; <span
+class="php-comment">//corresponds to the fieldname in the table</span>
+    <span
+class="php-keyword1">public</span> <span
+class="php-var">$email</span>;
+
+    <span
+class="php-comment">//returns active record finder instance</span>
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span
+class="php-keyword1">function</span> finder(<span
+class="php-var">$className</span>=__CLASS__)
+    {
+        <span
+class="php-keyword1">return</span> parent::finder(<span
+class="php-var">$className</span>);
+    }
+}
+
+<span
+class="php-comment">//create a connection and give it to the ActiveRecord manager.</span>
+<span
+class="php-var">$dsn</span> = <span
+class="php-quote">'pgsql:host=localhost;dbname=test'</span>;
+<span
+class="php-var">$conn</span> = <span
+class="php-keyword1">new</span> TDbConnection(<span
+class="php-var">$dsn</span>, <span class="php-quote">'dbuser'</span>,<span
+class="php-quote">'dbpass'</span>);
+TActiveRecordManager::getInstance()-&gt;setDbConnection(<span
+class="php-var">$conn</span>);
+
+<span
+class="php-comment">//load the user record with username (primary key) 'admin'.</span>
+<span
+class="php-var">$user</span> = UserRecord::finder()-&gt;findByPk(<span
+class="php-quote">'admin'</span>);
+<span
+class="php-var">$user</span>-&gt;email = <span
+class="php-quote">'admin@example.org'</span>;
+<span
+class="php-var">$user</span>-&gt;save(); <span
+class="php-comment">//update the 'admin' record.</span>
+</pre>
+
+<p>Since v3.1.1, TActiveRecord starts to support column mapping. The physical
+column names (defined in database) can be mapped to logical column names
+(defined in active classes as public properties.) To use this feature, declare a
+static class variable COLUMN_MAPPING like the following:</p>
+
+<pre>
+<span class="php-keyword1">class</span> UserRecord <span
+class="php-keyword1">extends</span> TActiveRecord
+{
+    <span
+class="php-keyword1">const</span> TABLE=<span
+class="php-quote">'users'</span>;
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span
+class="php-var">$COLUMN_MAPPING</span>=<span
+class="php-keyword1">array</span>
+    (
+        <span
+class="php-quote">'user_id'</span>=&gt;<span
+class="php-quote">'username'</span>,
+        <span
+class="php-quote">'email_address'</span>=&gt;<span
+class="php-quote">'email'</span>,
+    );
+    <span
+class="php-keyword1">public</span> <span
+class="php-var">$username</span>;
+    <span
+class="php-keyword1">public</span> <span class="php-var">$email</span>;
+}
+</pre>
+
+<p>In the above, the 'users' table consists of 'user_id' and 'email_address'
+columns, while the UserRecord class declares 'username' and 'email' properties.
+By using column mapping, we can regularize the naming convention of column names
+in active record.</p>
+
+<p>Since v3.1.2, TActiveRecord enhanced its support to access of foreign
+objects. By declaring a public static variable RELATIONS like the following, one
+can access the corresponding foreign objects easily:</p>
+
+<pre>
+<span class="php-keyword1">class</span> UserRecord <span
+class="php-keyword1">extends</span> TActiveRecord
+{
+    <span
+class="php-keyword1">const</span> TABLE=<span
+class="php-quote">'users'</span>;
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span class="php-var">$RELATIONS</span>=<span
+class="php-keyword1">array</span>
+    (
+        <span
+class="php-quote">'department'</span>=&gt;<span
+class="php-keyword1">array</span>(self::BELONGS_TO, <span
+class="php-quote">'DepartmentRecord'</span>, <span
+class="php-quote">'department_id'</span>),
+        <span
+class="php-quote">'contacts'</span>=&gt;<span
+class="php-keyword1">array</span>(self::HAS_MANY, <span
+class="php-quote">'ContactRecord'</span>, <span
+class="php-quote">'user_id'</span>),
+    );
+}
+</pre>
+
+<p>In the above, the users table is related with departments table (represented
+by DepartmentRecord) and contacts table (represented by ContactRecord). Now,
+given a UserRecord instance $user, one can access its department and contacts
+simply by: $user-&gt;department and $user-&gt;contacts. No explicit data
+fetching is needed. Internally, the foreign objects are fetched in a lazy way,
+which avoids unnecessary overhead if the foreign objects are not accessed at
+all.</p>
+
+<p>Since v3.1.2, new events OnInsert, OnUpdate and OnDelete are available. The
+event OnInsert, OnUpdate and OnDelete methods are executed before inserting,
+updating, and deleting the current record, respectively. You may override these
+methods; a TActiveRecordChangeEventParameter parameter is passed to these
+methods. The property TActiveRecordChangeEventParameter::setIsValid
+IsValid of the parameter can be set to false to prevent the change action to be
+executed. This can be used, for example, to validate the record before the
+action is executed. For example, in the following the password property is
+hashed before a new record is inserted.</p>
+
+<pre>
+<span class="php-keyword1">class</span> UserRecord <span
+class="php-keyword1">extends</span> TActiveRecord
+{
+     <span
+class="php-keyword1">function</span> OnInsert(<span
+class="php-var">$param</span>)
+     {
+         <span
+class="php-comment">//parent method should be called to raise the event</span>
+         parent::OnInsert(<span
+class="php-var">$param</span>);
+         <span
+class="php-var">$this</span>-&gt;nounce = <span
+class="php-keyword2">md5</span>(<span
+class="php-keyword2">time</span>());
+         <span
+class="php-var">$this</span>-&gt;password = <span
+class="php-keyword2">md5</span>(<span
+class="php-var">$this</span>-&gt;password.<span
+class="php-var">$this</span>-&gt;nounce);
+     }
+}
+</pre>
+
+<p>Since v3.1.3 you can also define a method that returns the table name.</p>
+
+<pre>
+<span class="php-keyword1">class</span> UserRecord <span
+class="php-keyword1">extends</span> TActiveRecord
+{
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> table()
+    {
+         <span
+class="php-keyword1">return</span> <span
+class="php-quote">'users'</span>;
+    }
+
+}
+</pre>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TActiveRecord</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.ActiveRecord.html">ActiveRecord</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com&gt;<br />
+				<b>Since:</b>
+				3.1<br />
+		<b>Located at</b> Data/ActiveRecord/TActiveRecord.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__sleep" id="___sleep">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___sleep">#</a>
+		<code>__sleep( )</code>
+
+		<div class="description short">
+			
+<p>Prevent __call() method creating __sleep() when serializing.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prevent __call() method creating __sleep() when serializing.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___sleep">TComponent::__sleep()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__wakeup" id="___wakeup">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___wakeup">#</a>
+		<code>__wakeup( )</code>
+
+		<div class="description short">
+			
+<p>Prevent __call() method creating __wakeup() when unserializing.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prevent __call() method creating __wakeup() when unserializing.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___wakeup">TComponent::__wakeup()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span>, <span><code><a href="class-TDbConnection.html">TDbConnection</a></code> <var>$connection</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new instance of an active record with given $data. The record can be
+saved to the database specified by the $connection object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new instance of an active record with given $data. The record can be
+saved to the database specified by the $connection object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>array</code><br>optional name value pair record data.</dd>
+					<dt><var>$connection</var></dt>
+					<dd><code><code><a href="class-TDbConnection.html">TDbConnection</a></code></code><br>optional database connection this object record use.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code>__get( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Magic method for reading properties. This method is overriden to provide read
+access to the foreign objects via the key names declared in the RELATIONS
+array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Magic method for reading properties. This method is overriden to provide read
+access to the foreign objects via the key names declared in the RELATIONS
+array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>property value.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the property/event is not defined.<br />
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___get">TComponent::__get()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set">#</a>
+		<code>__set( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Magic method for writing properties. This method is overriden to provide
+write access to the foreign objects via the key names declared in the RELATIONS
+array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Magic method for writing properties. This method is overriden to provide
+write access to the foreign objects via the key names declared in the RELATIONS
+array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>property name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>property value.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>If the property is not defined or read-only.<br />
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___set">TComponent::__set()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyFrom" id="_copyFrom">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_copyFrom">#</a>
+		<code>copyFrom( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Copies data from an array or another object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Copies data from an array or another object.</p>
+
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecordException.html">TActiveRecordException</a></code></code><br>if data is not array or not object.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getActiveDbConnection" id="_getActiveDbConnection">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getActiveDbConnection">#</a>
+		<code>getActiveDbConnection( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDbConnection" id="_getDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDbConnection">#</a>
+		<code>getDbConnection( )</code>
+
+		<div class="description short">
+			
+<p>Gets the current Db connection, the connection object is obtained from the
+TActiveRecordManager if connection is currently null.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the current Db connection, the connection object is obtained from the
+TActiveRecordManager if connection is currently null.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDbConnection.html">TDbConnection</a></code></code><br>current db connection for this object.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDbConnection" id="_setDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDbConnection">#</a>
+		<code>setDbConnection( <span><code><a href="class-TDbConnection.html">TDbConnection</a></code> <var>$connection</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code><code><a href="class-TDbConnection.html">TDbConnection</a></code></code><br>db connection object for this record.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordTableInfo" id="_getRecordTableInfo">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordTableInfo">#</a>
+		<code>getRecordTableInfo( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code></code><br>the meta information of the table associated with this AR class.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="equals" id="_equals">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_equals">#</a>
+		<code>equals( <span><code><a href="class-TActiveRecord.html">TActiveRecord</a></code> <var>$record</var></span>, <span>boolean <var>$strict</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Compare two records using their primary key values (all column values if
+table does not defined primary keys). The default uses simple == for comparison
+of their values. Set $strict=true for identity comparison (===).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compare two records using their primary key values (all column values if
+table does not defined primary keys). The default uses simple == for comparison
+of their values. Set $strict=true for identity comparison (===).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$record</var></dt>
+					<dd><code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>another record to compare with.</dd>
+					<dt><var>$strict</var></dt>
+					<dd><code>boolean</code><br>true to perform strict identity comparison</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if $record equals, false otherwise.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="finder" id="_finder">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-TActiveRecord.html">TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_finder">#</a>
+		<code>finder( <span>string <var>$className</var> = __CLASS__</span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the instance of a active record finder for a particular class. The
+finder objects are static instances for each ActiveRecord class. This means that
+event handlers bound to these finder instances are class wide. Create a new
+instance of the ActiveRecord class if you wish to bound the event handlers to
+object instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the instance of a active record finder for a particular class. The
+finder objects are static instances for each ActiveRecord class. This means that
+event handlers bound to these finder instances are class wide. Create a new
+instance of the ActiveRecord class if you wish to bound the event handlers to
+object instance.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$className</var></dt>
+					<dd><code>string</code><br>active record class name.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>active record finder instance.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordManager" id="_getRecordManager">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-TActiveRecordManager.html">TActiveRecordManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordManager">#</a>
+		<code>getRecordManager( )</code>
+
+		<div class="description short">
+			
+<p>Gets the record manager for this object, the default is to call
+TActiveRecordManager::getInstance().</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the record manager for this object, the default is to call
+TActiveRecordManager::getInstance().</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecordManager.html">TActiveRecordManager</a></code></code><br>default active record manager.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordGateway" id="_getRecordGateway">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TActiveRecordGateway.html">TActiveRecordGateway</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordGateway">#</a>
+		<code>getRecordGateway( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecordGateway.html">TActiveRecordGateway</a></code></code><br>record table gateway.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code>save( )</code>
+
+		<div class="description short">
+			
+<p>Saves the current record to the database, insert or update is automatically
+determined.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Saves the current record to the database, insert or update is automatically
+determined.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if record was saved successfully, false otherwise.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code>delete( )</code>
+
+		<div class="description short">
+			
+<p>Deletes the current record from the database. Once deleted, this object can
+not be saved again in the same instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes the current record from the database. Once deleted, this object can
+not be saved again in the same instance.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if the record was deleted successfully, false otherwise.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteByPk" id="_deleteByPk">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteByPk">#</a>
+		<code>deleteByPk( <span>mixed <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete records by primary key. Usage:</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete records by primary key. Usage:</p>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;deleteByPk(<span
+class="php-var">$primaryKey</span>); <span
+class="php-comment">//delete 1 record</span>
+<span
+class="php-var">$finder</span>-&gt;deleteByPk(<span
+class="php-var">$key1</span>,<span class="php-var">$key2</span>,...); <span
+class="php-comment">//delete multiple records</span>
+<span
+class="php-var">$finder</span>-&gt;deleteByPk(<span
+class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span
+class="php-var">$key2</span>,...)); <span
+class="php-comment">//delete multiple records</span>
+</pre>
+
+<p>For composite primary keys (determined from the table definitions):</p>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;deleteByPk(<span
+class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span
+class="php-var">$key2</span>)); <span
+class="php-comment">//delete 1 record</span>
+
+<span
+class="php-comment">//delete multiple records</span>
+<span
+class="php-var">$finder</span>-&gt;deleteByPk(<span
+class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span
+class="php-var">$key2</span>), <span class="php-keyword1">array</span>(<span
+class="php-var">$key3</span>,<span class="php-var">$key4</span>),...);
+
+<span
+class="php-comment">//delete multiple records</span>
+<span
+class="php-var">$finder</span>-&gt;deleteByPk(<span
+class="php-keyword1">array</span>( <span class="php-keyword1">array</span>(<span
+class="php-var">$key1</span>,<span class="php-var">$key2</span>), <span
+class="php-keyword1">array</span>(<span class="php-var">$key3</span>,<span
+class="php-var">$key4</span>), .. ));
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>mixed</code><br>primary key values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of records deleted.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteAllByPks" id="_deleteAllByPks">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteAllByPks">#</a>
+		<code>deleteAllByPks( <span>mixed <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Alias for deleteByPk()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Alias for deleteByPk()</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteAll" id="_deleteAll">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteAll">#</a>
+		<code>deleteAll( <span>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Delete multiple records using a criteria.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete multiple records using a criteria.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd><code>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code></code><br>SQL condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>mixed</code><br>parameter values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of records deleted.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="populateObject" id="_populateObject">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TActiveRecord.html">TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_populateObject">#</a>
+		<code>populateObject( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Populates a new record with the query result. This is a wrapper of <code><a href="class-TActiveRecord.html#_createRecord">TActiveRecord::createRecord()</a></code>.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Populates a new record with the query result. This is a wrapper of <code><a href="class-TActiveRecord.html#_createRecord">TActiveRecord::createRecord()</a></code>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>array</code><br>name value pair of record data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>object record, null if data is empty.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="populateObjects" id="_populateObjects">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_populateObjects">#</a>
+		<code>populateObjects( <span><code><a href="class-TDbDataReader.html">TDbDataReader</a></code> <var>$reader</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$reader</var></dt>
+					<dd><code><code><a href="class-TDbDataReader.html">TDbDataReader</a></code></code><br>data reader</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>the AR objects populated by the query result<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createRecord" id="_createRecord">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-TActiveRecord.html">TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createRecord">#</a>
+		<code>createRecord( <span>string <var>$type</var></span>, <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create an AR instance specified by the AR class name and initial data. If the
+initial data is empty, the AR object will not be created and null will be
+returned. (You should use the "new" operator to create the AR instance in that
+case.)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create an AR instance specified by the AR class name and initial data. If the
+initial data is empty, the AR object will not be created and null will be
+returned. (You should use the "new" operator to create the AR instance in that
+case.)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>the AR class name</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>array</code><br>initial data to be populated into the AR object.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>the initialized AR object. Null if the initial data is empty.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="find" id="_find">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TActiveRecord.html">TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_find">#</a>
+		<code>find( <span>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Find one single record that matches the criteria.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find one single record that matches the criteria.</p>
+
+<p>Usage:</p>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;find(<span
+class="php-quote">'username = :name AND password = :pass'</span>,
+                                        <span
+class="php-keyword1">array</span>(<span
+class="php-quote">':name'</span>=&gt;<span class="php-var">$name</span>, <span
+class="php-quote">':pass'</span>=&gt;<span class="php-var">$pass</span>));
+<span
+class="php-var">$finder</span>-&gt;find(<span
+class="php-quote">'username = ? AND password = ?'</span>, <span
+class="php-keyword1">array</span>(<span class="php-var">$name</span>, <span
+class="php-var">$pass</span>));
+<span
+class="php-var">$finder</span>-&gt;find(<span
+class="php-quote">'username = ? AND password = ?'</span>, <span
+class="php-var">$name</span>, <span class="php-var">$pass</span>);
+<span
+class="php-comment">//$criteria is of TActiveRecordCriteria</span>
+<span
+class="php-var">$finder</span>-&gt;find(<span
+class="php-var">$criteria</span>); <span
+class="php-comment">//the 2nd parameter for find() is ignored.</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd><code>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code></code><br>SQL condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>mixed</code><br>parameter values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>matching record object. Null if no result is found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAll" id="_findAll">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAll">#</a>
+		<code>findAll( <span>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Same as find() but returns an array of objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Same as find() but returns an array of objects.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd><code>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code></code><br>SQL condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>mixed</code><br>parameter values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>matching record objects. Empty array if no result is found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByPk" id="_findByPk">
+
+		<td class="attributes"><code>
+			 public 
+			TActiveRecord.
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findByPk">#</a>
+		<code>findByPk( <span>mixed <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Find one record using only the primary key or composite primary keys.
+Usage:</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find one record using only the primary key or composite primary keys.
+Usage:</p>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;findByPk(<span
+class="php-var">$primaryKey</span>);
+<span
+class="php-var">$finder</span>-&gt;findByPk(<span
+class="php-var">$key1</span>, <span class="php-var">$key2</span>, ...);
+<span
+class="php-var">$finder</span>-&gt;findByPk(<span
+class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span
+class="php-var">$key2</span>,...));
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>mixed</code><br>primary keys</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TActiveRecord.</code><br>Null if no result is found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAllByPks" id="_findAllByPks">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAllByPks">#</a>
+		<code>findAllByPks( <span>mixed <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Find multiple records matching a list of primary or composite keys.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find multiple records matching a list of primary or composite keys.</p>
+
+<p>For scalar primary keys:</p>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;findAllByPk(<span
+class="php-var">$key1</span>, <span class="php-var">$key2</span>, ...);
+<span
+class="php-var">$finder</span>-&gt;findAllByPk(<span
+class="php-keyword1">array</span>(<span class="php-var">$key1</span>, <span
+class="php-var">$key2</span>, ...));
+</pre>
+
+<p>For composite keys:</p>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;findAllByPk(<span
+class="php-keyword1">array</span>(<span class="php-var">$key1</span>, <span
+class="php-var">$key2</span>), <span class="php-keyword1">array</span>(<span
+class="php-var">$key3</span>, <span class="php-var">$key4</span>), ...);
+<span
+class="php-var">$finder</span>-&gt;findAllByPk(<span
+class="php-keyword1">array</span>(<span class="php-keyword1">array</span>(<span
+class="php-var">$key1</span>, <span class="php-var">$key2</span>), <span
+class="php-keyword1">array</span>(<span class="php-var">$key3</span>, <span
+class="php-var">$key4</span>), ...));
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>mixed</code><br>primary keys</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>matching ActiveRecords. Empty array is returned if no result is found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findBySql" id="_findBySql">
+
+		<td class="attributes"><code>
+			 public 
+			TActiveRecord,
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findBySql">#</a>
+		<code>findBySql( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Find records using full SQL, returns corresponding record object. The names
+of the column retrieved must be defined in your Active Record class.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find records using full SQL, returns corresponding record object. The names
+of the column retrieved must be defined in your Active Record class.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>select SQL</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code><br>$parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TActiveRecord,</code><br>null if no result is returned.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAllBySql" id="_findAllBySql">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAllBySql">#</a>
+		<code>findAllBySql( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Find records using full SQL, returns corresponding record object. The names
+of the column retrieved must be defined in your Active Record class.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find records using full SQL, returns corresponding record object. The names
+of the column retrieved must be defined in your Active Record class.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>select SQL</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code><br>$parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>matching active records. Empty array is returned if no result is found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAllByIndex" id="_findAllByIndex">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAllByIndex">#</a>
+		<code>findAllByIndex( <span><code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>array <var>$fields</var></span>, <span>array <var>$values</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetches records using the sql clause "(fields) IN (values)", where fields is
+an array of column names and values is an array of values that the columns must
+have.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetches records using the sql clause "(fields) IN (values)", where fields is
+an array of column names and values is an array of values that the columns must
+have.</p>
+
+<p>This method is to be used by the relationship handler.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd><code><code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code></code><br>additional criteria</dd>
+					<dt><var>$fields</var></dt>
+					<dd><code>array</code><br>field names to match with "(fields) IN (values)" sql clause.</dd>
+					<dt><var>$values</var></dt>
+					<dd><code>array</code><br>matching field values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>matching active records. Empty array is returned if no result is found.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code>count( <span>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Find the number of records.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Find the number of records.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd><code>string|<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code></code><br>SQL condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>mixed</code><br>parameter values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of records.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelationHandler" id="_getRelationHandler">
+
+		<td class="attributes"><code>
+			 protected 
+			TActiveRecordRelation,
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelationHandler">#</a>
+		<code>getRelationHandler( <span>string <var>$name</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the active record relationship handler for $RELATION with key value
+equal to the $property value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the active record relationship handler for $RELATION with key value
+equal to the $property value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>relationship/property name corresponding to keys in $RELATION array.</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>method call arguments.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TActiveRecordRelation,</code><br>null if the context or the handler doesn't exist<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createRelationContext" id="_createRelationContext">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TActiveRecordRelationContext.html">TActiveRecordRelationContext</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createRelationContext">#</a>
+		<code>createRelationContext( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets a static copy of the relationship context for given property (a key in
+$RELATIONS), returns null if invalid relationship. Keeps a null reference to all
+invalid relations called.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets a static copy of the relationship context for given property (a key in
+$RELATIONS), returns null if invalid relationship. Keeps a null reference to all
+invalid relations called.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>relationship/property name corresponding to keys in $RELATION array.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecordRelationContext.html">TActiveRecordRelationContext</a></code></code><br>object containing information on the active record relationships for given
+property, null if invalid relationship<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchResultsFor" id="_fetchResultsFor">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchResultsFor">#</a>
+		<code>fetchResultsFor( <span>string <var>$property</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Tries to load the relationship results for the given property. The $property
+value should correspond to an entry key in the $RELATION array. This method can
+be used to lazy load relationships. &lt;code&gt; class TeamRecord extends
+TActiveRecord {<br />
+...</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Tries to load the relationship results for the given property. The $property
+value should correspond to an entry key in the $RELATION array. This method can
+be used to lazy load relationships.</p>
+
+<pre>
+<span class="php-keyword1">class</span> TeamRecord <span
+class="php-keyword1">extends</span> TActiveRecord
+{
+    ...
+
+<span
+class="php-keyword1">private</span> <span
+class="php-var">$_players</span>;
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">static</span> <span class="php-var">$RELATION</span>=<span
+class="php-keyword1">array</span>
+    (
+        <span
+class="php-quote">'players'</span> =&gt; <span
+class="php-keyword1">array</span>(self::HAS_MANY, <span
+class="php-quote">'PlayerRecord'</span>),
+    );
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> setPlayers(<span
+class="php-var">$array</span>)
+    {
+        <span
+class="php-var">$this</span>-&gt;_players=<span
+class="php-var">$array</span>;
+    }
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> getPlayers()
+    {
+        <span
+class="php-keyword1">if</span>(<span
+class="php-var">$this</span>-&gt;_players===<span
+class="php-keyword1">null</span>)
+            <span
+class="php-var">$this</span>-&gt;fetchResultsFor(<span
+class="php-quote">'players'</span>);
+        <span
+class="php-keyword1">return</span> <span
+class="php-var">$this</span>-&gt;_players;
+    }
+}
+Usage example:
+<span
+class="php-var">$team</span> = TeamRecord::finder()-&gt;findByPk(<span
+class="php-num">1</span>);
+<span class="php-keyword2">var_dump</span>(<span
+class="php-var">$team</span>-&gt;players); <span
+class="php-comment">//uses lazy load to fetch 'players' relation</span>
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$property</var></dt>
+					<dd><code>string</code><br>relationship/property name corresponding to keys in $RELATION array.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if relationship exists, false otherwise.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code>__call( <span>string <var>$method</var></span>, <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Dynamic find method using parts of method name as search criteria. Method
+name starting with "findBy" only returns 1 record. Method name starting with
+"findAllBy" returns 0 or more records. Method name starting with "deleteBy"
+deletes records by the trail criteria. The condition is taken as part of the
+method name after "findBy", "findAllBy" or "deleteBy".</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dynamic find method using parts of method name as search criteria. Method
+name starting with "findBy" only returns 1 record. Method name starting with
+"findAllBy" returns 0 or more records. Method name starting with "deleteBy"
+deletes records by the trail criteria. The condition is taken as part of the
+method name after "findBy", "findAllBy" or "deleteBy".</p>
+
+<p>The following are equivalent:</p>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;findByName(<span
+class="php-var">$name</span>)
+<span
+class="php-var">$finder</span>-&gt;find(<span
+class="php-quote">'Name = ?'</span>, <span class="php-var">$name</span>);
+</pre>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;findByUsernameAndPassword(<span
+class="php-var">$name</span>,<span class="php-var">$pass</span>); <span
+class="php-comment">// OR may be used</span>
+<span
+class="php-var">$finder</span>-&gt;findBy_Username_And_Password(<span
+class="php-var">$name</span>,<span class="php-var">$pass</span>); <span
+class="php-comment">// _OR_ may be used</span>
+<span
+class="php-var">$finder</span>-&gt;find(<span
+class="php-quote">'Username = ? AND Password = ?'</span>, <span
+class="php-var">$name</span>, <span class="php-var">$pass</span>);
+</pre>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;findAllByAge(<span
+class="php-var">$age</span>);
+<span
+class="php-var">$finder</span>-&gt;findAll(<span
+class="php-quote">'Age = ?'</span>, <span class="php-var">$age</span>);
+</pre>
+
+<pre>
+<span class="php-var">$finder</span>-&gt;deleteAll(<span
+class="php-quote">'Name = ?'</span>, <span class="php-var">$name</span>);
+<span
+class="php-var">$finder</span>-&gt;deleteByName(<span
+class="php-var">$name</span>);
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>method name that doesn't exist and is being called on the object</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>mixed</code><br>method parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>single record if method name starts with "findBy", 0 or more records if method
+name starts with "findAllBy"<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>If the property is not defined or read-only or method is undefined<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___call">TComponent::__call()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInvalidFinderResult" id="_getInvalidFinderResult">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInvalidFinderResult">#</a>
+		<code>getInvalidFinderResult( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code></code><br>Defaults to 'TActiveRecordInvalidFinderResult::Null Null'.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TActiveRecordManager.html#_getInvalidFinderResult">TActiveRecordManager::getInvalidFinderResult()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setInvalidFinderResult" id="_setInvalidFinderResult">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setInvalidFinderResult">#</a>
+		<code>setInvalidFinderResult( <span><code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code>|null <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Define the way an active record finder react if an invalid magic-finder
+invoked</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Define the way an active record finder react if an invalid magic-finder
+invoked</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code>|null</code></dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TActiveRecordManager.html#_setInvalidFinderResult">TActiveRecordManager::setInvalidFinderResult()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordCriteria" id="_getRecordCriteria">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TSqlCriteria.html">TSqlCriteria</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordCriteria">#</a>
+		<code>getRecordCriteria( <span>string|<code><a href="class-TSqlCriteria.html">TSqlCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Create a new TSqlCriteria object from a string $criteria. The $args are
+additional parameters and are used in place of the $parameters if $parameters is
+not an array and $args is an arrary.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a new TSqlCriteria object from a string $criteria. The $args are
+additional parameters and are used in place of the $parameters if $parameters is
+not an array and $args is an arrary.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd><code>string|<code><a href="class-TSqlCriteria.html">TSqlCriteria</a></code></code><br>sql criteria</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>mixed</code><br>parameters passed by the user.</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>additional parameters obtained from function_get_args().</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TSqlCriteria.html">TSqlCriteria</a></code></code><br>criteria object.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onCreateCommand" id="_onCreateCommand">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onCreateCommand">#</a>
+		<code>onCreateCommand( <span><code><a href="class-TDataGatewayEventParameter.html">TDataGatewayEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raised when a command is prepared and parameter binding is completed. The
+parameter object is TDataGatewayEventParameter of which the TDataGatewayEventParameter::getCommand Command property can be inspected to
+obtain the sql query to be executed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raised when a command is prepared and parameter binding is completed. The
+parameter object is TDataGatewayEventParameter of which the TDataGatewayEventParameter::getCommand Command property can be inspected to
+obtain the sql query to be executed.</p>
+
+<p>Note well that the finder objects obtained from ActiveRecord::finder() method
+are static objects. This means that the event handlers are bound to a static
+finder object and not to each distinct active record object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TDataGatewayEventParameter.html">TDataGatewayEventParameter</a></code></code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onExecuteCommand" id="_onExecuteCommand">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onExecuteCommand">#</a>
+		<code>onExecuteCommand( <span><code><a href="class-TDataGatewayResultEventParameter.html">TDataGatewayResultEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raised when a command is executed and the result from the database was
+returned. The parameter object is TDataGatewayResultEventParameter of which the
+TDataGatewayEventParameter::getResult Result property contains the data
+return from the database. The data returned can be changed by setting the TDataGatewayEventParameter::setResult Result property.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raised when a command is executed and the result from the database was
+returned. The parameter object is TDataGatewayResultEventParameter of which the
+TDataGatewayEventParameter::getResult Result property contains the data
+return from the database. The data returned can be changed by setting the TDataGatewayEventParameter::setResult Result property.</p>
+
+<p>Note well that the finder objects obtained from ActiveRecord::finder() method
+are static objects. This means that the event handlers are bound to a static
+finder object and not to each distinct active record object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TDataGatewayResultEventParameter.html">TDataGatewayResultEventParameter</a></code></code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onInsert" id="_onInsert">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onInsert">#</a>
+		<code>onInsert( <span><code><a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raised before the record attempt to insert its data into the database. To
+prevent the insert operation, set the TActiveRecordChangeEventParameter::IsValid
+parameter to false.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raised before the record attempt to insert its data into the database. To
+prevent the insert operation, set the TActiveRecordChangeEventParameter::IsValid
+parameter to false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a></code></code><br>event parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onDelete" id="_onDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onDelete">#</a>
+		<code>onDelete( <span><code><a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raised before the record attempt to delete its data from the database. To
+prevent the delete operation, set the TActiveRecordChangeEventParameter::IsValid
+parameter to false.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raised before the record attempt to delete its data from the database. To
+prevent the delete operation, set the TActiveRecordChangeEventParameter::IsValid
+parameter to false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a></code></code><br>event parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onUpdate" id="_onUpdate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onUpdate">#</a>
+		<code>onUpdate( <span><code><a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raised before the record attempt to update its data in the database. To
+prevent the update operation, set the TActiveRecordChangeEventParameter::IsValid
+parameter to false.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raised before the record attempt to update its data in the database. To
+prevent the update operation, set the TActiveRecordChangeEventParameter::IsValid
+parameter to false.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a></code></code><br>event parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getColumnValue" id="_getColumnValue">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getColumnValue">#</a>
+		<code>getColumnValue( <span>string <var>$columnName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieves the column value according to column name. This method is used
+internally.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves the column value according to column name. This method is used
+internally.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columnName</var></dt>
+					<dd><code>string</code><br>the column name (as defined in database schema)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the corresponding column value<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setColumnValue" id="_setColumnValue">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setColumnValue">#</a>
+		<code>setColumnValue( <span>string <var>$columnName</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the column value according to column name. This method is used
+internally.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the column value according to column name. This method is used
+internally.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columnName</var></dt>
+					<dd><code>string</code><br>the column name (as defined in database schema)</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>the corresponding column value</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordRelation" id="_getRecordRelation">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordRelation">#</a>
+		<code>getRecordRelation( <span>string <var>$property</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$property</var></dt>
+					<dd><code>string</code><br>relation property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>relation definition for the specified property<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordRelations" id="_getRecordRelations">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordRelations">#</a>
+		<code>getRecordRelations( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>all relation definitions declared in the AR class<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasRecordRelation" id="_hasRecordRelation">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasRecordRelation">#</a>
+		<code>hasRecordRelation( <span>string <var>$property</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$property</var></dt>
+					<dd><code>string</code><br>AR property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether a relation is declared for the specified AR property<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code>toArray( )</code>
+
+		<div class="description short">
+			
+<p>Return record data as array</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return record data as array</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of column name and column values<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.4<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toJSON" id="_toJSON">
+
+		<td class="attributes"><code>
+			 public 
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toJSON">#</a>
+		<code>toJSON( )</code>
+
+		<div class="description short">
+			
+<p>Return record data as JSON</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return record data as JSON</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>JSON</code><br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.4<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="BELONGS_TO" id="BELONGS_TO">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BELONGS_TO</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BELONGS_TO'</span></code></td>
+		<td class="description"><div>
+			<a href="#BELONGS_TO" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HAS_ONE" id="HAS_ONE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HAS_ONE</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HAS_ONE'</span></code></td>
+		<td class="description"><div>
+			<a href="#HAS_ONE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HAS_MANY" id="HAS_MANY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HAS_MANY</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HAS_MANY'</span></code></td>
+		<td class="description"><div>
+			<a href="#HAS_MANY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MANY_TO_MANY" id="MANY_TO_MANY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>MANY_TO_MANY</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'MANY_TO_MANY'</span></code></td>
+		<td class="description"><div>
+			<a href="#MANY_TO_MANY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATE_NEW" id="STATE_NEW">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>STATE_NEW</b>		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#STATE_NEW" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATE_LOADED" id="STATE_LOADED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>STATE_LOADED</b>		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#STATE_LOADED" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATE_DELETED" id="STATE_DELETED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>STATE_DELETED</b>		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#STATE_DELETED" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_recordState" id="$_recordState">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$_recordState</var>		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$_recordState" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>record state: 0 = new, 1 = loaded, 2 = deleted.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>record state: 0 = new, 1 = loaded, 2 = deleted.</p>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.2<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="COLUMN_MAPPING" id="$COLUMN_MAPPING">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+<var>$COLUMN_MAPPING</var>		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$COLUMN_MAPPING" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This static variable defines the column mapping. The keys are physical column
+names as defined in database, and the values are logical column names as defined
+as public variable/property names for the corresponding active record class.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This static variable defines the column mapping. The keys are physical column
+names as defined in database, and the values are logical column names as defined
+as public variable/property names for the corresponding active record class.</p>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.1<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RELATIONS" id="$RELATIONS">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+<var>$RELATIONS</var>		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$RELATIONS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>This static variable defines the relationships. The keys are public
+variable/property names defined in the AR class. Each value is an array, e.g.
+array(self::HAS_MANY, 'PlayerRecord').</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>This static variable defines the relationships. The keys are public
+variable/property names defined in the AR class. Each value is an array, e.g.
+array(self::HAS_MANY, 'PlayerRecord').</p>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.1<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_connection" id="$_connection">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+		</code></td>
+
+		<td class="name">
+<var>$_connection</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_connection" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>database connection object.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>database connection object.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_invalidFinderResult" id="$_invalidFinderResult">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code>
+		</code></td>
+
+		<td class="name">
+<var>$_invalidFinderResult</var>		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$_invalidFinderResult" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Defaults to 'null'</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Defaults to 'null'</p>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.5<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

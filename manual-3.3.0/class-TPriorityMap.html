@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TPriorityMap | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAttributeCollection.html">TAttributeCollection</a></li>
+				<li><a href="class-TDummyDataSource.html">TDummyDataSource</a></li>
+				<li><a href="class-TDummyDataSourceIterator.html">TDummyDataSourceIterator</a></li>
+				<li><a href="class-TList.html">TList</a></li>
+				<li><a href="class-TListItemCollection.html">TListItemCollection</a></li>
+				<li><a href="class-TListIterator.html" class="deprecated">TListIterator</a></li>
+				<li><a href="class-TMap.html">TMap</a></li>
+				<li><a href="class-TMapIterator.html" class="deprecated">TMapIterator</a></li>
+				<li><a href="class-TPagedDataSource.html">TPagedDataSource</a></li>
+				<li><a href="class-TPagedList.html">TPagedList</a></li>
+				<li><a href="class-TPagedListFetchDataEventParameter.html">TPagedListFetchDataEventParameter</a></li>
+				<li><a href="class-TPagedListIterator.html">TPagedListIterator</a></li>
+				<li><a href="class-TPagedListPageChangedEventParameter.html">TPagedListPageChangedEventParameter</a></li>
+				<li><a href="class-TPagedMapIterator.html">TPagedMapIterator</a></li>
+				<li><a href="class-TPriorityList.html">TPriorityList</a></li>
+				<li class="active"><a href="class-TPriorityMap.html">TPriorityMap</a></li>
+				<li><a href="class-TQueue.html">TQueue</a></li>
+				<li><a href="class-TQueueIterator.html">TQueueIterator</a></li>
+				<li><a href="class-TStack.html">TStack</a></li>
+				<li><a href="class-TStackIterator.html" class="deprecated">TStackIterator</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TPriorityMap</h1>
+
+
+	<div class="description">
+	<p>TMap class</p>
+
+<p>TMap implements a collection that takes key-value pairs.</p>
+
+<p>You can access, add or remove an item with a key by using
+<code><a href="class-TPriorityMap.html#_itemAt">TPriorityMap::itemAt()</a></code>, <code><a href="class-TPriorityMap.html#_add">TPriorityMap::add()</a></code>, and <code><a href="class-TPriorityMap.html#_remove">TPriorityMap::remove()</a></code>.
+To get the number of the items in the map, use <code><a href="class-TPriorityMap.html#_getCount">TPriorityMap::getCount()</a></code>.
+TMap can also be used like a regular array as follows,</p>
+
+<pre><span class="php-var">$map</span>[<span class="php-var">$key</span>]=<span class="php-var">$value</span>; <span class="php-comment">// add a key-value pair</span>
+<span class="php-keyword1">unset</span>(<span class="php-var">$map</span>[<span class="php-var">$key</span>]); <span class="php-comment">// remove the value with the specified key</span>
+<span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$map</span>[<span class="php-var">$key</span>])) <span class="php-comment">// if the map contains the key</span>
+<span class="php-keyword1">foreach</span>(<span class="php-var">$map</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span>=&gt;<span class="php-var">$value</span>) <span class="php-comment">// traverse the items in the map</span>
+<span class="php-var">$n</span>=<span class="php-keyword2">count</span>(<span class="php-var">$map</span>);  <span class="php-comment">// returns the number of items in the map</span></pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TMap.html"><span>TMap</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TPriorityMap</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Collections.html">Collections</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Collections/TPriorityMap.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>map|array|Iterator|<code><a href="class-TPriorityMap.html">TPriorityMap</a></code> <var>$data</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$readOnly</var> = <span class="php-keyword1">false</span></span>, <span>numeric <var>$defaultPriority</var> = <span class="php-num">10</span></span>, <span>integer <var>$precision</var> = <span class="php-num">8</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.
+Initializes the array with an array or an iterable object.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.
+Initializes the array with an array or an iterable object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>intial data. Default is null, meaning no initialization.</dd>
+					<dt><var>$readOnly</var></dt>
+					<dd>the list is read-only</dd>
+					<dt><var>$defaultPriority</var></dt>
+					<dd>default priority of items without specified priorities.</dd>
+					<dt><var>$precision</var></dt>
+					<dd>precision of the numeric priorities</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is not null and neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#___construct">TMap::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReadOnly" id="_getReadOnly">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReadOnly">#</a>
+		<code>getReadOnly( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether this map is read-only or not. Defaults to false.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_getReadOnly">TMap::getReadOnly()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setReadOnly" id="_setReadOnly">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setReadOnly">#</a>
+		<code>setReadOnly( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>this list is read-only or not</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_setReadOnly">TMap::setReadOnly()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultPriority" id="_getDefaultPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultPriority">#</a>
+		<code>getDefaultPriority( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric<br>gets the default priority of inserted items without a specified priority
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDefaultPriority" id="_setDefaultPriority">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDefaultPriority">#</a>
+		<code>setDefaultPriority( <span>numeric <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>This must be called internally or when instantiated.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This must be called internally or when instantiated.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the default priority of inserted items without a specified priority</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPrecision" id="_getPrecision">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPrecision">#</a>
+		<code>getPrecision( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>The precision of numeric priorities, defaults to 8
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPrecision" id="_setPrecision">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPrecision">#</a>
+		<code>setPrecision( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>This must be called internally or when instantiated.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This must be called internally or when instantiated.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>precision of numeric priorities.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+
+			Iterator
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code>getIterator( )</code>
+
+		<div class="description short">
+			<p>Returns an iterator for traversing the items in the map.
+This method is required by the interface IteratorAggregate.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns an iterator for traversing the items in the map.
+This method is required by the interface IteratorAggregate.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Iterator<br>an iterator for traversing the items in the map.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_getIterator">TMap::getIterator()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sortPriorities" id="_sortPriorities">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sortPriorities">#</a>
+		<code>sortPriorities( )</code>
+
+		<div class="description short">
+			<p>Orders the priority list internally.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Orders the priority list internally.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flattenPriorities" id="_flattenPriorities">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flattenPriorities">#</a>
+		<code>flattenPriorities( )</code>
+
+		<div class="description short">
+			<p>This flattens the priority map into a flat array [0,...,n-1]</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This flattens the priority map into a flat array [0,...,n-1]</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>array of items in the list in priority and index order
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code>count( )</code>
+
+		<div class="description short">
+			<p>Returns the number of items in the map.
+This method is required by Countable interface.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the number of items in the map.
+This method is required by Countable interface.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of items in the map.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_count">TMap::count()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCount" id="_getCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCount">#</a>
+		<code>getCount( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the number of items in the map
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_getCount">TMap::getCount()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPriorityCount" id="_getPriorityCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPriorityCount">#</a>
+		<code>getPriorityCount( <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Gets the number of items at a priority within the map.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the number of items at a priority within the map.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd><p>priority at which to count items.  if no parameter,
+it will be set to the default <code><a href="class-TPriorityMap.html#_getDefaultPriority">TPriorityMap::getDefaultPriority()</a></code></p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the number of items in the map at the specified priority
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPriorities" id="_getPriorities">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPriorities">#</a>
+		<code>getPriorities( )</code>
+
+		<div class="description short">
+			<p>This returns a list of the priorities within this map, ordered lowest to highest.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This returns a list of the priorities within this map, ordered lowest to highest.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the array of priority numerics in decreasing priority order
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getKeys" id="_getKeys">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getKeys">#</a>
+		<code>getKeys( )</code>
+
+		<div class="description short">
+			<p>Returns the keys within the map ordered through the priority of each key-value pair</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the keys within the map ordered through the priority of each key-value pair</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the key list
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_getKeys">TMap::getKeys()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="itemAt" id="_itemAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_itemAt">#</a>
+		<code>itemAt( <span>mixed <var>$key</var></span>, <span>mixed <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns the item with the specified key.  If a priority is specified, only items
+within that specific priority will be selected</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the item with the specified key.  If a priority is specified, only items
+within that specific priority will be selected</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key</dd>
+					<dt><var>$priority</var></dt>
+					<dd><p>priority.  null is the default priority, false is any priority,
+and numeric is a specific priority.  default: false, any priority.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the element at the offset, null if no element is found at the offset
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_itemAt">TMap::itemAt()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPriorityAt" id="_setPriorityAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPriorityAt">#</a>
+		<code>setPriorityAt( <span>mixed <var>$key</var></span>, <span>numeric|null <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>This changes an item's priority.  Specify the item and the new priority.
+This method is exactly the same as <code><a href="class-TPriorityMap.html#_offsetGet">TPriorityMap::offsetGet()</a></code>.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This changes an item's priority.  Specify the item and the new priority.
+This method is exactly the same as <code><a href="class-TPriorityMap.html#_offsetGet">TPriorityMap::offsetGet()</a></code>.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key</dd>
+					<dt><var>$priority</var></dt>
+					<dd>priority.  default: null, filled in with the default priority numeric.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric<br>old priority of the item
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="itemsAtPriority" id="_itemsAtPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_itemsAtPriority">#</a>
+		<code>itemsAtPriority( <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Gets all the items at a specific priority.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets all the items at a specific priority.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd>of the items to get.  Defaults to null, filled in with the default priority, if left blank.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>all items at priority in index order, null if there are no items at that priority
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="priorityOf" id="_priorityOf">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_priorityOf">#</a>
+		<code>priorityOf( <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the priority of a particular item within the map.  This searches the map for the item.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the priority of a particular item within the map.  This searches the map for the item.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>to look for within the map</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric<br>priority of the item in the map
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="priorityAt" id="_priorityAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_priorityAt">#</a>
+		<code>priorityAt( <span>integer <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Retutrns the priority of an item at a particular flattened index.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retutrns the priority of an item at a particular flattened index.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>of the item within the map</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric<br>priority of the item in the map
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add">#</a>
+		<code>add( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span>, <span>numeric|null <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Adds an item into the map.  A third parameter may be used to set the priority
+of the item within the map.  Priority is primarily used during when flattening
+the map into an array where order may be and important factor of the key-value
+pairs within the array.
+Note, if the specified key already exists, the old value will be overwritten.
+No duplicate keys are allowed regardless of priority.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds an item into the map.  A third parameter may be used to set the priority
+of the item within the map.  Priority is primarily used during when flattening
+the map into an array where order may be and important factor of the key-value
+pairs within the array.
+Note, if the specified key already exists, the old value will be overwritten.
+No duplicate keys are allowed regardless of priority.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key</dd>
+					<dt><var>$value</var></dt>
+					<dd>value</dd>
+					<dt><var>$priority</var></dt>
+					<dd>default: null, filled in with default priority</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric<br>priority at which the pair was added
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the map is read-only
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_add">TMap::add()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="_remove">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remove">#</a>
+		<code>remove( <span>mixed <var>$key</var></span>, <span>numeric|false|null <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Removes an item from the map by its key. If no priority, or false, is specified
+then priority is irrelevant. If null is used as a parameter for priority, then
+the priority will be the default priority.  If a priority is specified, or
+the default priority is specified, only key-value pairs in that priority
+will be affected.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes an item from the map by its key. If no priority, or false, is specified
+then priority is irrelevant. If null is used as a parameter for priority, then
+the priority will be the default priority.  If a priority is specified, or
+the default priority is specified, only key-value pairs in that priority
+will be affected.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key of the item to be removed</dd>
+					<dt><var>$priority</var></dt>
+					<dd><p>False is any priority, null is the
+default priority, and numeric is a specific priority</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the removed value, null if no such key exists.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the map is read-only
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_remove">TMap::remove()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code>clear( )</code>
+
+		<div class="description short">
+			<p>Removes all items in the map.  <code><a href="class-TPriorityMap.html#_remove">TPriorityMap::remove()</a></code> is called on all items.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes all items in the map.  <code><a href="class-TPriorityMap.html#_remove">TPriorityMap::remove()</a></code> is called on all items.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_clear">TMap::clear()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="contains" id="_contains">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_contains">#</a>
+		<code>contains( <span>mixed <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the map contains an item with the specified key
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_contains">TMap::contains()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code>toArray( )</code>
+
+		<div class="description short">
+			<p>When the map is flattened into an array, the priorities are taken into
+account and elements of the map are ordered in the array according to
+their priority.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>When the map is flattened into an array, the priorities are taken into
+account and elements of the map are ordered in the array according to
+their priority.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the list of items in array
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_toArray">TMap::toArray()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArrayBelowPriority" id="_toArrayBelowPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArrayBelowPriority">#</a>
+		<code>toArrayBelowPriority( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Combines the map elements which have a priority below the parameter value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Combines the map elements which have a priority below the parameter value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd>cut-off priority.  All items of priority less than this are returned.</dd>
+					<dt><var>$inclusive</var></dt>
+					<dd>or not the input cut-off priority is inclusive.  Default: false, not inclusive.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><p>the array of priorities keys with values of arrays of items that are below a specified priority.
+ The priorities are sorted so important priorities, lower numerics, are first.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArrayAbovePriority" id="_toArrayAbovePriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArrayAbovePriority">#</a>
+		<code>toArrayAbovePriority( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Combines the map elements which have a priority above the parameter value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Combines the map elements which have a priority above the parameter value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd>cut-off priority.  All items of priority greater than this are returned.</dd>
+					<dt><var>$inclusive</var></dt>
+					<dd>or not the input cut-off priority is inclusive.  Default: true, inclusive.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><p>the array of priorities keys with values of arrays of items that are above a specified priority.
+ The priorities are sorted so important priorities, lower numerics, are first.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyFrom" id="_copyFrom">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_copyFrom">#</a>
+		<code>copyFrom( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Copies iterable data into the map.
+Note, existing data in the map will be cleared first.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Copies iterable data into the map.
+Note, existing data in the map will be cleared first.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><p>data to be copied from, must be an array, object implementing
+Traversable, or a TPriorityMap</p></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_copyFrom">TMap::copyFrom()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mergeWith" id="_mergeWith">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mergeWith">#</a>
+		<code>mergeWith( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Merges iterable data into the map.
+Existing data in the map will be kept and overwritten if the keys are the same.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Merges iterable data into the map.
+Existing data in the map will be kept and overwritten if the keys are the same.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><p>data to be merged with, must be an array, object implementing
+Traversable, or a TPriorityMap</p></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_mergeWith">TMap::mergeWith()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetExists">#</a>
+		<code>offsetExists( <span>mixed <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns whether there is an element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns whether there is an element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to check on</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_offsetExists">TMap::offsetExists()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetGet">#</a>
+		<code>offsetGet( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to retrieve element.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the element at the offset, null if no element is found at the offset
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_offsetGet">TMap::offsetGet()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetSet">#</a>
+		<code>offsetSet( <span>integer <var>$offset</var></span>, <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to set element</dd>
+					<dt><var>$item</var></dt>
+					<dd>element value</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_offsetSet">TMap::offsetSet()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetUnset">#</a>
+		<code>offsetUnset( <span>mixed <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Unsets the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Unsets the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to unset element</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMap.html#_offsetUnset">TMap::offsetUnset()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

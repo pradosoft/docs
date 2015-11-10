@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TActiveRecordRelation | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li class="active"><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li class="active"><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li class="active"><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Data.ActiveRecord.Relations.html" title="Summary of System\Data\ActiveRecord\Relations"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActiveRecordRelation</h1>
+
+
+	<div class="description">
+	
+<p>Base class for active record relationships.</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TActiveRecordBelongsTo.html">TActiveRecordBelongsTo</a>, 
+			<a href="class-TActiveRecordHasMany.html">TActiveRecordHasMany</a>, 
+			<a href="class-TActiveRecordHasManyAssociation.html">TActiveRecordHasManyAssociation</a>, 
+			<a href="class-TActiveRecordHasOne.html">TActiveRecordHasOne</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.ActiveRecord.html">ActiveRecord</a>\<a href="package-System.Data.ActiveRecord.Relations.html">Relations</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com&gt;<br />
+				<b>Version:</b>
+				$Id$<br />
+				<b>Since:</b>
+				3.1<br />
+		<b>Located at</b> Data/ActiveRecord/Relations/TActiveRecordRelation.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TActiveRecordRelationContext.html">TActiveRecordRelationContext</a></code> <var>$context</var></span>, <span>mixed <var>$criteria</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContext" id="_getContext">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TActiveRecordRelationContext.html">TActiveRecordRelationContext</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getContext">#</a>
+		<code>getContext( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecordRelationContext.html">TActiveRecordRelationContext</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCriteria" id="_getCriteria">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCriteria">#</a>
+		<code>getCriteria( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSourceRecord" id="_getSourceRecord">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TActiveRecord.html">TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSourceRecord">#</a>
+		<code>getSourceRecord( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="collectForeignObjects" id="_collectForeignObjects">
+
+		<td class="attributes"><code>
+			abstract protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_collectForeignObjects">#</a>
+		<code>collectForeignObjects( <span>mixed <var>&amp; $results</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code>__call( <span>string <var>$method</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Dispatch the method calls to the source record finder object. When an
+instance of TActiveRecord or an array of TActiveRecord is returned the
+corresponding foreign objects are also fetched and assigned.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Dispatch the method calls to the source record finder object. When an
+instance of TActiveRecord or an array of TActiveRecord is returned the
+corresponding foreign objects are also fetched and assigned.</p>
+
+<p>Multiple relationship calls can be chain together.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>method name called</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>array</code><br>method arguments</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>TActiveRecord or array of TActiveRecord results depending on the method called.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchResultsInto" id="_fetchResultsInto">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchResultsInto">#</a>
+		<code>fetchResultsInto( <span>mixed <var>$obj</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetch results for current relationship.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetch results for current relationship.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>always true.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findForeignKeys" id="_findForeignKeys">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findForeignKeys">#</a>
+		<code>findForeignKeys( <span><code><a href="class-TActiveRecord.html">TActiveRecord</a></code> <var>$from</var></span>, <span><code><a href="class-TActiveRecord.html">TActiveRecord</a></code> <var>$matchesRecord</var></span>, <span>mixed <var>$loose</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns foreign keys in $fromRecord with source column names as key and
+foreign column names in the corresponding $matchesRecord as value. The method
+returns the first matching foreign key between these 2 records.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns foreign keys in $fromRecord with source column names as key and
+foreign column names in the corresponding $matchesRecord as value. The method
+returns the first matching foreign key between these 2 records.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$from</var></dt>
+					<dd><code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>$fromRecord</dd>
+					<dt><var>$matchesRecord</var></dt>
+					<dd><code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>$matchesRecord</dd>
+					<dt><var>$loose</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>foreign keys with source column names as key and foreign column names as value.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelationForeignKeys" id="_getRelationForeignKeys">
+
+		<td class="attributes"><code>
+			abstract public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelationForeignKeys">#</a>
+		<code>getRelationForeignKeys( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>foreign key field names as key and object properties as value.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getObjectHash" id="_getObjectHash">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getObjectHash">#</a>
+		<code>getObjectHash( <span>mixed <var>$obj</var></span>, <span>array <var>$properties</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obj</var></dt>
+					<dd><code>mixed</code><br>object or array to be hashed</dd>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>name of property for hashing the properties.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>object hash using crc32 and serialize.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findForeignObjects" id="_findForeignObjects">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TActiveRecord.html">TActiveRecord</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findForeignObjects">#</a>
+		<code>findForeignObjects( <span>array <var>$fields</var></span>, <span>array <var>$indexValues</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetches the foreign objects using TActiveRecord::findAllByIndex()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetches the foreign objects using TActiveRecord::findAllByIndex()</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fields</var></dt>
+					<dd><code>array</code><br>field names</dd>
+					<dt><var>$indexValues</var></dt>
+					<dd><code>array</code><br>foreign key index values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TActiveRecord.html">TActiveRecord</a>[]</code></code><br>foreign objects.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIndexValues" id="_getIndexValues">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIndexValues">#</a>
+		<code>getIndexValues( <span>array <var>$keys</var></span>, <span>array <var>$results</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Obtain the foreign key index values from the results.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Obtain the foreign key index values from the results.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd><code>array</code><br>property names</dd>
+					<dt><var>$results</var></dt>
+					<dd><code>array</code><br>TActiveRecord results</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>foreign key index values.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="populateResult" id="_populateResult">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_populateResult">#</a>
+		<code>populateResult( <span>array <var>&amp; $results</var></span>, <span>array <var>$properties</var></span>, <span>array <var>&amp; $fkObjects</var></span>, <span>array <var>$fields</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Populate the results with the foreign objects found.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Populate the results with the foreign objects found.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$results</var></dt>
+					<dd><code>array</code><br>source results</dd>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>source property names</dd>
+					<dt><var>$fkObjects</var></dt>
+					<dd><code>array</code><br>foreign objects</dd>
+					<dt><var>$fields</var></dt>
+					<dd><code>array</code><br>foreign object field names.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setResultCollection" id="_setResultCollection">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setResultCollection">#</a>
+		<code>setResultCollection( <span>array <var>&amp; $results</var></span>, <span>array <var>&amp; $collections</var></span>, <span>array <var>$properties</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Populates the result array with foreign objects (matched using foreign key
+hashed property values).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Populates the result array with foreign objects (matched using foreign key
+hashed property values).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$results</var></dt>
+					<dd><code>array</code><br>$results</dd>
+					<dt><var>$collections</var></dt>
+					<dd><code>array</code><br>$collections</dd>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>property names</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setObjectProperty" id="_setObjectProperty">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setObjectProperty">#</a>
+		<code>setObjectProperty( <span><code><a href="class-TActiveRecord.html">TActiveRecord</a></code> <var>$source</var></span>, <span>array <var>$properties</var></span>, <span>array <var>&amp; $collections</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the foreign objects to the given property on the source object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the foreign objects to the given property on the source object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$source</var></dt>
+					<dd><code><code><a href="class-TActiveRecord.html">TActiveRecord</a></code></code><br>source object.</dd>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>source properties</dd>
+					<dt><var>$collections</var></dt>
+					<dd><code>array</code><br>foreign objects.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

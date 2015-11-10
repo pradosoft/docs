@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TXCache | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAPCCache.html">TAPCCache</a></li>
+				<li><a href="class-TApplicationStateCacheDependency.html">TApplicationStateCacheDependency</a></li>
+				<li><a href="class-TCache.html">TCache</a></li>
+				<li><a href="class-TCacheDependency.html">TCacheDependency</a></li>
+				<li><a href="class-TCacheDependencyList.html">TCacheDependencyList</a></li>
+				<li><a href="class-TChainedCacheDependency.html">TChainedCacheDependency</a></li>
+				<li><a href="class-TDbCache.html">TDbCache</a></li>
+				<li><a href="class-TDirectoryCacheDependency.html">TDirectoryCacheDependency</a></li>
+				<li><a href="class-TEACache.html">TEACache</a></li>
+				<li><a href="class-TFileCacheDependency.html">TFileCacheDependency</a></li>
+				<li><a href="class-TGlobalStateCacheDependency.html">TGlobalStateCacheDependency</a></li>
+				<li><a href="class-TMemCache.html">TMemCache</a></li>
+				<li><a href="class-TSqliteCache.html">TSqliteCache</a></li>
+				<li class="active"><a href="class-TXCache.html">TXCache</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TXCache</h1>
+
+
+	<div class="description">
+	<p>TXCache class</p>
+
+<p>TXCache implements a cache application module based on <a href="http://xcache.lighttpd.net/">xcache</a>.</p>
+
+<p>By definition, cache does not ensure the existence of a value
+even if it never expires. Cache is not meant to be an persistent storage.</p>
+
+<p>To use this module, the xcache PHP extension must be loaded and configured in the php.ini.</p>
+
+<p>Some usage examples of TXCache are as follows,</p>
+
+<pre><span class="php-var">$cache</span>=<span class="php-keyword1">new</span> TXCache;  <span class="php-comment">// TXCache may also be loaded as a Prado application module</span>
+<span class="php-var">$cache</span>-&gt;init(<span class="php-keyword1">null</span>);
+<span class="php-var">$cache</span>-&gt;add(<span class="php-quote">'object'</span>,<span class="php-var">$object</span>);
+<span class="php-var">$object2</span>=<span class="php-var">$cache</span>-&gt;get(<span class="php-quote">'object'</span>);</pre>
+
+<p>If loaded, TXCache will register itself with <code><a href="class-TApplication.html">TApplication</a></code> as the
+cache module. It can be accessed via <a href="TApplication::getCache()">TApplication::getCache()</a>.</p>
+
+<p>TXCache may be configured in application configuration file as follows</p>
+
+<pre>&lt;module id=<span class="php-quote">&quot;cache&quot;</span> <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Caching.TXCache&quot;</span> /&gt;</pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TModule.html"><span>TModule</span></a>
+			
+			 implements 
+				<a href="class-IModule.html"><span>IModule</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TCache.html"><span>TCache</span></a>
+			
+			 implements 
+				<a href="class-ICache.html"><span>ICache</span></a>, 
+			
+<span>ArrayAccess</span>
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TXCache</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Caching.html">Caching</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1.1<br>
+			<b>Located at</b> Caching/TXCache.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes this module.
+This method is required by the IModule interface.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes this module.
+This method is required by the IModule interface.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>for this module, can be null</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TConfigurationException.html">TConfigurationException</a></code><br>if xcache extension is not installed or not started, check your php.ini
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TCache.html#_init">TCache::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getValue" id="_getValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getValue">#</a>
+		<code>getValue( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieves a value from cache with a specified key.
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves a value from cache with a specified key.
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>unique key identifying the cached value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the value stored in cache, false if the value is not in the cache or expired.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setValue" id="_setValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setValue">#</a>
+		<code>setValue( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
+
+		<div class="description short">
+			<p>Stores a value identified by a key in cache.
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Stores a value identified by a key in cache.
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key identifying the value to be cached</dd>
+					<dt><var>$value</var></dt>
+					<dd>value to be cached</dd>
+					<dt><var>$expire</var></dt>
+					<dd>number of seconds in which the cached value will expire. 0 means never expire.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the value is successfully stored into cache, false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addValue" id="_addValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addValue">#</a>
+		<code>addValue( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
+
+		<div class="description short">
+			<p>Stores a value identified by a key into cache if the cache does not contain this key.
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Stores a value identified by a key into cache if the cache does not contain this key.
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key identifying the value to be cached</dd>
+					<dt><var>$value</var></dt>
+					<dd>value to be cached</dd>
+					<dt><var>$expire</var></dt>
+					<dd>number of seconds in which the cached value will expire. 0 means never expire.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the value is successfully stored into cache, false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteValue" id="_deleteValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteValue">#</a>
+		<code>deleteValue( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Deletes a value with the specified key from cache
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes a value with the specified key from cache
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key of the value to be deleted</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>if no error happens during deletion
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flush" id="_flush">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flush">#</a>
+		<code>flush( )</code>
+
+		<div class="description short">
+			<p>Deletes all values from cache.
+Be careful of performing this operation if the cache is shared by multiple applications.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes all values from cache.
+Be careful of performing this operation if the cache is shared by multiple applications.</p>
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TNotSupportedException.html">TNotSupportedException</a></code><br>if this method is not overridden by child classes
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TCache.html#_flush">TCache::flush()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TCache.html#methods">TCache</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TCache.html#_add">add()</a>, 
+			<a href="class-TCache.html#_delete">delete()</a>, 
+			<a href="class-TCache.html#_generateUniqueKey">generateUniqueKey()</a>, 
+			<a href="class-TCache.html#_get">get()</a>, 
+			<a href="class-TCache.html#_getKeyPrefix">getKeyPrefix()</a>, 
+			<a href="class-TCache.html#_getPrimaryCache">getPrimaryCache()</a>, 
+			<a href="class-TCache.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-TCache.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-TCache.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-TCache.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="class-TCache.html#_set">set()</a>, 
+			<a href="class-TCache.html#_setKeyPrefix">setKeyPrefix()</a>, 
+			<a href="class-TCache.html#_setPrimaryCache">setPrimaryCache()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TModule.html#methods">TModule</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TModule.html#_getID">getID()</a>, 
+			<a href="class-TModule.html#_setID">setID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

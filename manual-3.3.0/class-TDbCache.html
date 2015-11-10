@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TDbCache | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAPCCache.html">TAPCCache</a></li>
+				<li><a href="class-TApplicationStateCacheDependency.html">TApplicationStateCacheDependency</a></li>
+				<li><a href="class-TCache.html">TCache</a></li>
+				<li><a href="class-TCacheDependency.html">TCacheDependency</a></li>
+				<li><a href="class-TCacheDependencyList.html">TCacheDependencyList</a></li>
+				<li><a href="class-TChainedCacheDependency.html">TChainedCacheDependency</a></li>
+				<li class="active"><a href="class-TDbCache.html">TDbCache</a></li>
+				<li><a href="class-TDirectoryCacheDependency.html">TDirectoryCacheDependency</a></li>
+				<li><a href="class-TEACache.html">TEACache</a></li>
+				<li><a href="class-TFileCacheDependency.html">TFileCacheDependency</a></li>
+				<li><a href="class-TGlobalStateCacheDependency.html">TGlobalStateCacheDependency</a></li>
+				<li><a href="class-TMemCache.html">TMemCache</a></li>
+				<li><a href="class-TSqliteCache.html">TSqliteCache</a></li>
+				<li><a href="class-TXCache.html">TXCache</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TDbCache</h1>
+
+
+	<div class="description">
+	<p>TDbCache class</p>
+
+<p>TDbCache implements a cache application module by storing cached data in a database.</p>
+
+<p>TDbCache relies on <a href="http://www.php.net/manual/en/ref.pdo.php">PDO</a> to retrieve
+data from databases. In order to use TDbCache, you need to enable the PDO extension
+as well as the corresponding PDO DB driver. For example, to use SQLite database
+to store cached data, you need both php_pdo and php_pdo_sqlite extensions.</p>
+
+<p>By default, TDbCache creates and uses an SQLite database under the application
+runtime directory. You may change this default setting by specifying the following
+properties:
+- setConnectionID ConnectionID or
+- setConnectionString ConnectionString, setUsername Username and setPassword Pasword.</p>
+
+<p>The cached data is stored in a table in the specified database.
+By default, the name of the table is called 'pradocache'. If the table does not
+exist in the database, it will be automatically created with the following structure:</p>
+
+<pre>CREATE TABLE pradocache (itemkey CHAR(<span class="php-num">128</span>), value BLOB, expire INT)
+CREATE INDEX IX_itemkey ON pradocache (itemkey)
+CREATE INDEX IX_expire ON pradocache (expire)</pre>
+
+<p>Note, some DBMS might not support BLOB type. In this case, replace 'BLOB' with a suitable
+binary data type (e.g. LONGBLOB in MySQL, BYTEA in PostgreSQL.)</p>
+
+<p>Important: Make sure that the indices are non-unique!</p>
+
+<p>If you want to change the cache table name, or if you want to create the table by yourself,
+you may set setCacheTableName CacheTableName and setAutoCreateCacheTable AutoCreateCacheTableName properties.</p>
+
+<p>setFlushInterval FlushInterval control how often expired items will be removed from cache.
+If you prefer to remove expired items manualy e.g. via cronjob you can disable automatic deletion by setting FlushInterval to '0'.</p>
+
+<p>The following basic cache operations are implemented:
+- <code><a href="class-TCache.html#_get">TCache::get()</a></code> : retrieve the value with a key (if any) from cache
+- <code><a href="class-TCache.html#_set">TCache::set()</a></code> : store the value with a key into cache
+- <code><a href="class-TCache.html#_add">TCache::add()</a></code> : store the value only if cache does not have this key
+- <code><a href="class-TCache.html#_delete">TCache::delete()</a></code> : delete the value with the specified key from cache
+- <code><a href="class-TDbCache.html#_flush">TDbCache::flush()</a></code> : delete all values from cache</p>
+
+<p>Each value is associated with an expiration time. The <code><a href="class-TCache.html#_get">TCache::get()</a></code> operation
+ensures that any expired value will not be returned. The expiration time by
+the number of seconds. A expiration time 0 represents never expire.</p>
+
+<p>By definition, cache does not ensure the existence of a value
+even if it never expires. Cache is not meant to be an persistent storage.</p>
+
+<p>Do not use the same database file for multiple applications using TDbCache.
+Also note, cache is shared by all user sessions of an application.</p>
+
+<p>Some usage examples of TDbCache are as follows,</p>
+
+<pre><span class="php-var">$cache</span>=<span class="php-keyword1">new</span> TDbCache;  <span class="php-comment">// TDbCache may also be loaded as a Prado application module</span>
+<span class="php-var">$cache</span>-&gt;init(<span class="php-keyword1">null</span>);
+<span class="php-var">$cache</span>-&gt;add(<span class="php-quote">'object'</span>,<span class="php-var">$object</span>);
+<span class="php-var">$object2</span>=<span class="php-var">$cache</span>-&gt;get(<span class="php-quote">'object'</span>);</pre>
+
+<p>If loaded, TDbCache will register itself with <code><a href="class-TApplication.html">TApplication</a></code> as the
+cache module. It can be accessed via <a href="TApplication::getCache()">TApplication::getCache()</a>.</p>
+
+<p>TDbCache may be configured in application configuration file as follows</p>
+
+<pre>&lt;module id=<span class="php-quote">&quot;cache&quot;</span> <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Caching.TDbCache&quot;</span> /&gt;</pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TModule.html"><span>TModule</span></a>
+			
+			 implements 
+				<a href="class-IModule.html"><span>IModule</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TCache.html"><span>TCache</span></a>
+			
+			 implements 
+				<a href="class-ICache.html"><span>ICache</span></a>, 
+			
+<span>ArrayAccess</span>
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TDbCache</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Caching.html">Caching</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.1.0<br>
+			<b>Located at</b> Caching/TDbCache.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code>__destruct( )</code>
+
+		<div class="description short">
+			<p>Destructor.
+Disconnect the db connection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Destructor.
+Disconnect the db connection.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___destruct">TComponent::__destruct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes this module.
+This method is required by the IModule interface.
+attach <code><a href="class-TDbCache.html#_doInitializeCache">TDbCache::doInitializeCache()</a></code> to TApplication.OnLoadStateComplete event
+attach <code><a href="class-TDbCache.html#_doFlushCacheExpired">TDbCache::doFlushCacheExpired()</a></code> to TApplication.OnSaveState event</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes this module.
+This method is required by the IModule interface.
+attach <code><a href="class-TDbCache.html#_doInitializeCache">TDbCache::doInitializeCache()</a></code> to TApplication.OnLoadStateComplete event
+attach <code><a href="class-TDbCache.html#_doFlushCacheExpired">TDbCache::doFlushCacheExpired()</a></code> to TApplication.OnSaveState event</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>for this module, can be null</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TCache.html#_init">TCache::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="doFlushCacheExpired" id="_doFlushCacheExpired">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_doFlushCacheExpired">#</a>
+		<code>doFlushCacheExpired( )</code>
+
+		<div class="description short">
+			<p>Event listener for TApplication.OnSaveState</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Event listener for TApplication.OnSaveState</p>
+
+
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TDbCache.html#_flushCacheExpired">TDbCache::flushCacheExpired()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="doInitializeCache" id="_doInitializeCache">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_doInitializeCache">#</a>
+		<code>doInitializeCache( )</code>
+
+		<div class="description short">
+			<p>Event listener for TApplication.OnLoadStateComplete</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Event listener for TApplication.OnLoadStateComplete</p>
+
+
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TDbCache.html#_initializeCache">TDbCache::initializeCache()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initializeCache" id="_initializeCache">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeCache">#</a>
+		<code>initializeCache( <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Initialize TDbCache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initialize TDbCache</p>
+
+<p>If setAutoCreateCacheTable AutoCreateCacheTableName is 'true' check existence of cache table
+and create table if does not exist.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$force</var></dt>
+					<dd>override global state check</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TConfigurationException.html">TConfigurationException</a></code><br>if any error happens during creating database or cache table.
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flushCacheExpired" id="_flushCacheExpired">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flushCacheExpired">#</a>
+		<code>flushCacheExpired( <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Flush expired values from cache depending on setFlushInterval FlushInterval</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Flush expired values from cache depending on setFlushInterval FlushInterval</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$force</var></dt>
+					<dd>setFlushInterval FlushInterval and force deletion of expired items</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFlushInterval" id="_getFlushInterval">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFlushInterval">#</a>
+		<code>getFlushInterval( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>Interval in sec expired items will be removed from cache. Default to 60
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFlushInterval" id="_setFlushInterval">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFlushInterval">#</a>
+		<code>setFlushInterval( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets interval expired items will be removed from cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets interval expired items will be removed from cache</p>
+
+<p>To disable automatic deletion of expired items,
+e.g. for external flushing via cron you can set value to '0'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>in sec</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createDbConnection" id="_createDbConnection">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createDbConnection">#</a>
+		<code>createDbConnection( )</code>
+
+		<div class="description short">
+			<p>Creates the DB connection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates the DB connection.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbConnection.html">TDbConnection</a></code><br>the created DB connection
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TConfigurationException.html">TConfigurationException</a></code><br>if module ID is invalid or empty
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDbConnection" id="_getDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDbConnection">#</a>
+		<code>getDbConnection( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbConnection.html">TDbConnection</a></code><br>the DB connection instance
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnectionID" id="_getConnectionID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnectionID">#</a>
+		<code>getConnectionID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the ID of a <code><a href="class-TDataSourceConfig.html">TDataSourceConfig</a></code> module. Defaults to empty string, meaning not set.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setConnectionID" id="_setConnectionID">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setConnectionID">#</a>
+		<code>setConnectionID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the ID of a TDataSourceConfig module.
+The datasource module will be used to establish the DB connection for this cache module.
+The database connection can also be specified via setConnectionString ConnectionString.
+When both ConnectionID and ConnectionString are specified, the former takes precedence.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the ID of a TDataSourceConfig module.
+The datasource module will be used to establish the DB connection for this cache module.
+The database connection can also be specified via setConnectionString ConnectionString.
+When both ConnectionID and ConnectionString are specified, the former takes precedence.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>of the <code><a href="class-TDataSourceConfig.html">TDataSourceConfig</a></code> module</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnectionString" id="_getConnectionString">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnectionString">#</a>
+		<code>getConnectionString( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>The Data Source Name, or DSN, contains the information required to connect to the database.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setConnectionString" id="_setConnectionString">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setConnectionString">#</a>
+		<code>setConnectionString( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>Data Source Name, or DSN, contains the information required to connect to the database.</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						http://www.php.net/manual/en/function.pdo-construct.php<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUsername" id="_getUsername">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUsername">#</a>
+		<code>getUsername( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the username for establishing DB connection. Defaults to empty string.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUsername" id="_setUsername">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUsername">#</a>
+		<code>setUsername( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>username for establishing DB connection</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPassword" id="_getPassword">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPassword">#</a>
+		<code>getPassword( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the password for establishing DB connection. Defaults to empty string.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPassword" id="_setPassword">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPassword">#</a>
+		<code>setPassword( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>password for establishing DB connection</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheTableName" id="_getCacheTableName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheTableName">#</a>
+		<code>getCacheTableName( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the name of the DB table to store cache content. Defaults to 'pradocache'.
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TDbCache.html#_setAutoCreateCacheTable">TDbCache::setAutoCreateCacheTable()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCacheTableName" id="_setCacheTableName">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCacheTableName">#</a>
+		<code>setCacheTableName( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the name of the DB table to store cache content.
+Note, if setAutoCreateCacheTable AutoCreateCacheTable is false
+and you want to create the DB table manually by yourself,
+you need to make sure the DB table is of the following structure:</p>
+
+<pre>CREATE TABLE pradocache (itemkey CHAR(<span class="php-num">128</span>), value BLOB, expire INT)
+CREATE INDEX IX_itemkey ON pradocache (itemkey)
+CREATE INDEX IX_expire ON pradocache (expire)</pre>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the name of the DB table to store cache content.
+Note, if setAutoCreateCacheTable AutoCreateCacheTable is false
+and you want to create the DB table manually by yourself,
+you need to make sure the DB table is of the following structure:</p>
+
+<pre>CREATE TABLE pradocache (itemkey CHAR(<span class="php-num">128</span>), value BLOB, expire INT)
+CREATE INDEX IX_itemkey ON pradocache (itemkey)
+CREATE INDEX IX_expire ON pradocache (expire)</pre>
+
+<p>Note, some DBMS might not support BLOB type. In this case, replace 'BLOB' with a suitable
+binary data type (e.g. LONGBLOB in MySQL, BYTEA in PostgreSQL.)</p>
+
+<p>Important: Make sure that the indices are non-unique!</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>name of the DB table to store cache content</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TDbCache.html#_setAutoCreateCacheTable">TDbCache::setAutoCreateCacheTable()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAutoCreateCacheTable" id="_getAutoCreateCacheTable">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAutoCreateCacheTable">#</a>
+		<code>getAutoCreateCacheTable( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the cache DB table should be automatically created if not exists. Defaults to true.
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TDbCache.html#_setAutoCreateCacheTable">TDbCache::setAutoCreateCacheTable()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAutoCreateCacheTable" id="_setAutoCreateCacheTable">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAutoCreateCacheTable">#</a>
+		<code>setAutoCreateCacheTable( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the cache DB table should be automatically created if not exists.</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TDbCache.html#_setCacheTableName">TDbCache::setCacheTableName()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getValue" id="_getValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getValue">#</a>
+		<code>getValue( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieves a value from cache with a specified key.
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves a value from cache with a specified key.
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>unique key identifying the cached value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the value stored in cache, false if the value is not in the cache or expired.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setValue" id="_setValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setValue">#</a>
+		<code>setValue( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
+
+		<div class="description short">
+			<p>Stores a value identified by a key in cache.
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Stores a value identified by a key in cache.
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key identifying the value to be cached</dd>
+					<dt><var>$value</var></dt>
+					<dd>value to be cached</dd>
+					<dt><var>$expire</var></dt>
+					<dd>number of seconds in which the cached value will expire. 0 means never expire.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the value is successfully stored into cache, false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addValue" id="_addValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addValue">#</a>
+		<code>addValue( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
+
+		<div class="description short">
+			<p>Stores a value identified by a key into cache if the cache does not contain this key.
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Stores a value identified by a key into cache if the cache does not contain this key.
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key identifying the value to be cached</dd>
+					<dt><var>$value</var></dt>
+					<dd>value to be cached</dd>
+					<dt><var>$expire</var></dt>
+					<dd>number of seconds in which the cached value will expire. 0 means never expire.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the value is successfully stored into cache, false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteValue" id="_deleteValue">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteValue">#</a>
+		<code>deleteValue( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Deletes a value with the specified key from cache
+This is the implementation of the method declared in the parent class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes a value with the specified key from cache
+This is the implementation of the method declared in the parent class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>key of the value to be deleted</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>if no error happens during deletion
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flush" id="_flush">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flush">#</a>
+		<code>flush( )</code>
+
+		<div class="description short">
+			<p>Deletes all values from cache.
+Be careful of performing this operation if the cache is shared by multiple applications.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes all values from cache.
+Be careful of performing this operation if the cache is shared by multiple applications.</p>
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TNotSupportedException.html">TNotSupportedException</a></code><br>if this method is not overridden by child classes
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TCache.html#_flush">TCache::flush()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TCache.html#methods">TCache</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TCache.html#_add">add()</a>, 
+			<a href="class-TCache.html#_delete">delete()</a>, 
+			<a href="class-TCache.html#_generateUniqueKey">generateUniqueKey()</a>, 
+			<a href="class-TCache.html#_get">get()</a>, 
+			<a href="class-TCache.html#_getKeyPrefix">getKeyPrefix()</a>, 
+			<a href="class-TCache.html#_getPrimaryCache">getPrimaryCache()</a>, 
+			<a href="class-TCache.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-TCache.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-TCache.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-TCache.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="class-TCache.html#_set">set()</a>, 
+			<a href="class-TCache.html#_setKeyPrefix">setKeyPrefix()</a>, 
+			<a href="class-TCache.html#_setPrimaryCache">setPrimaryCache()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TModule.html#methods">TModule</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TModule.html#_getID">getID()</a>, 
+			<a href="class-TModule.html#_setID">setID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

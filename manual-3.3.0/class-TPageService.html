@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TPageService | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TFeedService.html">TFeedService</a></li>
+				<li><a href="class-TJsonResponse.html">TJsonResponse</a></li>
+				<li><a href="class-TJsonRpcProtocol.html">TJsonRpcProtocol</a></li>
+				<li><a href="class-TJsonService.html">TJsonService</a></li>
+				<li><a href="class-TPageConfiguration.html">TPageConfiguration</a></li>
+				<li class="active"><a href="class-TPageService.html">TPageService</a></li>
+				<li><a href="class-TRpcApiProvider.html">TRpcApiProvider</a></li>
+				<li><a href="class-TRpcProtocol.html">TRpcProtocol</a></li>
+				<li><a href="class-TRpcServer.html">TRpcServer</a></li>
+				<li><a href="class-TRpcService.html">TRpcService</a></li>
+				<li><a href="class-TSoapServer.html">TSoapServer</a></li>
+				<li><a href="class-TSoapService.html">TSoapService</a></li>
+				<li><a href="class-TXmlRpcProtocol.html">TXmlRpcProtocol</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IFeedContentProvider.html">IFeedContentProvider</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TRpcException.html">TRpcException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TPageService</h1>
+
+
+	<div class="description">
+	<p>TPageService class.</p>
+
+<p>TPageService implements the service for serving user page requests.</p>
+
+<p>Pages that are available to client users are stored under a directory specified by
+setBasePath BasePath. The directory may contain subdirectories.
+Pages serving for a similar goal are usually placed under the same directory.
+A directory may contain a configuration file <b>config.xml</b> whose content
+is similar to that of application configuration file.</p>
+
+<p>A page is requested via page path, which is a dot-connected directory names
+appended by the page name. Assume '<BasePath>/Users/Admin' is the directory
+containing the page 'Update'. Then the page can be requested via 'Users.Admin.Update'.
+By default, the setBasePath BasePath of the page service is the "pages"
+directory under the application base path. You may change this default
+by setting setBasePath BasePath with a different path you prefer.</p>
+
+<p>Page name refers to the file name (without extension) of the page template.
+In order to differentiate from the common control template files, the extension
+name of the page template files must be '.page'. If there is a PHP file with
+the same page name under the same directory as the template file, that file
+will be considered as the page class file and the file name is the page class name.
+If such a file is not found, the page class is assumed as <code><a href="class-TPage.html">TPage</a></code>.</p>
+
+<p>Modules can be configured and loaded in page directory configurations.
+Configuration of a module in a subdirectory will overwrite its parent
+directory's configuration, if both configurations refer to the same module.</p>
+
+<p>By default, TPageService will automatically load two modules:
+- <code><a href="class-TTemplateManager.html">TTemplateManager</a></code> : manages page and control templates
+- <code><a href="class-TThemeManager.html">TThemeManager</a></code> : manages themes used in a Prado application</p>
+
+<p>In page directory configurations, static authorization rules can also be specified,
+which governs who and which roles can access particular pages.
+Refer to <code><a href="class-TAuthorizationRule.html">TAuthorizationRule</a></code> for more details about authorization rules.
+Page authorization rules can be configured within an <authorization> tag in
+each page directory configuration as follows,
+<authorization> <deny pages="Update" users="?" /> <allow pages="Admin" roles="administrator" /> <deny pages="Admin" users="*" />
+</authorization>
+where the 'pages' attribute may be filled with a sequence of comma-separated
+page IDs. If 'pages' attribute does not appear in a rule, the rule will be
+applied to all pages in this directory and all subdirectories (recursively).
+Application of authorization rules are in a bottom-up fashion, starting from
+the directory containing the requested page up to all parent directories.
+The first matching rule will be used. The last rule always allows all users
+accessing to any resources.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TService.html"><span>TService</span></a>
+			
+			 implements 
+				<a href="class-IService.html"><span>IService</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TPageService</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TWsatService.html">TWsatService</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.Services.html">Services</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Author:</b>
+				Carl G. Mathisen <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#99;&#97;&#x72;&#x6c;&#x67;m&#97;&#116;&#x68;&#x69;&#x73;e&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#99;&#97;&#x72;&#x6c;&#x67;m&#97;&#116;&#x68;&#x69;&#x73;e&#110;&#64;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Web/Services/TPageService.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the service.
+This method is required by IService interface and is invoked by application.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the service.
+This method is required by IService interface and is invoked by application.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>configuration</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TService.html#_init">TService::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initPageContext" id="_initPageContext">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initPageContext">#</a>
+		<code>initPageContext( <span><code><a href="class-TPageConfiguration.html">TPageConfiguration</a></code> <var>$pageConfig</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes page context.
+Page context includes path alias settings, namespace usages,
+parameter initialization, module loadings, page initial properties
+and authorization rules.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes page context.
+Page context includes path alias settings, namespace usages,
+parameter initialization, module loadings, page initial properties
+and authorization rules.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pageConfig</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyConfiguration" id="_applyConfiguration">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyConfiguration">#</a>
+		<code>applyConfiguration( <span><code><a href="class-TPageConfiguration.html">TPageConfiguration</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Applies a page configuration.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Applies a page configuration.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>configuration</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="determineRequestedPagePath" id="_determineRequestedPagePath">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_determineRequestedPagePath">#</a>
+		<code>determineRequestedPagePath( )</code>
+
+		<div class="description short">
+			<p>Determines the requested page path.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Determines the requested page path.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>page path requested
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadPageConfig" id="_loadPageConfig">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TPageConfiguration.html">TPageConfiguration</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadPageConfig">#</a>
+		<code>loadPageConfig( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Collects configuration for a page.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Collects configuration for a page.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>configuration specified in the application configuration</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TPageConfiguration.html">TPageConfiguration</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTemplateManager" id="_getTemplateManager">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTemplateManager.html">TTemplateManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTemplateManager">#</a>
+		<code>getTemplateManager( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTemplateManager.html">TTemplateManager</a></code><br>template manager
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTemplateManager" id="_setTemplateManager">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTemplateManager">#</a>
+		<code>setTemplateManager( <span><code><a href="class-TTemplateManager.html">TTemplateManager</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>manager</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getThemeManager" id="_getThemeManager">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TThemeManager.html">TThemeManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getThemeManager">#</a>
+		<code>getThemeManager( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TThemeManager.html">TThemeManager</a></code><br>theme manager
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setThemeManager" id="_setThemeManager">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setThemeManager">#</a>
+		<code>setThemeManager( <span><code><a href="class-TThemeManager.html">TThemeManager</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>manager</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestedPagePath" id="_getRequestedPagePath">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestedPagePath">#</a>
+		<code>getRequestedPagePath( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the requested page path
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestedPage" id="_getRequestedPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TPage.html">TPage</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestedPage">#</a>
+		<code>getRequestedPage( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TPage.html">TPage</a></code><br>the requested page
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultPage" id="_getDefaultPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultPage">#</a>
+		<code>getDefaultPage( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>default page path to be served if no explicit page is request. Defaults to 'Home'.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDefaultPage" id="_setDefaultPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDefaultPage">#</a>
+		<code>setDefaultPage( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>page path to be served if no explicit page is request</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the page service is initialized
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultPageUrl" id="_getDefaultPageUrl">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultPageUrl">#</a>
+		<code>getDefaultPageUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the URL for the default page
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBasePath" id="_getBasePath">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBasePath">#</a>
+		<code>getBasePath( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the root directory for storing pages. Defaults to the 'pages' directory under the application base path.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBasePath" id="_setBasePath">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBasePath">#</a>
+		<code>setBasePath( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>directory (in namespace form) storing pages</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the service is initialized already or basepath is invalid
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBasePageClass" id="_setBasePageClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBasePageClass">#</a>
+		<code>setBasePageClass( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the base page class name (in namespace format).
+If a page only has a template file without page class file,
+this base page class will be instantiated.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the base page class name (in namespace format).
+If a page only has a template file without page class file,
+this base page class will be instantiated.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBasePageClass" id="_getBasePageClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBasePageClass">#</a>
+		<code>getBasePageClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>base page class name in namespace format. Defaults to 'TPage'.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setClientScriptManagerClass" id="_setClientScriptManagerClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setClientScriptManagerClass">#</a>
+		<code>setClientScriptManagerClass( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the clientscript manager class (in namespace format).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the clientscript manager class (in namespace format).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>name</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.7<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClientScriptManagerClass" id="_getClientScriptManagerClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClientScriptManagerClass">#</a>
+		<code>getClientScriptManagerClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>clientscript manager class in namespace format. Defaults to 'System.Web.UI.TClientScriptManager'.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.7<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code>run( )</code>
+
+		<div class="description short">
+			<p>Runs the service.
+This will create the requested page, initializes it with the property values
+specified in the configuration, and executes the page.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Runs the service.
+This will create the requested page, initializes it with the property values
+specified in the configuration, and executes the page.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TService.html#_run">TService::run()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createPage" id="_createPage">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TPage.html">TPage</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createPage">#</a>
+		<code>createPage( <span>string <var>$pagePath</var></span> )</code>
+
+		<div class="description short">
+			<p>Creates a page instance based on requested page path.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates a page instance based on requested page path.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pagePath</var></dt>
+					<dd>page path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TPage.html">TPage</a></code><br>the requested page instance
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-THttpException.html">THttpException</a></code><br>if requested page path is invalid<br>
+					<code><a href="class-TConfigurationException.html">TConfigurationException</a></code><br>if the page class cannot be found
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="runPage" id="_runPage">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_runPage">#</a>
+		<code>runPage( <span><code><a href="class-TPage.html">TPage</a></code> <var>$page</var></span>, <span>array <var>$properties</var></span> )</code>
+
+		<div class="description short">
+			<p>Executes a page.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes a page.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$page</var></dt>
+					<dd>page instance to be run</dd>
+					<dt><var>$properties</var></dt>
+					<dd>of initial page properties</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="constructUrl" id="_constructUrl">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_constructUrl">#</a>
+		<code>constructUrl( <span>string <var>$pagePath</var></span>, <span>array <var>$getParams</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$encodeAmpersand</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$encodeGetItems</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructs a URL with specified page path and GET parameters.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructs a URL with specified page path and GET parameters.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pagePath</var></dt>
+					<dd>path</dd>
+					<dt><var>$getParams</var></dt>
+					<dd>of GET parameters, null if no GET parameters required</dd>
+					<dt><var>$encodeAmpersand</var></dt>
+					<dd>to encode the ampersand in URL, defaults to true.</dd>
+					<dt><var>$encodeGetItems</var></dt>
+					<dd>to encode the GET parameters (their names and values), defaults to true.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>URL for the page and GET parameters
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TService.html#methods">TService</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TService.html#_getEnabled">getEnabled()</a>, 
+			<a href="class-TService.html#_getID">getID()</a>, 
+			<a href="class-TService.html#_setEnabled">setEnabled()</a>, 
+			<a href="class-TService.html#_setID">setID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CONFIG_FILE_XML" id="CONFIG_FILE_XML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_FILE_XML</b>			</code>
+
+			<div class="description short">
+				<p>Configuration file name</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Configuration file name</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_FILE_XML" class="anchor">#</a>
+				<code><span class="php-quote">'config.xml'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_FILE_PHP" id="CONFIG_FILE_PHP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_FILE_PHP</b>			</code>
+
+			<div class="description short">
+				<p>Configuration file name</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Configuration file name</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_FILE_PHP" class="anchor">#</a>
+				<code><span class="php-quote">'config.php'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DEFAULT_BASEPATH" id="DEFAULT_BASEPATH">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>DEFAULT_BASEPATH</b>			</code>
+
+			<div class="description short">
+				<p>Default base path</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Default base path</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DEFAULT_BASEPATH" class="anchor">#</a>
+				<code><span class="php-quote">'Pages'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FALLBACK_BASEPATH" id="FALLBACK_BASEPATH">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>FALLBACK_BASEPATH</b>			</code>
+
+			<div class="description short">
+				<p>Fallback base path - used to be the default up to Prado &lt; 3.2</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Fallback base path - used to be the default up to Prado &lt; 3.2</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FALLBACK_BASEPATH" class="anchor">#</a>
+				<code><span class="php-quote">'pages'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_CACHE_PREFIX" id="CONFIG_CACHE_PREFIX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_CACHE_PREFIX</b>			</code>
+
+			<div class="description short">
+				<p>Prefix of ID used for storing parsed configuration in cache</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Prefix of ID used for storing parsed configuration in cache</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_CACHE_PREFIX" class="anchor">#</a>
+				<code><span class="php-quote">'prado:pageservice:'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="PAGE_FILE_EXT" id="PAGE_FILE_EXT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>PAGE_FILE_EXT</b>			</code>
+
+			<div class="description short">
+				<p>Page template file extension</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Page template file extension</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#PAGE_FILE_EXT" class="anchor">#</a>
+				<code><span class="php-quote">'.page'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

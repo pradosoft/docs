@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TPager | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li class="active"><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Web.UI.WebControls.html" title="Summary of System\Web\UI\WebControls"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TPager</h1>
+
+
+	<div class="description">
+	
+<p>TPager class.</p>
+
+<p>TPager creates a pager that provides UI for end-users to interactively
+specify which page of data to be rendered in a <code><a href="class-TDataBoundControl.html">TDataBoundControl</a></code>-derived
+control, such as <code><a href="class-TDataList.html">TDataList</a></code>, <code><a href="class-TRepeater.html">TRepeater</a></code>, <code><a href="class-TCheckBoxList.html">TCheckBoxList</a></code>,
+etc. The target data-bound control is specified by setControlToPaginate
+ControlToPaginate, which must be the ID path of the target control reaching
+from the pager's naming container. Note, the target control must have its TDataBoundControl::setAllowPaging AllowPaging set to true.</p>
+
+<p>TPager can display three different UIs, specified via setMode
+Mode:</p>
+
+<ul>
+	<li>NextPrev: a next page and a previous page button are rendered.</li>
+
+	<li>Numeric: a list of page index buttons are rendered.</li>
+
+	<li>List: a dropdown list of page indices are rendered.</li>
+</ul>
+
+<p>When the pager mode is either NextPrev or Numeric, the paging buttons may be
+displayed in three types by setting setButtonType ButtonType:</p>
+
+<ul>
+	<li>LinkButton: a hyperlink button</li>
+
+	<li>PushButton: a normal button</li>
+
+	<li>ImageButton: an image button (please set XXXPageImageUrl properties
+	accordingly to specify the button images.)</li>
+</ul>
+
+<p>Since Prado 3.2.1, you can use the setButtonCssClass ButtonCssClass
+property to specify a css class that will be applied to each button created by
+the pager in NextPrev or Numeric mode.</p>
+
+<p>TPager raises an onPageIndexChanged OnPageIndexChanged event when the
+end-user interacts with it and specifies a new page (e.g. clicking on a page
+button that leads to a new page.) The new page index may be obtained from the
+event parameter's property TPagerPageChangedEventParameter::getNewPageIndex NewPageIndex. Normally, in the
+event handler, one can set the TDataBoundControl::getCurrentPageIndex
+CurrentPageIndex to this new page index so that the new page of data is
+rendered.</p>
+
+<p>Multiple pagers can be associated with the same data-bound control.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TControl.html"><span>TControl</span></a>
+			
+			 implements 
+				<a href="class-IRenderable.html"><span>IRenderable</span></a>, 
+			
+				<a href="class-IBindable.html"><span>IBindable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TWebControl.html"><span>TWebControl</span></a>
+			
+			 implements 
+				<a href="class-IStyleable.html"><span>IStyleable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TPager</span></b>			
+			 implements 
+				<a href="class-INamingContainer.html"><span>INamingContainer</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TActivePager.html">TActivePager</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0.2<br />
+		<b>Located at</b> Web/UI/WebControls/TPager.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="loadState" id="_loadState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadState">#</a>
+		<code>loadState( )</code>
+
+		<div class="description short">
+			
+<p>Restores the pager state. This method overrides the parent implementation and
+is invoked when the control is loading persistent state.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Restores the pager state. This method overrides the parent implementation and
+is invoked when the control is loading persistent state.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_loadState">TControl::loadState()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getControlToPaginate" id="_getControlToPaginate">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getControlToPaginate">#</a>
+		<code>getControlToPaginate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the ID path of the control whose content would be paginated.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setControlToPaginate" id="_setControlToPaginate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setControlToPaginate">#</a>
+		<code>setControlToPaginate( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the ID path of the control whose content would be paginated. The ID path
+is the dot-connected IDs of the controls reaching from the pager's naming
+container to the target control.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the ID path of the control whose content would be paginated. The ID path
+is the dot-connected IDs of the controls reaching from the pager's naming
+container to the target control.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the ID path</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getButtonCssClass" id="_getButtonCssClass">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getButtonCssClass">#</a>
+		<code>getButtonCssClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the css class of the buttons.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setButtonCssClass" id="_setButtonCssClass">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setButtonCssClass">#</a>
+		<code>setButtonCssClass( <span>Sets <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>Sets</code><br>the css class of the buttons that will be rendered by this pager.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMode" id="_getMode">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPagerMode.html">TPagerMode</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMode">#</a>
+		<code>getMode( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPagerMode.html">TPagerMode</a></code></code><br>pager mode. Defaults to TPagerMode::NextPrev.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMode" id="_setMode">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMode">#</a>
+		<code>setMode( <span><code><a href="class-TPagerMode.html">TPagerMode</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-TPagerMode.html">TPagerMode</a></code></code><br>pager mode.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getButtonType" id="_getButtonType">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPagerButtonType.html">TPagerButtonType</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getButtonType">#</a>
+		<code>getButtonType( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPagerButtonType.html">TPagerButtonType</a></code></code><br>the type of command button for paging. Defaults to TPagerButtonType::LinkButton.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setButtonType" id="_setButtonType">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setButtonType">#</a>
+		<code>setButtonType( <span><code><a href="class-TPagerButtonType.html">TPagerButtonType</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-TPagerButtonType.html">TPagerButtonType</a></code></code><br>the type of command button for paging.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNextPageText" id="_getNextPageText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNextPageText">#</a>
+		<code>getNextPageText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>text for the next page button. Defaults to '&gt;'.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setNextPageText" id="_setNextPageText">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setNextPageText">#</a>
+		<code>setNextPageText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>text for the next page button.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPrevPageText" id="_getPrevPageText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPrevPageText">#</a>
+		<code>getPrevPageText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>text for the previous page button. Defaults to '&lt;'.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPrevPageText" id="_setPrevPageText">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPrevPageText">#</a>
+		<code>setPrevPageText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>text for the next page button.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFirstPageText" id="_getFirstPageText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFirstPageText">#</a>
+		<code>getFirstPageText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>text for the first page button. Defaults to '&lt;&lt;'.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFirstPageText" id="_setFirstPageText">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFirstPageText">#</a>
+		<code>setFirstPageText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>text for the first page button. If empty, the first page button will not be
+rendered.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastPageText" id="_getLastPageText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastPageText">#</a>
+		<code>getLastPageText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>text for the last page button. Defaults to '&gt;&gt;'.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLastPageText" id="_setLastPageText">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLastPageText">#</a>
+		<code>setLastPageText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>text for the last page button. If empty, the last page button will not be
+rendered.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFirstPageImageUrl" id="_getFirstPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFirstPageImageUrl">#</a>
+		<code>getFirstPageImageUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the image URL for the first page button. This is only used when getButtonType ButtonType is 'ImageButton'.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFirstPageImageUrl" id="_setFirstPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFirstPageImageUrl">#</a>
+		<code>setFirstPageImageUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the image URL for the first page button. This is only used when getButtonType ButtonType is 'ImageButton'.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastPageImageUrl" id="_getLastPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastPageImageUrl">#</a>
+		<code>getLastPageImageUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the image URL for the last page button. This is only used when getButtonType ButtonType is 'ImageButton'.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLastPageImageUrl" id="_setLastPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLastPageImageUrl">#</a>
+		<code>setLastPageImageUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the image URL for the last page button. This is only used when getButtonType ButtonType is 'ImageButton'.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNextPageImageUrl" id="_getNextPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNextPageImageUrl">#</a>
+		<code>getNextPageImageUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the image URL for the next page button. This is only used when getButtonType ButtonType is 'ImageButton'.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setNextPageImageUrl" id="_setNextPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setNextPageImageUrl">#</a>
+		<code>setNextPageImageUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the image URL for the next page button. This is only used when getButtonType ButtonType is 'ImageButton'.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPrevPageImageUrl" id="_getPrevPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPrevPageImageUrl">#</a>
+		<code>getPrevPageImageUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the image URL for the previous page button. This is only used when getButtonType ButtonType is 'ImageButton'.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPrevPageImageUrl" id="_setPrevPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPrevPageImageUrl">#</a>
+		<code>setPrevPageImageUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the image URL for the previous page button. This is only used when getButtonType ButtonType is 'ImageButton'.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNumericPageImageUrl" id="_getNumericPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNumericPageImageUrl">#</a>
+		<code>getNumericPageImageUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the image URL for the numeric page buttons. This is only used when getButtonType ButtonType is 'ImageButton' and getMode Mode is
+'Numeric'.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TPager.html#_setNumericPageImageUrl">TPager::setNumericPageImageUrl()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setNumericPageImageUrl" id="_setNumericPageImageUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setNumericPageImageUrl">#</a>
+		<code>setNumericPageImageUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the image URL for the numeric page buttons. This is actually a template
+for generating a set of URLs corresponding to numeric button 1, 2, 3, .., etc.
+Use {0} as the placeholder for the numbers. For example, the image URL <a
+href="http://example.com/images/button">http://example.com/images/button</a>{0}.gif
+will be replaced as <a
+href="http://example.com/images/button1.gif">http://example.com/images/button1.gif</a>,
+<a
+href="http://example.com/images/button2.gif">http://example.com/images/button2.gif</a>,
+etc.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the image URL for the numeric page buttons. This is actually a template
+for generating a set of URLs corresponding to numeric button 1, 2, 3, .., etc.
+Use {0} as the placeholder for the numbers. For example, the image URL <a
+href="http://example.com/images/button">http://example.com/images/button</a>{0}.gif
+will be replaced as <a
+href="http://example.com/images/button1.gif">http://example.com/images/button1.gif</a>,
+<a
+href="http://example.com/images/button2.gif">http://example.com/images/button2.gif</a>,
+etc.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the image URL for the numeric page buttons. This is only used when getButtonType ButtonType is 'ImageButton' and getMode Mode is
+'Numeric'.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPageButtonCount" id="_getPageButtonCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPageButtonCount">#</a>
+		<code>getPageButtonCount( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>maximum number of pager buttons to be displayed. Defaults to 10.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPageButtonCount" id="_setPageButtonCount">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPageButtonCount">#</a>
+		<code>setPageButtonCount( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>integer</code><br>maximum number of pager buttons to be displayed</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if the value is less than 1.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCurrentPageIndex" id="_getCurrentPageIndex">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCurrentPageIndex">#</a>
+		<code>getCurrentPageIndex( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>the zero-based index of the current page. Defaults to 0.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCurrentPageIndex" id="_setCurrentPageIndex">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCurrentPageIndex">#</a>
+		<code>setCurrentPageIndex( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>integer</code><br>the zero-based index of the current page</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if the value is less than 0<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPageCount" id="_getPageCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPageCount">#</a>
+		<code>getPageCount( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>number of pages of data items available<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPageCount" id="_setPageCount">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPageCount">#</a>
+		<code>setPageCount( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>integer</code><br>number of pages of data items available</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if the value is less than 0<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsFirstPage" id="_getIsFirstPage">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsFirstPage">#</a>
+		<code>getIsFirstPage( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the current page is the first page Defaults to false.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsLastPage" id="_getIsLastPage">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsLastPage">#</a>
+		<code>getIsLastPage( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the current page is the last page<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPreRender" id="_onPreRender">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPreRender">#</a>
+		<code>onPreRender( <span>Traversable <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Performs databinding to populate data items from data source. This method is
+invoked by <code><a href="class-TControl.html#_dataBind">TControl::dataBind()</a></code>. You may override this function to provide your
+own way of data population.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Performs databinding to populate data items from data source. This method is
+invoked by <code><a href="class-TControl.html#_dataBind">TControl::dataBind()</a></code>. You may override this function to provide your
+own way of data population.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code>Traversable</code><br>the bound data</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TWebControl.html#_onPreRender">TWebControl::onPreRender()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="render" id="_render">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_render">#</a>
+		<code>render( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Renders the control. The method overrides the parent implementation by
+rendering the pager only when there are two or more pages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renders the control. The method overrides the parent implementation by
+rendering the pager only when there are two or more pages.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd><code><code><a href="class-THtmlWriter.html">THtmlWriter</a></code></code><br>the writer</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TWebControl.html#_render">TWebControl::render()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildPager" id="_buildPager">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildPager">#</a>
+		<code>buildPager( )</code>
+
+		<div class="description short">
+			
+<p>Builds the pager content based on the pager mode. Current implementation
+includes building 'NextPrev', 'Numeric' and 'DropDownList' pagers. Derived
+classes may override this method to provide additional pagers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Builds the pager content based on the pager mode. Current implementation
+includes building 'NextPrev', 'Numeric' and 'DropDownList' pagers. Derived
+classes may override this method to provide additional pagers.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createPagerButton" id="_createPagerButton">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createPagerButton">#</a>
+		<code>createPagerButton( <span>string <var>$buttonType</var></span>, <span>boolean <var>$enabled</var></span>, <span>string <var>$text</var></span>, <span>string <var>$commandName</var></span>, <span>string <var>$commandParameter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a pager button. Depending on the button type, a TLinkButton or a
+TButton may be created. If it is enabled (clickable), its command name and
+parameter will also be set. Derived classes may override this method to create
+additional types of buttons, such as TImageButton.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a pager button. Depending on the button type, a TLinkButton or a
+TButton may be created. If it is enabled (clickable), its command name and
+parameter will also be set. Derived classes may override this method to create
+additional types of buttons, such as TImageButton.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$buttonType</var></dt>
+					<dd><code>string</code><br>button type, either LinkButton or PushButton</dd>
+					<dt><var>$enabled</var></dt>
+					<dd><code>boolean</code><br>whether the button should be enabled</dd>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>caption of the button.</dd>
+					<dt><var>$commandName</var></dt>
+					<dd><code>string</code><br>CommandName corresponding to the OnCommand event of the button.</dd>
+					<dt><var>$commandParameter</var></dt>
+					<dd><code>string</code><br>CommandParameter corresponding to the OnCommand event of the button</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the button instance<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPageImageUrl" id="_getPageImageUrl">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPageImageUrl">#</a>
+		<code>getPageImageUrl( <span>string <var>$text</var></span>, <span>string <var>$commandName</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>the caption of the image button</dd>
+					<dt><var>$commandName</var></dt>
+					<dd><code>string</code><br>the command name associated with the image button</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildNextPrevPager" id="_buildNextPrevPager">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildNextPrevPager">#</a>
+		<code>buildNextPrevPager( )</code>
+
+		<div class="description short">
+			
+<p>Builds a next-prev pager</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Builds a next-prev pager</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildNumericPager" id="_buildNumericPager">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildNumericPager">#</a>
+		<code>buildNumericPager( )</code>
+
+		<div class="description short">
+			
+<p>Builds a numeric pager</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Builds a numeric pager</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildListPager" id="_buildListPager">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildListPager">#</a>
+		<code>buildListPager( )</code>
+
+		<div class="description short">
+			
+<p>Builds a dropdown list pager</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Builds a dropdown list pager</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listIndexChanged" id="_listIndexChanged">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_listIndexChanged">#</a>
+		<code>listIndexChanged( <span><code><a href="class-TDropDownList.html">TDropDownList</a></code> <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event handler to the OnSelectedIndexChanged event of the dropdown list. This
+handler will raise onPageIndexChanged OnPageIndexChanged event.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event handler to the OnSelectedIndexChanged event of the dropdown list. This
+handler will raise onPageIndexChanged OnPageIndexChanged event.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><code><code><a href="class-TDropDownList.html">TDropDownList</a></code></code><br>the dropdown list control raising the event</dd>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TEventParameter.html">TEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPageIndexChanged" id="_onPageIndexChanged">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPageIndexChanged">#</a>
+		<code>onPageIndexChanged( <span><code><a href="class-TPagerPageChangedEventParameter.html">TPagerPageChangedEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>This event is raised when page index is changed due to a page button
+click.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This event is raised when page index is changed due to a page button
+click.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TPagerPageChangedEventParameter.html">TPagerPageChangedEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bubbleEvent" id="_bubbleEvent">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bubbleEvent">#</a>
+		<code>bubbleEvent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Processes a bubbled event. This method overrides parent's implementation by
+wrapping event parameter for <b>OnCommand</b> event with item information.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Processes a bubbled event. This method overrides parent's implementation by
+wrapping event parameter for <b>OnCommand</b> event with item information.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><code><code><a href="class-TControl.html">TControl</a></code></code><br>the sender of the event</dd>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TEventParameter.html">TEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the event bubbling should stop here.<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_bubbleEvent">TControl::bubbleEvent()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TWebControl.html#methods">TWebControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TWebControl.html#_addAttributesToRender">addAttributesToRender()</a>, 
+			<a href="class-TWebControl.html#_clearStyle">clearStyle()</a>, 
+			<a href="class-TWebControl.html#_copyBaseAttributes">copyBaseAttributes()</a>, 
+			<a href="class-TWebControl.html#_createStyle">createStyle()</a>, 
+			<a href="class-TWebControl.html#_getAccessKey">getAccessKey()</a>, 
+			<a href="class-TWebControl.html#_getBackColor">getBackColor()</a>, 
+			<a href="class-TWebControl.html#_getBorderColor">getBorderColor()</a>, 
+			<a href="class-TWebControl.html#_getBorderStyle">getBorderStyle()</a>, 
+			<a href="class-TWebControl.html#_getBorderWidth">getBorderWidth()</a>, 
+			<a href="class-TWebControl.html#_getCssClass">getCssClass()</a>, 
+			<a href="class-TWebControl.html#_getDecorator">getDecorator()</a>, 
+			<a href="class-TWebControl.html#_getDisplay">getDisplay()</a>, 
+			<a href="class-TWebControl.html#_getEnsureId">getEnsureId()</a>, 
+			<a href="class-TWebControl.html#_getFont">getFont()</a>, 
+			<a href="class-TWebControl.html#_getForeColor">getForeColor()</a>, 
+			<a href="class-TWebControl.html#_getHasStyle">getHasStyle()</a>, 
+			<a href="class-TWebControl.html#_getHeight">getHeight()</a>, 
+			<a href="class-TWebControl.html#_getStyle">getStyle()</a>, 
+			<a href="class-TWebControl.html#_getTabIndex">getTabIndex()</a>, 
+			<a href="class-TWebControl.html#_getTagName">getTagName()</a>, 
+			<a href="class-TWebControl.html#_getToolTip">getToolTip()</a>, 
+			<a href="class-TWebControl.html#_getWidth">getWidth()</a>, 
+			<a href="class-TWebControl.html#_renderBeginTag">renderBeginTag()</a>, 
+			<a href="class-TWebControl.html#_renderContents">renderContents()</a>, 
+			<a href="class-TWebControl.html#_renderEndTag">renderEndTag()</a>, 
+			<a href="class-TWebControl.html#_setAccessKey">setAccessKey()</a>, 
+			<a href="class-TWebControl.html#_setBackColor">setBackColor()</a>, 
+			<a href="class-TWebControl.html#_setBorderColor">setBorderColor()</a>, 
+			<a href="class-TWebControl.html#_setBorderStyle">setBorderStyle()</a>, 
+			<a href="class-TWebControl.html#_setBorderWidth">setBorderWidth()</a>, 
+			<a href="class-TWebControl.html#_setCssClass">setCssClass()</a>, 
+			<a href="class-TWebControl.html#_setDisplay">setDisplay()</a>, 
+			<a href="class-TWebControl.html#_setEnsureId">setEnsureId()</a>, 
+			<a href="class-TWebControl.html#_setForeColor">setForeColor()</a>, 
+			<a href="class-TWebControl.html#_setHeight">setHeight()</a>, 
+			<a href="class-TWebControl.html#_setStyle">setStyle()</a>, 
+			<a href="class-TWebControl.html#_setTabIndex">setTabIndex()</a>, 
+			<a href="class-TWebControl.html#_setToolTip">setToolTip()</a>, 
+			<a href="class-TWebControl.html#_setWidth">setWidth()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TControl.html#methods">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#___construct">__construct()</a>, 
+			<a href="class-TControl.html#___get">__get()</a>, 
+			<a href="class-TControl.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TControl.html#_addToPostDataLoader">addToPostDataLoader()</a>, 
+			<a href="class-TControl.html#_addedControl">addedControl()</a>, 
+			<a href="class-TControl.html#_applyStyleSheetSkin">applyStyleSheetSkin()</a>, 
+			<a href="class-TControl.html#_autoBindProperty">autoBindProperty()</a>, 
+			<a href="class-TControl.html#_autoDataBindProperties">autoDataBindProperties()</a>, 
+			<a href="class-TControl.html#_bindProperty">bindProperty()</a>, 
+			<a href="class-TControl.html#_broadcastEvent">broadcastEvent()</a>, 
+			<a href="class-TControl.html#_clearChildState">clearChildState()</a>, 
+			<a href="class-TControl.html#_clearControlState">clearControlState()</a>, 
+			<a href="class-TControl.html#_clearNamingContainer">clearNamingContainer()</a>, 
+			<a href="class-TControl.html#_clearViewState">clearViewState()</a>, 
+			<a href="class-TControl.html#_convertUniqueIdToClientId">convertUniqueIdToClientId()</a>, 
+			<a href="class-TControl.html#_createChildControls">createChildControls()</a>, 
+			<a href="class-TControl.html#_createControlCollection">createControlCollection()</a>, 
+			<a href="class-TControl.html#_dataBind">dataBind()</a>, 
+			<a href="class-TControl.html#_dataBindChildren">dataBindChildren()</a>, 
+			<a href="class-TControl.html#_dataBindProperties">dataBindProperties()</a>, 
+			<a href="class-TControl.html#_ensureChildControls">ensureChildControls()</a>, 
+			<a href="class-TControl.html#_findControl">findControl()</a>, 
+			<a href="class-TControl.html#_findControlsByID">findControlsByID()</a>, 
+			<a href="class-TControl.html#_findControlsByType">findControlsByType()</a>, 
+			<a href="class-TControl.html#_focus">focus()</a>, 
+			<a href="class-TControl.html#_getAdapter">getAdapter()</a>, 
+			<a href="class-TControl.html#_getAllowChildControls">getAllowChildControls()</a>, 
+			<a href="class-TControl.html#_getAttribute">getAttribute()</a>, 
+			<a href="class-TControl.html#_getAttributes">getAttributes()</a>, 
+			<a href="class-TControl.html#_getChildControlsCreated">getChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_getClientID">getClientID()</a>, 
+			<a href="class-TControl.html#_getControlStage">getControlStage()</a>, 
+			<a href="class-TControl.html#_getControlState">getControlState()</a>, 
+			<a href="class-TControl.html#_getControls">getControls()</a>, 
+			<a href="class-TControl.html#_getCustomData">getCustomData()</a>, 
+			<a href="class-TControl.html#_getEnableTheming">getEnableTheming()</a>, 
+			<a href="class-TControl.html#_getEnableViewState">getEnableViewState()</a>, 
+			<a href="class-TControl.html#_getEnabled">getEnabled()</a>, 
+			<a href="class-TControl.html#_getHasAdapter">getHasAdapter()</a>, 
+			<a href="class-TControl.html#_getHasAttributes">getHasAttributes()</a>, 
+			<a href="class-TControl.html#_getHasChildInitialized">getHasChildInitialized()</a>, 
+			<a href="class-TControl.html#_getHasControls">getHasControls()</a>, 
+			<a href="class-TControl.html#_getHasInitialized">getHasInitialized()</a>, 
+			<a href="class-TControl.html#_getHasLoaded">getHasLoaded()</a>, 
+			<a href="class-TControl.html#_getHasLoadedPostData">getHasLoadedPostData()</a>, 
+			<a href="class-TControl.html#_getHasPreRendered">getHasPreRendered()</a>, 
+			<a href="class-TControl.html#_getID">getID()</a>, 
+			<a href="class-TControl.html#_getIsSkinApplied">getIsSkinApplied()</a>, 
+			<a href="class-TControl.html#_getNamingContainer">getNamingContainer()</a>, 
+			<a href="class-TControl.html#_getPage">getPage()</a>, 
+			<a href="class-TControl.html#_getParent">getParent()</a>, 
+			<a href="class-TControl.html#_getRegisteredObject">getRegisteredObject()</a>, 
+			<a href="class-TControl.html#_getSkinID">getSkinID()</a>, 
+			<a href="class-TControl.html#_getSourceTemplateControl">getSourceTemplateControl()</a>, 
+			<a href="class-TControl.html#_getTemplateControl">getTemplateControl()</a>, 
+			<a href="class-TControl.html#_getUniqueID">getUniqueID()</a>, 
+			<a href="class-TControl.html#_getViewState">getViewState()</a>, 
+			<a href="class-TControl.html#_getVisible">getVisible()</a>, 
+			<a href="class-TControl.html#_hasAttribute">hasAttribute()</a>, 
+			<a href="class-TControl.html#_initRecursive">initRecursive()</a>, 
+			<a href="class-TControl.html#_isDescendentOf">isDescendentOf()</a>, 
+			<a href="class-TControl.html#_isObjectRegistered">isObjectRegistered()</a>, 
+			<a href="class-TControl.html#_loadRecursive">loadRecursive()</a>, 
+			<a href="class-TControl.html#_loadStateRecursive">loadStateRecursive()</a>, 
+			<a href="class-TControl.html#_onDataBinding">onDataBinding()</a>, 
+			<a href="class-TControl.html#_onInit">onInit()</a>, 
+			<a href="class-TControl.html#_onLoad">onLoad()</a>, 
+			<a href="class-TControl.html#_onUnload">onUnload()</a>, 
+			<a href="class-TControl.html#_preRenderRecursive">preRenderRecursive()</a>, 
+			<a href="class-TControl.html#_raiseBubbleEvent">raiseBubbleEvent()</a>, 
+			<a href="class-TControl.html#_registerObject">registerObject()</a>, 
+			<a href="class-TControl.html#_removeAttribute">removeAttribute()</a>, 
+			<a href="class-TControl.html#_removedControl">removedControl()</a>, 
+			<a href="class-TControl.html#_renderChildren">renderChildren()</a>, 
+			<a href="class-TControl.html#_renderControl">renderControl()</a>, 
+			<a href="class-TControl.html#_saveState">saveState()</a>, 
+			<a href="class-TControl.html#_saveStateRecursive">saveStateRecursive()</a>, 
+			<a href="class-TControl.html#_setAdapter">setAdapter()</a>, 
+			<a href="class-TControl.html#_setAttribute">setAttribute()</a>, 
+			<a href="class-TControl.html#_setChildControlsCreated">setChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_setControlStage">setControlStage()</a>, 
+			<a href="class-TControl.html#_setControlState">setControlState()</a>, 
+			<a href="class-TControl.html#_setCustomData">setCustomData()</a>, 
+			<a href="class-TControl.html#_setEnableTheming">setEnableTheming()</a>, 
+			<a href="class-TControl.html#_setEnableViewState">setEnableViewState()</a>, 
+			<a href="class-TControl.html#_setEnabled">setEnabled()</a>, 
+			<a href="class-TControl.html#_setID">setID()</a>, 
+			<a href="class-TControl.html#_setPage">setPage()</a>, 
+			<a href="class-TControl.html#_setSkinID">setSkinID()</a>, 
+			<a href="class-TControl.html#_setTemplateControl">setTemplateControl()</a>, 
+			<a href="class-TControl.html#_setViewState">setViewState()</a>, 
+			<a href="class-TControl.html#_setVisible">setVisible()</a>, 
+			<a href="class-TControl.html#_trackViewState">trackViewState()</a>, 
+			<a href="class-TControl.html#_traverseChildControls">traverseChildControls()</a>, 
+			<a href="class-TControl.html#_unbindProperty">unbindProperty()</a>, 
+			<a href="class-TControl.html#_unloadRecursive">unloadRecursive()</a>, 
+			<a href="class-TControl.html#_unregisterObject">unregisterObject()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CMD_PAGE" id="CMD_PAGE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_PAGE</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Page'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_PAGE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Command name that TPager understands.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Command name that TPager understands.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_PAGE_NEXT" id="CMD_PAGE_NEXT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_PAGE_NEXT</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Next'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_PAGE_NEXT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_PAGE_PREV" id="CMD_PAGE_PREV">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_PAGE_PREV</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Previous'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_PAGE_PREV" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_PAGE_FIRST" id="CMD_PAGE_FIRST">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_PAGE_FIRST</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'First'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_PAGE_FIRST" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_PAGE_LAST" id="CMD_PAGE_LAST">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_PAGE_LAST</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Last'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_PAGE_LAST" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TControl.html#constants">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#AUTOMATIC_ID_PREFIX"><b>AUTOMATIC_ID_PREFIX</b></a>, 
+			<a href="class-TControl.html#CLIENT_ID_SEPARATOR"><b>CLIENT_ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#CS_CHILD_INITIALIZED"><b>CS_CHILD_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_CONSTRUCTED"><b>CS_CONSTRUCTED</b></a>, 
+			<a href="class-TControl.html#CS_INITIALIZED"><b>CS_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_LOADED"><b>CS_LOADED</b></a>, 
+			<a href="class-TControl.html#CS_PRERENDERED"><b>CS_PRERENDERED</b></a>, 
+			<a href="class-TControl.html#CS_STATE_LOADED"><b>CS_STATE_LOADED</b></a>, 
+			<a href="class-TControl.html#ID_FORMAT"><b>ID_FORMAT</b></a>, 
+			<a href="class-TControl.html#ID_SEPARATOR"><b>ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#IS_CHILD_CREATED"><b>IS_CHILD_CREATED</b></a>, 
+			<a href="class-TControl.html#IS_CREATING_CHILD"><b>IS_CREATING_CHILD</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_THEMING"><b>IS_DISABLE_THEMING</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_VIEWSTATE"><b>IS_DISABLE_VIEWSTATE</b></a>, 
+			<a href="class-TControl.html#IS_ID_SET"><b>IS_ID_SET</b></a>, 
+			<a href="class-TControl.html#IS_SKIN_APPLIED"><b>IS_SKIN_APPLIED</b></a>, 
+			<a href="class-TControl.html#IS_STYLESHEET_APPLIED"><b>IS_STYLESHEET_APPLIED</b></a>, 
+			<a href="class-TControl.html#RF_ADAPTER"><b>RF_ADAPTER</b></a>, 
+			<a href="class-TControl.html#RF_AUTO_BINDINGS"><b>RF_AUTO_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_CHILD_STATE"><b>RF_CHILD_STATE</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLS"><b>RF_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLSTATE"><b>RF_CONTROLSTATE</b></a>, 
+			<a href="class-TControl.html#RF_DATA_BINDINGS"><b>RF_DATA_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_EVENTS"><b>RF_EVENTS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS"><b>RF_NAMED_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS_ID"><b>RF_NAMED_CONTROLS_ID</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_OBJECTS"><b>RF_NAMED_OBJECTS</b></a>, 
+			<a href="class-TControl.html#RF_SKIN_ID"><b>RF_SKIN_ID</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-TWebControl.html#properties">TWebControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TWebControl.html#$_decorator"><var>$_decorator</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TUrlMappingPattern | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li class="active"><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Web.html" title="Summary of System\Web"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TUrlMappingPattern</h1>
+
+
+	<div class="description">
+	
+<p>TUrlMappingPattern class.</p>
+
+<p>TUrlMappingPattern represents a pattern used to parse and construct URLs. If
+the currently requested URL matches the pattern, it will alter the THttpRequest
+parameters. If a constructUrl() call matches the pattern parameters, the pattern
+will generate a valid URL. In both case, only the PATH_INFO part of a URL is
+parsed/constructed using the pattern.</p>
+
+<p>To specify the pattern, set the setPattern Pattern property. setPattern Pattern takes a string expression with parameter names enclosed
+between a left brace '{' and a right brace '}'. The patterns for each parameter
+can be set using getParameters Parameters attribute collection. For
+example</p>
+
+<pre>
+&lt;url ... <span class="php-keyword2">pattern</span>=<span
+class="php-quote">&quot;articles/{year}/{month}/{day}&quot;</span>
+         parameters.year=<span
+class="php-quote">&quot;\d{4}&quot;</span> parameters.month=<span
+class="php-quote">&quot;\d{2}&quot;</span> parameters.day=<span
+class="php-quote">&quot;\d+&quot;</span> /&gt;
+</pre>
+
+<p>In the above example, the pattern contains 3 parameters named "year", "month"
+and "day". The pattern for these parameters are, respectively, "\d{4}" (4
+digits), "\d{2}" (2 digits) and "\d+" (1 or more digits). Essentially, the
+<tt>Parameters</tt> attribute name and values are used as substrings in
+replacing the placeholders in the <tt>Pattern</tt> string to form a complete
+regular expression string.</p>
+
+<p>For more complicated patterns, one may specify the pattern using a regular
+expression by setRegularExpression RegularExpression. For example, the
+above pattern is equivalent to the following regular expression-based
+pattern:</p>
+
+<pre>
+<span
+class="php-comment">#^articles/(?P&lt;year&gt;\d{4})/(?P&lt;month&gt;\d{2})\/(?P&lt;day&gt;\d+)$#u</span>
+</pre>
+
+<p>The above regular expression used the "named group" feature available in PHP.
+If you intended to use the <tt>RegularExpression</tt> property or regular
+expressions in CDATA sections, notice that you need to escape the slash, if you
+are using the slash as regular expressions delimiter.</p>
+
+<p>Thus, only an url that matches the pattern will be valid. For example, a URL
+<tt><a
+href="http://example.com/index.php/articles/2006/07/21">http://example.com/index.php/articles/2006/07/21</a></tt>
+will match the above pattern, while <tt><a
+href="http://example.com/index.php/articles/2006/07/hello">http://example.com/index.php/articles/2006/07/hello</a></tt>
+will not since the "day" parameter pattern is not satisfied.</p>
+
+<p>The parameter values are available through the <tt>THttpRequest</tt> instance
+(e.g. <tt>$this-&gt;Request['year']</tt>).</p>
+
+<p>The setServiceParameter ServiceParameter and setServiceID
+ServiceID (the default ID is 'page') set the service parameter and service id
+respectively.</p>
+
+<p>Since 3.1.4 you can also use simplyfied wildcard patterns to match multiple
+ServiceParameters with a single rule. The pattern must contain the placeholder
+{*} for the ServiceParameter. For example</p>
+
+<p>&lt;url ServiceParameter="adminpages.*" pattern="admin/{*}" /&gt;</p>
+
+<p>This rule will match an URL like <tt><a
+href="http://example.com/index.php/admin/edituser">http://example.com/index.php/admin/edituser</a></tt>
+and resolve it to the page Application.pages.admin.edituser. The wildcard
+matching is non-recursive. That means you have to add a rule for every
+subdirectory you want to access pages in:</p>
+
+<p>&lt;url ServiceParameter="adminpages.users.*" pattern="useradmin/{*}"
+/&gt;</p>
+
+<p>It is still possible to define an explicit rule for a page in the wildcard
+path. This rule has to preceed the wildcard rule.</p>
+
+<p>You can also use parameters with wildcard patterns. The parameters are then
+available with every matching page:</p>
+
+<p>&lt;url ServiceParameter="adminpages.*" pattern="admin/{*}/{id}"
+parameters.id="\d+" /&gt;</p>
+
+<p>To enable automatic parameter encoding in a path format from wildcard
+patterns you can set {@setUrlFormat UrlFormat} to 'Path':</p>
+
+<p>&lt;url ServiceParameter="adminpages.*" pattern="admin/{*}" UrlFormat="Path"
+/&gt;</p>
+
+<p>This will create and parse URLs of the form
+<tt>.../index.php/admin/listuser/param1/value1/param2/value2</tt>.</p>
+
+<p>Use {@setUrlParamSeparator} to define another separator character between
+parameter name and value. Parameter/value pairs are always separated by a
+'/'.</p>
+
+<p>&lt;url ServiceParameter="adminpages.*" pattern="admin/{*}" UrlFormat="Path"
+UrlParamSeparator="-" /&gt;</p>
+
+<p><tt>.../index.php/admin/listuser/param1-value1/param2-value2</tt>.</p>
+
+<p>Since 3.2.2 you can also add a list of "constants" parameters that can be
+used just like the original "parameters" parameters, except that the supplied
+value will be treated as a simple string constant instead of a regular
+expression. For example</p>
+
+<p>&lt;url ServiceParameter="MyPage"
+pattern="/mypage/mypath/list/detail/{pageidx}" parameters.pageidx="\d+"
+constants.listtype="detailed"/&gt; &lt;url ServiceParameter="MyPage"
+pattern="/mypage/mypath/list/summary/{pageidx}" parameters.pageidx="\d+"
+constants.listtype="summarized"/&gt;</p>
+
+<p>These rules, when matched by the actual request, will make the application
+see a "lisstype" parameter present (even through not supplied in the request)
+and equal to "detailed" or "summarized", depending on the friendly url matched.
+The constants is practically a table-based validation and translation of
+specified, fixed-set parameter values.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TUrlMappingPattern</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Wei Zhuo &lt;weizhuo[at]gmail[dot]com&gt;<br />
+				<b>Since:</b>
+				3.0.5<br />
+		<b>Located at</b> Web/TUrlMapping.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TUrlManager.html">TUrlManager</a></code> <var>$manager</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$manager</var></dt>
+					<dd><code><code><a href="class-TUrlManager.html">TUrlManager</a></code></code><br>the URL manager instance</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getManager" id="_getManager">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TUrlManager.html">TUrlManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getManager">#</a>
+		<code>getManager( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TUrlManager.html">TUrlManager</a></code></code><br>the URL manager instance<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Initializes the pattern.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes the pattern.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd><code><code><a href="class-TXmlElement.html">TXmlElement</a></code></code><br>configuration for this module.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TConfigurationException.html">TConfigurationException</a></code></code><br>if service parameter is not specified<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameterizedPattern" id="_getParameterizedPattern">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParameterizedPattern">#</a>
+		<code>getParameterizedPattern( )</code>
+
+		<div class="description short">
+			
+<p>Substitute the parameter key value pairs as named groupings in the regular
+expression matching pattern.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Substitute the parameter key value pairs as named groupings in the regular
+expression matching pattern.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>regular expression pattern with parameter subsitution<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRegularExpression" id="_getRegularExpression">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRegularExpression">#</a>
+		<code>getRegularExpression( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>full regular expression mapping pattern<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRegularExpression" id="_setRegularExpression">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRegularExpression">#</a>
+		<code>setRegularExpression( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>full regular expression mapping pattern.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCaseSensitive" id="_getCaseSensitive">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCaseSensitive">#</a>
+		<code>getCaseSensitive( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the getPattern Pattern should be treated as case sensititve.
+Defaults to true.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCaseSensitive" id="_setCaseSensitive">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCaseSensitive">#</a>
+		<code>setCaseSensitive( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>whether the getPattern Pattern should be treated as case sensititve.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setServiceParameter" id="_setServiceParameter">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setServiceParameter">#</a>
+		<code>setServiceParameter( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>service parameter, such as page class name.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getServiceParameter" id="_getServiceParameter">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getServiceParameter">#</a>
+		<code>getServiceParameter( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>service parameter, such as page class name.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setServiceID" id="_setServiceID">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setServiceID">#</a>
+		<code>setServiceID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>service id to handle.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getServiceID" id="_getServiceID">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getServiceID">#</a>
+		<code>getServiceID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>service id.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPattern" id="_getPattern">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPattern">#</a>
+		<code>getPattern( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>url pattern to match. Defaults to ''.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPattern" id="_setPattern">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPattern">#</a>
+		<code>setPattern( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>url pattern to match.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameters" id="_getParameters">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParameters">#</a>
+		<code>getParameters( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code></code><br>parameter key value pairs.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setParameters" id="_setParameters">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setParameters">#</a>
+		<code>setParameters( <span><code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code></code><br>new parameter key value pairs.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConstants" id="_getConstants">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConstants">#</a>
+		<code>getConstants( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code></code><br>constanst parameter key value pairs.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPatternMatches" id="_getPatternMatches">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPatternMatches">#</a>
+		<code>getPatternMatches( <span><code><a href="class-THttpRequest.html">THttpRequest</a></code> <var>$request</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Uses URL pattern (or full regular expression if available) to match the given
+url path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Uses URL pattern (or full regular expression if available) to match the given
+url path.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd><code><code><a href="class-THttpRequest.html">THttpRequest</a></code></code><br>the request module</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>matched parameters, empty if no matches.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEnableCustomUrl" id="_getEnableCustomUrl">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnableCustomUrl">#</a>
+		<code>getEnableCustomUrl( )</code>
+
+		<div class="description short">
+			
+<p>Returns a value indicating whether to use this pattern to construct URL.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a value indicating whether to use this pattern to construct URL.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether to enable custom constructUrl. Defaults to true.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEnableCustomUrl" id="_setEnableCustomUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEnableCustomUrl">#</a>
+		<code>setEnableCustomUrl( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets a value indicating whether to enable custom constructUrl using this
+pattern</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets a value indicating whether to enable custom constructUrl using this
+pattern</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>whether to enable custom constructUrl.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsWildCardPattern" id="_getIsWildCardPattern">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsWildCardPattern">#</a>
+		<code>getIsWildCardPattern( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether this pattern is a wildcard pattern<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.4<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUrlFormat" id="_getUrlFormat">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-THttpRequestUrlFormat.html">THttpRequestUrlFormat</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUrlFormat">#</a>
+		<code>getUrlFormat( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-THttpRequestUrlFormat.html">THttpRequestUrlFormat</a></code></code><br>the format of URLs. Defaults to THttpRequestUrlFormat::Get.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUrlFormat" id="_setUrlFormat">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUrlFormat">#</a>
+		<code>setUrlFormat( <span><code><a href="class-THttpRequestUrlFormat.html">THttpRequestUrlFormat</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the format of URLs constructed and interpreted by this pattern. A Get
+URL format is like index.php?name1=value1&amp;name2=value2 while a Path URL
+format is like index.php/name1/value1/name2/value. The separating character
+between name and value can be configured with <code><a href="class-TUrlMappingPattern.html#_setUrlParamSeparator">TUrlMappingPattern::setUrlParamSeparator()</a></code> and
+defaults to '/'. Changing the UrlFormat will affect <code><a href="class-TUrlMappingPattern.html#_constructUrl">TUrlMappingPattern::constructUrl()</a></code> and how
+GET variables are parsed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the format of URLs constructed and interpreted by this pattern. A Get
+URL format is like index.php?name1=value1&amp;name2=value2 while a Path URL
+format is like index.php/name1/value1/name2/value. The separating character
+between name and value can be configured with <code><a href="class-TUrlMappingPattern.html#_setUrlParamSeparator">TUrlMappingPattern::setUrlParamSeparator()</a></code> and
+defaults to '/'. Changing the UrlFormat will affect <code><a href="class-TUrlMappingPattern.html#_constructUrl">TUrlMappingPattern::constructUrl()</a></code> and how
+GET variables are parsed.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-THttpRequestUrlFormat.html">THttpRequestUrlFormat</a></code></code><br>the format of URLs.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.4<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUrlParamSeparator" id="_getUrlParamSeparator">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUrlParamSeparator">#</a>
+		<code>getUrlParamSeparator( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>separator used to separate GET variable name and value when URL format is Path.
+Defaults to slash '/'.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUrlParamSeparator" id="_setUrlParamSeparator">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUrlParamSeparator">#</a>
+		<code>setUrlParamSeparator( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>separator used to separate GET variable name and value when URL format is Path.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if the separator is not a single character<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSecureConnection" id="_getSecureConnection">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TUrlMappingPatternSecureConnection.html">TUrlMappingPatternSecureConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSecureConnection">#</a>
+		<code>getSecureConnection( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TUrlMappingPatternSecureConnection.html">TUrlMappingPatternSecureConnection</a></code></code><br>the SecureConnection behavior. Defaults to TUrlMappingPatternSecureConnection::Automatic Automatic<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSecureConnection" id="_setSecureConnection">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSecureConnection">#</a>
+		<code>setSecureConnection( <span><code><a href="class-TUrlMappingPatternSecureConnection.html">TUrlMappingPatternSecureConnection</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-TUrlMappingPatternSecureConnection.html">TUrlMappingPatternSecureConnection</a></code></code><br>the SecureConnection behavior.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="supportCustomUrl" id="_supportCustomUrl">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_supportCustomUrl">#</a>
+		<code>supportCustomUrl( <span>array <var>$getItems</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$getItems</var></dt>
+					<dd><code>array</code><br>list of GET items to be put in the constructed URL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether this pattern IS the one for constructing the URL with the specified GET
+items.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="constructUrl" id="_constructUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_constructUrl">#</a>
+		<code>constructUrl( <span>array <var>$getItems</var></span>, <span>boolean <var>$encodeAmpersand</var></span>, <span>boolean <var>$encodeGetItems</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructs a URL using this pattern.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructs a URL using this pattern.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$getItems</var></dt>
+					<dd><code>array</code><br>list of GET variables</dd>
+					<dt><var>$encodeAmpersand</var></dt>
+					<dd><code>boolean</code><br>whether the ampersand should be encoded in the constructed URL</dd>
+					<dt><var>$encodeGetItems</var></dt>
+					<dd><code>boolean</code><br>whether the GET variables should be encoded in the constructed URL</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the constructed URL<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applySecureConnectionPrefix" id="_applySecureConnectionPrefix">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applySecureConnectionPrefix">#</a>
+		<code>applySecureConnectionPrefix( <span>string <var>$url</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Apply behavior of SecureConnection property by conditionaly prefixing
+URL with <code><a href="class-THttpRequest.html#_getBaseUrl">THttpRequest::getBaseUrl()</a></code></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Apply behavior of SecureConnection property by conditionaly prefixing
+URL with <code><a href="class-THttpRequest.html#_getBaseUrl">THttpRequest::getBaseUrl()</a></code></p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>string</code><br>$url</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_constants" id="$_constants">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code>
+		</code></td>
+
+		<td class="name">
+<var>$_constants</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$_constants" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>of constant parameters.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>of constant parameters.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

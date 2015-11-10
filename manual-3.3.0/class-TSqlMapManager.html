@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TSqlMapManager | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TFastSqlMapApplicationCache.html">TFastSqlMapApplicationCache</a></li>
+				<li><a href="class-TLazyLoadList.html">TLazyLoadList</a></li>
+				<li><a href="class-TObjectProxy.html">TObjectProxy</a></li>
+				<li><a href="class-TPropertyAccess.html">TPropertyAccess</a></li>
+				<li><a href="class-TSqlMapApplicationCache.html">TSqlMapApplicationCache</a></li>
+				<li><a href="class-TSqlMapCache.html">TSqlMapCache</a></li>
+				<li><a href="class-TSqlMapConfig.html">TSqlMapConfig</a></li>
+				<li><a href="class-TSqlMapFifoCache.html">TSqlMapFifoCache</a></li>
+				<li><a href="class-TSqlMapGateway.html">TSqlMapGateway</a></li>
+				<li><a href="class-TSqlMapLruCache.html">TSqlMapLruCache</a></li>
+				<li class="active"><a href="class-TSqlMapManager.html">TSqlMapManager</a></li>
+				<li><a href="class-TSqlMapPagedList.html">TSqlMapPagedList</a></li>
+				<li><a href="class-TSqlMapTypeHandler.html">TSqlMapTypeHandler</a></li>
+				<li><a href="class-TSqlMapTypeHandlerRegistry.html">TSqlMapTypeHandlerRegistry</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TInvalidPropertyException.html">TInvalidPropertyException</a></li>
+				<li><a href="class-TSqlMapConfigurationException.html">TSqlMapConfigurationException</a></li>
+				<li><a href="class-TSqlMapDuplicateException.html">TSqlMapDuplicateException</a></li>
+				<li><a href="class-TSqlMapException.html">TSqlMapException</a></li>
+				<li><a href="class-TSqlMapExecutionException.html">TSqlMapExecutionException</a></li>
+				<li><a href="class-TSqlMapUndefinedException.html">TSqlMapUndefinedException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TSqlMapManager</h1>
+
+
+	<div class="description">
+	<p>TSqlMapManager class holds the sqlmap configuation result maps, statements
+parameter maps and a type handler factory.</p>
+
+<p>Use SqlMapGateway getSqlMapGateway() property to obtain the gateway
+instance used for querying statements defined in the SqlMap configuration files.</p>
+
+<pre><span class="php-var">$conn</span> = <span class="php-keyword1">new</span> TDbConnection(<span class="php-var">$dsn</span>,<span class="php-var">$dbuser</span>,<span class="php-var">$dbpass</span>);
+<span class="php-var">$manager</span> = <span class="php-keyword1">new</span> TSqlMapManager(<span class="php-var">$conn</span>);
+<span class="php-var">$manager</span>-&gt;configureXml(<span class="php-quote">'mydb-sqlmap.xml'</span>);
+<span class="php-var">$sqlmap</span> = <span class="php-var">$manager</span>-&gt;getSqlMapGateway();
+<span class="php-var">$result</span> = <span class="php-var">$sqlmap</span>-&gt;queryForObject(<span class="php-quote">'Products'</span>);</pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TSqlMapManager</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.SqlMap.html">SqlMap</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Data/SqlMap/TSqlMapManager.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TDbConnection.html">TDbConnection</a></code> <var>$connection</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor, create a new SqlMap manager.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor, create a new SqlMap manager.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>connection</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDbConnection" id="_setDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDbConnection">#</a>
+		<code>setDbConnection( <span><code><a href="class-TDbConnection.html">TDbConnection</a></code> <var>$conn</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$conn</var></dt>
+					<dd>database connection</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDbConnection" id="_getDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDbConnection">#</a>
+		<code>getDbConnection( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbConnection.html">TDbConnection</a></code><br>default database connection
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTypeHandlers" id="_getTypeHandlers">
+
+		<td class="attributes"><code>
+			 public 
+
+			TTypeHandlerFactory
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTypeHandlers">#</a>
+		<code>getTypeHandlers( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					TTypeHandlerFactory<br>The TypeHandlerFactory
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSqlmapGateway" id="_getSqlmapGateway">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TSqlMapGateway.html">TSqlMapGateway</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSqlmapGateway">#</a>
+		<code>getSqlmapGateway( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapGateway.html">TSqlMapGateway</a></code><br>SqlMap gateway.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configureXml" id="_configureXml">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configureXml">#</a>
+		<code>configureXml( <span>string <var>$file</var></span> )</code>
+
+		<div class="description short">
+			<p>Loads and parses the SqlMap configuration file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Loads and parses the SqlMap configuration file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd>configuration file.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheDependencies" id="_getCacheDependencies">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TChainedCacheDependency.html">TChainedCacheDependency</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheDependencies">#</a>
+		<code>getCacheDependencies( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TChainedCacheDependency.html">TChainedCacheDependency</a></code>
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createSqlMapGateway" id="_createSqlMapGateway">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TSqlMapGateway.html">TSqlMapGateway</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createSqlMapGateway">#</a>
+		<code>createSqlMapGateway( )</code>
+
+		<div class="description short">
+			<p>Configures the current TSqlMapManager using the given xml configuration file
+defined in ConfigFile setConfigFile().</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Configures the current TSqlMapManager using the given xml configuration file
+defined in ConfigFile setConfigFile().</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapGateway.html">TSqlMapGateway</a></code><br>create and configure a new TSqlMapGateway.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMappedStatements" id="_getMappedStatements">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TMap.html">TMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMappedStatements">#</a>
+		<code>getMappedStatements( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TMap.html">TMap</a></code><br>mapped statements collection.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMappedStatement" id="_getMappedStatement">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-IMappedStatement.html">IMappedStatement</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMappedStatement">#</a>
+		<code>getMappedStatement( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Gets a MappedStatement by name.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets a MappedStatement by name.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name of the statement.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-IMappedStatement.html">IMappedStatement</a></code><br>The MappedStatement
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapUndefinedException.html">TSqlMapUndefinedException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMappedStatement" id="_addMappedStatement">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addMappedStatement">#</a>
+		<code>addMappedStatement( <span><code><a href="class-IMappedStatement.html">IMappedStatement</a></code> <var>$statement</var></span> )</code>
+
+		<div class="description short">
+			<p>Adds a (named) MappedStatement.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds a (named) MappedStatement.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statement</var></dt>
+					<dd>key name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapDuplicateException.html">TSqlMapDuplicateException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResultMaps" id="_getResultMaps">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TMap.html">TMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResultMaps">#</a>
+		<code>getResultMaps( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TMap.html">TMap</a></code><br>result maps collection.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResultMap" id="_getResultMap">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TResultMap.html">TResultMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResultMap">#</a>
+		<code>getResultMap( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Gets a named result map</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets a named result map</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TResultMap.html">TResultMap</a></code><br>the result map.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapUndefinedException.html">TSqlMapUndefinedException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addResultMap" id="_addResultMap">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addResultMap">#</a>
+		<code>addResultMap( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$result</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$result</var></dt>
+					<dd>a new result map to this SQLMap</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapDuplicateException.html">TSqlMapDuplicateException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameterMaps" id="_getParameterMaps">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TMap.html">TMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParameterMaps">#</a>
+		<code>getParameterMaps( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TMap.html">TMap</a></code><br>parameter maps collection.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameterMap" id="_getParameterMap">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TParameterMap.html">TParameterMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParameterMap">#</a>
+		<code>getParameterMap( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>map ID name.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TParameterMap.html">TParameterMap</a></code><br>the parameter with given ID.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapUndefinedException.html">TSqlMapUndefinedException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addParameterMap" id="_addParameterMap">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addParameterMap">#</a>
+		<code>addParameterMap( <span><code><a href="class-TParameterMap.html">TParameterMap</a></code> <var>$parameter</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$parameter</var></dt>
+					<dd>a new parameter map to this SQLMap.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapDuplicateException.html">TSqlMapDuplicateException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCacheModel" id="_addCacheModel">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addCacheModel">#</a>
+		<code>addCacheModel( <span><code><a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a></code> <var>$cacheModel</var></span> )</code>
+
+		<div class="description short">
+			<p>Adds a named cache.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds a named cache.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cacheModel</var></dt>
+					<dd>cache to add.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapConfigurationException.html">TSqlMapConfigurationException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheModel" id="_getCacheModel">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheModel">#</a>
+		<code>getCacheModel( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Gets a cache by name</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets a cache by name</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name of the cache to get.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a></code><br>the cache object.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapConfigurationException.html">TSqlMapConfigurationException</a></code>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flushCacheModels" id="_flushCacheModels">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flushCacheModels">#</a>
+		<code>flushCacheModels( )</code>
+
+		<div class="description short">
+			<p>Flushes all cached objects that belong to this SqlMap</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Flushes all cached objects that belong to this SqlMap</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

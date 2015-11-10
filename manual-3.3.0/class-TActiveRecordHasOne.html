@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TActiveRecordHasOne | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TActiveRecordBelongsTo.html">TActiveRecordBelongsTo</a></li>
+				<li><a href="class-TActiveRecordHasMany.html">TActiveRecordHasMany</a></li>
+				<li><a href="class-TActiveRecordHasManyAssociation.html">TActiveRecordHasManyAssociation</a></li>
+				<li class="active"><a href="class-TActiveRecordHasOne.html">TActiveRecordHasOne</a></li>
+				<li><a href="class-TActiveRecordRelation.html">TActiveRecordRelation</a></li>
+				<li><a href="class-TActiveRecordRelationContext.html">TActiveRecordRelationContext</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActiveRecordHasOne</h1>
+
+
+	<div class="description">
+	<p>TActiveRecordHasOne models the object relationship that a record (the source object)
+property is an instance of foreign record object having a foreign key
+related to the source object. The HAS_ONE relation is very similar to the
+HAS_MANY relationship (in fact, it is equivalent in the entities relationship point of view).</p>
+
+<p>The difference of HAS_ONE from HAS_MANY is that the foreign object is singular.
+That is, HAS_MANY will return a collection of records while HAS_ONE returns the
+corresponding record.</p>
+
+<p>Consider the <b>entity</b> relationship between a Car and a Engine.</p>
+
+<pre>+-----+            +--------+
+| Car | <span class="php-num">1</span> &lt;----- <span class="php-num">1</span> | Engine |
++-----+            +--------+</pre>
+
+<p>Where each engine belongs to only one car, that is, the Engine entity has
+a foreign key to the Car's primary key. We may model
+Engine-Car <b>object</b> relationship as active record as follows.</p>
+
+<pre><span class="php-keyword1">class</span> CarRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+    <span class="php-keyword1">const</span> TABLE=<span class="php-quote">'car'</span>;
+    <span class="php-keyword1">public</span> <span class="php-var">$car_id</span>; <span class="php-comment">//primary key</span>
+    <span class="php-keyword1">public</span> <span class="php-var">$colour</span>;
+
+    <span class="php-keyword1">public</span> <span class="php-var">$engine</span>; <span class="php-comment">//engine foreign object</span>
+
+    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$RELATIONS</span>=<span class="php-keyword1">array</span>
+    (
+        <span class="php-quote">'engine'</span> =&gt; <span class="php-keyword1">array</span>(self::HAS_ONE, <span class="php-quote">'EngineRecord'</span>)
+    );
+
+   <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> finder(<span class="php-var">$className</span>=__CLASS__)
+   {
+       <span class="php-keyword1">return</span> parent::finder(<span class="php-var">$className</span>);
+   }
+}
+<span class="php-keyword1">class</span> EngineRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+    <span class="php-keyword1">const</span> TABLE=<span class="php-quote">'engine'</span>;
+    <span class="php-keyword1">public</span> <span class="php-var">$engine_id</span>;
+    <span class="php-keyword1">public</span> <span class="php-var">$capacity</span>;
+    <span class="php-keyword1">public</span> <span class="php-var">$car_id</span>; <span class="php-comment">//foreign key to cars</span>
+
+   <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> finder(<span class="php-var">$className</span>=__CLASS__)
+   {
+       <span class="php-keyword1">return</span> parent::finder(<span class="php-var">$className</span>);
+   }
+}</pre>
+
+<p>The static <tt>$RELATIONS</tt> property of CarRecord defines that the
+property <tt>$engine</tt> that will reference an <tt>EngineRecord</tt> instance.</p>
+
+<p>The car record with engine property list may be fetched as follows.</p>
+
+<pre><span class="php-var">$cars</span> = CarRecord::finder()-&gt;with_engine()-&gt;findAll();</pre>
+
+<p>The method <tt>with_xxx()</tt> (where <tt>xxx</tt> is the relationship property
+name, in this case, <tt>engine</tt>) fetchs the corresponding EngineRecords using
+a second query (not by using a join). The <tt>with_xxx()</tt> accepts the same
+arguments as other finder methods of TActiveRecord, e.g. <tt>with_engine('capacity &lt; ?', 3.8)</tt>.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TActiveRecordRelation.html"><span>TActiveRecordRelation</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TActiveRecordHasOne</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.ActiveRecord.html">ActiveRecord</a>\<a href="package-System.Data.ActiveRecord.Relations.html">Relations</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
+				<b>Version:</b>
+				$Id$<br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Data/ActiveRecord/Relations/TActiveRecordHasOne.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="collectForeignObjects" id="_collectForeignObjects">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_collectForeignObjects">#</a>
+		<code>collectForeignObjects( <span>array <var>&amp; $results</var></span> )</code>
+
+		<div class="description short">
+			<p>Get the foreign key index values from the results and make calls to the
+database to find the corresponding foreign objects.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the foreign key index values from the results and make calls to the
+database to find the corresponding foreign objects.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$results</var></dt>
+					<dd>results.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelationForeignKeys" id="_getRelationForeignKeys">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelationForeignKeys">#</a>
+		<code>getRelationForeignKeys( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>foreign key field names as key and object properties as value.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setObjectProperty" id="_setObjectProperty">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setObjectProperty">#</a>
+		<code>setObjectProperty( <span><code><a href="class-TActiveRecord.html">TActiveRecord</a></code> <var>$source</var></span>, <span>array <var>$properties</var></span>, <span>array <var>&amp; $collections</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the foreign objects to the given property on the source object.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the foreign objects to the given property on the source object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$source</var></dt>
+					<dd>object.</dd>
+					<dt><var>$properties</var></dt>
+					<dd>objects.</dd>
+					<dt><var>$collections</var></dt>
+					<dd>objects.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TActiveRecordRelation.html#_setObjectProperty">TActiveRecordRelation::setObjectProperty()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateAssociatedRecords" id="_updateAssociatedRecords">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateAssociatedRecords">#</a>
+		<code>updateAssociatedRecords( )</code>
+
+		<div class="description short">
+			<p>Updates the associated foreign objects.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Updates the associated foreign objects.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if all update are success (including if no update was required), false otherwise .
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TActiveRecordRelation.html#methods">TActiveRecordRelation</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TActiveRecordRelation.html#___call">__call()</a>, 
+			<a href="class-TActiveRecordRelation.html#___construct">__construct()</a>, 
+			<a href="class-TActiveRecordRelation.html#_fetchResultsInto">fetchResultsInto()</a>, 
+			<a href="class-TActiveRecordRelation.html#_findForeignKeys">findForeignKeys()</a>, 
+			<a href="class-TActiveRecordRelation.html#_findForeignObjects">findForeignObjects()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getContext">getContext()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getCriteria">getCriteria()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getIndexValues">getIndexValues()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getObjectHash">getObjectHash()</a>, 
+			<a href="class-TActiveRecordRelation.html#_getSourceRecord">getSourceRecord()</a>, 
+			<a href="class-TActiveRecordRelation.html#_populateResult">populateResult()</a>, 
+			<a href="class-TActiveRecordRelation.html#_setResultCollection">setResultCollection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

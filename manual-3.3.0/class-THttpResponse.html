@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class THttpResponse | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAssetManager.html">TAssetManager</a></li>
+				<li><a href="class-TCacheHttpSession.html">TCacheHttpSession</a></li>
+				<li><a href="class-THttpCookie.html">THttpCookie</a></li>
+				<li><a href="class-THttpCookieCollection.html">THttpCookieCollection</a></li>
+				<li><a href="class-THttpRequest.html">THttpRequest</a></li>
+				<li><a href="class-THttpRequestUrlFormat.html">THttpRequestUrlFormat</a></li>
+				<li class="active"><a href="class-THttpResponse.html">THttpResponse</a></li>
+				<li><a href="class-THttpResponseAdapter.html">THttpResponseAdapter</a></li>
+				<li><a href="class-THttpSession.html">THttpSession</a></li>
+				<li><a href="class-THttpSessionCookieMode.html">THttpSessionCookieMode</a></li>
+				<li><a href="class-THttpUtility.html">THttpUtility</a></li>
+				<li><a href="class-TSessionIterator.html">TSessionIterator</a></li>
+				<li><a href="class-TUri.html">TUri</a></li>
+				<li><a href="class-TUrlManager.html">TUrlManager</a></li>
+				<li><a href="class-TUrlMapping.html">TUrlMapping</a></li>
+				<li><a href="class-TUrlMappingPattern.html">TUrlMappingPattern</a></li>
+				<li><a href="class-TUrlMappingPatternSecureConnection.html">TUrlMappingPatternSecureConnection</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class THttpResponse</h1>
+
+
+	<div class="description">
+	<p>THttpResponse class</p>
+
+<p>THttpResponse implements the mechanism for sending output to client users.</p>
+
+<p>To output a string to client, use <code><a href="class-THttpResponse.html#_write">THttpResponse::write()</a></code>. By default, the output is
+buffered until <code><a href="class-THttpResponse.html#_flush">THttpResponse::flush()</a></code> is called or the application ends. The output in
+the buffer can also be cleaned by <code><a href="class-THttpResponse.html#_clear">THttpResponse::clear()</a></code>. To disable output buffering,
+set BufferOutput property to false.</p>
+
+<p>To send cookies to client, use <code><a href="class-THttpResponse.html#_getCookies">THttpResponse::getCookies()</a></code>.
+To redirect client browser to a new URL, use <code><a href="class-THttpResponse.html#_redirect">THttpResponse::redirect()</a></code>.
+To send a file to client, use <code><a href="class-THttpResponse.html#_writeFile">THttpResponse::writeFile()</a></code>.</p>
+
+<p>By default, THttpResponse is registered with <code><a href="class-TApplication.html">TApplication</a></code> as the
+response module. It can be accessed via <a href="TApplication::getResponse()">TApplication::getResponse()</a>.</p>
+
+<p>THttpResponse may be configured in application configuration file as follows</p>
+
+<p><module id="response" class="System.Web.THttpResponse" CacheExpire="20" CacheControl="nocache" BufferOutput="true" /></p>
+
+<p>where getCacheExpire CacheExpire, getCacheControl CacheControl
+and getBufferOutput BufferOutput are optional properties of THttpResponse.</p>
+
+<p>THttpResponse sends charset header if either setCharset() Charset
+or <a href="TGlobalization::setCharset()">TGlobalization.Charset</a> is set.</p>
+
+<p>Since 3.1.2, HTTP status code can be set with the setStatusCode StatusCode property.</p>
+
+<p>Note: Some HTTP Status codes can require additional header or body information. So, if you use setStatusCode StatusCode
+in your application, be sure to add theses informations.
+E.g : to make an http authentication :</p>
+
+<pre><span class="php-keyword1">public</span> <span class="php-keyword1">function</span> clickAuth (<span class="php-var">$sender</span>, <span class="php-var">$param</span>)
+ {
+    <span class="php-var">$response</span>=<span class="php-var">$this</span>-&gt;getResponse();
+    <span class="php-var">$response</span>-&gt;setStatusCode(<span class="php-num">401</span>);
+    <span class="php-var">$response</span>-&gt;appendHeader(<span class="php-quote">'WWW-Authenticate: Basic realm=&quot;Test&quot;'</span>);
+ }</pre>
+
+<p>This event handler will sent the 401 status code (Unauthorized) to the browser, with the WWW-Authenticate header field. This
+will force the browser to ask for a username and a password.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TModule.html"><span>TModule</span></a>
+			
+			 implements 
+				<a href="class-IModule.html"><span>IModule</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>THttpResponse</span></b>			
+			 implements 
+				<a href="class-ITextWriter.html"><span>ITextWriter</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Web/THttpResponse.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code>__destruct( )</code>
+
+		<div class="description short">
+			<p>Destructor.
+Flushes any existing content in buffer.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Destructor.
+Flushes any existing content in buffer.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___destruct">TComponent::__destruct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAdapter" id="_setAdapter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAdapter">#</a>
+		<code>setAdapter( <span><code><a href="class-THttpResponseAdapter.html">THttpResponseAdapter</a></code> <var>$adapter</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$adapter</var></dt>
+					<dd>adapter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAdapter" id="_getAdapter">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-THttpResponseAdapter.html">THttpResponseAdapter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAdapter">#</a>
+		<code>getAdapter( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-THttpResponseAdapter.html">THttpResponseAdapter</a></code><br>response adapter, null if not exist.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasAdapter" id="_getHasAdapter">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasAdapter">#</a>
+		<code>getHasAdapter( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if adapter exists, false otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the module.
+This method is required by IModule and is invoked by application.
+It starts output buffer if it is enabled.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the module.
+This method is required by IModule and is invoked by application.
+It starts output buffer if it is enabled.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>configuration</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TModule.html#_init">TModule::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheExpire" id="_getCacheExpire">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheExpire">#</a>
+		<code>getCacheExpire( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>time-to-live for cached session pages in minutes, this has no effect for nocache limiter. Defaults to 180.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCacheExpire" id="_setCacheExpire">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCacheExpire">#</a>
+		<code>setCacheExpire( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>for cached session pages in minutes, this has no effect for nocache limiter.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCacheControl" id="_getCacheControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCacheControl">#</a>
+		<code>getCacheControl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>cache control method to use for session pages
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCacheControl" id="_setCacheControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCacheControl">#</a>
+		<code>setCacheControl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><p>control method to use for session pages. Valid values
+              include none/nocache/private/private_no_expire/public</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setContentType" id="_setContentType">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setContentType">#</a>
+		<code>setContentType( <span> <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>content type, default is text/html
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContentType" id="_getContentType">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getContentType">#</a>
+		<code>getContentType( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>current content type
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCharset" id="_getCharset">
+
+		<td class="attributes"><code>
+			 public 
+
+			string|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCharset">#</a>
+		<code>getCharset( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string|boolean<br>output charset.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCharset" id="_setCharset">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCharset">#</a>
+		<code>setCharset( <span>string|boolean <var>$charset</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$charset</var></dt>
+					<dd>charset.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBufferOutput" id="_getBufferOutput">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBufferOutput">#</a>
+		<code>getBufferOutput( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether to enable output buffer
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBufferOutput" id="_setBufferOutput">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBufferOutput">#</a>
+		<code>setBufferOutput( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>to enable output buffer</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if session is started already
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStatusCode" id="_getStatusCode">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStatusCode">#</a>
+		<code>getStatusCode( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>HTTP status code, defaults to 200
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setStatusCode" id="_setStatusCode">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setStatusCode">#</a>
+		<code>setStatusCode( <span>integer <var>$status</var></span>, <span>string <var>$reason</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Set the HTTP status code for the response.
+The code and its reason will be sent to client using the currently requested http protocol version (see <a href="THttpRequest::getHttpProtocolVersion">THttpRequest::getHttpProtocolVersion</a>)
+Keep in mind that HTTP/1.0 clients might not understand all status codes from HTTP/1.1</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the HTTP status code for the response.
+The code and its reason will be sent to client using the currently requested http protocol version (see <a href="THttpRequest::getHttpProtocolVersion">THttpRequest::getHttpProtocolVersion</a>)
+Keep in mind that HTTP/1.0 clients might not understand all status codes from HTTP/1.1</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$status</var></dt>
+					<dd>status code</dd>
+					<dt><var>$reason</var></dt>
+					<dd>status reason, defaults to standard HTTP reasons</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStatusReason" id="_getStatusReason">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStatusReason">#</a>
+		<code>getStatusReason( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCookies" id="_getCookies">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-THttpCookieCollection.html">THttpCookieCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCookies">#</a>
+		<code>getCookies( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-THttpCookieCollection.html">THttpCookieCollection</a></code><br>list of output cookies
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code>write( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			<p>Outputs a string.
+It may not be sent back to user immediately if output buffer is enabled.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Outputs a string.
+It may not be sent back to user immediately if output buffer is enabled.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd>to be output</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ITextWriter.html#_write">ITextWriter::write()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeFile" id="_writeFile">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_writeFile">#</a>
+		<code>writeFile( <span>string <var>$fileName</var></span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mimeType</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$headers</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$forceDownload</var> = <span class="php-keyword1">true</span></span>, <span>string <var>$clientFileName</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$fileSize</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sends a file back to user.
+Make sure not to output anything else after calling this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sends a file back to user.
+Make sure not to output anything else after calling this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fileName</var></dt>
+					<dd>name</dd>
+					<dt><var>$content</var></dt>
+					<dd>to be set. If null, the content will be read from the server file pointed to by $fileName.</dd>
+					<dt><var>$mimeType</var></dt>
+					<dd>type of the content.</dd>
+					<dt><var>$headers</var></dt>
+					<dd>of headers to be sent. Each array element represents a header string (e.g. 'Content-Type: text/plain').</dd>
+					<dt><var>$forceDownload</var></dt>
+					<dd>download of file, even if browser able to display inline. Defaults to 'true'.</dd>
+					<dt><var>$clientFileName</var></dt>
+					<dd>a specific file name on client side. Defaults to 'null' means auto-detect.</dd>
+					<dt><var>$fileSize</var></dt>
+					<dd>of file or content in bytes if already known. Defaults to 'null' means auto-detect.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if the file cannot be found
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="redirect" id="_redirect">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_redirect">#</a>
+		<code>redirect( <span>string <var>$url</var></span> )</code>
+
+		<div class="description short">
+			<p>Redirects the browser to the specified URL.
+The current application will be terminated after this method is invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Redirects the browser to the specified URL.
+The current application will be terminated after this method is invoked.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><p>to be redirected to. If the URL is a relative one, the base URL of
+the current request will be inserted at the beginning.</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="httpRedirect" id="_httpRedirect">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_httpRedirect">#</a>
+		<code>httpRedirect( <span>string <var>$url</var></span> )</code>
+
+		<div class="description short">
+			<p>Redirect the browser to another URL and exists the current application.
+This method is used internally. Please use <code><a href="class-THttpResponse.html#_redirect">THttpResponse::redirect()</a></code> instead.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Redirect the browser to another URL and exists the current application.
+This method is used internally. Please use <code><a href="class-THttpResponse.html#_redirect">THttpResponse::redirect()</a></code> instead.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><p>to be redirected to. If the URL is a relative one, the base URL of
+the current request will be inserted at the beginning.</p></dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						<p>3.1.5
+You can set the set setStatusCode StatusCode to a value between 300 and 399 before
+calling this function to change the type of redirection.
+If not specified, StatusCode will be 302 (Found) by default</p><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reload" id="_reload">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reload">#</a>
+		<code>reload( )</code>
+
+		<div class="description short">
+			<p>Reloads the current page.
+The effect of this method call is the same as user pressing the
+refresh button on his browser (without post data).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Reloads the current page.
+The effect of this method call is the same as user pressing the
+refresh button on his browser (without post data).</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flush" id="_flush">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flush">#</a>
+		<code>flush( <span> <var>$continueBuffering</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Flush the response contents and headers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Flush the response contents and headers.</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ITextWriter.html#_flush">ITextWriter::flush()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ensureHeadersSent" id="_ensureHeadersSent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ensureHeadersSent">#</a>
+		<code>ensureHeadersSent( )</code>
+
+		<div class="description short">
+			<p>Ensures that HTTP response and content-type headers are sent</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Ensures that HTTP response and content-type headers are sent</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flushContent" id="_flushContent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flushContent">#</a>
+		<code>flushContent( <span>boolean <var>$continueBuffering</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Outputs the buffered content, sends content-type and charset header.
+This method is used internally. Please use <code><a href="class-THttpResponse.html#_flush">THttpResponse::flush()</a></code> instead.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Outputs the buffered content, sends content-type and charset header.
+This method is used internally. Please use <code><a href="class-THttpResponse.html#_flush">THttpResponse::flush()</a></code> instead.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$continueBuffering</var></dt>
+					<dd>to continue buffering after flush if buffering was active</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ensureHttpHeaderSent" id="_ensureHttpHeaderSent">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ensureHttpHeaderSent">#</a>
+		<code>ensureHttpHeaderSent( )</code>
+
+		<div class="description short">
+			<p>Ensures that the HTTP header with the status code and status reason are sent</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Ensures that the HTTP header with the status code and status reason are sent</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sendHttpHeader" id="_sendHttpHeader">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sendHttpHeader">#</a>
+		<code>sendHttpHeader( )</code>
+
+		<div class="description short">
+			<p>Send the HTTP header with the status code (defaults to 200) and status reason (defaults to OK)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Send the HTTP header with the status code (defaults to 200) and status reason (defaults to OK)</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ensureContentTypeHeaderSent" id="_ensureContentTypeHeaderSent">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ensureContentTypeHeaderSent">#</a>
+		<code>ensureContentTypeHeaderSent( )</code>
+
+		<div class="description short">
+			<p>Ensures that the HTTP header with the status code and status reason are sent</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Ensures that the HTTP header with the status code and status reason are sent</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sendContentTypeHeader" id="_sendContentTypeHeader">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sendContentTypeHeader">#</a>
+		<code>sendContentTypeHeader( )</code>
+
+		<div class="description short">
+			<p>Sends content type header with optional charset.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sends content type header with optional charset.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContents" id="_getContents">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getContents">#</a>
+		<code>getContents( )</code>
+
+		<div class="description short">
+			<p>Returns the content in the output buffer.
+The buffer will NOT be cleared after calling this method.
+Use <code><a href="class-THttpResponse.html#_clear">THttpResponse::clear()</a></code> is you want to clear the buffer.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the content in the output buffer.
+The buffer will NOT be cleared after calling this method.
+Use <code><a href="class-THttpResponse.html#_clear">THttpResponse::clear()</a></code> is you want to clear the buffer.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>output that is in the buffer.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code>clear( )</code>
+
+		<div class="description short">
+			<p>Clears any existing buffered content.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clears any existing buffered content.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaders" id="_getHeaders">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaders">#</a>
+		<code>getHeaders( <span>integer|null <var>$case</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$case</var></dt>
+					<dd>CASE_UPPER or CASE_LOWER or as is null (default)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="appendHeader" id="_appendHeader">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_appendHeader">#</a>
+		<code>appendHeader( <span>string <var>$value</var></span>, <span>boolean <var>$replace</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Sends a header.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sends a header.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>header</dd>
+					<dt><var>$replace</var></dt>
+					<dd>the header should replace a previous similar header, or add a second header of the same type</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="appendLog" id="_appendLog">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_appendLog">#</a>
+		<code>appendLog( <span>string <var>$message</var></span>, <span>integer <var>$messageType</var> = <span class="php-num">0</span></span>, <span>string <var>$destination</var> = <span class="php-quote">''</span></span>, <span>string <var>$extraHeaders</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			<p>Writes a log message into error log.
+This method is simple wrapper of PHP function error_log.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Writes a log message into error log.
+This method is simple wrapper of PHP function error_log.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$message</var></dt>
+					<dd>error message that should be logged</dd>
+					<dt><var>$messageType</var></dt>
+					<dd>the error should go</dd>
+					<dt><var>$destination</var></dt>
+					<dd>destination. Its meaning depends on the message parameter as described above</dd>
+					<dt><var>$extraHeaders</var></dt>
+					<dd>extra headers. It's used when the message parameter is set to 1. This message type uses the same internal function as mail() does.</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						http://us2.php.net/manual/en/function.error-log.php<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCookie" id="_addCookie">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addCookie">#</a>
+		<code>addCookie( <span><code><a href="class-THttpCookie.html">THttpCookie</a></code> <var>$cookie</var></span> )</code>
+
+		<div class="description short">
+			<p>Sends a cookie.
+Do not call this method directly. Operate with the result of <code><a href="class-THttpResponse.html#_getCookies">THttpResponse::getCookies()</a></code> instead.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sends a cookie.
+Do not call this method directly. Operate with the result of <code><a href="class-THttpResponse.html#_getCookies">THttpResponse::getCookies()</a></code> instead.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cookie</var></dt>
+					<dd>to be sent</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeCookie" id="_removeCookie">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeCookie">#</a>
+		<code>removeCookie( <span><code><a href="class-THttpCookie.html">THttpCookie</a></code> <var>$cookie</var></span> )</code>
+
+		<div class="description short">
+			<p>Deletes a cookie.
+Do not call this method directly. Operate with the result of <code><a href="class-THttpResponse.html#_getCookies">THttpResponse::getCookies()</a></code> instead.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes a cookie.
+Do not call this method directly. Operate with the result of <code><a href="class-THttpResponse.html#_getCookies">THttpResponse::getCookies()</a></code> instead.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cookie</var></dt>
+					<dd>to be deleted</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHtmlWriterType" id="_getHtmlWriterType">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHtmlWriterType">#</a>
+		<code>getHtmlWriterType( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the type of HTML writer to be used, defaults to THtmlWriter
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHtmlWriterType" id="_setHtmlWriterType">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHtmlWriterType">#</a>
+		<code>setHtmlWriterType( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>type of HTML writer to be used, may be the class name or the namespace</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createHtmlWriter" id="_createHtmlWriter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createHtmlWriter">#</a>
+		<code>createHtmlWriter( <span>string <var>$type</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Creates a new instance of HTML writer.
+If the type of the HTML writer is not supplied, getHtmlWriterType HtmlWriterType will be assumed.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates a new instance of HTML writer.
+If the type of the HTML writer is not supplied, getHtmlWriterType HtmlWriterType will be assumed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd>of the HTML writer to be created. If null, getHtmlWriterType HtmlWriterType will be assumed.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createNewHtmlWriter" id="_createNewHtmlWriter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createNewHtmlWriter">#</a>
+		<code>createNewHtmlWriter( <span>string <var>$type</var></span>, <span><code><a href="class-ITextWriter.html">ITextWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>Create a new html writer instance.
+This method is used internally. Please use <code><a href="class-THttpResponse.html#_createHtmlWriter">THttpResponse::createHtmlWriter()</a></code> instead.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new html writer instance.
+This method is used internally. Please use <code><a href="class-THttpResponse.html#_createHtmlWriter">THttpResponse::createHtmlWriter()</a></code> instead.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd>of HTML writer to be created.</dd>
+					<dt><var>$writer</var></dt>
+					<dd>writer holding the contents.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TModule.html#methods">TModule</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TModule.html#_getID">getID()</a>, 
+			<a href="class-TModule.html#_setID">setID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="DEFAULT_CONTENTTYPE" id="DEFAULT_CONTENTTYPE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>DEFAULT_CONTENTTYPE</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DEFAULT_CONTENTTYPE" class="anchor">#</a>
+				<code><span class="php-quote">'text/html'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DEFAULT_CHARSET" id="DEFAULT_CHARSET">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>DEFAULT_CHARSET</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DEFAULT_CHARSET" class="anchor">#</a>
+				<code><span class="php-quote">'UTF-8'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

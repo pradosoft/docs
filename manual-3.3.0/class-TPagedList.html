@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TPagedList | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAttributeCollection.html">TAttributeCollection</a></li>
+				<li><a href="class-TDummyDataSource.html">TDummyDataSource</a></li>
+				<li><a href="class-TDummyDataSourceIterator.html">TDummyDataSourceIterator</a></li>
+				<li><a href="class-TList.html">TList</a></li>
+				<li><a href="class-TListItemCollection.html">TListItemCollection</a></li>
+				<li><a href="class-TListIterator.html" class="deprecated">TListIterator</a></li>
+				<li><a href="class-TMap.html">TMap</a></li>
+				<li><a href="class-TMapIterator.html" class="deprecated">TMapIterator</a></li>
+				<li><a href="class-TPagedDataSource.html">TPagedDataSource</a></li>
+				<li class="active"><a href="class-TPagedList.html">TPagedList</a></li>
+				<li><a href="class-TPagedListFetchDataEventParameter.html">TPagedListFetchDataEventParameter</a></li>
+				<li><a href="class-TPagedListIterator.html">TPagedListIterator</a></li>
+				<li><a href="class-TPagedListPageChangedEventParameter.html">TPagedListPageChangedEventParameter</a></li>
+				<li><a href="class-TPagedMapIterator.html">TPagedMapIterator</a></li>
+				<li><a href="class-TPriorityList.html">TPriorityList</a></li>
+				<li><a href="class-TPriorityMap.html">TPriorityMap</a></li>
+				<li><a href="class-TQueue.html">TQueue</a></li>
+				<li><a href="class-TQueueIterator.html">TQueueIterator</a></li>
+				<li><a href="class-TStack.html">TStack</a></li>
+				<li><a href="class-TStackIterator.html" class="deprecated">TStackIterator</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TPagedList</h1>
+
+
+	<div class="description">
+	<p>TPagedList class</p>
+
+<p>TPagedList implements a list with paging functionality.</p>
+
+<p>TPagedList works in one of two modes, managed paging or customized paging,
+specified by setCustomPaging CustomPaging.
+- Managed paging (setCustomPaging CustomPaging=false) : the list is assumed to contain all data and it will manage which page of data are available to user.
+- Customized paging (setCustomPaging CustomPaging=true) : the list is assumed to contain only one page of data. An  onFetchData OnFetchData event will be raised if the list changes to a different page. Developers can attach a handler to the event and supply the needed data. The event handler can be written as follows,</p>
+
+<pre><span class="php-keyword1">public</span> <span class="php-keyword1">function</span> fetchData(<span class="php-var">$sender</span>,<span class="php-var">$param</span>)
+ {
+   <span class="php-var">$offset</span>=<span class="php-var">$param</span>-&gt;Offset; <span class="php-comment">// beginning index of the data needed</span>
+   <span class="php-var">$limit</span>=<span class="php-var">$param</span>-&gt;Limit;   <span class="php-comment">// maximum number of data items needed</span>
+   <span class="php-comment">// get data according to the above two parameters</span>
+   <span class="php-var">$param</span>-&gt;Data=<span class="php-var">$data</span>;
+ }</pre>
+
+<p>Data in TPagedList can be accessed like an integer-indexed array and can
+be traversed using foreach. For example,</p>
+
+<pre><span class="php-var">$count</span>=<span class="php-var">$list</span>-&gt;<span class="php-keyword2">Count</span>;
+<span class="php-keyword1">for</span>(<span class="php-var">$index</span>=<span class="php-num">0</span>;<span class="php-var">$index</span>&lt;<span class="php-var">$count</span>;++<span class="php-var">$index</span>)
+    <span class="php-keyword1">echo</span> <span class="php-var">$list</span>[<span class="php-var">$index</span>];
+<span class="php-keyword1">foreach</span>(<span class="php-var">$list</span> <span class="php-keyword1">as</span> <span class="php-var">$index</span>=&gt;<span class="php-var">$item</span>) <span class="php-comment">// traverse each item in the list</span></pre>
+
+<p>The setPageSize PageSize property specifies the number of items in each page.
+To access different page of data in the list, set setCurrentPageIndex CurrentPageIndex
+or call <code><a href="class-TPagedList.html#_nextPage">TPagedList::nextPage()</a></code>, <code><a href="class-TPagedList.html#_previousPage">TPagedList::previousPage()</a></code>, or <code><a href="class-TPagedList.html#_gotoPage">TPagedList::gotoPage()</a></code>.
+The total number of pages can be obtained by getPageCount() PageCount.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TList.html"><span>TList</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TPagedList</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TSqlMapPagedList.html">TSqlMapPagedList</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Collections.html">Collections</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Collections/TPagedList.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>array|Iterator <var>$data</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$readOnly</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>initial data. Default is null, meaning no initialization.</dd>
+					<dt><var>$readOnly</var></dt>
+					<dd>the list is read-only. Always true for paged list.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is not null and neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#___construct">TList::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCustomPaging" id="_getCustomPaging">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCustomPaging">#</a>
+		<code>getCustomPaging( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether to use custom paging. Defaults to false.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCustomPaging" id="_setCustomPaging">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCustomPaging">#</a>
+		<code>setCustomPaging( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>to allow custom paging</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPageSize" id="_getPageSize">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPageSize">#</a>
+		<code>getPageSize( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of items in each page. Defaults to 10.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPageSize" id="_setPageSize">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPageSize">#</a>
+		<code>setPageSize( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>of items in each page</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCurrentPageIndex" id="_getCurrentPageIndex">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCurrentPageIndex">#</a>
+		<code>getCurrentPageIndex( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>current page index. Defaults to 0.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCurrentPageIndex" id="_setCurrentPageIndex">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCurrentPageIndex">#</a>
+		<code>setCurrentPageIndex( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>page index</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if the page index is out of range
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPageIndexChanged" id="_onPageIndexChanged">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPageIndexChanged">#</a>
+		<code>onPageIndexChanged( <span><code><a href="class-TPagedListPageChangedEventParameter.html">TPagedListPageChangedEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raises <b>OnPageIndexChanged</b> event.
+This event is raised each time when the list changes to a different page.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raises <b>OnPageIndexChanged</b> event.
+This event is raised each time when the list changes to a different page.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFetchData" id="_onFetchData">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFetchData">#</a>
+		<code>onFetchData( <span><code><a href="class-TPagedListFetchDataEventParameter.html">TPagedListFetchDataEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raises <b>OnFetchData</b> event.
+This event is raised each time when the list changes to a different page
+and needs the new page of data. This event can only be raised when
+setCustomPaging CustomPaging is true.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raises <b>OnFetchData</b> event.
+This event is raised each time when the list changes to a different page
+and needs the new page of data. This event can only be raised when
+setCustomPaging CustomPaging is true.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="gotoPage" id="_gotoPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_gotoPage">#</a>
+		<code>gotoPage( <span>integer <var>$pageIndex</var></span> )</code>
+
+		<div class="description short">
+			<p>Changes to a page with the specified page index.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Changes to a page with the specified page index.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pageIndex</var></dt>
+					<dd>index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer|boolean<br>the new page index, false if page index is out of range.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="nextPage" id="_nextPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_nextPage">#</a>
+		<code>nextPage( )</code>
+
+		<div class="description short">
+			<p>Switches to the next page.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Switches to the next page.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer|boolean<br>the new page index, false if next page is not available.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="previousPage" id="_previousPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_previousPage">#</a>
+		<code>previousPage( )</code>
+
+		<div class="description short">
+			<p>Switches to the previous page.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Switches to the previous page.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer|boolean<br>the new page index, false if previous page is not available.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVirtualCount" id="_getVirtualCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVirtualCount">#</a>
+		<code>getVirtualCount( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>user-assigned number of items in data source. Defaults to 0.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setVirtualCount" id="_setVirtualCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setVirtualCount">#</a>
+		<code>setVirtualCount( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>number of items in data source</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPageCount" id="_getPageCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPageCount">#</a>
+		<code>getPageCount( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of pages, -1 if under custom paging mode and setVirtualCount VirtualCount is not set.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsFirstPage" id="_getIsFirstPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsFirstPage">#</a>
+		<code>getIsFirstPage( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the current page is the first page
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsLastPage" id="_getIsLastPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsLastPage">#</a>
+		<code>getIsLastPage( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the current page is the last page
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCount" id="_getCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCount">#</a>
+		<code>getCount( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the number of items in current page
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_getCount">TList::getCount()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+
+			Iterator
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code>getIterator( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Iterator<br>iterator
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_getIterator">TList::getIterator()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="itemAt" id="_itemAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_itemAt">#</a>
+		<code>itemAt( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the item at the specified offset.
+This method is exactly the same as <code><a href="class-TPagedList.html#_offsetGet">TPagedList::offsetGet()</a></code>.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the item at the specified offset.
+This method is exactly the same as <code><a href="class-TPagedList.html#_offsetGet">TPagedList::offsetGet()</a></code>.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd>index of the item</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the item at the index
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if the index is out of the range
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_itemAt">TList::itemAt()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="indexOf" id="_indexOf">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_indexOf">#</a>
+		<code>indexOf( <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>item</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the index of the item in the list (0 based), -1 if not found.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_indexOf">TList::indexOf()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetExists">#</a>
+		<code>offsetExists( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns whether there is an item at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns whether there is an item at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to check on</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_offsetExists">TList::offsetExists()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetGet">#</a>
+		<code>offsetGet( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the item at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the item at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to retrieve item.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the item at the offset
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if the offset is invalid
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_offsetGet">TList::offsetGet()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code>toArray( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the list of items in array
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_toArray">TList::toArray()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TList.html#methods">TList</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TList.html#_add">add()</a>, 
+			<a href="class-TList.html#_clear">clear()</a>, 
+			<a href="class-TList.html#_contains">contains()</a>, 
+			<a href="class-TList.html#_copyFrom">copyFrom()</a>, 
+			<a href="class-TList.html#_count">count()</a>, 
+			<a href="class-TList.html#_getReadOnly">getReadOnly()</a>, 
+			<a href="class-TList.html#_insertAfter">insertAfter()</a>, 
+			<a href="class-TList.html#_insertAt">insertAt()</a>, 
+			<a href="class-TList.html#_insertBefore">insertBefore()</a>, 
+			<a href="class-TList.html#_mergeWith">mergeWith()</a>, 
+			<a href="class-TList.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-TList.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="class-TList.html#_remove">remove()</a>, 
+			<a href="class-TList.html#_removeAt">removeAt()</a>, 
+			<a href="class-TList.html#_setReadOnly">setReadOnly()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

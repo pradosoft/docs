@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TPriorityList | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAttributeCollection.html">TAttributeCollection</a></li>
+				<li><a href="class-TDummyDataSource.html">TDummyDataSource</a></li>
+				<li><a href="class-TDummyDataSourceIterator.html">TDummyDataSourceIterator</a></li>
+				<li><a href="class-TList.html">TList</a></li>
+				<li><a href="class-TListItemCollection.html">TListItemCollection</a></li>
+				<li><a href="class-TListIterator.html" class="deprecated">TListIterator</a></li>
+				<li><a href="class-TMap.html">TMap</a></li>
+				<li><a href="class-TMapIterator.html" class="deprecated">TMapIterator</a></li>
+				<li><a href="class-TPagedDataSource.html">TPagedDataSource</a></li>
+				<li><a href="class-TPagedList.html">TPagedList</a></li>
+				<li><a href="class-TPagedListFetchDataEventParameter.html">TPagedListFetchDataEventParameter</a></li>
+				<li><a href="class-TPagedListIterator.html">TPagedListIterator</a></li>
+				<li><a href="class-TPagedListPageChangedEventParameter.html">TPagedListPageChangedEventParameter</a></li>
+				<li><a href="class-TPagedMapIterator.html">TPagedMapIterator</a></li>
+				<li class="active"><a href="class-TPriorityList.html">TPriorityList</a></li>
+				<li><a href="class-TPriorityMap.html">TPriorityMap</a></li>
+				<li><a href="class-TQueue.html">TQueue</a></li>
+				<li><a href="class-TQueueIterator.html">TQueueIterator</a></li>
+				<li><a href="class-TStack.html">TStack</a></li>
+				<li><a href="class-TStackIterator.html" class="deprecated">TStackIterator</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TPriorityList</h1>
+
+
+	<div class="description">
+	<p>TPriorityList class</p>
+
+<p>TPriorityList implements a priority ordered list collection class.  It allows you to specify
+any numeric for priorities down to a specific precision.  The lower the numeric, the high the priority of the item in the
+list.  Thus -10 has a higher priority than -5, 0, 10 (the default), 18, 10005, etc.  Per round, precision may be negative and
+thus rounding can go by 10, 100, 1000, etc, instead of just .1, .01, .001, etc. The default precision allows for 8 decimal
+places. There is also a default priority of 10, if no different default priority is specified or no item specific priority is indicated.
+If you replace TList with this class it will  work exactly the same with items inserted set to the default priority, until you start
+using different priorities than the default priority.</p>
+
+<p>As you access the PHP array features of this class, it flattens and caches the results.  If at all possible, this
+will keep the cache fresh even when manipulated.  If this is not possible the cache is cleared.
+When an array of items are needed and the cache is outdated, the cache is recreated from the items and their priorities</p>
+
+<p>You can access, append, insert, remove an item by using
+<code><a href="class-TPriorityList.html#_itemAt">TPriorityList::itemAt()</a></code>, <code><a href="class-TPriorityList.html#_add">TPriorityList::add()</a></code>, <code><a href="class-TPriorityList.html#_insertAt">TPriorityList::insertAt()</a></code>, and <code><a href="class-TPriorityList.html#_remove">TPriorityList::remove()</a></code>.
+To get the number of the items in the list, use <code><a href="class-TPriorityList.html#_getCount">TPriorityList::getCount()</a></code>.
+TPriorityList can also be used like a regular array as follows,</p>
+
+<pre><span class="php-var">$list</span>[]=<span class="php-var">$item</span>;  <span class="php-comment">// append with the default priority.  It may not be the last item if other items in the list are prioritized after the default priority</span>
+<span class="php-var">$list</span>[<span class="php-var">$index</span>]=<span class="php-var">$item</span>; <span class="php-comment">// $index must be between 0 and $list-&gt;Count-1.  This sets the element regardless of priority.  Priority stays the same.</span>
+<span class="php-var">$list</span>[<span class="php-var">$index</span>]=<span class="php-var">$item</span>; <span class="php-comment">// $index is $list-&gt;Count.  This appends the item to the end of the list with the same priority as the last item in the list.</span>
+<span class="php-keyword1">unset</span>(<span class="php-var">$list</span>[<span class="php-var">$index</span>]); <span class="php-comment">// remove the item at $index</span>
+<span class="php-keyword1">if</span>(<span class="php-keyword1">isset</span>(<span class="php-var">$list</span>[<span class="php-var">$index</span>])) <span class="php-comment">// if the list has an item at $index</span>
+<span class="php-keyword1">foreach</span>(<span class="php-var">$list</span> <span class="php-keyword1">as</span> <span class="php-var">$index</span>=&gt;<span class="php-var">$item</span>) <span class="php-comment">// traverse each item in the list in proper priority order and add/insert order</span>
+<span class="php-var">$n</span>=<span class="php-keyword2">count</span>(<span class="php-var">$list</span>); <span class="php-comment">// returns the number of items in the list</span></pre>
+
+<p>To extend TPriorityList for doing your own operations with each addition or removal,
+override <code><a href="class-TPriorityList.html#_insertAtIndexInPriority">TPriorityList::insertAtIndexInPriority()</a></code> and <code><a href="class-TPriorityList.html#_removeAtIndexInPriority">TPriorityList::removeAtIndexInPriority()</a></code> and then call the parent.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TList.html"><span>TList</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TPriorityList</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Collections.html">Collections</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Brad Anderson <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;">&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;</a><br>
+				<b>Since:</b>
+				3.2a<br>
+			<b>Located at</b> Collections/TPriorityList.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>array|Iterator <var>$data</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$readOnly</var> = <span class="php-keyword1">false</span></span>, <span>numeric <var>$defaultPriority</var> = <span class="php-num">10</span></span>, <span>integer <var>$precision</var> = <span class="php-num">8</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.
+Initializes the list with an array or an iterable object.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.
+Initializes the list with an array or an iterable object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>intial data. Default is null, meaning no initial data.</dd>
+					<dt><var>$readOnly</var></dt>
+					<dd>the list is read-only</dd>
+					<dt><var>$defaultPriority</var></dt>
+					<dd>default priority of items without specified priorities.</dd>
+					<dt><var>$precision</var></dt>
+					<dd>precision of the numeric priorities</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is not null and is neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#___construct">TList::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code>count( )</code>
+
+		<div class="description short">
+			<p>Returns the number of items in the list.
+This method is required by Countable interface.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the number of items in the list.
+This method is required by Countable interface.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of items in the list.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_count">TList::count()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCount" id="_getCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCount">#</a>
+		<code>getCount( )</code>
+
+		<div class="description short">
+			<p>Returns the total number of items in the list</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the total number of items in the list</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the number of items in the list
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_getCount">TList::getCount()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPriorityCount" id="_getPriorityCount">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPriorityCount">#</a>
+		<code>getPriorityCount( <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Gets the number of items at a priority within the list</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the number of items at a priority within the list</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd>priority at which to count items.  if no parameter, it will be set to the default <code><a href="class-TPriorityList.html#_getDefaultPriority">TPriorityList::getDefaultPriority()</a></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the number of items in the list at the specified priority
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDefaultPriority" id="_getDefaultPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDefaultPriority">#</a>
+		<code>getDefaultPriority( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric<br>gets the default priority of inserted items without a specified priority
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDefaultPriority" id="_setDefaultPriority">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDefaultPriority">#</a>
+		<code>setDefaultPriority( <span>numeric <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>This must be called internally or when instantiated.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This must be called internally or when instantiated.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the default priority of inserted items without a specified priority</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPrecision" id="_getPrecision">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPrecision">#</a>
+		<code>getPrecision( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>The precision of numeric priorities, defaults to 8
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPrecision" id="_setPrecision">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPrecision">#</a>
+		<code>setPrecision( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>This must be called internally or when instantiated.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This must be called internally or when instantiated.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>precision of numeric priorities.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+
+			Iterator
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code>getIterator( )</code>
+
+		<div class="description short">
+			<p>Returns an iterator for traversing the items in the list.
+This method is required by the interface IteratorAggregate.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns an iterator for traversing the items in the list.
+This method is required by the interface IteratorAggregate.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Iterator<br>an iterator for traversing the items in the list.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_getIterator">TList::getIterator()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPriorities" id="_getPriorities">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPriorities">#</a>
+		<code>getPriorities( )</code>
+
+		<div class="description short">
+			<p>This returns a list of the priorities within this list, ordered lowest to highest.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This returns a list of the priorities within this list, ordered lowest to highest.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the array of priority numerics in decreasing priority order
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sortPriorities" id="_sortPriorities">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sortPriorities">#</a>
+		<code>sortPriorities( )</code>
+
+		<div class="description short">
+			<p>This orders the priority list internally.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This orders the priority list internally.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flattenPriorities" id="_flattenPriorities">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flattenPriorities">#</a>
+		<code>flattenPriorities( )</code>
+
+		<div class="description short">
+			<p>This flattens the priority list into a flat array [0,...,n-1]</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This flattens the priority list into a flat array [0,...,n-1]</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>array of items in the list in priority and index order
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="itemAt" id="_itemAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_itemAt">#</a>
+		<code>itemAt( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the item at the index of a flattened priority list.
+<code><a href="class-TPriorityList.html#_offsetGet">TPriorityList::offsetGet()</a></code> calls this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the item at the index of a flattened priority list.
+<code><a href="class-TPriorityList.html#_offsetGet">TPriorityList::offsetGet()</a></code> calls this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd>index of the item to get</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the element at the offset
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>Issued when the index is invalid
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_itemAt">TList::itemAt()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="itemsAtPriority" id="_itemsAtPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_itemsAtPriority">#</a>
+		<code>itemsAtPriority( <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Gets all the items at a specific priority.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets all the items at a specific priority.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd>of the items to get.  Defaults to null, filled in with the default priority, if left blank.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>all items at priority in index order, null if there are no items at that priority
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="itemAtIndexInPriority" id="_itemAtIndexInPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_itemAtIndexInPriority">#</a>
+		<code>itemAtIndexInPriority( <span>integer <var>$index</var></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns the item at an index within a priority</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the item at an index within a priority</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd>index into the list of items at priority</dd>
+					<dt><var>$priority</var></dt>
+					<dd>priority which to index.  no parameter or null will result in the default priority</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the element at the offset, false if no element is found at the offset
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add" id="_add">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add">#</a>
+		<code>add( <span>mixed <var>$item</var></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Appends an item into the list at the end of the specified priority.  The position of the added item may
+not be at the end of the list.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Appends an item into the list at the end of the specified priority.  The position of the added item may
+not be at the end of the list.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>to add into the list at priority</dd>
+					<dt><var>$priority</var></dt>
+					<dd>blank or null for the default priority</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the index within the flattened array
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the map is read-only
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_add">TList::add()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertAt" id="_insertAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertAt">#</a>
+		<code>insertAt( <span>integer <var>$index</var></span>, <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			<p>Inserts an item at an index.  It reads the priority of the item at index within the flattened list
+and then inserts the item at that priority-index.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Inserts an item at an index.  It reads the priority of the item at index within the flattened list
+and then inserts the item at that priority-index.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd>specified position in the flattened list.</dd>
+					<dt><var>$item</var></dt>
+					<dd>item to add</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>If the index specified exceeds the bound<br>
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the list is read-only
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_insertAt">TList::insertAt()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertAtIndexInPriority" id="_insertAtIndexInPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertAtIndexInPriority">#</a>
+		<code>insertAtIndexInPriority( <span>mixed <var>$item</var></span>, <span>integer <var>$index</var> = <span class="php-keyword1">false</span></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$preserveCache</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Inserts an item at the specified index within a priority.  Override and call this method to
+insert your own functionality.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Inserts an item at the specified index within a priority.  Override and call this method to
+insert your own functionality.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>to add within the list.</dd>
+					<dt><var>$index</var></dt>
+					<dd>within the priority to add the item, defaults to false which appends the item at the priority</dd>
+					<dt><var>$priority</var></dt>
+					<dd>priority of the item.  defaults to null, which sets it to the default priority</dd>
+					<dt><var>$preserveCache</var></dt>
+					<dd>specifies if this is a special quick function or not. This defaults to false.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>If the index specified exceeds the bound<br>
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the list is read-only
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="_remove">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remove">#</a>
+		<code>remove( <span>mixed <var>$item</var></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Removes an item from the priority list.
+The list will search for the item.  The first matching item found will be removed from the list.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes an item from the priority list.
+The list will search for the item.  The first matching item found will be removed from the list.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>the item to be removed.</dd>
+					<dt><var>$priority</var></dt>
+					<dd><p>of item to remove. without this parameter it defaults to false.
+A value of false means any priority. null will be filled in with the default priority.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>index within the flattened list at which the item is being removed
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>If the item does not exist
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_remove">TList::remove()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeAt" id="_removeAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeAt">#</a>
+		<code>removeAt( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			<p>Removes an item at the specified index in the flattened list.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes an item at the specified index in the flattened list.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd>of the item to be removed.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the removed item.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>If the index specified exceeds the bound<br>
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the list is read-only
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_removeAt">TList::removeAt()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeAtIndexInPriority" id="_removeAtIndexInPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeAtIndexInPriority">#</a>
+		<code>removeAtIndexInPriority( <span>integer <var>$index</var></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Removes the item at a specific index within a priority.  Override
+and call this method to insert your own functionality.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes the item at a specific index within a priority.  Override
+and call this method to insert your own functionality.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd>of item to remove within the priority.</dd>
+					<dt><var>$priority</var></dt>
+					<dd>of the item to remove, defaults to null, or left blank, it is then set to the default priority</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the removed item.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>If the item does not exist
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clear" id="_clear">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clear">#</a>
+		<code>clear( )</code>
+
+		<div class="description short">
+			<p>Removes all items in the priority list by calling removeAtIndexInPriority from the last item to the first.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes all items in the priority list by calling removeAtIndexInPriority from the last item to the first.</p>
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the list is read-only
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_clear">TList::clear()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="contains" id="_contains">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_contains">#</a>
+		<code>contains( <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>item</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the list contains the item
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_contains">TList::contains()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="indexOf" id="_indexOf">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_indexOf">#</a>
+		<code>indexOf( <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>item</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>the index of the item in the flattened list (0 based), -1 if not found.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_indexOf">TList::indexOf()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="priorityOf" id="_priorityOf">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_priorityOf">#</a>
+		<code>priorityOf( <span>mixed <var>$item</var></span>, <span>boolean <var>$withindex</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns the priority of a particular item</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the priority of a particular item</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>item to look for within the list</dd>
+					<dt><var>$withindex</var></dt>
+					<dd><p>this specifies if the full positional data of the item within the list is returned.
+        This defaults to false, if no parameter is provided, so only provides the priority number of the item by default.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric|array<br><p>the priority of the item in the list, false if not found.
+  if withindex is true, an array is returned of [0 => $priority, 1 => $priorityIndex, 2 => flattenedIndex,
+'priority' => $priority, 'index' => $priorityIndex, 'absindex' => flattenedIndex]</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="priorityAt" id="_priorityAt">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_priorityAt">#</a>
+		<code>priorityAt( <span>integer <var>$index</var></span>, <span>boolean <var>$withindex</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Retutrns the priority of an item at a particular flattened index.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retutrns the priority of an item at a particular flattened index.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd>of the item within the list</dd>
+					<dt><var>$withindex</var></dt>
+					<dd><p>this specifies if the full positional data of the item within the list is returned.
+        This defaults to false, if no parameter is provided, so only provides the priority number of the item by default.</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric|array<br><p>the priority of the item in the list, false if not found.
+  if withindex is true, an array is returned of [0 => $priority, 1 => $priorityIndex, 2 => flattenedIndex,
+'priority' => $priority, 'index' => $priorityIndex, 'absindex' => flattenedIndex]</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertBefore" id="_insertBefore">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertBefore">#</a>
+		<code>insertBefore( <span>mixed <var>$indexitem</var></span>, <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			<p>This inserts an item before another item within the list.  It uses the same priority as the
+found index item and places the new item before it.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This inserts an item before another item within the list.  It uses the same priority as the
+found index item and places the new item before it.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indexitem</var></dt>
+					<dd>the item to index</dd>
+					<dt><var>$item</var></dt>
+					<dd>item to add before indexitem</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>where the item has been inserted in the flattened list
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>If the item does not exist
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_insertBefore">TList::insertBefore()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertAfter" id="_insertAfter">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertAfter">#</a>
+		<code>insertAfter( <span>mixed <var>$indexitem</var></span>, <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			<p>This inserts an item after another item within the list.  It uses the same priority as the
+found index item and places the new item after it.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This inserts an item after another item within the list.  It uses the same priority as the
+found index item and places the new item after it.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indexitem</var></dt>
+					<dd>the item to index</dd>
+					<dt><var>$item</var></dt>
+					<dd>item to add after indexitem</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>where the item has been inserted in the flattened list
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>If the item does not exist
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_insertAfter">TList::insertAfter()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code>toArray( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the priority list of items in array
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_toArray">TList::toArray()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toPriorityArray" id="_toPriorityArray">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toPriorityArray">#</a>
+		<code>toPriorityArray( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the array of priorities keys with values of arrays of items.  The priorities are sorted so important priorities, lower numerics, are first.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArrayBelowPriority" id="_toArrayBelowPriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArrayBelowPriority">#</a>
+		<code>toArrayBelowPriority( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Combines the map elements which have a priority below the parameter value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Combines the map elements which have a priority below the parameter value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd>cut-off priority.  All items of priority less than this are returned.</dd>
+					<dt><var>$inclusive</var></dt>
+					<dd>or not the input cut-off priority is inclusive.  Default: false, not inclusive.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><p>the array of priorities keys with values of arrays of items that are below a specified priority.
+ The priorities are sorted so important priorities, lower numerics, are first.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArrayAbovePriority" id="_toArrayAbovePriority">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArrayAbovePriority">#</a>
+		<code>toArrayAbovePriority( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Combines the map elements which have a priority above the parameter value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Combines the map elements which have a priority above the parameter value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$priority</var></dt>
+					<dd>cut-off priority.  All items of priority greater than this are returned.</dd>
+					<dt><var>$inclusive</var></dt>
+					<dd>or not the input cut-off priority is inclusive.  Default: true, inclusive.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><p>the array of priorities keys with values of arrays of items that are above a specified priority.
+ The priorities are sorted so important priorities, lower numerics, are first.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyFrom" id="_copyFrom">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_copyFrom">#</a>
+		<code>copyFrom( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Copies iterable data into the priority list.
+Note, existing data in the map will be cleared first.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Copies iterable data into the priority list.
+Note, existing data in the map will be cleared first.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>data to be copied from, must be an array or object implementing Traversable</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_copyFrom">TList::copyFrom()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mergeWith" id="_mergeWith">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mergeWith">#</a>
+		<code>mergeWith( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Merges iterable data into the priority list.
+New data will be appended to the end of the existing data.  If another TPriorityList is merged,
+the incoming parameter items will be appended at the priorities they are present.  These items will be added
+to the end of the existing items with equal priorities, if there are any.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Merges iterable data into the priority list.
+New data will be appended to the end of the existing data.  If another TPriorityList is merged,
+the incoming parameter items will be appended at the priorities they are present.  These items will be added
+to the end of the existing items with equal priorities, if there are any.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>data to be merged with, must be an array or object implementing Traversable</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_mergeWith">TList::mergeWith()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetExists">#</a>
+		<code>offsetExists( <span>mixed <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns whether there is an element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns whether there is an element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to check on</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_offsetExists">TList::offsetExists()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetGet">#</a>
+		<code>offsetGet( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to retrieve element.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the element at the offset, null if no element is found at the offset
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if the offset is invalid
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_offsetGet">TList::offsetGet()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetSet">#</a>
+		<code>offsetSet( <span>integer <var>$offset</var></span>, <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the element at the specified offset. This method is required by the interface ArrayAccess.
+Setting elements in a priority list is not straight forword when appending and setting at the
+end boundary.  When appending without an offset (a null offset), the item will be added at
+the default priority.  The item may not be the last item in the list.  When appending with an
+offset equal to the count of the list, the item will get be appended with the last items priority.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the element at the specified offset. This method is required by the interface ArrayAccess.
+Setting elements in a priority list is not straight forword when appending and setting at the
+end boundary.  When appending without an offset (a null offset), the item will be added at
+the default priority.  The item may not be the last item in the list.  When appending with an
+offset equal to the count of the list, the item will get be appended with the last items priority.</p>
+
+<p>All together, when setting the location of an item, the item stays in that location, but appending
+an item into a priority list doesn't mean the item is at the end of the list.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to set element</dd>
+					<dt><var>$item</var></dt>
+					<dd>element value</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_offsetSet">TList::offsetSet()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetUnset">#</a>
+		<code>offsetUnset( <span>mixed <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Unsets the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Unsets the element at the specified offset.
+This method is required by the interface ArrayAccess.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd>offset to unset element</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#_offsetUnset">TList::offsetUnset()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TList.html#methods">TList</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TList.html#_getReadOnly">getReadOnly()</a>, 
+			<a href="class-TList.html#_setReadOnly">setReadOnly()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

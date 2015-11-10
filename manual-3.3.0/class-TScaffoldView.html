@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TScaffoldView | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TScaffoldBase.html">TScaffoldBase</a></li>
+				<li><a href="class-TScaffoldEditView.html">TScaffoldEditView</a></li>
+				<li><a href="class-TScaffoldListView.html">TScaffoldListView</a></li>
+				<li><a href="class-TScaffoldSearch.html">TScaffoldSearch</a></li>
+				<li class="active"><a href="class-TScaffoldView.html">TScaffoldView</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IScaffoldEditRenderer.html">IScaffoldEditRenderer</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TScaffoldView</h1>
+
+
+	<div class="description">
+	<p>TScaffoldView is a composite control consisting of TScaffoldListView
+with a TScaffoldSearch. In addition, it will display a TScaffoldEditView
+when an "edit" command is raised from the TScaffoldListView (when the
+edit button is clicked). Futher more, the "add" button can be clicked
+that shows an empty data TScaffoldListView for creating new records.</p>
+
+<p>The getListView ListView property gives a TScaffoldListView for
+display the record data. The getEditView EditView is the
+TScaffoldEditView that renders the
+inputs for editing and adding records. The getSearchControl SearchControl
+is a TScaffoldSearch responsible to the search user interface.</p>
+
+<p>Set the setRecordClass RecordClass property to the name of
+the Active Record class to be displayed/edited/added.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TControl.html"><span>TControl</span></a>
+			
+			 implements 
+				<a href="class-IRenderable.html"><span>IRenderable</span></a>, 
+			
+				<a href="class-IBindable.html"><span>IBindable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TCompositeControl.html"><span>TCompositeControl</span></a>
+			
+			 implements 
+				<a href="class-INamingContainer.html"><span>INamingContainer</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TTemplateControl.html"><span>TTemplateControl</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:150px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TScaffoldBase.html"><span>TScaffoldBase</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:180px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TScaffoldView</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.ActiveRecord.html">ActiveRecord</a>\<a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Data/ActiveRecord/Scaffold/TScaffoldView.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="onPreRender" id="_onPreRender">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPreRender">#</a>
+		<code>onPreRender( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Copy basic record details to the list/edit/search controls.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Copy basic record details to the list/edit/search controls.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TScaffoldBase.html#_onPreRender">TScaffoldBase::onPreRender()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getListView" id="_getListView">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TScaffoldListView.html">TScaffoldListView</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getListView">#</a>
+		<code>getListView( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TScaffoldListView.html">TScaffoldListView</a></code><br>scaffold list view.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEditView" id="_getEditView">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TScaffoldEditView.html">TScaffoldEditView</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEditView">#</a>
+		<code>getEditView( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TScaffoldEditView.html">TScaffoldEditView</a></code><br>scaffold edit view.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSearchControl" id="_getSearchControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TScaffoldSearch.html">TScaffoldSearch</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSearchControl">#</a>
+		<code>getSearchControl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TScaffoldSearch.html">TScaffoldSearch</a></code><br>scaffold search textbox and button.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAddButton" id="_getAddButton">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TButton.html">TButton</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAddButton">#</a>
+		<code>getAddButton( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TButton.html">TButton</a></code><br>"Add new record" button.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bubbleEvent" id="_bubbleEvent">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bubbleEvent">#</a>
+		<code>bubbleEvent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Handle the "edit" and "new" commands by displaying the edit view.
+Default command shows the list view.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Handle the "edit" and "new" commands by displaying the edit view.
+Default command shows the list view.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd>of the event</dd>
+					<dt><var>$param</var></dt>
+					<dd>parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the event bubbling is handled and no more bubbling.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_bubbleEvent">TControl::bubbleEvent()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="showEditView" id="_showEditView">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_showEditView">#</a>
+		<code>showEditView( <span> <var>$sender</var></span>, <span> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Shows the edit record view.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Shows the edit record view.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="showListView" id="_showListView">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_showListView">#</a>
+		<code>showListView( <span> <var>$sender</var></span>, <span> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Shows the view for listing the records.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Shows the view for listing the records.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="showAddView" id="_showAddView">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_showAddView">#</a>
+		<code>showAddView( <span> <var>$sender</var></span>, <span> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Shows the add record view.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Shows the add record view.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TScaffoldBase.html#methods">TScaffoldBase</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TScaffoldBase.html#_clearRecordObject">clearRecordObject()</a>, 
+			<a href="class-TScaffoldBase.html#_copyFrom">copyFrom()</a>, 
+			<a href="class-TScaffoldBase.html#_getDefaultStyle">getDefaultStyle()</a>, 
+			<a href="class-TScaffoldBase.html#_getEnableDefaultStyle">getEnableDefaultStyle()</a>, 
+			<a href="class-TScaffoldBase.html#_getRecordClass">getRecordClass()</a>, 
+			<a href="class-TScaffoldBase.html#_getRecordFinder">getRecordFinder()</a>, 
+			<a href="class-TScaffoldBase.html#_getRecordObject">getRecordObject()</a>, 
+			<a href="class-TScaffoldBase.html#_getRecordPkValues">getRecordPkValues()</a>, 
+			<a href="class-TScaffoldBase.html#_getRecordPropertyValues">getRecordPropertyValues()</a>, 
+			<a href="class-TScaffoldBase.html#_getTableInfo">getTableInfo()</a>, 
+			<a href="class-TScaffoldBase.html#_setDefaultStyle">setDefaultStyle()</a>, 
+			<a href="class-TScaffoldBase.html#_setEnableDefaultStyle">setEnableDefaultStyle()</a>, 
+			<a href="class-TScaffoldBase.html#_setRecordClass">setRecordClass()</a>, 
+			<a href="class-TScaffoldBase.html#_setRecordObject">setRecordObject()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TTemplateControl.html#methods">TTemplateControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TTemplateControl.html#_createChildControls">createChildControls()</a>, 
+			<a href="class-TTemplateControl.html#_getIsSourceTemplateControl">getIsSourceTemplateControl()</a>, 
+			<a href="class-TTemplateControl.html#_getMaster">getMaster()</a>, 
+			<a href="class-TTemplateControl.html#_getMasterClass">getMasterClass()</a>, 
+			<a href="class-TTemplateControl.html#_getTemplate">getTemplate()</a>, 
+			<a href="class-TTemplateControl.html#_getTemplateDirectory">getTemplateDirectory()</a>, 
+			<a href="class-TTemplateControl.html#_initRecursive">initRecursive()</a>, 
+			<a href="class-TTemplateControl.html#_injectContent">injectContent()</a>, 
+			<a href="class-TTemplateControl.html#_loadTemplate">loadTemplate()</a>, 
+			<a href="class-TTemplateControl.html#_registerContent">registerContent()</a>, 
+			<a href="class-TTemplateControl.html#_registerContentPlaceHolder">registerContentPlaceHolder()</a>, 
+			<a href="class-TTemplateControl.html#_setMasterClass">setMasterClass()</a>, 
+			<a href="class-TTemplateControl.html#_setTemplate">setTemplate()</a>, 
+			<a href="class-TTemplateControl.html#_tryToUpdateAR">tryToUpdateAR()</a>, 
+			<a href="class-TTemplateControl.html#_tryToUpdateView">tryToUpdateView()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TControl.html#methods">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#___get">__get()</a>, 
+			<a href="class-TControl.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TControl.html#_addedControl">addedControl()</a>, 
+			<a href="class-TControl.html#_applyStyleSheetSkin">applyStyleSheetSkin()</a>, 
+			<a href="class-TControl.html#_autoBindProperty">autoBindProperty()</a>, 
+			<a href="class-TControl.html#_autoDataBindProperties">autoDataBindProperties()</a>, 
+			<a href="class-TControl.html#_bindProperty">bindProperty()</a>, 
+			<a href="class-TControl.html#_broadcastEvent">broadcastEvent()</a>, 
+			<a href="class-TControl.html#_clearChildState">clearChildState()</a>, 
+			<a href="class-TControl.html#_clearControlState">clearControlState()</a>, 
+			<a href="class-TControl.html#_clearNamingContainer">clearNamingContainer()</a>, 
+			<a href="class-TControl.html#_clearViewState">clearViewState()</a>, 
+			<a href="class-TControl.html#_convertUniqueIdToClientId">convertUniqueIdToClientId()</a>, 
+			<a href="class-TControl.html#_createControlCollection">createControlCollection()</a>, 
+			<a href="class-TControl.html#_dataBind">dataBind()</a>, 
+			<a href="class-TControl.html#_dataBindChildren">dataBindChildren()</a>, 
+			<a href="class-TControl.html#_dataBindProperties">dataBindProperties()</a>, 
+			<a href="class-TControl.html#_ensureChildControls">ensureChildControls()</a>, 
+			<a href="class-TControl.html#_findControl">findControl()</a>, 
+			<a href="class-TControl.html#_findControlsByID">findControlsByID()</a>, 
+			<a href="class-TControl.html#_findControlsByType">findControlsByType()</a>, 
+			<a href="class-TControl.html#_focus">focus()</a>, 
+			<a href="class-TControl.html#_getAdapter">getAdapter()</a>, 
+			<a href="class-TControl.html#_getAllowChildControls">getAllowChildControls()</a>, 
+			<a href="class-TControl.html#_getAttribute">getAttribute()</a>, 
+			<a href="class-TControl.html#_getAttributes">getAttributes()</a>, 
+			<a href="class-TControl.html#_getChildControlsCreated">getChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_getClientID">getClientID()</a>, 
+			<a href="class-TControl.html#_getControlStage">getControlStage()</a>, 
+			<a href="class-TControl.html#_getControlState">getControlState()</a>, 
+			<a href="class-TControl.html#_getControls">getControls()</a>, 
+			<a href="class-TControl.html#_getCustomData">getCustomData()</a>, 
+			<a href="class-TControl.html#_getEnableTheming">getEnableTheming()</a>, 
+			<a href="class-TControl.html#_getEnableViewState">getEnableViewState()</a>, 
+			<a href="class-TControl.html#_getEnabled">getEnabled()</a>, 
+			<a href="class-TControl.html#_getHasAdapter">getHasAdapter()</a>, 
+			<a href="class-TControl.html#_getHasAttributes">getHasAttributes()</a>, 
+			<a href="class-TControl.html#_getHasChildInitialized">getHasChildInitialized()</a>, 
+			<a href="class-TControl.html#_getHasControls">getHasControls()</a>, 
+			<a href="class-TControl.html#_getHasInitialized">getHasInitialized()</a>, 
+			<a href="class-TControl.html#_getHasLoaded">getHasLoaded()</a>, 
+			<a href="class-TControl.html#_getHasLoadedPostData">getHasLoadedPostData()</a>, 
+			<a href="class-TControl.html#_getHasPreRendered">getHasPreRendered()</a>, 
+			<a href="class-TControl.html#_getID">getID()</a>, 
+			<a href="class-TControl.html#_getIsSkinApplied">getIsSkinApplied()</a>, 
+			<a href="class-TControl.html#_getNamingContainer">getNamingContainer()</a>, 
+			<a href="class-TControl.html#_getPage">getPage()</a>, 
+			<a href="class-TControl.html#_getParent">getParent()</a>, 
+			<a href="class-TControl.html#_getRegisteredObject">getRegisteredObject()</a>, 
+			<a href="class-TControl.html#_getSkinID">getSkinID()</a>, 
+			<a href="class-TControl.html#_getSourceTemplateControl">getSourceTemplateControl()</a>, 
+			<a href="class-TControl.html#_getTemplateControl">getTemplateControl()</a>, 
+			<a href="class-TControl.html#_getUniqueID">getUniqueID()</a>, 
+			<a href="class-TControl.html#_getViewState">getViewState()</a>, 
+			<a href="class-TControl.html#_getVisible">getVisible()</a>, 
+			<a href="class-TControl.html#_hasAttribute">hasAttribute()</a>, 
+			<a href="class-TControl.html#_isDescendentOf">isDescendentOf()</a>, 
+			<a href="class-TControl.html#_isObjectRegistered">isObjectRegistered()</a>, 
+			<a href="class-TControl.html#_loadRecursive">loadRecursive()</a>, 
+			<a href="class-TControl.html#_loadState">loadState()</a>, 
+			<a href="class-TControl.html#_loadStateRecursive">loadStateRecursive()</a>, 
+			<a href="class-TControl.html#_onDataBinding">onDataBinding()</a>, 
+			<a href="class-TControl.html#_onInit">onInit()</a>, 
+			<a href="class-TControl.html#_onLoad">onLoad()</a>, 
+			<a href="class-TControl.html#_onUnload">onUnload()</a>, 
+			<a href="class-TControl.html#_preRenderRecursive">preRenderRecursive()</a>, 
+			<a href="class-TControl.html#_raiseBubbleEvent">raiseBubbleEvent()</a>, 
+			<a href="class-TControl.html#_registerObject">registerObject()</a>, 
+			<a href="class-TControl.html#_removeAttribute">removeAttribute()</a>, 
+			<a href="class-TControl.html#_removedControl">removedControl()</a>, 
+			<a href="class-TControl.html#_render">render()</a>, 
+			<a href="class-TControl.html#_renderChildren">renderChildren()</a>, 
+			<a href="class-TControl.html#_renderControl">renderControl()</a>, 
+			<a href="class-TControl.html#_saveState">saveState()</a>, 
+			<a href="class-TControl.html#_saveStateRecursive">saveStateRecursive()</a>, 
+			<a href="class-TControl.html#_setAdapter">setAdapter()</a>, 
+			<a href="class-TControl.html#_setAttribute">setAttribute()</a>, 
+			<a href="class-TControl.html#_setChildControlsCreated">setChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_setControlStage">setControlStage()</a>, 
+			<a href="class-TControl.html#_setControlState">setControlState()</a>, 
+			<a href="class-TControl.html#_setCustomData">setCustomData()</a>, 
+			<a href="class-TControl.html#_setEnableTheming">setEnableTheming()</a>, 
+			<a href="class-TControl.html#_setEnableViewState">setEnableViewState()</a>, 
+			<a href="class-TControl.html#_setEnabled">setEnabled()</a>, 
+			<a href="class-TControl.html#_setID">setID()</a>, 
+			<a href="class-TControl.html#_setPage">setPage()</a>, 
+			<a href="class-TControl.html#_setSkinID">setSkinID()</a>, 
+			<a href="class-TControl.html#_setTemplateControl">setTemplateControl()</a>, 
+			<a href="class-TControl.html#_setViewState">setViewState()</a>, 
+			<a href="class-TControl.html#_setVisible">setVisible()</a>, 
+			<a href="class-TControl.html#_trackViewState">trackViewState()</a>, 
+			<a href="class-TControl.html#_traverseChildControls">traverseChildControls()</a>, 
+			<a href="class-TControl.html#_unbindProperty">unbindProperty()</a>, 
+			<a href="class-TControl.html#_unloadRecursive">unloadRecursive()</a>, 
+			<a href="class-TControl.html#_unregisterObject">unregisterObject()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TTemplateControl.html#constants">TTemplateControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TTemplateControl.html#EXT_TEMPLATE"><b>EXT_TEMPLATE</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TControl.html#constants">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#AUTOMATIC_ID_PREFIX"><b>AUTOMATIC_ID_PREFIX</b></a>, 
+			<a href="class-TControl.html#CLIENT_ID_SEPARATOR"><b>CLIENT_ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#CS_CHILD_INITIALIZED"><b>CS_CHILD_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_CONSTRUCTED"><b>CS_CONSTRUCTED</b></a>, 
+			<a href="class-TControl.html#CS_INITIALIZED"><b>CS_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_LOADED"><b>CS_LOADED</b></a>, 
+			<a href="class-TControl.html#CS_PRERENDERED"><b>CS_PRERENDERED</b></a>, 
+			<a href="class-TControl.html#CS_STATE_LOADED"><b>CS_STATE_LOADED</b></a>, 
+			<a href="class-TControl.html#ID_FORMAT"><b>ID_FORMAT</b></a>, 
+			<a href="class-TControl.html#ID_SEPARATOR"><b>ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#IS_CHILD_CREATED"><b>IS_CHILD_CREATED</b></a>, 
+			<a href="class-TControl.html#IS_CREATING_CHILD"><b>IS_CREATING_CHILD</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_THEMING"><b>IS_DISABLE_THEMING</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_VIEWSTATE"><b>IS_DISABLE_VIEWSTATE</b></a>, 
+			<a href="class-TControl.html#IS_ID_SET"><b>IS_ID_SET</b></a>, 
+			<a href="class-TControl.html#IS_SKIN_APPLIED"><b>IS_SKIN_APPLIED</b></a>, 
+			<a href="class-TControl.html#IS_STYLESHEET_APPLIED"><b>IS_STYLESHEET_APPLIED</b></a>, 
+			<a href="class-TControl.html#RF_ADAPTER"><b>RF_ADAPTER</b></a>, 
+			<a href="class-TControl.html#RF_AUTO_BINDINGS"><b>RF_AUTO_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_CHILD_STATE"><b>RF_CHILD_STATE</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLS"><b>RF_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLSTATE"><b>RF_CONTROLSTATE</b></a>, 
+			<a href="class-TControl.html#RF_DATA_BINDINGS"><b>RF_DATA_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_EVENTS"><b>RF_EVENTS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS"><b>RF_NAMED_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS_ID"><b>RF_NAMED_CONTROLS_ID</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_OBJECTS"><b>RF_NAMED_OBJECTS</b></a>, 
+			<a href="class-TControl.html#RF_SKIN_ID"><b>RF_SKIN_ID</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

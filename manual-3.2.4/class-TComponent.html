@@ -1,0 +1,3658 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TComponent | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.html" title="Summary of System"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TComponent</h1>
+
+
+	<div class="description">
+	
+<p>TComponent class</p>
+
+<p>TComponent is the base class for all PRADO components. TComponent implements
+the protocol of defining, using properties, behaviors, and events.</p>
+
+<p>A property is defined by a getter method, and/or a setter method. Properties
+can be accessed in the way like accessing normal object members. Reading or
+writing a property will cause the invocation of the corresponding getter or
+setter method, e.g.,</p>
+
+<pre>
+<span class="php-var">$a</span>=<span
+class="php-var">$this</span>-&gt;Text;     <span
+class="php-comment">// equivalent to $a=$this-&gt;getText();</span>
+<span
+class="php-var">$this</span>-&gt;Text=<span
+class="php-quote">'abc'</span>;  <span
+class="php-comment">// equivalent to $this-&gt;setText('abc');</span>
+</pre>
+
+<p>The signatures of getter and setter methods are as follows,</p>
+
+<pre>
+<span
+class="php-comment">// getter, defines a readable property 'Text'</span>
+<span
+class="php-keyword1">function</span> <span
+class="php-keyword2">getText</span>() { ... }
+<span
+class="php-comment">// setter, defines a writable property 'Text', with $value being the value to be set to the property</span>
+<span
+class="php-keyword1">function</span> setText(<span
+class="php-var">$value</span>) { ... }
+</pre>
+
+<p>Property names are case-insensitive. It is recommended that they are written
+in the format of concatenated words, with the first letter of each word
+capitalized (e.g. DisplayMode, ItemStyle).</p>
+
+<p>Javascript Get and Set</p>
+
+<p>Since Prado 3.2 a new class of javascript-friendly properties have been
+introduced to better deal with potential security problems like cross-site
+scripting issues. All the data that gets sent clientside inside a javascript
+block is now encoded by default. Sometimes there's the need to bypass this
+encoding and be able to send raw javascript code. This new class of
+javascript-friendly properties are identified by their name starting with 'js'
+(case insensitive):</p>
+
+<pre>
+<span
+class="php-comment">// getter, defines a readable property 'Text'</span>
+<span
+class="php-keyword1">function</span> getJsText() { ... }
+<span
+class="php-comment">// setter, defines a writable property 'Text', with $value being the value to be set to the property</span>
+<span
+class="php-keyword1">function</span> setJsText(TJavaScriptLiteral <span
+class="php-var">$value</span>) { ... }
+</pre>
+
+<p>Js-friendly properties can be accessed using both their Js-less name and
+their Js-enabled name:</p>
+
+<pre>
+<span
+class="php-comment">// set some simple text as property value</span>
+<span
+class="php-var">$component</span>-&gt;Text = <span
+class="php-quote">'text'</span>;
+<span
+class="php-comment">// set some javascript code as property value</span>
+<span
+class="php-var">$component</span>-&gt;JsText = <span
+class="php-quote">'raw javascript'</span>;
+</pre>
+
+<p>In the first case, the property value will automatically gets encoded when
+sent clientside inside a javascript block. In the second case, the property will
+be 'marked' as being a safe javascript statement and will not be encoded when
+rendered inside a javascript block. This special handling makes use of the
+<code><a href="class-TJavaScriptLiteral.html">TJavaScriptLiteral</a></code> class.</p>
+
+<p>Events</p>
+
+<p>An event is defined by the presence of a method whose name starts with 'on'.
+The event name is the method name and is thus case-insensitive. An event can be
+attached with one or several methods (called event handlers). An event can be
+raised by calling <code><a href="class-TComponent.html#_raiseEvent">TComponent::raiseEvent()</a></code> method, upon which the attached event
+handlers will be invoked automatically in the order they are attached to the
+event. Event handlers must have the following signature,</p>
+
+<pre>
+<span class="php-keyword1">function</span> eventHandlerFuncName(<span
+class="php-var">$sender</span>,<span
+class="php-var">$param</span>) { ... }
+</pre>
+
+<p>where $sender refers to the object who is responsible for the raising of the
+event, and $param refers to a structure that may contain event-specific
+information. To raise an event (assuming named as 'Click') of a component,
+use</p>
+
+<pre>
+<span class="php-var">$component</span>-&gt;raiseEvent(<span
+class="php-quote">'OnClick'</span>);
+<span
+class="php-var">$component</span>-&gt;raiseEvent(<span
+class="php-quote">'OnClick'</span>, <span class="php-var">$this</span>, <span
+class="php-var">$param</span>);
+</pre>
+
+<p>To attach an event handler to an event, use one of the following ways,</p>
+
+<pre>
+<span class="php-var">$component</span>-&gt;OnClick=<span
+class="php-var">$callback</span>;  <span
+class="php-comment">// or $component-&gt;OnClick-&gt;add($callback);</span>
+<span
+class="php-var">$component</span>-&gt;attachEventHandler(<span
+class="php-quote">'OnClick'</span>,<span
+class="php-var">$callback</span>);
+</pre>
+
+<p>The first two ways make use of the fact that $component-&gt;OnClick refers to
+the event handler list <code><a href="class-TPriorityList.html">TPriorityList</a></code> for the 'OnClick' event. The
+variable $callback contains the definition of the event handler that can be
+either a string referring to a global function name, or an array whose first
+element refers to an object and second element a method name/path that is
+reachable by the object, e.g.</p>
+
+<ul>
+	<li>'buttonClicked' : buttonClicked($sender,$param);</li>
+
+	<li>array($object,'buttonClicked') :
+	$object-&gt;buttonClicked($sender,$param);</li>
+
+	<li>array($object,'MainContent.SubmitButton.buttonClicked') :
+	$object-&gt;MainContent-&gt;SubmitButton-&gt;buttonClicked($sender,$param);</li>
+</ul>
+
+<p>With the addition of behaviors, a more expansive event model is needed. There
+are two new event types (global and dynamic events) as well as a more
+comprehensive behavior model that includes class wide behaviors.</p>
+
+<p>A global event is defined by all events whose name starts with 'fx'. The
+event name is potentially a method name and is thus case-insensitive. All 'fx'
+events are valid as the whole 'fx' event/method space is global in nature. Any
+object may patch into any global event by defining that event as a method.
+Global events have priorities just like 'on' events; so as to be able to order
+the event execution. Due to the nature of all events which start with 'fx' being
+valid, in effect, every object has every 'fx' global event. It is simply an
+issue of tapping into the desired global event.</p>
+
+<p>A global event that starts with 'fx' can be called even if the object does
+not implement the method of the global event. A call to a non-existing 'fx'
+method will, at minimal, function and return null. If a method argument list has
+a first parameter, it will be returned instead of null. This allows filtering
+and chaining. 'fx' methods do not automatically install and uninstall. To
+install and uninstall an object's global event listeners, call the object's
+<code><a href="class-TComponent.html#_listen">TComponent::listen()</a></code> and <code><a href="class-TComponent.html#_unlisten">TComponent::unlisten()</a></code> methods, respectively. An object may
+auto-install its global event during <code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code> by overriding <code><a href="class-TComponent.html#_getAutoGlobalListen">TComponent::getAutoGlobalListen()</a></code> and returning true.</p>
+
+<p>As of PHP version 5.3, nulled objects without code references will still
+continue to persist in the global event queue because <code><a href="class-TComponent.html#___destruct">TComponent::__destruct()</a></code> is not
+automatically called. In the common __destruct method, if an object is listening
+to global events, then <code><a href="class-TComponent.html#_unlisten">TComponent::unlisten()</a></code> is called. <code><a href="class-TComponent.html#_unlisten">TComponent::unlisten()</a></code> is required
+to be manually called before an object is left without references if it is
+currently listening to any global events. This includes class wide
+behaviors.</p>
+
+<p>An object that contains a method that starts with 'fx' will have those
+functions automatically receive those events of the same name after <code><a href="class-TComponent.html#_listen">TComponent::listen()</a></code> is called on the object.</p>
+
+<p>An object may listen to a global event without defining an 'fx' method of the
+same name by adding an object method to the global event list. For example</p>
+
+<pre>
+<span class="php-var">$component</span>-&gt;fxGlobalCheck=<span
+class="php-var">$callback</span>;  <span
+class="php-comment">// or $component-&gt;OnClick-&gt;add($callback);</span>
+<span
+class="php-var">$component</span>-&gt;attachEventHandler(<span
+class="php-quote">'fxGlobalCheck'</span>,<span
+class="php-keyword1">array</span>(<span class="php-var">$object</span>, <span
+class="php-quote">'someMethod'</span>));
+</pre>
+
+<p>Events between Objects and their behaviors, Dynamic Events</p>
+
+<p>An intra-object/behavior event is defined by methods that start with 'dy'.
+Just as with 'fx' global events, every object has every dynamic event. Any call
+to a method that starts with 'dy' will be handled, regardless of whether it is
+implemented. These events are for communicating with attached behaviors.</p>
+
+<p>Dynamic events can be used in a variety of ways. They can be used to tell
+behaviors when a non-behavior method is called. Dynamic events could be used as
+data filters. They could also be used to specify when a piece of code is to be
+run, eg. should the loop process be performed on a particular piece of data. In
+this way, some control is handed to the behaviors over the process and/or
+data.</p>
+
+<p>If there are no handlers for an 'fx' or 'dy' event, it will return the first
+parameter of the argument list. If there are no arguments, these events will
+return null. If there are handlers an 'fx' method will be called directly within
+the object. Global 'fx' events are triggered by calling <code><a href="class-TComponent.html#_raiseEvent">TComponent::raiseEvent()</a></code>. For
+dynamic events where there are behaviors that respond to the dynamic events, a
+<code><a href="class-TCallChain.html">TCallChain</a></code> is developed. A call chain allows the behavior dynamic event
+implementations to call further implementing behaviors within a chain.</p>
+
+<p>If an object implements <code><a href="class-IDynamicMethods.html">IDynamicMethods</a></code>, all global and object
+dynamic events will be sent to __dycall. In the case of global events,
+all global events will trigger this method. In the case of behaviors, all
+undefined dynamic events which are called will be passed through to this
+method.</p>
+
+<p>Behaviors</p>
+
+<p>There are two types of behaviors. There are individual object behaviors and
+there are class wide behaviors. Class behaviors depend upon object
+behaviors.</p>
+
+<p>When a new class implements <code><a href="class-IBehavior.html">IBehavior</a></code> or <code><a href="class-IClassBehavior.html">IClassBehavior</a></code> or
+extends <code><a href="class-TBehavior.html">TBehavior</a></code> or <code><a href="class-TClassBehavior.html">TClassBehavior</a></code>, it may be added to an
+object by calling the object's <code><a href="class-TComponent.html#_attachBehavior">TComponent::attachBehavior()</a></code>. The behaviors associated
+name can then be used to <code><a href="class-TComponent.html#_enableBehavior">TComponent::enableBehavior()</a></code> or <code><a href="class-TComponent.html#_disableBehavior">TComponent::disableBehavior()</a></code> the
+specific behavior.</p>
+
+<p>All behaviors may be turned on and off via <code><a href="class-TComponent.html#_enableBehaviors">TComponent::enableBehaviors()</a></code> and <code><a href="class-TComponent.html#_disableBehaviors">TComponent::disableBehaviors()</a></code>, respectively. To check if behaviors are on or off a call to
+<code><a href="class-TComponent.html#_getBehaviorsEnabled">TComponent::getBehaviorsEnabled()</a></code> will provide the variable.</p>
+
+<p>Attaching and detaching whole sets of behaviors is done using <code><a href="class-TComponent.html#_attachBehaviors">TComponent::attachBehaviors()</a></code> and <code><a href="class-TComponent.html#_detachBehaviors">TComponent::detachBehaviors()</a></code>. <code><a href="class-TComponent.html#_clearBehaviors">TComponent::clearBehaviors()</a></code> removes all
+of an object's behaviors.</p>
+
+<p><code><a href="class-TComponent.html#_asa">TComponent::asa()</a></code> returns a behavior of a specific name. <code><a href="class-TComponent.html#_isa">TComponent::isa()</a></code> is the
+behavior inclusive function that acts as the PHP operator instanceof. A
+behavior could provide the functionality of a specific class thus causing the
+host object to act similarly to a completely different class. A behavior would
+then implement <code><a href="class-IInstanceCheck.html">IInstanceCheck</a></code> to provide the identity of the different
+class.</p>
+
+<p>Class behaviors are similar to object behaviors except that the class
+behavior is the implementation for all instances of the class. A class behavior
+will have the object upon which is being called be prepended to the parameter
+list. This way the object is known across the class behavior implementation.</p>
+
+<p>Class behaviors are attached using <code><a href="class-TComponent.html#_attachClassBehavior">TComponent::attachClassBehavior()</a></code> and detached
+using <code><a href="class-TComponent.html#_detachClassBehavior">TComponent::detachClassBehavior()</a></code>. Class behaviors are important in that they
+will be applied to all new instances of a particular class. In this way class
+behaviors become default behaviors to a new instances of a class in <code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code>. Detaching a class behavior will remove the behavior from the
+default set of behaviors created for an object when the object is instanced.</p>
+
+<p>Class behaviors are also added to all existing instances via the global 'fx'
+event mechanism. When a new class behavior is added, the event <code><a href="class-TComponent.html#_fxAttachClassBehavior">TComponent::fxAttachClassBehavior()</a></code> is raised and all existing instances that are listening
+to this global event (primarily after <code><a href="class-TComponent.html#_listen">TComponent::listen()</a></code> is called) will have this
+new behavior attached. A similar process is used when detaching class behaviors.
+Any objects listening to the global 'fx' event <code><a href="class-TComponent.html#_fxDetachClassBehavior">TComponent::fxDetachClassBehavior()</a></code>
+will have a class behavior removed.</p>
+
+<p>Dynamic Intra-Object Events</p>
+
+<p>Dynamic events start with 'dy'. This mechanism is used to allow objects to
+communicate with their behaviors directly. The entire 'dy' event space is valid.
+All attached, enabled behaviors that implement a dynamic event are called when
+the host object calls the dynamic event. If there is no implementation or
+behaviors, this returns null when no parameters are supplied and will return the
+first parameter when there is at least one parameter in the dynamic event.</p>
+
+<pre>
+<span class="php-keyword1">null</span> == <span
+class="php-var">$this</span>-&gt;dyBehaviorEvent();
+<span
+class="php-num">5</span> == <span
+class="php-var">$this</span>-&gt;dyBehaviorEvent(<span
+class="php-num">5</span>); <span
+class="php-comment">//when no behaviors implement this dynamic event</span>
+</pre>
+
+<p>Dynamic events can be chained together within behaviors to allow for data
+filtering. Dynamic events are implemented within behaviors by defining the event
+as a method.</p>
+
+<pre>
+<span class="php-keyword1">class</span> TObjectBehavior <span
+class="php-keyword1">extends</span> TBehavior {
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyBehaviorEvent(<span
+class="php-var">$param1</span>, <span
+class="php-var">$callchain</span>) {
+                <span
+class="php-comment">//Do something, eg:  $param1 += 13;</span>
+                <span
+class="php-keyword1">return</span> <span
+class="php-var">$callchain</span>-&gt;dyBehaviorEvent(<span
+class="php-var">$param1</span>);
+    }
+}
+</pre>
+
+<p>This implementation of a behavior and dynamic event will flow through to the
+next behavior implementing the dynamic event. The first parameter is always
+return when it is supplied. Otherwise a dynamic event returns null.</p>
+
+<p>In the case of a class behavior, the object is also prepended to the dynamic
+event.</p>
+
+<pre>
+<span class="php-keyword1">class</span> TObjectClassBehavior <span
+class="php-keyword1">extends</span> TClassBehavior {
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyBehaviorEvent(<span
+class="php-var">$hostobject</span>, <span class="php-var">$param1</span>, <span
+class="php-var">$callchain</span>) {
+                <span
+class="php-comment">//Do something, eg:  $param1 += $hostobject-&gt;getNumber();</span>
+                <span
+class="php-keyword1">return</span> <span
+class="php-var">$callchain</span>-&gt;dyBehaviorEvent(<span
+class="php-var">$param1</span>);
+    }
+}
+</pre>
+
+<p>When calling a dynamic event, only the parameters are passed. The host object
+and the call chain are built into the framework.</p>
+
+<p>Global Event and Dynamic event catching</p>
+
+<p>Given that all global 'fx' events and dynamic 'dy' events are valid and
+operational, there is a mechanism for catching events called that are not
+implemented (similar to the built-in PHP method <code><a href="class-TComponent.html#___call">TComponent::__call()</a></code>). When a dynamic
+or global event is called but a behavior does not implement it, yet desires to
+know when an undefined dynamic event is run, the behavior implements the
+interface <code><a href="class-IDynamicMethods.html">IDynamicMethods</a></code> and method __dycall.</p>
+
+<p>In the case of dynamic events, __dycall is supplied with the method
+name and its parameters. When a global event is raised, via <code><a href="class-TComponent.html#_raiseEvent">TComponent::raiseEvent()</a></code>,
+the method is the event name and the parameters are supplied.</p>
+
+<p>When implemented, this catch-all mechanism is called for event global event
+event when implemented outside of a behavior. Within a behavior, it will also be
+called when the object to which the behavior is attached calls any unimplemented
+dynamic event. This is the fall-back mechanism for informing a class and/or
+behavior of when an global and/or undefined dynamic event is executed.</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TActiveRecord.html">TActiveRecord</a>, 
+			<a href="class-TActiveRecordGateway.html">TActiveRecordGateway</a>, 
+			<a href="class-TCacheDependency.html">TCacheDependency</a>, 
+			<a href="class-TCachePageStatePersister.html">TCachePageStatePersister</a>, 
+			<a href="class-TCachingStatement.html">TCachingStatement</a>, 
+			<a href="class-TClassBehavior.html">TClassBehavior</a>, 
+			<a href="class-TClientSideOptions.html">TClientSideOptions</a>, 
+			<a href="class-TComponentReflection.html">TComponentReflection</a>, 
+			<a href="class-TCompositeLiteral.html">TCompositeLiteral</a>, 
+			<a href="class-TDataGatewayCommand.html">TDataGatewayCommand</a>, 
+			<a href="class-TDataSourceSelectParameters.html">TDataSourceSelectParameters</a>, 
+			<a href="class-TDataSourceView.html">TDataSourceView</a>, 
+			<a href="class-TActiveRecordManager.html">TActiveRecordManager</a>, 
+			<a href="class-TDbCommand.html">TDbCommand</a>, 
+			<a href="class-TDbCommandBuilder.html">TDbCommandBuilder</a>, 
+			<a href="class-TDbConnection.html">TDbConnection</a>, 
+			<a href="class-TDbDataReader.html">TDbDataReader</a>, 
+			<a href="class-TDbMetaData.html">TDbMetaData</a>, 
+			<a href="class-TDbTableColumn.html">TDbTableColumn</a>, 
+			<a href="class-TDbTableInfo.html">TDbTableInfo</a>, 
+			<a href="class-TDbTransaction.html">TDbTransaction</a>, 
+			<a href="class-TDiscriminator.html">TDiscriminator</a>, 
+			<a href="class-TDummyDataSource.html">TDummyDataSource</a>, 
+			<a href="class-TApplication.html">TApplication</a>, 
+			<a href="class-TEventParameter.html">TEventParameter</a>, 
+			<a href="class-TFont.html">TFont</a>, 
+			<a href="class-THotSpot.html">THotSpot</a>, 
+			<a href="class-THttpCookie.html">THttpCookie</a>, 
+			<a href="class-TList.html">TList</a>, 
+			<a href="class-TListItem.html">TListItem</a>, 
+			<a href="class-TLogger.html">TLogger</a>, 
+			<a href="class-TMap.html">TMap</a>, 
+			<a href="class-TMappedStatement.html">TMappedStatement</a>, 
+			<a href="class-TMetaTag.html">TMetaTag</a>, 
+			<a href="class-TApplicationComponent.html">TApplicationComponent</a>, 
+			<a href="class-TOracleTableInfo.html">TOracleTableInfo</a>, 
+			<a href="class-TPageConfiguration.html">TPageConfiguration</a>, 
+			<a href="class-TPagedDataSource.html">TPagedDataSource</a>, 
+			<a href="class-TPageStatePersister.html">TPageStatePersister</a>, 
+			<a href="class-TParameterMap.html">TParameterMap</a>, 
+			<a href="class-TParameterProperty.html">TParameterProperty</a>, 
+			<a href="class-TPreparedStatement.html">TPreparedStatement</a>, 
+			<a href="class-TQueue.html">TQueue</a>, 
+			<a href="class-Translation.html">Translation</a>, 
+			<a href="class-TRepeatInfo.html">TRepeatInfo</a>, 
+			<a href="class-TApplicationConfiguration.html">TApplicationConfiguration</a>, 
+			<a href="class-TResultMap.html">TResultMap</a>, 
+			<a href="class-TResultProperty.html">TResultProperty</a>, 
+			<a href="class-TResultSetListItemParameter.html">TResultSetListItemParameter</a>, 
+			<a href="class-TResultSetMapItemParameter.html">TResultSetMapItemParameter</a>, 
+			<a href="class-TSessionPageStatePersister.html">TSessionPageStatePersister</a>, 
+			<a href="class-TSqlCriteria.html">TSqlCriteria</a>, 
+			<a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a>, 
+			<a href="class-TSqlMapGateway.html">TSqlMapGateway</a>, 
+			<a href="class-TSqlMapManager.html">TSqlMapManager</a>, 
+			<a href="class-TSqlMapObjectCollectionTree.html">TSqlMapObjectCollectionTree</a>, 
+			<a href="class-TAuthorizationRule.html">TAuthorizationRule</a>, 
+			<a href="class-TSqlMapStatement.html">TSqlMapStatement</a>, 
+			<a href="class-TSqlMapTypeHandler.html">TSqlMapTypeHandler</a>, 
+			<a href="class-TStack.html">TStack</a>, 
+			<a href="class-TStaticSql.html">TStaticSql</a>, 
+			<a href="class-TStyle.html">TStyle</a>, 
+			<a href="class-TSubMap.html">TSubMap</a>, 
+			<a href="class-TTableGateway.html">TTableGateway</a>, 
+			<a href="class-TTextWriter.html">TTextWriter</a>, 
+			<a href="class-TUri.html">TUri</a>, 
+			<a href="class-TUrlMappingPattern.html">TUrlMappingPattern</a>, 
+			<a href="class-TAutoCompleteTemplate.html">TAutoCompleteTemplate</a>, 
+			<a href="class-TUser.html">TUser</a>, 
+			<a href="class-TWebControlDecorator.html">TWebControlDecorator</a>, 
+			<a href="class-TWizardNavigationTemplate.html">TWizardNavigationTemplate</a>, 
+			<a href="class-TWizardSideBarListItemTemplate.html">TWizardSideBarListItemTemplate</a>, 
+			<a href="class-TWizardSideBarTemplate.html">TWizardSideBarTemplate</a>, 
+			<a href="class-TXmlElement.html">TXmlElement</a>, 
+			<a href="class-TBaseActiveControl.html">TBaseActiveControl</a>, 
+			<a href="class-TBehavior.html">TBehavior</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-TAccordion.html">TAccordion</a>, 
+			<a href="class-TAccordionView.html">TAccordionView</a>, 
+			<a href="class-TActiveControlAdapter.html">TActiveControlAdapter</a>, 
+			<a href="class-TConditional.html">TConditional</a>, 
+			<a href="class-TContent.html">TContent</a>, 
+			<a href="class-TContentPlaceHolder.html">TContentPlaceHolder</a>, 
+			<a href="class-TControl.html">TControl</a>, 
+			<a href="class-TControlAdapter.html">TControlAdapter</a>, 
+			<a href="class-TControlCollection.html">TControlCollection</a>, 
+			<a href="class-TCustomValidator.html">TCustomValidator</a>, 
+			<a href="class-TDataBoundControl.html">TDataBoundControl</a>, 
+			<a href="class-TDataGatewayEventParameter.html">TDataGatewayEventParameter</a>, 
+			<a href="class-TDataGatewayResultEventParameter.html">TDataGatewayResultEventParameter</a>, 
+			<a href="class-TActiveCustomValidator.html">TActiveCustomValidator</a>, 
+			<a href="class-TDataGrid.html">TDataGrid</a>, 
+			<a href="class-TDataGridColumn.html">TDataGridColumn</a>, 
+			<a href="class-TDataGridColumnCollection.html">TDataGridColumnCollection</a>, 
+			<a href="class-TDataGridCommandEventParameter.html">TDataGridCommandEventParameter</a>, 
+			<a href="class-TDataGridItem.html">TDataGridItem</a>, 
+			<a href="class-TDataGridItemCollection.html">TDataGridItemCollection</a>, 
+			<a href="class-TDataGridItemEventParameter.html">TDataGridItemEventParameter</a>, 
+			<a href="class-TDataGridItemRenderer.html">TDataGridItemRenderer</a>, 
+			<a href="class-TDataGridPageChangedEventParameter.html">TDataGridPageChangedEventParameter</a>, 
+			<a href="class-TDataGridPager.html">TDataGridPager</a>, 
+			<a href="class-TActiveCustomValidatorClientSide.html">TActiveCustomValidatorClientSide</a>, 
+			<a href="class-TDataGridPagerEventParameter.html">TDataGridPagerEventParameter</a>, 
+			<a href="class-TDataGridPagerStyle.html">TDataGridPagerStyle</a>, 
+			<a href="class-TDataGridSortCommandEventParameter.html">TDataGridSortCommandEventParameter</a>, 
+			<a href="class-TDataList.html">TDataList</a>, 
+			<a href="class-TDataListCommandEventParameter.html">TDataListCommandEventParameter</a>, 
+			<a href="class-TDataListItem.html">TDataListItem</a>, 
+			<a href="class-TDataListItemCollection.html">TDataListItemCollection</a>, 
+			<a href="class-TDataListItemEventParameter.html">TDataListItemEventParameter</a>, 
+			<a href="class-TDataListItemRenderer.html">TDataListItemRenderer</a>, 
+			<a href="class-TDataRenderer.html">TDataRenderer</a>, 
+			<a href="class-TActiveDataGrid.html">TActiveDataGrid</a>, 
+			<a href="class-TDataSourceConfig.html">TDataSourceConfig</a>, 
+			<a href="class-TDataSourceControl.html">TDataSourceControl</a>, 
+			<a href="class-TDataTypeValidator.html">TDataTypeValidator</a>, 
+			<a href="class-TDateFormat.html">TDateFormat</a>, 
+			<a href="class-TDatePicker.html">TDatePicker</a>, 
+			<a href="class-TDatePickerClientScript.html">TDatePickerClientScript</a>, 
+			<a href="class-TDbCache.html">TDbCache</a>, 
+			<a href="class-TDbLogRoute.html">TDbLogRoute</a>, 
+			<a href="class-TDbUser.html">TDbUser</a>, 
+			<a href="class-TDbUserManager.html">TDbUserManager</a>, 
+			<a href="class-TActiveDataGridPager.html">TActiveDataGridPager</a>, 
+			<a href="class-TDeleteMappedStatement.html">TDeleteMappedStatement</a>, 
+			<a href="class-TDirectoryCacheDependency.html">TDirectoryCacheDependency</a>, 
+			<a href="class-TDraggable.html">TDraggable</a>, 
+			<a href="class-TDropContainer.html">TDropContainer</a>, 
+			<a href="class-TDropContainerEventParameter.html">TDropContainerEventParameter</a>, 
+			<a href="class-TDropDownList.html">TDropDownList</a>, 
+			<a href="class-TDropDownListColumn.html">TDropDownListColumn</a>, 
+			<a href="class-TEACache.html">TEACache</a>, 
+			<a href="class-TEditCommandColumn.html">TEditCommandColumn</a>, 
+			<a href="class-TEmailAddressValidator.html">TEmailAddressValidator</a>, 
+			<a href="class-TActiveDataGridPagerEventParameter.html">TActiveDataGridPagerEventParameter</a>, 
+			<a href="class-TEmailLogRoute.html">TEmailLogRoute</a>, 
+			<a href="class-TEmptyControlCollection.html">TEmptyControlCollection</a>, 
+			<a href="class-TErrorHandler.html">TErrorHandler</a>, 
+			<a href="class-TEventTriggeredCallback.html">TEventTriggeredCallback</a>, 
+			<a href="class-TExpression.html">TExpression</a>, 
+			<a href="class-TFeedService.html">TFeedService</a>, 
+			<a href="class-TFileCacheDependency.html">TFileCacheDependency</a>, 
+			<a href="class-TFileLogRoute.html">TFileLogRoute</a>, 
+			<a href="class-TFileUpload.html">TFileUpload</a>, 
+			<a href="class-TFirebugLogRoute.html">TFirebugLogRoute</a>, 
+			<a href="class-TActiveDataList.html">TActiveDataList</a>, 
+			<a href="class-TFirePhpLogRoute.html">TFirePhpLogRoute</a>, 
+			<a href="class-TFlushOutput.html">TFlushOutput</a>, 
+			<a href="class-TForm.html">TForm</a>, 
+			<a href="class-TGlobalization.html">TGlobalization</a>, 
+			<a href="class-TGlobalizationAutoDetect.html">TGlobalizationAutoDetect</a>, 
+			<a href="class-TGlobalStateCacheDependency.html">TGlobalStateCacheDependency</a>, 
+			<a href="class-THead.html">THead</a>, 
+			<a href="class-THeader1.html">THeader1</a>, 
+			<a href="class-THeader2.html">THeader2</a>, 
+			<a href="class-THeader3.html">THeader3</a>, 
+			<a href="class-TActiveDatePicker.html">TActiveDatePicker</a>, 
+			<a href="class-THeader4.html">THeader4</a>, 
+			<a href="class-THeader5.html">THeader5</a>, 
+			<a href="class-THeader6.html">THeader6</a>, 
+			<a href="class-THiddenField.html">THiddenField</a>, 
+			<a href="class-THotSpotCollection.html">THotSpotCollection</a>, 
+			<a href="class-THtmlArea.html">THtmlArea</a>, 
+			<a href="class-THtmlArea4.html">THtmlArea4</a>, 
+			<a href="class-THtmlElement.html">THtmlElement</a>, 
+			<a href="class-THtmlWriter.html">THtmlWriter</a>, 
+			<a href="class-THttpCookieCollection.html">THttpCookieCollection</a>, 
+			<a href="class-TActiveDatePickerClientScript.html">TActiveDatePickerClientScript</a>, 
+			<a href="class-THttpRequest.html">THttpRequest</a>, 
+			<a href="class-THttpResponse.html">THttpResponse</a>, 
+			<a href="class-THttpResponseAdapter.html">THttpResponseAdapter</a>, 
+			<a href="class-THttpSession.html">THttpSession</a>, 
+			<a href="class-THyperLink.html">THyperLink</a>, 
+			<a href="class-THyperLinkColumn.html">THyperLinkColumn</a>, 
+			<a href="class-TI18NControl.html">TI18NControl</a>, 
+			<a href="class-TImage.html">TImage</a>, 
+			<a href="class-TImageButton.html">TImageButton</a>, 
+			<a href="class-TImageClickEventParameter.html">TImageClickEventParameter</a>, 
+			<a href="class-TActiveDropDownList.html">TActiveDropDownList</a>, 
+			<a href="class-TImageMap.html">TImageMap</a>, 
+			<a href="class-TImageMapEventParameter.html">TImageMapEventParameter</a>, 
+			<a href="class-TInlineFrame.html">TInlineFrame</a>, 
+			<a href="class-TInPlaceTextBox.html">TInPlaceTextBox</a>, 
+			<a href="class-TInsertMappedStatement.html">TInsertMappedStatement</a>, 
+			<a href="class-TItemDataRenderer.html">TItemDataRenderer</a>, 
+			<a href="class-TJavascriptLogger.html">TJavascriptLogger</a>, 
+			<a href="class-TJsonResponse.html">TJsonResponse</a>, 
+			<a href="class-TJsonRpcClient.html">TJsonRpcClient</a>, 
+			<a href="class-TJsonService.html">TJsonService</a>, 
+			<a href="class-TAccordionViewCollection.html">TAccordionViewCollection</a>, 
+			<a href="class-TActiveDropDownListColumn.html">TActiveDropDownListColumn</a>, 
+			<a href="class-TKeyboard.html">TKeyboard</a>, 
+			<a href="class-TLabel.html">TLabel</a>, 
+			<a href="class-TLinkButton.html">TLinkButton</a>, 
+			<a href="class-TListBox.html">TListBox</a>, 
+			<a href="class-TListControl.html">TListControl</a>, 
+			<a href="class-TListControlValidator.html">TListControlValidator</a>, 
+			<a href="class-TListItemCollection.html">TListItemCollection</a>, 
+			<a href="class-TLiteral.html">TLiteral</a>, 
+			<a href="class-TLiteralColumn.html">TLiteralColumn</a>, 
+			<a href="class-TLogRoute.html">TLogRoute</a>, 
+			<a href="class-TActiveEditCommandColumn.html">TActiveEditCommandColumn</a>, 
+			<a href="class-TLogRouter.html">TLogRouter</a>, 
+			<a href="class-TMarkdown.html">TMarkdown</a>, 
+			<a href="class-TMemCache.html">TMemCache</a>, 
+			<a href="class-TMetaTagCollection.html">TMetaTagCollection</a>, 
+			<a href="class-TModule.html">TModule</a>, 
+			<a href="class-TMssqlCommandBuilder.html">TMssqlCommandBuilder</a>, 
+			<a href="class-TMssqlMetaData.html">TMssqlMetaData</a>, 
+			<a href="class-TMssqlTableColumn.html">TMssqlTableColumn</a>, 
+			<a href="class-TMssqlTableInfo.html">TMssqlTableInfo</a>, 
+			<a href="class-TMultiView.html">TMultiView</a>, 
+			<a href="class-TActiveFileUpload.html">TActiveFileUpload</a>, 
+			<a href="class-TMysqlCommandBuilder.html">TMysqlCommandBuilder</a>, 
+			<a href="class-TMysqlMetaData.html">TMysqlMetaData</a>, 
+			<a href="class-TMysqlTableColumn.html">TMysqlTableColumn</a>, 
+			<a href="class-TMysqlTableInfo.html">TMysqlTableInfo</a>, 
+			<a href="class-TNumberFormat.html">TNumberFormat</a>, 
+			<a href="class-TOracleCommandBuilder.html">TOracleCommandBuilder</a>, 
+			<a href="class-TOracleMetaData.html">TOracleMetaData</a>, 
+			<a href="class-TOracleTableColumn.html">TOracleTableColumn</a>, 
+			<a href="class-TOutputCache.html">TOutputCache</a>, 
+			<a href="class-TOutputCacheCalculateKeyEventParameter.html">TOutputCacheCalculateKeyEventParameter</a>, 
+			<a href="class-TActiveHiddenField.html">TActiveHiddenField</a>, 
+			<a href="class-TOutputCacheCheckDependencyEventParameter.html">TOutputCacheCheckDependencyEventParameter</a>, 
+			<a href="class-TOutputCacheTextWriterMulti.html">TOutputCacheTextWriterMulti</a>, 
+			<a href="class-TPage.html">TPage</a>, 
+			<a href="class-TPagedList.html">TPagedList</a>, 
+			<a href="class-TPagedListFetchDataEventParameter.html">TPagedListFetchDataEventParameter</a>, 
+			<a href="class-TPagedListPageChangedEventParameter.html">TPagedListPageChangedEventParameter</a>, 
+			<a href="class-TPager.html">TPager</a>, 
+			<a href="class-TPagerPageChangedEventParameter.html">TPagerPageChangedEventParameter</a>, 
+			<a href="class-TPageService.html">TPageService</a>, 
+			<a href="class-TPanel.html">TPanel</a>, 
+			<a href="class-TActiveHyperLink.html">TActiveHyperLink</a>, 
+			<a href="class-TPanelStyle.html">TPanelStyle</a>, 
+			<a href="class-TParameterModule.html">TParameterModule</a>, 
+			<a href="class-TPgsqlCommandBuilder.html">TPgsqlCommandBuilder</a>, 
+			<a href="class-TPgsqlMetaData.html">TPgsqlMetaData</a>, 
+			<a href="class-TPgsqlTableColumn.html">TPgsqlTableColumn</a>, 
+			<a href="class-TPgsqlTableInfo.html">TPgsqlTableInfo</a>, 
+			<a href="class-TPlaceHolder.html">TPlaceHolder</a>, 
+			<a href="class-TPolygonHotSpot.html">TPolygonHotSpot</a>, 
+			<a href="class-TPriorityList.html">TPriorityList</a>, 
+			<a href="class-TPriorityMap.html">TPriorityMap</a>, 
+			<a href="class-TActiveHyperLinkColumn.html">TActiveHyperLinkColumn</a>, 
+			<a href="class-TRadioButton.html">TRadioButton</a>, 
+			<a href="class-TRadioButtonList.html">TRadioButtonList</a>, 
+			<a href="class-TRangeValidator.html">TRangeValidator</a>, 
+			<a href="class-TRatingList.html">TRatingList</a>, 
+			<a href="class-TReadOnlyDataSource.html">TReadOnlyDataSource</a>, 
+			<a href="class-TReadOnlyDataSourceView.html">TReadOnlyDataSourceView</a>, 
+			<a href="class-TReCaptcha.html">TReCaptcha</a>, 
+			<a href="class-TReCaptchaValidator.html">TReCaptchaValidator</a>, 
+			<a href="class-TRectangleHotSpot.html">TRectangleHotSpot</a>, 
+			<a href="class-TRegularExpressionValidator.html">TRegularExpressionValidator</a>, 
+			<a href="class-TActiveImage.html">TActiveImage</a>, 
+			<a href="class-TRepeater.html">TRepeater</a>, 
+			<a href="class-TRepeaterCommandEventParameter.html">TRepeaterCommandEventParameter</a>, 
+			<a href="class-TRepeaterItem.html">TRepeaterItem</a>, 
+			<a href="class-TRepeaterItemCollection.html">TRepeaterItemCollection</a>, 
+			<a href="class-TRepeaterItemEventParameter.html">TRepeaterItemEventParameter</a>, 
+			<a href="class-TRepeaterItemRenderer.html">TRepeaterItemRenderer</a>, 
+			<a href="class-TRequiredFieldValidator.html">TRequiredFieldValidator</a>, 
+			<a href="class-TRpcApiProvider.html">TRpcApiProvider</a>, 
+			<a href="class-TRpcClient.html">TRpcClient</a>, 
+			<a href="class-TRpcServer.html">TRpcServer</a>, 
+			<a href="class-TActiveImageButton.html">TActiveImageButton</a>, 
+			<a href="class-TRpcService.html">TRpcService</a>, 
+			<a href="class-TSafeHtml.html">TSafeHtml</a>, 
+			<a href="class-TScaffoldBase.html">TScaffoldBase</a>, 
+			<a href="class-TScaffoldEditView.html">TScaffoldEditView</a>, 
+			<a href="class-TScaffoldListView.html">TScaffoldListView</a>, 
+			<a href="class-TScaffoldSearch.html">TScaffoldSearch</a>, 
+			<a href="class-TScaffoldView.html">TScaffoldView</a>, 
+			<a href="class-TSecurityManager.html">TSecurityManager</a>, 
+			<a href="class-TSelectMappedStatement.html">TSelectMappedStatement</a>, 
+			<a href="class-TServerValidateEventParameter.html">TServerValidateEventParameter</a>, 
+			<a href="class-TActiveLabel.html">TActiveLabel</a>, 
+			<a href="class-TService.html">TService</a>, 
+			<a href="class-TShellApplication.html">TShellApplication</a>, 
+			<a href="class-TSimpleDynamicSql.html">TSimpleDynamicSql</a>, 
+			<a href="class-TSlider.html">TSlider</a>, 
+			<a href="class-TSliderClientScript.html">TSliderClientScript</a>, 
+			<a href="class-TSoapServer.html">TSoapServer</a>, 
+			<a href="class-TSoapService.html">TSoapService</a>, 
+			<a href="class-TSqliteCache.html">TSqliteCache</a>, 
+			<a href="class-TSqliteCommandBuilder.html">TSqliteCommandBuilder</a>, 
+			<a href="class-TSqliteMetaData.html">TSqliteMetaData</a>, 
+			<a href="class-TActiveLinkButton.html">TActiveLinkButton</a>, 
+			<a href="class-TSqliteTableColumn.html">TSqliteTableColumn</a>, 
+			<a href="class-TSqliteTableInfo.html">TSqliteTableInfo</a>, 
+			<a href="class-TSqlMapConfig.html">TSqlMapConfig</a>, 
+			<a href="class-TSqlMapDelete.html">TSqlMapDelete</a>, 
+			<a href="class-TSqlMapInsert.html">TSqlMapInsert</a>, 
+			<a href="class-TSqlMapPagedList.html">TSqlMapPagedList</a>, 
+			<a href="class-TSqlMapSelect.html">TSqlMapSelect</a>, 
+			<a href="class-TSqlMapSelectKey.html">TSqlMapSelectKey</a>, 
+			<a href="class-TSqlMapUpdate.html">TSqlMapUpdate</a>, 
+			<a href="class-TStatements.html">TStatements</a>, 
+			<a href="class-TActiveBoundColumn.html">TActiveBoundColumn</a>, 
+			<a href="class-TActiveListBox.html">TActiveListBox</a>, 
+			<a href="class-TStyleSheet.html">TStyleSheet</a>, 
+			<a href="class-TTable.html">TTable</a>, 
+			<a href="class-TTableCell.html">TTableCell</a>, 
+			<a href="class-TTableCellCollection.html">TTableCellCollection</a>, 
+			<a href="class-TTableFooterRow.html">TTableFooterRow</a>, 
+			<a href="class-TTableHeaderCell.html">TTableHeaderCell</a>, 
+			<a href="class-TTableHeaderRow.html">TTableHeaderRow</a>, 
+			<a href="class-TTableItemStyle.html">TTableItemStyle</a>, 
+			<a href="class-TTableRow.html">TTableRow</a>, 
+			<a href="class-TTableRowCollection.html">TTableRowCollection</a>, 
+			<a href="class-TActiveListControlAdapter.html">TActiveListControlAdapter</a>, 
+			<a href="class-TTableStyle.html">TTableStyle</a>, 
+			<a href="class-TTabPanel.html">TTabPanel</a>, 
+			<a href="class-TTabView.html">TTabView</a>, 
+			<a href="class-TTabViewCollection.html">TTabViewCollection</a>, 
+			<a href="class-TTemplate.html">TTemplate</a>, 
+			<a href="class-TTemplateColumn.html">TTemplateColumn</a>, 
+			<a href="class-TTemplateControl.html">TTemplateControl</a>, 
+			<a href="class-TTemplateControlInheritable.html">TTemplateControlInheritable</a>, 
+			<a href="class-TTemplatedWizardStep.html">TTemplatedWizardStep</a>, 
+			<a href="class-TTemplateManager.html">TTemplateManager</a>, 
+			<a href="class-TActiveListItemCollection.html">TActiveListItemCollection</a>, 
+			<a href="class-TTextBox.html">TTextBox</a>, 
+			<a href="class-TTextHighlighter.html">TTextHighlighter</a>, 
+			<a href="class-TTextProcessor.html">TTextProcessor</a>, 
+			<a href="class-TTheme.html">TTheme</a>, 
+			<a href="class-TThemeManager.html">TThemeManager</a>, 
+			<a href="class-TTimeTriggeredCallback.html">TTimeTriggeredCallback</a>, 
+			<a href="class-TTranslate.html">TTranslate</a>, 
+			<a href="class-TTranslateParameter.html">TTranslateParameter</a>, 
+			<a href="class-TTriggeredCallback.html">TTriggeredCallback</a>, 
+			<a href="class-TUpdateMappedStatement.html">TUpdateMappedStatement</a>, 
+			<a href="class-TActiveLiteralColumn.html">TActiveLiteralColumn</a>, 
+			<a href="class-TUrlManager.html">TUrlManager</a>, 
+			<a href="class-TUrlMapping.html">TUrlMapping</a>, 
+			<a href="class-TUserManager.html">TUserManager</a>, 
+			<a href="class-TValidationSummary.html">TValidationSummary</a>, 
+			<a href="class-TValidatorClientSide.html">TValidatorClientSide</a>, 
+			<a href="class-TValueTriggeredCallback.html">TValueTriggeredCallback</a>, 
+			<a href="class-TView.html">TView</a>, 
+			<a href="class-TViewCollection.html">TViewCollection</a>, 
+			<a href="class-TWebControl.html">TWebControl</a>, 
+			<a href="class-TWebControlAdapter.html">TWebControlAdapter</a>, 
+			<a href="class-TActiveMultiView.html">TActiveMultiView</a>, 
+			<a href="class-TWizard.html">TWizard</a>, 
+			<a href="class-TWizardFinishNavigationTemplate.html">TWizardFinishNavigationTemplate</a>, 
+			<a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a>, 
+			<a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a>, 
+			<a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a>, 
+			<a href="class-TWizardStartNavigationTemplate.html">TWizardStartNavigationTemplate</a>, 
+			<a href="class-TWizardStep.html">TWizardStep</a>, 
+			<a href="class-TWizardStepCollection.html">TWizardStepCollection</a>, 
+			<a href="class-TWizardStepNavigationTemplate.html">TWizardStepNavigationTemplate</a>, 
+			<a href="class-TWsatGenerateAR.html">TWsatGenerateAR</a>, 
+			<a href="class-TActivePageAdapter.html">TActivePageAdapter</a>, 
+			<a href="class-TWsatHome.html">TWsatHome</a>, 
+			<a href="class-TWsatLayout.html">TWsatLayout</a>, 
+			<a href="class-TWsatLogin.html">TWsatLogin</a>, 
+			<a href="class-TWsatScaffolding.html">TWsatScaffolding</a>, 
+			<a href="class-TWsatService.html">TWsatService</a>, 
+			<a href="class-TXCache.html">TXCache</a>, 
+			<a href="class-TXmlDocument.html">TXmlDocument</a>, 
+			<a href="class-TXmlElementList.html">TXmlElementList</a>, 
+			<a href="class-TXmlRpcClient.html">TXmlRpcClient</a>, 
+			<a href="class-TXmlTransform.html">TXmlTransform</a>, 
+			<a href="class-TActivePager.html">TActivePager</a>, 
+			<a href="class-TActivePanel.html">TActivePanel</a>, 
+			<a href="class-TActiveRadioButton.html">TActiveRadioButton</a>, 
+			<a href="class-TActiveRadioButtonList.html">TActiveRadioButtonList</a>, 
+			<a href="class-TActiveButton.html">TActiveButton</a>, 
+			<a href="class-TActiveRatingList.html">TActiveRatingList</a>, 
+			<a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a>, 
+			<a href="class-TActiveRecordConfig.html">TActiveRecordConfig</a>, 
+			<a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a>, 
+			<a href="class-TActiveRepeater.html">TActiveRepeater</a>, 
+			<a href="class-TActiveTableCell.html">TActiveTableCell</a>, 
+			<a href="class-TActiveTableCellEventParameter.html">TActiveTableCellEventParameter</a>, 
+			<a href="class-TActiveTableRow.html">TActiveTableRow</a>, 
+			<a href="class-TActiveTableRowEventParameter.html">TActiveTableRowEventParameter</a>, 
+			<a href="class-TActiveTemplateColumn.html">TActiveTemplateColumn</a>, 
+			<a href="class-TActiveButtonColumn.html">TActiveButtonColumn</a>, 
+			<a href="class-TActiveTextBox.html">TActiveTextBox</a>, 
+			<a href="class-TAPCCache.html">TAPCCache</a>, 
+			<a href="class-TApplicationStateCacheDependency.html">TApplicationStateCacheDependency</a>, 
+			<a href="class-TApplicationStatePersister.html">TApplicationStatePersister</a>, 
+			<a href="class-TAssetManager.html">TAssetManager</a>, 
+			<a href="class-TAttributeCollection.html">TAttributeCollection</a>, 
+			<a href="class-TAuthManager.html">TAuthManager</a>, 
+			<a href="class-TAuthorizationRuleCollection.html">TAuthorizationRuleCollection</a>, 
+			<a href="class-TAutoComplete.html">TAutoComplete</a>, 
+			<a href="class-TAutoCompleteEventParameter.html">TAutoCompleteEventParameter</a>, 
+			<a href="class-TActiveCheckBox.html">TActiveCheckBox</a>, 
+			<a href="class-TBaseActiveCallbackControl.html">TBaseActiveCallbackControl</a>, 
+			<a href="class-TBaseDataList.html">TBaseDataList</a>, 
+			<a href="class-TBaseValidator.html">TBaseValidator</a>, 
+			<a href="class-TBoundColumn.html">TBoundColumn</a>, 
+			<a href="class-TBroadcastEventParameter.html">TBroadcastEventParameter</a>, 
+			<a href="class-TBrowserLogRoute.html">TBrowserLogRoute</a>, 
+			<a href="class-TBulletedList.html">TBulletedList</a>, 
+			<a href="class-TBulletedListEventParameter.html">TBulletedListEventParameter</a>, 
+			<a href="class-TButton.html">TButton</a>, 
+			<a href="class-TButtonColumn.html">TButtonColumn</a>, 
+			<a href="class-TActiveCheckBoxColumn.html">TActiveCheckBoxColumn</a>, 
+			<a href="class-TCache.html">TCache</a>, 
+			<a href="class-TCacheDependencyList.html">TCacheDependencyList</a>, 
+			<a href="class-TCacheHttpSession.html">TCacheHttpSession</a>, 
+			<a href="class-TCallback.html">TCallback</a>, 
+			<a href="class-TCallbackClientScript.html">TCallbackClientScript</a>, 
+			<a href="class-TCallbackClientSide.html">TCallbackClientSide</a>, 
+			<a href="class-TCallbackErrorHandler.html">TCallbackErrorHandler</a>, 
+			<a href="class-TCallbackEventParameter.html">TCallbackEventParameter</a>, 
+			<a href="class-TCallbackOptions.html">TCallbackOptions</a>, 
+			<a href="class-TCallbackResponseAdapter.html">TCallbackResponseAdapter</a>, 
+			<a href="class-TActiveCheckBoxList.html">TActiveCheckBoxList</a>, 
+			<a href="class-TCallbackResponseWriter.html">TCallbackResponseWriter</a>, 
+			<a href="class-TCallChain.html">TCallChain</a>, 
+			<a href="class-TCaptcha.html">TCaptcha</a>, 
+			<a href="class-TCaptchaValidator.html">TCaptchaValidator</a>, 
+			<a href="class-TChainedCacheDependency.html">TChainedCacheDependency</a>, 
+			<a href="class-TCheckBox.html">TCheckBox</a>, 
+			<a href="class-TCheckBoxColumn.html">TCheckBoxColumn</a>, 
+			<a href="class-TCheckBoxList.html">TCheckBoxList</a>, 
+			<a href="class-TChoiceFormat.html">TChoiceFormat</a>, 
+			<a href="class-TCircleHotSpot.html">TCircleHotSpot</a>, 
+			<a href="class-TActiveClientScript.html">TActiveClientScript</a>, 
+			<a href="class-TClassBehaviorEventParameter.html">TClassBehaviorEventParameter</a>, 
+			<a href="class-TClientScript.html">TClientScript</a>, 
+			<a href="class-TClientScriptManager.html">TClientScriptManager</a>, 
+			<a href="class-TClientSideValidationSummaryOptions.html">TClientSideValidationSummaryOptions</a>, 
+			<a href="class-TColorPicker.html">TColorPicker</a>, 
+			<a href="class-TColorPickerClientSide.html">TColorPickerClientSide</a>, 
+			<a href="class-TCommandEventParameter.html">TCommandEventParameter</a>, 
+			<a href="class-TCompareValidator.html">TCompareValidator</a>, 
+			<a href="class-TCompleteWizardStep.html">TCompleteWizardStep</a>, 
+			<a href="class-TCompositeControl.html">TCompositeControl</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Author:</b>
+				Brad Anderson &lt;<a
+href="mailto:javalizard&#64;mac.com">javalizard&#64;<!-- -->mac.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0<br />
+		<b>Located at</b> TComponent.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( )</code>
+
+		<div class="description short">
+			
+<p>The common __construct If desired by the new object, this will auto install
+and listen to global event functions as defined by the object via 'fx' methods.
+This also attaches any predefined behaviors. This function installs all class
+behaviors in a class hierarchy from the deepest subclass through each parent to
+the top most class, TComponent.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The common __construct If desired by the new object, this will auto install
+and listen to global event functions as defined by the object via 'fx' methods.
+This also attaches any predefined behaviors. This function installs all class
+behaviors in a class hierarchy from the deepest subclass through each parent to
+the top most class, TComponent.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAutoGlobalListen" id="_getAutoGlobalListen">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAutoGlobalListen">#</a>
+		<code>getAutoGlobalListen( )</code>
+
+		<div class="description short">
+			
+<p>Tells TComponent whether or not to automatically listen to global events.
+Defaults to false because PHP variable cleanup is affected if this is true. When
+unsetting a variable that is listening to global events, <code><a href="class-TComponent.html#_unlisten">TComponent::unlisten()</a></code> must
+explicitly be called when cleaning variables allocation or else the global event
+registry will contain references to the old object. This is true for PHP 5.4</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Tells TComponent whether or not to automatically listen to global events.
+Defaults to false because PHP variable cleanup is affected if this is true. When
+unsetting a variable that is listening to global events, <code><a href="class-TComponent.html#_unlisten">TComponent::unlisten()</a></code> must
+explicitly be called when cleaning variables allocation or else the global event
+registry will contain references to the old object. This is true for PHP 5.4</p>
+
+<p>Override this method by a subclass to change the setting. When set to true,
+this will enable <code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code> to call <code><a href="class-TComponent.html#_listen">TComponent::listen()</a></code>.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether or not to auto listen to global events during <code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code>,
+default false<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code>__destruct( )</code>
+
+		<div class="description short">
+			
+<p>The common __destruct This unlistens from the global event routines if
+listening</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The common __destruct This unlistens from the global event routines if
+listening</p>
+
+<p>PHP 5.3 does not __destruct objects when they are nulled and thus unlisten
+must be called must be explicitly called.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClassHierarchy" id="_getClassHierarchy">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClassHierarchy">#</a>
+		<code>getClassHierarchy( <span>boolean <var>$lowercase</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>This returns an array of the class name and the names of all its parents. The
+base object first, <code><a href="class-TComponent.html">TComponent</a></code>, and the deepest subclass is last.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This returns an array of the class name and the names of all its parents. The
+base object first, <code><a href="class-TComponent.html">TComponent</a></code>, and the deepest subclass is last.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lowercase</var></dt>
+					<dd><code>boolean</code><br>optional should the names be all lowercase true/false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>array of strings being the class hierarchy of $this.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listen" id="_listen">
+
+		<td class="attributes"><code>
+			 public 
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_listen">#</a>
+		<code>listen( )</code>
+
+		<div class="description short">
+			
+<p>This adds an object's fx event handlers into the global broadcaster to listen
+into any broadcast global events called through <code><a href="class-TComponent.html#_raiseEvent">TComponent::raiseEvent()</a></code></p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This adds an object's fx event handlers into the global broadcaster to listen
+into any broadcast global events called through <code><a href="class-TComponent.html#_raiseEvent">TComponent::raiseEvent()</a></code></p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyListen(<span
+class="php-var">$globalEvents</span>[, <span
+class="php-var">$chain</span>]) {
+                <span
+class="php-var">$this</span>-&gt;listen(); <span
+class="php-comment">//eg</span>
+}
+</pre>
+
+<p>to be executed when listen is called. All attached behaviors are notified
+through dyListen.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>numeric</code><br>the number of global events that were registered to the global event registry<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unlisten" id="_unlisten">
+
+		<td class="attributes"><code>
+			 public 
+			numeric
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unlisten">#</a>
+		<code>unlisten( )</code>
+
+		<div class="description short">
+			
+<p>this removes an object's fx events from the global broadcaster</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>this removes an object's fx events from the global broadcaster</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyUnlisten(<span
+class="php-var">$globalEvents</span>[, <span
+class="php-var">$chain</span>]) {
+                <span
+class="php-var">$this</span>-&gt;behaviorUnlisten(); <span
+class="php-comment">//eg</span>
+}
+</pre>
+
+<p>to be executed when listen is called. All attached behaviors are notified
+through dyUnlisten.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>numeric</code><br>the number of global events that were unregistered from the global event
+registry<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getListeningToGlobalEvents" id="_getListeningToGlobalEvents">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getListeningToGlobalEvents">#</a>
+		<code>getListeningToGlobalEvents( )</code>
+
+		<div class="description short">
+			
+<p>Gets the state of listening to global events</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the state of listening to global events</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>is Listening to global broadcast enabled<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code>__call( <span>string <var>$method</var></span>, <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Calls a method. Do not call this method directly. This is a PHP magic method
+that we override to allow behaviors, dynamic events (intra-object/behavior
+events), undefined dynamic and global events, and to allow using the following
+syntax to call a property setter or getter.</p>
+
+<pre>
+<span class="php-var">$this</span>-&gt;getPropertyName(<span
+class="php-var">$value</span>); <span
+class="php-comment">// if there's a $this-&gt;getjsPropertyName() method</span>
+<span
+class="php-var">$this</span>-&gt;setPropertyName(<span
+class="php-var">$value</span>); <span
+class="php-comment">// if there's a $this-&gt;setjsPropertyName() method</span>
+</pre>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calls a method. Do not call this method directly. This is a PHP magic method
+that we override to allow behaviors, dynamic events (intra-object/behavior
+events), undefined dynamic and global events, and to allow using the following
+syntax to call a property setter or getter.</p>
+
+<pre>
+<span class="php-var">$this</span>-&gt;getPropertyName(<span
+class="php-var">$value</span>); <span
+class="php-comment">// if there's a $this-&gt;getjsPropertyName() method</span>
+<span
+class="php-var">$this</span>-&gt;setPropertyName(<span
+class="php-var">$value</span>); <span
+class="php-comment">// if there's a $this-&gt;setjsPropertyName() method</span>
+</pre>
+
+<p>Additional object behaviors override class behaviors. dynamic and global
+events do not fail even if they aren't implemented. Any intra-object/behavior
+dynamic events that are not implemented by the behavior return the first
+function paramater or null when no parameters are specified.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>method name that doesn't exist and is being called on the object</dd>
+					<dt><var>$args</var></dt>
+					<dd><code>mixed</code><br>method parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>result of the method call, or false if 'fx' or 'dy' function but is not found in
+the class, otherwise it runs<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>If the property is not defined or read-only or method is undefined<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code>__get( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a property value or an event handler list by property or event name.
+Do not call this method. This is a PHP magic method that we override to allow
+using the following syntax to read a property:</p>
+
+<pre>
+<span class="php-var">$value</span>=<span
+class="php-var">$component</span>-&gt;PropertyName;
+<span
+class="php-var">$value</span>=<span
+class="php-var">$component</span>-&gt;jsPropertyName; <span
+class="php-comment">// return JavaScript literal</span>
+</pre>
+
+<p>and to obtain the event handler list for an event,</p>
+
+<pre>
+<span class="php-var">$eventHandlerList</span>=<span
+class="php-var">$component</span>-&gt;EventName;
+</pre>
+
+<p>This will also return the global event handler list when specifing an 'fx'
+event,</p>
+
+<pre>
+<span class="php-var">$globalEventHandlerList</span>=<span
+class="php-var">$component</span>-&gt;fxEventName;
+</pre>
+
+<p>When behaviors are enabled, this will return the behavior of a specific name,
+a property of a behavior, or an object 'on' event defined by the behavior.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a property value or an event handler list by property or event name.
+Do not call this method. This is a PHP magic method that we override to allow
+using the following syntax to read a property:</p>
+
+<pre>
+<span class="php-var">$value</span>=<span
+class="php-var">$component</span>-&gt;PropertyName;
+<span
+class="php-var">$value</span>=<span
+class="php-var">$component</span>-&gt;jsPropertyName; <span
+class="php-comment">// return JavaScript literal</span>
+</pre>
+
+<p>and to obtain the event handler list for an event,</p>
+
+<pre>
+<span class="php-var">$eventHandlerList</span>=<span
+class="php-var">$component</span>-&gt;EventName;
+</pre>
+
+<p>This will also return the global event handler list when specifing an 'fx'
+event,</p>
+
+<pre>
+<span class="php-var">$globalEventHandlerList</span>=<span
+class="php-var">$component</span>-&gt;fxEventName;
+</pre>
+
+<p>When behaviors are enabled, this will return the behavior of a specific name,
+a property of a behavior, or an object 'on' event defined by the behavior.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name or the event name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the property value or the event handler list as <code><a href="class-TPriorityList.html">TPriorityList</a></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the property/event is not defined.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set">#</a>
+		<code>__set( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets value of a component property. Do not call this method. This is a PHP
+magic method that we override to allow using the following syntax to set a
+property or attach an event handler.</p>
+
+<pre>
+<span class="php-var">$this</span>-&gt;PropertyName=<span
+class="php-var">$value</span>;
+<span
+class="php-var">$this</span>-&gt;jsPropertyName=<span
+class="php-var">$value</span>; <span
+class="php-comment">// $value will be treated as a JavaScript literal</span>
+<span
+class="php-var">$this</span>-&gt;EventName=<span
+class="php-var">$handler</span>;
+<span
+class="php-var">$this</span>-&gt;fxEventName=<span
+class="php-var">$handler</span>; <span
+class="php-comment">//global event listener</span>
+</pre>
+
+<p>When behaviors are enabled, this will also set a behaviors properties and
+events.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets value of a component property. Do not call this method. This is a PHP
+magic method that we override to allow using the following syntax to set a
+property or attach an event handler.</p>
+
+<pre>
+<span class="php-var">$this</span>-&gt;PropertyName=<span
+class="php-var">$value</span>;
+<span
+class="php-var">$this</span>-&gt;jsPropertyName=<span
+class="php-var">$value</span>; <span
+class="php-comment">// $value will be treated as a JavaScript literal</span>
+<span
+class="php-var">$this</span>-&gt;EventName=<span
+class="php-var">$handler</span>;
+<span
+class="php-var">$this</span>-&gt;fxEventName=<span
+class="php-var">$handler</span>; <span
+class="php-comment">//global event listener</span>
+</pre>
+
+<p>When behaviors are enabled, this will also set a behaviors properties and
+events.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name or event name</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>the property value or event handler</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>If the property is not defined or read-only.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__isset" id="___isset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___isset">#</a>
+		<code>__isset( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks if a property value is null, there are no events in the object event
+list or global event list registered under the name, and, if behaviors are
+enabled, Do not call this method. This is a PHP magic method that we override to
+allow using isset() to detect if a component property is set or not. This also
+works for global events. When behaviors are enabled, it will check for a
+behavior of the specified name, and also check the behavior for events and
+properties.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if a property value is null, there are no events in the object event
+list or global event list registered under the name, and, if behaviors are
+enabled, Do not call this method. This is a PHP magic method that we override to
+allow using isset() to detect if a component property is set or not. This also
+works for global events. When behaviors are enabled, it will check for a
+behavior of the specified name, and also check the behavior for events and
+properties.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name or the event name</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__unset" id="___unset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___unset">#</a>
+		<code>__unset( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets a component property to be null. Clears the object or global events.
+When enabled, loops through all behaviors and unsets the property or event. Do
+not call this method. This is a PHP magic method that we override to allow using
+unset() to set a component property to be null.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets a component property to be null. Clears the object or global events.
+When enabled, loops through all behaviors and unsets the property or event. Do
+not call this method. This is a PHP magic method that we override to allow using
+unset() to set a component property to be null.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name or the event name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the property is read only.<br />
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasProperty" id="_hasProperty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasProperty">#</a>
+		<code>hasProperty( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a property is defined. A property is defined if there is a
+getter or setter method defined in the class. Note, property names are
+case-insensitive.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a property is defined. A property is defined if there is a
+getter or setter method defined in the class. Note, property names are
+case-insensitive.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the property is defined<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="canGetProperty" id="_canGetProperty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_canGetProperty">#</a>
+		<code>canGetProperty( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a property can be read. A property can be read if the
+class has a getter method for the property name. Note, property name is
+case-insensitive. This also checks for getjs. When enabled, it loops through all
+active behaviors for the get property when undefined by the object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a property can be read. A property can be read if the
+class has a getter method for the property name. Note, property name is
+case-insensitive. This also checks for getjs. When enabled, it loops through all
+active behaviors for the get property when undefined by the object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the property can be read<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="canSetProperty" id="_canSetProperty">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_canSetProperty">#</a>
+		<code>canSetProperty( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether a property can be set. A property can be written if the
+class has a setter method for the property name. Note, property name is
+case-insensitive. This also checks for setjs. When enabled, it loops through all
+active behaviors for the set property when undefined by the object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether a property can be set. A property can be written if the
+class has a setter method for the property name. Note, property name is
+case-insensitive. This also checks for setjs. When enabled, it loops through all
+active behaviors for the set property when undefined by the object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the property can be written<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSubProperty" id="_getSubProperty">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSubProperty">#</a>
+		<code>getSubProperty( <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Evaluates a property path. A property path is a sequence of property names
+concatenated by '.' character. For example, 'Parent.Page' refers to the 'Page'
+property of the component's 'Parent' property value (which should be a component
+also). When a property is not defined by an object, this also loops through all
+active behaviors of the object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Evaluates a property path. A property path is a sequence of property names
+concatenated by '.' character. For example, 'Parent.Page' refers to the 'Page'
+property of the component's 'Parent' property value (which should be a component
+also). When a property is not defined by an object, this also loops through all
+active behaviors of the object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>property path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the property path value<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSubProperty" id="_setSubProperty">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSubProperty">#</a>
+		<code>setSubProperty( <span>string <var>$path</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets a value to a property path. A property path is a sequence of property
+names concatenated by '.' character. For example, 'Parent.Page' refers to the
+'Page' property of the component's 'Parent' property value (which should be a
+component also). When a property is not defined by an object, this also loops
+through all active behaviors of the object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets a value to a property path. A property path is a sequence of property
+names concatenated by '.' character. For example, 'Parent.Page' refers to the
+'Page' property of the component's 'Parent' property value (which should be a
+component also). When a property is not defined by an object, this also loops
+through all active behaviors of the object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>property path</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>the property path value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasEvent" id="_hasEvent">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasEvent">#</a>
+		<code>hasEvent( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines whether an event is defined. An event is defined if the class has
+a method whose name is the event name prefixed with 'on', 'fx', or 'dy'. Every
+object responds to every 'fx' and 'dy' event as they are in a universally
+accepted event space. 'on' event must be declared by the object. When enabled,
+this will loop through all active behaviors for 'on' events defined by the
+behavior. Note, event name is case-insensitive.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines whether an event is defined. An event is defined if the class has
+a method whose name is the event name prefixed with 'on', 'fx', or 'dy'. Every
+object responds to every 'fx' and 'dy' event as they are in a universally
+accepted event space. 'on' event must be declared by the object. When enabled,
+this will loop through all active behaviors for 'on' events defined by the
+behavior. Note, event name is case-insensitive.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the event name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasEventHandler" id="_hasEventHandler">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasEventHandler">#</a>
+		<code>hasEventHandler( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks if an event has any handlers. This function also checks through all
+the behaviors for 'on' events when behaviors are enabled. 'dy' dynamic events
+are not handled by this function.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if an event has any handlers. This function also checks through all
+the behaviors for 'on' events when behaviors are enabled. 'dy' dynamic events
+are not handled by this function.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the event name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether an event has been attached one or several handlers<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEventHandlers" id="_getEventHandlers">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPriorityList.html">TPriorityList</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEventHandlers">#</a>
+		<code>getEventHandlers( <span>mixed <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the list of attached event handlers for an 'on' or 'fx' event. This
+function also checks through all the behaviors for 'on' event lists when
+behaviors are enabled.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the list of attached event handlers for an 'on' or 'fx' event. This
+function also checks through all the behaviors for 'on' event lists when
+behaviors are enabled.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPriorityList.html">TPriorityList</a></code></code><br>list of attached event handlers for an event<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the event is not defined<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attachEventHandler" id="_attachEventHandler">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attachEventHandler">#</a>
+		<code>attachEventHandler( <span>string <var>$name</var></span>, <span>callable <var>$handler</var></span>, <span>numeric|null <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Attaches an event handler to an event.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Attaches an event handler to an event.</p>
+
+<p>The handler must be a valid PHP callback, i.e., a string referring to a
+global function name, or an array containing two elements with the first element
+being an object and the second element a method name of the object. In Prado,
+you can also use method path to refer to an event handler. For example,
+array($object,'Parent.buttonClicked') uses a method path that refers to the
+method $object-&gt;Parent-&gt;buttonClicked(...).</p>
+
+<p>The event handler must be of the following signature,</p>
+
+<pre>
+<span class="php-keyword1">function</span> handlerName(<span
+class="php-var">$sender</span>, <span class="php-var">$param</span>) {}
+<span
+class="php-keyword1">function</span> handlerName(<span
+class="php-var">$sender</span>, <span class="php-var">$param</span>, <span
+class="php-var">$name</span>) {}
+</pre>
+
+<p>where $sender represents the object that raises the event, and $param is the
+event parameter. $name refers to the event name being handled.</p>
+
+<p>This is a convenient method to add an event handler. It is equivalent to
+<code><a href="class-TComponent.html#_getEventHandlers">TComponent::getEventHandlers()</a></code>($name)-&gt;add($handler). For complete management of
+event handlers, use <code><a href="class-TComponent.html#_getEventHandlers">TComponent::getEventHandlers()</a></code> to get the event handler list
+first, and then do various <code><a href="class-TPriorityList.html">TPriorityList</a></code> operations to append, insert or
+remove event handlers. You may also do these operations like getting and setting
+properties, e.g.,</p>
+
+<pre>
+<span class="php-var">$component</span>-&gt;OnClick[]=<span
+class="php-keyword1">array</span>(<span class="php-var">$object</span>,<span
+class="php-quote">'buttonClicked'</span>);
+<span
+class="php-var">$component</span>-&gt;OnClick-&gt;insertAt(<span
+class="php-num">0</span>,<span class="php-keyword1">array</span>(<span
+class="php-var">$object</span>,<span
+class="php-quote">'buttonClicked'</span>));
+</pre>
+
+<p>which are equivalent to the following</p>
+
+<pre>
+<span class="php-var">$component</span>-&gt;getEventHandlers(<span
+class="php-quote">'OnClick'</span>)-&gt;add(<span
+class="php-keyword1">array</span>(<span class="php-var">$object</span>,<span
+class="php-quote">'buttonClicked'</span>));
+<span
+class="php-var">$component</span>-&gt;getEventHandlers(<span
+class="php-quote">'OnClick'</span>)-&gt;insertAt(<span
+class="php-num">0</span>,<span class="php-keyword1">array</span>(<span
+class="php-var">$object</span>,<span
+class="php-quote">'buttonClicked'</span>));
+</pre>
+
+<p>Due to the nature of <code><a href="class-TComponent.html#_getEventHandlers">TComponent::getEventHandlers()</a></code>, any active behaviors defining
+new 'on' events, this method will pass through to the behavior
+transparently.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the event name</dd>
+					<dt><var>$handler</var></dt>
+					<dd><code>callable</code><br>the event handler</dd>
+					<dt><var>$priority</var></dt>
+					<dd><code>numeric|null</code><br>the priority of the handler, defaults to null which translates into the default
+priority of 10.0 within <code><a href="class-TPriorityList.html">TPriorityList</a></code></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the event does not exist<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="detachEventHandler" id="_detachEventHandler">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_detachEventHandler">#</a>
+		<code>detachEventHandler( <span>string <var>$name</var></span>, <span>callable <var>$handler</var></span>, <span>numeric|false|null <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Detaches an existing event handler. This method is the opposite of <code><a href="class-TComponent.html#_attachEventHandler">TComponent::attachEventHandler()</a></code>. It will detach any 'on' events definedb by an objects
+active behaviors as well.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Detaches an existing event handler. This method is the opposite of <code><a href="class-TComponent.html#_attachEventHandler">TComponent::attachEventHandler()</a></code>. It will detach any 'on' events definedb by an objects
+active behaviors as well.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>event name</dd>
+					<dt><var>$handler</var></dt>
+					<dd><code>callable</code><br>the event handler to be removed</dd>
+					<dt><var>$priority</var></dt>
+					<dd><code>numeric|false|null</code><br>the priority of the handler, defaults to false which translates to an item of
+any priority within <code><a href="class-TPriorityList.html">TPriorityList</a></code>; null means the default priority</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>if the removal is successful<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="raiseEvent" id="_raiseEvent">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_raiseEvent">#</a>
+		<code>raiseEvent( <span>string <var>$name</var></span>, <span>mixed <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span>, <span>numeric <var>$responsetype</var> = <span class="php-keyword1">null</span></span>, <span>function <var>$postfunction</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises an event. This raises both inter-object 'on' events and global 'fx'
+events. This method represents the happening of an event and will invoke all
+attached event handlers for the event in <code><a href="class-TPriorityList.html">TPriorityList</a></code> order. This
+method does not handle intra-object/behavior dynamic 'dy' events.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises an event. This raises both inter-object 'on' events and global 'fx'
+events. This method represents the happening of an event and will invoke all
+attached event handlers for the event in <code><a href="class-TPriorityList.html">TPriorityList</a></code> order. This
+method does not handle intra-object/behavior dynamic 'dy' events.</p>
+
+<p>There are ways to handle event responses. By defailt EVENT_RESULT_FILTER, all event responses are stored in an array, filtered for
+null responses, and returned. If EVENT_RESULT_ALL is specified, all
+returned results will be stored along with the sender and param in an array</p>
+
+<pre>
+<span class="php-var">$result</span>[] = <span
+class="php-keyword1">array</span>(<span
+class="php-quote">'sender'</span>=&gt;<span class="php-var">$sender</span>,<span
+class="php-quote">'param'</span>=&gt;<span class="php-var">$param</span>,<span
+class="php-quote">'response'</span>=&gt;<span
+class="php-var">$response</span>);
+</pre>
+
+<p>If EVENT_RESULT_FEED_FORWARD is specified, then each handler result
+is then fed forward as the parameters for the next event. This allows for events
+to filter data directly by affecting the event parameters</p>
+
+<p>If a callable function is set in the response type or the post function
+filter is specified then the result of each called event handler is post
+processed by the callable function. Used in combination with EVENT_RESULT_FEED_FORWARD, any event (and its result) can be chained.</p>
+
+<p>When raising a global 'fx' event, registered handlers in the global event
+list for <code><a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER">TComponent::<b>GLOBAL_RAISE_EVENT_LISTENER</b></a></code> are always added into the set of
+event handlers. In this way, these global events are always raised for every
+global 'fx' event. The registered handlers for global raiseEvent events have
+priorities. Any registered global raiseEvent event handlers with a priority less
+than zero are added before the main event handlers being raised and any
+registered global raiseEvent event handlers with a priority equal or greater
+than zero are added after the main event handlers being raised. In this way all
+<code><a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER">TComponent::<b>GLOBAL_RAISE_EVENT_LISTENER</b></a></code> handlers are always called for every raised
+'fx' event.</p>
+
+<p>Behaviors may implement the following functions:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyPreRaiseEvent(<span
+class="php-var">$name</span>,<span class="php-var">$sender</span>,<span
+class="php-var">$param</span>,<span class="php-var">$responsetype</span>,<span
+class="php-var">$postfunction</span>[, <span
+class="php-var">$chain</span>]) {
+        <span
+class="php-keyword1">return</span> <span class="php-var">$name</span>; <span
+class="php-comment">//eg, the event name may be filtered/changed</span>
+ }
+<span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyIntraRaiseEventTestHandler(<span
+class="php-var">$handler</span>,<span class="php-var">$sender</span>,<span
+class="php-var">$param</span>,<span class="php-var">$name</span>[, <span
+class="php-var">$chain</span>]) {
+        <span
+class="php-keyword1">return</span> <span class="php-keyword1">true</span>; <span
+class="php-comment">//should this particular handler be executed?  true/false</span>
+ }
+ <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyIntraRaiseEventPostHandler(<span
+class="php-var">$name</span>,<span class="php-var">$sender</span>,<span
+class="php-var">$param</span>,<span class="php-var">$handler</span>,<span
+class="php-var">$response</span>[, <span
+class="php-var">$chain</span>]) {
+        <span
+class="php-comment">//contains the per handler response</span>
+ }
+ <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyPostRaiseEvent(<span
+class="php-var">$responses</span>,<span class="php-var">$name</span>,<span
+class="php-var">$sender</span>,<span class="php-var">$param</span>,<span
+class="php-var">$responsetype</span>,<span
+class="php-var">$postfunction</span>[, <span
+class="php-var">$chain</span>]) {
+        <span
+class="php-keyword1">return</span> <span
+class="php-var">$responses</span>;
+ }
+</pre>
+
+<p>to be executed when raiseEvent is called. The 'intra' dynamic events are
+called per handler in the handler loop.</p>
+
+<p>dyPreRaiseEvent has the effect of being able to change the event being
+raised. This intra object/behavior event returns the name of the desired event
+to be raised. It will pass through if no dynamic event is specified, or if the
+original event name is returned. dyIntraRaiseEventTestHandler returns true or
+false as to whether a specific handler should be called for a specific raised
+event (and associated event arguments) dyIntraRaiseEventPostHandler does not
+return anything. This allows behaviors to access the results of an event handler
+in the per handler loop. dyPostRaiseEvent returns the responses. This allows for
+any post processing of the event results from the sum of all event handlers</p>
+
+<p>When handling a catch-all __dycall, the method name is the name of
+the event and the parameters are the sender, the param, and then the name of the
+event.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the event name</dd>
+					<dt><var>$sender</var></dt>
+					<dd><code>mixed</code><br>the event sender object</dd>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TEventParameter.html">TEventParameter</a></code></code><br>the event parameter</dd>
+					<dt><var>$responsetype</var></dt>
+					<dd><code>numeric</code><br>how the results of the event are tabulated. default: EVENT_RESULT_FILTER
+The default filters out null responses. optional</dd>
+					<dt><var>$postfunction</var></dt>
+					<dd><code>function</code><br>any per handler filtering of the response result needed is passed through this
+if not null. default: null. optional</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the results of the event<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the event is undefined<br />
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>If an event handler is invalid<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="evaluateExpression" id="_evaluateExpression">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_evaluateExpression">#</a>
+		<code>evaluateExpression( <span>string <var>$expression</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Evaluates a PHP expression in the context of this control.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Evaluates a PHP expression in the context of this control.</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyEvaluateExpressionFilter(<span
+class="php-var">$expression</span>, <span
+class="php-var">$chain</span>) {
+                <span
+class="php-keyword1">return</span> <span
+class="php-var">$chain</span>-&gt;dyEvaluateExpressionFilter(<span
+class="php-keyword2">str_replace</span>(<span
+class="php-quote">'foo'</span>, <span class="php-quote">'bar'</span>, <span
+class="php-var">$expression</span>)); <span
+class="php-comment">//example</span>
+}
+</pre>
+
+<p>to be executed when evaluateExpression is called. All attached behaviors are
+notified through dyEvaluateExpressionFilter. The chaining is important in this
+function due to the filtering pass-through effect.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$expression</var></dt>
+					<dd><code>string</code><br>PHP expression</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the expression result<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the expression is invalid<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="evaluateStatements" id="_evaluateStatements">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_evaluateStatements">#</a>
+		<code>evaluateStatements( <span>string <var>$statements</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Evaluates a list of PHP statements.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Evaluates a list of PHP statements.</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyEvaluateStatementsFilter(<span
+class="php-var">$statements</span>, <span
+class="php-var">$chain</span>) {
+                <span
+class="php-keyword1">return</span> <span
+class="php-var">$chain</span>-&gt;dyEvaluateStatementsFilter(<span
+class="php-keyword2">str_replace</span>(<span
+class="php-quote">'foo'</span>, <span class="php-quote">'bar'</span>, <span
+class="php-var">$statements</span>)); <span
+class="php-comment">//example</span>
+}
+</pre>
+
+<p>to be executed when evaluateStatements is called. All attached behaviors are
+notified through dyEvaluateStatementsFilter. The chaining is important in this
+function due to the filtering pass-through effect.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statements</var></dt>
+					<dd><code>string</code><br>PHP statements</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>content echoed or printed by the PHP statements<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the statements are invalid<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createdOnTemplate" id="_createdOnTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createdOnTemplate">#</a>
+		<code>createdOnTemplate( <span><code><a href="class-TComponent.html">TComponent</a></code> <var>$parent</var></span> )</code>
+
+		<div class="description short">
+			
+<p>This method is invoked after the component is instantiated by a template.
+When this method is invoked, the component's properties have been initialized.
+The default implementation of this method will invoke the potential parent
+component's <code><a href="class-TComponent.html#_addParsedObject">TComponent::addParsedObject()</a></code>. This method can be overridden.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This method is invoked after the component is instantiated by a template.
+When this method is invoked, the component's properties have been initialized.
+The default implementation of this method will invoke the potential parent
+component's <code><a href="class-TComponent.html#_addParsedObject">TComponent::addParsedObject()</a></code>. This method can be overridden.</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyCreatedOnTemplate(<span
+class="php-var">$parent</span>, <span
+class="php-var">$chain</span>) {
+                <span
+class="php-keyword1">return</span> <span
+class="php-var">$chain</span>-&gt;dyCreatedOnTemplate(<span
+class="php-var">$parent</span>); <span
+class="php-comment">//example</span>
+ }
+</pre>
+
+<p>to be executed when createdOnTemplate is called. All attached behaviors are
+notified through dyCreatedOnTemplate.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$parent</var></dt>
+					<dd><code><code><a href="class-TComponent.html">TComponent</a></code></code><br>potential parent of this control</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TComponent.html#_addParsedObject">TComponent::addParsedObject()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addParsedObject" id="_addParsedObject">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addParsedObject">#</a>
+		<code>addParsedObject( <span>string|<code><a href="class-TComponent.html">TComponent</a></code> <var>$object</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Processes an object that is created during parsing template. The object can
+be either a component or a static text string. This method can be overridden to
+customize the handling of newly created objects in template. Only framework
+developers and control developers should use this method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Processes an object that is created during parsing template. The object can
+be either a component or a static text string. This method can be overridden to
+customize the handling of newly created objects in template. Only framework
+developers and control developers should use this method.</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyAddParsedObject(<span
+class="php-var">$object</span>[, <span
+class="php-var">$chain</span>]) {
+ }
+</pre>
+
+<p>to be executed when addParsedObject is called. All attached behaviors are
+notified through dyAddParsedObject.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$object</var></dt>
+					<dd><code>string|<code><a href="class-TComponent.html">TComponent</a></code></code><br>text string or component parsed and instantiated in template</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TComponent.html#_createdOnTemplate">TComponent::createdOnTemplate()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fxAttachClassBehavior" id="_fxAttachClassBehavior">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fxAttachClassBehavior">#</a>
+		<code>fxAttachClassBehavior( <span>mixed <var>$sender</var></span>, <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>This is the method registered for all instanced objects should a class
+behavior be added after the class is instanced. Only when the class to which the
+behavior is being added is in this object's class hierarchy, via <code><a href="class-TComponent.html#_getClassHierarchy">TComponent::getClassHierarchy()</a></code>, is the behavior added to this instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This is the method registered for all instanced objects should a class
+behavior be added after the class is instanced. Only when the class to which the
+behavior is being added is in this object's class hierarchy, via <code><a href="class-TComponent.html#_getClassHierarchy">TComponent::getClassHierarchy()</a></code>, is the behavior added to this instance.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><code>mixed</code><br>$sender the application</dd>
+					<dt><var>$param</var></dt>
+					<dd><code>mixed</code><br>$param TClassBehaviorEventParameter</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fxDetachClassBehavior" id="_fxDetachClassBehavior">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fxDetachClassBehavior">#</a>
+		<code>fxDetachClassBehavior( <span>mixed <var>$sender</var></span>, <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>This is the method registered for all instanced objects should a class
+behavior be removed after the class is instanced. Only when the class to which
+the behavior is being added is in this object's class hierarchy, via <code><a href="class-TComponent.html#_getClassHierarchy">TComponent::getClassHierarchy()</a></code>, is the behavior removed from this instance.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This is the method registered for all instanced objects should a class
+behavior be removed after the class is instanced. Only when the class to which
+the behavior is being added is in this object's class hierarchy, via <code><a href="class-TComponent.html#_getClassHierarchy">TComponent::getClassHierarchy()</a></code>, is the behavior removed from this instance.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><code>mixed</code><br>$sender the application</dd>
+					<dt><var>$param</var></dt>
+					<dd><code>mixed</code><br>$param TClassBehaviorEventParameter</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attachClassBehavior" id="_attachClassBehavior">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attachClassBehavior">#</a>
+		<code>attachClassBehavior( <span>string <var>$name</var></span>, <span>object|string <var>$behavior</var></span>, <span>string|class <var>$class</var> = <span class="php-keyword1">null</span></span>, <span>numeric|null <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>This will add a class behavior to all classes instanced (that are listening)
+and future newly instanced objects. This registers the behavior for future
+instances and pushes the changes to all the instances that are listening as
+well. The universal class behaviors are stored in an inverted stack with the
+latest class behavior being at the first position in the array. This is done so
+class behaviors are added last first.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This will add a class behavior to all classes instanced (that are listening)
+and future newly instanced objects. This registers the behavior for future
+instances and pushes the changes to all the instances that are listening as
+well. The universal class behaviors are stored in an inverted stack with the
+latest class behavior being at the first position in the array. This is done so
+class behaviors are added last first.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>name the key of the class behavior</dd>
+					<dt><var>$behavior</var></dt>
+					<dd><code>object|string</code><br>class behavior or name of the object behavior per instance</dd>
+					<dt><var>$class</var></dt>
+					<dd><code>string|class</code><br>string of class or class on which to attach this behavior. Defaults to null
+which will error but more important, if this is on PHP 5.3 it will use Late
+Static Binding to derive the class it should extend. &lt;code&gt;
+TPanel::attachClassBehavior('javascripts', (new
+TJsPanelBehavior())-&gt;init($this)); &lt;/code&gt;</dd>
+					<dt><var>$priority</var></dt>
+					<dd><code>numeric|null</code><br>priority of behavior, default: null the default priority of the <code><a href="class-TPriorityList.html">TPriorityList</a></code> Optional.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the class behavior is being added to a <code><a href="class-TComponent.html">TComponent</a></code>; due to recursion.<br />
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the class behavior is already defined<br />
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="detachClassBehavior" id="_detachClassBehavior">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_detachClassBehavior">#</a>
+		<code>detachClassBehavior( <span>mixed <var>$name</var></span>, <span>mixed <var>$class</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>This will remove a behavior from a class. It unregisters it from future
+instances and pulls the changes from all the instances that are listening as
+well. PHP 5.3 uses Late Static Binding to derive the static class upon which
+this method is called.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This will remove a behavior from a class. It unregisters it from future
+instances and pulls the changes from all the instances that are listening as
+well. PHP 5.3 uses Late Static Binding to derive the static class upon which
+this method is called.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>mixed</code><br>$name the key of the class behavior</dd>
+					<dt><var>$class</var></dt>
+					<dd><code>mixed</code><br>$class string class on which to attach this behavior. Defaults to null.</dd>
+					<dt><var>$priority</var></dt>
+					<dd><code>mixed</code><br>$priority numeric|null|false priority. false is any priority, null is default
+<code><a href="class-TPriorityList.html">TPriorityList</a></code> priority, and numeric is a specific priority.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code>Exception</code><br>if the the class cannot be derived from Late Static Binding and is not not
+supplied as a parameter.<br />
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="asa" id="_asa">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-IBehavior.html">IBehavior</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_asa">#</a>
+		<code>asa( <span>string <var>$behaviorname</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the named behavior object. The name 'asa' stands for 'as a'.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the named behavior object. The name 'asa' stands for 'as a'.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$behaviorname</var></dt>
+					<dd><code>string</code><br>the behavior name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-IBehavior.html">IBehavior</a></code></code><br>the behavior object, or null if the behavior does not exist<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isa" id="_isa">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isa">#</a>
+		<code>isa( <span>class <var>$class</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns whether or not the object or any of the behaviors are of a particular
+class. The name 'isa' stands for 'is a'. This first checks if $this is an
+instanceof the class. It then checks each Behavior. If a behavior implements
+<code><a href="class-IInstanceCheck.html">IInstanceCheck</a></code>, then the behavior can determine what it is an
+instanceof. If this behavior function returns true, then this method returns
+true. If the behavior instance checking function returns false, then no further
+checking is performed as it is assumed to be correct.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns whether or not the object or any of the behaviors are of a particular
+class. The name 'isa' stands for 'is a'. This first checks if $this is an
+instanceof the class. It then checks each Behavior. If a behavior implements
+<code><a href="class-IInstanceCheck.html">IInstanceCheck</a></code>, then the behavior can determine what it is an
+instanceof. If this behavior function returns true, then this method returns
+true. If the behavior instance checking function returns false, then no further
+checking is performed as it is assumed to be correct.</p>
+
+<p>If the behavior instance check function returns nothing or null or the
+behavior doesn't implement the <code><a href="class-IInstanceCheck.html">IInstanceCheck</a></code> interface, then the
+default instanceof occurs. The default isa behavior is to check if the behavior
+is an instanceof the class.</p>
+
+<p>The behavior <code><a href="class-IInstanceCheck.html">IInstanceCheck</a></code> is to allow a behavior to have the host
+object act as a completely different object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class</var></dt>
+					<dd><code>class</code><br>or string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether or not the object or a behavior is an instance of a particular class<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attachBehaviors" id="_attachBehaviors">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attachBehaviors">#</a>
+		<code>attachBehaviors( <span>array <var>$behaviors</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Attaches a list of behaviors to the component. Each behavior is indexed by
+its name and should be an instance of <code><a href="class-IBehavior.html">IBehavior</a></code>, a string specifying the
+behavior class, or a <code><a href="class-TClassBehaviorEventParameter.html">TClassBehaviorEventParameter</a></code>.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Attaches a list of behaviors to the component. Each behavior is indexed by
+its name and should be an instance of <code><a href="class-IBehavior.html">IBehavior</a></code>, a string specifying the
+behavior class, or a <code><a href="class-TClassBehaviorEventParameter.html">TClassBehaviorEventParameter</a></code>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$behaviors</var></dt>
+					<dd><code>array</code><br>list of behaviors to be attached to the component</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="detachBehaviors" id="_detachBehaviors">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_detachBehaviors">#</a>
+		<code>detachBehaviors( <span>array <var>$behaviors</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Detaches select behaviors from the component. Each behavior is indexed by its
+name and should be an instance of <code><a href="class-IBehavior.html">IBehavior</a></code>, a string specifying the
+behavior class, or a <code><a href="class-TClassBehaviorEventParameter.html">TClassBehaviorEventParameter</a></code>.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Detaches select behaviors from the component. Each behavior is indexed by its
+name and should be an instance of <code><a href="class-IBehavior.html">IBehavior</a></code>, a string specifying the
+behavior class, or a <code><a href="class-TClassBehaviorEventParameter.html">TClassBehaviorEventParameter</a></code>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$behaviors</var></dt>
+					<dd><code>array</code><br>list of behaviors to be detached from the component</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearBehaviors" id="_clearBehaviors">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearBehaviors">#</a>
+		<code>clearBehaviors( )</code>
+
+		<div class="description short">
+			
+<p>Detaches all behaviors from the component.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Detaches all behaviors from the component.</p>
+
+
+
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attachBehavior" id="_attachBehavior">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-IBehavior.html">IBehavior</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attachBehavior">#</a>
+		<code>attachBehavior( <span>string <var>$name</var></span>, <span>mixed <var>$behavior</var></span>, <span>mixed <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Attaches a behavior to this component. This method will create the behavior
+object based on the given configuration. After that, the behavior object will be
+initialized by calling its <code><a href="class-IBaseBehavior.html#_attach">IBaseBehavior::attach()</a></code> method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Attaches a behavior to this component. This method will create the behavior
+object based on the given configuration. After that, the behavior object will be
+initialized by calling its <code><a href="class-IBaseBehavior.html#_attach">IBaseBehavior::attach()</a></code> method.</p>
+
+<p>Already attached behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyAttachBehavior(<span
+class="php-var">$name</span>,<span class="php-var">$behavior</span>[, <span
+class="php-var">$chain</span>]) {
+ }
+</pre>
+
+<p>to be executed when attachBehavior is called. All attached behaviors are
+notified through dyAttachBehavior.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the behavior's name. It should uniquely identify this behavior.</dd>
+					<dt><var>$behavior</var></dt>
+					<dd><code>mixed</code><br>the behavior configuration. This is passed as the first parameter to YiiBase::createComponent to create the behavior object.</dd>
+					<dt><var>$priority</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-IBehavior.html">IBehavior</a></code></code><br>the behavior object<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="detachBehavior" id="_detachBehavior">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-IBehavior.html">IBehavior</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_detachBehavior">#</a>
+		<code>detachBehavior( <span>string <var>$name</var></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Detaches a behavior from the component. The behavior's <code><a href="class-IBaseBehavior.html#_detach">IBaseBehavior::detach()</a></code> method will be invoked.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Detaches a behavior from the component. The behavior's <code><a href="class-IBaseBehavior.html#_detach">IBaseBehavior::detach()</a></code> method will be invoked.</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyDetachBehavior(<span
+class="php-var">$name</span>,<span class="php-var">$behavior</span>[, <span
+class="php-var">$chain</span>]) {
+ }
+</pre>
+
+<p>to be executed when detachBehavior is called. All attached behaviors are
+notified through dyDetachBehavior.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the behavior's name. It uniquely identifies the behavior.</dd>
+					<dt><var>$priority</var></dt>
+					<dd><code>numeric</code><br>the behavior's priority. This defaults to false, aka any priority.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-IBehavior.html">IBehavior</a></code></code><br>the detached behavior. Null if the behavior does not exist.<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="enableBehaviors" id="_enableBehaviors">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enableBehaviors">#</a>
+		<code>enableBehaviors( )</code>
+
+		<div class="description short">
+			
+<p>Enables all behaviors attached to this component independent of the
+behaviors</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enables all behaviors attached to this component independent of the
+behaviors</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyEnableBehaviors(<span
+class="php-var">$name</span>,<span class="php-var">$behavior</span>[, <span
+class="php-var">$chain</span>]) {
+ }
+</pre>
+
+<p>to be executed when enableBehaviors is called. All attached behaviors are
+notified through dyEnableBehaviors.</p>
+
+
+
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="disableBehaviors" id="_disableBehaviors">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disableBehaviors">#</a>
+		<code>disableBehaviors( )</code>
+
+		<div class="description short">
+			
+<p>Disables all behaviors attached to this component independent of the
+behaviors</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disables all behaviors attached to this component independent of the
+behaviors</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyDisableBehaviors(<span
+class="php-var">$name</span>,<span class="php-var">$behavior</span>[, <span
+class="php-var">$chain</span>]) {
+ }
+</pre>
+
+<p>to be executed when disableBehaviors is called. All attached behaviors are
+notified through dyDisableBehaviors.</p>
+
+
+
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBehaviorsEnabled" id="_getBehaviorsEnabled">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBehaviorsEnabled">#</a>
+		<code>getBehaviorsEnabled( )</code>
+
+		<div class="description short">
+			
+<p>Returns if all the behaviors are turned on or off for the object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns if all the behaviors are turned on or off for the object.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether or not all behaviors are enabled (true) or not (false)<br />
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="enableBehavior" id="_enableBehavior">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enableBehavior">#</a>
+		<code>enableBehavior( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Enables an attached object behavior. This cannot enable or disable whole
+class behaviors. A behavior is only effective when it is enabled. A behavior is
+enabled when first attached.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enables an attached object behavior. This cannot enable or disable whole
+class behaviors. A behavior is only effective when it is enabled. A behavior is
+enabled when first attached.</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyEnableBehavior(<span
+class="php-var">$name</span>,<span class="php-var">$behavior</span>[, <span
+class="php-var">$chain</span>]) {
+ }
+</pre>
+
+<p>to be executed when enableBehavior is called. All attached behaviors are
+notified through dyEnableBehavior.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the behavior's name. It uniquely identifies the behavior.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="disableBehavior" id="_disableBehavior">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disableBehavior">#</a>
+		<code>disableBehavior( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Disables an attached behavior. This cannot enable or disable whole class
+behaviors. A behavior is only effective when it is enabled.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disables an attached behavior. This cannot enable or disable whole class
+behaviors. A behavior is only effective when it is enabled.</p>
+
+<p>Behaviors may implement the function:</p>
+
+<pre>
+<span class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> dyDisableBehavior(<span
+class="php-var">$name</span>,<span class="php-var">$behavior</span>[, <span
+class="php-var">$chain</span>]) {
+ }
+</pre>
+
+<p>to be executed when disableBehavior is called. All attached behaviors are
+notified through dyDisableBehavior.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>the behavior's name. It uniquely identifies the behavior.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.3<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__wakeup" id="___wakeup">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___wakeup">#</a>
+		<code>__wakeup( )</code>
+
+		<div class="description short">
+			
+<p>Do not call this method. This is a PHP magic method that will be called
+automatically after any unserialization; it can perform reinitialization tasks
+on the object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Do not call this method. This is a PHP magic method that will be called
+automatically after any unserialization; it can perform reinitialization tasks
+on the object.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__sleep" id="___sleep">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___sleep">#</a>
+		<code>__sleep( )</code>
+
+		<div class="description short">
+			
+<p>Returns an array with the names of all variables of that object that should
+be serialized. Do not call this method. This is a PHP magic method that will be
+called automatically prior to any serialization.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array with the names of all variables of that object that should
+be serialized. Do not call this method. This is a PHP magic method that will be
+called automatically prior to any serialization.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="GLOBAL_RAISE_EVENT_LISTENER" id="GLOBAL_RAISE_EVENT_LISTENER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>GLOBAL_RAISE_EVENT_LISTENER</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'fxGlobalListener'</span></code></td>
+		<td class="description"><div>
+			<a href="#GLOBAL_RAISE_EVENT_LISTENER" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>Const</h4>
+					<div class="list">
+							string the name of the global <code><a href="class-TComponent.html#_raiseEvent">TComponent::raiseEvent()</a></code> listener<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

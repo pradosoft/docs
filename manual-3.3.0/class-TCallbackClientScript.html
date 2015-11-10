@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TCallbackClientScript | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TActiveBoundColumn.html">TActiveBoundColumn</a></li>
+				<li><a href="class-TActiveButton.html">TActiveButton</a></li>
+				<li><a href="class-TActiveButtonColumn.html">TActiveButtonColumn</a></li>
+				<li><a href="class-TActiveCheckBox.html">TActiveCheckBox</a></li>
+				<li><a href="class-TActiveCheckBoxColumn.html">TActiveCheckBoxColumn</a></li>
+				<li><a href="class-TActiveCheckBoxList.html">TActiveCheckBoxList</a></li>
+				<li><a href="class-TActiveCheckBoxListItem.html">TActiveCheckBoxListItem</a></li>
+				<li><a href="class-TActiveClientScript.html">TActiveClientScript</a></li>
+				<li><a href="class-TActiveControlAdapter.html">TActiveControlAdapter</a></li>
+				<li><a href="class-TActiveCustomValidator.html">TActiveCustomValidator</a></li>
+				<li><a href="class-TActiveCustomValidatorClientSide.html">TActiveCustomValidatorClientSide</a></li>
+				<li><a href="class-TActiveDataGrid.html">TActiveDataGrid</a></li>
+				<li><a href="class-TActiveDataGridPager.html">TActiveDataGridPager</a></li>
+				<li><a href="class-TActiveDataGridPagerEventParameter.html">TActiveDataGridPagerEventParameter</a></li>
+				<li><a href="class-TActiveDataList.html">TActiveDataList</a></li>
+				<li><a href="class-TActiveDatePicker.html">TActiveDatePicker</a></li>
+				<li><a href="class-TActiveDatePickerClientScript.html">TActiveDatePickerClientScript</a></li>
+				<li><a href="class-TActiveDropDownList.html">TActiveDropDownList</a></li>
+				<li><a href="class-TActiveDropDownListColumn.html">TActiveDropDownListColumn</a></li>
+				<li><a href="class-TActiveEditCommandColumn.html">TActiveEditCommandColumn</a></li>
+				<li><a href="class-TActiveFileUpload.html">TActiveFileUpload</a></li>
+				<li><a href="class-TActiveFileUploadCallbackParams.html">TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-TActiveHiddenField.html">TActiveHiddenField</a></li>
+				<li><a href="class-TActiveHyperLink.html">TActiveHyperLink</a></li>
+				<li><a href="class-TActiveHyperLinkColumn.html">TActiveHyperLinkColumn</a></li>
+				<li><a href="class-TActiveImage.html">TActiveImage</a></li>
+				<li><a href="class-TActiveImageButton.html">TActiveImageButton</a></li>
+				<li><a href="class-TActiveLabel.html">TActiveLabel</a></li>
+				<li><a href="class-TActiveLinkButton.html">TActiveLinkButton</a></li>
+				<li><a href="class-TActiveListBox.html">TActiveListBox</a></li>
+				<li><a href="class-TActiveListControlAdapter.html">TActiveListControlAdapter</a></li>
+				<li><a href="class-TActiveListItemCollection.html">TActiveListItemCollection</a></li>
+				<li><a href="class-TActiveLiteralColumn.html">TActiveLiteralColumn</a></li>
+				<li><a href="class-TActiveMultiView.html">TActiveMultiView</a></li>
+				<li><a href="class-TActivePageAdapter.html">TActivePageAdapter</a></li>
+				<li><a href="class-TActivePager.html">TActivePager</a></li>
+				<li><a href="class-TActivePanel.html">TActivePanel</a></li>
+				<li><a href="class-TActiveRadioButton.html">TActiveRadioButton</a></li>
+				<li><a href="class-TActiveRadioButtonItem.html">TActiveRadioButtonItem</a></li>
+				<li><a href="class-TActiveRadioButtonList.html">TActiveRadioButtonList</a></li>
+				<li><a href="class-TActiveRatingList.html">TActiveRatingList</a></li>
+				<li><a href="class-TActiveRepeater.html">TActiveRepeater</a></li>
+				<li><a href="class-TActiveTableCell.html">TActiveTableCell</a></li>
+				<li><a href="class-TActiveTableCellEventParameter.html">TActiveTableCellEventParameter</a></li>
+				<li><a href="class-TActiveTableRow.html">TActiveTableRow</a></li>
+				<li><a href="class-TActiveTableRowEventParameter.html">TActiveTableRowEventParameter</a></li>
+				<li><a href="class-TActiveTemplateColumn.html">TActiveTemplateColumn</a></li>
+				<li><a href="class-TActiveTextBox.html">TActiveTextBox</a></li>
+				<li><a href="class-TAutoComplete.html">TAutoComplete</a></li>
+				<li><a href="class-TAutoCompleteEventParameter.html">TAutoCompleteEventParameter</a></li>
+				<li><a href="class-TAutoCompleteTemplate.html">TAutoCompleteTemplate</a></li>
+				<li><a href="class-TBaseActiveCallbackControl.html">TBaseActiveCallbackControl</a></li>
+				<li><a href="class-TBaseActiveControl.html">TBaseActiveControl</a></li>
+				<li><a href="class-TCallback.html">TCallback</a></li>
+				<li class="active"><a href="class-TCallbackClientScript.html">TCallbackClientScript</a></li>
+				<li><a href="class-TCallbackClientSide.html">TCallbackClientSide</a></li>
+				<li><a href="class-TCallbackErrorHandler.html">TCallbackErrorHandler</a></li>
+				<li><a href="class-TCallbackEventParameter.html">TCallbackEventParameter</a></li>
+				<li><a href="class-TCallbackOptions.html">TCallbackOptions</a></li>
+				<li><a href="class-TCallbackPageStateTracker.html">TCallbackPageStateTracker</a></li>
+				<li><a href="class-TCallbackResponseAdapter.html">TCallbackResponseAdapter</a></li>
+				<li><a href="class-TCallbackResponseWriter.html">TCallbackResponseWriter</a></li>
+				<li><a href="class-TDraggable.html">TDraggable</a></li>
+				<li><a href="class-TDraggableConstraint.html">TDraggableConstraint</a></li>
+				<li><a href="class-TDraggableGhostingOptions.html">TDraggableGhostingOptions</a></li>
+				<li><a href="class-TDraggableRevertOptions.html">TDraggableRevertOptions</a></li>
+				<li><a href="class-TDropContainer.html">TDropContainer</a></li>
+				<li><a href="class-TDropContainerEventParameter.html">TDropContainerEventParameter</a></li>
+				<li><a href="class-TEventTriggeredCallback.html">TEventTriggeredCallback</a></li>
+				<li><a href="class-TInPlaceTextBox.html">TInPlaceTextBox</a></li>
+				<li><a href="class-TJuiAutoComplete.html">TJuiAutoComplete</a></li>
+				<li><a href="class-TJuiAutoCompleteEventParameter.html">TJuiAutoCompleteEventParameter</a></li>
+				<li><a href="class-TJuiAutoCompleteTemplate.html">TJuiAutoCompleteTemplate</a></li>
+				<li><a href="class-TJuiSelectableTemplate.html">TJuiSelectableTemplate</a></li>
+				<li><a href="class-TJuiSortableTemplate.html">TJuiSortableTemplate</a></li>
+				<li><a href="class-TMapCollectionDiff.html">TMapCollectionDiff</a></li>
+				<li><a href="class-TScalarDiff.html">TScalarDiff</a></li>
+				<li><a href="class-TStyleDiff.html">TStyleDiff</a></li>
+				<li><a href="class-TTimeTriggeredCallback.html">TTimeTriggeredCallback</a></li>
+				<li><a href="class-TTriggeredCallback.html">TTriggeredCallback</a></li>
+				<li><a href="class-TValueTriggeredCallback.html">TValueTriggeredCallback</a></li>
+				<li><a href="class-TViewStateDiff.html">TViewStateDiff</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IListControlAdapter.html">IListControlAdapter</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TInvalidCallbackException.html">TInvalidCallbackException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TCallbackClientScript</h1>
+
+
+	<div class="description">
+	<p>TCallbackClientScript class.</p>
+
+<p>The TCallbackClientScript class provides corresponding methods that can be
+executed on the client-side (i.e. the browser client that is viewing
+the page) during a callback response.</p>
+
+<p>The available methods includes setting/clicking input elements, changing Css
+styles, hiding/showing elements, and adding visual effects to elements on the
+page. The client-side methods can be access through the CallbackClient
+property available in TPage.</p>
+
+<p>For example, to hide "$myTextBox" element during callback response, do</p>
+
+<pre><span class="php-var">$this</span>-&gt;getPage()-&gt;getCallbackClient()-&gt;hide(<span class="php-var">$myTextBox</span>);</pre>
+
+<p>To call a specific jQuery method on an element, use the <code><a href="class-TCallbackClientScript.html#_jQuery">TCallbackClientScript::jQuery()</a></code> method:</p>
+
+<pre><span class="php-comment">// simple example: focus a textbox</span>
+<span class="php-var">$this</span>-&gt;getCallbackClient()-&gt;jQuery(<span class="php-var">$myTextBox</span>, <span class="php-quote">'focus'</span>);
+
+<span class="php-comment">// complex example: resize a textbox using an animation</span>
+    <span class="php-var">$this</span>-&gt;getCallbackClient()-&gt;jQuery(<span class="php-var">$myTextBox</span>, <span class="php-quote">'animate'</span>, <span class="php-keyword1">array</span>(
+    <span class="php-keyword1">array</span>(  <span class="php-quote">'width'</span> =&gt; <span class="php-quote">'+=100'</span>,
+            <span class="php-quote">'height'</span> =&gt; <span class="php-quote">'+=50'</span>
+        ),
+    <span class="php-keyword1">array</span>(<span class="php-quote">'duration'</span> =&gt; <span class="php-num">1000</span>)
+    ));</pre>
+
+<p>To call a jQueryUI effect on an element, use the <code><a href="class-TCallbackClientScript.html#_juiEffect">TCallbackClientScript::juiEffect()</a></code> method:</p>
+
+<pre><span class="php-comment">// simple example: focus a textbox</span>
+<span class="php-var">$this</span>-&gt;getCallbackClient()-&gt;juiEffect(<span class="php-var">$myTextBox</span>, <span class="php-quote">'highlight'</span>);</pre>
+
+<p>In order to use the jQueryUI effects, the jqueryui script must be registered:</p>
+
+<pre><span class="php-var">$this</span>-&gt;getPage()-&gt;getClientScript()-&gt;registerPradoScript(<span class="php-quote">'jqueryui'</span>);</pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TCallbackClientScript</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
+				<b>Author:</b>
+				Fabio Bas &lt;ctrlaltca[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Web/UI/ActiveControls/TCallbackClientScript.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClientFunctionsToExecute" id="_getClientFunctionsToExecute">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClientFunctionsToExecute">#</a>
+		<code>getClientFunctionsToExecute( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br><p>list of client function to be executed during callback
+response.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callClientFunction" id="_callClientFunction">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callClientFunction">#</a>
+		<code>callClientFunction( <span>string <var>$function</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Executes a client-side statement.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes a client-side statement.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$function</var></dt>
+					<dd>function name</dd>
+					<dt><var>$params</var></dt>
+					<dd>of arguments for the function</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="jQuery" id="_jQuery">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_jQuery">#</a>
+		<code>jQuery( <span>string <var>$element</var></span>, <span>string <var>$method</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Executes a jQuery client-side method over an element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes a jQuery client-side method over an element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>or element id</dd>
+					<dt><var>$method</var></dt>
+					<dd>method name</dd>
+					<dt><var>$params</var></dt>
+					<dd>of arguments for the function</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setValue" id="_setValue">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setValue">#</a>
+		<code>setValue( <span><code><a href="class-TControl.html">TControl</a></code> <var>$input</var></span>, <span>string <var>$text</var></span> )</code>
+
+		<div class="description short">
+			<p>Client script to set the value of a particular input element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Client script to set the value of a particular input element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd>element to set the new value</dd>
+					<dt><var>$text</var></dt>
+					<dd>value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="select" id="_select">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_select">#</a>
+		<code>select( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span>, <span>string <var>$method</var> = <span class="php-quote">'Value'</span></span>, <span>string|integer <var>$value</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$type</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Client script to select/clear/check a drop down list, check box list,
+or radio button list.
+The second parameter determines the selection method. Valid methods are
+ - <b>Value</b>, select or check by value
+ - <b>Values</b>, select or check by a list of values
+ - <b>Index</b>, select or check by index (zero based index)
+ - <b>Indices</b>, select or check by a list of index (zero based index)
+ - <b>Clear</b>, clears or selections or checks in the list
+ - <b>All</b>, select all
+ - <b>Invert</b>, invert the selection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Client script to select/clear/check a drop down list, check box list,
+or radio button list.
+The second parameter determines the selection method. Valid methods are - <b>Value</b>, select or check by value - <b>Values</b>, select or check by a list of values - <b>Index</b>, select or check by index (zero based index) - <b>Indices</b>, select or check by a list of index (zero based index) - <b>Clear</b>, clears or selections or checks in the list - <b>All</b>, select all - <b>Invert</b>, invert the selection.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>control</dd>
+					<dt><var>$method</var></dt>
+					<dd>method</dd>
+					<dt><var>$value</var></dt>
+					<dd>value or index to select/check.</dd>
+					<dt><var>$type</var></dt>
+					<dd>control type, either 'check' or 'select'</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="click" id="_click">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_click">#</a>
+		<code>click( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span> )</code>
+
+		<div class="description short">
+			<p>Client script to click on an element. <b>This client-side function is unpredictable.</b></p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Client script to click on an element. <b>This client-side function is unpredictable.</b></p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>element or element id</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check" id="_check">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check">#</a>
+		<code>check( <span><code><a href="class-TControl.html">TControl</a></code> <var>$checkbox</var></span>, <span>boolean <var>$checked</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Client script to check or uncheck a checkbox or radio button.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Client script to check or uncheck a checkbox or radio button.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$checkbox</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$checked</var></dt>
+					<dd>or uncheck the checkbox or radio button.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="raiseClientEvent" id="_raiseClientEvent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_raiseClientEvent">#</a>
+		<code>raiseClientEvent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span>, <span>string <var>$eventName</var></span> )</code>
+
+		<div class="description short">
+			<p>Raise the client side event (given by $eventName) on a particular element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raise the client side event (given by $eventName) on a particular element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$eventName</var></dt>
+					<dd>name, e.g. "click"</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAttribute" id="_setAttribute">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAttribute">#</a>
+		<code>setAttribute( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span>, <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the attribute of a particular control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the attribute of a particular control.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setListItems" id="_setListItems">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setListItems">#</a>
+		<code>setListItems( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span>, <span>TCollection <var>$items</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the options of a select input element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the options of a select input element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$items</var></dt>
+					<dd>list of new options</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="show" id="_show">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_show">#</a>
+		<code>show( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span> )</code>
+
+		<div class="description short">
+			<p>Shows an element by changing its CSS display style as empty.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Shows an element by changing its CSS display style as empty.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hide" id="_hide">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hide">#</a>
+		<code>hide( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span> )</code>
+
+		<div class="description short">
+			<p>Hides an element by changing its CSS display style to "none".</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Hides an element by changing its CSS display style to "none".</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toggle" id="_toggle">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toggle">#</a>
+		<code>toggle( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$effect</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Toggles the visibility of the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Toggles the visibility of the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$effect</var></dt>
+					<dd>effect, such as, 'fade' or 'slide'.</dd>
+					<dt><var>$options</var></dt>
+					<dd>options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="_remove">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_remove">#</a>
+		<code>remove( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span> )</code>
+
+		<div class="description short">
+			<p>Removes an element from the HTML page.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes an element from the HTML page.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="_update">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_update">#</a>
+		<code>update( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span><code><a href="class-TControl.html">TControl</a></code> <var>$content</var></span> )</code>
+
+		<div class="description short">
+			<p>Update the element's innerHTML with new content.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Update the element's innerHTML with new content.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$content</var></dt>
+					<dd><p>HTML content, if content is of a TControl, the
+controls render method is called.</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCssClass" id="_addCssClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addCssClass">#</a>
+		<code>addCssClass( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$cssClass</var></span> )</code>
+
+		<div class="description short">
+			<p>Add a Css class name to the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a Css class name to the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$cssClass</var></dt>
+					<dd>name to add.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeCssClass" id="_removeCssClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeCssClass">#</a>
+		<code>removeCssClass( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$cssClass</var></span> )</code>
+
+		<div class="description short">
+			<p>Remove a Css class name from the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Remove a Css class name from the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$cssClass</var></dt>
+					<dd>name to remove.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="scrollTo" id="_scrollTo">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_scrollTo">#</a>
+		<code>scrollTo( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Scroll the top of the browser viewing area to the location of the
+element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Scroll the top of the browser viewing area to the location of the
+element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>options: 'duration' in ms, 'offset' from the top in pixels</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="focus" id="_focus">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_focus">#</a>
+		<code>focus( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span> )</code>
+
+		<div class="description short">
+			<p>Focus on a particular element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Focus on a particular element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setStyle" id="_setStyle">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setStyle">#</a>
+		<code>setStyle( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$styles</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the style of element. The style must be a key-value array where the
+key is the style property and the value is the style value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the style of element. The style must be a key-value array where the
+key is the style property and the value is the style value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$styles</var></dt>
+					<dd>of key-value pairs as style property and style value.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="appendContent" id="_appendContent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_appendContent">#</a>
+		<code>appendContent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$content</var></span> )</code>
+
+		<div class="description short">
+			<p>Append a HTML fragement to the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Append a HTML fragement to the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$content</var></dt>
+					<dd>fragement or the control to be rendered</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prependContent" id="_prependContent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prependContent">#</a>
+		<code>prependContent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$content</var></span> )</code>
+
+		<div class="description short">
+			<p>Prepend a HTML fragement to the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepend a HTML fragement to the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$content</var></dt>
+					<dd>fragement or the control to be rendered</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertContentAfter" id="_insertContentAfter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertContentAfter">#</a>
+		<code>insertContentAfter( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$content</var></span> )</code>
+
+		<div class="description short">
+			<p>Insert a HTML fragement after the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Insert a HTML fragement after the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$content</var></dt>
+					<dd>fragement or the control to be rendered</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertContentBefore" id="_insertContentBefore">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertContentBefore">#</a>
+		<code>insertContentBefore( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$content</var></span> )</code>
+
+		<div class="description short">
+			<p>Insert a HTML fragement in before the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Insert a HTML fragement in before the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$content</var></dt>
+					<dd>fragement or the control to be rendered</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replace" id="_replace">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_replace">#</a>
+		<code>replace( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$content</var></span>, <span>boolean <var>$self</var></span> )</code>
+
+		<div class="description short">
+			<p>Replace the content of an element with new content. The new content can
+be a string or a TControl component. If the <tt>content</tt> parameter is
+a TControl component, its rendered method will be called and its contents
+will be used for replacement.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Replace the content of an element with new content. The new content can
+be a string or a TControl component. If the <tt>content</tt> parameter is
+a TControl component, its rendered method will be called and its contents
+will be used for replacement.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or HTML element id.</dd>
+					<dt><var>$content</var></dt>
+					<dd>fragement or the control to be rendered.</dd>
+					<dt><var>$self</var></dt>
+					<dd>to fully replace the element or just its inner content.</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						insertAbout<br>
+						insertBelow<br>
+						insertBefore<br>
+						insertAfter<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replaceContent" id="_replaceContent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_replaceContent">#</a>
+		<code>replaceContent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>string <var>$content</var></span>, <span>boolean <var>$self</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Replace the content of an element with new content contained in writer.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Replace the content of an element with new content contained in writer.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or HTML element id.</dd>
+					<dt><var>$content</var></dt>
+					<dd>fragement or the control to be rendered.</dd>
+					<dt><var>$self</var></dt>
+					<dd>to fully replace the element or just its inner content, defaults to true.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="evaluateScript" id="_evaluateScript">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_evaluateScript">#</a>
+		<code>evaluateScript( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>Evaluate a block of javascript enclosed in a boundary.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Evaluate a block of javascript enclosed in a boundary.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>for the content.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="appendScriptBlock" id="_appendScriptBlock">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_appendScriptBlock">#</a>
+		<code>appendScriptBlock( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$content</var></span> )</code>
+
+		<div class="description short">
+			<p>Appends a block of inline javascript enclosed in a boundary.
+Similar to to evaluateScript(), but functions declared in the
+inline block will be available to page elements.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Appends a block of inline javascript enclosed in a boundary.
+Similar to to evaluateScript(), but functions declared in the
+inline block will be available to page elements.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$content</var></dt>
+					<dd>for the content.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="visualEffect" id="_visualEffect">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_visualEffect">#</a>
+		<code>visualEffect( <span>string <var>$type</var></span>, <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Add a visual effect the element.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a visual effect the element.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd>effect function name.</dd>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fadeIn" id="_fadeIn">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fadeIn">#</a>
+		<code>fadeIn( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Gradually make the element appear.
+This effect doesn't need jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Gradually make the element appear.
+This effect doesn't need jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fadeOut" id="_fadeOut">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fadeOut">#</a>
+		<code>fadeOut( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Gradually fade the element.
+This effect doesn't need jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Gradually fade the element.
+This effect doesn't need jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fadeTo" id="_fadeTo">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fadeTo">#</a>
+		<code>fadeTo( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>float <var>$value</var></span>, <span> <var>$duration</var> = <span class="php-num">500</span></span> )</code>
+
+		<div class="description short">
+			<p>Set the opacity on a html element or control.
+This effect doesn't need jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the opacity on a html element or control.
+This effect doesn't need jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$value</var></dt>
+					<dd>value between 1 and 0</dd>
+					<dt><var>$duration</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="slideDown" id="_slideDown">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_slideDown">#</a>
+		<code>slideDown( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Slide down.
+This effect doesn't need jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Slide down.
+This effect doesn't need jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="slideUp" id="_slideUp">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_slideUp">#</a>
+		<code>slideUp( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Slide up.
+This effect doesn't need jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Slide up.
+This effect doesn't need jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="appear" id="_appear" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_appear">#</a>
+		<code>appear( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of fadeIn()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of fadeIn()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fade" id="_fade" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fade">#</a>
+		<code>fade( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of fadeOut()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of fadeOut()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setOpacity" id="_setOpacity" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setOpacity">#</a>
+		<code>setOpacity( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>float <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Alias of fadeTo()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of fadeTo()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$value</var></dt>
+					<dd>value between 1 and 0</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="juiEffect" id="_juiEffect">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_juiEffect">#</a>
+		<code>juiEffect( <span>string <var>$element</var></span>, <span><code><a href="class-TControl.html">TControl</a></code> <var>$effect</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Add a jQuery-ui effect the element.
+This method needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add a jQuery-ui effect the element.
+This method needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>effect function name.</dd>
+					<dt><var>$effect</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="blind" id="_blind">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_blind">#</a>
+		<code>blind( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Blind.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Blind.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="drop" id="_drop">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_drop">#</a>
+		<code>drop( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Drop out.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Drop out.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fold" id="_fold">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fold">#</a>
+		<code>fold( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Fold.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Fold.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="size" id="_size">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_size">#</a>
+		<code>size( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Gradually make an element grow to a predetermined size.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Gradually make an element grow to a predetermined size.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="puff" id="_puff">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_puff">#</a>
+		<code>puff( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Gradually grow and fade the element.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Gradually grow and fade the element.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="pulsate" id="_pulsate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_pulsate">#</a>
+		<code>pulsate( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Pulsate.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Pulsate.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shake" id="_shake">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_shake">#</a>
+		<code>shake( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Shake the element.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Shake the element.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="scale" id="_scale">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_scale">#</a>
+		<code>scale( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: Scale the element.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: Scale the element.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="highlight" id="_highlight">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_highlight">#</a>
+		<code>highlight( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Visual Effect: High light the element for about 2 seconds.
+This effect needs jQueryUI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Visual Effect: High light the element for about 2 seconds.
+This effect needs jQueryUI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="blindDown" id="_blindDown" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_blindDown">#</a>
+		<code>blindDown( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of blind(), presets the direction to 'down'</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of blind(), presets the direction to 'down'</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="blindUp" id="_blindUp" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_blindUp">#</a>
+		<code>blindUp( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of blind(), presets the direction to 'up'</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of blind(), presets the direction to 'up'</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dropOut" id="_dropOut" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dropOut">#</a>
+		<code>dropOut( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of drop()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of drop()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="grow" id="_grow" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_grow">#</a>
+		<code>grow( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of size()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of size()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shrink" id="_shrink" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_shrink">#</a>
+		<code>shrink( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of scale()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of scale()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="squish" id="_squish" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_squish">#</a>
+		<code>squish( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of scale()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of scale()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="switchOff" id="_switchOff" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_switchOff">#</a>
+		<code>switchOff( <span><code><a href="class-TControl.html">TControl</a></code> <var>$element</var></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Alias of scale()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias of scale()</p>
+
+				<h4>Deprecated</h4>
+				<div class="list">
+						since 3.4<br>
+				</div>
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$element</var></dt>
+					<dd>element or element id</dd>
+					<dt><var>$options</var></dt>
+					<dd>effect key-value pair options.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

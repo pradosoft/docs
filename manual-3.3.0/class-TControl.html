@@ -1,0 +1,5130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TControl | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TBroadcastEventParameter.html">TBroadcastEventParameter</a></li>
+				<li><a href="class-TCachePageStatePersister.html">TCachePageStatePersister</a></li>
+				<li><a href="class-TClientScriptManager.html">TClientScriptManager</a></li>
+				<li><a href="class-TClientSideOptions.html">TClientSideOptions</a></li>
+				<li><a href="class-TCommandEventParameter.html">TCommandEventParameter</a></li>
+				<li><a href="class-TCompositeControl.html">TCompositeControl</a></li>
+				<li><a href="class-TCompositeLiteral.html">TCompositeLiteral</a></li>
+				<li class="active"><a href="class-TControl.html">TControl</a></li>
+				<li><a href="class-TControlAdapter.html">TControlAdapter</a></li>
+				<li><a href="class-TControlCollection.html">TControlCollection</a></li>
+				<li><a href="class-TEmptyControlCollection.html">TEmptyControlCollection</a></li>
+				<li><a href="class-TForm.html">TForm</a></li>
+				<li><a href="class-THead.html">THead</a></li>
+				<li><a href="class-THtmlWriter.html">THtmlWriter</a></li>
+				<li><a href="class-TPage.html">TPage</a></li>
+				<li><a href="class-TPageStateFormatter.html">TPageStateFormatter</a></li>
+				<li><a href="class-TPageStatePersister.html">TPageStatePersister</a></li>
+				<li><a href="class-TSessionPageStatePersister.html">TSessionPageStatePersister</a></li>
+				<li><a href="class-TTemplate.html">TTemplate</a></li>
+				<li><a href="class-TTemplateControl.html">TTemplateControl</a></li>
+				<li><a href="class-TTemplateControlInheritable.html">TTemplateControlInheritable</a></li>
+				<li><a href="class-TTemplateManager.html">TTemplateManager</a></li>
+				<li><a href="class-TTextProcessor.html">TTextProcessor</a></li>
+				<li><a href="class-TTheme.html">TTheme</a></li>
+				<li><a href="class-TThemeManager.html">TThemeManager</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IBroadcastEventReceiver.html">IBroadcastEventReceiver</a></li>
+				<li><a href="class-IButtonControl.html">IButtonControl</a></li>
+				<li><a href="class-INamingContainer.html">INamingContainer</a></li>
+				<li><a href="class-IPageStatePersister.html">IPageStatePersister</a></li>
+				<li><a href="class-IPostBackDataHandler.html">IPostBackDataHandler</a></li>
+				<li><a href="class-IPostBackEventHandler.html">IPostBackEventHandler</a></li>
+				<li><a href="class-ISurroundable.html">ISurroundable</a></li>
+				<li><a href="class-ITemplate.html">ITemplate</a></li>
+				<li><a href="class-ITheme.html">ITheme</a></li>
+				<li><a href="class-IValidatable.html">IValidatable</a></li>
+				<li><a href="class-IValidator.html">IValidator</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TControl</h1>
+
+
+	<div class="description">
+	<p>TControl class</p>
+
+<p>TControl is the base class for all components on a page hierarchy.
+It implements the following features for UI-related functionalities:
+- databinding feature
+- parent and child relationship
+- naming container and containee relationship
+- viewstate and controlstate features
+- rendering scheme
+- control lifecycles</p>
+
+<p>A property can be data-bound with an expression. By calling <code><a href="class-TControl.html#_dataBind">TControl::dataBind()</a></code>,
+expressions bound to properties will be evaluated and the results will be
+set to the corresponding properties.</p>
+
+<p>Parent and child relationship determines how the presentation of controls are
+enclosed within each other. A parent will determine where to place
+the presentation of its child controls. For example, a TPanel will enclose
+all its child controls' presentation within a div html tag. A control's parent
+can be obtained via getParent Parent property, and its
+getControls Controls property returns a list of the control's children,
+including controls and static texts. The property can be manipulated
+like an array for adding or removing a child (see <code><a href="class-TList.html">TList</a></code> for more details).</p>
+
+<p>A naming container control implements INamingContainer and ensures that
+its containee controls can be differentiated by their ID property values.
+Naming container and containee realtionship specifies a protocol to uniquely
+identify an arbitrary control on a page hierarchy by an ID path (concatenation
+of all naming containers' IDs and the target control's ID).</p>
+
+<p>Viewstate and controlstate are two approaches to preserve state across
+page postback requests. ViewState is mainly related with UI specific state
+and can be disabled if not needed. ControlState represents crucial logic state
+and cannot be disabled.</p>
+
+<p>A control is rendered via its <code><a href="class-TControl.html#_render">TControl::render()</a></code> method (the method is invoked
+by the framework.) Descendant control classes may override this method for
+customized rendering. By default, <code><a href="class-TControl.html#_render">TControl::render()</a></code> invokes <code><a href="class-TControl.html#_renderChildren">TControl::renderChildren()</a></code>
+which is responsible for rendering of children of the control.
+Control's getVisible Visible property governs whether the control
+should be rendered or not.</p>
+
+<p>Each control on a page will undergo a series of lifecycles, including
+control construction, Init, Load, PreRender, Render, and OnUnload.
+They work together with page lifecycles to process a page request.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TControl</span></b>			
+			 implements 
+				<a href="class-IRenderable.html"><span>IRenderable</span></a>, 
+			
+				<a href="class-IBindable.html"><span>IBindable</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TCallback.html">TCallback</a>, 
+			<a href="class-TCallbackOptions.html">TCallbackOptions</a>, 
+			<a href="class-TForm.html">TForm</a>, 
+			<a href="class-THead.html">THead</a>, 
+			<a href="class-THiddenField.html">THiddenField</a>, 
+			<a href="class-TI18NControl.html">TI18NControl</a>, 
+			<a href="class-TJuiDialogButton.html">TJuiDialogButton</a>, 
+			<a href="class-TLiteral.html">TLiteral</a>, 
+			<a href="class-TMultiView.html">TMultiView</a>, 
+			<a href="class-TOutputCache.html">TOutputCache</a>, 
+			<a href="class-TPlaceHolder.html">TPlaceHolder</a>, 
+			<a href="class-TRepeaterItem.html">TRepeaterItem</a>, 
+			<a href="class-TClientScript.html">TClientScript</a>, 
+			<a href="class-TSafeHtml.html">TSafeHtml</a>, 
+			<a href="class-TStatements.html">TStatements</a>, 
+			<a href="class-TStyleSheet.html">TStyleSheet</a>, 
+			<a href="class-TTranslateParameter.html">TTranslateParameter</a>, 
+			<a href="class-TView.html">TView</a>, 
+			<a href="class-TWebControl.html">TWebControl</a>, 
+			<a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a>, 
+			<a href="class-TXmlTransform.html">TXmlTransform</a>, 
+			<a href="class-TCompositeControl.html">TCompositeControl</a>, 
+			<a href="class-TConditional.html">TConditional</a>, 
+			<a href="class-TContent.html">TContent</a>, 
+			<a href="class-TContentPlaceHolder.html">TContentPlaceHolder</a>, 
+			<a href="class-TDataSourceControl.html">TDataSourceControl</a>, 
+			<a href="class-TExpression.html">TExpression</a>, 
+			<a href="class-TFlushOutput.html">TFlushOutput</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-TAccordion.html">TAccordion</a>, 
+			<a href="class-TAccordionView.html">TAccordionView</a>, 
+			<a href="class-TActiveDataList.html">TActiveDataList</a>, 
+			<a href="class-TPager.html">TPager</a>, 
+			<a href="class-TPanel.html">TPanel</a>, 
+			<a href="class-TRadioButton.html">TRadioButton</a>, 
+			<a href="class-TRadioButtonItem.html">TRadioButtonItem</a>, 
+			<a href="class-TRadioButtonList.html">TRadioButtonList</a>, 
+			<a href="class-TRangeValidator.html">TRangeValidator</a>, 
+			<a href="class-TRatingList.html">TRatingList</a>, 
+			<a href="class-TReadOnlyDataSource.html">TReadOnlyDataSource</a>, 
+			<a href="class-TReCaptcha.html">TReCaptcha</a>, 
+			<a href="class-TReCaptchaValidator.html">TReCaptchaValidator</a>, 
+			<a href="class-TActiveDatePicker.html">TActiveDatePicker</a>, 
+			<a href="class-TRegularExpressionValidator.html">TRegularExpressionValidator</a>, 
+			<a href="class-TRepeater.html">TRepeater</a>, 
+			<a href="class-TRepeaterItemRenderer.html">TRepeaterItemRenderer</a>, 
+			<a href="class-TRequiredFieldValidator.html">TRequiredFieldValidator</a>, 
+			<a href="class-TScaffoldBase.html">TScaffoldBase</a>, 
+			<a href="class-TScaffoldEditView.html">TScaffoldEditView</a>, 
+			<a href="class-TScaffoldListView.html">TScaffoldListView</a>, 
+			<a href="class-TScaffoldSearch.html">TScaffoldSearch</a>, 
+			<a href="class-TScaffoldView.html">TScaffoldView</a>, 
+			<a href="class-TSlider.html">TSlider</a>, 
+			<a href="class-TActiveDropDownList.html">TActiveDropDownList</a>, 
+			<a href="class-TTable.html">TTable</a>, 
+			<a href="class-TTableCell.html">TTableCell</a>, 
+			<a href="class-TTableFooterRow.html">TTableFooterRow</a>, 
+			<a href="class-TTableHeaderCell.html">TTableHeaderCell</a>, 
+			<a href="class-TTableHeaderRow.html">TTableHeaderRow</a>, 
+			<a href="class-TTableRow.html">TTableRow</a>, 
+			<a href="class-TTabPanel.html">TTabPanel</a>, 
+			<a href="class-TTabView.html">TTabView</a>, 
+			<a href="class-TTemplateControl.html">TTemplateControl</a>, 
+			<a href="class-TTemplateControlInheritable.html">TTemplateControlInheritable</a>, 
+			<a href="class-TActiveFileUpload.html">TActiveFileUpload</a>, 
+			<a href="class-TTemplatedWizardStep.html">TTemplatedWizardStep</a>, 
+			<a href="class-TTextBox.html">TTextBox</a>, 
+			<a href="class-TTextHighlighter.html">TTextHighlighter</a>, 
+			<a href="class-TTextProcessor.html">TTextProcessor</a>, 
+			<a href="class-TTimeTriggeredCallback.html">TTimeTriggeredCallback</a>, 
+			<a href="class-TTranslate.html">TTranslate</a>, 
+			<a href="class-TTriggeredCallback.html">TTriggeredCallback</a>, 
+			<a href="class-TValidationSummary.html">TValidationSummary</a>, 
+			<a href="class-TValueTriggeredCallback.html">TValueTriggeredCallback</a>, 
+			<a href="class-TWizard.html">TWizard</a>, 
+			<a href="class-TActiveHiddenField.html">TActiveHiddenField</a>, 
+			<a href="class-TWizardStep.html">TWizardStep</a>, 
+			<a href="class-TActiveHyperLink.html">TActiveHyperLink</a>, 
+			<a href="class-TActiveImage.html">TActiveImage</a>, 
+			<a href="class-TActiveImageButton.html">TActiveImageButton</a>, 
+			<a href="class-TActiveLabel.html">TActiveLabel</a>, 
+			<a href="class-TActiveLinkButton.html">TActiveLinkButton</a>, 
+			<a href="class-TActiveButton.html">TActiveButton</a>, 
+			<a href="class-TActiveListBox.html">TActiveListBox</a>, 
+			<a href="class-TActiveMultiView.html">TActiveMultiView</a>, 
+			<a href="class-TActivePager.html">TActivePager</a>, 
+			<a href="class-TActivePanel.html">TActivePanel</a>, 
+			<a href="class-TActiveRadioButton.html">TActiveRadioButton</a>, 
+			<a href="class-TActiveRadioButtonItem.html">TActiveRadioButtonItem</a>, 
+			<a href="class-TActiveRadioButtonList.html">TActiveRadioButtonList</a>, 
+			<a href="class-TActiveRatingList.html">TActiveRatingList</a>, 
+			<a href="class-TActiveRepeater.html">TActiveRepeater</a>, 
+			<a href="class-TActiveTableCell.html">TActiveTableCell</a>, 
+			<a href="class-TActiveCheckBox.html">TActiveCheckBox</a>, 
+			<a href="class-TActiveTableRow.html">TActiveTableRow</a>, 
+			<a href="class-TActiveTextBox.html">TActiveTextBox</a>, 
+			<a href="class-TAutoComplete.html">TAutoComplete</a>, 
+			<a href="class-TBaseDataList.html">TBaseDataList</a>, 
+			<a href="class-TBaseValidator.html">TBaseValidator</a>, 
+			<a href="class-TBulletedList.html">TBulletedList</a>, 
+			<a href="class-TButton.html">TButton</a>, 
+			<a href="class-TCaptcha.html">TCaptcha</a>, 
+			<a href="class-TCaptchaValidator.html">TCaptchaValidator</a>, 
+			<a href="class-TCheckBox.html">TCheckBox</a>, 
+			<a href="class-TActiveCheckBoxList.html">TActiveCheckBoxList</a>, 
+			<a href="class-TCheckBoxItem.html">TCheckBoxItem</a>, 
+			<a href="class-TCheckBoxList.html">TCheckBoxList</a>, 
+			<a href="class-TChoiceFormat.html">TChoiceFormat</a>, 
+			<a href="class-TColorPicker.html">TColorPicker</a>, 
+			<a href="class-TCompareValidator.html">TCompareValidator</a>, 
+			<a href="class-TCompleteWizardStep.html">TCompleteWizardStep</a>, 
+			<a href="class-TCustomValidator.html">TCustomValidator</a>, 
+			<a href="class-TDataBoundControl.html">TDataBoundControl</a>, 
+			<a href="class-TDataGrid.html">TDataGrid</a>, 
+			<a href="class-TDataGridItem.html">TDataGridItem</a>, 
+			<a href="class-TActiveCheckBoxListItem.html">TActiveCheckBoxListItem</a>, 
+			<a href="class-TDataGridItemRenderer.html">TDataGridItemRenderer</a>, 
+			<a href="class-TDataGridPager.html">TDataGridPager</a>, 
+			<a href="class-TDataList.html">TDataList</a>, 
+			<a href="class-TDataListItem.html">TDataListItem</a>, 
+			<a href="class-TDataListItemRenderer.html">TDataListItemRenderer</a>, 
+			<a href="class-TDataRenderer.html">TDataRenderer</a>, 
+			<a href="class-TDataTypeValidator.html">TDataTypeValidator</a>, 
+			<a href="class-TDateFormat.html">TDateFormat</a>, 
+			<a href="class-TDatePicker.html">TDatePicker</a>, 
+			<a href="class-TDraggable.html">TDraggable</a>, 
+			<a href="class-TActiveClientScript.html">TActiveClientScript</a>, 
+			<a href="class-TDropContainer.html">TDropContainer</a>, 
+			<a href="class-TDropDownList.html">TDropDownList</a>, 
+			<a href="class-TEmailAddressValidator.html">TEmailAddressValidator</a>, 
+			<a href="class-TEventTriggeredCallback.html">TEventTriggeredCallback</a>, 
+			<a href="class-TFileUpload.html">TFileUpload</a>, 
+			<a href="class-THeader1.html">THeader1</a>, 
+			<a href="class-THeader2.html">THeader2</a>, 
+			<a href="class-THeader3.html">THeader3</a>, 
+			<a href="class-THeader4.html">THeader4</a>, 
+			<a href="class-THeader5.html">THeader5</a>, 
+			<a href="class-TActiveCustomValidator.html">TActiveCustomValidator</a>, 
+			<a href="class-THeader6.html">THeader6</a>, 
+			<a href="class-THtmlArea.html">THtmlArea</a>, 
+			<a href="class-THtmlArea4.html">THtmlArea4</a>, 
+			<a href="class-THtmlElement.html">THtmlElement</a>, 
+			<a href="class-THyperLink.html">THyperLink</a>, 
+			<a href="class-TImage.html">TImage</a>, 
+			<a href="class-TImageButton.html">TImageButton</a>, 
+			<a href="class-TImageMap.html">TImageMap</a>, 
+			<a href="class-TInlineFrame.html">TInlineFrame</a>, 
+			<a href="class-TInPlaceTextBox.html">TInPlaceTextBox</a>, 
+			<a href="class-TActiveDataGrid.html">TActiveDataGrid</a>, 
+			<a href="class-TItemDataRenderer.html">TItemDataRenderer</a>, 
+			<a href="class-TJavascriptLogger.html">TJavascriptLogger</a>, 
+			<a href="class-TJuiAutoComplete.html">TJuiAutoComplete</a>, 
+			<a href="class-TJuiDatePicker.html">TJuiDatePicker</a>, 
+			<a href="class-TJuiDialog.html">TJuiDialog</a>, 
+			<a href="class-TJuiDraggable.html">TJuiDraggable</a>, 
+			<a href="class-TJuiDroppable.html">TJuiDroppable</a>, 
+			<a href="class-TJuiProgressbar.html">TJuiProgressbar</a>, 
+			<a href="class-TJuiResizable.html">TJuiResizable</a>, 
+			<a href="class-TJuiSelectable.html">TJuiSelectable</a>, 
+			<a href="class-TActiveDataGridPager.html">TActiveDataGridPager</a>, 
+			<a href="class-TJuiSortable.html">TJuiSortable</a>, 
+			<a href="class-TKeyboard.html">TKeyboard</a>, 
+			<a href="class-TLabel.html">TLabel</a>, 
+			<a href="class-TLinkButton.html">TLinkButton</a>, 
+			<a href="class-TListBox.html">TListBox</a>, 
+			<a href="class-TListControl.html">TListControl</a>, 
+			<a href="class-TListControlValidator.html">TListControlValidator</a>, 
+			<a href="class-TMarkdown.html">TMarkdown</a>, 
+			<a href="class-TNumberFormat.html">TNumberFormat</a>, 
+			<a href="class-TPage.html">TPage</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Web/UI/TControl.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code>__get( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns a property value by name or a control by ID.
+This overrides the parent implementation by allowing accessing
+a control via its ID using the following syntax,</p>
+
+<pre><span class="php-var">$menuBar</span>=<span class="php-var">$this</span>-&gt;menuBar;</pre>
+
+<p>Note, the control must be configured in the template
+with explicit ID. If the name matches both a property and a control ID,
+the control ID will take the precedence.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a property value by name or a control by ID.
+This overrides the parent implementation by allowing accessing
+a control via its ID using the following syntax,</p>
+
+<pre><span class="php-var">$menuBar</span>=<span class="php-var">$this</span>-&gt;menuBar;</pre>
+
+<p>Note, the control must be configured in the template
+with explicit ID. If the name matches both a property and a control ID,
+the control ID will take the precedence.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>property name or control ID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the property value or the target control
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the property is not defined.
+				</div>
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TControl.html#_registerObject">TControl::registerObject()</a></code><br>
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___get">TComponent::__get()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasAdapter" id="_getHasAdapter">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasAdapter">#</a>
+		<code>getHasAdapter( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether there is an adapter for this control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAdapter" id="_getAdapter">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TControlAdapter.html">TControlAdapter</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAdapter">#</a>
+		<code>getAdapter( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TControlAdapter.html">TControlAdapter</a></code><br>control adapter. Null if not exists.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAdapter" id="_setAdapter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAdapter">#</a>
+		<code>setAdapter( <span><code><a href="class-TControlAdapter.html">TControlAdapter</a></code> <var>$adapter</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$adapter</var></dt>
+					<dd>adapter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParent" id="_getParent">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TControl.html">TControl</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParent">#</a>
+		<code>getParent( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TControl.html">TControl</a></code><br>the parent of this control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNamingContainer" id="_getNamingContainer">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TControl.html">TControl</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNamingContainer">#</a>
+		<code>getNamingContainer( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TControl.html">TControl</a></code><br>the naming container of this control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPage" id="_getPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TPage.html">TPage</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPage">#</a>
+		<code>getPage( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TPage.html">TPage</a></code><br>the page that contains this control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPage" id="_setPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPage">#</a>
+		<code>setPage( <span><code><a href="class-TPage.html">TPage</a></code> <var>$page</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the page for a control.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the page for a control.
+Only framework developers should use this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$page</var></dt>
+					<dd>page that contains this control</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTemplateControl" id="_setTemplateControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTemplateControl">#</a>
+		<code>setTemplateControl( <span><code><a href="class-TTemplateControl.html">TTemplateControl</a></code> <var>$control</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the control whose template contains this control.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the control whose template contains this control.
+Only framework developers should use this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>control whose template contains this control</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTemplateControl" id="_getTemplateControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTemplateControl.html">TTemplateControl</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTemplateControl">#</a>
+		<code>getTemplateControl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTemplateControl.html">TTemplateControl</a></code><br>the control whose template contains this control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSourceTemplateControl" id="_getSourceTemplateControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTemplateControl.html">TTemplateControl</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSourceTemplateControl">#</a>
+		<code>getSourceTemplateControl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTemplateControl.html">TTemplateControl</a></code><br><p>the control whose template is loaded from
+some external storage, such as file, db, and whose template ultimately
+contains this control.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getControlStage" id="_getControlStage">
+
+		<td class="attributes"><code>
+			 protected 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getControlStage">#</a>
+		<code>getControlStage( )</code>
+
+		<div class="description short">
+			<p>Gets the lifecycle step the control is currently at.
+This method should only be used by control developers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the lifecycle step the control is currently at.
+This method should only be used by control developers.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br><p>the lifecycle step the control is currently at.
+The value can be CS_CONSTRUCTED, CS_CHILD_INITIALIZED, CS_INITIALIZED,
+CS_STATE_LOADED, CS_LOADED, CS_PRERENDERED.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setControlStage" id="_setControlStage">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setControlStage">#</a>
+		<code>setControlStage( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the lifecycle step the control is currently at.
+This method should only be used by control developers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the lifecycle step the control is currently at.
+This method should only be used by control developers.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><p>lifecycle step the control is currently at.
+Valid values include CS_CONSTRUCTED, CS_CHILD_INITIALIZED, CS_INITIALIZED,
+CS_STATE_LOADED, CS_LOADED, CS_PRERENDERED.</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getID" id="_getID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getID">#</a>
+		<code>getID( <span>boolean <var>$hideAutoID</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns the id of the control.
+Control ID can be either manually set or automatically generated.
+If $hideAutoID is true, automatically generated ID will be returned as an empty string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the id of the control.
+Control ID can be either manually set or automatically generated.
+If $hideAutoID is true, automatically generated ID will be returned as an empty string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$hideAutoID</var></dt>
+					<dd>to hide automatically generated ID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the ID of the control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setID" id="_setID">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setID">#</a>
+		<code>setID( <span>string <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>new control ID. The value must consist of word characters [a-zA-Z0-9_] only</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if ID is in a bad format
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUniqueID" id="_getUniqueID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUniqueID">#</a>
+		<code>getUniqueID( )</code>
+
+		<div class="description short">
+			<p>Returns a unique ID that identifies the control in the page hierarchy.
+A unique ID is the contenation of all naming container controls' IDs and the control ID.
+These IDs are separated by '$' character.
+Control users should not rely on the specific format of UniqueID, however.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a unique ID that identifies the control in the page hierarchy.
+A unique ID is the contenation of all naming container controls' IDs and the control ID.
+These IDs are separated by '$' character.
+Control users should not rely on the specific format of UniqueID, however.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>a unique ID that identifies the control in the page hierarchy
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="focus" id="_focus">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_focus">#</a>
+		<code>focus( )</code>
+
+		<div class="description short">
+			<p>Sets input focus to this control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets input focus to this control.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClientID" id="_getClientID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClientID">#</a>
+		<code>getClientID( )</code>
+
+		<div class="description short">
+			<p>Returns the client ID of the control.
+The client ID can be used to uniquely identify
+the control in client-side scripts (such as JavaScript).
+Do not rely on the explicit format of the return ID.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the client ID of the control.
+The client ID can be used to uniquely identify
+the control in client-side scripts (such as JavaScript).
+Do not rely on the explicit format of the return ID.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the client ID of the control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="convertUniqueIdToClientId" id="_convertUniqueIdToClientId">
+
+		<td class="attributes"><code>
+			 public static
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_convertUniqueIdToClientId">#</a>
+		<code>convertUniqueIdToClientId( <span>string <var>$uniqueID</var></span> )</code>
+
+		<div class="description short">
+			<p>Converts a unique ID to a client ID.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Converts a unique ID to a client ID.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$uniqueID</var></dt>
+					<dd>unique ID of a control</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the client ID of the control
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSkinID" id="_getSkinID">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSkinID">#</a>
+		<code>getSkinID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the skin ID of this control, '' if not set
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSkinID" id="_setSkinID">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSkinID">#</a>
+		<code>setSkinID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>skin ID of this control</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the SkinID is set in a stage later than PreInit, or if the skin is applied already.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsSkinApplied" id="_getIsSkinApplied">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsSkinApplied">#</a>
+		<code>getIsSkinApplied( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the SkinID is set in a stage later than PreInit, or if the skin is applied already.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEnableTheming" id="_getEnableTheming">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnableTheming">#</a>
+		<code>getEnableTheming( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br><p>whether theming is enabled for this control.
+The theming is enabled if the control and all its parents have it enabled.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEnableTheming" id="_setEnableTheming">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEnableTheming">#</a>
+		<code>setEnableTheming( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>to enable theming</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if this method is invoked after OnPreInit
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCustomData" id="_getCustomData">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCustomData">#</a>
+		<code>getCustomData( )</code>
+
+		<div class="description short">
+			<p>Returns custom data associated with this control.
+A control may be associated with some custom data for various purposes.
+For example, a button may be associated with a string to identify itself
+in a generic OnClick event handler.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns custom data associated with this control.
+A control may be associated with some custom data for various purposes.
+For example, a button may be associated with a string to identify itself
+in a generic OnClick event handler.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>custom data associated with this control. Defaults to null.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCustomData" id="_setCustomData">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCustomData">#</a>
+		<code>setCustomData( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Associates custom data with this control.
+Note, the custom data must be serializable and unserializable.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Associates custom data with this control.
+Note, the custom data must be serializable and unserializable.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>data</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasControls" id="_getHasControls">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasControls">#</a>
+		<code>getHasControls( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the control has child controls
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getControls" id="_getControls">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TControlCollection.html">TControlCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getControls">#</a>
+		<code>getControls( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TControlCollection.html">TControlCollection</a></code><br>the child control collection
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createControlCollection" id="_createControlCollection">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TControlCollection.html">TControlCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createControlCollection">#</a>
+		<code>createControlCollection( )</code>
+
+		<div class="description short">
+			<p>Creates a control collection object that is to be used to hold child controls</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates a control collection object that is to be used to hold child controls</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TControlCollection.html">TControlCollection</a></code><br>control collection
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TControl.html#_getControls">TControl::getControls()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getVisible" id="_getVisible">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVisible">#</a>
+		<code>getVisible( <span>boolean <var>$checkParents</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Checks if a control is visible.
+If parent check is required, then a control is visible only if the control
+and all its ancestors are visible.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Checks if a control is visible.
+If parent check is required, then a control is visible only if the control
+and all its ancestors are visible.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$checkParents</var></dt>
+					<dd>the parents should also be checked if visible</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the control is visible (default=true).
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setVisible" id="_setVisible">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setVisible">#</a>
+		<code>setVisible( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the control is visible</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEnabled" id="_getEnabled">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnabled">#</a>
+		<code>getEnabled( <span>boolean <var>$checkParents</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns a value indicating whether the control is enabled.
+A control is enabled if it allows client user interaction.
+If $checkParents is true, all parent controls will be checked,
+and unless they are all enabled, false will be returned.
+The property Enabled is mainly used for <code><a href="class-TWebControl.html">TWebControl</a></code>
+derived controls.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a value indicating whether the control is enabled.
+A control is enabled if it allows client user interaction.
+If $checkParents is true, all parent controls will be checked,
+and unless they are all enabled, false will be returned.
+The property Enabled is mainly used for <code><a href="class-TWebControl.html">TWebControl</a></code>
+derived controls.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$checkParents</var></dt>
+					<dd>the parents should also be checked enabled</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the control is enabled.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEnabled" id="_setEnabled">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEnabled">#</a>
+		<code>setEnabled( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the control is to be enabled.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasAttributes" id="_getHasAttributes">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasAttributes">#</a>
+		<code>getHasAttributes( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the control has custom attributes
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAttributes" id="_getAttributes">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAttributes">#</a>
+		<code>getAttributes( )</code>
+
+		<div class="description short">
+			<p>Returns the list of custom attributes.
+Custom attributes are name-value pairs that may be rendered
+as HTML tags' attributes.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the list of custom attributes.
+Custom attributes are name-value pairs that may be rendered
+as HTML tags' attributes.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TAttributeCollection.html">TAttributeCollection</a></code><br>the list of custom attributes
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasAttribute" id="_hasAttribute">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasAttribute">#</a>
+		<code>hasAttribute( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether the named attribute exists
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAttribute" id="_getAttribute">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAttribute">#</a>
+		<code>getAttribute( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>attribute value, null if attribute does not exist
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAttribute" id="_setAttribute">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAttribute">#</a>
+		<code>setAttribute( <span>string <var>$name</var></span>, <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets a custom control attribute.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets a custom control attribute.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>of the attribute</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removeAttribute" id="_removeAttribute">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeAttribute">#</a>
+		<code>removeAttribute( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Removes the named attribute.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes the named attribute.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name of the attribute to be removed.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>attribute value removed, null if attribute does not exist.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEnableViewState" id="_getEnableViewState">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnableViewState">#</a>
+		<code>getEnableViewState( <span> <var>$checkParents</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether viewstate is enabled
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEnableViewState" id="_setEnableViewState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEnableViewState">#</a>
+		<code>setEnableViewState( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>whether to enable viewstate</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getControlState" id="_getControlState">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getControlState">#</a>
+		<code>getControlState( <span>string <var>$key</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns a controlstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a controlstate value.</p>
+
+<p>This function is mainly used in defining getter functions for control properties
+that must be kept in controlstate.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the controlstate value to be returned</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd>default value. If $key is not found in controlstate, $defaultValue will be returned</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the controlstate value corresponding to $key
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setControlState" id="_setControlState">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setControlState">#</a>
+		<code>setControlState( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sets a controlstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets a controlstate value.</p>
+
+<p>This function is very useful in defining setter functions for control properties
+that must be kept in controlstate.
+Make sure that the controlstate value must be serializable and unserializable.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the controlstate value</dd>
+					<dt><var>$value</var></dt>
+					<dd>controlstate value to be set</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd>value. If $value===$defaultValue, the item will be cleared from controlstate</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearControlState" id="_clearControlState">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearControlState">#</a>
+		<code>clearControlState( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Clears a controlstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clears a controlstate value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the controlstate value to be cleared</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trackViewState" id="_trackViewState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trackViewState">#</a>
+		<code>trackViewState( <span>boolean <var>$enabled</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets a value indicating whether we should keep data in viewstate.
+When it is false, data saved via setViewState() will not be persisted.
+By default, it is true, meaning data will be persisted across postbacks.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets a value indicating whether we should keep data in viewstate.
+When it is false, data saved via setViewState() will not be persisted.
+By default, it is true, meaning data will be persisted across postbacks.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$enabled</var></dt>
+					<dd>data should be persisted</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getViewState" id="_getViewState">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getViewState">#</a>
+		<code>getViewState( <span>string <var>$key</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns a viewstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a viewstate value.</p>
+
+<p>This function is very useful in defining getter functions for component properties
+that must be kept in viewstate.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the viewstate value to be returned</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd>default value. If $key is not found in viewstate, $defaultValue will be returned</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the viewstate value corresponding to $key
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setViewState" id="_setViewState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setViewState">#</a>
+		<code>setViewState( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Sets a viewstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets a viewstate value.</p>
+
+<p>This function is very useful in defining setter functions for control properties
+that must be kept in viewstate.
+Make sure that the viewstate value must be serializable and unserializable.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the viewstate value</dd>
+					<dt><var>$value</var></dt>
+					<dd>viewstate value to be set</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd>value. If $value===$defaultValue, the item will be cleared from the viewstate.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearViewState" id="_clearViewState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearViewState">#</a>
+		<code>clearViewState( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Clears a viewstate value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clears a viewstate value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>name of the viewstate value to be cleared</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bindProperty" id="_bindProperty">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bindProperty">#</a>
+		<code>bindProperty( <span>string <var>$name</var></span>, <span>string <var>$expression</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets up the binding between a property (or property path) and an expression.
+The context of the expression is the template control (or the control itself if it is a page).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets up the binding between a property (or property path) and an expression.
+The context of the expression is the template control (or the control itself if it is a page).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>property name, or property path</dd>
+					<dt><var>$expression</var></dt>
+					<dd>expression</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unbindProperty" id="_unbindProperty">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unbindProperty">#</a>
+		<code>unbindProperty( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Breaks the binding between a property (or property path) and an expression.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Breaks the binding between a property (or property path) and an expression.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>property name (or property path)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="autoBindProperty" id="_autoBindProperty">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_autoBindProperty">#</a>
+		<code>autoBindProperty( <span>string <var>$name</var></span>, <span>string <var>$expression</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets up the binding between a property (or property path) and an expression.
+Unlike regular databinding, the expression bound by this method
+is automatically evaluated during prerenderRecursive().
+The context of the expression is the template control (or the control itself if it is a page).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets up the binding between a property (or property path) and an expression.
+Unlike regular databinding, the expression bound by this method
+is automatically evaluated during prerenderRecursive().
+The context of the expression is the template control (or the control itself if it is a page).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>property name, or property path</dd>
+					<dt><var>$expression</var></dt>
+					<dd>expression</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataBind" id="_dataBind">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dataBind">#</a>
+		<code>dataBind( )</code>
+
+		<div class="description short">
+			<p>Performs the databinding for this control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs the databinding for this control.</p>
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IBindable.html#_dataBind">IBindable::dataBind()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataBindProperties" id="_dataBindProperties">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dataBindProperties">#</a>
+		<code>dataBindProperties( )</code>
+
+		<div class="description short">
+			<p>Databinding properties of the control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Databinding properties of the control.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="autoDataBindProperties" id="_autoDataBindProperties">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_autoDataBindProperties">#</a>
+		<code>autoDataBindProperties( )</code>
+
+		<div class="description short">
+			<p>Auto databinding properties of the control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Auto databinding properties of the control.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataBindChildren" id="_dataBindChildren">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dataBindChildren">#</a>
+		<code>dataBindChildren( )</code>
+
+		<div class="description short">
+			<p>Databinding child controls.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Databinding child controls.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getChildControlsCreated" id="_getChildControlsCreated">
+
+		<td class="attributes"><code>
+			final protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getChildControlsCreated">#</a>
+		<code>getChildControlsCreated( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether child controls have been created
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setChildControlsCreated" id="_setChildControlsCreated">
+
+		<td class="attributes"><code>
+			final protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setChildControlsCreated">#</a>
+		<code>setChildControlsCreated( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets a value indicating whether child controls are created.
+If false, any existing child controls will be cleared up.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets a value indicating whether child controls are created.
+If false, any existing child controls will be cleared up.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>child controls are created</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ensureChildControls" id="_ensureChildControls">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ensureChildControls">#</a>
+		<code>ensureChildControls( )</code>
+
+		<div class="description short">
+			<p>Ensures child controls are created.
+If child controls are not created yet, this method will invoke
+<code><a href="class-TControl.html#_createChildControls">TControl::createChildControls()</a></code> to create them.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Ensures child controls are created.
+If child controls are not created yet, this method will invoke
+<code><a href="class-TControl.html#_createChildControls">TControl::createChildControls()</a></code> to create them.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createChildControls" id="_createChildControls">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createChildControls">#</a>
+		<code>createChildControls( )</code>
+
+		<div class="description short">
+			<p>Creates child controls.
+This method can be overriden for controls who want to have their controls.
+Do not call this method directly. Instead, call <code><a href="class-TControl.html#_ensureChildControls">TControl::ensureChildControls()</a></code>
+to ensure child controls are created only once.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates child controls.
+This method can be overriden for controls who want to have their controls.
+Do not call this method directly. Instead, call <code><a href="class-TControl.html#_ensureChildControls">TControl::ensureChildControls()</a></code>
+to ensure child controls are created only once.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findControl" id="_findControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TControl.html">TControl</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findControl">#</a>
+		<code>findControl( <span>string <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Finds a control by ID path within the current naming container.
+The current naming container is either the control itself
+if it implements <code><a href="class-INamingContainer.html">INamingContainer</a></code> or the control's naming container.
+The ID path is an ID sequence separated by <a href="TControl::ID_SEPARATOR">TControl::ID_SEPARATOR</a>.
+For example, 'Repeater1.Item1.Button1' looks for a control with ID 'Button1'
+whose naming container is 'Item1' whose naming container is 'Repeater1'.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Finds a control by ID path within the current naming container.
+The current naming container is either the control itself
+if it implements <code><a href="class-INamingContainer.html">INamingContainer</a></code> or the control's naming container.
+The ID path is an ID sequence separated by <a href="TControl::ID_SEPARATOR">TControl::ID_SEPARATOR</a>.
+For example, 'Repeater1.Item1.Button1' looks for a control with ID 'Button1'
+whose naming container is 'Item1' whose naming container is 'Repeater1'.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>of the control to be looked up</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TControl.html">TControl</a></code>|null<br>the control found, null if not found
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code><br>if a control's ID is found not unique within its naming container.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findControlsByType" id="_findControlsByType">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findControlsByType">#</a>
+		<code>findControlsByType( <span>string <var>$type</var></span>, <span>boolean <var>$strict</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Finds all child and grand-child controls that are of the specified type.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Finds all child and grand-child controls that are of the specified type.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd>class name</dd>
+					<dt><var>$strict</var></dt>
+					<dd>the type comparison is strict or not. If false, controls of the parent classes of the specified class will also be returned.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>list of controls found
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findControlsByID" id="_findControlsByID">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findControlsByID">#</a>
+		<code>findControlsByID( <span>string <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Finds all child and grand-child controls with the specified ID.
+Note, this method is different from <code><a href="class-TControl.html#_findControl">TControl::findControl()</a></code> in that
+it searches through all controls that have this control as the ancestor
+while findcontrol only searches through controls that have this
+control as the direct naming container.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Finds all child and grand-child controls with the specified ID.
+Note, this method is different from <code><a href="class-TControl.html#_findControl">TControl::findControl()</a></code> in that
+it searches through all controls that have this control as the ancestor
+while findcontrol only searches through controls that have this
+control as the direct naming container.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>ID being looked for</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>list of controls found
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearNamingContainer" id="_clearNamingContainer">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearNamingContainer">#</a>
+		<code>clearNamingContainer( )</code>
+
+		<div class="description short">
+			<p>Resets the control as a naming container.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Resets the control as a naming container.
+Only framework developers should use this method.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerObject" id="_registerObject">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerObject">#</a>
+		<code>registerObject( <span>string <var>$name</var></span>, <span>object <var>$object</var></span> )</code>
+
+		<div class="description short">
+			<p>Registers an object by a name.
+A registered object can be accessed like a public member variable.
+This method should only be used by framework and control developers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Registers an object by a name.
+A registered object can be accessed like a public member variable.
+This method should only be used by framework and control developers.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>of the object</dd>
+					<dt><var>$object</var></dt>
+					<dd>to be declared</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TControl.html#___get">TControl::__get()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unregisterObject" id="_unregisterObject">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unregisterObject">#</a>
+		<code>unregisterObject( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Unregisters an object by name.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Unregisters an object by name.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>of the object</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TControl.html#_registerObject">TControl::registerObject()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isObjectRegistered" id="_isObjectRegistered">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isObjectRegistered">#</a>
+		<code>isObjectRegistered( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether an object has been registered with the name
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TControl.html#_registerObject">TControl::registerObject()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasChildInitialized" id="_getHasChildInitialized">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasChildInitialized">#</a>
+		<code>getHasChildInitialized( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the child control has been initialized.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasInitialized" id="_getHasInitialized">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasInitialized">#</a>
+		<code>getHasInitialized( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the onInit event has raised.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasLoadedPostData" id="_getHasLoadedPostData">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasLoadedPostData">#</a>
+		<code>getHasLoadedPostData( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the control has loaded post data.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasLoaded" id="_getHasLoaded">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasLoaded">#</a>
+		<code>getHasLoaded( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the onLoad event has raised.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHasPreRendered" id="_getHasPreRendered">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHasPreRendered">#</a>
+		<code>getHasPreRendered( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if onPreRender event has raised.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRegisteredObject" id="_getRegisteredObject">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRegisteredObject">#</a>
+		<code>getRegisteredObject( <span> <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the named registered object.
+A component with explicit ID on a template will be registered to
+the template owner. This method allows you to obtain this component
+with the ID.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the named registered object.
+A component with explicit ID on a template will be registered to
+the template owner. This method allows you to obtain this component
+with the ID.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the named registered object. Null if object is not found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAllowChildControls" id="_getAllowChildControls">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllowChildControls">#</a>
+		<code>getAllowChildControls( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether body contents are allowed for this control. Defaults to true.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addParsedObject" id="_addParsedObject">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addParsedObject">#</a>
+		<code>addParsedObject( <span>string|<code><a href="class-TComponent.html">TComponent</a></code> <var>$object</var></span> )</code>
+
+		<div class="description short">
+			<p>Adds the object instantiated on a template to the child control collection.
+This method overrides the parent implementation.
+Only framework developers and control developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds the object instantiated on a template to the child control collection.
+This method overrides the parent implementation.
+Only framework developers and control developers should use this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$object</var></dt>
+					<dd>string or component parsed and instantiated in template</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TComponent.html#_createdOnTemplate">TComponent::createdOnTemplate()</a></code><br>
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#_addParsedObject">TComponent::addParsedObject()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearChildState" id="_clearChildState">
+
+		<td class="attributes"><code>
+			final protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearChildState">#</a>
+		<code>clearChildState( )</code>
+
+		<div class="description short">
+			<p>Clears up the child state data.
+After a control loads its state, those state that do not belong to
+any existing child controls are stored as child state.
+This method will remove these state.
+Only frameworker developers and control developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clears up the child state data.
+After a control loads its state, those state that do not belong to
+any existing child controls are stored as child state.
+This method will remove these state.
+Only frameworker developers and control developers should use this method.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDescendentOf" id="_isDescendentOf">
+
+		<td class="attributes"><code>
+			final protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDescendentOf">#</a>
+		<code>isDescendentOf( <span><code><a href="class-TControl.html">TControl</a></code> <var>$ancestor</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ancestor</var></dt>
+					<dd>potential ancestor control</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br><p>if the control is a descendent (parent, parent of parent, etc.)
+of the specified control</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addedControl" id="_addedControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addedControl">#</a>
+		<code>addedControl( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span> )</code>
+
+		<div class="description short">
+			<p>Adds a control into the child collection of the control.
+Control lifecycles will be caught up during the addition.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Adds a control into the child collection of the control.
+Control lifecycles will be caught up during the addition.
+Only framework developers should use this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>new child control</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removedControl" id="_removedControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removedControl">#</a>
+		<code>removedControl( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span> )</code>
+
+		<div class="description short">
+			<p>Removes a control from the child collection of the control.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Removes a control from the child collection of the control.
+Only framework developers should use this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>child control removed</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initRecursive" id="_initRecursive">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initRecursive">#</a>
+		<code>initRecursive( <span><code><a href="class-TControl.html">TControl</a></code> <var>$namingContainer</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Performs the Init step for the control and all its child controls.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs the Init step for the control and all its child controls.
+Only framework developers should use this method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namingContainer</var></dt>
+					<dd>naming container control</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadRecursive" id="_loadRecursive">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadRecursive">#</a>
+		<code>loadRecursive( )</code>
+
+		<div class="description short">
+			<p>Performs the Load step for the control and all its child controls.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs the Load step for the control and all its child controls.
+Only framework developers should use this method.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="preRenderRecursive" id="_preRenderRecursive">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_preRenderRecursive">#</a>
+		<code>preRenderRecursive( )</code>
+
+		<div class="description short">
+			<p>Performs the PreRender step for the control and all its child controls.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs the PreRender step for the control and all its child controls.
+Only framework developers should use this method.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unloadRecursive" id="_unloadRecursive">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unloadRecursive">#</a>
+		<code>unloadRecursive( )</code>
+
+		<div class="description short">
+			<p>Performs the Unload step for the control and all its child controls.
+Only framework developers should use this method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Performs the Unload step for the control and all its child controls.
+Only framework developers should use this method.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onInit" id="_onInit">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onInit">#</a>
+		<code>onInit( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>This method is invoked when the control enters 'OnInit' stage.
+The method raises 'OnInit' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked when the control enters 'OnInit' stage.
+The method raises 'OnInit' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onLoad" id="_onLoad">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onLoad">#</a>
+		<code>onLoad( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>This method is invoked when the control enters 'OnLoad' stage.
+The method raises 'OnLoad' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked when the control enters 'OnLoad' stage.
+The method raises 'OnLoad' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onDataBinding" id="_onDataBinding">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onDataBinding">#</a>
+		<code>onDataBinding( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raises 'OnDataBinding' event.
+This method is invoked when <code><a href="class-TControl.html#_dataBind">TControl::dataBind()</a></code> is invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raises 'OnDataBinding' event.
+This method is invoked when <code><a href="class-TControl.html#_dataBind">TControl::dataBind()</a></code> is invoked.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onUnload" id="_onUnload">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onUnload">#</a>
+		<code>onUnload( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>This method is invoked when the control enters 'OnUnload' stage.
+The method raises 'OnUnload' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked when the control enters 'OnUnload' stage.
+The method raises 'OnUnload' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPreRender" id="_onPreRender">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPreRender">#</a>
+		<code>onPreRender( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>This method is invoked when the control enters 'OnPreRender' stage.
+The method raises 'OnPreRender' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked when the control enters 'OnPreRender' stage.
+The method raises 'OnPreRender' event.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="raiseBubbleEvent" id="_raiseBubbleEvent">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_raiseBubbleEvent">#</a>
+		<code>raiseBubbleEvent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Invokes the parent's bubbleEvent method.
+A control who wants to bubble an event must call this method in its onEvent method.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Invokes the parent's bubbleEvent method.
+A control who wants to bubble an event must call this method in its onEvent method.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd>of the event</dd>
+					<dt><var>$param</var></dt>
+					<dd>parameter</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TControl.html#_bubbleEvent">TControl::bubbleEvent()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bubbleEvent" id="_bubbleEvent">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bubbleEvent">#</a>
+		<code>bubbleEvent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>This method responds to a bubbled event.
+This method should be overriden to provide customized response to a bubbled event.
+Check the type of event parameter to determine what event is bubbled currently.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method responds to a bubbled event.
+This method should be overriden to provide customized response to a bubbled event.
+Check the type of event parameter to determine what event is bubbled currently.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd>of the event</dd>
+					<dt><var>$param</var></dt>
+					<dd>parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the event bubbling is handled and no more bubbling.
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TControl.html#_raiseBubbleEvent">TControl::raiseBubbleEvent()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="broadcastEvent" id="_broadcastEvent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_broadcastEvent">#</a>
+		<code>broadcastEvent( <span>string <var>$name</var></span>, <span><code><a href="class-TControl.html">TControl</a></code> <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Broadcasts an event.
+The event will be sent to all controls on the current page hierarchy.
+If a control defines the event, the event will be raised for the control.
+If a control implements <code><a href="class-IBroadcastEventReceiver.html">IBroadcastEventReceiver</a></code>, its
+<a href="IBroadcastEventReceiver::broadcastEventReceived">broadcastEventReceived()</a> method will
+be invoked which gives the control a chance to respond to the event.
+For example, when broadcasting event 'OnClick', all controls having 'OnClick'
+event will have this event raised, and all controls implementing
+<code><a href="class-IBroadcastEventReceiver.html">IBroadcastEventReceiver</a></code> will also have its
+<a href="IBroadcastEventReceiver::broadcastEventReceived">broadcastEventReceived()</a>
+invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Broadcasts an event.
+The event will be sent to all controls on the current page hierarchy.
+If a control defines the event, the event will be raised for the control.
+If a control implements <code><a href="class-IBroadcastEventReceiver.html">IBroadcastEventReceiver</a></code>, its
+<a href="IBroadcastEventReceiver::broadcastEventReceived">broadcastEventReceived()</a> method will
+be invoked which gives the control a chance to respond to the event.
+For example, when broadcasting event 'OnClick', all controls having 'OnClick'
+event will have this event raised, and all controls implementing
+<code><a href="class-IBroadcastEventReceiver.html">IBroadcastEventReceiver</a></code> will also have its
+<a href="IBroadcastEventReceiver::broadcastEventReceived">broadcastEventReceived()</a>
+invoked.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>of the broadcast event</dd>
+					<dt><var>$sender</var></dt>
+					<dd>of this event</dd>
+					<dt><var>$param</var></dt>
+					<dd>parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="traverseChildControls" id="_traverseChildControls">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_traverseChildControls">#</a>
+		<code>traverseChildControls( <span>mixed <var>$param</var></span>, <span>callable <var>$preCallback</var> = <span class="php-keyword1">null</span></span>, <span>callable <var>$postCallback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Traverse the whole control hierarchy rooted at this control.
+Callback function may be invoked for each control being visited.
+A pre-callback is invoked before traversing child controls;
+A post-callback is invoked after traversing child controls.
+Callback functions can be global functions or class methods.
+They must be of the following signature:</p>
+
+<pre><span class="php-keyword1">function</span> callback_func(<span class="php-var">$control</span>,<span class="php-var">$param</span>) {...}</pre>
+
+<p>where $control refers to the control being visited and $param
+is the parameter that is passed originally when calling this traverse function.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Traverse the whole control hierarchy rooted at this control.
+Callback function may be invoked for each control being visited.
+A pre-callback is invoked before traversing child controls;
+A post-callback is invoked after traversing child controls.
+Callback functions can be global functions or class methods.
+They must be of the following signature:</p>
+
+<pre><span class="php-keyword1">function</span> callback_func(<span class="php-var">$control</span>,<span class="php-var">$param</span>) {...}</pre>
+
+<p>where $control refers to the control being visited and $param
+is the parameter that is passed originally when calling this traverse function.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>to be passed to callbacks for each control</dd>
+					<dt><var>$preCallback</var></dt>
+					<dd>invoked before traversing child controls. If null, it is ignored.</dd>
+					<dt><var>$postCallback</var></dt>
+					<dd>invoked after traversing child controls. If null, it is ignored.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderControl" id="_renderControl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderControl">#</a>
+		<code>renderControl( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>Renders the control.
+Only when the control is visible will the control be rendered.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Renders the control.
+Only when the control is visible will the control be rendered.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>writer used for the rendering purpose</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="render" id="_render">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_render">#</a>
+		<code>render( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>Renders the control.
+This method is invoked by <code><a href="class-TControl.html#_renderControl">TControl::renderControl()</a></code> when the control is visible.
+You can override this method to provide customized rendering of the control.
+By default, the control simply renders all its child contents.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Renders the control.
+This method is invoked by <code><a href="class-TControl.html#_renderControl">TControl::renderControl()</a></code> when the control is visible.
+You can override this method to provide customized rendering of the control.
+By default, the control simply renders all its child contents.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>writer used for the rendering purpose</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IRenderable.html#_render">IRenderable::render()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderChildren" id="_renderChildren">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderChildren">#</a>
+		<code>renderChildren( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>Renders the children of the control.
+This method iterates through all child controls and static text strings
+and renders them in order.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Renders the children of the control.
+This method iterates through all child controls and static text strings
+and renders them in order.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>writer used for the rendering purpose</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveState" id="_saveState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveState">#</a>
+		<code>saveState( )</code>
+
+		<div class="description short">
+			<p>This method is invoked when control state is to be saved.
+You can override this method to do last step state saving.
+Parent implementation must be invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked when control state is to be saved.
+You can override this method to do last step state saving.
+Parent implementation must be invoked.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadState" id="_loadState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadState">#</a>
+		<code>loadState( )</code>
+
+		<div class="description short">
+			<p>This method is invoked right after the control has loaded its state.
+You can override this method to initialize data from the control state.
+Parent implementation must be invoked.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked right after the control has loaded its state.
+You can override this method to initialize data from the control state.
+Parent implementation must be invoked.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadStateRecursive" id="_loadStateRecursive">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadStateRecursive">#</a>
+		<code>loadStateRecursive( <span>array <var>&amp; $state</var></span>, <span>boolean <var>$needViewState</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Loads state (viewstate and controlstate) into a control and its children.
+This method should only be used by framework developers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Loads state (viewstate and controlstate) into a control and its children.
+This method should only be used by framework developers.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$state</var></dt>
+					<dd>collection of the state</dd>
+					<dt><var>$needViewState</var></dt>
+					<dd>the viewstate should be loaded</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveStateRecursive" id="_saveStateRecursive">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveStateRecursive">#</a>
+		<code>saveStateRecursive( <span>boolean <var>$needViewState</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Saves all control state (viewstate and controlstate) as a collection.
+This method should only be used by framework developers.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Saves all control state (viewstate and controlstate) as a collection.
+This method should only be used by framework developers.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$needViewState</var></dt>
+					<dd>the viewstate should be saved</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the collection of the control state (including its children's state).
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyStyleSheetSkin" id="_applyStyleSheetSkin">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyStyleSheetSkin">#</a>
+		<code>applyStyleSheetSkin( <span><code><a href="class-TPage.html">TPage</a></code> <var>$page</var></span> )</code>
+
+		<div class="description short">
+			<p>Applies a stylesheet skin to a control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Applies a stylesheet skin to a control.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$page</var></dt>
+					<dd>page containing the control</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code><br>if the stylesheet skin is applied already
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ID_FORMAT" id="ID_FORMAT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>ID_FORMAT</b>			</code>
+
+			<div class="description short">
+				<p>format of control ID</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>format of control ID</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ID_FORMAT" class="anchor">#</a>
+				<code><span class="php-quote">'/^[a-zA-Z_]\\w*$/'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ID_SEPARATOR" id="ID_SEPARATOR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>ID_SEPARATOR</b>			</code>
+
+			<div class="description short">
+				<p>separator char between IDs in a UniqueID</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>separator char between IDs in a UniqueID</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ID_SEPARATOR" class="anchor">#</a>
+				<code><span class="php-quote">'$'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CLIENT_ID_SEPARATOR" id="CLIENT_ID_SEPARATOR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>CLIENT_ID_SEPARATOR</b>			</code>
+
+			<div class="description short">
+				<p>separator char between IDs in a ClientID</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>separator char between IDs in a ClientID</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CLIENT_ID_SEPARATOR" class="anchor">#</a>
+				<code><span class="php-quote">'_'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="AUTOMATIC_ID_PREFIX" id="AUTOMATIC_ID_PREFIX">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>AUTOMATIC_ID_PREFIX</b>			</code>
+
+			<div class="description short">
+				<p>prefix to an ID automatically generated</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>prefix to an ID automatically generated</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTOMATIC_ID_PREFIX" class="anchor">#</a>
+				<code><span class="php-quote">'ctl'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CS_CONSTRUCTED" id="CS_CONSTRUCTED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CS_CONSTRUCTED</b>			</code>
+
+			<div class="description short">
+				<p>the stage of lifecycles that the control is currently at</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>the stage of lifecycles that the control is currently at</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CS_CONSTRUCTED" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CS_CHILD_INITIALIZED" id="CS_CHILD_INITIALIZED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CS_CHILD_INITIALIZED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CS_CHILD_INITIALIZED" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CS_INITIALIZED" id="CS_INITIALIZED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CS_INITIALIZED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CS_INITIALIZED" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CS_STATE_LOADED" id="CS_STATE_LOADED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CS_STATE_LOADED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CS_STATE_LOADED" class="anchor">#</a>
+				<code><span class="php-num">3</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CS_LOADED" id="CS_LOADED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CS_LOADED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CS_LOADED" class="anchor">#</a>
+				<code><span class="php-num">4</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CS_PRERENDERED" id="CS_PRERENDERED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CS_PRERENDERED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CS_PRERENDERED" class="anchor">#</a>
+				<code><span class="php-num">5</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="IS_ID_SET" id="IS_ID_SET">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>IS_ID_SET</b>			</code>
+
+			<div class="description short">
+				<p>State bits.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>State bits.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#IS_ID_SET" class="anchor">#</a>
+				<code><span class="php-num">0x01</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="IS_DISABLE_VIEWSTATE" id="IS_DISABLE_VIEWSTATE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>IS_DISABLE_VIEWSTATE</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#IS_DISABLE_VIEWSTATE" class="anchor">#</a>
+				<code><span class="php-num">0x02</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="IS_SKIN_APPLIED" id="IS_SKIN_APPLIED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>IS_SKIN_APPLIED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#IS_SKIN_APPLIED" class="anchor">#</a>
+				<code><span class="php-num">0x04</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="IS_STYLESHEET_APPLIED" id="IS_STYLESHEET_APPLIED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>IS_STYLESHEET_APPLIED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#IS_STYLESHEET_APPLIED" class="anchor">#</a>
+				<code><span class="php-num">0x08</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="IS_DISABLE_THEMING" id="IS_DISABLE_THEMING">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>IS_DISABLE_THEMING</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#IS_DISABLE_THEMING" class="anchor">#</a>
+				<code><span class="php-num">0x10</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="IS_CHILD_CREATED" id="IS_CHILD_CREATED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>IS_CHILD_CREATED</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#IS_CHILD_CREATED" class="anchor">#</a>
+				<code><span class="php-num">0x20</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="IS_CREATING_CHILD" id="IS_CREATING_CHILD">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>IS_CREATING_CHILD</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#IS_CREATING_CHILD" class="anchor">#</a>
+				<code><span class="php-num">0x40</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_CONTROLS" id="RF_CONTROLS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_CONTROLS</b>			</code>
+
+			<div class="description short">
+				<p>Indexes for the rare fields.
+In order to save memory, rare fields will only be created if they are needed.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Indexes for the rare fields.
+In order to save memory, rare fields will only be created if they are needed.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_CONTROLS" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_CHILD_STATE" id="RF_CHILD_STATE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_CHILD_STATE</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_CHILD_STATE" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_NAMED_CONTROLS" id="RF_NAMED_CONTROLS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_NAMED_CONTROLS</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_NAMED_CONTROLS" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_NAMED_CONTROLS_ID" id="RF_NAMED_CONTROLS_ID">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_NAMED_CONTROLS_ID</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_NAMED_CONTROLS_ID" class="anchor">#</a>
+				<code><span class="php-num">3</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_SKIN_ID" id="RF_SKIN_ID">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_SKIN_ID</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_SKIN_ID" class="anchor">#</a>
+				<code><span class="php-num">4</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_DATA_BINDINGS" id="RF_DATA_BINDINGS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_DATA_BINDINGS</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_DATA_BINDINGS" class="anchor">#</a>
+				<code><span class="php-num">5</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_EVENTS" id="RF_EVENTS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_EVENTS</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_EVENTS" class="anchor">#</a>
+				<code><span class="php-num">6</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_CONTROLSTATE" id="RF_CONTROLSTATE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_CONTROLSTATE</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_CONTROLSTATE" class="anchor">#</a>
+				<code><span class="php-num">7</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_NAMED_OBJECTS" id="RF_NAMED_OBJECTS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_NAMED_OBJECTS</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_NAMED_OBJECTS" class="anchor">#</a>
+				<code><span class="php-num">8</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_ADAPTER" id="RF_ADAPTER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_ADAPTER</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_ADAPTER" class="anchor">#</a>
+				<code><span class="php-num">9</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RF_AUTO_BINDINGS" id="RF_AUTO_BINDINGS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>RF_AUTO_BINDINGS</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#RF_AUTO_BINDINGS" class="anchor">#</a>
+				<code><span class="php-num">10</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

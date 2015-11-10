@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TDbCommandBuilder | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-TDbCommandBuilder.html">TDbCommandBuilder</a></li>
+				<li><a href="class-TDbMetaData.html">TDbMetaData</a></li>
+				<li><a href="class-TDbTableColumn.html">TDbTableColumn</a></li>
+				<li><a href="class-TDbTableInfo.html">TDbTableInfo</a></li>
+				<li><a href="class-TMssqlCommandBuilder.html">TMssqlCommandBuilder</a></li>
+				<li><a href="class-TMysqlCommandBuilder.html">TMysqlCommandBuilder</a></li>
+				<li><a href="class-TOracleCommandBuilder.html">TOracleCommandBuilder</a></li>
+				<li><a href="class-TOracleTableInfo.html">TOracleTableInfo</a></li>
+				<li><a href="class-TPgsqlCommandBuilder.html">TPgsqlCommandBuilder</a></li>
+				<li><a href="class-TSqliteCommandBuilder.html">TSqliteCommandBuilder</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TDbCommandBuilder</h1>
+
+
+	<div class="description">
+	<p>TDbCommandBuilder provides basic methods to create query commands for tables
+giving by setTableInfo TableInfo the property.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TDbCommandBuilder</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TMssqlCommandBuilder.html">TMssqlCommandBuilder</a>, 
+			<a href="class-TMysqlCommandBuilder.html">TMysqlCommandBuilder</a>, 
+			<a href="class-TOracleCommandBuilder.html">TOracleCommandBuilder</a>, 
+			<a href="class-TPgsqlCommandBuilder.html">TPgsqlCommandBuilder</a>, 
+			<a href="class-TSqliteCommandBuilder.html">TSqliteCommandBuilder</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.Common.html">Common</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Data/Common/TDbCommandBuilder.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TDbConnection.html">TDbConnection</a></code> <var>$connection</var> = <span class="php-keyword1">null</span></span>, <span><code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code> <var>$tableInfo</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>connection.</dd>
+					<dt><var>$tableInfo</var></dt>
+					<dd>information.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDbConnection" id="_getDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDbConnection">#</a>
+		<code>getDbConnection( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbConnection.html">TDbConnection</a></code><br>database connection.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDbConnection" id="_setDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDbConnection">#</a>
+		<code>setDbConnection( <span><code><a href="class-TDbConnection.html">TDbConnection</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>connection.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTableInfo" id="_setTableInfo">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTableInfo">#</a>
+		<code>setTableInfo( <span><code><a href="class-TDbTableInfo.html">TDbTableInfo</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>information.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTableInfo" id="_getTableInfo">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTableInfo">#</a>
+		<code>getTableInfo( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLastInsertID" id="_getLastInsertID">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLastInsertID">#</a>
+		<code>getLastInsertID( )</code>
+
+		<div class="description short">
+			<p>Iterate through all the columns and returns the last insert id of the
+first column that has a sequence or serial.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Iterate through all the columns and returns the last insert id of the
+first column that has a sequence or serial.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>last insert id, null if none is found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyLimitOffset" id="_applyLimitOffset">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyLimitOffset">#</a>
+		<code>applyLimitOffset( <span>string <var>$sql</var></span>, <span>integer <var>$limit</var> = -<span class="php-num">1</span></span>, <span>integer <var>$offset</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			<p>Alters the sql to apply $limit and $offset. Default implementation is applicable
+for PostgreSQL, MySQL and SQLite.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alters the sql to apply $limit and $offset. Default implementation is applicable
+for PostgreSQL, MySQL and SQLite.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>query string.</dd>
+					<dt><var>$limit</var></dt>
+					<dd>number of rows, -1 to ignore limit.</dd>
+					<dt><var>$offset</var></dt>
+					<dd>offset, -1 to ignore offset.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>SQL with limit and offset.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyOrdering" id="_applyOrdering">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyOrdering">#</a>
+		<code>applyOrdering( <span>string <var>$sql</var></span>, <span>array <var>$ordering</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>string without existing ordering.</dd>
+					<dt><var>$ordering</var></dt>
+					<dd>of column names as key and direction as value.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>modified SQL applied with ORDER BY.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSearchExpression" id="_getSearchExpression">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSearchExpression">#</a>
+		<code>getSearchExpression( <span>array <var>$fields</var></span>, <span>string <var>$keywords</var></span> )</code>
+
+		<div class="description short">
+			<p>Computes the SQL condition for search a set of column using regular expression
+(or LIKE, depending on database implementation) to match a string of
+keywords (default matches all keywords).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Computes the SQL condition for search a set of column using regular expression
+(or LIKE, depending on database implementation) to match a string of
+keywords (default matches all keywords).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fields</var></dt>
+					<dd>of column id for potential search condition.</dd>
+					<dt><var>$keywords</var></dt>
+					<dd>of keywords</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>SQL search condition matching on a set of columns.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSearchCondition" id="_getSearchCondition">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSearchCondition">#</a>
+		<code>getSearchCondition( <span>string <var>$column</var></span>, <span>array <var>$words</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$column</var></dt>
+					<dd>name.</dd>
+					<dt><var>$words</var></dt>
+					<dd>keywords</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>search condition for all words in one column.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSelectFieldList" id="_getSelectFieldList">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSelectFieldList">#</a>
+		<code>getSelectFieldList( <span>mixed <var>$data</var> = <span class="php-quote">'*'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Different behavior depends on type of passed data
+string usage without modification</p>
+
+<p>null will be expanded to full list of quoted table column names (quoting depends on database)</p>
+
+<p>array
+- Column names will be quoted if used as key or value of array</p>
+
+<pre><span class="php-keyword1">array</span>(<span class="php-quote">'col1'</span>, <span class="php-quote">'col2'</span>, <span class="php-quote">'col2'</span>)
+    <span class="php-comment">// SELECT `col1`, `col2`, `col3` FROM...</span></pre>
+
+<ul>
+<li>Column aliasing</li>
+</ul>
+
+<pre><span class="php-keyword1">array</span>(<span class="php-quote">'mycol1'</span> =&gt; <span class="php-quote">'col1'</span>, <span class="php-quote">'mycol2'</span> =&gt; <span class="php-quote">'COUNT(*)'</span>)
+<span class="php-comment">// SELECT `col1` AS mycol1, COUNT(*) AS mycol2 FROM...</span></pre>
+
+<ul>
+<li>NULL and scalar values (strings will be quoted depending on database)</li>
+</ul>
+
+<pre><span class="php-keyword1">array</span>(<span class="php-quote">'col1'</span> =&gt; <span class="php-quote">'my custom string'</span>, <span class="php-quote">'col2'</span> =&gt; <span class="php-num">1.0</span>, <span class="php-quote">'col3'</span> =&gt; <span class="php-quote">'NULL'</span>)
+<span class="php-comment">// SELECT &quot;my custom string&quot; AS `col1`, 1.0 AS `col2`, NULL AS `col3` FROM...</span></pre>
+
+<ul>
+<li>If the *-wildcard char is used as key or value, add the full list of quoted table column names</li>
+</ul>
+
+<pre><span class="php-keyword1">array</span>(<span class="php-quote">'col1'</span> =&gt; <span class="php-quote">'NULL'</span>, <span class="php-quote">'*'</span>)
+<span class="php-comment">// SELECT `col1`, `col2`, `col3`, NULL AS `col1` FROM...</span></pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>$value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>of generated fields - use implode(', ', $selectfieldlist) to collapse field list for usage
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.7<br>
+				</div>
+				<h4>Todo</h4>
+				<div class="list">
+						add support for table aliasing<br>
+						add support for quoting of column aliasing<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFindCommand" id="_createFindCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbCommand.html">TDbCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFindCommand">#</a>
+		<code>createFindCommand( <span>string <var>$where</var> = <span class="php-quote">'1=1'</span></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$ordering</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$limit</var> = -<span class="php-num">1</span></span>, <span> <var>$offset</var> = -<span class="php-num">1</span></span>, <span> <var>$select</var> = <span class="php-quote">'*'</span></span> )</code>
+
+		<div class="description short">
+			<p>Appends the $where condition to the string "SELECT * FROM tableName WHERE ".
+The tableName is obtained from the setTableInfo TableInfo property.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Appends the $where condition to the string "SELECT * FROM tableName WHERE ".
+The tableName is obtained from the setTableInfo TableInfo property.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>condition</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>parameters.</dd>
+					<dt><var>$ordering</var></dt>
+					<dd></dd>
+					<dt><var>$limit</var></dt>
+					<dd></dd>
+					<dt><var>$offset</var></dt>
+					<dd></dd>
+					<dt><var>$select</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbCommand.html">TDbCommand</a></code><br>query command.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyCriterias" id="_applyCriterias">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyCriterias">#</a>
+		<code>applyCriterias( <span> <var>$sql</var></span>, <span> <var>$parameters</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$ordering</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$limit</var> = -<span class="php-num">1</span></span>, <span> <var>$offset</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createCountCommand" id="_createCountCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbCommand.html">TDbCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createCountCommand">#</a>
+		<code>createCountCommand( <span>string <var>$where</var> = <span class="php-quote">'1=1'</span></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$ordering</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$limit</var> = -<span class="php-num">1</span></span>, <span> <var>$offset</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			<p>Creates a count(*) command for the table described in setTableInfo TableInfo.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates a count(*) command for the table described in setTableInfo TableInfo.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>condition.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>parameters.</dd>
+					<dt><var>$ordering</var></dt>
+					<dd></dd>
+					<dt><var>$limit</var></dt>
+					<dd></dd>
+					<dt><var>$offset</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbCommand.html">TDbCommand</a></code><br>count command.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createDeleteCommand" id="_createDeleteCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbCommand.html">TDbCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createDeleteCommand">#</a>
+		<code>createDeleteCommand( <span>string <var>$where</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Creates a delete command for the table described in setTableInfo TableInfo.
+The conditions for delete is given by the $where argument and the parameters
+for the condition is given by $parameters.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates a delete command for the table described in setTableInfo TableInfo.
+The conditions for delete is given by the $where argument and the parameters
+for the condition is given by $parameters.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$where</var></dt>
+					<dd>condition.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>parameters.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbCommand.html">TDbCommand</a></code><br>delete command.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createInsertCommand" id="_createInsertCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbCommand.html">TDbCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createInsertCommand">#</a>
+		<code>createInsertCommand( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Creates an insert command for the table described in setTableInfo TableInfo for the given data.
+Each array key in the $data array must correspond to the column name of the table
+(if a column allows to be null, it may be omitted) to be inserted with
+the corresponding array value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates an insert command for the table described in setTableInfo TableInfo for the given data.
+Each array key in the $data array must correspond to the column name of the table
+(if a column allows to be null, it may be omitted) to be inserted with
+the corresponding array value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>pairs of new data to be inserted.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbCommand.html">TDbCommand</a></code><br>insert command
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createUpdateCommand" id="_createUpdateCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbCommand.html">TDbCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createUpdateCommand">#</a>
+		<code>createUpdateCommand( <span>array <var>$data</var></span>, <span>string <var>$where</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Creates an update command for the table described in setTableInfo TableInfo for the given data.
+Each array key in the $data array must correspond to the column name to be updated with the corresponding array value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Creates an update command for the table described in setTableInfo TableInfo for the given data.
+Each array key in the $data array must correspond to the column name to be updated with the corresponding array value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>pairs of data to be updated.</dd>
+					<dt><var>$where</var></dt>
+					<dd>condition.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>parameters.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbCommand.html">TDbCommand</a></code><br>update command.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInsertFieldBindings" id="_getInsertFieldBindings">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInsertFieldBindings">#</a>
+		<code>getInsertFieldBindings( <span>object <var>$values</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns a list of insert field name and a list of binding names.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns a list of insert field name and a list of binding names.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$values</var></dt>
+					<dd>or object to be inserted.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>tuple ($fields, $bindings)
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getColumnBindings" id="_getColumnBindings">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getColumnBindings">#</a>
+		<code>getColumnBindings( <span>array <var>$values</var></span>, <span>boolean <var>$position</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Create a name-value or position-value if $position=true binding strings.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a name-value or position-value if $position=true binding strings.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$values</var></dt>
+					<dd>for binding.</dd>
+					<dt><var>$position</var></dt>
+					<dd>to bind as position values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>update column names with corresponding binding substrings.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createCommand" id="_createCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbCommand.html">TDbCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createCommand">#</a>
+		<code>createCommand( <span>string <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>query string.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbCommand.html">TDbCommand</a></code><br>corresponding database command.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bindColumnValues" id="_bindColumnValues">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bindColumnValues">#</a>
+		<code>bindColumnValues( <span><code><a href="class-TDbCommand.html">TDbCommand</a></code> <var>$command</var></span>, <span>array <var>$values</var></span> )</code>
+
+		<div class="description short">
+			<p>Bind the name-value pairs of $values where the array keys correspond to column names.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Bind the name-value pairs of $values where the array keys correspond to column names.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$command</var></dt>
+					<dd>command.</dd>
+					<dt><var>$values</var></dt>
+					<dd>pairs.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bindArrayValues" id="_bindArrayValues">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bindArrayValues">#</a>
+		<code>bindArrayValues( <span><code><a href="class-TDbCommand.html">TDbCommand</a></code> <var>$command</var></span>, <span>array <var>$values</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$command</var></dt>
+					<dd>command</dd>
+					<dt><var>$values</var></dt>
+					<dd>for binding.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPdoType" id="_getPdoType">
+
+		<td class="attributes"><code>
+			 public static
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPdoType">#</a>
+		<code>getPdoType( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>PDO parameter types.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasIntegerKey" id="_hasIntegerKey">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasIntegerKey">#</a>
+		<code>hasIntegerKey( <span>array <var>$array</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$array</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if any array key is an integer.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

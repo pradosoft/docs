@@ -1,0 +1,3828 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TWizard | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li class="active"><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Web.UI.WebControls.html" title="Summary of System\Web\UI\WebControls"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TWizard</h1>
+
+
+	<div class="description">
+	
+<p>Class TWizard.</p>
+
+<p>TWizard splits a large form and presents the user with a series of smaller
+forms to complete. TWizard is analogous to the installation wizard commonly used
+to install software in Windows.</p>
+
+<p>The smaller forms are called wizard steps (<code><a href="class-TWizardStep.html">TWizardStep</a></code>, which can be
+accessed via getWizardSteps WizardSteps. In template, wizard steps can
+be added into a wizard using the following syntax,</p>
+
+<pre>
+&lt;com:TWizard&gt;
+   &lt;com:TWizardStep Title=<span
+class="php-quote">&quot;step 1&quot;</span>&gt;
+       content in step <span
+class="php-num">1</span>, may contain other controls
+   &lt;/com:TWizardStep&gt;
+   &lt;com:TWizardStep Title=<span
+class="php-quote">&quot;step 2&quot;</span>&gt;
+       content in step <span
+class="php-num">2</span>, may contain other controls
+   &lt;/com:TWizardStep&gt;
+&lt;/com:TWizard&gt;
+</pre>
+
+<p>Each wizard step can be one of the following types:</p>
+
+<ul>
+	<li>Start : the first step in the wizard.</li>
+
+	<li>Step : the internal steps in the wizard.</li>
+
+	<li>Finish : the last step that allows user interaction.</li>
+
+	<li>Complete : the step that shows a summary to user (no interaction is
+	allowed).</li>
+
+	<li>Auto : the step type is determined by wizard automatically.</li>
+</ul>
+
+<p>At any time, only one step is visible to end-users, which can be obtained by
+getActiveStep ActiveStep. Its index in the step collection is given by
+getActiveStepIndex ActiveStepIndex.</p>
+
+<p>Wizard content can be customized in many ways.</p>
+
+<p>The layout of a wizard consists of four parts: header, step content,
+navigation and side bar. Their content are affected by the following properties,
+respectively,</p>
+
+<ul>
+	<li>header: setHeaderText HeaderText and setHeaderTemplate
+	HeaderTemplate. If both are present, the latter takes precedence.</li>
+
+	<li>step: getWizardSteps WizardSteps.</li>
+
+	<li>navigation: setStartNavigationTemplate StartNavigationTemplate,
+	setStepNavigationTemplate StepNavigationTemplate, setFinishNavigationTemplate FinishNavigationTemplate. Default templates will be
+	used if above templates are not set.</li>
+
+	<li>side bar: setSideBarTemplate SideBarTemplate. A default template
+	will be used if this template is not set. Its visibility is toggled by setShowSideBar ShowSideBar.</li>
+</ul>
+
+<p>The style of these wizard layout components can be customized via the
+following style properties,</p>
+
+<ul>
+	<li>header: getHeaderStyle HeaderStyle.</li>
+
+	<li>step: getStepStyle StepStyle.</li>
+
+	<li>navigation: getNavigationStyle NavigationStyle, getStartNextButtonStyle StartNextButtonStyle, getStepNextButtonStyle
+	StepNextButtonStyle, getStepPreviousButtonStyle
+	StepPreviousButtonStyle, getFinishPreviousButtonStyle
+	FinishPreviousButtonStyle, getFinishCompleteButtonStyle
+	FinishCompleteButtonStyle, getCancelButtonStyle CancelButtonStyle.</li>
+
+	<li>side bar: getSideBarStyle SideBarStyle and getSideBarButtonStyle SideBarButtonStyle.</li>
+</ul>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TControl.html"><span>TControl</span></a>
+			
+			 implements 
+				<a href="class-IRenderable.html"><span>IRenderable</span></a>, 
+			
+				<a href="class-IBindable.html"><span>IBindable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TWebControl.html"><span>TWebControl</span></a>
+			
+			 implements 
+				<a href="class-IStyleable.html"><span>IStyleable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TWizard</span></b>			
+			 implements 
+				<a href="class-INamingContainer.html"><span>INamingContainer</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0<br />
+		<b>Located at</b> Web/UI/WebControls/TWizard.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getTagName" id="_getTagName">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTagName">#</a>
+		<code>getTagName( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>tag name for the wizard<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TWebControl.html#_getTagName">TWebControl::getTagName()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addParsedObject" id="_addParsedObject">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addParsedObject">#</a>
+		<code>addParsedObject( <span>mixed <var>$object</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds <code><a href="class-TWizardStep.html">TWizardStep</a></code> objects into step collection. This method overrides
+the parent implementation and is invoked when template is being
+instantiated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds <code><a href="class-TWizardStep.html">TWizardStep</a></code> objects into step collection. This method overrides
+the parent implementation and is invoked when template is being
+instantiated.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$object</var></dt>
+					<dd><code>mixed</code><br>object instantiated in template</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_addParsedObject">TControl::addParsedObject()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getActiveStep" id="_getActiveStep">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardStep.html">TWizardStep</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getActiveStep">#</a>
+		<code>getActiveStep( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardStep.html">TWizardStep</a></code></code><br>the currently active wizard step<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setActiveStep" id="_setActiveStep">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setActiveStep">#</a>
+		<code>setActiveStep( <span><code><a href="class-TWizardStep.html">TWizardStep</a></code> <var>$step</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$step</var></dt>
+					<dd><code><code><a href="class-TWizardStep.html">TWizardStep</a></code></code><br>step to be activated</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the step is not in the wizard step collection<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getActiveStepIndex" id="_getActiveStepIndex">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getActiveStepIndex">#</a>
+		<code>getActiveStepIndex( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>the zero-based index of the active wizard step<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setActiveStepIndex" id="_setActiveStepIndex">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setActiveStepIndex">#</a>
+		<code>setActiveStepIndex( <span>integer <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>integer</code><br>the zero-based index of the wizard step to be activated</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWizardSteps" id="_getWizardSteps">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardStepCollection.html">TWizardStepCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWizardSteps">#</a>
+		<code>getWizardSteps( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardStepCollection.html">TWizardStepCollection</a></code></code><br>collection of wizard steps<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getShowCancelButton" id="_getShowCancelButton">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getShowCancelButton">#</a>
+		<code>getShowCancelButton( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether to display a cancel button in each wizard step. Defaults to false.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowCancelButton" id="_setShowCancelButton">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowCancelButton">#</a>
+		<code>setShowCancelButton( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>whether to display a cancel button in each wizard step.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getShowSideBar" id="_getShowSideBar">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getShowSideBar">#</a>
+		<code>getShowSideBar( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether to display a side bar that contains links to wizard steps. Defaults to
+true.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowSideBar" id="_setShowSideBar">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowSideBar">#</a>
+		<code>setShowSideBar( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>whether to display a side bar that contains links to wizard steps.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStartNavigationTemplate" id="_getStartNavigationTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ITemplate.html">ITemplate</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStartNavigationTemplate">#</a>
+		<code>getStartNavigationTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>navigation template for the start step. Defaults to null.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setStartNavigationTemplate" id="_setStartNavigationTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setStartNavigationTemplate">#</a>
+		<code>setStartNavigationTemplate( <span><code><a href="class-ITemplate.html">ITemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>navigation template for the start step.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStepNavigationTemplate" id="_getStepNavigationTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ITemplate.html">ITemplate</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStepNavigationTemplate">#</a>
+		<code>getStepNavigationTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>navigation template for internal steps. Defaults to null.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setStepNavigationTemplate" id="_setStepNavigationTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setStepNavigationTemplate">#</a>
+		<code>setStepNavigationTemplate( <span><code><a href="class-ITemplate.html">ITemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>navigation template for internal steps.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFinishNavigationTemplate" id="_getFinishNavigationTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ITemplate.html">ITemplate</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFinishNavigationTemplate">#</a>
+		<code>getFinishNavigationTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>navigation template for the finish step. Defaults to null.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFinishNavigationTemplate" id="_setFinishNavigationTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFinishNavigationTemplate">#</a>
+		<code>setFinishNavigationTemplate( <span><code><a href="class-ITemplate.html">ITemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>navigation template for the finish step.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaderTemplate" id="_getHeaderTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ITemplate.html">ITemplate</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaderTemplate">#</a>
+		<code>getHeaderTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>template for wizard header. Defaults to null.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHeaderTemplate" id="_setHeaderTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHeaderTemplate">#</a>
+		<code>setHeaderTemplate( <span><code><a href="class-ITemplate.html">ITemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>template for wizard header.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSideBarTemplate" id="_getSideBarTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ITemplate.html">ITemplate</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSideBarTemplate">#</a>
+		<code>getSideBarTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>template for the side bar. Defaults to null.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSideBarTemplate" id="_setSideBarTemplate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSideBarTemplate">#</a>
+		<code>setSideBarTemplate( <span><code><a href="class-ITemplate.html">ITemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-ITemplate.html">ITemplate</a></code></code><br>template for the side bar.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaderText" id="_getHeaderText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaderText">#</a>
+		<code>getHeaderText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>header text. Defaults to ''.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHeaderText" id="_setHeaderText">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHeaderText">#</a>
+		<code>setHeaderText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>header text.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCancelDestinationUrl" id="_getCancelDestinationUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCancelDestinationUrl">#</a>
+		<code>getCancelDestinationUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the URL that the browser will be redirected to if the cancel button in the
+wizard is clicked. Defaults to ''.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCancelDestinationUrl" id="_setCancelDestinationUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCancelDestinationUrl">#</a>
+		<code>setCancelDestinationUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the URL that the browser will be redirected to if the cancel button in the
+wizard is clicked.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFinishDestinationUrl" id="_getFinishDestinationUrl">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFinishDestinationUrl">#</a>
+		<code>getFinishDestinationUrl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the URL that the browser will be redirected to if the wizard finishes. Defaults
+to ''.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setFinishDestinationUrl" id="_setFinishDestinationUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setFinishDestinationUrl">#</a>
+		<code>setFinishDestinationUrl( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the URL that the browser will be redirected to if the wizard finishes.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSideBarButtonStyle" id="_getSideBarButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TStyle.html">TStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSideBarButtonStyle">#</a>
+		<code>getSideBarButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TStyle.html">TStyle</a></code></code><br>the style for the buttons displayed in the side bar.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNavigationButtonStyle" id="_getNavigationButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TStyle.html">TStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNavigationButtonStyle">#</a>
+		<code>getNavigationButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TStyle.html">TStyle</a></code></code><br>the style common for all navigation buttons.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStartNextButtonStyle" id="_getStartNextButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStartNextButtonStyle">#</a>
+		<code>getStartNextButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code></code><br>the style for the next button in the start wizard step.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStepNextButtonStyle" id="_getStepNextButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStepNextButtonStyle">#</a>
+		<code>getStepNextButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code></code><br>the style for the next button in each internal wizard step.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStepPreviousButtonStyle" id="_getStepPreviousButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStepPreviousButtonStyle">#</a>
+		<code>getStepPreviousButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code></code><br>the style for the previous button in the start wizard step.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFinishCompleteButtonStyle" id="_getFinishCompleteButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFinishCompleteButtonStyle">#</a>
+		<code>getFinishCompleteButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code></code><br>the style for the complete button in the finish wizard step.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFinishPreviousButtonStyle" id="_getFinishPreviousButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFinishPreviousButtonStyle">#</a>
+		<code>getFinishPreviousButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code></code><br>the style for the previous button in the start wizard step.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCancelButtonStyle" id="_getCancelButtonStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCancelButtonStyle">#</a>
+		<code>getCancelButtonStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></code></code><br>the style for the cancel button<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSideBarStyle" id="_getSideBarStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPanelStyle.html">TPanelStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSideBarStyle">#</a>
+		<code>getSideBarStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPanelStyle.html">TPanelStyle</a></code></code><br>the style for the side bar.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeaderStyle" id="_getHeaderStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPanelStyle.html">TPanelStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeaderStyle">#</a>
+		<code>getHeaderStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPanelStyle.html">TPanelStyle</a></code></code><br>the style for the header.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStepStyle" id="_getStepStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPanelStyle.html">TPanelStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStepStyle">#</a>
+		<code>getStepStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPanelStyle.html">TPanelStyle</a></code></code><br>the style for each internal wizard step.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNavigationStyle" id="_getNavigationStyle">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPanelStyle.html">TPanelStyle</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNavigationStyle">#</a>
+		<code>getNavigationStyle( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPanelStyle.html">TPanelStyle</a></code></code><br>the style for the navigation panel.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUseDefaultLayout" id="_getUseDefaultLayout">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUseDefaultLayout">#</a>
+		<code>getUseDefaultLayout( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether to use default layout to arrange side bar and the rest wizard
+components. Defaults to true.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUseDefaultLayout" id="_setUseDefaultLayout">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUseDefaultLayout">#</a>
+		<code>setUseDefaultLayout( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>whether to use default layout to arrange side bar and the rest wizard
+components. If true, an HTML table will be used which places the side bar in the
+left cell while the rest components in the right cell.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeader" id="_getHeader">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPanel.html">TPanel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeader">#</a>
+		<code>getHeader( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPanel.html">TPanel</a></code></code><br>container of the wizard header<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStepContent" id="_getStepContent">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPanel.html">TPanel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStepContent">#</a>
+		<code>getStepContent( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPanel.html">TPanel</a></code></code><br>container of the wizard step content<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSideBar" id="_getSideBar">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPanel.html">TPanel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSideBar">#</a>
+		<code>getSideBar( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPanel.html">TPanel</a></code></code><br>container of the wizard side bar<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStartNavigation" id="_getStartNavigation">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStartNavigation">#</a>
+		<code>getStartNavigation( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></code></code><br>container of the start navigation<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStepNavigation" id="_getStepNavigation">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStepNavigation">#</a>
+		<code>getStepNavigation( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></code></code><br>container of the step navigation<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFinishNavigation" id="_getFinishNavigation">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFinishNavigation">#</a>
+		<code>getFinishNavigation( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></code></code><br>container of the finish navigation<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onActiveStepChanged" id="_onActiveStepChanged">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onActiveStepChanged">#</a>
+		<code>onActiveStepChanged( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises <b>OnActiveStepChanged</b> event. This event is raised when the
+current visible step is changed in the wizard.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises <b>OnActiveStepChanged</b> event. This event is raised when the
+current visible step is changed in the wizard.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TEventParameter.html">TEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onCancelButtonClick" id="_onCancelButtonClick">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onCancelButtonClick">#</a>
+		<code>onCancelButtonClick( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises <b>OnCancelButtonClick</b> event. This event is raised when a cancel
+navigation button is clicked in the current active step.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises <b>OnCancelButtonClick</b> event. This event is raised when a cancel
+navigation button is clicked in the current active step.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TEventParameter.html">TEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onCompleteButtonClick" id="_onCompleteButtonClick">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onCompleteButtonClick">#</a>
+		<code>onCompleteButtonClick( <span><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises <b>OnCompleteButtonClick</b> event. This event is raised when a finish
+navigation button is clicked in the current active step.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises <b>OnCompleteButtonClick</b> event. This event is raised when a finish
+navigation button is clicked in the current active step.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onNextButtonClick" id="_onNextButtonClick">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onNextButtonClick">#</a>
+		<code>onNextButtonClick( <span><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises <b>OnNextButtonClick</b> event. This event is raised when a next
+navigation button is clicked in the current active step.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises <b>OnNextButtonClick</b> event. This event is raised when a next
+navigation button is clicked in the current active step.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPreviousButtonClick" id="_onPreviousButtonClick">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPreviousButtonClick">#</a>
+		<code>onPreviousButtonClick( <span><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises <b>OnPreviousButtonClick</b> event. This event is raised when a
+previous navigation button is clicked in the current active step.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises <b>OnPreviousButtonClick</b> event. This event is raised when a
+previous navigation button is clicked in the current active step.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onSideBarButtonClick" id="_onSideBarButtonClick">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onSideBarButtonClick">#</a>
+		<code>onSideBarButtonClick( <span><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises <b>OnSideBarButtonClick</b> event. This event is raised when a link
+button in the side bar is clicked.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises <b>OnSideBarButtonClick</b> event. This event is raised when a link
+button in the side bar is clicked.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMultiView" id="_getMultiView">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TMultiView.html">TMultiView</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMultiView">#</a>
+		<code>getMultiView( )</code>
+
+		<div class="description short">
+			
+<p>Returns the multiview that holds the wizard steps. This method should only be
+used by control developers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the multiview that holds the wizard steps. This method should only be
+used by control developers.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TMultiView.html">TMultiView</a></code></code><br>the multiview holding wizard steps<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addedWizardStep" id="_addedWizardStep">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addedWizardStep">#</a>
+		<code>addedWizardStep( <span><code><a href="class-TWizardStep.html">TWizardStep</a></code> <var>$step</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a wizard step to the multiview. This method should only be used by
+control developers. It is invoked when a step is added into the step collection
+of the wizard.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a wizard step to the multiview. This method should only be used by
+control developers. It is invoked when a step is added into the step collection
+of the wizard.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$step</var></dt>
+					<dd><code><code><a href="class-TWizardStep.html">TWizardStep</a></code></code><br>wizard step to be added into multiview.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="removedWizardStep" id="_removedWizardStep">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removedWizardStep">#</a>
+		<code>removedWizardStep( <span><code><a href="class-TWizardStep.html">TWizardStep</a></code> <var>$step</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a wizard step from the multiview. This method should only be used by
+control developers. It is invoked when a step is removed from the step
+collection of the wizard.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a wizard step from the multiview. This method should only be used by
+control developers. It is invoked when a step is removed from the step
+collection of the wizard.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$step</var></dt>
+					<dd><code><code><a href="class-TWizardStep.html">TWizardStep</a></code></code><br>wizard step to be removed from multiview.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onInit" id="_onInit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onInit">#</a>
+		<code>onInit( <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates the child controls of the wizard. This method overrides the parent
+implementation.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates the child controls of the wizard. This method overrides the parent
+implementation.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TEventParameter.html">TEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_onInit">TControl::onInit()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveState" id="_saveState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveState">#</a>
+		<code>saveState( )</code>
+
+		<div class="description short">
+			
+<p>Saves the current active step index into history. This method is invoked by
+the framework when the control state is being saved.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Saves the current active step index into history. This method is invoked by
+the framework when the control state is being saved.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_saveState">TControl::saveState()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="requiresControlsRecreation" id="_requiresControlsRecreation">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_requiresControlsRecreation">#</a>
+		<code>requiresControlsRecreation( )</code>
+
+		<div class="description short">
+			
+<p>Indicates the wizard needs to recreate all child controls.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Indicates the wizard needs to recreate all child controls.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="render" id="_render">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_render">#</a>
+		<code>render( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Renders the wizard.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renders the wizard.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd><code><code><a href="class-THtmlWriter.html">THtmlWriter</a></code></code></dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TWebControl.html#_render">TWebControl::render()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyControlProperties" id="_applyControlProperties">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyControlProperties">#</a>
+		<code>applyControlProperties( )</code>
+
+		<div class="description short">
+			
+<p>Applies various properties to the components of wizard</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Applies various properties to the components of wizard</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyHeaderProperties" id="_applyHeaderProperties">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyHeaderProperties">#</a>
+		<code>applyHeaderProperties( )</code>
+
+		<div class="description short">
+			
+<p>Applies properties to the wizard header</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Applies properties to the wizard header</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applySideBarProperties" id="_applySideBarProperties">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applySideBarProperties">#</a>
+		<code>applySideBarProperties( )</code>
+
+		<div class="description short">
+			
+<p>Applies properties to the wizard sidebar</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Applies properties to the wizard sidebar</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyStepContentProperties" id="_applyStepContentProperties">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyStepContentProperties">#</a>
+		<code>applyStepContentProperties( )</code>
+
+		<div class="description short">
+			
+<p>Applies properties to the wizard step content</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Applies properties to the wizard step content</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyNavigationProperties" id="_applyNavigationProperties">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyNavigationProperties">#</a>
+		<code>applyNavigationProperties( )</code>
+
+		<div class="description short">
+			
+<p>Apply properties to various navigation panels.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Apply properties to various navigation panels.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHistory" id="_getHistory">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TStack.html">TStack</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHistory">#</a>
+		<code>getHistory( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TStack.html">TStack</a></code></code><br>history containing step indexes that were navigated before<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStepType" id="_getStepType">
+
+		<td class="attributes"><code>
+			 protected 
+			<code><a href="class-TWizardStepType.html">TWizardStepType</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStepType">#</a>
+		<code>getStepType( <span><code><a href="class-TWizardStep.html">TWizardStep</a></code> <var>$wizardStep</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines the type of the specified wizard step.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines the type of the specified wizard step.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$wizardStep</var></dt>
+					<dd><code><code><a href="class-TWizardStep.html">TWizardStep</a></code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TWizardStepType.html">TWizardStepType</a></code></code><br>type of the step<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="reset" id="_reset">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_reset">#</a>
+		<code>reset( )</code>
+
+		<div class="description short">
+			
+<p>Clears up everything within the wizard.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clears up everything within the wizard.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createChildControls" id="_createChildControls">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createChildControls">#</a>
+		<code>createChildControls( )</code>
+
+		<div class="description short">
+			
+<p>Creates child controls within the wizard</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates child controls within the wizard</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_createChildControls">TControl::createChildControls()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createHeader" id="_createHeader">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createHeader">#</a>
+		<code>createHeader( )</code>
+
+		<div class="description short">
+			
+<p>Creates the wizard header.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates the wizard header.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createSideBar" id="_createSideBar">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createSideBar">#</a>
+		<code>createSideBar( )</code>
+
+		<div class="description short">
+			
+<p>Creates the wizard side bar</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates the wizard side bar</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataListItemCommand" id="_dataListItemCommand">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dataListItemCommand">#</a>
+		<code>dataListItemCommand( <span>mixed <var>$sender</var></span>, <span><code><a href="class-TDataListCommandEventParameter.html">TDataListCommandEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event handler for sidebar datalist's OnItemCommand event. This method is used
+internally by wizard. It mainly sets the active step index according to the
+button clicked in the sidebar.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event handler for sidebar datalist's OnItemCommand event. This method is used
+internally by wizard. It mainly sets the active step index according to the
+button clicked in the sidebar.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><code>mixed</code><br>sender of the event</dd>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TDataListCommandEventParameter.html">TDataListCommandEventParameter</a></code></code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dataListItemDataBound" id="_dataListItemDataBound">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dataListItemDataBound">#</a>
+		<code>dataListItemDataBound( <span>mixed <var>$sender</var></span>, <span><code><a href="class-TDataListItemEventParameter.html">TDataListItemEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event handler for sidebar datalist's OnItemDataBound event. This method is
+used internally by wizard. It mainly configures the buttons in the sidebar
+datalist.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event handler for sidebar datalist's OnItemDataBound event. This method is
+used internally by wizard. It mainly configures the buttons in the sidebar
+datalist.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><code>mixed</code><br>sender of the event</dd>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TDataListItemEventParameter.html">TDataListItemEventParameter</a></code></code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createStepContent" id="_createStepContent">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createStepContent">#</a>
+		<code>createStepContent( )</code>
+
+		<div class="description short">
+			
+<p>Creates wizard step content.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates wizard step content.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createNavigation" id="_createNavigation">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createNavigation">#</a>
+		<code>createNavigation( )</code>
+
+		<div class="description short">
+			
+<p>Creates navigation panel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates navigation panel.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createStartNavigation" id="_createStartNavigation">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createStartNavigation">#</a>
+		<code>createStartNavigation( )</code>
+
+		<div class="description short">
+			
+<p>Creates start navigation panel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates start navigation panel.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createStepNavigation" id="_createStepNavigation">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createStepNavigation">#</a>
+		<code>createStepNavigation( )</code>
+
+		<div class="description short">
+			
+<p>Creates step navigation panel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates step navigation panel.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createFinishNavigation" id="_createFinishNavigation">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createFinishNavigation">#</a>
+		<code>createFinishNavigation( )</code>
+
+		<div class="description short">
+			
+<p>Creates finish navigation panel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates finish navigation panel.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="wizardStepsChanged" id="_wizardStepsChanged">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_wizardStepsChanged">#</a>
+		<code>wizardStepsChanged( )</code>
+
+		<div class="description short">
+			
+<p>Updates the sidebar datalist if any. This method is invoked when any wizard
+step is changed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Updates the sidebar datalist if any. This method is invoked when any wizard
+step is changed.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreviousStepIndex" id="_getPreviousStepIndex">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreviousStepIndex">#</a>
+		<code>getPreviousStepIndex( <span>boolean <var>$popStack</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Determines the index of the previous step based on history.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Determines the index of the previous step based on history.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$popStack</var></dt>
+					<dd><code>boolean</code><br>whether the first item in the history stack should be popped up after calling
+this method.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="allowNavigationToPreviousStep" id="_allowNavigationToPreviousStep">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_allowNavigationToPreviousStep">#</a>
+		<code>allowNavigationToPreviousStep( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether navigation to the previous step is allowed<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="allowNavigationToStep" id="_allowNavigationToStep">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_allowNavigationToStep">#</a>
+		<code>allowNavigationToStep( <span>integer <var>$index</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$index</var></dt>
+					<dd><code>integer</code><br>index of the step</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether navigation to the specified step is allowed<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bubbleEvent" id="_bubbleEvent">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bubbleEvent">#</a>
+		<code>bubbleEvent( <span>mixed <var>$sender</var></span>, <span><code><a href="class-TEventParameter.html">TEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Handles bubbled events. This method mainly translate certain command events
+into wizard-specific events.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Handles bubbled events. This method mainly translate certain command events
+into wizard-specific events.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><code>mixed</code><br>sender of the original command event</dd>
+					<dt><var>$param</var></dt>
+					<dd><code><code><a href="class-TEventParameter.html">TEventParameter</a></code></code><br>event parameter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if the event bubbling is handled and no more bubbling.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if a navigation command is associated with an invalid parameter<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TControl.html#_bubbleEvent">TControl::bubbleEvent()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TWebControl.html#methods">TWebControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TWebControl.html#_addAttributesToRender">addAttributesToRender()</a>, 
+			<a href="class-TWebControl.html#_clearStyle">clearStyle()</a>, 
+			<a href="class-TWebControl.html#_copyBaseAttributes">copyBaseAttributes()</a>, 
+			<a href="class-TWebControl.html#_createStyle">createStyle()</a>, 
+			<a href="class-TWebControl.html#_getAccessKey">getAccessKey()</a>, 
+			<a href="class-TWebControl.html#_getBackColor">getBackColor()</a>, 
+			<a href="class-TWebControl.html#_getBorderColor">getBorderColor()</a>, 
+			<a href="class-TWebControl.html#_getBorderStyle">getBorderStyle()</a>, 
+			<a href="class-TWebControl.html#_getBorderWidth">getBorderWidth()</a>, 
+			<a href="class-TWebControl.html#_getCssClass">getCssClass()</a>, 
+			<a href="class-TWebControl.html#_getDecorator">getDecorator()</a>, 
+			<a href="class-TWebControl.html#_getDisplay">getDisplay()</a>, 
+			<a href="class-TWebControl.html#_getEnsureId">getEnsureId()</a>, 
+			<a href="class-TWebControl.html#_getFont">getFont()</a>, 
+			<a href="class-TWebControl.html#_getForeColor">getForeColor()</a>, 
+			<a href="class-TWebControl.html#_getHasStyle">getHasStyle()</a>, 
+			<a href="class-TWebControl.html#_getHeight">getHeight()</a>, 
+			<a href="class-TWebControl.html#_getStyle">getStyle()</a>, 
+			<a href="class-TWebControl.html#_getTabIndex">getTabIndex()</a>, 
+			<a href="class-TWebControl.html#_getToolTip">getToolTip()</a>, 
+			<a href="class-TWebControl.html#_getWidth">getWidth()</a>, 
+			<a href="class-TWebControl.html#_onPreRender">onPreRender()</a>, 
+			<a href="class-TWebControl.html#_renderBeginTag">renderBeginTag()</a>, 
+			<a href="class-TWebControl.html#_renderContents">renderContents()</a>, 
+			<a href="class-TWebControl.html#_renderEndTag">renderEndTag()</a>, 
+			<a href="class-TWebControl.html#_setAccessKey">setAccessKey()</a>, 
+			<a href="class-TWebControl.html#_setBackColor">setBackColor()</a>, 
+			<a href="class-TWebControl.html#_setBorderColor">setBorderColor()</a>, 
+			<a href="class-TWebControl.html#_setBorderStyle">setBorderStyle()</a>, 
+			<a href="class-TWebControl.html#_setBorderWidth">setBorderWidth()</a>, 
+			<a href="class-TWebControl.html#_setCssClass">setCssClass()</a>, 
+			<a href="class-TWebControl.html#_setDisplay">setDisplay()</a>, 
+			<a href="class-TWebControl.html#_setEnsureId">setEnsureId()</a>, 
+			<a href="class-TWebControl.html#_setForeColor">setForeColor()</a>, 
+			<a href="class-TWebControl.html#_setHeight">setHeight()</a>, 
+			<a href="class-TWebControl.html#_setStyle">setStyle()</a>, 
+			<a href="class-TWebControl.html#_setTabIndex">setTabIndex()</a>, 
+			<a href="class-TWebControl.html#_setToolTip">setToolTip()</a>, 
+			<a href="class-TWebControl.html#_setWidth">setWidth()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TControl.html#methods">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#___construct">__construct()</a>, 
+			<a href="class-TControl.html#___get">__get()</a>, 
+			<a href="class-TControl.html#_addToPostDataLoader">addToPostDataLoader()</a>, 
+			<a href="class-TControl.html#_addedControl">addedControl()</a>, 
+			<a href="class-TControl.html#_applyStyleSheetSkin">applyStyleSheetSkin()</a>, 
+			<a href="class-TControl.html#_autoBindProperty">autoBindProperty()</a>, 
+			<a href="class-TControl.html#_autoDataBindProperties">autoDataBindProperties()</a>, 
+			<a href="class-TControl.html#_bindProperty">bindProperty()</a>, 
+			<a href="class-TControl.html#_broadcastEvent">broadcastEvent()</a>, 
+			<a href="class-TControl.html#_clearChildState">clearChildState()</a>, 
+			<a href="class-TControl.html#_clearControlState">clearControlState()</a>, 
+			<a href="class-TControl.html#_clearNamingContainer">clearNamingContainer()</a>, 
+			<a href="class-TControl.html#_clearViewState">clearViewState()</a>, 
+			<a href="class-TControl.html#_convertUniqueIdToClientId">convertUniqueIdToClientId()</a>, 
+			<a href="class-TControl.html#_createControlCollection">createControlCollection()</a>, 
+			<a href="class-TControl.html#_dataBind">dataBind()</a>, 
+			<a href="class-TControl.html#_dataBindChildren">dataBindChildren()</a>, 
+			<a href="class-TControl.html#_dataBindProperties">dataBindProperties()</a>, 
+			<a href="class-TControl.html#_ensureChildControls">ensureChildControls()</a>, 
+			<a href="class-TControl.html#_findControl">findControl()</a>, 
+			<a href="class-TControl.html#_findControlsByID">findControlsByID()</a>, 
+			<a href="class-TControl.html#_findControlsByType">findControlsByType()</a>, 
+			<a href="class-TControl.html#_focus">focus()</a>, 
+			<a href="class-TControl.html#_getAdapter">getAdapter()</a>, 
+			<a href="class-TControl.html#_getAllowChildControls">getAllowChildControls()</a>, 
+			<a href="class-TControl.html#_getAttribute">getAttribute()</a>, 
+			<a href="class-TControl.html#_getAttributes">getAttributes()</a>, 
+			<a href="class-TControl.html#_getChildControlsCreated">getChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_getClientID">getClientID()</a>, 
+			<a href="class-TControl.html#_getControlStage">getControlStage()</a>, 
+			<a href="class-TControl.html#_getControlState">getControlState()</a>, 
+			<a href="class-TControl.html#_getControls">getControls()</a>, 
+			<a href="class-TControl.html#_getCustomData">getCustomData()</a>, 
+			<a href="class-TControl.html#_getEnableTheming">getEnableTheming()</a>, 
+			<a href="class-TControl.html#_getEnableViewState">getEnableViewState()</a>, 
+			<a href="class-TControl.html#_getEnabled">getEnabled()</a>, 
+			<a href="class-TControl.html#_getHasAdapter">getHasAdapter()</a>, 
+			<a href="class-TControl.html#_getHasAttributes">getHasAttributes()</a>, 
+			<a href="class-TControl.html#_getHasChildInitialized">getHasChildInitialized()</a>, 
+			<a href="class-TControl.html#_getHasControls">getHasControls()</a>, 
+			<a href="class-TControl.html#_getHasInitialized">getHasInitialized()</a>, 
+			<a href="class-TControl.html#_getHasLoaded">getHasLoaded()</a>, 
+			<a href="class-TControl.html#_getHasLoadedPostData">getHasLoadedPostData()</a>, 
+			<a href="class-TControl.html#_getHasPreRendered">getHasPreRendered()</a>, 
+			<a href="class-TControl.html#_getID">getID()</a>, 
+			<a href="class-TControl.html#_getIsSkinApplied">getIsSkinApplied()</a>, 
+			<a href="class-TControl.html#_getNamingContainer">getNamingContainer()</a>, 
+			<a href="class-TControl.html#_getPage">getPage()</a>, 
+			<a href="class-TControl.html#_getParent">getParent()</a>, 
+			<a href="class-TControl.html#_getRegisteredObject">getRegisteredObject()</a>, 
+			<a href="class-TControl.html#_getSkinID">getSkinID()</a>, 
+			<a href="class-TControl.html#_getSourceTemplateControl">getSourceTemplateControl()</a>, 
+			<a href="class-TControl.html#_getTemplateControl">getTemplateControl()</a>, 
+			<a href="class-TControl.html#_getUniqueID">getUniqueID()</a>, 
+			<a href="class-TControl.html#_getViewState">getViewState()</a>, 
+			<a href="class-TControl.html#_getVisible">getVisible()</a>, 
+			<a href="class-TControl.html#_hasAttribute">hasAttribute()</a>, 
+			<a href="class-TControl.html#_initRecursive">initRecursive()</a>, 
+			<a href="class-TControl.html#_isDescendentOf">isDescendentOf()</a>, 
+			<a href="class-TControl.html#_isObjectRegistered">isObjectRegistered()</a>, 
+			<a href="class-TControl.html#_loadRecursive">loadRecursive()</a>, 
+			<a href="class-TControl.html#_loadState">loadState()</a>, 
+			<a href="class-TControl.html#_loadStateRecursive">loadStateRecursive()</a>, 
+			<a href="class-TControl.html#_onDataBinding">onDataBinding()</a>, 
+			<a href="class-TControl.html#_onLoad">onLoad()</a>, 
+			<a href="class-TControl.html#_onUnload">onUnload()</a>, 
+			<a href="class-TControl.html#_preRenderRecursive">preRenderRecursive()</a>, 
+			<a href="class-TControl.html#_raiseBubbleEvent">raiseBubbleEvent()</a>, 
+			<a href="class-TControl.html#_registerObject">registerObject()</a>, 
+			<a href="class-TControl.html#_removeAttribute">removeAttribute()</a>, 
+			<a href="class-TControl.html#_removedControl">removedControl()</a>, 
+			<a href="class-TControl.html#_renderChildren">renderChildren()</a>, 
+			<a href="class-TControl.html#_renderControl">renderControl()</a>, 
+			<a href="class-TControl.html#_saveStateRecursive">saveStateRecursive()</a>, 
+			<a href="class-TControl.html#_setAdapter">setAdapter()</a>, 
+			<a href="class-TControl.html#_setAttribute">setAttribute()</a>, 
+			<a href="class-TControl.html#_setChildControlsCreated">setChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_setControlStage">setControlStage()</a>, 
+			<a href="class-TControl.html#_setControlState">setControlState()</a>, 
+			<a href="class-TControl.html#_setCustomData">setCustomData()</a>, 
+			<a href="class-TControl.html#_setEnableTheming">setEnableTheming()</a>, 
+			<a href="class-TControl.html#_setEnableViewState">setEnableViewState()</a>, 
+			<a href="class-TControl.html#_setEnabled">setEnabled()</a>, 
+			<a href="class-TControl.html#_setID">setID()</a>, 
+			<a href="class-TControl.html#_setPage">setPage()</a>, 
+			<a href="class-TControl.html#_setSkinID">setSkinID()</a>, 
+			<a href="class-TControl.html#_setTemplateControl">setTemplateControl()</a>, 
+			<a href="class-TControl.html#_setViewState">setViewState()</a>, 
+			<a href="class-TControl.html#_setVisible">setVisible()</a>, 
+			<a href="class-TControl.html#_trackViewState">trackViewState()</a>, 
+			<a href="class-TControl.html#_traverseChildControls">traverseChildControls()</a>, 
+			<a href="class-TControl.html#_unbindProperty">unbindProperty()</a>, 
+			<a href="class-TControl.html#_unloadRecursive">unloadRecursive()</a>, 
+			<a href="class-TControl.html#_unregisterObject">unregisterObject()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ST_AUTO" id="ST_AUTO">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>ST_AUTO</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Auto'</span></code></td>
+		<td class="description"><div>
+			<a href="#ST_AUTO" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Wizard step types.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Wizard step types.</p>
+
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							deprecated since version 3.0.4 (use TWizardStepType constants instead)<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ST_START" id="ST_START">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>ST_START</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Start'</span></code></td>
+		<td class="description"><div>
+			<a href="#ST_START" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ST_STEP" id="ST_STEP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>ST_STEP</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Step'</span></code></td>
+		<td class="description"><div>
+			<a href="#ST_STEP" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ST_FINISH" id="ST_FINISH">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>ST_FINISH</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Finish'</span></code></td>
+		<td class="description"><div>
+			<a href="#ST_FINISH" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ST_COMPLETE" id="ST_COMPLETE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>ST_COMPLETE</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Complete'</span></code></td>
+		<td class="description"><div>
+			<a href="#ST_COMPLETE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_PREVIOUS" id="CMD_PREVIOUS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_PREVIOUS</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'PreviousStep'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_PREVIOUS" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Navigation commands.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Navigation commands.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_NEXT" id="CMD_NEXT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_NEXT</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'NextStep'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_NEXT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_CANCEL" id="CMD_CANCEL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_CANCEL</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Cancel'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_CANCEL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_COMPLETE" id="CMD_COMPLETE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_COMPLETE</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Complete'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_COMPLETE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CMD_MOVETO" id="CMD_MOVETO">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CMD_MOVETO</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'MoveTo'</span></code></td>
+		<td class="description"><div>
+			<a href="#CMD_MOVETO" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ID_SIDEBAR_BUTTON" id="ID_SIDEBAR_BUTTON">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>ID_SIDEBAR_BUTTON</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'SideBarButton'</span></code></td>
+		<td class="description"><div>
+			<a href="#ID_SIDEBAR_BUTTON" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Side bar button ID</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Side bar button ID</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ID_SIDEBAR_LIST" id="ID_SIDEBAR_LIST">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>ID_SIDEBAR_LIST</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'SideBarList'</span></code></td>
+		<td class="description"><div>
+			<a href="#ID_SIDEBAR_LIST" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Side bar data list</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Side bar data list</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TControl.html#constants">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#AUTOMATIC_ID_PREFIX"><b>AUTOMATIC_ID_PREFIX</b></a>, 
+			<a href="class-TControl.html#CLIENT_ID_SEPARATOR"><b>CLIENT_ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#CS_CHILD_INITIALIZED"><b>CS_CHILD_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_CONSTRUCTED"><b>CS_CONSTRUCTED</b></a>, 
+			<a href="class-TControl.html#CS_INITIALIZED"><b>CS_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_LOADED"><b>CS_LOADED</b></a>, 
+			<a href="class-TControl.html#CS_PRERENDERED"><b>CS_PRERENDERED</b></a>, 
+			<a href="class-TControl.html#CS_STATE_LOADED"><b>CS_STATE_LOADED</b></a>, 
+			<a href="class-TControl.html#ID_FORMAT"><b>ID_FORMAT</b></a>, 
+			<a href="class-TControl.html#ID_SEPARATOR"><b>ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#IS_CHILD_CREATED"><b>IS_CHILD_CREATED</b></a>, 
+			<a href="class-TControl.html#IS_CREATING_CHILD"><b>IS_CREATING_CHILD</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_THEMING"><b>IS_DISABLE_THEMING</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_VIEWSTATE"><b>IS_DISABLE_VIEWSTATE</b></a>, 
+			<a href="class-TControl.html#IS_ID_SET"><b>IS_ID_SET</b></a>, 
+			<a href="class-TControl.html#IS_SKIN_APPLIED"><b>IS_SKIN_APPLIED</b></a>, 
+			<a href="class-TControl.html#IS_STYLESHEET_APPLIED"><b>IS_STYLESHEET_APPLIED</b></a>, 
+			<a href="class-TControl.html#RF_ADAPTER"><b>RF_ADAPTER</b></a>, 
+			<a href="class-TControl.html#RF_AUTO_BINDINGS"><b>RF_AUTO_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_CHILD_STATE"><b>RF_CHILD_STATE</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLS"><b>RF_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLSTATE"><b>RF_CONTROLSTATE</b></a>, 
+			<a href="class-TControl.html#RF_DATA_BINDINGS"><b>RF_DATA_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_EVENTS"><b>RF_EVENTS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS"><b>RF_NAMED_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS_ID"><b>RF_NAMED_CONTROLS_ID</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_OBJECTS"><b>RF_NAMED_OBJECTS</b></a>, 
+			<a href="class-TControl.html#RF_SKIN_ID"><b>RF_SKIN_ID</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-TWebControl.html#properties">TWebControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TWebControl.html#$_decorator"><var>$_decorator</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

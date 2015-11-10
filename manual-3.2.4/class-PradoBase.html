@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class PradoBase | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.html" title="Summary of System"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class PradoBase</h1>
+
+
+	<div class="description">
+	
+<p>PradoBase class.</p>
+
+<p>PradoBase implements a few fundamental static methods.</p>
+
+<p>To use the static methods, Use Prado as the class name rather than PradoBase.
+PradoBase is meant to serve as the base class of Prado. The latter might be
+rewritten for customization.</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Prado.html">Prado</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0<br />
+		<b>Located at</b> PradoBase.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getVersion" id="_getVersion">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getVersion">#</a>
+		<code>getVersion( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the version of Prado framework<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initErrorHandlers" id="_initErrorHandlers">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initErrorHandlers">#</a>
+		<code>initErrorHandlers( )</code>
+
+		<div class="description short">
+			
+<p>Initializes error handlers. This method set error and exception handlers to
+be functions defined in this class.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes error handlers. This method set error and exception handlers to
+be functions defined in this class.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="autoload" id="_autoload">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_autoload">#</a>
+		<code>autoload( <span>string <var>$className</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Class autoload loader. This method is provided to be invoked within an
+__autoload() magic method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class autoload loader. This method is provided to be invoked within an
+__autoload() magic method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$className</var></dt>
+					<dd><code>string</code><br>class name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="poweredByPrado" id="_poweredByPrado">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_poweredByPrado">#</a>
+		<code>poweredByPrado( <span>integer <var>$logoType</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$logoType</var></dt>
+					<dd><code>integer</code><br>the type of "powered logo". Valid values include 0 and 1.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>a string that can be displayed on your Web page showing powered-by-PRADO
+information<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="phpErrorHandler" id="_phpErrorHandler">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_phpErrorHandler">#</a>
+		<code>phpErrorHandler( <span>integer <var>$errno</var></span>, <span>string <var>$errstr</var></span>, <span>string <var>$errfile</var></span>, <span>integer <var>$errline</var></span> )</code>
+
+		<div class="description short">
+			
+<p>PHP error handler. This method should be registered as PHP error handler
+using set_error_handler. The method throws an exception that contains
+the error information.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PHP error handler. This method should be registered as PHP error handler
+using set_error_handler. The method throws an exception that contains
+the error information.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$errno</var></dt>
+					<dd><code>integer</code><br>the level of the error raised</dd>
+					<dt><var>$errstr</var></dt>
+					<dd><code>string</code><br>the error message</dd>
+					<dt><var>$errfile</var></dt>
+					<dd><code>string</code><br>the filename that the error was raised in</dd>
+					<dt><var>$errline</var></dt>
+					<dd><code>integer</code><br>the line number the error was raised at</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="exceptionHandler" id="_exceptionHandler">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_exceptionHandler">#</a>
+		<code>exceptionHandler( <span>Exception <var>$exception</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Default exception handler. This method should be registered as default
+exception handler using set_exception_handler. The method tries to use
+the errorhandler module of the Prado application to handle the exception. If the
+application or the module does not exist, it simply echoes the exception.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Default exception handler. This method should be registered as default
+exception handler using set_exception_handler. The method tries to use
+the errorhandler module of the Prado application to handle the exception. If the
+application or the module does not exist, it simply echoes the exception.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$exception</var></dt>
+					<dd><code>Exception</code><br>exception that is not caught</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setApplication" id="_setApplication">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setApplication">#</a>
+		<code>setApplication( <span><code><a href="class-TApplication.html">TApplication</a></code> <var>$application</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Stores the application instance in the class static member. This method helps
+implement a singleton pattern for TApplication. Repeated invocation of this
+method or the application constructor will cause the throw of an exception. This
+method should only be used by framework developers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Stores the application instance in the class static member. This method helps
+implement a singleton pattern for TApplication. Repeated invocation of this
+method or the application constructor will cause the throw of an exception. This
+method should only be used by framework developers.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$application</var></dt>
+					<dd><code><code><a href="class-TApplication.html">TApplication</a></code></code><br>the application instance</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if this method is invoked twice or more.<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getApplication" id="_getApplication">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-TApplication.html">TApplication</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getApplication">#</a>
+		<code>getApplication( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TApplication.html">TApplication</a></code></code><br>the application singleton, null if the singleton has not be created yet.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFrameworkPath" id="_getFrameworkPath">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFrameworkPath">#</a>
+		<code>getFrameworkPath( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the path of the framework<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serialize" id="_serialize">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serialize">#</a>
+		<code>serialize( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Serializes a data. The original PHP serialize function has a bug that may not
+serialize properly an object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Serializes a data. The original PHP serialize function has a bug that may not
+serialize properly an object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>mixed</code><br>data to be serialized</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the serialized data<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unserialize" id="_unserialize">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unserialize">#</a>
+		<code>unserialize( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unserializes a data. The original PHP unserialize function has a bug that may
+not unserialize properly an object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unserializes a data. The original PHP unserialize function has a bug that may
+not unserialize properly an object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>data to be unserialized</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>unserialized data, null if unserialize failed<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createComponent" id="_createComponent">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-TComponent.html">TComponent</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createComponent">#</a>
+		<code>createComponent( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a component with the specified type. A component type can be either
+the component class name or a namespace referring to the path of the component
+class file. For example, 'TButton', 'System.Web.UI.WebControls.TButton' are both
+valid component type. This method can also pass parameters to component
+constructors. All parameters passed to this method except the first one (the
+component type) will be supplied as component constructor parameters.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a component with the specified type. A component type can be either
+the component class name or a namespace referring to the path of the component
+class file. For example, 'TButton', 'System.Web.UI.WebControls.TButton' are both
+valid component type. This method can also pass parameters to component
+constructors. All parameters passed to this method except the first one (the
+component type) will be supplied as component constructor parameters.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>component type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TComponent.html">TComponent</a></code></code><br>component instance of the specified type<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if the component type is unknown<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="using" id="_using">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_using">#</a>
+		<code>using( <span>string <var>$namespace</var></span>, <span>boolean <var>$checkClassExistence</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Uses a namespace. A namespace ending with an asterisk '*' refers to a
+directory, otherwise it represents a PHP file. If the namespace corresponds to a
+directory, the directory will be appended to the include path. If the namespace
+corresponds to a file, it will be included (include_once).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Uses a namespace. A namespace ending with an asterisk '*' refers to a
+directory, otherwise it represents a PHP file. If the namespace corresponds to a
+directory, the directory will be appended to the include path. If the namespace
+corresponds to a file, it will be included (include_once).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>namespace to be used</dd>
+					<dt><var>$checkClassExistence</var></dt>
+					<dd><code>boolean</code><br>whether to check the existence of the class after the class file is included</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if the namespace is invalid<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPathOfNamespace" id="_getPathOfNamespace">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPathOfNamespace">#</a>
+		<code>getPathOfNamespace( <span>string <var>$namespace</var></span>, <span>string <var>$ext</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Translates a namespace into a file path. The first segment of the namespace
+is considered as a path alias which is replaced with the actual path. The rest
+segments are subdirectory names appended to the aliased path. If the namespace
+ends with an asterisk '*', it represents a directory; Otherwise it represents a
+file whose extension name is specified by the second parameter (defaults to
+empty). Note, this method does not ensure the existence of the resulting file
+path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Translates a namespace into a file path. The first segment of the namespace
+is considered as a path alias which is replaced with the actual path. The rest
+segments are subdirectory names appended to the aliased path. If the namespace
+ends with an asterisk '*', it represents a directory; Otherwise it represents a
+file whose extension name is specified by the second parameter (defaults to
+empty). Note, this method does not ensure the existence of the resulting file
+path.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$namespace</var></dt>
+					<dd><code>string</code><br>namespace</dd>
+					<dt><var>$ext</var></dt>
+					<dd><code>string</code><br>extension to be appended if the namespace refers to a file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>file path corresponding to the namespace, null if namespace is invalid<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPathOfAlias" id="_getPathOfAlias">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPathOfAlias">#</a>
+		<code>getPathOfAlias( <span>string <var>$alias</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$alias</var></dt>
+					<dd><code>string</code><br>alias to the path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the path corresponding to the alias, null if alias not defined.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPathAliases" id="_getPathAliases">
+
+		<td class="attributes"><code>
+			 protected static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPathAliases">#</a>
+		<code>getPathAliases( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPathOfAlias" id="_setPathOfAlias">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPathOfAlias">#</a>
+		<code>setPathOfAlias( <span>string <var>$alias</var></span>, <span>string <var>$path</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$alias</var></dt>
+					<dd><code>string</code><br>alias to the path</dd>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>the path corresponding to the alias</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></code></code><br>if the alias is already defined<br />
+					<code><code><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></code></code><br>if the path is not a valid file path<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fatalError" id="_fatalError">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fatalError">#</a>
+		<code>fatalError( <span>string <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fatal error handler. This method displays an error message together with the
+current call stack. The application will exit after calling this method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fatal error handler. This method displays an error message together with the
+current call stack. The application will exit after calling this method.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>error message</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUserLanguages" id="_getUserLanguages">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUserLanguages">#</a>
+		<code>getUserLanguages( )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of user preferred languages. The languages are returned as an
+array. Each array element represents a single language preference. The languages
+are ordered according to user preferences. The first language is the most
+preferred.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of user preferred languages. The languages are returned as an
+array. Each array element represents a single language preference. The languages
+are ordered according to user preferences. The first language is the most
+preferred.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>list of user preferred languages.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreferredLanguage" id="_getPreferredLanguage">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreferredLanguage">#</a>
+		<code>getPreferredLanguage( )</code>
+
+		<div class="description short">
+			
+<p>Returns the most preferred language by the client user.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the most preferred language by the client user.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the most preferred language by the client user, defaults to English.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="trace" id="_trace">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_trace">#</a>
+		<code>trace( <span>string <var>$msg</var></span>, <span>string <var>$category</var> = <span class="php-quote">'Uncategorized'</span></span>, <span>(string|TControl) <var>$ctl</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Writes a log message. This method wraps <code><a href="class-PradoBase.html#_log">PradoBase::log()</a></code> by checking the
+application mode. When the application is in Debug mode, debug backtrace
+information is appended to the message and the message is logged at DEBUG level.
+When the application is in Performance mode, this method does nothing.
+Otherwise, the message is logged at INFO level.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes a log message. This method wraps <code><a href="class-PradoBase.html#_log">PradoBase::log()</a></code> by checking the
+application mode. When the application is in Debug mode, debug backtrace
+information is appended to the message and the message is logged at DEBUG level.
+When the application is in Performance mode, this method does nothing.
+Otherwise, the message is logged at INFO level.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>message to be logged</dd>
+					<dt><var>$category</var></dt>
+					<dd><code>string</code><br>category of the message</dd>
+					<dt><var>$ctl</var></dt>
+					<dd><code>(string|TControl)</code><br>control of the message</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-PradoBase.html#_log">PradoBase::log()</a></code></code>, <code><code><a href="class-PradoBase.html#_getLogger">PradoBase::getLogger()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="log" id="_log">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_log">#</a>
+		<code>log( <span>string <var>$msg</var></span>, <span>integer <var>$level</var> = <code><a href="class-TLogger.html#INFO">TLogger::<b>INFO</b></a></code></span>, <span>string <var>$category</var> = <span class="php-quote">'Uncategorized'</span></span>, <span>(string|TControl) <var>$ctl</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Logs a message. Messages logged by this method may be retrieved via <code><a href="class-TLogger.html#_getLogs">TLogger::getLogs()</a></code> and may be recorded in different media, such as file, email,
+database, using <code><a href="class-TLogRouter.html">TLogRouter</a></code>.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Logs a message. Messages logged by this method may be retrieved via <code><a href="class-TLogger.html#_getLogs">TLogger::getLogs()</a></code> and may be recorded in different media, such as file, email,
+database, using <code><a href="class-TLogRouter.html">TLogRouter</a></code>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>message to be logged</dd>
+					<dt><var>$level</var></dt>
+					<dd><code>integer</code><br>level of the message. Valid values include TLogger::DEBUG, TLogger::INFO,
+TLogger::NOTICE, TLogger::WARNING, TLogger::ERROR, TLogger::ALERT,
+TLogger::FATAL.</dd>
+					<dt><var>$category</var></dt>
+					<dd><code>string</code><br>category of the message</dd>
+					<dt><var>$ctl</var></dt>
+					<dd><code>(string|TControl)</code><br>control of the message</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLogger" id="_getLogger">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="class-TLogger.html">TLogger</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLogger">#</a>
+		<code>getLogger( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TLogger.html">TLogger</a></code></code><br>message logger<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="varDump" id="_varDump">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_varDump">#</a>
+		<code>varDump( <span>mixed <var>$var</var></span>, <span>integer <var>$depth</var> = <span class="php-num">10</span></span>, <span>boolean <var>$highlight</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts a variable into a string representation. This method achieves the
+similar functionality as var_dump and print_r but is more robust when handling
+complex objects such as PRADO controls.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts a variable into a string representation. This method achieves the
+similar functionality as var_dump and print_r but is more robust when handling
+complex objects such as PRADO controls.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$var</var></dt>
+					<dd><code>mixed</code><br>variable to be dumped</dd>
+					<dt><var>$depth</var></dt>
+					<dd><code>integer</code><br>maximum depth that the dumper should go into the variable. Defaults to 10.</dd>
+					<dt><var>$highlight</var></dt>
+					<dd><code>boolean</code><br>whether to syntax highlight the output. Defaults to false.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the string representation of the variable<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="localize" id="_localize">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_localize">#</a>
+		<code>localize( <span>string <var>$text</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$catalogue</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$charset</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Localize a text to the locale/culture specified in the globalization
+handler.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Localize a text to the locale/culture specified in the globalization
+handler.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>text to be localized.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd><code>array</code><br>a set of parameters to substitute.</dd>
+					<dt><var>$catalogue</var></dt>
+					<dd><code>string</code><br>a different catalogue to find the localize text.</dd>
+					<dt><var>$charset</var></dt>
+					<dd><code>string</code><br>the input AND output charset.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>localized text.<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						TTranslate::formatter()<br />
+						TTranslate::init()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CLASS_FILE_EXT" id="CLASS_FILE_EXT">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CLASS_FILE_EXT</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'.php'</span></code></td>
+		<td class="description"><div>
+			<a href="#CLASS_FILE_EXT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>File extension for Prado class files.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>File extension for Prado class files.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="classExists" id="$classExists">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+<var>$classExists</var>		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$classExists" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>list of class exists checks</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>list of class exists checks</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

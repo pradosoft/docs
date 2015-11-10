@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TDropDownList | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li class="active"><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Web.UI.WebControls.html" title="Summary of System\Web\UI\WebControls"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TDropDownList</h1>
+
+
+	<div class="description">
+	
+<p>TDropDownList class</p>
+
+<p>TDropDownList displays a dropdown list on a Web page. It inherits all
+properties and events from <code><a href="class-TListControl.html">TListControl</a></code>.</p>
+
+<p>Since v3.0.3, TDropDownList starts to support optgroup. To specify an option
+group for a list item, set a Group attribute with it,</p>
+
+<pre>
+<span class="php-var">$listitem</span>-&gt;Attributes-&gt;Group=<span
+class="php-quote">&quot;Group Name&quot;</span>;
+<span
+class="php-comment">// or &lt;com:TListItem Attributes.Group=&quot;Group Name&quot; .../&gt; in template</span>
+</pre>
+
+<p>Since v3.1.1, TDropDownList starts to support prompt text. That is, a prompt
+item can be displayed as the first list item by specifying either setPromptText PromptText or setPromptValue PromptValue, or both.
+Choosing the prompt item will unselect the TDropDownList.</p>
+
+<p>When a prompt item is set, its index in the list is set to -1. So, the getSelectedIndex SelectedIndex property is not affected by a prompt item: the
+items list will still be zero-based.</p>
+
+<p>The clearSelection clearSelection method will select the prompt item
+if existing, otherway the first available item in the dropdown list will be
+selected.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TControl.html"><span>TControl</span></a>
+			
+			 implements 
+				<a href="class-IRenderable.html"><span>IRenderable</span></a>, 
+			
+				<a href="class-IBindable.html"><span>IBindable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TWebControl.html"><span>TWebControl</span></a>
+			
+			 implements 
+				<a href="class-IStyleable.html"><span>IStyleable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TDataBoundControl.html"><span>TDataBoundControl</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:150px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-TListControl.html"><span>TListControl</span></a>
+			
+			 implements 
+				<a href="class-IDataRenderer.html"><span>IDataRenderer</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:180px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TDropDownList</span></b>			
+			 implements 
+				<a href="class-IPostBackDataHandler.html"><span>IPostBackDataHandler</span></a>, 
+			
+				<a href="class-IValidatable.html"><span>IValidatable</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TActiveDropDownList.html">TActiveDropDownList</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0<br />
+		<b>Located at</b> Web/UI/WebControls/TDropDownList.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="addAttributesToRender" id="_addAttributesToRender">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addAttributesToRender">#</a>
+		<code>addAttributesToRender( <span><code><a href="class-THtmlWriter.html">THtmlWriter</a></code> <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds attributes to renderer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds attributes to renderer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd><code><code><a href="class-THtmlWriter.html">THtmlWriter</a></code></code><br>the renderer</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TListControl.html#_addAttributesToRender">TListControl::addAttributesToRender()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getClientClassName" id="_getClientClassName">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getClientClassName">#</a>
+		<code>getClientClassName( )</code>
+
+		<div class="description short">
+			
+<p>Gets the name of the javascript class responsible for performing postback for
+this control. This method overrides the parent implementation.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the name of the javascript class responsible for performing postback for
+this control. This method overrides the parent implementation.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the javascript class name<br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TListControl.html#_getClientClassName">TListControl::getClientClassName()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadPostData" id="_loadPostData">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadPostData">#</a>
+		<code>loadPostData( <span>string <var>$key</var></span>, <span>array <var>$values</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Loads user input data. This method is primarly used by framework
+developers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads user input data. This method is primarly used by framework
+developers.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>the key that can be used to retrieve data from the input data collection</dd>
+					<dt><var>$values</var></dt>
+					<dd><code>array</code><br>the input data collection</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the data of the component has been changed<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IPostBackDataHandler.html#_loadPostData">IPostBackDataHandler::loadPostData()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="raisePostDataChangedEvent" id="_raisePostDataChangedEvent">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_raisePostDataChangedEvent">#</a>
+		<code>raisePostDataChangedEvent( )</code>
+
+		<div class="description short">
+			
+<p>Raises postdata changed event. This method is required by <code><a href="class-IPostBackDataHandler.html">IPostBackDataHandler</a></code> interface. It is invoked by the framework when getSelectedIndex SelectedIndex property is changed on postback. This method is
+primarly used by framework developers.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises postdata changed event. This method is required by <code><a href="class-IPostBackDataHandler.html">IPostBackDataHandler</a></code> interface. It is invoked by the framework when getSelectedIndex SelectedIndex property is changed on postback. This method is
+primarly used by framework developers.</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IPostBackDataHandler.html#_raisePostDataChangedEvent">IPostBackDataHandler::raisePostDataChangedEvent()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDataChanged" id="_getDataChanged">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDataChanged">#</a>
+		<code>getDataChanged( )</code>
+
+		<div class="description short">
+			
+<p>Returns a value indicating whether postback has caused the control data
+change. This method is required by the IPostBackDataHandler interface.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a value indicating whether postback has caused the control data
+change. This method is required by the IPostBackDataHandler interface.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether postback has caused the control data change. False if the page is not in
+postback mode.<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IPostBackDataHandler.html#_getDataChanged">IPostBackDataHandler::getDataChanged()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSelectedIndices" id="_setSelectedIndices">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSelectedIndices">#</a>
+		<code>setSelectedIndices( <span>array <var>$indices</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$indices</var></dt>
+					<dd><code>array</code><br>list of index of items to be selected</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TNotSupportedException.html">TNotSupportedException</a></code></code><br>if this method is invoked<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TListControl.html#_setSelectedIndices">TListControl::setSelectedIndices()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getValidationPropertyValue" id="_getValidationPropertyValue">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getValidationPropertyValue">#</a>
+		<code>getValidationPropertyValue( )</code>
+
+		<div class="description short">
+			
+<p>Returns the value to be validated. This methid is required by IValidatable
+interface.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the value to be validated. This methid is required by IValidatable
+interface.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the value of the property to be validated.<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IValidatable.html#_getValidationPropertyValue">IValidatable::getValidationPropertyValue()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsValid" id="_getIsValid">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsValid">#</a>
+		<code>getIsValid( )</code>
+
+		<div class="description short">
+			
+<p>Returns true if this control validated successfully. Defaults to true.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns true if this control validated successfully. Defaults to true.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>wether this control validated successfully.<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IValidatable.html#_getIsValid">IValidatable::getIsValid()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setIsValid" id="_setIsValid">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setIsValid">#</a>
+		<code>setIsValid( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>boolean</code><br>wether this control is valid.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>wether this control's validators validated successfully<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IValidatable.html#_setIsValid">IValidatable::setIsValid()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TListControl.html#methods">TListControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TListControl.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TListControl.html#_clearSelection">clearSelection()</a>, 
+			<a href="class-TListControl.html#_createListItemCollection">createListItemCollection()</a>, 
+			<a href="class-TListControl.html#_formatDataValue">formatDataValue()</a>, 
+			<a href="class-TListControl.html#_getAppendDataBoundItems">getAppendDataBoundItems()</a>, 
+			<a href="class-TListControl.html#_getAutoPostBack">getAutoPostBack()</a>, 
+			<a href="class-TListControl.html#_getCausesValidation">getCausesValidation()</a>, 
+			<a href="class-TListControl.html#_getData">getData()</a>, 
+			<a href="class-TListControl.html#_getDataGroupField">getDataGroupField()</a>, 
+			<a href="class-TListControl.html#_getDataTextField">getDataTextField()</a>, 
+			<a href="class-TListControl.html#_getDataTextFormatString">getDataTextFormatString()</a>, 
+			<a href="class-TListControl.html#_getDataValueField">getDataValueField()</a>, 
+			<a href="class-TListControl.html#_getEnableClientScript">getEnableClientScript()</a>, 
+			<a href="class-TListControl.html#_getHasItems">getHasItems()</a>, 
+			<a href="class-TListControl.html#_getIsMultiSelect">getIsMultiSelect()</a>, 
+			<a href="class-TListControl.html#_getItemCount">getItemCount()</a>, 
+			<a href="class-TListControl.html#_getItems">getItems()</a>, 
+			<a href="class-TListControl.html#_getPostBackOptions">getPostBackOptions()</a>, 
+			<a href="class-TListControl.html#_getPromptText">getPromptText()</a>, 
+			<a href="class-TListControl.html#_getPromptValue">getPromptValue()</a>, 
+			<a href="class-TListControl.html#_getSelectedIndex">getSelectedIndex()</a>, 
+			<a href="class-TListControl.html#_getSelectedIndices">getSelectedIndices()</a>, 
+			<a href="class-TListControl.html#_getSelectedItem">getSelectedItem()</a>, 
+			<a href="class-TListControl.html#_getSelectedValue">getSelectedValue()</a>, 
+			<a href="class-TListControl.html#_getSelectedValues">getSelectedValues()</a>, 
+			<a href="class-TListControl.html#_getTagName">getTagName()</a>, 
+			<a href="class-TListControl.html#_getText">getText()</a>, 
+			<a href="class-TListControl.html#_getValidationGroup">getValidationGroup()</a>, 
+			<a href="class-TListControl.html#_loadState">loadState()</a>, 
+			<a href="class-TListControl.html#_onSelectedIndexChanged">onSelectedIndexChanged()</a>, 
+			<a href="class-TListControl.html#_onTextChanged">onTextChanged()</a>, 
+			<a href="class-TListControl.html#_performDataBinding">performDataBinding()</a>, 
+			<a href="class-TListControl.html#_renderClientControlScript">renderClientControlScript()</a>, 
+			<a href="class-TListControl.html#_renderContents">renderContents()</a>, 
+			<a href="class-TListControl.html#_renderPrompt">renderPrompt()</a>, 
+			<a href="class-TListControl.html#_saveState">saveState()</a>, 
+			<a href="class-TListControl.html#_setAppendDataBoundItems">setAppendDataBoundItems()</a>, 
+			<a href="class-TListControl.html#_setAutoPostBack">setAutoPostBack()</a>, 
+			<a href="class-TListControl.html#_setCausesValidation">setCausesValidation()</a>, 
+			<a href="class-TListControl.html#_setData">setData()</a>, 
+			<a href="class-TListControl.html#_setDataGroupField">setDataGroupField()</a>, 
+			<a href="class-TListControl.html#_setDataTextField">setDataTextField()</a>, 
+			<a href="class-TListControl.html#_setDataTextFormatString">setDataTextFormatString()</a>, 
+			<a href="class-TListControl.html#_setDataValueField">setDataValueField()</a>, 
+			<a href="class-TListControl.html#_setEnableClientScript">setEnableClientScript()</a>, 
+			<a href="class-TListControl.html#_setPromptText">setPromptText()</a>, 
+			<a href="class-TListControl.html#_setPromptValue">setPromptValue()</a>, 
+			<a href="class-TListControl.html#_setSelectedIndex">setSelectedIndex()</a>, 
+			<a href="class-TListControl.html#_setSelectedValue">setSelectedValue()</a>, 
+			<a href="class-TListControl.html#_setSelectedValues">setSelectedValues()</a>, 
+			<a href="class-TListControl.html#_setText">setText()</a>, 
+			<a href="class-TListControl.html#_setValidationGroup">setValidationGroup()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TDataBoundControl.html#methods">TDataBoundControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TDataBoundControl.html#_createPagedDataSource">createPagedDataSource()</a>, 
+			<a href="class-TDataBoundControl.html#_dataBind">dataBind()</a>, 
+			<a href="class-TDataBoundControl.html#_dataSourceViewChanged">dataSourceViewChanged()</a>, 
+			<a href="class-TDataBoundControl.html#_determineDataSource">determineDataSource()</a>, 
+			<a href="class-TDataBoundControl.html#_ensureDataBound">ensureDataBound()</a>, 
+			<a href="class-TDataBoundControl.html#_getAllowCustomPaging">getAllowCustomPaging()</a>, 
+			<a href="class-TDataBoundControl.html#_getAllowPaging">getAllowPaging()</a>, 
+			<a href="class-TDataBoundControl.html#_getCurrentPageIndex">getCurrentPageIndex()</a>, 
+			<a href="class-TDataBoundControl.html#_getDataMember">getDataMember()</a>, 
+			<a href="class-TDataBoundControl.html#_getDataSource">getDataSource()</a>, 
+			<a href="class-TDataBoundControl.html#_getDataSourceID">getDataSourceID()</a>, 
+			<a href="class-TDataBoundControl.html#_getDataSourceView">getDataSourceView()</a>, 
+			<a href="class-TDataBoundControl.html#_getInitialized">getInitialized()</a>, 
+			<a href="class-TDataBoundControl.html#_getIsDataBound">getIsDataBound()</a>, 
+			<a href="class-TDataBoundControl.html#_getPageCount">getPageCount()</a>, 
+			<a href="class-TDataBoundControl.html#_getPageSize">getPageSize()</a>, 
+			<a href="class-TDataBoundControl.html#_getRequiresDataBinding">getRequiresDataBinding()</a>, 
+			<a href="class-TDataBoundControl.html#_getSelectParameters">getSelectParameters()</a>, 
+			<a href="class-TDataBoundControl.html#_getUsingDataSourceID">getUsingDataSourceID()</a>, 
+			<a href="class-TDataBoundControl.html#_getVirtualItemCount">getVirtualItemCount()</a>, 
+			<a href="class-TDataBoundControl.html#_onDataBound">onDataBound()</a>, 
+			<a href="class-TDataBoundControl.html#_onDataSourceChanged">onDataSourceChanged()</a>, 
+			<a href="class-TDataBoundControl.html#_onInit">onInit()</a>, 
+			<a href="class-TDataBoundControl.html#_onPreRender">onPreRender()</a>, 
+			<a href="class-TDataBoundControl.html#_pagePreLoad">pagePreLoad()</a>, 
+			<a href="class-TDataBoundControl.html#_setAllowCustomPaging">setAllowCustomPaging()</a>, 
+			<a href="class-TDataBoundControl.html#_setAllowPaging">setAllowPaging()</a>, 
+			<a href="class-TDataBoundControl.html#_setCurrentPageIndex">setCurrentPageIndex()</a>, 
+			<a href="class-TDataBoundControl.html#_setDataMember">setDataMember()</a>, 
+			<a href="class-TDataBoundControl.html#_setDataSource">setDataSource()</a>, 
+			<a href="class-TDataBoundControl.html#_setDataSourceID">setDataSourceID()</a>, 
+			<a href="class-TDataBoundControl.html#_setInitialized">setInitialized()</a>, 
+			<a href="class-TDataBoundControl.html#_setIsDataBound">setIsDataBound()</a>, 
+			<a href="class-TDataBoundControl.html#_setPageSize">setPageSize()</a>, 
+			<a href="class-TDataBoundControl.html#_setRequiresDataBinding">setRequiresDataBinding()</a>, 
+			<a href="class-TDataBoundControl.html#_setVirtualItemCount">setVirtualItemCount()</a>, 
+			<a href="class-TDataBoundControl.html#_validateDataSource">validateDataSource()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TWebControl.html#methods">TWebControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TWebControl.html#_clearStyle">clearStyle()</a>, 
+			<a href="class-TWebControl.html#_copyBaseAttributes">copyBaseAttributes()</a>, 
+			<a href="class-TWebControl.html#_createStyle">createStyle()</a>, 
+			<a href="class-TWebControl.html#_getAccessKey">getAccessKey()</a>, 
+			<a href="class-TWebControl.html#_getBackColor">getBackColor()</a>, 
+			<a href="class-TWebControl.html#_getBorderColor">getBorderColor()</a>, 
+			<a href="class-TWebControl.html#_getBorderStyle">getBorderStyle()</a>, 
+			<a href="class-TWebControl.html#_getBorderWidth">getBorderWidth()</a>, 
+			<a href="class-TWebControl.html#_getCssClass">getCssClass()</a>, 
+			<a href="class-TWebControl.html#_getDecorator">getDecorator()</a>, 
+			<a href="class-TWebControl.html#_getDisplay">getDisplay()</a>, 
+			<a href="class-TWebControl.html#_getEnsureId">getEnsureId()</a>, 
+			<a href="class-TWebControl.html#_getFont">getFont()</a>, 
+			<a href="class-TWebControl.html#_getForeColor">getForeColor()</a>, 
+			<a href="class-TWebControl.html#_getHasStyle">getHasStyle()</a>, 
+			<a href="class-TWebControl.html#_getHeight">getHeight()</a>, 
+			<a href="class-TWebControl.html#_getStyle">getStyle()</a>, 
+			<a href="class-TWebControl.html#_getTabIndex">getTabIndex()</a>, 
+			<a href="class-TWebControl.html#_getToolTip">getToolTip()</a>, 
+			<a href="class-TWebControl.html#_getWidth">getWidth()</a>, 
+			<a href="class-TWebControl.html#_render">render()</a>, 
+			<a href="class-TWebControl.html#_renderBeginTag">renderBeginTag()</a>, 
+			<a href="class-TWebControl.html#_renderEndTag">renderEndTag()</a>, 
+			<a href="class-TWebControl.html#_setAccessKey">setAccessKey()</a>, 
+			<a href="class-TWebControl.html#_setBackColor">setBackColor()</a>, 
+			<a href="class-TWebControl.html#_setBorderColor">setBorderColor()</a>, 
+			<a href="class-TWebControl.html#_setBorderStyle">setBorderStyle()</a>, 
+			<a href="class-TWebControl.html#_setBorderWidth">setBorderWidth()</a>, 
+			<a href="class-TWebControl.html#_setCssClass">setCssClass()</a>, 
+			<a href="class-TWebControl.html#_setDisplay">setDisplay()</a>, 
+			<a href="class-TWebControl.html#_setEnsureId">setEnsureId()</a>, 
+			<a href="class-TWebControl.html#_setForeColor">setForeColor()</a>, 
+			<a href="class-TWebControl.html#_setHeight">setHeight()</a>, 
+			<a href="class-TWebControl.html#_setStyle">setStyle()</a>, 
+			<a href="class-TWebControl.html#_setTabIndex">setTabIndex()</a>, 
+			<a href="class-TWebControl.html#_setToolTip">setToolTip()</a>, 
+			<a href="class-TWebControl.html#_setWidth">setWidth()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TControl.html#methods">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#___construct">__construct()</a>, 
+			<a href="class-TControl.html#___get">__get()</a>, 
+			<a href="class-TControl.html#_addToPostDataLoader">addToPostDataLoader()</a>, 
+			<a href="class-TControl.html#_addedControl">addedControl()</a>, 
+			<a href="class-TControl.html#_applyStyleSheetSkin">applyStyleSheetSkin()</a>, 
+			<a href="class-TControl.html#_autoBindProperty">autoBindProperty()</a>, 
+			<a href="class-TControl.html#_autoDataBindProperties">autoDataBindProperties()</a>, 
+			<a href="class-TControl.html#_bindProperty">bindProperty()</a>, 
+			<a href="class-TControl.html#_broadcastEvent">broadcastEvent()</a>, 
+			<a href="class-TControl.html#_bubbleEvent">bubbleEvent()</a>, 
+			<a href="class-TControl.html#_clearChildState">clearChildState()</a>, 
+			<a href="class-TControl.html#_clearControlState">clearControlState()</a>, 
+			<a href="class-TControl.html#_clearNamingContainer">clearNamingContainer()</a>, 
+			<a href="class-TControl.html#_clearViewState">clearViewState()</a>, 
+			<a href="class-TControl.html#_convertUniqueIdToClientId">convertUniqueIdToClientId()</a>, 
+			<a href="class-TControl.html#_createChildControls">createChildControls()</a>, 
+			<a href="class-TControl.html#_createControlCollection">createControlCollection()</a>, 
+			<a href="class-TControl.html#_dataBindChildren">dataBindChildren()</a>, 
+			<a href="class-TControl.html#_dataBindProperties">dataBindProperties()</a>, 
+			<a href="class-TControl.html#_ensureChildControls">ensureChildControls()</a>, 
+			<a href="class-TControl.html#_findControl">findControl()</a>, 
+			<a href="class-TControl.html#_findControlsByID">findControlsByID()</a>, 
+			<a href="class-TControl.html#_findControlsByType">findControlsByType()</a>, 
+			<a href="class-TControl.html#_focus">focus()</a>, 
+			<a href="class-TControl.html#_getAdapter">getAdapter()</a>, 
+			<a href="class-TControl.html#_getAllowChildControls">getAllowChildControls()</a>, 
+			<a href="class-TControl.html#_getAttribute">getAttribute()</a>, 
+			<a href="class-TControl.html#_getAttributes">getAttributes()</a>, 
+			<a href="class-TControl.html#_getChildControlsCreated">getChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_getClientID">getClientID()</a>, 
+			<a href="class-TControl.html#_getControlStage">getControlStage()</a>, 
+			<a href="class-TControl.html#_getControlState">getControlState()</a>, 
+			<a href="class-TControl.html#_getControls">getControls()</a>, 
+			<a href="class-TControl.html#_getCustomData">getCustomData()</a>, 
+			<a href="class-TControl.html#_getEnableTheming">getEnableTheming()</a>, 
+			<a href="class-TControl.html#_getEnableViewState">getEnableViewState()</a>, 
+			<a href="class-TControl.html#_getEnabled">getEnabled()</a>, 
+			<a href="class-TControl.html#_getHasAdapter">getHasAdapter()</a>, 
+			<a href="class-TControl.html#_getHasAttributes">getHasAttributes()</a>, 
+			<a href="class-TControl.html#_getHasChildInitialized">getHasChildInitialized()</a>, 
+			<a href="class-TControl.html#_getHasControls">getHasControls()</a>, 
+			<a href="class-TControl.html#_getHasInitialized">getHasInitialized()</a>, 
+			<a href="class-TControl.html#_getHasLoaded">getHasLoaded()</a>, 
+			<a href="class-TControl.html#_getHasLoadedPostData">getHasLoadedPostData()</a>, 
+			<a href="class-TControl.html#_getHasPreRendered">getHasPreRendered()</a>, 
+			<a href="class-TControl.html#_getID">getID()</a>, 
+			<a href="class-TControl.html#_getIsSkinApplied">getIsSkinApplied()</a>, 
+			<a href="class-TControl.html#_getNamingContainer">getNamingContainer()</a>, 
+			<a href="class-TControl.html#_getPage">getPage()</a>, 
+			<a href="class-TControl.html#_getParent">getParent()</a>, 
+			<a href="class-TControl.html#_getRegisteredObject">getRegisteredObject()</a>, 
+			<a href="class-TControl.html#_getSkinID">getSkinID()</a>, 
+			<a href="class-TControl.html#_getSourceTemplateControl">getSourceTemplateControl()</a>, 
+			<a href="class-TControl.html#_getTemplateControl">getTemplateControl()</a>, 
+			<a href="class-TControl.html#_getUniqueID">getUniqueID()</a>, 
+			<a href="class-TControl.html#_getViewState">getViewState()</a>, 
+			<a href="class-TControl.html#_getVisible">getVisible()</a>, 
+			<a href="class-TControl.html#_hasAttribute">hasAttribute()</a>, 
+			<a href="class-TControl.html#_initRecursive">initRecursive()</a>, 
+			<a href="class-TControl.html#_isDescendentOf">isDescendentOf()</a>, 
+			<a href="class-TControl.html#_isObjectRegistered">isObjectRegistered()</a>, 
+			<a href="class-TControl.html#_loadRecursive">loadRecursive()</a>, 
+			<a href="class-TControl.html#_loadStateRecursive">loadStateRecursive()</a>, 
+			<a href="class-TControl.html#_onDataBinding">onDataBinding()</a>, 
+			<a href="class-TControl.html#_onLoad">onLoad()</a>, 
+			<a href="class-TControl.html#_onUnload">onUnload()</a>, 
+			<a href="class-TControl.html#_preRenderRecursive">preRenderRecursive()</a>, 
+			<a href="class-TControl.html#_raiseBubbleEvent">raiseBubbleEvent()</a>, 
+			<a href="class-TControl.html#_registerObject">registerObject()</a>, 
+			<a href="class-TControl.html#_removeAttribute">removeAttribute()</a>, 
+			<a href="class-TControl.html#_removedControl">removedControl()</a>, 
+			<a href="class-TControl.html#_renderChildren">renderChildren()</a>, 
+			<a href="class-TControl.html#_renderControl">renderControl()</a>, 
+			<a href="class-TControl.html#_saveStateRecursive">saveStateRecursive()</a>, 
+			<a href="class-TControl.html#_setAdapter">setAdapter()</a>, 
+			<a href="class-TControl.html#_setAttribute">setAttribute()</a>, 
+			<a href="class-TControl.html#_setChildControlsCreated">setChildControlsCreated()</a>, 
+			<a href="class-TControl.html#_setControlStage">setControlStage()</a>, 
+			<a href="class-TControl.html#_setControlState">setControlState()</a>, 
+			<a href="class-TControl.html#_setCustomData">setCustomData()</a>, 
+			<a href="class-TControl.html#_setEnableTheming">setEnableTheming()</a>, 
+			<a href="class-TControl.html#_setEnableViewState">setEnableViewState()</a>, 
+			<a href="class-TControl.html#_setEnabled">setEnabled()</a>, 
+			<a href="class-TControl.html#_setID">setID()</a>, 
+			<a href="class-TControl.html#_setPage">setPage()</a>, 
+			<a href="class-TControl.html#_setSkinID">setSkinID()</a>, 
+			<a href="class-TControl.html#_setTemplateControl">setTemplateControl()</a>, 
+			<a href="class-TControl.html#_setViewState">setViewState()</a>, 
+			<a href="class-TControl.html#_setVisible">setVisible()</a>, 
+			<a href="class-TControl.html#_trackViewState">trackViewState()</a>, 
+			<a href="class-TControl.html#_traverseChildControls">traverseChildControls()</a>, 
+			<a href="class-TControl.html#_unbindProperty">unbindProperty()</a>, 
+			<a href="class-TControl.html#_unloadRecursive">unloadRecursive()</a>, 
+			<a href="class-TControl.html#_unregisterObject">unregisterObject()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TControl.html#constants">TControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TControl.html#AUTOMATIC_ID_PREFIX"><b>AUTOMATIC_ID_PREFIX</b></a>, 
+			<a href="class-TControl.html#CLIENT_ID_SEPARATOR"><b>CLIENT_ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#CS_CHILD_INITIALIZED"><b>CS_CHILD_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_CONSTRUCTED"><b>CS_CONSTRUCTED</b></a>, 
+			<a href="class-TControl.html#CS_INITIALIZED"><b>CS_INITIALIZED</b></a>, 
+			<a href="class-TControl.html#CS_LOADED"><b>CS_LOADED</b></a>, 
+			<a href="class-TControl.html#CS_PRERENDERED"><b>CS_PRERENDERED</b></a>, 
+			<a href="class-TControl.html#CS_STATE_LOADED"><b>CS_STATE_LOADED</b></a>, 
+			<a href="class-TControl.html#ID_FORMAT"><b>ID_FORMAT</b></a>, 
+			<a href="class-TControl.html#ID_SEPARATOR"><b>ID_SEPARATOR</b></a>, 
+			<a href="class-TControl.html#IS_CHILD_CREATED"><b>IS_CHILD_CREATED</b></a>, 
+			<a href="class-TControl.html#IS_CREATING_CHILD"><b>IS_CREATING_CHILD</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_THEMING"><b>IS_DISABLE_THEMING</b></a>, 
+			<a href="class-TControl.html#IS_DISABLE_VIEWSTATE"><b>IS_DISABLE_VIEWSTATE</b></a>, 
+			<a href="class-TControl.html#IS_ID_SET"><b>IS_ID_SET</b></a>, 
+			<a href="class-TControl.html#IS_SKIN_APPLIED"><b>IS_SKIN_APPLIED</b></a>, 
+			<a href="class-TControl.html#IS_STYLESHEET_APPLIED"><b>IS_STYLESHEET_APPLIED</b></a>, 
+			<a href="class-TControl.html#RF_ADAPTER"><b>RF_ADAPTER</b></a>, 
+			<a href="class-TControl.html#RF_AUTO_BINDINGS"><b>RF_AUTO_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_CHILD_STATE"><b>RF_CHILD_STATE</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLS"><b>RF_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_CONTROLSTATE"><b>RF_CONTROLSTATE</b></a>, 
+			<a href="class-TControl.html#RF_DATA_BINDINGS"><b>RF_DATA_BINDINGS</b></a>, 
+			<a href="class-TControl.html#RF_EVENTS"><b>RF_EVENTS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS"><b>RF_NAMED_CONTROLS</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_CONTROLS_ID"><b>RF_NAMED_CONTROLS_ID</b></a>, 
+			<a href="class-TControl.html#RF_NAMED_OBJECTS"><b>RF_NAMED_OBJECTS</b></a>, 
+			<a href="class-TControl.html#RF_SKIN_ID"><b>RF_SKIN_ID</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-TWebControl.html#properties">TWebControl</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TWebControl.html#$_decorator"><var>$_decorator</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

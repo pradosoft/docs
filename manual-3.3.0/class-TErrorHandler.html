@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TErrorHandler | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-TErrorHandler.html">TErrorHandler</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TApplicationException.html">TApplicationException</a></li>
+				<li><a href="class-TConfigurationException.html">TConfigurationException</a></li>
+				<li><a href="class-TDbConnectionException.html">TDbConnectionException</a></li>
+				<li><a href="class-TDbException.html">TDbException</a></li>
+				<li><a href="class-TException.html">TException</a></li>
+				<li><a href="class-THttpException.html">THttpException</a></li>
+				<li><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></li>
+				<li><a href="class-TInvalidDataValueException.html">TInvalidDataValueException</a></li>
+				<li><a href="class-TInvalidOperationException.html">TInvalidOperationException</a></li>
+				<li><a href="class-TIOException.html">TIOException</a></li>
+				<li><a href="class-TNotSupportedException.html">TNotSupportedException</a></li>
+				<li><a href="class-TPhpErrorException.html">TPhpErrorException</a></li>
+				<li><a href="class-TSystemException.html">TSystemException</a></li>
+				<li><a href="class-TTemplateException.html">TTemplateException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TErrorHandler</h1>
+
+
+	<div class="description">
+	<p>TErrorHandler class</p>
+
+<p>TErrorHandler handles all PHP user errors and exceptions generated during
+servicing user requests. It displays these errors using different templates
+and if possible, using languages preferred by the client user.
+Note, PHP parsing errors cannot be caught and handled by TErrorHandler.</p>
+
+<p>The templates used to format the error output are stored under System.Exceptions.
+You may choose to use your own templates, should you not like the templates
+provided by Prado. Simply set setErrorTemplatePath ErrorTemplatePath
+to the path (in namespace format) storing your own templates.</p>
+
+<p>There are two sets of templates, one for errors to be displayed to client users
+(called external errors), one for errors to be displayed to system developers
+(called internal errors). The template file name for the former is
+<b>error[StatusCode][-LanguageCode].html</b>, and for the latter it is
+<b>exception[-LanguageCode].html</b>, where StatusCode refers to response status
+code (e.g. 404, 500) specified when <code><a href="class-THttpException.html">THttpException</a></code> is thrown,
+and LanguageCode is the client user preferred language code (e.g. en, zh, de).
+The templates <b>error.html</b> and <b>exception.html</b> are default ones
+that are used if no other appropriate templates are available.
+Note, these templates are not Prado control templates. They are simply
+html files with keywords (e.g. %%ErrorMessage%%, %%Version%%)
+to be replaced with the corresponding information.</p>
+
+<p>By default, TErrorHandler is registered with <code><a href="class-TApplication.html">TApplication</a></code> as the
+error handler module. It can be accessed via <a href="TApplication::getErrorHandler()">TApplication::getErrorHandler()</a>.
+You seldom need to deal with the error handler directly. It is mainly used
+by the application object to handle errors.</p>
+
+<p>TErrorHandler may be configured in application configuration file as follows
+<module id="error" class="TErrorHandler" ErrorTemplatePath="System.Exceptions" /></p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TModule.html"><span>TModule</span></a>
+			
+			 implements 
+				<a href="class-IModule.html"><span>IModule</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TErrorHandler</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TCallbackErrorHandler.html">TCallbackErrorHandler</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Exceptions.html">Exceptions</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Exceptions/TErrorHandler.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlElement.html">TXmlElement</a></code> <var>$config</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the module.
+This method is required by IModule and is invoked by application.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the module.
+This method is required by IModule and is invoked by application.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd>configuration</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TModule.html#_init">TModule::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getErrorTemplatePath" id="_getErrorTemplatePath">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getErrorTemplatePath">#</a>
+		<code>getErrorTemplatePath( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the directory containing error template files.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setErrorTemplatePath" id="_setErrorTemplatePath">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setErrorTemplatePath">#</a>
+		<code>setErrorTemplatePath( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the path storing all error and exception template files.
+The path must be in namespace format, such as System.Exceptions (which is the default).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the path storing all error and exception template files.
+The path must be in namespace format, such as System.Exceptions (which is the default).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>path in namespace format</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TConfigurationException.html">TConfigurationException</a></code><br>if the template path is invalid
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="handleError" id="_handleError">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_handleError">#</a>
+		<code>handleError( <span>mixed <var>$sender</var></span>, <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Handles PHP user errors and exceptions.
+This is the event handler responding to the <b>Error</b> event
+raised in <code><a href="class-TApplication.html">TApplication</a></code>.
+The method mainly uses appropriate template to display the error/exception.
+It terminates the application immediately after the error is displayed.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Handles PHP user errors and exceptions.
+This is the event handler responding to the <b>Error</b> event
+raised in <code><a href="class-TApplication.html">TApplication</a></code>.
+The method mainly uses appropriate template to display the error/exception.
+It terminates the application immediately after the error is displayed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd>of the event</dd>
+					<dt><var>$param</var></dt>
+					<dd>parameter (if the event is raised by TApplication, it refers to the exception instance)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hideSecurityRelated" id="_hideSecurityRelated">
+
+		<td class="attributes"><code>
+			 protected static
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hideSecurityRelated">#</a>
+		<code>hideSecurityRelated( <span>string <var>$value</var></span>, <span>Exception|null$exception <var>$exception</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$exception</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.6<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="handleExternalError" id="_handleExternalError">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_handleExternalError">#</a>
+		<code>handleExternalError( <span>integer <var>$statusCode</var></span>, <span>Exception <var>$exception</var></span> )</code>
+
+		<div class="description short">
+			<p>Displays error to the client user.
+THttpException and errors happened when the application is in <b>Debug</b>
+mode will be displayed to the client user.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Displays error to the client user.
+THttpException and errors happened when the application is in <b>Debug</b>
+mode will be displayed to the client user.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statusCode</var></dt>
+					<dd>status code</dd>
+					<dt><var>$exception</var></dt>
+					<dd>instance</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="handleRecursiveError" id="_handleRecursiveError">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_handleRecursiveError">#</a>
+		<code>handleRecursiveError( <span>Exception <var>$exception</var></span> )</code>
+
+		<div class="description short">
+			<p>Handles error occurs during error handling (called recursive error).
+THttpException and errors happened when the application is in <b>Debug</b>
+mode will be displayed to the client user.
+Error is displayed without using existing template to prevent further errors.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Handles error occurs during error handling (called recursive error).
+THttpException and errors happened when the application is in <b>Debug</b>
+mode will be displayed to the client user.
+Error is displayed without using existing template to prevent further errors.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$exception</var></dt>
+					<dd>instance</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="displayException" id="_displayException">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_displayException">#</a>
+		<code>displayException( <span>Exception <var>$exception</var></span> )</code>
+
+		<div class="description short">
+			<p>Displays exception information.
+Exceptions are displayed with rich context information, including
+the call stack and the context source code.
+This method is only invoked when application is in <b>Debug</b> mode.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Displays exception information.
+Exceptions are displayed with rich context information, including
+the call stack and the context source code.
+This method is only invoked when application is in <b>Debug</b> mode.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$exception</var></dt>
+					<dd>instance</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getExceptionTemplate" id="_getExceptionTemplate">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getExceptionTemplate">#</a>
+		<code>getExceptionTemplate( <span>Exception <var>$exception</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieves the template used for displaying internal exceptions.
+Internal exceptions will be displayed with source code causing the exception.
+This occurs when the application is in debug mode.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves the template used for displaying internal exceptions.
+Internal exceptions will be displayed with source code causing the exception.
+This occurs when the application is in debug mode.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$exception</var></dt>
+					<dd>exception to be displayed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the template content
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getErrorTemplate" id="_getErrorTemplate">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getErrorTemplate">#</a>
+		<code>getErrorTemplate( <span>integer <var>$statusCode</var></span>, <span>Exception <var>$exception</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieves the template used for displaying external exceptions.
+External exceptions are those displayed to end-users. They do not contain
+error source code. Therefore, you might want to override this method
+to provide your own error template for displaying certain external exceptions.
+The following tokens in the template will be replaced with corresponding content:
+%%StatusCode%% : the status code of the exception
+%%ErrorMessage%% : the error message (HTML encoded).
+%%ServerAdmin%% : the server admin information (retrieved from Web server configuration)
+%%Version%% : the version information of the Web server.
+%%Time%% : the time the exception occurs at</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves the template used for displaying external exceptions.
+External exceptions are those displayed to end-users. They do not contain
+error source code. Therefore, you might want to override this method
+to provide your own error template for displaying certain external exceptions.
+The following tokens in the template will be replaced with corresponding content:
+%%StatusCode%% : the status code of the exception
+%%ErrorMessage%% : the error message (HTML encoded).
+%%ServerAdmin%% : the server admin information (retrieved from Web server configuration)
+%%Version%% : the version information of the Web server.
+%%Time%% : the time the exception occurs at</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statusCode</var></dt>
+					<dd>code (such as 404, 500, etc.)</dd>
+					<dt><var>$exception</var></dt>
+					<dd>exception to be displayed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the template content
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TModule.html#methods">TModule</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TModule.html#_getID">getID()</a>, 
+			<a href="class-TModule.html#_setID">setID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ERROR_FILE_NAME" id="ERROR_FILE_NAME">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>ERROR_FILE_NAME</b>			</code>
+
+			<div class="description short">
+				<p>error template file basename</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>error template file basename</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ERROR_FILE_NAME" class="anchor">#</a>
+				<code><span class="php-quote">'error'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="EXCEPTION_FILE_NAME" id="EXCEPTION_FILE_NAME">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>EXCEPTION_FILE_NAME</b>			</code>
+
+			<div class="description short">
+				<p>exception template file basename</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>exception template file basename</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#EXCEPTION_FILE_NAME" class="anchor">#</a>
+				<code><span class="php-quote">'exception'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SOURCE_LINES" id="SOURCE_LINES">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>SOURCE_LINES</b>			</code>
+
+			<div class="description short">
+				<p>number of lines before and after the error line to be displayed in case of an exception</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>number of lines before and after the error line to be displayed in case of an exception</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SOURCE_LINES" class="anchor">#</a>
+				<code><span class="php-num">12</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

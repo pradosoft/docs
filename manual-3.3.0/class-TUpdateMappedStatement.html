@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TUpdateMappedStatement | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TCachingStatement.html">TCachingStatement</a></li>
+				<li><a href="class-TDeleteMappedStatement.html">TDeleteMappedStatement</a></li>
+				<li><a href="class-TInsertMappedStatement.html">TInsertMappedStatement</a></li>
+				<li><a href="class-TMappedStatement.html">TMappedStatement</a></li>
+				<li><a href="class-TPostSelectBinding.html">TPostSelectBinding</a></li>
+				<li><a href="class-TPreparedCommand.html">TPreparedCommand</a></li>
+				<li><a href="class-TPreparedStatement.html">TPreparedStatement</a></li>
+				<li><a href="class-TPreparedStatementFactory.html">TPreparedStatementFactory</a></li>
+				<li><a href="class-TResultSetListItemParameter.html">TResultSetListItemParameter</a></li>
+				<li><a href="class-TResultSetMapItemParameter.html">TResultSetMapItemParameter</a></li>
+				<li><a href="class-TSelectMappedStatement.html">TSelectMappedStatement</a></li>
+				<li><a href="class-TSimpleDynamicSql.html">TSimpleDynamicSql</a></li>
+				<li><a href="class-TSqlMapObjectCollectionTree.html">TSqlMapObjectCollectionTree</a></li>
+				<li><a href="class-TSqlMapSelect.html">TSqlMapSelect</a></li>
+				<li><a href="class-TStaticSql.html">TStaticSql</a></li>
+				<li class="active"><a href="class-TUpdateMappedStatement.html">TUpdateMappedStatement</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IMappedStatement.html">IMappedStatement</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TUpdateMappedStatement</h1>
+
+
+	<div class="description">
+	<p>TUpdateMappedStatement class.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TMappedStatement.html"><span>TMappedStatement</span></a>
+			
+			 implements 
+				<a href="class-IMappedStatement.html"><span>IMappedStatement</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TUpdateMappedStatement</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TDeleteMappedStatement.html">TDeleteMappedStatement</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.SqlMap.html">SqlMap</a>\<a href="package-System.Data.SqlMap.Statements.html">Statements</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Data/SqlMap/Statements/TUpdateMappedStatement.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="executeInsert" id="_executeInsert">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeInsert">#</a>
+		<code>executeInsert( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span> )</code>
+
+		<div class="description short">
+			<p>Execute an insert statement. Fill the parameter object with the ouput
+parameters if any, also could return the insert generated key.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Execute an insert statement. Fill the parameter object with the ouput
+parameters if any, also could return the insert generated key.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd>parameter object used to fill the statement.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the insert generated key.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMappedStatement.html#_executeInsert">TMappedStatement::executeInsert()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeQueryForMap" id="_executeQueryForMap">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeQueryForMap">#</a>
+		<code>executeQueryForMap( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>string <var>$keyProperty</var></span>, <span>string <var>$valueProperty</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Executes the SQL and retuns all rows selected in a map that is keyed on
+the property named in the keyProperty parameter.  The value at each key
+will be the value of the property specified in the valueProperty parameter.
+If valueProperty is null, the entire result object will be entered.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes the SQL and retuns all rows selected in a map that is keyed on
+the property named in the keyProperty parameter.  The value at each key
+will be the value of the property specified in the valueProperty parameter.
+If valueProperty is null, the entire result object will be entered.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd>object used to set the parameters in the SQL.</dd>
+					<dt><var>$keyProperty</var></dt>
+					<dd>property of the result object to be used as the key.</dd>
+					<dt><var>$valueProperty</var></dt>
+					<dd>property of the result object to be used as the value (or null).</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>An array of object containing the rows keyed by keyProperty.
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMappedStatement.html#_executeQueryForMap">TMappedStatement::executeQueryForMap()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeQueryForList" id="_executeQueryForList">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeQueryForList">#</a>
+		<code>executeQueryForList( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>object <var>$result</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$skip</var> = -<span class="php-num">1</span></span>, <span>integer <var>$max</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			<p>Executes the SQL and retuns a List of result objects.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes the SQL and retuns a List of result objects.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd>object used to set the parameters in the SQL.</dd>
+					<dt><var>$result</var></dt>
+					<dd>collection object.</dd>
+					<dt><var>$skip</var></dt>
+					<dd>number of rows to skip over.</dd>
+					<dt><var>$max</var></dt>
+					<dd>maximum number of rows to return.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>a list of result objects
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TUpdateMappedStatement.html#_executeQueryForList">TUpdateMappedStatement::executeQueryForList()</a></code><br>
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMappedStatement.html#_executeQueryForList">TMappedStatement::executeQueryForList()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeQueryForObject" id="_executeQueryForObject">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeQueryForObject">#</a>
+		<code>executeQueryForObject( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>mixed <var>$result</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Executes an SQL statement that returns a single row as an object of the
+type of the <tt>$result</tt> passed in as a parameter.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes an SQL statement that returns a single row as an object of the
+type of the <tt>$result</tt> passed in as a parameter.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd>parameter data (object, arrary, primitive) used to set the parameters in the SQL</dd>
+					<dt><var>$result</var></dt>
+					<dd>result object.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<br>${return}
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TMappedStatement.html#_executeQueryForObject">TMappedStatement::executeQueryForObject()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TMappedStatement.html#methods">TMappedStatement</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TMappedStatement.html#___construct">__construct()</a>, 
+			<a href="class-TMappedStatement.html#___sleep">__sleep()</a>, 
+			<a href="class-TMappedStatement.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TMappedStatement.html#_addResultMapGroupBy">addResultMapGroupBy()</a>, 
+			<a href="class-TMappedStatement.html#_applyResultMap">applyResultMap()</a>, 
+			<a href="class-TMappedStatement.html#_enquequePostSelect">enquequePostSelect()</a>, 
+			<a href="class-TMappedStatement.html#_executePostSelect">executePostSelect()</a>, 
+			<a href="class-TMappedStatement.html#_executeSQLQueryLimit">executeSQLQueryLimit()</a>, 
+			<a href="class-TMappedStatement.html#_executeSelectKey">executeSelectKey()</a>, 
+			<a href="class-TMappedStatement.html#_executeUpdate">executeUpdate()</a>, 
+			<a href="class-TMappedStatement.html#_fillArrayResultMap">fillArrayResultMap()</a>, 
+			<a href="class-TMappedStatement.html#_fillDefaultResultMap">fillDefaultResultMap()</a>, 
+			<a href="class-TMappedStatement.html#_fillPropertyWithResultMap">fillPropertyWithResultMap()</a>, 
+			<a href="class-TMappedStatement.html#_fillResultArrayList">fillResultArrayList()</a>, 
+			<a href="class-TMappedStatement.html#_fillResultClass">fillResultClass()</a>, 
+			<a href="class-TMappedStatement.html#_fillResultMap">fillResultMap()</a>, 
+			<a href="class-TMappedStatement.html#_fillResultObjectProperty">fillResultObjectProperty()</a>, 
+			<a href="class-TMappedStatement.html#_getCommand">getCommand()</a>, 
+			<a href="class-TMappedStatement.html#_getID">getID()</a>, 
+			<a href="class-TMappedStatement.html#_getManager">getManager()</a>, 
+			<a href="class-TMappedStatement.html#_getPostGeneratedSelectKey">getPostGeneratedSelectKey()</a>, 
+			<a href="class-TMappedStatement.html#_getPostSelectKeys">getPostSelectKeys()</a>, 
+			<a href="class-TMappedStatement.html#_getPreGeneratedSelectKey">getPreGeneratedSelectKey()</a>, 
+			<a href="class-TMappedStatement.html#_getResultMapGroupKey">getResultMapGroupKey()</a>, 
+			<a href="class-TMappedStatement.html#_getScalarResult">getScalarResult()</a>, 
+			<a href="class-TMappedStatement.html#_getSqlString">getSqlString()</a>, 
+			<a href="class-TMappedStatement.html#_getStatement">getStatement()</a>, 
+			<a href="class-TMappedStatement.html#_initialGroupByResults">initialGroupByResults()</a>, 
+			<a href="class-TMappedStatement.html#_onExecuteQuery">onExecuteQuery()</a>, 
+			<a href="class-TMappedStatement.html#_raiseRowDelegate">raiseRowDelegate()</a>, 
+			<a href="class-TMappedStatement.html#_runQueryForList">runQueryForList()</a>, 
+			<a href="class-TMappedStatement.html#_runQueryForMap">runQueryForMap()</a>, 
+			<a href="class-TMappedStatement.html#_runQueryForObject">runQueryForObject()</a>, 
+			<a href="class-TMappedStatement.html#_setObjectProperty">setObjectProperty()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TMappedStatement.html#constants">TMappedStatement</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TMappedStatement.html#QUERY_FOR_ARRAY"><b>QUERY_FOR_ARRAY</b></a>, 
+			<a href="class-TMappedStatement.html#QUERY_FOR_LIST"><b>QUERY_FOR_LIST</b></a>, 
+			<a href="class-TMappedStatement.html#QUERY_FOR_OBJECT"><b>QUERY_FOR_OBJECT</b></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

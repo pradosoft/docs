@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TDbCommand | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TDataSourceConfig.html">TDataSourceConfig</a></li>
+				<li><a href="class-TDbColumnCaseMode.html">TDbColumnCaseMode</a></li>
+				<li class="active"><a href="class-TDbCommand.html">TDbCommand</a></li>
+				<li><a href="class-TDbConnection.html">TDbConnection</a></li>
+				<li><a href="class-TDbDataReader.html">TDbDataReader</a></li>
+				<li><a href="class-TDbNullConversionMode.html">TDbNullConversionMode</a></li>
+				<li><a href="class-TDbTransaction.html">TDbTransaction</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TDbCommand</h1>
+
+
+	<div class="description">
+	<p>TDbCommand class.</p>
+
+<p>TDbCommand represents an SQL statement to execute against a database.
+It is usually created by calling <a href="TDbConnection::createCommand">TDbConnection::createCommand</a>.
+The SQL statement to be executed may be set via setText Text.</p>
+
+<p>To execute a non-query SQL (such as insert, delete, update), call
+<code><a href="class-TDbCommand.html#_execute">TDbCommand::execute()</a></code>. To execute an SQL statement that returns result data set
+(such as select), use <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> or its convenient versions <code><a href="class-TDbCommand.html#_queryRow">TDbCommand::queryRow()</a></code>
+and <code><a href="class-TDbCommand.html#_queryScalar">TDbCommand::queryScalar()</a></code>.</p>
+
+<p>If an SQL statement returns results (such as a SELECT SQL), the results
+can be accessed via the returned <code><a href="class-TDbDataReader.html">TDbDataReader</a></code>.</p>
+
+<p>TDbCommand supports SQL statment preparation and parameter binding.
+Call <code><a href="class-TDbCommand.html#_bindParameter">TDbCommand::bindParameter()</a></code> to bind a PHP variable to a parameter in SQL.
+Call <code><a href="class-TDbCommand.html#_bindValue">TDbCommand::bindValue()</a></code> to bind a value to an SQL parameter.
+When binding a parameter, the SQL statement is automatically prepared.
+You may also call <code><a href="class-TDbCommand.html#_prepare">TDbCommand::prepare()</a></code> to explicitly prepare an SQL statement.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TDbCommand</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Data/TDbCommand.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TDbConnection.html">TDbConnection</a></code> <var>$connection</var></span>, <span>string <var>$text</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>database connection</dd>
+					<dt><var>$text</var></dt>
+					<dd>SQL statement to be executed</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__sleep" id="___sleep">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___sleep">#</a>
+		<code>__sleep( )</code>
+
+		<div class="description short">
+			<p>Set the statement to null when serializing.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the statement to null when serializing.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___sleep">TComponent::__sleep()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getText" id="_getText">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getText">#</a>
+		<code>getText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the SQL statement to be executed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setText" id="_setText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setText">#</a>
+		<code>setText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Specifies the SQL statement to be executed.
+Any previous execution will be terminated or cancel.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Specifies the SQL statement to be executed.
+Any previous execution will be terminated or cancel.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>SQL statement to be executed</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnection" id="_getConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbConnection.html">TDbConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code>getConnection( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbConnection.html">TDbConnection</a></code><br>the connection associated with this command
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPdoStatement" id="_getPdoStatement">
+
+		<td class="attributes"><code>
+			 public 
+
+			PDOStatement
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPdoStatement">#</a>
+		<code>getPdoStatement( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					PDOStatement<br><p>the underlying PDOStatement for this command
+It could be null if the statement is not prepared yet.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepare" id="_prepare">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepare">#</a>
+		<code>prepare( )</code>
+
+		<div class="description short">
+			<p>Prepares the SQL statement to be executed.
+For complex SQL statement that is to be executed multiple times,
+this may improve performance.
+For SQL statement with binding parameters, this method is invoked
+automatically.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepares the SQL statement to be executed.
+For complex SQL statement that is to be executed multiple times,
+this may improve performance.
+For SQL statement with binding parameters, this method is invoked
+automatically.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cancel" id="_cancel">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cancel">#</a>
+		<code>cancel( )</code>
+
+		<div class="description short">
+			<p>Cancels the execution of the SQL statement.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Cancels the execution of the SQL statement.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bindParameter" id="_bindParameter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bindParameter">#</a>
+		<code>bindParameter( <span>mixed <var>$name</var></span>, <span>mixed <var>&amp; $value</var></span>, <span>integer <var>$dataType</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$length</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Binds a parameter to the SQL statement to be executed.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Binds a parameter to the SQL statement to be executed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><p>identifier. For a prepared statement
+using named placeholders, this will be a parameter name of
+the form :name. For a prepared statement using question mark
+placeholders, this will be the 1-indexed position of the parameter.
+Unlike <code><a href="class-TDbCommand.html#_bindValue">TDbCommand::bindValue()</a></code>, the variable is bound as a reference and will
+only be evaluated at the time that <code><a href="class-TDbCommand.html#_execute">TDbCommand::execute()</a></code> or <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> is called.</p></dd>
+					<dt><var>$value</var></dt>
+					<dd>of the PHP variable to bind to the SQL statement parameter</dd>
+					<dt><var>$dataType</var></dt>
+					<dd>data type of the parameter</dd>
+					<dt><var>$length</var></dt>
+					<dd>of the data type</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						http://www.php.net/manual/en/function.PDOStatement-bindParam.php<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="bindValue" id="_bindValue">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_bindValue">#</a>
+		<code>bindValue( <span>mixed <var>$name</var></span>, <span>mixed <var>$value</var></span>, <span>integer <var>$dataType</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Binds a value to a parameter.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Binds a value to a parameter.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><p>identifier. For a prepared statement
+using named placeholders, this will be a parameter name of
+the form :name. For a prepared statement using question mark
+placeholders, this will be the 1-indexed position of the parameter.</p></dd>
+					<dt><var>$value</var></dt>
+					<dd>value to bind to the parameter</dd>
+					<dt><var>$dataType</var></dt>
+					<dd>data type of the parameter</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						http://www.php.net/manual/en/function.PDOStatement-bindValue.php<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code>execute( )</code>
+
+		<div class="description short">
+			<p>Executes the SQL statement.
+This method is meant only for executing non-query SQL statement.
+No result set will be returned.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes the SQL statement.
+This method is meant only for executing non-query SQL statement.
+No result set will be returned.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of rows affected by the execution.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TDbException.html">TDbException</a></code><br>execution failed
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDebugStatementText" id="_getDebugStatementText">
+
+		<td class="attributes"><code>
+			 public 
+
+			String
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDebugStatementText">#</a>
+		<code>getDebugStatementText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					String<br>prepared SQL text for debugging purposes.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TDbDataReader.html">TDbDataReader</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code>query( )</code>
+
+		<div class="description short">
+			<p>Executes the SQL statement and returns query result.
+This method is for executing an SQL query that returns result set.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes the SQL statement and returns query result.
+This method is for executing an SQL query that returns result set.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TDbDataReader.html">TDbDataReader</a></code><br>the reader object for fetching the query result
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TDbException.html">TDbException</a></code><br>execution failed
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queryRow" id="_queryRow">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queryRow">#</a>
+		<code>queryRow( <span>boolean <var>$fetchAssociative</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Executes the SQL statement and returns the first row of the result.
+This is a convenient method of <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> when only the first row of data is needed.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes the SQL statement and returns the first row of the result.
+This is a convenient method of <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> when only the first row of data is needed.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fetchAssociative</var></dt>
+					<dd><p>the row should be returned as an associated array with
+column names as the keys or the array keys are column indexes (0-based).</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the first row of the query result, false if no result.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TDbException.html">TDbException</a></code><br>execution failed
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queryScalar" id="_queryScalar">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queryScalar">#</a>
+		<code>queryScalar( )</code>
+
+		<div class="description short">
+			<p>Executes the SQL statement and returns the value of the first column in the first row of data.
+This is a convenient method of <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> when only a single scalar
+value is needed (e.g. obtaining the count of the records).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes the SQL statement and returns the value of the first column in the first row of data.
+This is a convenient method of <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> when only a single scalar
+value is needed (e.g. obtaining the count of the records).</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the value of the first column in the first row of the query result. False is returned if there is no value.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TDbException.html">TDbException</a></code><br>execution failed
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queryColumn" id="_queryColumn">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queryColumn">#</a>
+		<code>queryColumn( )</code>
+
+		<div class="description short">
+			<p>Executes the SQL statement and returns the first column of the result.
+This is a convenient method of <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> when only the first column of data is needed.
+Note, the column returned will contain the first element in each row of result.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Executes the SQL statement and returns the first column of the result.
+This is a convenient method of <code><a href="class-TDbCommand.html#_query">TDbCommand::query()</a></code> when only the first column of data is needed.
+Note, the column returned will contain the first element in each row of result.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the first column of the query result. Empty array if no result.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TDbException.html">TDbException</a></code><br>execution failed
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

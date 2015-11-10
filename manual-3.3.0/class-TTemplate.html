@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TTemplate | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TBroadcastEventParameter.html">TBroadcastEventParameter</a></li>
+				<li><a href="class-TCachePageStatePersister.html">TCachePageStatePersister</a></li>
+				<li><a href="class-TClientScriptManager.html">TClientScriptManager</a></li>
+				<li><a href="class-TClientSideOptions.html">TClientSideOptions</a></li>
+				<li><a href="class-TCommandEventParameter.html">TCommandEventParameter</a></li>
+				<li><a href="class-TCompositeControl.html">TCompositeControl</a></li>
+				<li><a href="class-TCompositeLiteral.html">TCompositeLiteral</a></li>
+				<li><a href="class-TControl.html">TControl</a></li>
+				<li><a href="class-TControlAdapter.html">TControlAdapter</a></li>
+				<li><a href="class-TControlCollection.html">TControlCollection</a></li>
+				<li><a href="class-TEmptyControlCollection.html">TEmptyControlCollection</a></li>
+				<li><a href="class-TForm.html">TForm</a></li>
+				<li><a href="class-THead.html">THead</a></li>
+				<li><a href="class-THtmlWriter.html">THtmlWriter</a></li>
+				<li><a href="class-TPage.html">TPage</a></li>
+				<li><a href="class-TPageStateFormatter.html">TPageStateFormatter</a></li>
+				<li><a href="class-TPageStatePersister.html">TPageStatePersister</a></li>
+				<li><a href="class-TSessionPageStatePersister.html">TSessionPageStatePersister</a></li>
+				<li class="active"><a href="class-TTemplate.html">TTemplate</a></li>
+				<li><a href="class-TTemplateControl.html">TTemplateControl</a></li>
+				<li><a href="class-TTemplateControlInheritable.html">TTemplateControlInheritable</a></li>
+				<li><a href="class-TTemplateManager.html">TTemplateManager</a></li>
+				<li><a href="class-TTextProcessor.html">TTextProcessor</a></li>
+				<li><a href="class-TTheme.html">TTheme</a></li>
+				<li><a href="class-TThemeManager.html">TThemeManager</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IBroadcastEventReceiver.html">IBroadcastEventReceiver</a></li>
+				<li><a href="class-IButtonControl.html">IButtonControl</a></li>
+				<li><a href="class-INamingContainer.html">INamingContainer</a></li>
+				<li><a href="class-IPageStatePersister.html">IPageStatePersister</a></li>
+				<li><a href="class-IPostBackDataHandler.html">IPostBackDataHandler</a></li>
+				<li><a href="class-IPostBackEventHandler.html">IPostBackEventHandler</a></li>
+				<li><a href="class-ISurroundable.html">ISurroundable</a></li>
+				<li><a href="class-ITemplate.html">ITemplate</a></li>
+				<li><a href="class-ITheme.html">ITheme</a></li>
+				<li><a href="class-IValidatable.html">IValidatable</a></li>
+				<li><a href="class-IValidator.html">IValidator</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TTemplate</h1>
+
+
+	<div class="description">
+	<p>TTemplate implements PRADO template parsing logic.
+A TTemplate object represents a parsed PRADO control template.
+It can instantiate the template as child controls of a specified control.
+The template format is like HTML, with the following special tags introduced,
+- component tags: a component tag represents the configuration of a component.
+The tag name is in the format of com:ComponentType, where ComponentType is the component
+class name. Component tags must be well-formed. Attributes of the component tag
+are treated as either property initial values, event handler attachment, or regular
+tag attributes.
+- property tags: property tags are used to set large block of attribute values.
+The property tag name is in the format of <prop:AttributeName> where AttributeName
+can be a property name, an event name or a regular tag attribute name.
+- group subproperty tags: subproperties of a common property can be configured using
+<prop:MainProperty SubProperty1="Value1" SubProperty2="Value2" .../>
+- directive: directive specifies the property values for the template owner.
+It is in the format of <%@ property name-value pairs %>;
+- expressions: They are in the format of <%= PHP expression %> and <%% PHP statements %>
+- comments: There are two kinds of comments, regular HTML comments and special template comments.
+The former is in the format of <!-- comments -->, which will be treated as text strings.
+The latter is in the format of <!-- comments --!>, which will be stripped out.</p>
+
+<p>Tags other than the above are not required to be well-formed.</p>
+
+<p>A TTemplate object represents a parsed PRADO template. To instantiate the template
+for a particular control, call instantiateIn($control), which
+will create and intialize all components specified in the template and
+set their parent as $control.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TTemplate</span></b>			
+			 implements 
+				<a href="class-ITemplate.html"><span>ITemplate</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Web/UI/TTemplateManager.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>string <var>$template</var></span>, <span>string <var>$contextPath</var></span>, <span>string <var>$tplFile</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$startingLine</var> = <span class="php-num">0</span></span>, <span>boolean <var>$sourceTemplate</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.
+The template will be parsed after construction.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.
+The template will be parsed after construction.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$template</var></dt>
+					<dd>template string</dd>
+					<dt><var>$contextPath</var></dt>
+					<dd>template context directory</dd>
+					<dt><var>$tplFile</var></dt>
+					<dd>template file, null if no file</dd>
+					<dt><var>$startingLine</var></dt>
+					<dd>line number that parsing starts from (internal use)</dd>
+					<dt><var>$sourceTemplate</var></dt>
+					<dd><p>this template is a source template, i.e., this template is loaded from
+some external storage rather than from within another template.</p></dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTemplateFile" id="_getTemplateFile">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTemplateFile">#</a>
+		<code>getTemplateFile( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>template file path if available, null otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsSourceTemplate" id="_getIsSourceTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsSourceTemplate">#</a>
+		<code>getIsSourceTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br><p>whether this template is a source template, i.e., this template is loaded from
+some external storage rather than from within another template.</p>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getContextPath" id="_getContextPath">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getContextPath">#</a>
+		<code>getContextPath( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>context directory path
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDirective" id="_getDirective">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDirective">#</a>
+		<code>getDirective( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>name-value pairs declared in the directive
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHashCode" id="_getHashCode">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHashCode">#</a>
+		<code>getHashCode( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>hash code that can be used to identify the template
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getItems" id="_getItems">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getItems">#</a>
+		<code>getItems( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the parsed template
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="instantiateIn" id="_instantiateIn">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_instantiateIn">#</a>
+		<code>instantiateIn( <span><code><a href="class-TControl.html">TControl</a></code> <var>$tplControl</var></span>, <span><code><a href="class-TControl.html">TControl</a></code> <var>$parentControl</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Instantiates the template.
+Content in the template will be instantiated as components and text strings
+and passed to the specified parent control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Instantiates the template.
+Content in the template will be instantiated as components and text strings
+and passed to the specified parent control.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tplControl</var></dt>
+					<dd>control who owns the template</dd>
+					<dt><var>$parentControl</var></dt>
+					<dd>control who will become the root parent of the controls on the template. If null, it uses the template control.</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ITemplate.html#_instantiateIn">ITemplate::instantiateIn()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configureControl" id="_configureControl">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configureControl">#</a>
+		<code>configureControl( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span>, <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Configures a property/event of a control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Configures a property/event of a control.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>to be configured</dd>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>initial value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configureComponent" id="_configureComponent">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configureComponent">#</a>
+		<code>configureComponent( <span><code><a href="class-TComponent.html">TComponent</a></code> <var>$component</var></span>, <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Configures a property of a non-control component.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Configures a property of a non-control component.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$component</var></dt>
+					<dd>to be configured</dd>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>initial value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configureEvent" id="_configureEvent">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configureEvent">#</a>
+		<code>configureEvent( <span><code><a href="class-TControl.html">TControl</a></code> <var>$control</var></span>, <span>string <var>$name</var></span>, <span>string <var>$value</var></span>, <span><code><a href="class-TControl.html">TControl</a></code> <var>$contextControl</var></span> )</code>
+
+		<div class="description short">
+			<p>Configures an event for a control.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Configures an event for a control.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>to be configured</dd>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>handler</dd>
+					<dt><var>$contextControl</var></dt>
+					<dd>control</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configureProperty" id="_configureProperty">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configureProperty">#</a>
+		<code>configureProperty( <span><code><a href="class-TComponent.html">TComponent</a></code> <var>$component</var></span>, <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Configures a simple property for a component.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Configures a simple property for a component.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$component</var></dt>
+					<dd>to be configured</dd>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>initial value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configureSubProperty" id="_configureSubProperty">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configureSubProperty">#</a>
+		<code>configureSubProperty( <span><code><a href="class-TComponent.html">TComponent</a></code> <var>$component</var></span>, <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Configures a subproperty for a component.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Configures a subproperty for a component.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$component</var></dt>
+					<dd>to be configured</dd>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>initial value</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code>parse( <span>string <var>$input</var></span> )</code>
+
+		<div class="description short">
+			<p>Parses a template string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parses a template string.</p>
+
+<p>This template parser recognizes five types of data:
+regular string, well-formed component tags, well-formed property tags, directives, and expressions.</p>
+
+<p>The parsing result is returned as an array. Each array element can be of three types:
+- a string, 0: container index; 1: string content;
+- a component tag, 0: container index; 1: component type; 2: attributes (name=>value pairs)
+If a directive is found in the template, it will be parsed and can be
+retrieved via <code><a href="class-TTemplate.html#_getDirective">TTemplate::getDirective()</a></code>, which returns an array consisting of
+name-value pairs in the directive.</p>
+
+<p>Note, attribute names are treated as case-insensitive and will be turned into lower cases.
+Component and directive types are case-sensitive.
+Container index is the index to the array element that stores the container object.
+If an object has no container, its container index is -1.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd>template string</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TConfigurationException.html">TConfigurationException</a></code><br>if a parsing error is encountered
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseAttributes" id="_parseAttributes">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseAttributes">#</a>
+		<code>parseAttributes( <span>string <var>$str</var></span>, <span> <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			<p>Parses the attributes of a tag from a string.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parses the attributes of a tag from a string.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd>string to be parsed.</dd>
+					<dt><var>$offset</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>attribute values indexed by names.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseTemplateProperty" id="_parseTemplateProperty">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseTemplateProperty">#</a>
+		<code>parseTemplateProperty( <span> <var>$content</var></span>, <span> <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseAttribute" id="_parseAttribute">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseAttribute">#</a>
+		<code>parseAttribute( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Parses a single attribute.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parses a single attribute.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>string to be parsed.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>attribute initialization
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateAttributes" id="_validateAttributes">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateAttributes">#</a>
+		<code>validateAttributes( <span> <var>$type</var></span>, <span> <var>$attributes</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIncludedFiles" id="_getIncludedFiles">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIncludedFiles">#</a>
+		<code>getIncludedFiles( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>list of included external template files
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="handleException" id="_handleException">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_handleException">#</a>
+		<code>handleException( <span>Exception <var>$e</var></span>, <span>integer <var>$line</var></span>, <span>string <var>$input</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Handles template parsing exception.
+This method rethrows the exception caught during template parsing.
+It adjusts the error location by giving out correct error line number and source file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Handles template parsing exception.
+This method rethrows the exception caught during template parsing.
+It adjusts the error location by giving out correct error line number and source file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$e</var></dt>
+					<dd>exception</dd>
+					<dt><var>$line</var></dt>
+					<dd>number</dd>
+					<dt><var>$input</var></dt>
+					<dd>string if no source file is used</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="preprocess" id="_preprocess">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_preprocess">#</a>
+		<code>preprocess( <span>string <var>$input</var></span> )</code>
+
+		<div class="description short">
+			<p>Preprocesses the template string by including external templates</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Preprocesses the template string by including external templates</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd>string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>expanded template string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isClassBehaviorMethod" id="_isClassBehaviorMethod">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isClassBehaviorMethod">#</a>
+		<code>isClassBehaviorMethod( <span>ReflectionClass <var>$class</var></span>, <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			<p>Checks if the given method belongs to a previously attached class behavior.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Checks if the given method belongs to a previously attached class behavior.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class</var></dt>
+					<dd></dd>
+					<dt><var>$method</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="REGEX_RULES" id="REGEX_RULES">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>REGEX_RULES</b>			</code>
+
+			<div class="description short">
+				<p>'<!--.*?--!>' - template comments
+ '<!--.*?-->'  - HTML comments
+'&lt;\/?com:([\w&#46;]+)((?:\s<em>[\w&#46;]+\s</em>=\s<em>\'.</em>?\'|\s<em>[\w&#46;]+\s</em>=\s<em>".</em>?"|\s<em>[\w&#46;]+\s</em>=\s<em><%.*?%>)</em>)\s<em>\/?>' - component tags
+'&lt;\/?prop:([\w&#46;]+)\s</em>>'  - property tags
+'<%@\s*((?:\s*[\w\.]+\s*=\s*\'.*?\'|\s*[\w\.]+\s*=\s*".*?")*)\s*%>'  - directives
+'<%[%#~\/\\$=\\[](.*?)%>'  - expressions
+ '&lt;prop:([\w&#46;]+)((?:\s<em>[\w&#46;]+=\'.</em>?\'|\s<em>[\w&#46;]+=".</em>?"|\s<em>[\w&#46;]+=<%.*?%>)</em>)\s*\/>' - group subproperty tags</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>'<!--.*?--!>' - template comments '<!--.*?-->'  - HTML comments
+'&lt;\/?com:([\w&#46;]+)((?:\s<em>[\w&#46;]+\s</em>=\s<em>\'.</em>?\'|\s<em>[\w&#46;]+\s</em>=\s<em>".</em>?"|\s<em>[\w&#46;]+\s</em>=\s<em><%.*?%>)</em>)\s<em>\/?>' - component tags
+'&lt;\/?prop:([\w&#46;]+)\s</em>>'  - property tags
+'<%@\s*((?:\s*[\w\.]+\s*=\s*\'.*?\'|\s*[\w\.]+\s*=\s*".*?")*)\s*%>'  - directives
+'<%[%#~\/\\$=\\[](.*?)%>'  - expressions '&lt;prop:([\w&#46;]+)((?:\s<em>[\w&#46;]+=\'.</em>?\'|\s<em>[\w&#46;]+=".</em>?"|\s<em>[\w&#46;]+=<%.*?%>)</em>)\s*\/>' - group subproperty tags</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#REGEX_RULES" class="anchor">#</a>
+				<code><span class="php-quote">'/&lt;!--.*?--!&gt;|&lt;!---.*?---&gt;|&lt;\/?com:([\w\.]+)((?:\s*[\w\.]+\s*=\s*\'.*?\'|\s*[\w\.]+\s*=\s*&quot;.*?&quot;|\s*[\w\.]+\s*=\s*&lt;%.*?%&gt;)*)\s*\/?&gt;|&lt;\/?prop:([\w\.]+)\s*&gt;|&lt;%@\s*((?:\s*[\w\.]+\s*=\s*\'.*?\'|\s*[\w\.]+\s*=\s*&quot;.*?&quot;)*)\s*%&gt;|&lt;%[%#~\/\\$=\\[](.*?)%&gt;|&lt;prop:([\w\.]+)((?:\s*[\w\.]+\s*=\s*\'.*?\'|\s*[\w\.]+\s*=\s*&quot;.*?&quot;|\s*[\w\.]+\s*=\s*&lt;%.*?%&gt;)*)\s*\/&gt;/msS'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_DATABIND" id="CONFIG_DATABIND">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_DATABIND</b>			</code>
+
+			<div class="description short">
+				<p>Different configurations of component property/event/attribute</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Different configurations of component property/event/attribute</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_DATABIND" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_EXPRESSION" id="CONFIG_EXPRESSION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_EXPRESSION</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_EXPRESSION" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_ASSET" id="CONFIG_ASSET">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_ASSET</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_ASSET" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_PARAMETER" id="CONFIG_PARAMETER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_PARAMETER</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_PARAMETER" class="anchor">#</a>
+				<code><span class="php-num">3</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_LOCALIZATION" id="CONFIG_LOCALIZATION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_LOCALIZATION</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_LOCALIZATION" class="anchor">#</a>
+				<code><span class="php-num">4</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="CONFIG_TEMPLATE" id="CONFIG_TEMPLATE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+<b>CONFIG_TEMPLATE</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#CONFIG_TEMPLATE" class="anchor">#</a>
+				<code><span class="php-num">5</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

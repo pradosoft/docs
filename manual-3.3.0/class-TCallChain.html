@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TCallChain | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TBehavior.html">TBehavior</a></li>
+				<li><a href="class-TBrowserLogRoute.html">TBrowserLogRoute</a></li>
+				<li class="active"><a href="class-TCallChain.html">TCallChain</a></li>
+				<li><a href="class-TClassBehavior.html">TClassBehavior</a></li>
+				<li><a href="class-TDataFieldAccessor.html">TDataFieldAccessor</a></li>
+				<li><a href="class-TDateTimeStamp.html" class="deprecated">TDateTimeStamp</a></li>
+				<li><a href="class-TDbLogRoute.html">TDbLogRoute</a></li>
+				<li><a href="class-TEmailLogRoute.html">TEmailLogRoute</a></li>
+				<li><a href="class-TFileLogRoute.html">TFileLogRoute</a></li>
+				<li><a href="class-TFirebugLogRoute.html">TFirebugLogRoute</a></li>
+				<li><a href="class-TFirePhpLogRoute.html">TFirePhpLogRoute</a></li>
+				<li><a href="class-TJsonRpcClient.html">TJsonRpcClient</a></li>
+				<li><a href="class-TLogger.html">TLogger</a></li>
+				<li><a href="class-TLogRoute.html">TLogRoute</a></li>
+				<li><a href="class-TLogRouter.html">TLogRouter</a></li>
+				<li><a href="class-TParameterModule.html">TParameterModule</a></li>
+				<li><a href="class-TRpcClient.html">TRpcClient</a></li>
+				<li><a href="class-TRpcClientTypesEnumerable.html">TRpcClientTypesEnumerable</a></li>
+				<li><a href="class-TSimpleDateFormatter.html">TSimpleDateFormatter</a></li>
+				<li><a href="class-TVarDumper.html">TVarDumper</a></li>
+				<li><a href="class-TXmlRpcClient.html">TXmlRpcClient</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TRpcClientRequestException.html">TRpcClientRequestException</a></li>
+				<li><a href="class-TRpcClientResponseException.html">TRpcClientResponseException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TCallChain</h1>
+
+
+	<div class="description">
+	<p>TCallChain is a recursive event calling mechanism.  This class implements
+the <code><a href="class-IDynamicMethods.html">IDynamicMethods</a></code> class so that any 'dy' event calls can be caught
+and patched through to the intended recipient</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TList.html"><span>TList</span></a>
+			
+			 implements 
+<span>IteratorAggregate</span>, 
+			
+<span>ArrayAccess</span>, 
+			
+<span>Countable</span>
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TCallChain</span></b>			
+			 implements 
+				<a href="class-IDynamicMethods.html"><span>IDynamicMethods</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Util.html">Util</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2008-2015 Pradosoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Brad Anderson <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;">&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;</a><br>
+				<b>Since:</b>
+				3.2.3<br>
+			<b>Located at</b> Util/TCallChain.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			<p>This initializes the list and the name of the method to be called</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This initializes the list and the name of the method to be called</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd>name of the function call</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-TInvalidDataTypeException.html">TInvalidDataTypeException</a></code><br>If data is not null and neither an array nor an iterator.
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TList.html#___construct">TList::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addCall" id="_addCall">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addCall">#</a>
+		<code>addCall( <span>string|array <var>$method</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			<p>This initializes the list and the name of the method to be called</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This initializes the list and the name of the method to be called</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><p>is a callable function as a string or array with
+        the object and method name as string</p></dd>
+					<dt><var>$args</var></dt>
+					<dd>array of arguments to the function call chain</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="call" id="_call">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_call">#</a>
+		<code>call( )</code>
+
+		<div class="description short">
+			<p>This method calls the next Callable in the list.  All of the method arguments
+coming into this method are substituted into the original method argument of
+call in the chain.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method calls the next Callable in the list.  All of the method arguments
+coming into this method are substituted into the original method argument of
+call in the chain.</p>
+
+<p>If the original method call has these parameters</p>
+
+<pre><span class="php-var">$originalobject</span>-&gt;dyExampleMethod(<span class="php-quote">'param1'</span>, <span class="php-quote">'param2'</span>, <span class="php-quote">'param3'</span>)</pre>
+
+<pre><span class="php-var">$callchain</span>-&gt;dyExampleMethod(<span class="php-quote">'alt1'</span>, <span class="php-quote">'alt2'</span>)</pre>
+
+<p>then the next call in the call chain will recieve the parameters as if this were called</p>
+
+<pre><span class="php-var">$behavior</span>-&gt;dyExampleMethod(<span class="php-quote">'alt1'</span>, <span class="php-quote">'alt2'</span>, <span class="php-quote">'param3'</span>, <span class="php-var">$callchainobject</span>)</pre>
+
+<p>When dealing with IClassBehaviors, the first parameter of the stored argument
+list in 'dy' event calls is always the object containing the behavior.  This modifies
+the parameter replacement mechanism slightly to leave the object containing the behavior
+alone and only replacing the other parameters in the argument list.  As per <code><a href="class-TComponent.html#___call">TComponent::__call()</a></code>,
+any calls to a 'dy' event do not need the object containing the behavior as the addition of
+the object to the argument list as the first element is automatic for IClassBehaviors.</p>
+
+<p>The last parameter of the method parameter list for any callable in the call chain
+will be the TCallChain object itself.  This is so that any behavior implementing
+these calls will have access to the call chain.  Each callable should either call
+the TCallChain call method internally for direct chaining or call the method being
+chained (in which case the dynamic handler will pass through to this call method).</p>
+
+<p>If the dynamic intra object/behavior event is not called in the behavior implemented
+dynamic method, it will return to this method and call the following behavior
+implementation so as no behavior with an implementation of the dynamic event is left
+uncalled.  This does break the call chain though and will not act as a "parameter filter".</p>
+
+<p>When there are no handlers or no handlers left, it returns the first parameter of the
+argument list.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__dycall" id="___dycall">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___dycall">#</a>
+		<code>__dycall( <span>string <var>$method</var></span>, <span>array <var>$args</var></span> )</code>
+
+		<div class="description short">
+			<p>This catches all the unpatched dynamic events.  When the method call matches the
+call chain method, it passes the arguments to the original __call (of the dynamic
+event being unspecified in TCallChain) and funnels into the method <code><a href="class-TCallChain.html#_call">TCallChain::call()</a></code>,
+so the next dynamic event handler can be called.
+If the original method call has these parameters</p>
+
+<pre><span class="php-var">$originalobject</span>-&gt;dyExampleMethod(<span class="php-quote">'param1'</span>, <span class="php-quote">'param2'</span>, <span class="php-quote">'param3'</span>)</pre>
+
+<p>and within the chained dynamic events, this can be called</p>
+
+<pre><span class="php-keyword1">class</span> DyBehavior <span class="php-keyword1">extends</span> TBehavior {
+<span class="php-keyword1">public</span> <span class="php-keyword1">function</span> dyExampleMethod(<span class="php-var">$param1</span>, <span class="php-var">$param2</span>, <span class="php-var">$param3</span>, <span class="php-var">$callchain</span>)
+<span class="php-var">$callchain</span>-&gt;dyExampleMethod(<span class="php-var">$param1</span>, <span class="php-var">$param2</span>, <span class="php-var">$param3</span>)
+}
+{</pre>
+
+<p>to call the next event in the chain.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This catches all the unpatched dynamic events.  When the method call matches the
+call chain method, it passes the arguments to the original __call (of the dynamic
+event being unspecified in TCallChain) and funnels into the method <code><a href="class-TCallChain.html#_call">TCallChain::call()</a></code>,
+so the next dynamic event handler can be called.
+If the original method call has these parameters</p>
+
+<pre><span class="php-var">$originalobject</span>-&gt;dyExampleMethod(<span class="php-quote">'param1'</span>, <span class="php-quote">'param2'</span>, <span class="php-quote">'param3'</span>)</pre>
+
+<p>and within the chained dynamic events, this can be called</p>
+
+<pre><span class="php-keyword1">class</span> DyBehavior <span class="php-keyword1">extends</span> TBehavior {
+<span class="php-keyword1">public</span> <span class="php-keyword1">function</span> dyExampleMethod(<span class="php-var">$param1</span>, <span class="php-var">$param2</span>, <span class="php-var">$param3</span>, <span class="php-var">$callchain</span>)
+<span class="php-var">$callchain</span>-&gt;dyExampleMethod(<span class="php-var">$param1</span>, <span class="php-var">$param2</span>, <span class="php-var">$param3</span>)
+}
+{</pre>
+
+<p>to call the next event in the chain.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd>name of the unspecified object method</dd>
+					<dt><var>$args</var></dt>
+					<dd>to the unspecified object method</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IDynamicMethods.html#___dycall">IDynamicMethods::__dycall()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TList.html#methods">TList</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TList.html#_add">add()</a>, 
+			<a href="class-TList.html#_clear">clear()</a>, 
+			<a href="class-TList.html#_contains">contains()</a>, 
+			<a href="class-TList.html#_copyFrom">copyFrom()</a>, 
+			<a href="class-TList.html#_count">count()</a>, 
+			<a href="class-TList.html#_getCount">getCount()</a>, 
+			<a href="class-TList.html#_getIterator">getIterator()</a>, 
+			<a href="class-TList.html#_getReadOnly">getReadOnly()</a>, 
+			<a href="class-TList.html#_indexOf">indexOf()</a>, 
+			<a href="class-TList.html#_insertAfter">insertAfter()</a>, 
+			<a href="class-TList.html#_insertAt">insertAt()</a>, 
+			<a href="class-TList.html#_insertBefore">insertBefore()</a>, 
+			<a href="class-TList.html#_itemAt">itemAt()</a>, 
+			<a href="class-TList.html#_mergeWith">mergeWith()</a>, 
+			<a href="class-TList.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-TList.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-TList.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-TList.html#_offsetUnset">offsetUnset()</a>, 
+			<a href="class-TList.html#_remove">remove()</a>, 
+			<a href="class-TList.html#_removeAt">removeAt()</a>, 
+			<a href="class-TList.html#_setReadOnly">setReadOnly()</a>, 
+			<a href="class-TList.html#_toArray">toArray()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

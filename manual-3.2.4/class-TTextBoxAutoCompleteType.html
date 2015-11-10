@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TTextBoxAutoCompleteType | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li class="active"><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li class="active"><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Web.UI.WebControls.html" title="Summary of System\Web\UI\WebControls"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TTextBoxAutoCompleteType</h1>
+
+
+	<div class="description">
+	
+<p>TTextBoxAutoCompleteType class. TTextBoxAutoCompleteType defines the possible
+AutoComplete type that is supported by a <code><a href="class-TTextBox.html">TTextBox</a></code> control.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TEnumerable.html"><span>TEnumerable</span></a>
+			
+			 implements 
+<span>Iterator</span>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TTextBoxAutoCompleteType</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0.4<br />
+		<b>Located at</b> Web/UI/WebControls/TTextBox.php<br />
+	</div>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TEnumerable.html#methods">TEnumerable</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TEnumerable.html#___construct">__construct()</a>, 
+			<a href="class-TEnumerable.html#_current">current()</a>, 
+			<a href="class-TEnumerable.html#_key">key()</a>, 
+			<a href="class-TEnumerable.html#_next">next()</a>, 
+			<a href="class-TEnumerable.html#_rewind">rewind()</a>, 
+			<a href="class-TEnumerable.html#_valid">valid()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="BusinessCity" id="BusinessCity">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessCity</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessCity'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessCity" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BusinessCountryRegion" id="BusinessCountryRegion">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessCountryRegion</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessCountryRegion'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessCountryRegion" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BusinessFax" id="BusinessFax">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessFax</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessFax'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessFax" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BusinessPhone" id="BusinessPhone">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessPhone</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessPhone'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessPhone" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BusinessState" id="BusinessState">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessState</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessState'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessState" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BusinessStreetAddress" id="BusinessStreetAddress">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessStreetAddress</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessStreetAddress'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessStreetAddress" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BusinessUrl" id="BusinessUrl">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessUrl</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessUrl'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessUrl" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="BusinessZipCode" id="BusinessZipCode">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>BusinessZipCode</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'BusinessZipCode'</span></code></td>
+		<td class="description"><div>
+			<a href="#BusinessZipCode" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Cellular" id="Cellular">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Cellular</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Cellular'</span></code></td>
+		<td class="description"><div>
+			<a href="#Cellular" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Company" id="Company">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Company</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Company'</span></code></td>
+		<td class="description"><div>
+			<a href="#Company" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Department" id="Department">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Department</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Department'</span></code></td>
+		<td class="description"><div>
+			<a href="#Department" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Disabled" id="Disabled">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Disabled</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Disabled'</span></code></td>
+		<td class="description"><div>
+			<a href="#Disabled" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DisplayName" id="DisplayName">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>DisplayName</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'DisplayName'</span></code></td>
+		<td class="description"><div>
+			<a href="#DisplayName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Email" id="Email">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Email</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Email'</span></code></td>
+		<td class="description"><div>
+			<a href="#Email" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FirstName" id="FirstName">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>FirstName</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'FirstName'</span></code></td>
+		<td class="description"><div>
+			<a href="#FirstName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Gender" id="Gender">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Gender</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Gender'</span></code></td>
+		<td class="description"><div>
+			<a href="#Gender" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HomeCity" id="HomeCity">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HomeCity</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HomeCity'</span></code></td>
+		<td class="description"><div>
+			<a href="#HomeCity" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HomeCountryRegion" id="HomeCountryRegion">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HomeCountryRegion</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HomeCountryRegion'</span></code></td>
+		<td class="description"><div>
+			<a href="#HomeCountryRegion" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HomeFax" id="HomeFax">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HomeFax</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HomeFax'</span></code></td>
+		<td class="description"><div>
+			<a href="#HomeFax" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Homepage" id="Homepage">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Homepage</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Homepage'</span></code></td>
+		<td class="description"><div>
+			<a href="#Homepage" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HomePhone" id="HomePhone">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HomePhone</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HomePhone'</span></code></td>
+		<td class="description"><div>
+			<a href="#HomePhone" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HomeState" id="HomeState">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HomeState</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HomeState'</span></code></td>
+		<td class="description"><div>
+			<a href="#HomeState" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HomeStreetAddress" id="HomeStreetAddress">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HomeStreetAddress</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HomeStreetAddress'</span></code></td>
+		<td class="description"><div>
+			<a href="#HomeStreetAddress" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HomeZipCode" id="HomeZipCode">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>HomeZipCode</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'HomeZipCode'</span></code></td>
+		<td class="description"><div>
+			<a href="#HomeZipCode" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="JobTitle" id="JobTitle">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>JobTitle</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'JobTitle'</span></code></td>
+		<td class="description"><div>
+			<a href="#JobTitle" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="LastName" id="LastName">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>LastName</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'LastName'</span></code></td>
+		<td class="description"><div>
+			<a href="#LastName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="MiddleName" id="MiddleName">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>MiddleName</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'MiddleName'</span></code></td>
+		<td class="description"><div>
+			<a href="#MiddleName" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="None" id="None">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>None</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'None'</span></code></td>
+		<td class="description"><div>
+			<a href="#None" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Notes" id="Notes">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Notes</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Notes'</span></code></td>
+		<td class="description"><div>
+			<a href="#Notes" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Office" id="Office">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Office</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Office'</span></code></td>
+		<td class="description"><div>
+			<a href="#Office" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Pager" id="Pager">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Pager</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Pager'</span></code></td>
+		<td class="description"><div>
+			<a href="#Pager" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="Search" id="Search">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>Search</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Search'</span></code></td>
+		<td class="description"><div>
+			<a href="#Search" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

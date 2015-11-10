@@ -1,0 +1,3408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TApplication | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.html" title="Summary of System"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TApplication</h1>
+
+
+	<div class="description">
+	
+<p>TApplication class.</p>
+
+<p>TApplication coordinates modules and services, and serves as a configuration
+context for all Prado components.</p>
+
+<p>TApplication uses a configuration file to specify the settings of the
+application, the modules, the services, the parameters, and so on.</p>
+
+<p>TApplication adopts a modular structure. A TApplication instance is a
+composition of multiple modules. A module is an instance of class implementing
+<code><a href="class-IModule.html">IModule</a></code> interface. Each module accomplishes certain functionalities that
+are shared by all Prado components in an application. There are default modules
+and user-defined modules. The latter offers extreme flexibility of extending
+TApplication in a plug-and-play fashion. Modules cooperate with each other to
+serve a user request by following a sequence of lifecycles predefined in
+TApplication.</p>
+
+<p>TApplication has four modes that can be changed by setting setMode
+Mode property (in the application configuration file).</p>
+
+<ul>
+	<li><b>Off</b> mode will prevent the application from serving user
+	requests.</li>
+
+	<li><b>Debug</b> mode is mainly used during application development. It ensures
+	the cache is always up-to-date if caching is enabled. It also allows exceptions
+	are displayed with rich context information if they occur.</li>
+
+	<li><b>Normal</b> mode is mainly used during production stage. Exception
+	information will only be recorded in system error logs. The cache is ensured to
+	be up-to-date if it is enabled.</li>
+
+	<li><b>Performance</b> mode is similar to <b>Normal</b> mode except that it does
+	not ensure the cache is up-to-date.</li>
+</ul>
+
+<p>TApplication dispatches each user request to a particular service which
+finishes the actual work for the request with the aid from the application
+modules.</p>
+
+<p>TApplication maintains a lifecycle with the following stages:</p>
+
+<ul>
+	<li>[construct] : construction of the application instance</li>
+
+	<li>[initApplication] : load application configuration and instantiate modules
+	and the requested service</li>
+
+	<li>onBeginRequest : this event happens right after application
+	initialization</li>
+
+	<li>onAuthentication : this event happens when authentication is needed for the
+	current request</li>
+
+	<li>onAuthenticationComplete : this event happens right after the authentication
+	is done for the current request</li>
+
+	<li>onAuthorization : this event happens when authorization is needed for the
+	current request</li>
+
+	<li>onAuthorizationComplete : this event happens right after the authorization
+	is done for the current request</li>
+
+	<li>onLoadState : this event happens when application state needs to be
+	loaded</li>
+
+	<li>onLoadStateComplete : this event happens right after the application state
+	is loaded</li>
+
+	<li>onPreRunService : this event happens right before the requested service is
+	to run</li>
+
+	<li>runService : the requested service runs</li>
+
+	<li>onSaveState : this event happens when application needs to save its
+	state</li>
+
+	<li>onSaveStateComplete : this event happens right after the application saves
+	its state</li>
+
+	<li>onPreFlushOutput : this event happens right before the application flushes
+	output to client side.</li>
+
+	<li>flushOutput : the application flushes output to client side.</li>
+
+	<li>onEndRequest : this is the last stage a request is being completed</li>
+
+	<li>[destruct] : destruction of the application instance</li>
+</ul>
+
+<p>Modules and services can attach their methods to one or several of the above
+events and do appropriate processing when the events are raised. By this way,
+the application is able to coordinate the activities of modules and services in
+the above order. To terminate an application before the whole lifecycle
+completes, call <code><a href="class-TApplication.html#_completeRequest">TApplication::completeRequest()</a></code>.</p>
+
+<p>Examples:</p>
+
+<ul>
+	<li>Create and run a Prado application:</li>
+</ul>
+
+<pre>
+<span class="php-var">$application</span>=<span
+class="php-keyword1">new</span> TApplication(<span
+class="php-var">$configFile</span>);
+<span
+class="php-var">$application</span>-&gt;run();
+</pre>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TApplication</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TShellApplication.html">TShellApplication</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Qiang Xue &lt;<a
+href="mailto:qiang.xue&#64;gmail.com">qiang.xue&#64;<!-- -->gmail.com</a>&gt;<br />
+				<b>Since:</b>
+				3.0<br />
+		<b>Located at</b> TApplication.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>string <var>$basePath</var> = <span class="php-quote">'protected'</span></span>, <span>boolean <var>$cacheConfig</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$configType</var> = <code><a href="class-TApplication.html#CONFIG_TYPE_XML">TApplication::<b>CONFIG_TYPE_XML</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor. Sets application base path and initializes the application
+singleton. Application base path refers to the root directory storing
+application data and code not directly accessible by Web users. By default, the
+base path is assumed to be the <b>protected</b> directory under the directory
+containing the current running script.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor. Sets application base path and initializes the application
+singleton. Application base path refers to the root directory storing
+application data and code not directly accessible by Web users. By default, the
+base path is assumed to be the <b>protected</b> directory under the directory
+containing the current running script.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$basePath</var></dt>
+					<dd><code>string</code><br>application base path or configuration file path. If the parameter is a file, it
+is assumed to be the application configuration file, and the directory
+containing the file is treated as the application base path. If it is a
+directory, it is assumed to be the application base path, and within that
+directory, a file named <b>application.xml</b> will be looked for. If found, the
+file is considered as the application configuration file.</dd>
+					<dt><var>$cacheConfig</var></dt>
+					<dd><code>boolean</code><br>whether to cache application configuration. Defaults to true.</dd>
+					<dt><var>$configType</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TConfigurationException.html">TConfigurationException</a></code></code><br>if configuration file cannot be read or the runtime path is invalid.<br />
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resolvePaths" id="_resolvePaths">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resolvePaths">#</a>
+		<code>resolvePaths( <span>string <var>$basePath</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Resolves application-relevant paths. This method is invoked by the
+application constructor to determine the application configuration file,
+application root path and the runtime path.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Resolves application-relevant paths. This method is invoked by the
+application constructor to determine the application configuration file,
+application root path and the runtime path.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$basePath</var></dt>
+					<dd><code>string</code><br>the application root path or the application configuration file</dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TApplication.html#_setBasePath">TApplication::setBasePath()</a></code></code><br />
+						<code><code><a href="class-TApplication.html#_setRuntimePath">TApplication::setRuntimePath()</a></code></code><br />
+						<code><code><a href="class-TApplication.html#_setConfigurationFile">TApplication::setConfigurationFile()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code>run( )</code>
+
+		<div class="description short">
+			
+<p>Executes the lifecycles of the application. This is the main entry function
+that leads to the running of the whole Prado application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the lifecycles of the application. This is the main entry function
+that leads to the running of the whole Prado application.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="completeRequest" id="_completeRequest">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_completeRequest">#</a>
+		<code>completeRequest( )</code>
+
+		<div class="description short">
+			
+<p>Completes current request processing. This method can be used to exit the
+application lifecycles after finishing the current cycle.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Completes current request processing. This method can be used to exit the
+application lifecycles after finishing the current cycle.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestCompleted" id="_getRequestCompleted">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestCompleted">#</a>
+		<code>getRequestCompleted( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>whether the current request is processed.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getGlobalState" id="_getGlobalState">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getGlobalState">#</a>
+		<code>getGlobalState( <span>string <var>$key</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a global value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a global value.</p>
+
+<p>A global value is one that is persistent across users sessions and
+requests.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>the name of the value to be returned</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd><code>mixed</code><br>the default value. If $key is not found, $defaultValue will be returned</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the global value corresponding to $key<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setGlobalState" id="_setGlobalState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setGlobalState">#</a>
+		<code>setGlobalState( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$defaultValue</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$forceSave</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets a global value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets a global value.</p>
+
+<p>A global value is one that is persistent across users sessions and requests.
+Make sure that the value is serializable and unserializable.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>the name of the value to be set</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>mixed</code><br>the global value to be set</dd>
+					<dt><var>$defaultValue</var></dt>
+					<dd><code>mixed</code><br>the default value. If $key is not found, $defaultValue will be returned</dd>
+					<dt><var>$forceSave</var></dt>
+					<dd><code>boolean</code><br>wheter to force an immediate GlobalState save. defaults to false</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clearGlobalState" id="_clearGlobalState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clearGlobalState">#</a>
+		<code>clearGlobalState( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Clears a global value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Clears a global value.</p>
+
+<p>The value cleared will no longer be available in this request and the
+following requests.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>the name of the value to be cleared</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadGlobals" id="_loadGlobals">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadGlobals">#</a>
+		<code>loadGlobals( )</code>
+
+		<div class="description short">
+			
+<p>Loads global values from persistent storage. This method is invoked when
+onLoadState OnLoadState event is raised. After this method, values that
+are stored in previous requests become available to the current request via
+<code><a href="class-TApplication.html#_getGlobalState">TApplication::getGlobalState()</a></code>.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads global values from persistent storage. This method is invoked when
+onLoadState OnLoadState event is raised. After this method, values that
+are stored in previous requests become available to the current request via
+<code><a href="class-TApplication.html#_getGlobalState">TApplication::getGlobalState()</a></code>.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="saveGlobals" id="_saveGlobals">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_saveGlobals">#</a>
+		<code>saveGlobals( )</code>
+
+		<div class="description short">
+			
+<p>Saves global values into persistent storage. This method is invoked when
+onSaveState OnSaveState event is raised.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Saves global values into persistent storage. This method is invoked when
+onSaveState OnSaveState event is raised.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getID" id="_getID">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getID">#</a>
+		<code>getID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>application ID<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setID" id="_setID">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setID">#</a>
+		<code>setID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>application ID</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPageServiceID" id="_getPageServiceID">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPageServiceID">#</a>
+		<code>getPageServiceID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>page service ID<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPageServiceID" id="_setPageServiceID">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPageServiceID">#</a>
+		<code>setPageServiceID( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>page service ID</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUniqueID" id="_getUniqueID">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUniqueID">#</a>
+		<code>getUniqueID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>an ID that uniquely identifies this Prado application from the others<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMode" id="_getMode">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TApplicationMode.html">TApplicationMode</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMode">#</a>
+		<code>getMode( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TApplicationMode.html">TApplicationMode</a></code></code><br>application mode. Defaults to TApplicationMode::Debug.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMode" id="_setMode">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMode">#</a>
+		<code>setMode( <span><code><a href="class-TApplicationMode.html">TApplicationMode</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-TApplicationMode.html">TApplicationMode</a></code></code><br>application mode</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBasePath" id="_getBasePath">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBasePath">#</a>
+		<code>getBasePath( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the directory containing the application configuration file (absolute path)<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setBasePath" id="_setBasePath">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setBasePath">#</a>
+		<code>setBasePath( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the directory containing the application configuration file</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfigurationFile" id="_getConfigurationFile">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConfigurationFile">#</a>
+		<code>getConfigurationFile( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the application configuration file (absolute path)<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setConfigurationFile" id="_setConfigurationFile">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setConfigurationFile">#</a>
+		<code>setConfigurationFile( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the application configuration file (absolute path)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfigurationType" id="_getConfigurationType">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConfigurationType">#</a>
+		<code>getConfigurationType( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the application configuration file (absolute path)<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setConfigurationType" id="_setConfigurationType">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setConfigurationType">#</a>
+		<code>setConfigurationType( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the application configuration type. 'xml' and 'php' are valid values</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfigurationFileExt" id="_getConfigurationFileExt">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConfigurationFileExt">#</a>
+		<code>getConfigurationFileExt( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the application configuration type. default is 'xml'<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfigurationFileName" id="_getConfigurationFileName">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConfigurationFileName">#</a>
+		<code>getConfigurationFileName( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the default configuration file name<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRuntimePath" id="_getRuntimePath">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRuntimePath">#</a>
+		<code>getRuntimePath( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the directory storing cache data and application-level persistent data.
+(absolute path)<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRuntimePath" id="_setRuntimePath">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRuntimePath">#</a>
+		<code>setRuntimePath( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>the directory storing cache data and application-level persistent data.
+(absolute path)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getService" id="_getService">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-IService.html">IService</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getService">#</a>
+		<code>getService( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-IService.html">IService</a></code></code><br>the currently requested service<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setService" id="_setService">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setService">#</a>
+		<code>setService( <span><code><a href="class-IService.html">IService</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-IService.html">IService</a></code></code><br>the currently requested service</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setModule" id="_setModule">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setModule">#</a>
+		<code>setModule( <span>string <var>$id</var></span>, <span><code><a href="class-IModule.html">IModule</a></code> <var>$module</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a module to application. Note, this method does not do module
+initialization.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a module to application. Note, this method does not do module
+initialization.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd><code>string</code><br>ID of the module</dd>
+					<dt><var>$module</var></dt>
+					<dd><code><code><a href="class-IModule.html">IModule</a></code></code><br>module object or null if the module has not been loaded yet</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getModule" id="_getModule">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-IModule.html">IModule</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getModule">#</a>
+		<code>getModule( <span>mixed <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-IModule.html">IModule</a></code></code><br>the module with the specified ID, null if not found<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getModules" id="_getModules">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getModules">#</a>
+		<code>getModules( )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of application modules indexed by module IDs. Modules that
+have not been loaded yet are returned as null objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of application modules indexed by module IDs. Modules that
+have not been loaded yet are returned as null objects.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>list of loaded application modules, indexed by module IDs<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParameters" id="_getParameters">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TMap.html">TMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParameters">#</a>
+		<code>getParameters( )</code>
+
+		<div class="description short">
+			
+<p>Returns the list of application parameters. Since the parameters are returned
+as a <code><a href="class-TMap.html">TMap</a></code> object, you may use the returned result to access, add or
+remove individual parameters.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the list of application parameters. Since the parameters are returned
+as a <code><a href="class-TMap.html">TMap</a></code> object, you may use the returned result to access, add or
+remove individual parameters.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TMap.html">TMap</a></code></code><br>the list of application parameters<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequest" id="_getRequest">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-THttpRequest.html">THttpRequest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequest">#</a>
+		<code>getRequest( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-THttpRequest.html">THttpRequest</a></code></code><br>the request module<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRequest" id="_setRequest">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRequest">#</a>
+		<code>setRequest( <span><code><a href="class-THttpRequest.html">THttpRequest</a></code> <var>$request</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd><code><code><a href="class-THttpRequest.html">THttpRequest</a></code></code><br>the request module</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResponse" id="_getResponse">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-THttpResponse.html">THttpResponse</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResponse">#</a>
+		<code>getResponse( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-THttpResponse.html">THttpResponse</a></code></code><br>the response module<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setResponse" id="_setResponse">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setResponse">#</a>
+		<code>setResponse( <span><code><a href="class-THttpResponse.html">THttpResponse</a></code> <var>$response</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$response</var></dt>
+					<dd><code><code><a href="class-THttpRequest.html">THttpRequest</a></code></code><br>the request module</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSession" id="_getSession">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-THttpSession.html">THttpSession</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSession">#</a>
+		<code>getSession( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-THttpSession.html">THttpSession</a></code></code><br>the session module, null if session module is not installed<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSession" id="_setSession">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSession">#</a>
+		<code>setSession( <span><code><a href="class-THttpSession.html">THttpSession</a></code> <var>$session</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$session</var></dt>
+					<dd><code><code><a href="class-THttpSession.html">THttpSession</a></code></code><br>the session module</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getErrorHandler" id="_getErrorHandler">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TErrorHandler.html">TErrorHandler</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getErrorHandler">#</a>
+		<code>getErrorHandler( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TErrorHandler.html">TErrorHandler</a></code></code><br>the error handler module<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setErrorHandler" id="_setErrorHandler">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setErrorHandler">#</a>
+		<code>setErrorHandler( <span><code><a href="class-TErrorHandler.html">TErrorHandler</a></code> <var>$handler</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$handler</var></dt>
+					<dd><code><code><a href="class-TErrorHandler.html">TErrorHandler</a></code></code><br>the error handler module</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSecurityManager" id="_getSecurityManager">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TSecurityManager.html">TSecurityManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSecurityManager">#</a>
+		<code>getSecurityManager( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TSecurityManager.html">TSecurityManager</a></code></code><br>the security manager module<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSecurityManager" id="_setSecurityManager">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSecurityManager">#</a>
+		<code>setSecurityManager( <span><code><a href="class-TSecurityManager.html">TSecurityManager</a></code> <var>$sm</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sm</var></dt>
+					<dd><code><code><a href="class-TSecurityManager.html">TSecurityManager</a></code></code><br>the security manager module</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAssetManager" id="_getAssetManager">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TAssetManager.html">TAssetManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAssetManager">#</a>
+		<code>getAssetManager( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TAssetManager.html">TAssetManager</a></code></code><br>asset manager<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAssetManager" id="_setAssetManager">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAssetManager">#</a>
+		<code>setAssetManager( <span><code><a href="class-TAssetManager.html">TAssetManager</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><code><code><a href="class-TAssetManager.html">TAssetManager</a></code></code><br>asset manager</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getApplicationStatePersister" id="_getApplicationStatePersister">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-IStatePersister.html">IStatePersister</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getApplicationStatePersister">#</a>
+		<code>getApplicationStatePersister( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-IStatePersister.html">IStatePersister</a></code></code><br>application state persister<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setApplicationStatePersister" id="_setApplicationStatePersister">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setApplicationStatePersister">#</a>
+		<code>setApplicationStatePersister( <span><code><a href="class-IStatePersister.html">IStatePersister</a></code> <var>$persister</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$persister</var></dt>
+					<dd><code><code><a href="class-IStatePersister.html">IStatePersister</a></code></code><br>application state persister</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCache" id="_getCache">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ICache.html">ICache</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCache">#</a>
+		<code>getCache( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ICache.html">ICache</a></code></code><br>the cache module, null if cache module is not installed<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCache" id="_setCache">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCache">#</a>
+		<code>setCache( <span><code><a href="class-ICache.html">ICache</a></code> <var>$cache</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cache</var></dt>
+					<dd><code><code><a href="class-ICache.html">ICache</a></code></code><br>the cache module</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUser" id="_getUser">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-IUser.html">IUser</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUser">#</a>
+		<code>getUser( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-IUser.html">IUser</a></code></code><br>the application user<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUser" id="_setUser">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUser">#</a>
+		<code>setUser( <span><code><a href="class-IUser.html">IUser</a></code> <var>$user</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$user</var></dt>
+					<dd><code><code><a href="class-IUser.html">IUser</a></code></code><br>the application user</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getGlobalization" id="_getGlobalization">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TGlobalization.html">TGlobalization</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getGlobalization">#</a>
+		<code>getGlobalization( <span>boolean <var>$createIfNotExists</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$createIfNotExists</var></dt>
+					<dd><code>boolean</code><br>whether to create globalization if it does not exist</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TGlobalization.html">TGlobalization</a></code></code><br>globalization module<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setGlobalization" id="_setGlobalization">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setGlobalization">#</a>
+		<code>setGlobalization( <span><code><a href="class-TGlobalization.html">TGlobalization</a></code> <var>$glob</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$glob</var></dt>
+					<dd><code><code><a href="class-TGlobalization.html">TGlobalization</a></code></code><br>globalization module</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAuthorizationRules" id="_getAuthorizationRules">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TAuthorizationRuleCollection.html">TAuthorizationRuleCollection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAuthorizationRules">#</a>
+		<code>getAuthorizationRules( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TAuthorizationRuleCollection.html">TAuthorizationRuleCollection</a></code></code><br>list of authorization rules for the current request<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getApplicationConfigurationClass" id="_getApplicationConfigurationClass">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getApplicationConfigurationClass">#</a>
+		<code>getApplicationConfigurationClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="internalLoadModule" id="_internalLoadModule">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_internalLoadModule">#</a>
+		<code>internalLoadModule( <span>mixed <var>$id</var></span>, <span>mixed <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyConfiguration" id="_applyConfiguration">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyConfiguration">#</a>
+		<code>applyConfiguration( <span><code><a href="class-TApplicationConfiguration.html">TApplicationConfiguration</a></code> <var>$config</var></span>, <span>boolean <var>$withinService</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Applies an application configuration.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Applies an application configuration.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd><code><code><a href="class-TApplicationConfiguration.html">TApplicationConfiguration</a></code></code><br>the configuration</dd>
+					<dt><var>$withinService</var></dt>
+					<dd><code>boolean</code><br>whether the configuration is specified within a service.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initApplication" id="_initApplication">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initApplication">#</a>
+		<code>initApplication( )</code>
+
+		<div class="description short">
+			
+<p>Loads configuration and initializes application. Configuration file will be
+read and parsed (if a valid cached version exists, it will be used instead).
+Then, modules are created and initialized; Afterwards, the requested service is
+created and initialized.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads configuration and initializes application. Configuration file will be
+read and parsed (if a valid cached version exists, it will be used instead).
+Then, modules are created and initialized; Afterwards, the requested service is
+created and initialized.</p>
+
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TConfigurationException.html">TConfigurationException</a></code></code><br>if module is redefined of invalid type, or service not defined or of invalid
+type<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="startService" id="_startService">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_startService">#</a>
+		<code>startService( <span>string <var>$serviceID</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Starts the specified service. The service instance will be created. Its
+properties will be initialized and the configurations will be applied, if
+any.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Starts the specified service. The service instance will be created. Its
+properties will be initialized and the configurations will be applied, if
+any.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$serviceID</var></dt>
+					<dd><code>string</code><br>service ID</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onError" id="_onError">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onError">#</a>
+		<code>onError( <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises OnError event. This method is invoked when an exception is raised
+during the lifecycles of the application.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnError event. This method is invoked when an exception is raised
+during the lifecycles of the application.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd><code>mixed</code><br>event parameter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onBeginRequest" id="_onBeginRequest">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onBeginRequest">#</a>
+		<code>onBeginRequest( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnBeginRequest event. At the time when this method is invoked,
+application modules are loaded and initialized, user request is resolved and the
+corresponding service is loaded and initialized. The application is about to
+start processing the user request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnBeginRequest event. At the time when this method is invoked,
+application modules are loaded and initialized, user request is resolved and the
+corresponding service is loaded and initialized. The application is about to
+start processing the user request.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onAuthentication" id="_onAuthentication">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onAuthentication">#</a>
+		<code>onAuthentication( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnAuthentication event. This method is invoked when the user request
+needs to be authenticated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnAuthentication event. This method is invoked when the user request
+needs to be authenticated.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onAuthenticationComplete" id="_onAuthenticationComplete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onAuthenticationComplete">#</a>
+		<code>onAuthenticationComplete( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnAuthenticationComplete event. This method is invoked right after the
+user request is authenticated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnAuthenticationComplete event. This method is invoked right after the
+user request is authenticated.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onAuthorization" id="_onAuthorization">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onAuthorization">#</a>
+		<code>onAuthorization( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnAuthorization event. This method is invoked when the user request
+needs to be authorized.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnAuthorization event. This method is invoked when the user request
+needs to be authorized.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onAuthorizationComplete" id="_onAuthorizationComplete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onAuthorizationComplete">#</a>
+		<code>onAuthorizationComplete( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnAuthorizationComplete event. This method is invoked right after the
+user request is authorized.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnAuthorizationComplete event. This method is invoked right after the
+user request is authorized.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onLoadState" id="_onLoadState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onLoadState">#</a>
+		<code>onLoadState( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnLoadState event. This method is invoked when the application needs
+to load state (probably stored in session).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnLoadState event. This method is invoked when the application needs
+to load state (probably stored in session).</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onLoadStateComplete" id="_onLoadStateComplete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onLoadStateComplete">#</a>
+		<code>onLoadStateComplete( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnLoadStateComplete event. This method is invoked right after the
+application state has been loaded.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnLoadStateComplete event. This method is invoked right after the
+application state has been loaded.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPreRunService" id="_onPreRunService">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPreRunService">#</a>
+		<code>onPreRunService( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnPreRunService event. This method is invoked right before the service
+is to be run.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnPreRunService event. This method is invoked right before the service
+is to be run.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="runService" id="_runService">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_runService">#</a>
+		<code>runService( )</code>
+
+		<div class="description short">
+			
+<p>Runs the requested service.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Runs the requested service.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onSaveState" id="_onSaveState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onSaveState">#</a>
+		<code>onSaveState( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnSaveState event. This method is invoked when the application needs
+to save state (probably stored in session).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnSaveState event. This method is invoked when the application needs
+to save state (probably stored in session).</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onSaveStateComplete" id="_onSaveStateComplete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onSaveStateComplete">#</a>
+		<code>onSaveStateComplete( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnSaveStateComplete event. This method is invoked right after the
+application state has been saved.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnSaveStateComplete event. This method is invoked right after the
+application state has been saved.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPreFlushOutput" id="_onPreFlushOutput">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPreFlushOutput">#</a>
+		<code>onPreFlushOutput( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnPreFlushOutput event. This method is invoked right before the
+application flushes output to client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnPreFlushOutput event. This method is invoked right before the
+application flushes output to client.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flushOutput" id="_flushOutput">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flushOutput">#</a>
+		<code>flushOutput( <span>boolean <var>$continueBuffering</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Flushes output to client side.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Flushes output to client side.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$continueBuffering</var></dt>
+					<dd><code>boolean</code><br>whether to continue buffering after flush if buffering was active</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onEndRequest" id="_onEndRequest">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onEndRequest">#</a>
+		<code>onEndRequest( )</code>
+
+		<div class="description short">
+			
+<p>Raises OnEndRequest event. This method is invoked when the application
+completes the processing of the request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises OnEndRequest event. This method is invoked when the application
+completes the processing of the request.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="STATE_OFF" id="STATE_OFF">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>STATE_OFF</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Off'</span></code></td>
+		<td class="description"><div>
+			<a href="#STATE_OFF" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>possible application mode.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>possible application mode.</p>
+
+
+					<h4>Deprecated</h4>
+					<div class="list">
+							deprecated since version 3.0.4 (use TApplicationMode constants instead)<br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATE_DEBUG" id="STATE_DEBUG">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>STATE_DEBUG</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Debug'</span></code></td>
+		<td class="description"><div>
+			<a href="#STATE_DEBUG" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATE_NORMAL" id="STATE_NORMAL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>STATE_NORMAL</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Normal'</span></code></td>
+		<td class="description"><div>
+			<a href="#STATE_NORMAL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="STATE_PERFORMANCE" id="STATE_PERFORMANCE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>STATE_PERFORMANCE</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'Performance'</span></code></td>
+		<td class="description"><div>
+			<a href="#STATE_PERFORMANCE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PAGE_SERVICE_ID" id="PAGE_SERVICE_ID">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>PAGE_SERVICE_ID</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'page'</span></code></td>
+		<td class="description"><div>
+			<a href="#PAGE_SERVICE_ID" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Page service ID</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Page service ID</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONFIG_FILE_XML" id="CONFIG_FILE_XML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CONFIG_FILE_XML</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'application.xml'</span></code></td>
+		<td class="description"><div>
+			<a href="#CONFIG_FILE_XML" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Application configuration file name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Application configuration file name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONFIG_FILE_EXT_XML" id="CONFIG_FILE_EXT_XML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CONFIG_FILE_EXT_XML</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'.xml'</span></code></td>
+		<td class="description"><div>
+			<a href="#CONFIG_FILE_EXT_XML" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>File extension for external config files</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>File extension for external config files</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONFIG_TYPE_XML" id="CONFIG_TYPE_XML">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CONFIG_TYPE_XML</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'xml'</span></code></td>
+		<td class="description"><div>
+			<a href="#CONFIG_TYPE_XML" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Configuration file type, application.xml and config.xml</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Configuration file type, application.xml and config.xml</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONFIG_FILE_PHP" id="CONFIG_FILE_PHP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CONFIG_FILE_PHP</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'application.php'</span></code></td>
+		<td class="description"><div>
+			<a href="#CONFIG_FILE_PHP" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Application configuration file name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Application configuration file name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONFIG_FILE_EXT_PHP" id="CONFIG_FILE_EXT_PHP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CONFIG_FILE_EXT_PHP</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'.php'</span></code></td>
+		<td class="description"><div>
+			<a href="#CONFIG_FILE_EXT_PHP" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>File extension for external config files</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>File extension for external config files</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONFIG_TYPE_PHP" id="CONFIG_TYPE_PHP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CONFIG_TYPE_PHP</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'php'</span></code></td>
+		<td class="description"><div>
+			<a href="#CONFIG_TYPE_PHP" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Configuration file type, application.php and config.php</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Configuration file type, application.php and config.php</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="RUNTIME_PATH" id="RUNTIME_PATH">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>RUNTIME_PATH</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'runtime'</span></code></td>
+		<td class="description"><div>
+			<a href="#RUNTIME_PATH" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Runtime directory name</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Runtime directory name</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="CONFIGCACHE_FILE" id="CONFIGCACHE_FILE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>CONFIGCACHE_FILE</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'config.cache'</span></code></td>
+		<td class="description"><div>
+			<a href="#CONFIGCACHE_FILE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Config cache file</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Config cache file</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="GLOBAL_FILE" id="GLOBAL_FILE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>GLOBAL_FILE</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'global.cache'</span></code></td>
+		<td class="description"><div>
+			<a href="#GLOBAL_FILE" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Global data file</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Global data file</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TSqlMapXmlMappingConfiguration | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TDiscriminator.html">TDiscriminator</a></li>
+				<li><a href="class-TInlineParameterMapParser.html">TInlineParameterMapParser</a></li>
+				<li><a href="class-TParameterMap.html">TParameterMap</a></li>
+				<li><a href="class-TParameterProperty.html">TParameterProperty</a></li>
+				<li><a href="class-TResultMap.html">TResultMap</a></li>
+				<li><a href="class-TResultProperty.html">TResultProperty</a></li>
+				<li><a href="class-TSimpleDynamicParser.html">TSimpleDynamicParser</a></li>
+				<li><a href="class-TSqlMapCacheKey.html">TSqlMapCacheKey</a></li>
+				<li><a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a></li>
+				<li><a href="class-TSqlMapCacheTypes.html">TSqlMapCacheTypes</a></li>
+				<li><a href="class-TSqlMapDelete.html">TSqlMapDelete</a></li>
+				<li><a href="class-TSqlMapInsert.html">TSqlMapInsert</a></li>
+				<li><a href="class-TSqlMapSelectKey.html">TSqlMapSelectKey</a></li>
+				<li><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></li>
+				<li><a href="class-TSqlMapUpdate.html">TSqlMapUpdate</a></li>
+				<li><a href="class-TSqlMapXmlConfigBuilder.html">TSqlMapXmlConfigBuilder</a></li>
+				<li><a href="class-TSqlMapXmlConfiguration.html">TSqlMapXmlConfiguration</a></li>
+				<li class="active"><a href="class-TSqlMapXmlMappingConfiguration.html">TSqlMapXmlMappingConfiguration</a></li>
+				<li><a href="class-TSubMap.html">TSubMap</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TSqlMapXmlMappingConfiguration</h1>
+
+
+	<div class="description">
+	<p>Loads the statements, result maps, parameters maps from xml configuration.</p>
+
+<p>description</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TSqlMapXmlConfigBuilder.html"><span>TSqlMapXmlConfigBuilder</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TSqlMapXmlMappingConfiguration</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.SqlMap.html">SqlMap</a>\<a href="package-System.Data.SqlMap.Configuration.html">Configuration</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Data/SqlMap/Configuration/TSqlMapXmlConfiguration.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TSqlMapXmlConfiguration.html">TSqlMapXmlConfiguration</a></code> <var>$xmlConfig</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$xmlConfig</var></dt>
+					<dd>xml configuration.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConfigFile" id="_getConfigFile">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConfigFile">#</a>
+		<code>getConfigFile( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>configuration file.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="configure" id="_configure">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_configure">#</a>
+		<code>configure( <span>string <var>$filename</var></span> )</code>
+
+		<div class="description short">
+			<p>Configure an XML mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Configure an XML mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filename</var></dt>
+					<dd>mapping filename.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadResultMap" id="_loadResultMap">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadResultMap">#</a>
+		<code>loadResultMap( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load the result maps.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load the result maps.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>map node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createResultMap" id="_createResultMap">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TResultMap.html">TResultMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createResultMap">#</a>
+		<code>createResultMap( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Create a new result map and its associated result properties,
+disciminiator and sub maps.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new result map and its associated result properties,
+disciminiator and sub maps.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>map node</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TResultMap.html">TResultMap</a></code><br>SqlMap result mapping.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadParameterMap" id="_loadParameterMap">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadParameterMap">#</a>
+		<code>loadParameterMap( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load parameter map from xml.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load parameter map from xml.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>map node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createParameterMap" id="_createParameterMap">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TParameterMap.html">TParameterMap</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createParameterMap">#</a>
+		<code>createParameterMap( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Create a new parameter map from xml node.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new parameter map from xml node.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>map node.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TParameterMap.html">TParameterMap</a></code><br>new parameter mapping.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadStatementTag" id="_loadStatementTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadStatementTag">#</a>
+		<code>loadStatementTag( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load statement mapping from xml configuration file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load statement mapping from xml configuration file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processSqlStatement" id="_processSqlStatement">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processSqlStatement">#</a>
+		<code>processSqlStatement( <span><code><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></code> <var>$statement</var></span>, <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load extended SQL statements if application. Replaces global properties
+in the sql text. Extracts inline parameter maps.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load extended SQL statements if application. Replaces global properties
+in the sql text. Extracts inline parameter maps.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statement</var></dt>
+					<dd>statement.</dd>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyInlineParameterMap" id="_applyInlineParameterMap">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyInlineParameterMap">#</a>
+		<code>applyInlineParameterMap( <span><code><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></code> <var>$statement</var></span>, <span>string <var>$sqlStatement</var></span>, <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Extract inline parameter maps.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Extract inline parameter maps.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statement</var></dt>
+					<dd>object.</dd>
+					<dt><var>$sqlStatement</var></dt>
+					<dd>text</dd>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepareSql" id="_prepareSql">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepareSql">#</a>
+		<code>prepareSql( <span><code><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></code> <var>$statement</var></span>, <span>string <var>$sqlStatement</var></span>, <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Prepare the sql text (may extend to dynamic sql).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepare the sql text (may extend to dynamic sql).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statement</var></dt>
+					<dd>statement.</dd>
+					<dt><var>$sqlStatement</var></dt>
+					<dd>text.</dd>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+				<h4>Todo</h4>
+				<div class="list">
+						Extend to dynamic sql.<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadSelectTag" id="_loadSelectTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadSelectTag">#</a>
+		<code>loadSelectTag( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load select statement from xml mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load select statement from xml mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadInsertTag" id="_loadInsertTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadInsertTag">#</a>
+		<code>loadInsertTag( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load insert statement from xml mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load insert statement from xml mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createInsertStatement" id="_createInsertStatement">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-TSqlMapInsert.html">TSqlMapInsert</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createInsertStatement">#</a>
+		<code>createInsertStatement( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Create new insert statement from xml node.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create new insert statement from xml node.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TSqlMapInsert.html">TSqlMapInsert</a></code><br>insert statement.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadSelectKeyTag" id="_loadSelectKeyTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadSelectKeyTag">#</a>
+		<code>loadSelectKeyTag( <span>SimpleXmlElement <var>$insert</var></span>, <span> <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load the selectKey statement from xml mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load the selectKey statement from xml mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$insert</var></dt>
+					<dd>node</dd>
+					<dt><var>$node</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadUpdateTag" id="_loadUpdateTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadUpdateTag">#</a>
+		<code>loadUpdateTag( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load update statement from xml mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load update statement from xml mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadDeleteTag" id="_loadDeleteTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadDeleteTag">#</a>
+		<code>loadDeleteTag( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load delete statement from xml mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load delete statement from xml mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadProcedureTag" id="_loadProcedureTag">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadProcedureTag">#</a>
+		<code>loadProcedureTag( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load procedure statement from xml mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load procedure statement from xml mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node</dd>
+				</dl></div>
+
+
+
+				<h4>Todo</h4>
+				<div class="list">
+						Implement loading procedure<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadCacheModel" id="_loadCacheModel">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadCacheModel">#</a>
+		<code>loadCacheModel( <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load cache models from xml mapping.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load cache models from xml mapping.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadFlushInterval" id="_loadFlushInterval">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadFlushInterval">#</a>
+		<code>loadFlushInterval( <span><code><a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a></code> <var>$cacheModel</var></span>, <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load the flush interval</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load the flush interval</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cacheModel</var></dt>
+					<dd>model</dd>
+					<dt><var>$node</var></dt>
+					<dd>node</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadFlushOnCache" id="_loadFlushOnCache">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadFlushOnCache">#</a>
+		<code>loadFlushOnCache( <span><code><a href="class-TSqlMapCacheModel.html">TSqlMapCacheModel</a></code> <var>$cacheModel</var></span>, <span>SimpleXmlElement <var>$parent</var></span>, <span>SimpleXmlElement <var>$node</var></span> )</code>
+
+		<div class="description short">
+			<p>Load the flush on cache properties.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Load the flush on cache properties.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cacheModel</var></dt>
+					<dd>model</dd>
+					<dt><var>$parent</var></dt>
+					<dd>node.</dd>
+					<dt><var>$node</var></dt>
+					<dd>node.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerCacheTriggers" id="_registerCacheTriggers">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerCacheTriggers">#</a>
+		<code>registerCacheTriggers( )</code>
+
+		<div class="description short">
+			<p>Attach CacheModel to statement and register trigger statements for cache models</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Attach CacheModel to statement and register trigger statements for cache models</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TSqlMapXmlConfigBuilder.html#methods">TSqlMapXmlConfigBuilder</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TSqlMapXmlConfigBuilder.html#_createObjectFromNode">createObjectFromNode()</a>, 
+			<a href="class-TSqlMapXmlConfigBuilder.html#_getAbsoluteFilePath">getAbsoluteFilePath()</a>, 
+			<a href="class-TSqlMapXmlConfigBuilder.html#_getElementByIdValue">getElementByIdValue()</a>, 
+			<a href="class-TSqlMapXmlConfigBuilder.html#_loadXmlDocument">loadXmlDocument()</a>, 
+			<a href="class-TSqlMapXmlConfigBuilder.html#_setObjectPropFromNode">setObjectPropFromNode()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="SIMPLE_MARK" id="SIMPLE_MARK">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>SIMPLE_MARK</b>			</code>
+
+			<div class="description short">
+				<p>Regular expressions for escaping simple/inline parameter symbols</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Regular expressions for escaping simple/inline parameter symbols</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SIMPLE_MARK" class="anchor">#</a>
+				<code><span class="php-quote">'$'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="INLINE_SYMBOL" id="INLINE_SYMBOL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>INLINE_SYMBOL</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#INLINE_SYMBOL" class="anchor">#</a>
+				<code><span class="php-quote">'#'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ESCAPED_SIMPLE_MARK_REGEXP" id="ESCAPED_SIMPLE_MARK_REGEXP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>ESCAPED_SIMPLE_MARK_REGEXP</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ESCAPED_SIMPLE_MARK_REGEXP" class="anchor">#</a>
+				<code><span class="php-quote">'/\$\$/'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ESCAPED_INLINE_SYMBOL_REGEXP" id="ESCAPED_INLINE_SYMBOL_REGEXP">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>ESCAPED_INLINE_SYMBOL_REGEXP</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ESCAPED_INLINE_SYMBOL_REGEXP" class="anchor">#</a>
+				<code><span class="php-quote">'/\#\#/'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="SIMPLE_PLACEHOLDER" id="SIMPLE_PLACEHOLDER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>SIMPLE_PLACEHOLDER</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SIMPLE_PLACEHOLDER" class="anchor">#</a>
+				<code><span class="php-quote">'`!!`'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="INLINE_PLACEHOLDER" id="INLINE_PLACEHOLDER">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>INLINE_PLACEHOLDER</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#INLINE_PLACEHOLDER" class="anchor">#</a>
+				<code><span class="php-quote">'`!!!`'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

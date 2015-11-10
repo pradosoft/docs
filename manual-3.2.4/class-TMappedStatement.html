@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<meta http-equiv="content-language" content="en" />
+	<meta name="Keywords" content="PRADO PHP framework component template delphi asp.net event property OOP PHP5 object oriented programming Web programming development" />
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5." />
+	<meta name="Author" content="Qiang Xue" />
+	<meta name="Subject" content="Web programming, PHP framework" />
+	<meta name="Language" content="en" />
+	<link rel="Shortcut Icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/manual.css" />
+
+	<title>Class TMappedStatement | PRADO v3.2.4 API Manual</title>
+
+	<script type="text/javascript" src="resources/combined.js?493275287"></script>
+	<script type="text/javascript" src="elementlist.js?2131753225"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?356060597" />
+
+</head>
+
+<body>
+
+	<div id="page">
+		<div id="header">
+			<div id="logo"><img src="/css/pradoheader.gif" alt="PRADO Component Framework for PHP 5" /></div>
+			<div id="mainmenu">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/" >About</a></li>
+					<li><a href="/testimonials/" >Testimonials</a></li>
+					<li><a href="/demos/" >Demos</a></li>
+					<li><a href="/download/" >Download</a></li>
+					<li><a href="/documentation/" class="active">Documentation</a></li>
+					<li><a href="/forum/" >Forum</a></li>
+					<li><a href="http://github.com/pradosoft/prado">Development</a></li>
+				</ul>
+			</div><!-- mainmenu -->
+		</div><!-- header -->
+		<div id="main">
+			<div id="navbar">
+				<ul>
+					<li><a href="/tutorials/">Tutorials</a></li>
+					<li><a href="/docs/classdoc/">Class Docs</a></li>
+					<li><a href="/docs/manual/" class="active">API Manual</a></li>
+					<li><a href="/wiki/">Wiki</a></li>
+				</ul>
+			</div>
+
+<table id="maintable">
+	<tr>
+		<td id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-System.html">System<span></span></a>
+						<ul>
+				<li><a href="package-System.Caching.html">Caching</a>
+						</li>
+				<li><a href="package-System.Collections.html">Collections</a>
+						</li>
+				<li class="active"><a href="package-System.Data.html">Data<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.html">ActiveRecord<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Relations.html">Relations</a>
+						</li>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.html">Scaffold<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">InputBuilder</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Data.Commom.html">Commom<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Commom.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.Common.html">Common<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.Common.Mssql.html">Mssql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Mysql.html">Mysql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Oracle.html">Oracle</a>
+						</li>
+				<li><a href="package-System.Data.Common.Pgsql.html">Pgsql</a>
+						</li>
+				<li><a href="package-System.Data.Common.Sqlite.html">Sqlite</a>
+						</li>
+							</ul></li>
+				<li><a href="package-System.Data.DataGateway.html">DataGateway</a>
+						</li>
+				<li class="active"><a href="package-System.Data.SqlMap.html">SqlMap<span></span></a>
+						<ul>
+				<li><a href="package-System.Data.SqlMap.Configuration.html">Configuration</a>
+						</li>
+				<li class="active"><a href="package-System.Data.SqlMap.Statements.html">Statements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Exceptions.html">Exceptions</a>
+						</li>
+				<li><a href="package-System.I18N.html">I18N</a>
+						</li>
+				<li><a href="package-System.IO.html">IO</a>
+						</li>
+				<li><a href="package-System.Security.html">Security</a>
+						</li>
+				<li><a href="package-System.Util.html">Util</a>
+						</li>
+				<li><a href="package-System.Web.html">Web<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.Javascripts.html">Javascripts</a>
+						</li>
+				<li><a href="package-System.Web.Services.html">Services</a>
+						</li>
+				<li><a href="package-System.Web.UI.html">UI<span></span></a>
+						<ul>
+				<li><a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a>
+						</li>
+				<li><a href="package-System.Web.UI.WebControls.html">WebControls</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="package-System.Xml.html">Xml</a>
+						</li>
+							</ul></li>
+				<li><a href="package-Wsat.html">Wsat<span></span></a>
+						<ul>
+				<li><a href="package-Wsat.pages.html">pages</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+</td>
+<td id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-System.Data.SqlMap.Statements.html" title="Summary of System\Data\SqlMap\Statements"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TMappedStatement</h1>
+
+
+	<div class="description">
+	
+<p>TMappedStatement class executes SQL mapped statements. Mapped Statements can
+hold any SQL statement and use Parameter Maps and Result Maps for input and
+output.</p>
+
+<p>This class is usualy instantiated during SQLMap configuration by
+TSqlDomBuilder.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>TMappedStatement</span></b>			
+			 implements 
+				<a href="class-IMappedStatement.html"><span>IMappedStatement</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-TInsertMappedStatement.html">TInsertMappedStatement</a>, 
+			<a href="class-TSelectMappedStatement.html">TSelectMappedStatement</a>, 
+			<a href="class-TUpdateMappedStatement.html">TUpdateMappedStatement</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-TDeleteMappedStatement.html">TDeleteMappedStatement</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.SqlMap.html">SqlMap</a>\<a href="package-System.Data.SqlMap.Statements.html">Statements</a><br />
+
+				<b>Copyright:</b>
+				Copyright © 2005-2014 PradoSoft<br />
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br />
+				<b>Author:</b>
+				Wei Zhuo &lt;weizhuo[at]gmail[dot]com&gt;<br />
+				<b>Since:</b>
+				3.0<br />
+		<b>Located at</b> Data/SqlMap/Statements/TMappedStatement.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getID" id="_getID">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getID">#</a>
+		<code>getID( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Name used to identify the TMappedStatement amongst the others. This the name of
+the SQL statement by default.<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IMappedStatement.html#_getID">IMappedStatement::getID()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStatement" id="_getStatement">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStatement">#</a>
+		<code>getStatement( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></code></code><br>The SQL statment used by this MappedStatement<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IMappedStatement.html#_getStatement">IMappedStatement::getStatement()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getManager" id="_getManager">
+
+		<td class="attributes"><code>
+			 public 
+			TSqlMapper
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getManager">#</a>
+		<code>getManager( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TSqlMapper</code><br>The SqlMap used by this MappedStatement<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IMappedStatement.html#_getManager">IMappedStatement::getManager()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCommand" id="_getCommand">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-TPreparedCommand.html">TPreparedCommand</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCommand">#</a>
+		<code>getCommand( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-TPreparedCommand.html">TPreparedCommand</a></code></code><br>command to prepare SQL statements.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="initialGroupByResults" id="_initialGroupByResults">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initialGroupByResults">#</a>
+		<code>initialGroupByResults( )</code>
+
+		<div class="description short">
+			
+<p>Empty the group by results cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Empty the group by results cache.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TSqlMapManager.html">TSqlMapManager</a></code> <var>$sqlMap</var></span>, <span><code><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></code> <var>$statement</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new mapped statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new mapped statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sqlMap</var></dt>
+					<dd><code>TSqlMapper</code><br>an sqlmap.</dd>
+					<dt><var>$statement</var></dt>
+					<dd><code><code><a href="class-TSqlMapStatement.html">TSqlMapStatement</a></code></code><br>An SQL statement.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSqlString" id="_getSqlString">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSqlString">#</a>
+		<code>getSqlString( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeSQLQueryLimit" id="_executeSQLQueryLimit">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeSQLQueryLimit">#</a>
+		<code>executeSQLQueryLimit( <span>IDbConnection <var>$connection</var></span>, <span>array <var>$command</var></span>, <span>mixed <var>$max</var></span>, <span>mixed <var>$skip</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Execute SQL Query with limits.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute SQL Query with limits.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$command</var></dt>
+					<dd><code>array</code><br>SQL statement and parameters.</dd>
+					<dt><var>$max</var></dt>
+					<dd></dd>
+					<dt><var>$skip</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>record set if applicable.<br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-TSqlMapExecutionException.html">TSqlMapExecutionException</a></code></code><br>if execution error or false record set.<br />
+					<code>TSqlMapQueryExecutionException</code><br>if any execution error<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeQueryForList" id="_executeQueryForList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeQueryForList">#</a>
+		<code>executeQueryForList( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>object <var>$result</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$skip</var> = -<span class="php-num">1</span></span>, <span>integer <var>$max</var> = -<span class="php-num">1</span></span>, <span>callable <var>$delegate</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes the SQL and retuns a List of result objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the SQL and retuns a List of result objects.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>The object used to set the parameters in the SQL.</dd>
+					<dt><var>$result</var></dt>
+					<dd><code>object</code><br>result collection object.</dd>
+					<dt><var>$skip</var></dt>
+					<dd><code>integer</code><br>The number of rows to skip over.</dd>
+					<dt><var>$max</var></dt>
+					<dd><code>integer</code><br>The maximum number of rows to return.</dd>
+					<dt><var>$delegate</var></dt>
+					<dd><code>callable</code><br>row delegate handler</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>a list of result objects<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TMappedStatement.html#_executeQueryForList">TMappedStatement::executeQueryForList()</a></code></code><br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IMappedStatement.html#_executeQueryForList">IMappedStatement::executeQueryForList()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="runQueryForList" id="_runQueryForList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_runQueryForList">#</a>
+		<code>runQueryForList( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>array <var>$sql</var></span>, <span>object <var>$result</var></span>, <span>integer <var>$delegate</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes the SQL and retuns a List of result objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the SQL and retuns a List of result objects.</p>
+
+<p>This method should only be called by internal developers, consider using
+<tt>executeQueryForList()</tt> first.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>The object used to set the parameters in the SQL.</dd>
+					<dt><var>$sql</var></dt>
+					<dd><code>array</code><br>SQL string and subsititution parameters.</dd>
+					<dt><var>$result</var></dt>
+					<dd><code>object</code><br>result collection object.</dd>
+					<dt><var>$delegate</var></dt>
+					<dd><code>integer</code><br>The number of rows to skip over.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>a list of result objects<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TMappedStatement.html#_executeQueryForList">TMappedStatement::executeQueryForList()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeQueryForMap" id="_executeQueryForMap">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeQueryForMap">#</a>
+		<code>executeQueryForMap( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>string <var>$keyProperty</var></span>, <span>string <var>$valueProperty</var> = <span class="php-keyword1">null</span></span>, <span>callable <var>$skip</var> = -<span class="php-num">1</span></span>, <span>mixed <var>$max</var> = -<span class="php-num">1</span></span>, <span>mixed <var>$delegate</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes the SQL and retuns all rows selected in a map that is keyed on the
+property named in the keyProperty parameter. The value at each key will be the
+value of the property specified in the valueProperty parameter. If valueProperty
+is null, the entire result object will be entered.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the SQL and retuns all rows selected in a map that is keyed on the
+property named in the keyProperty parameter. The value at each key will be the
+value of the property specified in the valueProperty parameter. If valueProperty
+is null, the entire result object will be entered.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>The object used to set the parameters in the SQL.</dd>
+					<dt><var>$keyProperty</var></dt>
+					<dd><code>string</code><br>The property of the result object to be used as the key.</dd>
+					<dt><var>$valueProperty</var></dt>
+					<dd><code>string</code><br>The property of the result object to be used as the value (or null).</dd>
+					<dt><var>$skip</var></dt>
+					<dd><code>callable</code><br>row delegate handler</dd>
+					<dt><var>$max</var></dt>
+					<dd></dd>
+					<dt><var>$delegate</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of object containing the rows keyed by keyProperty.<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IMappedStatement.html#_executeQueryForMap">IMappedStatement::executeQueryForMap()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="runQueryForMap" id="_runQueryForMap">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_runQueryForMap">#</a>
+		<code>runQueryForMap( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>array <var>$command</var></span>, <span>string <var>$keyProperty</var></span>, <span>string <var>$valueProperty</var> = <span class="php-keyword1">null</span></span>, <span>callable <var>$delegate</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes the SQL and retuns all rows selected in a map that is keyed on the
+property named in the keyProperty parameter. The value at each key will be the
+value of the property specified in the valueProperty parameter. If valueProperty
+is null, the entire result object will be entered.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the SQL and retuns all rows selected in a map that is keyed on the
+property named in the keyProperty parameter. The value at each key will be the
+value of the property specified in the valueProperty parameter. If valueProperty
+is null, the entire result object will be entered.</p>
+
+<p>This method should only be called by internal developers, consider using
+<tt>executeQueryForMap()</tt> first.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>The object used to set the parameters in the SQL.</dd>
+					<dt><var>$command</var></dt>
+					<dd><code>array</code><br>SQL string and subsititution parameters.</dd>
+					<dt><var>$keyProperty</var></dt>
+					<dd><code>string</code><br>The property of the result object to be used as the key.</dd>
+					<dt><var>$valueProperty</var></dt>
+					<dd><code>string</code><br>The property of the result object to be used as the value (or null).</dd>
+					<dt><var>$delegate</var></dt>
+					<dd><code>callable</code><br>row delegate, a callback function</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>An array of object containing the rows keyed by keyProperty.<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TMappedStatement.html#_executeQueryForMap">TMappedStatement::executeQueryForMap()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="raiseRowDelegate" id="_raiseRowDelegate">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_raiseRowDelegate">#</a>
+		<code>raiseRowDelegate( <span>object <var>$handler</var></span>, <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raises delegate handler. This method is invoked for each new list item. It is
+the responsibility of the handler to add the item to the list.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raises delegate handler. This method is invoked for each new list item. It is
+the responsibility of the handler to add the item to the list.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$handler</var></dt>
+					<dd><code>object</code><br>event parameter</dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeQueryForObject" id="_executeQueryForObject">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeQueryForObject">#</a>
+		<code>executeQueryForObject( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span>mixed <var>$result</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes an SQL statement that returns a single row as an object of the type
+of the <tt>$result</tt> passed in as a parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes an SQL statement that returns a single row as an object of the type
+of the <tt>$result</tt> passed in as a parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>The parameter data (object, arrary, primitive) used to set the parameters in the
+SQL</dd>
+					<dt><var>$result</var></dt>
+					<dd><code>mixed</code><br>The result object.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>${return}<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IMappedStatement.html#_executeQueryForObject">IMappedStatement::executeQueryForObject()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="runQueryForObject" id="_runQueryForObject">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_runQueryForObject">#</a>
+		<code>runQueryForObject( <span>IDbConnection <var>$connection</var></span>, <span>array <var>$command</var></span>, <span>object <var>&amp; $result</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes an SQL statement that returns a single row as an object of the type
+of the <tt>$result</tt> passed in as a parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes an SQL statement that returns a single row as an object of the type
+of the <tt>$result</tt> passed in as a parameter.</p>
+
+<p>This method should only be called by internal developers, consider using
+<tt>executeQueryForObject()</tt> first.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$command</var></dt>
+					<dd><code>array</code><br>SQL string and subsititution parameters.</dd>
+					<dt><var>$result</var></dt>
+					<dd><code>object</code><br>The result object.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>the object.<br />
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TMappedStatement.html#_executeQueryForObject">TMappedStatement::executeQueryForObject()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeInsert" id="_executeInsert">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeInsert">#</a>
+		<code>executeInsert( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Execute an insert statement. Fill the parameter object with the ouput
+parameters if any, also could return the insert generated key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute an insert statement. Fill the parameter object with the ouput
+parameters if any, also could return the insert generated key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>The parameter object used to fill the statement.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the insert generated key.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreGeneratedSelectKey" id="_getPreGeneratedSelectKey">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreGeneratedSelectKey">#</a>
+		<code>getPreGeneratedSelectKey( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the insert generated ID before executing an insert statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the insert generated ID before executing an insert statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>insert statement parameter.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>new insert ID if pre-select key statement was executed, null otherwise.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPostGeneratedSelectKey" id="_getPostGeneratedSelectKey">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPostGeneratedSelectKey">#</a>
+		<code>getPostGeneratedSelectKey( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the inserted row ID after executing an insert statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the inserted row ID after executing an insert statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>insert statement parameter.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>last insert ID, null otherwise.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeSelectKey" id="_executeSelectKey">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeSelectKey">#</a>
+		<code>executeSelectKey( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span>, <span><code><a href="class-TSqlMapSelectKey.html">TSqlMapSelectKey</a></code> <var>$selectKey</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Execute the select key statement, used to obtain last insert ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute the select key statement, used to obtain last insert ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>insert statement parameter</dd>
+					<dt><var>$selectKey</var></dt>
+					<dd><code><code><a href="class-TSqlMapSelectKey.html">TSqlMapSelectKey</a></code></code><br>select key statement</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>last insert ID.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeUpdate" id="_executeUpdate">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeUpdate">#</a>
+		<code>executeUpdate( <span>IDbConnection <var>$connection</var></span>, <span>mixed <var>$parameter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Execute an update statement. Also used for delete statement. Return the
+number of rows effected.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute an update statement. Also used for delete statement. Return the
+number of rows effected.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+					<dt><var>$parameter</var></dt>
+					<dd><code>mixed</code><br>The object used to set the parameters in the SQL.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>The number of rows effected.<br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-IMappedStatement.html#_executeUpdate">IMappedStatement::executeUpdate()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executePostSelect" id="_executePostSelect">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executePostSelect">#</a>
+		<code>executePostSelect( <span>IDbConnection <var>$connection</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Process 'select' result properties</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Process 'select' result properties</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd><code>IDbConnection</code><br>database connection</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onExecuteQuery" id="_onExecuteQuery">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onExecuteQuery">#</a>
+		<code>onExecuteQuery( <span>array <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Raise the execute query event.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Raise the execute query event.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>array</code><br>prepared SQL statement and subsititution parameters</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyResultMap" id="_applyResultMap">
+
+		<td class="attributes"><code>
+			 protected 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyResultMap">#</a>
+		<code>applyResultMap( <span>array <var>$row</var></span>, <span>object <var>&amp; $resultObject</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Apply result mapping.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Apply result mapping.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>the result object, will create if necessary.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>the result filled with data, null if not filled.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillResultClass" id="_fillResultClass">
+
+		<td class="attributes"><code>
+			 protected 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fillResultClass">#</a>
+		<code>fillResultClass( <span>string <var>$resultClass</var></span>, <span>array <var>$row</var></span>, <span>object <var>$resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fill the result using ResultClass, will creates new result object if
+required.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fill the result using ResultClass, will creates new result object if
+required.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultClass</var></dt>
+					<dd><code>string</code><br>result object class name</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>the result object, will create if necessary.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>result object filled with data<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillResultArrayList" id="_fillResultArrayList">
+
+		<td class="attributes"><code>
+			 protected 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fillResultArrayList">#</a>
+		<code>fillResultArrayList( <span>array <var>$row</var></span>, <span>object <var>$resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Apply the result to a TList or an array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Apply the result to a TList or an array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>result object, array or list</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>result filled with data.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillResultObjectProperty" id="_fillResultObjectProperty">
+
+		<td class="attributes"><code>
+			 protected 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fillResultObjectProperty">#</a>
+		<code>fillResultObjectProperty( <span>array <var>$row</var></span>, <span>object <var>$resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Apply the result to an object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Apply the result to an object.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>result object, array or list</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>result filled with data.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillResultMap" id="_fillResultMap">
+
+		<td class="attributes"><code>
+			 protected 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fillResultMap">#</a>
+		<code>fillResultMap( <span>string <var>$resultMapName</var></span>, <span>array <var>$row</var></span>, <span>object <var>$parentGroup</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>&amp; $resultObject</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Fills the result object according to result mappings.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fills the result object according to result mappings.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMapName</var></dt>
+					<dd><code>string</code><br>result map name.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$parentGroup</var></dt>
+					<dd><code>object</code><br>result object to fill, will create new instances if required.</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>result object filled with data.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addResultMapGroupBy" id="_addResultMapGroupBy">
+
+		<td class="attributes"><code>
+			 protected 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addResultMapGroupBy">#</a>
+		<code>addResultMapGroupBy( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span>array <var>$row</var></span>, <span>object <var>$parent</var></span>, <span>mixed <var>&amp; $resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>ResultMap with GroupBy property. Save object collection graph in a tree and
+collect the result later.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>ResultMap with GroupBy property. Save object collection graph in a tree and
+collect the result later.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>result mapping details.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$parent</var></dt>
+					<dd><code>object</code><br>the result object</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>result object.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResultMapGroupKey" id="_getResultMapGroupKey">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResultMapGroupKey">#</a>
+		<code>getResultMapGroupKey( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span>array <var>$row</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the result 'group by' groupping key for each row.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the result 'group by' groupping key for each row.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>result mapping details.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>groupping key.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillDefaultResultMap" id="_fillDefaultResultMap">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fillDefaultResultMap">#</a>
+		<code>fillDefaultResultMap( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span>array <var>$row</var></span>, <span>object <var>$resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fill the result map using default settings. If <tt>$resultMap</tt> is null
+the result object returned will be guessed from <tt>$resultObject</tt>.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fill the result map using default settings. If <tt>$resultMap</tt> is null
+the result object returned will be guessed from <tt>$resultObject</tt>.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>result mapping details.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>the result object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the result object filled with data.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillArrayResultMap" id="_fillArrayResultMap">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fillArrayResultMap">#</a>
+		<code>fillArrayResultMap( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span>array <var>$row</var></span>, <span>object <var>$resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieve the result map as an array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieve the result map as an array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>result mapping details.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>the result object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>array list of result objects.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getScalarResult" id="_getScalarResult">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getScalarResult">#</a>
+		<code>getScalarResult( <span>array <var>$result</var></span>, <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Converts the first array value to scalar value of given type.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Converts the first array value to scalar value of given type.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$result</var></dt>
+					<dd><code>array</code><br>list of results</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>scalar type.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>scalar value.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setObjectProperty" id="_setObjectProperty">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setObjectProperty">#</a>
+		<code>setObjectProperty( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span><code><a href="class-TResultProperty.html">TResultProperty</a></code> <var>$property</var></span>, <span>array <var>$row</var></span>, <span>object <var>&amp; $resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set a property of the result object with appropriate value.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a property of the result object with appropriate value.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>result mapping details.</dd>
+					<dt><var>$property</var></dt>
+					<dd><code><code><a href="class-TResultProperty.html">TResultProperty</a></code></code><br>the result property to fill.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>the result object</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="enquequePostSelect" id="_enquequePostSelect">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enquequePostSelect">#</a>
+		<code>enquequePostSelect( <span>string <var>$select</var></span>, <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span><code><a href="class-TResultProperty.html">TResultProperty</a></code> <var>$property</var></span>, <span>array <var>$row</var></span>, <span>object <var>$resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Add nested result property to post select queue.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add nested result property to post select queue.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$select</var></dt>
+					<dd><code>string</code><br>post select statement ID</dd>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>current result mapping details.</dd>
+					<dt><var>$property</var></dt>
+					<dd><code><code><a href="class-TResultProperty.html">TResultProperty</a></code></code><br>current result property.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>the result object</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPostSelectKeys" id="_getPostSelectKeys">
+
+		<td class="attributes"><code>
+			 protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPostSelectKeys">#</a>
+		<code>getPostSelectKeys( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span><code><a href="class-TResultProperty.html">TResultProperty</a></code> <var>$property</var></span>, <span>array <var>$row</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds in the post select property the SQL statement primary selection
+keys.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds in the post select property the SQL statement primary selection
+keys.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>result mapping details</dd>
+					<dt><var>$property</var></dt>
+					<dd><code><code><a href="class-TResultProperty.html">TResultProperty</a></code></code><br>result property</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>current row data.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>list of primary key values.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fillPropertyWithResultMap" id="_fillPropertyWithResultMap">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fillPropertyWithResultMap">#</a>
+		<code>fillPropertyWithResultMap( <span><code><a href="class-TResultMap.html">TResultMap</a></code> <var>$resultMap</var></span>, <span>array <var>$row</var></span>, <span>object <var>&amp; $resultObject</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fills the property with result mapping results.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fills the property with result mapping results.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resultMap</var></dt>
+					<dd><code><code><a href="class-TResultMap.html">TResultMap</a></code></code><br>nested result mapping details.</dd>
+					<dt><var>$row</var></dt>
+					<dd><code>array</code><br>a result set row retrieved from the database</dd>
+					<dt><var>$resultObject</var></dt>
+					<dd><code>object</code><br>the result object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>true if the data was found, false otherwise.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__wakeup" id="___wakeup">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___wakeup">#</a>
+		<code>__wakeup( )</code>
+
+		<div class="description short">
+			
+<p>Do not call this method. This is a PHP magic method that will be called
+automatically after any unserialization; it can perform reinitialization tasks
+on the object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Do not call this method. This is a PHP magic method that will be called
+automatically after any unserialization; it can perform reinitialization tasks
+on the object.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___wakeup">TComponent::__wakeup()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__sleep" id="___sleep">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___sleep">#</a>
+		<code>__sleep( )</code>
+
+		<div class="description short">
+			
+<p>Returns an array with the names of all variables of that object that should
+be serialized. Do not call this method. This is a PHP magic method that will be
+called automatically prior to any serialization.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array with the names of all variables of that object that should
+be serialized. Do not call this method. This is a PHP magic method that will be
+called automatically prior to any serialization.</p>
+
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___sleep">TComponent::__sleep()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="QUERY_FOR_LIST" id="QUERY_FOR_LIST">
+
+		<td class="attributes"><code>Post</code></td>
+		<td class="name"><code>
+<b>QUERY_FOR_LIST</b>		</code></td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#QUERY_FOR_LIST" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>select is to query for list.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>select is to query for list.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="QUERY_FOR_ARRAY" id="QUERY_FOR_ARRAY">
+
+		<td class="attributes"><code>Post</code></td>
+		<td class="name"><code>
+<b>QUERY_FOR_ARRAY</b>		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#QUERY_FOR_ARRAY" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>select is to query for list.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>select is to query for list.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="QUERY_FOR_OBJECT" id="QUERY_FOR_OBJECT">
+
+		<td class="attributes"><code>Post</code></td>
+		<td class="name"><code>
+<b>QUERY_FOR_OBJECT</b>		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#QUERY_FOR_OBJECT" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>select is to query for object.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>select is to query for object.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</td>
+	</tr>
+</table>
+
+</div><!-- main -->
+
+<div id="footer">
+  <a href="/tos/">Terms of Service</a> |
+  <a href="/support/">Contact Us</a>
+  <br />
+  PRADO v3.2.4 API Manual API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+  <br />Copyright &copy; 2006-2014 by the PRADO Group.<br />
+  <a title="Powered by PRADO" href="http://www.pradosoft.com/"><img src="http://www.pradosoft.com/images/powered2.gif" style="border-width:0px;" alt="Powered by PRADO" /></a>
+</div>
+
+</div><!-- page -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-186303-3";
+urchinTracker();
+</script>
+</body>
+</html>

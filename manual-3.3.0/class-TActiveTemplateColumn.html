@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TActiveTemplateColumn | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TActiveBoundColumn.html">TActiveBoundColumn</a></li>
+				<li><a href="class-TActiveButton.html">TActiveButton</a></li>
+				<li><a href="class-TActiveButtonColumn.html">TActiveButtonColumn</a></li>
+				<li><a href="class-TActiveCheckBox.html">TActiveCheckBox</a></li>
+				<li><a href="class-TActiveCheckBoxColumn.html">TActiveCheckBoxColumn</a></li>
+				<li><a href="class-TActiveCheckBoxList.html">TActiveCheckBoxList</a></li>
+				<li><a href="class-TActiveCheckBoxListItem.html">TActiveCheckBoxListItem</a></li>
+				<li><a href="class-TActiveClientScript.html">TActiveClientScript</a></li>
+				<li><a href="class-TActiveControlAdapter.html">TActiveControlAdapter</a></li>
+				<li><a href="class-TActiveCustomValidator.html">TActiveCustomValidator</a></li>
+				<li><a href="class-TActiveCustomValidatorClientSide.html">TActiveCustomValidatorClientSide</a></li>
+				<li><a href="class-TActiveDataGrid.html">TActiveDataGrid</a></li>
+				<li><a href="class-TActiveDataGridPager.html">TActiveDataGridPager</a></li>
+				<li><a href="class-TActiveDataGridPagerEventParameter.html">TActiveDataGridPagerEventParameter</a></li>
+				<li><a href="class-TActiveDataList.html">TActiveDataList</a></li>
+				<li><a href="class-TActiveDatePicker.html">TActiveDatePicker</a></li>
+				<li><a href="class-TActiveDatePickerClientScript.html">TActiveDatePickerClientScript</a></li>
+				<li><a href="class-TActiveDropDownList.html">TActiveDropDownList</a></li>
+				<li><a href="class-TActiveDropDownListColumn.html">TActiveDropDownListColumn</a></li>
+				<li><a href="class-TActiveEditCommandColumn.html">TActiveEditCommandColumn</a></li>
+				<li><a href="class-TActiveFileUpload.html">TActiveFileUpload</a></li>
+				<li><a href="class-TActiveFileUploadCallbackParams.html">TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-TActiveHiddenField.html">TActiveHiddenField</a></li>
+				<li><a href="class-TActiveHyperLink.html">TActiveHyperLink</a></li>
+				<li><a href="class-TActiveHyperLinkColumn.html">TActiveHyperLinkColumn</a></li>
+				<li><a href="class-TActiveImage.html">TActiveImage</a></li>
+				<li><a href="class-TActiveImageButton.html">TActiveImageButton</a></li>
+				<li><a href="class-TActiveLabel.html">TActiveLabel</a></li>
+				<li><a href="class-TActiveLinkButton.html">TActiveLinkButton</a></li>
+				<li><a href="class-TActiveListBox.html">TActiveListBox</a></li>
+				<li><a href="class-TActiveListControlAdapter.html">TActiveListControlAdapter</a></li>
+				<li><a href="class-TActiveListItemCollection.html">TActiveListItemCollection</a></li>
+				<li><a href="class-TActiveLiteralColumn.html">TActiveLiteralColumn</a></li>
+				<li><a href="class-TActiveMultiView.html">TActiveMultiView</a></li>
+				<li><a href="class-TActivePageAdapter.html">TActivePageAdapter</a></li>
+				<li><a href="class-TActivePager.html">TActivePager</a></li>
+				<li><a href="class-TActivePanel.html">TActivePanel</a></li>
+				<li><a href="class-TActiveRadioButton.html">TActiveRadioButton</a></li>
+				<li><a href="class-TActiveRadioButtonItem.html">TActiveRadioButtonItem</a></li>
+				<li><a href="class-TActiveRadioButtonList.html">TActiveRadioButtonList</a></li>
+				<li><a href="class-TActiveRatingList.html">TActiveRatingList</a></li>
+				<li><a href="class-TActiveRepeater.html">TActiveRepeater</a></li>
+				<li><a href="class-TActiveTableCell.html">TActiveTableCell</a></li>
+				<li><a href="class-TActiveTableCellEventParameter.html">TActiveTableCellEventParameter</a></li>
+				<li><a href="class-TActiveTableRow.html">TActiveTableRow</a></li>
+				<li><a href="class-TActiveTableRowEventParameter.html">TActiveTableRowEventParameter</a></li>
+				<li class="active"><a href="class-TActiveTemplateColumn.html">TActiveTemplateColumn</a></li>
+				<li><a href="class-TActiveTextBox.html">TActiveTextBox</a></li>
+				<li><a href="class-TAutoComplete.html">TAutoComplete</a></li>
+				<li><a href="class-TAutoCompleteEventParameter.html">TAutoCompleteEventParameter</a></li>
+				<li><a href="class-TAutoCompleteTemplate.html">TAutoCompleteTemplate</a></li>
+				<li><a href="class-TBaseActiveCallbackControl.html">TBaseActiveCallbackControl</a></li>
+				<li><a href="class-TBaseActiveControl.html">TBaseActiveControl</a></li>
+				<li><a href="class-TCallback.html">TCallback</a></li>
+				<li><a href="class-TCallbackClientScript.html">TCallbackClientScript</a></li>
+				<li><a href="class-TCallbackClientSide.html">TCallbackClientSide</a></li>
+				<li><a href="class-TCallbackErrorHandler.html">TCallbackErrorHandler</a></li>
+				<li><a href="class-TCallbackEventParameter.html">TCallbackEventParameter</a></li>
+				<li><a href="class-TCallbackOptions.html">TCallbackOptions</a></li>
+				<li><a href="class-TCallbackPageStateTracker.html">TCallbackPageStateTracker</a></li>
+				<li><a href="class-TCallbackResponseAdapter.html">TCallbackResponseAdapter</a></li>
+				<li><a href="class-TCallbackResponseWriter.html">TCallbackResponseWriter</a></li>
+				<li><a href="class-TDraggable.html">TDraggable</a></li>
+				<li><a href="class-TDraggableConstraint.html">TDraggableConstraint</a></li>
+				<li><a href="class-TDraggableGhostingOptions.html">TDraggableGhostingOptions</a></li>
+				<li><a href="class-TDraggableRevertOptions.html">TDraggableRevertOptions</a></li>
+				<li><a href="class-TDropContainer.html">TDropContainer</a></li>
+				<li><a href="class-TDropContainerEventParameter.html">TDropContainerEventParameter</a></li>
+				<li><a href="class-TEventTriggeredCallback.html">TEventTriggeredCallback</a></li>
+				<li><a href="class-TInPlaceTextBox.html">TInPlaceTextBox</a></li>
+				<li><a href="class-TJuiAutoComplete.html">TJuiAutoComplete</a></li>
+				<li><a href="class-TJuiAutoCompleteEventParameter.html">TJuiAutoCompleteEventParameter</a></li>
+				<li><a href="class-TJuiAutoCompleteTemplate.html">TJuiAutoCompleteTemplate</a></li>
+				<li><a href="class-TJuiSelectableTemplate.html">TJuiSelectableTemplate</a></li>
+				<li><a href="class-TJuiSortableTemplate.html">TJuiSortableTemplate</a></li>
+				<li><a href="class-TMapCollectionDiff.html">TMapCollectionDiff</a></li>
+				<li><a href="class-TScalarDiff.html">TScalarDiff</a></li>
+				<li><a href="class-TStyleDiff.html">TStyleDiff</a></li>
+				<li><a href="class-TTimeTriggeredCallback.html">TTimeTriggeredCallback</a></li>
+				<li><a href="class-TTriggeredCallback.html">TTriggeredCallback</a></li>
+				<li><a href="class-TValueTriggeredCallback.html">TValueTriggeredCallback</a></li>
+				<li><a href="class-TViewStateDiff.html">TViewStateDiff</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IListControlAdapter.html">IListControlAdapter</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TInvalidCallbackException.html">TInvalidCallbackException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActiveTemplateColumn</h1>
+
+
+	<div class="description">
+	<p>TActiveTemplateColumn class</p>
+
+<p>TActiveTemplateColumn customizes the layout of controls in the column with templates.
+In particular, you can specify setItemTemplate ItemTemplate,
+setEditItemTemplate EditItemTemplate, setHeaderTemplate HeaderTemplate
+and setFooterTemplate FooterTemplate to customize specific
+type of cells in the column.</p>
+
+<p>This is the active counterpart to the <code><a href="class-TTemplateColumn.html">TTemplateColumn</a></code> control. For that purpose,
+if sorting is allowed, the header links/buttons are replaced by active controls.</p>
+
+<p>Please refer to the original documentation of the <code><a href="class-TTemplateColumn.html">TTemplateColumn</a></code> for usage.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TDataGridColumn.html"><span>TDataGridColumn</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TTemplateColumn.html"><span>TTemplateColumn</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TActiveTemplateColumn</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2009 LANDWEHR Computer und Software GmbH<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				LANDWEHR Computer und Software GmbH <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x70;&#x72;&#111;&#x67;&#x72;&#97;&#x6d;&#x6d;&#105;&#x65;&#x72;&#117;&#x6e;&#x67;&#64;&#x6c;&#x61;&#110;&#x64;&#x77;&#101;&#x68;&#x72;&#45;&#x73;&#x6f;&#102;&#116;&#x77;&#97;&#114;&#x65;&#46;&#100;&#x65;">&#x70;&#x72;&#111;&#x67;&#x72;&#97;&#x6d;&#x6d;&#105;&#x65;&#x72;&#117;&#x6e;&#x67;&#64;&#x6c;&#x61;&#110;&#x64;&#x77;&#101;&#x68;&#x72;&#45;&#x73;&#x6f;&#102;&#116;&#x77;&#97;&#114;&#x65;&#46;&#100;&#x65;</a><br>
+				<b>Since:</b>
+				3.1.9<br>
+			<b>Located at</b> Web/UI/ActiveControls/TActiveDataGrid.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="initializeHeaderCell" id="_initializeHeaderCell">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_initializeHeaderCell">#</a>
+		<code>initializeHeaderCell( <span><code><a href="class-TTableCell.html">TTableCell</a></code> <var>$cell</var></span>, <span>integer <var>$columnIndex</var></span> )</code>
+
+		<div class="description short">
+			<p>Initializes the header cell.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initializes the header cell.</p>
+
+<p>This method attempts to use getHeaderRenderer HeaderRenderer to
+instantiate the header cell. If that is not available, it will populate
+the cell with an image or a text string, depending on getHeaderImageUrl HeaderImageUrl
+and getHeaderText HeaderText property values.</p>
+
+<p>If the column allows sorting, image or text will be created as
+a button which issues <b>Sort</b> command upon user click.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cell</var></dt>
+					<dd>cell to be initialized</dd>
+					<dt><var>$columnIndex</var></dt>
+					<dd>index to the Columns property that the cell resides in.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TDataGridColumn.html#_initializeHeaderCell">TDataGridColumn::initializeHeaderCell()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TTemplateColumn.html#methods">TTemplateColumn</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TTemplateColumn.html#_dataBindColumn">dataBindColumn()</a>, 
+			<a href="class-TTemplateColumn.html#_getEditItemRenderer">getEditItemRenderer()</a>, 
+			<a href="class-TTemplateColumn.html#_getEditItemTemplate">getEditItemTemplate()</a>, 
+			<a href="class-TTemplateColumn.html#_getFooterTemplate">getFooterTemplate()</a>, 
+			<a href="class-TTemplateColumn.html#_getHeaderTemplate">getHeaderTemplate()</a>, 
+			<a href="class-TTemplateColumn.html#_getItemRenderer">getItemRenderer()</a>, 
+			<a href="class-TTemplateColumn.html#_getItemTemplate">getItemTemplate()</a>, 
+			<a href="class-TTemplateColumn.html#_initializeCell">initializeCell()</a>, 
+			<a href="class-TTemplateColumn.html#_setEditItemRenderer">setEditItemRenderer()</a>, 
+			<a href="class-TTemplateColumn.html#_setEditItemTemplate">setEditItemTemplate()</a>, 
+			<a href="class-TTemplateColumn.html#_setFooterTemplate">setFooterTemplate()</a>, 
+			<a href="class-TTemplateColumn.html#_setHeaderTemplate">setHeaderTemplate()</a>, 
+			<a href="class-TTemplateColumn.html#_setItemRenderer">setItemRenderer()</a>, 
+			<a href="class-TTemplateColumn.html#_setItemTemplate">setItemTemplate()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TDataGridColumn.html#methods">TDataGridColumn</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TDataGridColumn.html#_formatDataValue">formatDataValue()</a>, 
+			<a href="class-TDataGridColumn.html#_getAllowSorting">getAllowSorting()</a>, 
+			<a href="class-TDataGridColumn.html#_getDataFieldValue">getDataFieldValue()</a>, 
+			<a href="class-TDataGridColumn.html#_getEnableCellGrouping">getEnableCellGrouping()</a>, 
+			<a href="class-TDataGridColumn.html#_getFooterRenderer">getFooterRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_getFooterStyle">getFooterStyle()</a>, 
+			<a href="class-TDataGridColumn.html#_getFooterText">getFooterText()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderImageUrl">getHeaderImageUrl()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderRenderer">getHeaderRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderStyle">getHeaderStyle()</a>, 
+			<a href="class-TDataGridColumn.html#_getHeaderText">getHeaderText()</a>, 
+			<a href="class-TDataGridColumn.html#_getID">getID()</a>, 
+			<a href="class-TDataGridColumn.html#_getItemStyle">getItemStyle()</a>, 
+			<a href="class-TDataGridColumn.html#_getOwner">getOwner()</a>, 
+			<a href="class-TDataGridColumn.html#_getSortExpression">getSortExpression()</a>, 
+			<a href="class-TDataGridColumn.html#_getViewState">getViewState()</a>, 
+			<a href="class-TDataGridColumn.html#_getVisible">getVisible()</a>, 
+			<a href="class-TDataGridColumn.html#_initialize">initialize()</a>, 
+			<a href="class-TDataGridColumn.html#_initializeFooterCell">initializeFooterCell()</a>, 
+			<a href="class-TDataGridColumn.html#_loadState">loadState()</a>, 
+			<a href="class-TDataGridColumn.html#_saveState">saveState()</a>, 
+			<a href="class-TDataGridColumn.html#_setEnableCellGrouping">setEnableCellGrouping()</a>, 
+			<a href="class-TDataGridColumn.html#_setFooterRenderer">setFooterRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_setFooterText">setFooterText()</a>, 
+			<a href="class-TDataGridColumn.html#_setHeaderImageUrl">setHeaderImageUrl()</a>, 
+			<a href="class-TDataGridColumn.html#_setHeaderRenderer">setHeaderRenderer()</a>, 
+			<a href="class-TDataGridColumn.html#_setHeaderText">setHeaderText()</a>, 
+			<a href="class-TDataGridColumn.html#_setID">setID()</a>, 
+			<a href="class-TDataGridColumn.html#_setOwner">setOwner()</a>, 
+			<a href="class-TDataGridColumn.html#_setSortExpression">setSortExpression()</a>, 
+			<a href="class-TDataGridColumn.html#_setViewState">setViewState()</a>, 
+			<a href="class-TDataGridColumn.html#_setVisible">setVisible()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

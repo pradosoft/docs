@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TWebControlDecorator | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TAccordion.html">TAccordion</a></li>
+				<li><a href="class-TAccordionView.html">TAccordionView</a></li>
+				<li><a href="class-TAccordionViewCollection.html">TAccordionViewCollection</a></li>
+				<li><a href="class-TBaseDataList.html">TBaseDataList</a></li>
+				<li><a href="class-TBaseValidator.html">TBaseValidator</a></li>
+				<li><a href="class-TBoundColumn.html">TBoundColumn</a></li>
+				<li><a href="class-TBulletedList.html">TBulletedList</a></li>
+				<li><a href="class-TBulletedListDisplayMode.html">TBulletedListDisplayMode</a></li>
+				<li><a href="class-TBulletedListEventParameter.html">TBulletedListEventParameter</a></li>
+				<li><a href="class-TBulletStyle.html">TBulletStyle</a></li>
+				<li><a href="class-TButton.html">TButton</a></li>
+				<li><a href="class-TButtonColumn.html">TButtonColumn</a></li>
+				<li><a href="class-TButtonColumnType.html">TButtonColumnType</a></li>
+				<li><a href="class-TButtonTag.html">TButtonTag</a></li>
+				<li><a href="class-TButtonType.html">TButtonType</a></li>
+				<li><a href="class-TCaptcha.html">TCaptcha</a></li>
+				<li><a href="class-TCaptchaValidator.html">TCaptchaValidator</a></li>
+				<li><a href="class-TCheckBox.html">TCheckBox</a></li>
+				<li><a href="class-TCheckBoxColumn.html">TCheckBoxColumn</a></li>
+				<li><a href="class-TCheckBoxItem.html">TCheckBoxItem</a></li>
+				<li><a href="class-TCheckBoxList.html">TCheckBoxList</a></li>
+				<li><a href="class-TCircleHotSpot.html">TCircleHotSpot</a></li>
+				<li><a href="class-TClientScript.html">TClientScript</a></li>
+				<li><a href="class-TClientSideValidationSummaryOptions.html">TClientSideValidationSummaryOptions</a></li>
+				<li><a href="class-TColorPicker.html">TColorPicker</a></li>
+				<li><a href="class-TColorPickerClientSide.html">TColorPickerClientSide</a></li>
+				<li><a href="class-TColorPickerMode.html">TColorPickerMode</a></li>
+				<li><a href="class-TCompareValidator.html">TCompareValidator</a></li>
+				<li><a href="class-TCompleteWizardStep.html">TCompleteWizardStep</a></li>
+				<li><a href="class-TConditional.html">TConditional</a></li>
+				<li><a href="class-TContent.html">TContent</a></li>
+				<li><a href="class-TContentDirection.html">TContentDirection</a></li>
+				<li><a href="class-TContentPlaceHolder.html">TContentPlaceHolder</a></li>
+				<li><a href="class-TCustomValidator.html">TCustomValidator</a></li>
+				<li><a href="class-TDataBoundControl.html">TDataBoundControl</a></li>
+				<li><a href="class-TDataGrid.html">TDataGrid</a></li>
+				<li><a href="class-TDataGridColumn.html">TDataGridColumn</a></li>
+				<li><a href="class-TDataGridColumnCollection.html">TDataGridColumnCollection</a></li>
+				<li><a href="class-TDataGridCommandEventParameter.html">TDataGridCommandEventParameter</a></li>
+				<li><a href="class-TDataGridItem.html">TDataGridItem</a></li>
+				<li><a href="class-TDataGridItemCollection.html">TDataGridItemCollection</a></li>
+				<li><a href="class-TDataGridItemEventParameter.html">TDataGridItemEventParameter</a></li>
+				<li><a href="class-TDataGridItemRenderer.html">TDataGridItemRenderer</a></li>
+				<li><a href="class-TDataGridPageChangedEventParameter.html">TDataGridPageChangedEventParameter</a></li>
+				<li><a href="class-TDataGridPager.html">TDataGridPager</a></li>
+				<li><a href="class-TDataGridPagerButtonType.html">TDataGridPagerButtonType</a></li>
+				<li><a href="class-TDataGridPagerEventParameter.html">TDataGridPagerEventParameter</a></li>
+				<li><a href="class-TDataGridPagerMode.html">TDataGridPagerMode</a></li>
+				<li><a href="class-TDataGridPagerPosition.html">TDataGridPagerPosition</a></li>
+				<li><a href="class-TDataGridPagerStyle.html">TDataGridPagerStyle</a></li>
+				<li><a href="class-TDataGridSortCommandEventParameter.html">TDataGridSortCommandEventParameter</a></li>
+				<li><a href="class-TDataList.html">TDataList</a></li>
+				<li><a href="class-TDataListCommandEventParameter.html">TDataListCommandEventParameter</a></li>
+				<li><a href="class-TDataListItem.html">TDataListItem</a></li>
+				<li><a href="class-TDataListItemCollection.html">TDataListItemCollection</a></li>
+				<li><a href="class-TDataListItemEventParameter.html">TDataListItemEventParameter</a></li>
+				<li><a href="class-TDataListItemRenderer.html">TDataListItemRenderer</a></li>
+				<li><a href="class-TDataRenderer.html">TDataRenderer</a></li>
+				<li><a href="class-TDataSourceControl.html">TDataSourceControl</a></li>
+				<li><a href="class-TDataSourceSelectParameters.html">TDataSourceSelectParameters</a></li>
+				<li><a href="class-TDataSourceView.html">TDataSourceView</a></li>
+				<li><a href="class-TDataTypeValidator.html">TDataTypeValidator</a></li>
+				<li><a href="class-TDatePicker.html">TDatePicker</a></li>
+				<li><a href="class-TDatePickerClientScript.html">TDatePickerClientScript</a></li>
+				<li><a href="class-TDatePickerInputMode.html">TDatePickerInputMode</a></li>
+				<li><a href="class-TDatePickerMode.html">TDatePickerMode</a></li>
+				<li><a href="class-TDatePickerPositionMode.html">TDatePickerPositionMode</a></li>
+				<li><a href="class-TDisplayStyle.html">TDisplayStyle</a></li>
+				<li><a href="class-TDropDownList.html">TDropDownList</a></li>
+				<li><a href="class-TDropDownListColumn.html">TDropDownListColumn</a></li>
+				<li><a href="class-TEditCommandColumn.html">TEditCommandColumn</a></li>
+				<li><a href="class-TEmailAddressValidator.html">TEmailAddressValidator</a></li>
+				<li><a href="class-TExpression.html">TExpression</a></li>
+				<li><a href="class-TFileUpload.html">TFileUpload</a></li>
+				<li><a href="class-TFlushOutput.html">TFlushOutput</a></li>
+				<li><a href="class-TFont.html">TFont</a></li>
+				<li><a href="class-THeader1.html">THeader1</a></li>
+				<li><a href="class-THeader2.html">THeader2</a></li>
+				<li><a href="class-THeader3.html">THeader3</a></li>
+				<li><a href="class-THeader4.html">THeader4</a></li>
+				<li><a href="class-THeader5.html">THeader5</a></li>
+				<li><a href="class-THeader6.html">THeader6</a></li>
+				<li><a href="class-THiddenField.html">THiddenField</a></li>
+				<li><a href="class-THorizontalAlign.html">THorizontalAlign</a></li>
+				<li><a href="class-THotSpot.html">THotSpot</a></li>
+				<li><a href="class-THotSpotCollection.html">THotSpotCollection</a></li>
+				<li><a href="class-THotSpotMode.html">THotSpotMode</a></li>
+				<li><a href="class-THtmlArea.html">THtmlArea</a></li>
+				<li><a href="class-THtmlArea4.html">THtmlArea4</a></li>
+				<li><a href="class-THtmlElement.html">THtmlElement</a></li>
+				<li><a href="class-THyperLink.html">THyperLink</a></li>
+				<li><a href="class-THyperLinkColumn.html">THyperLinkColumn</a></li>
+				<li><a href="class-TImage.html">TImage</a></li>
+				<li><a href="class-TImageButton.html">TImageButton</a></li>
+				<li><a href="class-TImageClickEventParameter.html">TImageClickEventParameter</a></li>
+				<li><a href="class-TImageMap.html">TImageMap</a></li>
+				<li><a href="class-TImageMapEventParameter.html">TImageMapEventParameter</a></li>
+				<li><a href="class-TInlineFrame.html">TInlineFrame</a></li>
+				<li><a href="class-TInlineFrameAlign.html">TInlineFrameAlign</a></li>
+				<li><a href="class-TInlineFrameScrollBars.html">TInlineFrameScrollBars</a></li>
+				<li><a href="class-TItemDataRenderer.html">TItemDataRenderer</a></li>
+				<li><a href="class-TJavascriptLogger.html">TJavascriptLogger</a></li>
+				<li><a href="class-TKeyboard.html">TKeyboard</a></li>
+				<li><a href="class-TLabel.html">TLabel</a></li>
+				<li><a href="class-TLinkButton.html">TLinkButton</a></li>
+				<li><a href="class-TListBox.html">TListBox</a></li>
+				<li><a href="class-TListControl.html">TListControl</a></li>
+				<li><a href="class-TListControlValidator.html">TListControlValidator</a></li>
+				<li><a href="class-TListItem.html">TListItem</a></li>
+				<li><a href="class-TListItemType.html">TListItemType</a></li>
+				<li><a href="class-TListSelectionMode.html">TListSelectionMode</a></li>
+				<li><a href="class-TLiteral.html">TLiteral</a></li>
+				<li><a href="class-TLiteralColumn.html">TLiteralColumn</a></li>
+				<li><a href="class-TMarkdown.html">TMarkdown</a></li>
+				<li><a href="class-TMetaTag.html">TMetaTag</a></li>
+				<li><a href="class-TMetaTagCollection.html">TMetaTagCollection</a></li>
+				<li><a href="class-TMultiView.html">TMultiView</a></li>
+				<li><a href="class-TOutputCache.html">TOutputCache</a></li>
+				<li><a href="class-TOutputCacheCalculateKeyEventParameter.html">TOutputCacheCalculateKeyEventParameter</a></li>
+				<li><a href="class-TOutputCacheCheckDependencyEventParameter.html">TOutputCacheCheckDependencyEventParameter</a></li>
+				<li><a href="class-TOutputCacheTextWriterMulti.html">TOutputCacheTextWriterMulti</a></li>
+				<li><a href="class-TPager.html">TPager</a></li>
+				<li><a href="class-TPagerButtonType.html">TPagerButtonType</a></li>
+				<li><a href="class-TPagerMode.html">TPagerMode</a></li>
+				<li><a href="class-TPagerPageChangedEventParameter.html">TPagerPageChangedEventParameter</a></li>
+				<li><a href="class-TPanel.html">TPanel</a></li>
+				<li><a href="class-TPanelStyle.html">TPanelStyle</a></li>
+				<li><a href="class-TPlaceHolder.html">TPlaceHolder</a></li>
+				<li><a href="class-TPolygonHotSpot.html">TPolygonHotSpot</a></li>
+				<li><a href="class-TRadioButton.html">TRadioButton</a></li>
+				<li><a href="class-TRadioButtonItem.html">TRadioButtonItem</a></li>
+				<li><a href="class-TRadioButtonList.html">TRadioButtonList</a></li>
+				<li><a href="class-TRangeValidationDataType.html">TRangeValidationDataType</a></li>
+				<li><a href="class-TRangeValidator.html">TRangeValidator</a></li>
+				<li><a href="class-TRatingList.html">TRatingList</a></li>
+				<li><a href="class-TReadOnlyDataSource.html">TReadOnlyDataSource</a></li>
+				<li><a href="class-TReadOnlyDataSourceView.html">TReadOnlyDataSourceView</a></li>
+				<li><a href="class-TReCaptcha.html">TReCaptcha</a></li>
+				<li><a href="class-TReCaptchaValidator.html">TReCaptchaValidator</a></li>
+				<li><a href="class-TRectangleHotSpot.html">TRectangleHotSpot</a></li>
+				<li><a href="class-TRegularExpressionValidator.html">TRegularExpressionValidator</a></li>
+				<li><a href="class-TRepeatDirection.html">TRepeatDirection</a></li>
+				<li><a href="class-TRepeater.html">TRepeater</a></li>
+				<li><a href="class-TRepeaterCommandEventParameter.html">TRepeaterCommandEventParameter</a></li>
+				<li><a href="class-TRepeaterItem.html">TRepeaterItem</a></li>
+				<li><a href="class-TRepeaterItemCollection.html">TRepeaterItemCollection</a></li>
+				<li><a href="class-TRepeaterItemEventParameter.html">TRepeaterItemEventParameter</a></li>
+				<li><a href="class-TRepeaterItemRenderer.html">TRepeaterItemRenderer</a></li>
+				<li><a href="class-TRepeatInfo.html">TRepeatInfo</a></li>
+				<li><a href="class-TRepeatLayout.html">TRepeatLayout</a></li>
+				<li><a href="class-TRequiredFieldValidator.html">TRequiredFieldValidator</a></li>
+				<li><a href="class-TSafeHtml.html">TSafeHtml</a></li>
+				<li><a href="class-TScrollBars.html">TScrollBars</a></li>
+				<li><a href="class-TServerValidateEventParameter.html">TServerValidateEventParameter</a></li>
+				<li><a href="class-TSlider.html">TSlider</a></li>
+				<li><a href="class-TSliderClientScript.html">TSliderClientScript</a></li>
+				<li><a href="class-TSliderDirection.html">TSliderDirection</a></li>
+				<li><a href="class-TStatements.html">TStatements</a></li>
+				<li><a href="class-TStyle.html">TStyle</a></li>
+				<li><a href="class-TStyleSheet.html">TStyleSheet</a></li>
+				<li><a href="class-TTable.html">TTable</a></li>
+				<li><a href="class-TTableCaptionAlign.html">TTableCaptionAlign</a></li>
+				<li><a href="class-TTableCell.html">TTableCell</a></li>
+				<li><a href="class-TTableCellCollection.html">TTableCellCollection</a></li>
+				<li><a href="class-TTableFooterRow.html">TTableFooterRow</a></li>
+				<li><a href="class-TTableGridLines.html">TTableGridLines</a></li>
+				<li><a href="class-TTableHeaderCell.html">TTableHeaderCell</a></li>
+				<li><a href="class-TTableHeaderRow.html">TTableHeaderRow</a></li>
+				<li><a href="class-TTableHeaderScope.html">TTableHeaderScope</a></li>
+				<li><a href="class-TTableItemStyle.html">TTableItemStyle</a></li>
+				<li><a href="class-TTableRow.html">TTableRow</a></li>
+				<li><a href="class-TTableRowCollection.html">TTableRowCollection</a></li>
+				<li><a href="class-TTableRowSection.html">TTableRowSection</a></li>
+				<li><a href="class-TTableStyle.html">TTableStyle</a></li>
+				<li><a href="class-TTabPanel.html">TTabPanel</a></li>
+				<li><a href="class-TTabView.html">TTabView</a></li>
+				<li><a href="class-TTabViewCollection.html">TTabViewCollection</a></li>
+				<li><a href="class-TTemplateColumn.html">TTemplateColumn</a></li>
+				<li><a href="class-TTemplatedWizardStep.html">TTemplatedWizardStep</a></li>
+				<li><a href="class-TTextAlign.html">TTextAlign</a></li>
+				<li><a href="class-TTextBox.html">TTextBox</a></li>
+				<li><a href="class-TTextBoxAutoCompleteType.html">TTextBoxAutoCompleteType</a></li>
+				<li><a href="class-TTextBoxMode.html">TTextBoxMode</a></li>
+				<li><a href="class-TTextHighlighter.html">TTextHighlighter</a></li>
+				<li><a href="class-TTextHighlighterLineNumberStyle.html">TTextHighlighterLineNumberStyle</a></li>
+				<li><a href="class-TValidationCompareOperator.html">TValidationCompareOperator</a></li>
+				<li><a href="class-TValidationDataType.html">TValidationDataType</a></li>
+				<li><a href="class-TValidationSummary.html">TValidationSummary</a></li>
+				<li><a href="class-TValidationSummaryDisplayMode.html">TValidationSummaryDisplayMode</a></li>
+				<li><a href="class-TValidationSummaryDisplayStyle.html">TValidationSummaryDisplayStyle</a></li>
+				<li><a href="class-TValidatorClientSide.html">TValidatorClientSide</a></li>
+				<li><a href="class-TValidatorDisplayStyle.html">TValidatorDisplayStyle</a></li>
+				<li><a href="class-TVerticalAlign.html">TVerticalAlign</a></li>
+				<li><a href="class-TView.html">TView</a></li>
+				<li><a href="class-TViewCollection.html">TViewCollection</a></li>
+				<li><a href="class-TWebControl.html">TWebControl</a></li>
+				<li><a href="class-TWebControlAdapter.html">TWebControlAdapter</a></li>
+				<li class="active"><a href="class-TWebControlDecorator.html">TWebControlDecorator</a></li>
+				<li><a href="class-TWizard.html">TWizard</a></li>
+				<li><a href="class-TWizardFinishNavigationTemplate.html">TWizardFinishNavigationTemplate</a></li>
+				<li><a href="class-TWizardNavigationButtonStyle.html">TWizardNavigationButtonStyle</a></li>
+				<li><a href="class-TWizardNavigationButtonType.html">TWizardNavigationButtonType</a></li>
+				<li><a href="class-TWizardNavigationContainer.html">TWizardNavigationContainer</a></li>
+				<li><a href="class-TWizardNavigationEventParameter.html">TWizardNavigationEventParameter</a></li>
+				<li><a href="class-TWizardNavigationTemplate.html">TWizardNavigationTemplate</a></li>
+				<li><a href="class-TWizardSideBarListItemTemplate.html">TWizardSideBarListItemTemplate</a></li>
+				<li><a href="class-TWizardSideBarTemplate.html">TWizardSideBarTemplate</a></li>
+				<li><a href="class-TWizardStartNavigationTemplate.html">TWizardStartNavigationTemplate</a></li>
+				<li><a href="class-TWizardStep.html">TWizardStep</a></li>
+				<li><a href="class-TWizardStepCollection.html">TWizardStepCollection</a></li>
+				<li><a href="class-TWizardStepNavigationTemplate.html">TWizardStepNavigationTemplate</a></li>
+				<li><a href="class-TWizardStepType.html">TWizardStepType</a></li>
+				<li><a href="class-TXmlTransform.html">TXmlTransform</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IDataSource.html">IDataSource</a></li>
+				<li><a href="class-IItemDataRenderer.html">IItemDataRenderer</a></li>
+				<li><a href="class-IRepeatInfoUser.html">IRepeatInfoUser</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TWebControlDecorator</h1>
+
+
+	<div class="description">
+	<p>TWebControlDecorator class</p>
+
+<p>A TWebControlDecorator can be applied to a <code><a href="class-TWebControl.html">TWebControl</a></code> to customize its rendering.
+TWebControlDecorator can add custom html code before and after both the open and close
+tag of a <code><a href="class-TWebControl.html">TWebControl</a></code>.
+The html code can be an user-defined text or an external template file that will be
+instantiated and rendered in place.</p>
+
+<p>This is an easy way to have your look and feel depend upon the theme instead of writing
+specific html in your templates to achieve your website desires.
+Here is an example of how to code your theme skin:</p>
+
+<pre>&lt;com:THeader3&gt;
+&lt;prop:Decorator.PreTagText&gt;
+            &lt;!-- Surround the control with a div <span class="php-keyword1">and</span> apply a css <span class="php-keyword1">class</span> to it --&gt;
+    &lt;div <span class="php-keyword1">class</span>=<span class="php-quote">&quot;imported-theme-h3-container&quot;</span>&gt;
+&lt;/prop:Decorator.PreTagText&gt;
+&lt;prop:Decorator.PostTagText&gt;
+            &lt;!-- Properly close the tag --&gt;
+    &lt;/div&gt;
+&lt;/prop:Decorator.PostTagText&gt;
+&lt;/com:THeader3&gt;</pre>
+
+<p>The order of the inclusion of the decoration into the page goes like this:
+* PreTagTemplate
+* PreTagText
+* TWebControl Open Tag Rendered
+* PreContentsText
+* PreContentsTemplate
+* TWebControl Children Rendered
+* PostContentsTemplate
+* PostContentsText
+* TWebControl CloseTag Rendered
+* PostTagText
+* PostTagTemplate</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TWebControlDecorator</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Brad Anderson <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;">&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;</a><br>
+				<b>Since:</b>
+				3.2<br>
+			<b>Located at</b> Web/UI/WebControls/TWebControlDecorator.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-TWebControl.html">TWebControl</a></code> <var>$control</var></span>, <span>boolean <var>$onlyinternal</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.
+Initializes the control .</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.
+Initializes the control .</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$control</var></dt>
+					<dd>control that is to be decorated.</dd>
+					<dt><var>$onlyinternal</var></dt>
+					<dd>decoration is just around the inner content</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TComponent.html#___construct">TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUseState" id="_getUseState">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUseState">#</a>
+		<code>getUseState( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>if the templates in this decoration need state.  This defaults to false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUseState" id="_setUseState">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUseState">#</a>
+		<code>setUseState( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd><p>true to tell the decoration that the templates need state and should be
+placed in a control step before the state is saved.</p></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreTagText" id="_getPreTagText">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreTagText">#</a>
+		<code>getPreTagText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>gets the text before the open tag in the TWebControl
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPreTagText" id="_setPreTagText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPreTagText">#</a>
+		<code>setPreTagText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the text before the open tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreContentsText" id="_getPreContentsText">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreContentsText">#</a>
+		<code>getPreContentsText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the text after the open tag in the TWebControl
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPreContentsText" id="_setPreContentsText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPreContentsText">#</a>
+		<code>setPreContentsText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the text after the open tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPostContentsText" id="_getPostContentsText">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPostContentsText">#</a>
+		<code>getPostContentsText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the text before the close tag in the TWebControl
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPostContentsText" id="_setPostContentsText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPostContentsText">#</a>
+		<code>setPostContentsText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the text before the close tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPostTagText" id="_getPostTagText">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPostTagText">#</a>
+		<code>getPostTagText( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the text before the close tag in the TWebControl
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPostTagText" id="_setPostTagText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPostTagText">#</a>
+		<code>setPostTagText( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the text after the close tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreTagTemplate" id="_getPreTagTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTemplate.html">TTemplate</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreTagTemplate">#</a>
+		<code>getPreTagTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTemplate.html">TTemplate</a></code>|null<br>the template before the open tag in the TWebControl.  Defaults to null.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPreTagTemplate" id="_setPreTagTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPreTagTemplate">#</a>
+		<code>setPreTagTemplate( <span><code><a href="class-TTemplate.html">TTemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the template before the open tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPreContentsTemplate" id="_getPreContentsTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTemplate.html">TTemplate</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPreContentsTemplate">#</a>
+		<code>getPreContentsTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTemplate.html">TTemplate</a></code>|null<br>the template after the open tag in the TWebControl.  Defaults to null.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPreContentsTemplate" id="_setPreContentsTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPreContentsTemplate">#</a>
+		<code>setPreContentsTemplate( <span><code><a href="class-TTemplate.html">TTemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the template after the open tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPostContentsTemplate" id="_getPostContentsTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTemplate.html">TTemplate</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPostContentsTemplate">#</a>
+		<code>getPostContentsTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTemplate.html">TTemplate</a></code>|null<br>the template before the close tag in the TWebControl.  Defaults to null.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPostContentsTemplate" id="_setPostContentsTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPostContentsTemplate">#</a>
+		<code>setPostContentsTemplate( <span><code><a href="class-TTemplate.html">TTemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the template before the close tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPostTagTemplate" id="_getPostTagTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TTemplate.html">TTemplate</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPostTagTemplate">#</a>
+		<code>getPostTagTemplate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TTemplate.html">TTemplate</a></code>|null<br>the template after the close tag in the TWebControl.  Defaults to null.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPostTagTemplate" id="_setPostTagTemplate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPostTagTemplate">#</a>
+		<code>setPostTagTemplate( <span><code><a href="class-TTemplate.html">TTemplate</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>the template before the close tag in the TWebControl</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="instantiate" id="_instantiate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_instantiate">#</a>
+		<code>instantiate( <span> <var>$outercontrol</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>this is a framework call.  The Text decoration can't
+influence the object hierarchy because they are rendered into into the writer directly.
+This call attaches the ensureTemplateDecoration to the TPage onSaveStateComplete so
+these controls don't have page states.  This is as close to not influencing the page as possible.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>this is a framework call.  The Text decoration can't
+influence the object hierarchy because they are rendered into into the writer directly.
+This call attaches the ensureTemplateDecoration to the TPage onSaveStateComplete so
+these controls don't have page states.  This is as close to not influencing the page as possible.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ensureTemplateDecoration" id="_ensureTemplateDecoration">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ensureTemplateDecoration">#</a>
+		<code>ensureTemplateDecoration( <span><code><a href="class-TComponent.html">TComponent</a></code> <var>$sender</var> = <span class="php-keyword1">null</span></span>, <span> <var>$param</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>This method places the templates around the open and close tag.  This takes a parameter which is
+to specify the control to get the outer template decoration.  If no outer control is specified</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method places the templates around the open and close tag.  This takes a parameter which is
+to specify the control to get the outer template decoration.  If no outer control is specified</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sender</var></dt>
+					<dd><p>indicates the component or control to get the outer tag elements, just in case it's
+different than attached TWebControl.  If none is provided, the outer templates default to the attached
+control</p></dd>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>returns true if the template decorations have been added
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderPreTagText" id="_renderPreTagText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderPreTagText">#</a>
+		<code>renderPreTagText( <span>{@link <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>This method places the pre tag text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method places the pre tag text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>the writer to which the text is written</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderPreContentsText" id="_renderPreContentsText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderPreContentsText">#</a>
+		<code>renderPreContentsText( <span>{@link <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>This method places the pre contents text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method places the pre contents text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>the writer to which the text is written</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderPostContentsText" id="_renderPostContentsText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderPostContentsText">#</a>
+		<code>renderPostContentsText( <span>{@link <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>This method places the post contents text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method places the post contents text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>the writer to which the text is written</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderPostTagText" id="_renderPostTagText">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderPostTagText">#</a>
+		<code>renderPostTagText( <span>{@link <var>$writer</var></span> )</code>
+
+		<div class="description short">
+			<p>This method places the post tag text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method places the post tag text into the <code><a href="class-TTextWriter.html">TTextWriter</a></code></p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$writer</var></dt>
+					<dd>the writer to which the text is written</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

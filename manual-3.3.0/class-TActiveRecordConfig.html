@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class TActiveRecordConfig | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TActiveRecord.html">TActiveRecord</a></li>
+				<li><a href="class-TActiveRecordChangeEventParameter.html">TActiveRecordChangeEventParameter</a></li>
+				<li class="active"><a href="class-TActiveRecordConfig.html">TActiveRecordConfig</a></li>
+				<li><a href="class-TActiveRecordCriteria.html">TActiveRecordCriteria</a></li>
+				<li><a href="class-TActiveRecordGateway.html">TActiveRecordGateway</a></li>
+				<li><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></li>
+				<li><a href="class-TActiveRecordManager.html">TActiveRecordManager</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-TActiveRecordConfigurationException.html">TActiveRecordConfigurationException</a></li>
+				<li><a href="class-TActiveRecordException.html">TActiveRecordException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActiveRecordConfig</h1>
+
+
+	<div class="description">
+	<p>TActiveRecordConfig module configuration class.</p>
+
+<p>Database configuration for the default ActiveRecord manager instance.</p>
+
+<p>Example: application.xml configuration</p>
+
+<pre>&lt;modules&gt;
+    &lt;module <span class="php-keyword1">class</span>=<span class="php-quote">&quot;System.Data.ActiveRecord.TActiveRecordConfig&quot;</span> EnableCache=<span class="php-quote">&quot;true&quot;</span>&gt;
+        &lt;database ConnectionString=<span class="php-quote">&quot;mysql:host=localhost;dbname=test&quot;</span>
+            Username=<span class="php-quote">&quot;dbuser&quot;</span> Password=<span class="php-quote">&quot;dbpass&quot;</span> /&gt;
+    &lt;/module&gt;
+&lt;/modules&gt;</pre>
+
+<p>MySQL database definition:</p>
+
+<pre>CREATE TABLE `blogs` (
+ `blog_id` int(<span class="php-num">10</span>) unsigned NOT <span class="php-keyword1">NULL</span> auto_increment,
+ `blog_name` varchar(<span class="php-num">255</span>) NOT <span class="php-keyword1">NULL</span>,
+ `blog_author` varchar(<span class="php-num">255</span>) NOT <span class="php-keyword1">NULL</span>,
+ PRIMARY <span class="php-keyword2">KEY</span>  (`blog_id`)
+) ENGINE=InnoDB <span class="php-keyword1">DEFAULT</span> CHARSET=utf8;</pre>
+
+<p>Record php class:</p>
+
+<pre><span class="php-keyword1">class</span> Blogs <span class="php-keyword1">extends</span> TActiveRecord
+{
+    <span class="php-keyword1">public</span> <span class="php-var">$blog_id</span>;
+<span class="php-keyword1">public</span> <span class="php-var">$blog_name</span>;
+<span class="php-keyword1">public</span> <span class="php-var">$blog_author</span>;
+
+<span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> finder(<span class="php-var">$className</span>=__CLASS__)
+{
+    <span class="php-keyword1">return</span> parent::finder(<span class="php-var">$className</span>);
+}
+}</pre>
+
+<p>Usage example:</p>
+
+<pre><span class="php-keyword1">class</span> Home <span class="php-keyword1">extends</span> TPage
+{
+    <span class="php-keyword1">function</span> onLoad(<span class="php-var">$param</span>)
+    {
+        <span class="php-var">$blogs</span> = Blogs::finder()-&gt;findAll();
+     <span class="php-keyword2">print_r</span>(<span class="php-var">$blogs</span>);
+    }
+}</pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TComponent.html"><span>TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TApplicationComponent.html"><span>TApplicationComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TModule.html"><span>TModule</span></a>
+			
+			 implements 
+				<a href="class-IModule.html"><span>IModule</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-TDataSourceConfig.html"><span>TDataSourceConfig</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TActiveRecordConfig</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Data.html">Data</a>\<a href="package-System.Data.ActiveRecord.html">ActiveRecord</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> Data/ActiveRecord/TActiveRecordConfig.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code>init( <span><code><a href="class-TXmlDocument.html">TXmlDocument</a></code> <var>$xml</var></span> )</code>
+
+		<div class="description short">
+			<p>Initialize the active record manager.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Initialize the active record manager.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$xml</var></dt>
+					<dd>configuration.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TDataSourceConfig.html#_init">TDataSourceConfig::init()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getManager" id="_getManager">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TActiveRecordManager.html">TActiveRecordManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getManager">#</a>
+		<code>getManager( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TActiveRecordManager.html">TActiveRecordManager</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setManagerClass" id="_setManagerClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setManagerClass">#</a>
+		<code>setManagerClass( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Set implementation class of ActiveRecordManager</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set implementation class of ActiveRecordManager</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getManagerClass" id="_getManagerClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getManagerClass">#</a>
+		<code>getManagerClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the implementation class of ActiveRecordManager. Defaults to <a href="TActiveRecordConfig::DEFAULT_GATEWAY_CLASS">DEFAULT_MANAGER_CLASS</a>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setGatewayClass" id="_setGatewayClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setGatewayClass">#</a>
+		<code>setGatewayClass( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Set implementation class of ActiveRecordGateway</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set implementation class of ActiveRecordGateway</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getGatewayClass" id="_getGatewayClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getGatewayClass">#</a>
+		<code>getGatewayClass( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>the implementation class of ActiveRecordGateway. Defaults to <a href="TActiveRecordConfig::DEFAULT_GATEWAY_CLASS">DEFAULT_GATEWAY_CLASS</a>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEnableCache" id="_setEnableCache">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEnableCache">#</a>
+		<code>setEnableCache( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Set true to cache the table meta data.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set true to cache the table meta data.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>to cache sqlmap instance.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEnableCache" id="_getEnableCache">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnableCache">#</a>
+		<code>getEnableCache( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if table meta data should be cached, false otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInvalidFinderResult" id="_getInvalidFinderResult">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInvalidFinderResult">#</a>
+		<code>getInvalidFinderResult( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code><br>Defaults to '<a href="TActiveRecordInvalidFinderResult::Null">Null</a>'.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TActiveRecordConfig.html#_setInvalidFinderResult">TActiveRecordConfig::setInvalidFinderResult()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setInvalidFinderResult" id="_setInvalidFinderResult">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setInvalidFinderResult">#</a>
+		<code>setInvalidFinderResult( <span><code><a href="class-TActiveRecordInvalidFinderResult.html">TActiveRecordInvalidFinderResult</a></code> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Define the way an active record finder react if an invalid magic-finder invoked</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Define the way an active record finder react if an invalid magic-finder invoked</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-TActiveRecordConfig.html#_getInvalidFinderResult">TActiveRecordConfig::getInvalidFinderResult()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TDataSourceConfig.html#methods">TDataSourceConfig</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TDataSourceConfig.html#_findConnectionByID">findConnectionByID()</a>, 
+			<a href="class-TDataSourceConfig.html#_getConnectionClass">getConnectionClass()</a>, 
+			<a href="class-TDataSourceConfig.html#_getConnectionID">getConnectionID()</a>, 
+			<a href="class-TDataSourceConfig.html#_getDatabase">getDatabase()</a>, 
+			<a href="class-TDataSourceConfig.html#_getDbConnection">getDbConnection()</a>, 
+			<a href="class-TDataSourceConfig.html#_setConnectionClass">setConnectionClass()</a>, 
+			<a href="class-TDataSourceConfig.html#_setConnectionID">setConnectionID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TModule.html#methods">TModule</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TModule.html#_getID">getID()</a>, 
+			<a href="class-TModule.html#_setID">setID()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TApplicationComponent.html#methods">TApplicationComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TApplicationComponent.html#_getApplication">getApplication()</a>, 
+			<a href="class-TApplicationComponent.html#_getRequest">getRequest()</a>, 
+			<a href="class-TApplicationComponent.html#_getResponse">getResponse()</a>, 
+			<a href="class-TApplicationComponent.html#_getService">getService()</a>, 
+			<a href="class-TApplicationComponent.html#_getSession">getSession()</a>, 
+			<a href="class-TApplicationComponent.html#_getUser">getUser()</a>, 
+			<a href="class-TApplicationComponent.html#_publishAsset">publishAsset()</a>, 
+			<a href="class-TApplicationComponent.html#_publishFilePath">publishFilePath()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TComponent.html#methods">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#___call">__call()</a>, 
+			<a href="class-TComponent.html#___construct">__construct()</a>, 
+			<a href="class-TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-TComponent.html#___get">__get()</a>, 
+			<a href="class-TComponent.html#___isset">__isset()</a>, 
+			<a href="class-TComponent.html#___set">__set()</a>, 
+			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
+			<a href="class-TComponent.html#___unset">__unset()</a>, 
+			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-TComponent.html#_asa">asa()</a>, 
+			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-TComponent.html#_isa">isa()</a>, 
+			<a href="class-TComponent.html#_listen">listen()</a>, 
+			<a href="class-TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="DEFAULT_MANAGER_CLASS" id="DEFAULT_MANAGER_CLASS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>DEFAULT_MANAGER_CLASS</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DEFAULT_MANAGER_CLASS" class="anchor">#</a>
+				<code><span class="php-quote">'System.Data.ActiveRecord.TActiveRecordManager'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="DEFAULT_GATEWAY_CLASS" id="DEFAULT_GATEWAY_CLASS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+<b>DEFAULT_GATEWAY_CLASS</b>			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#DEFAULT_GATEWAY_CLASS" class="anchor">#</a>
+				<code><span class="php-quote">'System.Data.ActiveRecord.TActiveRecordGateway'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-TComponent.html#constants">TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

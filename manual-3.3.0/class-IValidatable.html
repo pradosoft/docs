@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content=" ">
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Interface IValidatable | PRADO v3.3.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-System.html">
+						System<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Caching.html">
+						Caching					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Collections.html">
+						Collections					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.html">
+						Data<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.html">
+						ActiveRecord<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Relations.html">
+						Relations					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.html">
+						Scaffold<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.ActiveRecord.Scaffold.InputBuilder.html">
+						InputBuilder					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Data.Commom.html">
+						Commom<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Commom.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.Common.html">
+						Common<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.Common.Mssql.html">
+						Mssql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Mysql.html">
+						Mysql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Oracle.html">
+						Oracle					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Pgsql.html">
+						Pgsql					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.Common.Sqlite.html">
+						Sqlite					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-System.Data.DataGateway.html">
+						DataGateway					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.html">
+						SqlMap<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Data.SqlMap.Configuration.html">
+						Configuration					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Data.SqlMap.Statements.html">
+						Statements					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Exceptions.html">
+						Exceptions					</a>
+
+						</li>
+				<li>
+					<a href="package-System.I18N.html">
+						I18N					</a>
+
+						</li>
+				<li>
+					<a href="package-System.IO.html">
+						IO					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Security.html">
+						Security					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Util.html">
+						Util					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.html">
+						Web<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.Javascripts.html">
+						Javascripts					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.Services.html">
+						Services					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.html">
+						UI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-System.Web.UI.ActiveControls.html">
+						ActiveControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.JuiControls.html">
+						JuiControls					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Web.UI.WebControls.html">
+						WebControls					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="package-System.Wsat.html">
+						Wsat					</a>
+
+						</li>
+				<li>
+					<a href="package-System.Xml.html">
+						Xml					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-TBroadcastEventParameter.html">TBroadcastEventParameter</a></li>
+				<li><a href="class-TCachePageStatePersister.html">TCachePageStatePersister</a></li>
+				<li><a href="class-TClientScriptManager.html">TClientScriptManager</a></li>
+				<li><a href="class-TClientSideOptions.html">TClientSideOptions</a></li>
+				<li><a href="class-TCommandEventParameter.html">TCommandEventParameter</a></li>
+				<li><a href="class-TCompositeControl.html">TCompositeControl</a></li>
+				<li><a href="class-TCompositeLiteral.html">TCompositeLiteral</a></li>
+				<li><a href="class-TControl.html">TControl</a></li>
+				<li><a href="class-TControlAdapter.html">TControlAdapter</a></li>
+				<li><a href="class-TControlCollection.html">TControlCollection</a></li>
+				<li><a href="class-TEmptyControlCollection.html">TEmptyControlCollection</a></li>
+				<li><a href="class-TForm.html">TForm</a></li>
+				<li><a href="class-THead.html">THead</a></li>
+				<li><a href="class-THtmlWriter.html">THtmlWriter</a></li>
+				<li><a href="class-TPage.html">TPage</a></li>
+				<li><a href="class-TPageStateFormatter.html">TPageStateFormatter</a></li>
+				<li><a href="class-TPageStatePersister.html">TPageStatePersister</a></li>
+				<li><a href="class-TSessionPageStatePersister.html">TSessionPageStatePersister</a></li>
+				<li><a href="class-TTemplate.html">TTemplate</a></li>
+				<li><a href="class-TTemplateControl.html">TTemplateControl</a></li>
+				<li><a href="class-TTemplateControlInheritable.html">TTemplateControlInheritable</a></li>
+				<li><a href="class-TTemplateManager.html">TTemplateManager</a></li>
+				<li><a href="class-TTextProcessor.html">TTextProcessor</a></li>
+				<li><a href="class-TTheme.html">TTheme</a></li>
+				<li><a href="class-TThemeManager.html">TThemeManager</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-IBroadcastEventReceiver.html">IBroadcastEventReceiver</a></li>
+				<li><a href="class-IButtonControl.html">IButtonControl</a></li>
+				<li><a href="class-INamingContainer.html">INamingContainer</a></li>
+				<li><a href="class-IPageStatePersister.html">IPageStatePersister</a></li>
+				<li><a href="class-IPostBackDataHandler.html">IPostBackDataHandler</a></li>
+				<li><a href="class-IPostBackEventHandler.html">IPostBackEventHandler</a></li>
+				<li><a href="class-ISurroundable.html">ISurroundable</a></li>
+				<li><a href="class-ITemplate.html">ITemplate</a></li>
+				<li><a href="class-ITheme.html">ITheme</a></li>
+				<li class="active"><a href="class-IValidatable.html">IValidatable</a></li>
+				<li><a href="class-IValidator.html">IValidator</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface IValidatable</h1>
+
+
+	<div class="description">
+	<p>IValidatable interface</p>
+
+<p>If a control wants to be validated by a validator, it must implement this interface.</p>
+	</div>
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-TCheckBox.html">TCheckBox</a>, 
+			<a href="class-TCheckBoxList.html">TCheckBoxList</a>, 
+			<a href="class-TDropDownList.html">TDropDownList</a>, 
+			<a href="class-TFileUpload.html">TFileUpload</a>, 
+			<a href="class-THiddenField.html">THiddenField</a>, 
+			<a href="class-TListBox.html">TListBox</a>, 
+			<a href="class-TReCaptcha.html">TReCaptcha</a>, 
+			<a href="class-TTextBox.html">TTextBox</a>
+	</div>
+
+	<div>
+		<h4>Indirect known implementers</h4>
+			<a href="class-TActiveCheckBox.html">TActiveCheckBox</a>, 
+			<a href="class-TActiveCheckBoxList.html">TActiveCheckBoxList</a>, 
+			<a href="class-TActiveRadioButtonList.html">TActiveRadioButtonList</a>, 
+			<a href="class-TActiveRatingList.html">TActiveRatingList</a>, 
+			<a href="class-TActiveTextBox.html">TActiveTextBox</a>, 
+			<a href="class-TAutoComplete.html">TAutoComplete</a>, 
+			<a href="class-TCheckBoxItem.html">TCheckBoxItem</a>, 
+			<a href="class-TColorPicker.html">TColorPicker</a>, 
+			<a href="class-TDatePicker.html">TDatePicker</a>, 
+			<a href="class-THtmlArea.html">THtmlArea</a>, 
+			<a href="class-THtmlArea4.html">THtmlArea4</a>, 
+			<a href="class-TInPlaceTextBox.html">TInPlaceTextBox</a>, 
+			<a href="class-TActiveCheckBoxListItem.html">TActiveCheckBoxListItem</a>, 
+			<a href="class-TJuiAutoComplete.html">TJuiAutoComplete</a>, 
+			<a href="class-TJuiDatePicker.html">TJuiDatePicker</a>, 
+			<a href="class-TRadioButton.html">TRadioButton</a>, 
+			<a href="class-TRadioButtonItem.html">TRadioButtonItem</a>, 
+			<a href="class-TRadioButtonList.html">TRadioButtonList</a>, 
+			<a href="class-TRatingList.html">TRatingList</a>, 
+			<a href="class-TActiveDatePicker.html">TActiveDatePicker</a>, 
+			<a href="class-TActiveDropDownList.html">TActiveDropDownList</a>, 
+			<a href="class-TActiveFileUpload.html">TActiveFileUpload</a>, 
+			<a href="class-TActiveHiddenField.html">TActiveHiddenField</a>, 
+			<a href="class-TActiveListBox.html">TActiveListBox</a>, 
+			<a href="class-TActiveRadioButton.html">TActiveRadioButton</a>, 
+			<a href="class-TActiveRadioButtonItem.html">TActiveRadioButtonItem</a>
+	</div>
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a><br>
+
+				<b>Copyright:</b>
+				Copyright &copy; 2005-2015 PradoSoft<br>
+				<b>License:</b>
+				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<b>Author:</b>
+				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
+				<b>Since:</b>
+				3.0<br>
+			<b>Located at</b> Web/UI/TControl.php		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getValidationPropertyValue" id="_getValidationPropertyValue">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getValidationPropertyValue">#</a>
+		<code>getValidationPropertyValue( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the value of the property to be validated.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIsValid" id="_getIsValid">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIsValid">#</a>
+		<code>getIsValid( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>wether this control's validators validated successfully (must default to true)
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setIsValid" id="_setIsValid">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setIsValid">#</a>
+		<code>setIsValid( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>wether this control's validators validated successfully
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
