@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class TStyleSheet | PRADO v3.3.0 API Manual</title>
+	<title>Class TStyleSheet | PRADO v3.3.1 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -363,6 +363,8 @@
 				<li><a href="class-TReadOnlyDataSource.html">TReadOnlyDataSource</a></li>
 				<li><a href="class-TReadOnlyDataSourceView.html">TReadOnlyDataSourceView</a></li>
 				<li><a href="class-TReCaptcha.html">TReCaptcha</a></li>
+				<li><a href="class-TReCaptcha2.html">TReCaptcha2</a></li>
+				<li><a href="class-TReCaptcha2Validator.html">TReCaptcha2Validator</a></li>
 				<li><a href="class-TReCaptchaValidator.html">TReCaptchaValidator</a></li>
 				<li><a href="class-TRectangleHotSpot.html">TRectangleHotSpot</a></li>
 				<li><a href="class-TRegularExpressionValidator.html">TRegularExpressionValidator</a></li>
@@ -498,8 +500,16 @@
 	<p>TStyleSheet class.</p>
 
 <p>TStyleSheet represents the link to a stylesheet file and/or a piece of
-stylesheet code. To specify the link to a CSS file, set setStyleSheetUrl StyleSheetUrl.
-The child rendering result of TStyleSheet is treated as CSS code and
+stylesheet code. To specify the link to a CSS file, set setStyleSheetUrl
+StyleSheetUrl.
+Since Prado 3.3.1, it' possible to import css libraries bundled with
+Prado from template via the setPradoStyles PradoStyles property.
+Multiple Prado libraries can be specified using comma delimited string of the
+css library to include on the page. For example,</p>
+
+<pre>&lt;com:TStyleSheet PradoStyles=<span class="php-quote">&quot;bootstrap, jquery.ui.progressbar&quot;</span> /&gt;</pre>
+
+<p>The child rendering result of TStyleSheet is treated as CSS code and
 is rendered within an appropriate style HTML element.
 Therefore, if the child content is not empty, you should place the TStyleSheet
 control in the head section of your page to conform to the HTML standard.
@@ -554,9 +564,9 @@ and the style element will be rendered in the right position.</p>
 		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.WebControls.html">WebControls</a><br>
 
 				<b>Copyright:</b>
-				Copyright &copy; 2005-2015 PradoSoft<br>
+				Copyright &copy; 2005-2016 The PRADO Group<br>
 				<b>License:</b>
-				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<a href="https://github.com/pradosoft/prado/blob/master/COPYRIGHT">https://github.com/pradosoft/prado/blob/master/COPYRIGHT</a><br>
 				<b>Author:</b>
 				Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
 				<b>Version:</b>
@@ -570,6 +580,88 @@ and the style element will be rendered in the right position.</p>
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="getPradoStyles" id="_getPradoStyles">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPradoStyles">#</a>
+		<code>getPradoStyles( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br><p>comma delimited list of css libraries to include
+on the page.</p>
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.3.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPradoStyles" id="_setPradoStyles">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPradoStyles">#</a>
+		<code>setPradoStyles( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Include css library to the current page. The current supported
+libraries are: "jquery-ui", "bootstrap" and all the split
+jquery.ui.componentname libraries.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Include css library to the current page. The current supported
+libraries are: "jquery-ui", "bootstrap" and all the split
+jquery.ui.componentname libraries.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>delimited list of css libraries to include.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.3.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="setStyleSheetUrl" id="_setStyleSheetUrl">
 
 		<td class="attributes"><code>
@@ -918,7 +1010,7 @@ This method overrides the parent implementation and renders nothing.</p>
 			<a href="class-TComponent.html#___set">__set()</a>, 
 			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
 			<a href="class-TComponent.html#___unset">__unset()</a>, 
-			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#__getZappableSleepProps">_getZappableSleepProps()</a>, 
 			<a href="class-TComponent.html#_asa">asa()</a>, 
 			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
 			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
@@ -1020,7 +1112,7 @@ This method overrides the parent implementation and renders nothing.</p>
 </div>
 
 	<div id="footer">
-		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		PRADO v3.3.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>

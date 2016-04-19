@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class TAutoComplete | PRADO v3.3.0 API Manual</title>
+	<title>Deprecated Class TAutoComplete | PRADO v3.3.1 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -273,7 +273,7 @@
 				<li><a href="class-TActiveTableRowEventParameter.html">TActiveTableRowEventParameter</a></li>
 				<li><a href="class-TActiveTemplateColumn.html">TActiveTemplateColumn</a></li>
 				<li><a href="class-TActiveTextBox.html">TActiveTextBox</a></li>
-				<li class="active"><a href="class-TAutoComplete.html">TAutoComplete</a></li>
+				<li class="active"><a href="class-TAutoComplete.html" class="deprecated">TAutoComplete</a></li>
 				<li><a href="class-TAutoCompleteEventParameter.html">TAutoCompleteEventParameter</a></li>
 				<li><a href="class-TAutoCompleteTemplate.html">TAutoCompleteTemplate</a></li>
 				<li><a href="class-TBaseActiveCallbackControl.html">TBaseActiveCallbackControl</a></li>
@@ -287,11 +287,11 @@
 				<li><a href="class-TCallbackPageStateTracker.html">TCallbackPageStateTracker</a></li>
 				<li><a href="class-TCallbackResponseAdapter.html">TCallbackResponseAdapter</a></li>
 				<li><a href="class-TCallbackResponseWriter.html">TCallbackResponseWriter</a></li>
-				<li><a href="class-TDraggable.html">TDraggable</a></li>
+				<li><a href="class-TDraggable.html" class="deprecated">TDraggable</a></li>
 				<li><a href="class-TDraggableConstraint.html">TDraggableConstraint</a></li>
 				<li><a href="class-TDraggableGhostingOptions.html">TDraggableGhostingOptions</a></li>
 				<li><a href="class-TDraggableRevertOptions.html">TDraggableRevertOptions</a></li>
-				<li><a href="class-TDropContainer.html">TDropContainer</a></li>
+				<li><a href="class-TDropContainer.html" class="deprecated">TDropContainer</a></li>
 				<li><a href="class-TDropContainerEventParameter.html">TDropContainerEventParameter</a></li>
 				<li><a href="class-TEventTriggeredCallback.html">TEventTriggeredCallback</a></li>
 				<li><a href="class-TInPlaceTextBox.html">TInPlaceTextBox</a></li>
@@ -362,11 +362,14 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class TAutoComplete</h1>
+	<h1 class="deprecated">Class TAutoComplete</h1>
 
 
 	<div class="description">
 	<p>TAutoComplete class.</p>
+
+<p>Warning: this class is deprecatd and will be removed in a future release.
+We suggest you to investigate using <code><a href="class-TJuiAutoComplete.html">TJuiAutoComplete</a></code> instead.</p>
 
 <p>TAutoComplete is a textbox that provides a list of suggestion on
 the current partial word typed in the textbox. The suggestions are
@@ -380,7 +383,7 @@ vice versa.</p>
 <p>The list of suggestions should be set in the onSuggestion OnSuggestion
 event handler. The partial word to match the suggestion is in the
 <a href="TCallbackEventParameter::getCallbackParameter">TCallbackEventParameter::CallbackParameter</a>
-property. The datasource of the TAutoComplete must be set using <code><a href="class-TAutoComplete.html#_setDataSource">TAutoComplete::setDataSource()</a></code>
+property. The datasource of the TAutoComplete must be set using <code><a href="class-TAutoComplete.html#_setDataSource" class="deprecated">TAutoComplete::setDataSource()</a></code>
 method. This sets the datasource for the suggestions repeater, available through
 the getSuggestions Suggestions property. Header, footer templates and
 other properties of the repeater can be access via the getSuggestions Suggestions
@@ -402,7 +405,7 @@ and call databind. For example,</p>
   <span class="php-var">$sender</span>-&gt;dataBind();
 }</pre>
 
-<p>The suggestion will be rendered when the <code><a href="class-TAutoComplete.html#_dataBind">TAutoComplete::dataBind()</a></code> method is called
+<p>The suggestion will be rendered when the <code><a href="class-TAutoComplete.html#_dataBind" class="deprecated">TAutoComplete::dataBind()</a></code> method is called
 <strong>during a callback request</strong>.</p>
 
 <p>When an suggestion is selected, that is, when the use has clicked, pressed
@@ -485,7 +488,7 @@ are considered as text for the suggestion. Text within HTML elements with CSS cl
 		</dd>
 		<dd style="padding-left:180px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>TAutoComplete</span></b>			
+<b><span class="deprecated">TAutoComplete</span></b>			
 			 implements 
 				<a href="class-INamingContainer.html"><span>INamingContainer</span></a>
 			
@@ -506,10 +509,12 @@ are considered as text for the suggestion. Text within HTML elements with CSS cl
 		
 		<b>Package:</b> <a href="package-System.html">System</a>\<a href="package-System.Web.html">Web</a>\<a href="package-System.Web.UI.html">UI</a>\<a href="package-System.Web.UI.ActiveControls.html">ActiveControls</a><br>
 
+				<b>Deprecated:</b>
+				Use TJuiAutoComplete instead<br>
 				<b>Copyright:</b>
-				Copyright &copy; 2005-2015 PradoSoft<br>
+				Copyright &copy; 2005-2016 The PRADO Group<br>
 				<b>License:</b>
-				<a href="http://www.pradosoft.com/license/">http://www.pradosoft.com/license/</a><br>
+				<a href="https://github.com/pradosoft/prado/blob/master/COPYRIGHT">https://github.com/pradosoft/prado/blob/master/COPYRIGHT</a><br>
 				<b>Author:</b>
 				Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
 				<b>Since:</b>
@@ -521,7 +526,7 @@ are considered as text for the suggestion. Text within HTML elements with CSS cl
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="getSeparator" id="_getSeparator">
+	<tr data-order="getSeparator" id="_getSeparator" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -555,7 +560,7 @@ are considered as text for the suggestion. Text within HTML elements with CSS cl
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setSeparator" id="_setSeparator">
+	<tr data-order="setSeparator" id="_setSeparator" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -589,7 +594,7 @@ are considered as text for the suggestion. Text within HTML elements with CSS cl
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getFrequency" id="_getFrequency">
+	<tr data-order="getFrequency" id="_getFrequency" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -623,7 +628,7 @@ are considered as text for the suggestion. Text within HTML elements with CSS cl
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setFrequency" id="_setFrequency">
+	<tr data-order="setFrequency" id="_setFrequency" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -659,7 +664,7 @@ Default is 0.4.</p></dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getMinChars" id="_getMinChars">
+	<tr data-order="getMinChars" id="_getMinChars" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -693,7 +698,7 @@ Default is 0.4.</p></dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setMinChars" id="_setMinChars">
+	<tr data-order="setMinChars" id="_setMinChars" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -728,7 +733,7 @@ Default is 0.4.</p></dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setTextCssClass" id="_setTextCssClass">
+	<tr data-order="setTextCssClass" id="_setTextCssClass" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -763,7 +768,7 @@ Default is 0.4.</p></dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getTextCssClass" id="_getTextCssClass">
+	<tr data-order="getTextCssClass" id="_getTextCssClass" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -797,7 +802,7 @@ Default is 0.4.</p></dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="raiseCallbackEvent" id="_raiseCallbackEvent">
+	<tr data-order="raiseCallbackEvent" id="_raiseCallbackEvent" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -846,7 +851,7 @@ This method is mainly used by framework and control developers.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="onSuggest" id="_onSuggest">
+	<tr data-order="onSuggest" id="_onSuggest" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -887,7 +892,7 @@ handler can be invoked.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="onSuggestionSelected" id="_onSuggestionSelected">
+	<tr data-order="onSuggestionSelected" id="_onSuggestionSelected" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -928,7 +933,7 @@ handler can be invoked.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setDataSource" id="_setDataSource">
+	<tr data-order="setDataSource" id="_setDataSource" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -963,7 +968,7 @@ handler can be invoked.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="dataBind" id="_dataBind">
+	<tr data-order="dataBind" id="_dataBind" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -978,12 +983,12 @@ handler can be invoked.</p>
 		<code>dataBind( )</code>
 
 		<div class="description short">
-			<p>Overrides parent implementation. Callback <code><a href="class-TAutoComplete.html#_renderSuggestions">TAutoComplete::renderSuggestions()</a></code> when
+			<p>Overrides parent implementation. Callback <code><a href="class-TAutoComplete.html#_renderSuggestions" class="deprecated">TAutoComplete::renderSuggestions()</a></code> when
 page's IsCallback property is true.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Overrides parent implementation. Callback <code><a href="class-TAutoComplete.html#_renderSuggestions">TAutoComplete::renderSuggestions()</a></code> when
+			<p>Overrides parent implementation. Callback <code><a href="class-TAutoComplete.html#_renderSuggestions" class="deprecated">TAutoComplete::renderSuggestions()</a></code> when
 page's IsCallback property is true.</p>
 
 
@@ -997,7 +1002,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getResultPanel" id="_getResultPanel">
+	<tr data-order="getResultPanel" id="_getResultPanel" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -1031,7 +1036,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="createResultPanel" id="_createResultPanel">
+	<tr data-order="createResultPanel" id="_createResultPanel" class="deprecated">
 
 		<td class="attributes"><code>
 			 protected 
@@ -1065,7 +1070,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getSuggestions" id="_getSuggestions">
+	<tr data-order="getSuggestions" id="_getSuggestions" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -1099,7 +1104,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="createRepeater" id="_createRepeater">
+	<tr data-order="createRepeater" id="_createRepeater" class="deprecated">
 
 		<td class="attributes"><code>
 			 protected 
@@ -1133,7 +1138,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="renderEndTag" id="_renderEndTag">
+	<tr data-order="renderEndTag" id="_renderEndTag" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -1170,7 +1175,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="renderResultPanel" id="_renderResultPanel">
+	<tr data-order="renderResultPanel" id="_renderResultPanel" class="deprecated">
 
 		<td class="attributes"><code>
 			 protected 
@@ -1205,7 +1210,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="renderCallback" id="_renderCallback">
+	<tr data-order="renderCallback" id="_renderCallback" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -1240,7 +1245,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="renderSuggestions" id="_renderSuggestions">
+	<tr data-order="renderSuggestions" id="_renderSuggestions" class="deprecated">
 
 		<td class="attributes"><code>
 			 public 
@@ -1275,7 +1280,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getPostBackOptions" id="_getPostBackOptions">
+	<tr data-order="getPostBackOptions" id="_getPostBackOptions" class="deprecated">
 
 		<td class="attributes"><code>
 			 protected 
@@ -1311,7 +1316,7 @@ page's IsCallback property is true.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="renderClientControlScript" id="_renderClientControlScript">
+	<tr data-order="renderClientControlScript" id="_renderClientControlScript" class="deprecated">
 
 		<td class="attributes"><code>
 			 protected 
@@ -1345,7 +1350,7 @@ the javascript required for active control is registered in <code><a href="class
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="getClientClassName" id="_getClientClassName">
+	<tr data-order="getClientClassName" id="_getClientClassName" class="deprecated">
 
 		<td class="attributes"><code>
 			 protected 
@@ -1615,7 +1620,7 @@ the javascript required for active control is registered in <code><a href="class
 			<a href="class-TComponent.html#___set">__set()</a>, 
 			<a href="class-TComponent.html#___sleep">__sleep()</a>, 
 			<a href="class-TComponent.html#___unset">__unset()</a>, 
-			<a href="class-TComponent.html#___wakeup">__wakeup()</a>, 
+			<a href="class-TComponent.html#__getZappableSleepProps">_getZappableSleepProps()</a>, 
 			<a href="class-TComponent.html#_asa">asa()</a>, 
 			<a href="class-TComponent.html#_attachBehavior">attachBehavior()</a>, 
 			<a href="class-TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
@@ -1734,7 +1739,7 @@ the javascript required for active control is registered in <code><a href="class
 </div>
 
 	<div id="footer">
-		PRADO v3.3.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		PRADO v3.3.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
