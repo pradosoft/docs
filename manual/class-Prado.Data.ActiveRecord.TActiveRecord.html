@@ -1,0 +1,3409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="content-language" content="en">
+	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Author" content="Qiang Xue">
+	<meta name="Subject" content="Web programming, PHP framework">
+	<meta name="Language" content="en">
+	<link rel="Shortcut Icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/manual.css">
+
+	<title>Class Prado\Data\ActiveRecord\TActiveRecord | Prado 4.0 API Manual</title>
+
+	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
+
+</head>
+
+<body>
+
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Prado.Caching.TAPCCache.html">Prado\Caching\TAPCCache</a></li>
+				<li><a href="class-Prado.Caching.TApplicationStateCacheDependency.html">Prado\Caching\TApplicationStateCacheDependency</a></li>
+				<li><a href="class-Prado.Caching.TCache.html">Prado\Caching\TCache</a></li>
+				<li><a href="class-Prado.Caching.TCacheDependency.html">Prado\Caching\TCacheDependency</a></li>
+				<li><a href="class-Prado.Caching.TCacheDependencyList.html">Prado\Caching\TCacheDependencyList</a></li>
+				<li><a href="class-Prado.Caching.TChainedCacheDependency.html">Prado\Caching\TChainedCacheDependency</a></li>
+				<li><a href="class-Prado.Caching.TDbCache.html">Prado\Caching\TDbCache</a></li>
+				<li><a href="class-Prado.Caching.TDirectoryCacheDependency.html">Prado\Caching\TDirectoryCacheDependency</a></li>
+				<li><a href="class-Prado.Caching.TEACache.html">Prado\Caching\TEACache</a></li>
+				<li><a href="class-Prado.Caching.TEtcdCache.html">Prado\Caching\TEtcdCache</a></li>
+				<li><a href="class-Prado.Caching.TFileCacheDependency.html">Prado\Caching\TFileCacheDependency</a></li>
+				<li><a href="class-Prado.Caching.TGlobalStateCacheDependency.html">Prado\Caching\TGlobalStateCacheDependency</a></li>
+				<li><a href="class-Prado.Caching.TMemCache.html">Prado\Caching\TMemCache</a></li>
+				<li><a href="class-Prado.Caching.TRedisCache.html">Prado\Caching\TRedisCache</a></li>
+				<li><a href="class-Prado.Caching.TSqliteCache.html">Prado\Caching\TSqliteCache</a></li>
+				<li><a href="class-Prado.Caching.TXCache.html">Prado\Caching\TXCache</a></li>
+				<li><a href="class-Prado.Collections.TAttributeCollection.html">Prado\Collections\TAttributeCollection</a></li>
+				<li><a href="class-Prado.Collections.TDummyDataSource.html">Prado\Collections\TDummyDataSource</a></li>
+				<li><a href="class-Prado.Collections.TDummyDataSourceIterator.html">Prado\Collections\TDummyDataSourceIterator</a></li>
+				<li><a href="class-Prado.Collections.TList.html">Prado\Collections\TList</a></li>
+				<li><a href="class-Prado.Collections.TListItemCollection.html">Prado\Collections\TListItemCollection</a></li>
+				<li><a href="class-Prado.Collections.TListIterator.html" class="deprecated">Prado\Collections\TListIterator</a></li>
+				<li><a href="class-Prado.Collections.TMap.html">Prado\Collections\TMap</a></li>
+				<li><a href="class-Prado.Collections.TMapIterator.html" class="deprecated">Prado\Collections\TMapIterator</a></li>
+				<li><a href="class-Prado.Collections.TPagedDataSource.html">Prado\Collections\TPagedDataSource</a></li>
+				<li><a href="class-Prado.Collections.TPagedList.html">Prado\Collections\TPagedList</a></li>
+				<li><a href="class-Prado.Collections.TPagedListFetchDataEventParameter.html">Prado\Collections\TPagedListFetchDataEventParameter</a></li>
+				<li><a href="class-Prado.Collections.TPagedListIterator.html">Prado\Collections\TPagedListIterator</a></li>
+				<li><a href="class-Prado.Collections.TPagedListPageChangedEventParameter.html">Prado\Collections\TPagedListPageChangedEventParameter</a></li>
+				<li><a href="class-Prado.Collections.TPagedMapIterator.html">Prado\Collections\TPagedMapIterator</a></li>
+				<li><a href="class-Prado.Collections.TPriorityList.html">Prado\Collections\TPriorityList</a></li>
+				<li><a href="class-Prado.Collections.TPriorityMap.html">Prado\Collections\TPriorityMap</a></li>
+				<li><a href="class-Prado.Collections.TQueue.html">Prado\Collections\TQueue</a></li>
+				<li><a href="class-Prado.Collections.TQueueIterator.html">Prado\Collections\TQueueIterator</a></li>
+				<li><a href="class-Prado.Collections.TStack.html">Prado\Collections\TStack</a></li>
+				<li><a href="class-Prado.Collections.TStackIterator.html" class="deprecated">Prado\Collections\TStackIterator</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordBelongsTo.html">Prado\Data\ActiveRecord\Relations\TActiveRecordBelongsTo</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasMany.html">Prado\Data\ActiveRecord\Relations\TActiveRecordHasMany</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html">Prado\Data\ActiveRecord\Relations\TActiveRecordHasManyAssociation</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasOne.html">Prado\Data\ActiveRecord\Relations\TActiveRecordHasOne</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordRelation.html">Prado\Data\ActiveRecord\Relations\TActiveRecordRelation</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordRelationContext.html">Prado\Data\ActiveRecord\Relations\TActiveRecordRelationContext</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.InputBuilder.TIbmScaffoldInput.html">Prado\Data\ActiveRecord\Scaffold\InputBuilder\TIbmScaffoldInput</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.InputBuilder.TMssqlScaffoldInput.html">Prado\Data\ActiveRecord\Scaffold\InputBuilder\TMssqlScaffoldInput</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.InputBuilder.TMysqlScaffoldInput.html">Prado\Data\ActiveRecord\Scaffold\InputBuilder\TMysqlScaffoldInput</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.InputBuilder.TPgsqlScaffoldInput.html">Prado\Data\ActiveRecord\Scaffold\InputBuilder\TPgsqlScaffoldInput</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.InputBuilder.TScaffoldInputBase.html">Prado\Data\ActiveRecord\Scaffold\InputBuilder\TScaffoldInputBase</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.InputBuilder.TScaffoldInputCommon.html">Prado\Data\ActiveRecord\Scaffold\InputBuilder\TScaffoldInputCommon</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.InputBuilder.TSqliteScaffoldInput.html">Prado\Data\ActiveRecord\Scaffold\InputBuilder\TSqliteScaffoldInput</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.TScaffoldBase.html">Prado\Data\ActiveRecord\Scaffold\TScaffoldBase</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.TScaffoldEditView.html">Prado\Data\ActiveRecord\Scaffold\TScaffoldEditView</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.TScaffoldListView.html">Prado\Data\ActiveRecord\Scaffold\TScaffoldListView</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.TScaffoldSearch.html">Prado\Data\ActiveRecord\Scaffold\TScaffoldSearch</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.TScaffoldView.html">Prado\Data\ActiveRecord\Scaffold\TScaffoldView</a></li>
+				<li class="active"><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.TActiveRecordConfig.html">Prado\Data\ActiveRecord\TActiveRecordConfig</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.TActiveRecordGateway.html">Prado\Data\ActiveRecord\TActiveRecordGateway</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.TActiveRecordInvalidFinderResult.html">Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.TActiveRecordManager.html">Prado\Data\ActiveRecord\TActiveRecordManager</a></li>
+				<li><a href="class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html">Prado\Data\Common\Mssql\TMssqlCommandBuilder</a></li>
+				<li><a href="class-Prado.Data.Common.Mssql.TMssqlMetaData.html">Prado\Data\Common\Mssql\TMssqlMetaData</a></li>
+				<li><a href="class-Prado.Data.Common.Mssql.TMssqlTableColumn.html">Prado\Data\Common\Mssql\TMssqlTableColumn</a></li>
+				<li><a href="class-Prado.Data.Common.Mssql.TMssqlTableInfo.html">Prado\Data\Common\Mssql\TMssqlTableInfo</a></li>
+				<li><a href="class-Prado.Data.Common.Mysql.TMysqlCommandBuilder.html">Prado\Data\Common\Mysql\TMysqlCommandBuilder</a></li>
+				<li><a href="class-Prado.Data.Common.Mysql.TMysqlMetaData.html">Prado\Data\Common\Mysql\TMysqlMetaData</a></li>
+				<li><a href="class-Prado.Data.Common.Mysql.TMysqlTableColumn.html">Prado\Data\Common\Mysql\TMysqlTableColumn</a></li>
+				<li><a href="class-Prado.Data.Common.Mysql.TMysqlTableInfo.html">Prado\Data\Common\Mysql\TMysqlTableInfo</a></li>
+				<li><a href="class-Prado.Data.Common.Oracle.TOracleCommandBuilder.html">Prado\Data\Common\Oracle\TOracleCommandBuilder</a></li>
+				<li><a href="class-Prado.Data.Common.Oracle.TOracleMetaData.html">Prado\Data\Common\Oracle\TOracleMetaData</a></li>
+				<li><a href="class-Prado.Data.Common.Oracle.TOracleTableColumn.html">Prado\Data\Common\Oracle\TOracleTableColumn</a></li>
+				<li><a href="class-Prado.Data.Common.Oracle.TOracleTableInfo.html">Prado\Data\Common\Oracle\TOracleTableInfo</a></li>
+				<li><a href="class-Prado.Data.Common.Pgsql.TPgsqlCommandBuilder.html">Prado\Data\Common\Pgsql\TPgsqlCommandBuilder</a></li>
+				<li><a href="class-Prado.Data.Common.Pgsql.TPgsqlMetaData.html">Prado\Data\Common\Pgsql\TPgsqlMetaData</a></li>
+				<li><a href="class-Prado.Data.Common.Pgsql.TPgsqlTableColumn.html">Prado\Data\Common\Pgsql\TPgsqlTableColumn</a></li>
+				<li><a href="class-Prado.Data.Common.Pgsql.TPgsqlTableInfo.html">Prado\Data\Common\Pgsql\TPgsqlTableInfo</a></li>
+				<li><a href="class-Prado.Data.Common.Sqlite.TSqliteCommandBuilder.html">Prado\Data\Common\Sqlite\TSqliteCommandBuilder</a></li>
+				<li><a href="class-Prado.Data.Common.Sqlite.TSqliteMetaData.html">Prado\Data\Common\Sqlite\TSqliteMetaData</a></li>
+				<li><a href="class-Prado.Data.Common.Sqlite.TSqliteTableColumn.html">Prado\Data\Common\Sqlite\TSqliteTableColumn</a></li>
+				<li><a href="class-Prado.Data.Common.Sqlite.TSqliteTableInfo.html">Prado\Data\Common\Sqlite\TSqliteTableInfo</a></li>
+				<li><a href="class-Prado.Data.Common.TDbCommandBuilder.html">Prado\Data\Common\TDbCommandBuilder</a></li>
+				<li><a href="class-Prado.Data.Common.TDbMetaData.html">Prado\Data\Common\TDbMetaData</a></li>
+				<li><a href="class-Prado.Data.Common.TDbTableColumn.html">Prado\Data\Common\TDbTableColumn</a></li>
+				<li><a href="class-Prado.Data.Common.TDbTableInfo.html">Prado\Data\Common\TDbTableInfo</a></li>
+				<li><a href="class-Prado.Data.DataGateway.TDataGatewayCommand.html">Prado\Data\DataGateway\TDataGatewayCommand</a></li>
+				<li><a href="class-Prado.Data.DataGateway.TDataGatewayEventParameter.html">Prado\Data\DataGateway\TDataGatewayEventParameter</a></li>
+				<li><a href="class-Prado.Data.DataGateway.TDataGatewayResultEventParameter.html">Prado\Data\DataGateway\TDataGatewayResultEventParameter</a></li>
+				<li><a href="class-Prado.Data.DataGateway.TSqlCriteria.html">Prado\Data\DataGateway\TSqlCriteria</a></li>
+				<li><a href="class-Prado.Data.DataGateway.TTableGateway.html">Prado\Data\DataGateway\TTableGateway</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TDiscriminator.html">Prado\Data\SqlMap\Configuration\TDiscriminator</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TInlineParameterMapParser.html">Prado\Data\SqlMap\Configuration\TInlineParameterMapParser</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TParameterMap.html">Prado\Data\SqlMap\Configuration\TParameterMap</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TParameterProperty.html">Prado\Data\SqlMap\Configuration\TParameterProperty</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TResultMap.html">Prado\Data\SqlMap\Configuration\TResultMap</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TResultProperty.html">Prado\Data\SqlMap\Configuration\TResultProperty</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSimpleDynamicParser.html">Prado\Data\SqlMap\Configuration\TSimpleDynamicParser</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapCacheKey.html">Prado\Data\SqlMap\Configuration\TSqlMapCacheKey</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapCacheModel.html">Prado\Data\SqlMap\Configuration\TSqlMapCacheModel</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapCacheTypes.html">Prado\Data\SqlMap\Configuration\TSqlMapCacheTypes</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapDelete.html">Prado\Data\SqlMap\Configuration\TSqlMapDelete</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapInsert.html">Prado\Data\SqlMap\Configuration\TSqlMapInsert</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapSelect.html">Prado\Data\SqlMap\Configuration\TSqlMapSelect</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapSelectKey.html">Prado\Data\SqlMap\Configuration\TSqlMapSelectKey</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapStatement.html">Prado\Data\SqlMap\Configuration\TSqlMapStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapUpdate.html">Prado\Data\SqlMap\Configuration\TSqlMapUpdate</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapXmlConfigBuilder.html">Prado\Data\SqlMap\Configuration\TSqlMapXmlConfigBuilder</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapXmlConfiguration.html">Prado\Data\SqlMap\Configuration\TSqlMapXmlConfiguration</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSqlMapXmlMappingConfiguration.html">Prado\Data\SqlMap\Configuration\TSqlMapXmlMappingConfiguration</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Configuration.TSubMap.html">Prado\Data\SqlMap\Configuration\TSubMap</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TFastSqlMapApplicationCache.html">Prado\Data\SqlMap\DataMapper\TFastSqlMapApplicationCache</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TLazyLoadList.html">Prado\Data\SqlMap\DataMapper\TLazyLoadList</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TObjectProxy.html">Prado\Data\SqlMap\DataMapper\TObjectProxy</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TPropertyAccess.html">Prado\Data\SqlMap\DataMapper\TPropertyAccess</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapApplicationCache.html">Prado\Data\SqlMap\DataMapper\TSqlMapApplicationCache</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapCache.html">Prado\Data\SqlMap\DataMapper\TSqlMapCache</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapFifoCache.html">Prado\Data\SqlMap\DataMapper\TSqlMapFifoCache</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapLruCache.html">Prado\Data\SqlMap\DataMapper\TSqlMapLruCache</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapPagedList.html">Prado\Data\SqlMap\DataMapper\TSqlMapPagedList</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapTypeHandler.html">Prado\Data\SqlMap\DataMapper\TSqlMapTypeHandler</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapTypeHandlerRegistry.html">Prado\Data\SqlMap\DataMapper\TSqlMapTypeHandlerRegistry</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TCachingStatement.html">Prado\Data\SqlMap\Statements\TCachingStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TDeleteMappedStatement.html">Prado\Data\SqlMap\Statements\TDeleteMappedStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TInsertMappedStatement.html">Prado\Data\SqlMap\Statements\TInsertMappedStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TMappedStatement.html">Prado\Data\SqlMap\Statements\TMappedStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TPostSelectBinding.html">Prado\Data\SqlMap\Statements\TPostSelectBinding</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TPreparedCommand.html">Prado\Data\SqlMap\Statements\TPreparedCommand</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TPreparedStatement.html">Prado\Data\SqlMap\Statements\TPreparedStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TPreparedStatementFactory.html">Prado\Data\SqlMap\Statements\TPreparedStatementFactory</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TResultSetListItemParameter.html">Prado\Data\SqlMap\Statements\TResultSetListItemParameter</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TResultSetMapItemParameter.html">Prado\Data\SqlMap\Statements\TResultSetMapItemParameter</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TSelectMappedStatement.html">Prado\Data\SqlMap\Statements\TSelectMappedStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TSimpleDynamicSql.html">Prado\Data\SqlMap\Statements\TSimpleDynamicSql</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TSqlMapObjectCollectionTree.html">Prado\Data\SqlMap\Statements\TSqlMapObjectCollectionTree</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TStaticSql.html">Prado\Data\SqlMap\Statements\TStaticSql</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.TUpdateMappedStatement.html">Prado\Data\SqlMap\Statements\TUpdateMappedStatement</a></li>
+				<li><a href="class-Prado.Data.SqlMap.TSqlMapConfig.html">Prado\Data\SqlMap\TSqlMapConfig</a></li>
+				<li><a href="class-Prado.Data.SqlMap.TSqlMapGateway.html">Prado\Data\SqlMap\TSqlMapGateway</a></li>
+				<li><a href="class-Prado.Data.SqlMap.TSqlMapManager.html">Prado\Data\SqlMap\TSqlMapManager</a></li>
+				<li><a href="class-Prado.Data.TDataSourceConfig.html">Prado\Data\TDataSourceConfig</a></li>
+				<li><a href="class-Prado.Data.TDbColumnCaseMode.html">Prado\Data\TDbColumnCaseMode</a></li>
+				<li><a href="class-Prado.Data.TDbCommand.html">Prado\Data\TDbCommand</a></li>
+				<li><a href="class-Prado.Data.TDbConnection.html">Prado\Data\TDbConnection</a></li>
+				<li><a href="class-Prado.Data.TDbDataReader.html">Prado\Data\TDbDataReader</a></li>
+				<li><a href="class-Prado.Data.TDbNullConversionMode.html">Prado\Data\TDbNullConversionMode</a></li>
+				<li><a href="class-Prado.Data.TDbTransaction.html">Prado\Data\TDbTransaction</a></li>
+				<li><a href="class-Prado.Exceptions.TErrorHandler.html">Prado\Exceptions\TErrorHandler</a></li>
+				<li><a href="class-Prado.I18N.TChoiceFormat.html">Prado\I18N\TChoiceFormat</a></li>
+				<li><a href="class-Prado.I18N.TDateFormat.html">Prado\I18N\TDateFormat</a></li>
+				<li><a href="class-Prado.I18N.TGlobalization.html">Prado\I18N\TGlobalization</a></li>
+				<li><a href="class-Prado.I18N.TGlobalizationAutoDetect.html">Prado\I18N\TGlobalizationAutoDetect</a></li>
+				<li><a href="class-Prado.I18N.TI18NControl.html">Prado\I18N\TI18NControl</a></li>
+				<li><a href="class-Prado.I18N.TNumberFormat.html">Prado\I18N\TNumberFormat</a></li>
+				<li><a href="class-Prado.I18N.Translation.html">Prado\I18N\Translation</a></li>
+				<li><a href="class-Prado.I18N.TTranslate.html">Prado\I18N\TTranslate</a></li>
+				<li><a href="class-Prado.I18N.TTranslateParameter.html">Prado\I18N\TTranslateParameter</a></li>
+				<li><a href="class-Prado.IO.TTarFileExtractor.html">Prado\IO\TTarFileExtractor</a></li>
+				<li><a href="class-Prado.IO.TTextWriter.html">Prado\IO\TTextWriter</a></li>
+				<li><a href="class-Prado.Prado.html">Prado\Prado</a></li>
+				<li><a href="class-Prado.PradoBase.html">Prado\PradoBase</a></li>
+				<li><a href="class-Prado.Security.TAuthManager.html">Prado\Security\TAuthManager</a></li>
+				<li><a href="class-Prado.Security.TAuthorizationRule.html">Prado\Security\TAuthorizationRule</a></li>
+				<li><a href="class-Prado.Security.TAuthorizationRuleCollection.html">Prado\Security\TAuthorizationRuleCollection</a></li>
+				<li><a href="class-Prado.Security.TDbUser.html">Prado\Security\TDbUser</a></li>
+				<li><a href="class-Prado.Security.TDbUserManager.html">Prado\Security\TDbUserManager</a></li>
+				<li><a href="class-Prado.Security.TSecurityManager.html">Prado\Security\TSecurityManager</a></li>
+				<li><a href="class-Prado.Security.TUser.html">Prado\Security\TUser</a></li>
+				<li><a href="class-Prado.Security.TUserManager.html">Prado\Security\TUserManager</a></li>
+				<li><a href="class-Prado.Security.TUserManagerPasswordMode.html">Prado\Security\TUserManagerPasswordMode</a></li>
+				<li><a href="class-Prado.TApplication.html">Prado\TApplication</a></li>
+				<li><a href="class-Prado.TApplicationComponent.html">Prado\TApplicationComponent</a></li>
+				<li><a href="class-Prado.TApplicationConfiguration.html">Prado\TApplicationConfiguration</a></li>
+				<li><a href="class-Prado.TApplicationMode.html">Prado\TApplicationMode</a></li>
+				<li><a href="class-Prado.TApplicationStatePersister.html">Prado\TApplicationStatePersister</a></li>
+				<li><a href="class-Prado.TComponent.html">Prado\TComponent</a></li>
+				<li><a href="class-Prado.TComponentReflection.html">Prado\TComponentReflection</a></li>
+				<li><a href="class-Prado.TEnumerable.html">Prado\TEnumerable</a></li>
+				<li><a href="class-Prado.TEventParameter.html">Prado\TEventParameter</a></li>
+				<li><a href="class-Prado.TEventResults.html">Prado\TEventResults</a></li>
+				<li><a href="class-Prado.TModule.html">Prado\TModule</a></li>
+				<li><a href="class-Prado.TPropertyValue.html">Prado\TPropertyValue</a></li>
+				<li><a href="class-Prado.TService.html">Prado\TService</a></li>
+				<li><a href="class-Prado.TShellApplication.html">Prado\TShellApplication</a></li>
+				<li><a href="class-Prado.Util.TBehavior.html">Prado\Util\TBehavior</a></li>
+				<li><a href="class-Prado.Util.TBrowserLogRoute.html">Prado\Util\TBrowserLogRoute</a></li>
+				<li><a href="class-Prado.Util.TCallChain.html">Prado\Util\TCallChain</a></li>
+				<li><a href="class-Prado.Util.TClassBehavior.html">Prado\Util\TClassBehavior</a></li>
+				<li><a href="class-Prado.Util.TClassBehaviorEventParameter.html">Prado\Util\TClassBehaviorEventParameter</a></li>
+				<li><a href="class-Prado.Util.TDataFieldAccessor.html">Prado\Util\TDataFieldAccessor</a></li>
+				<li><a href="class-Prado.Util.TDateTimeStamp.html" class="deprecated">Prado\Util\TDateTimeStamp</a></li>
+				<li><a href="class-Prado.Util.TDbLogRoute.html">Prado\Util\TDbLogRoute</a></li>
+				<li><a href="class-Prado.Util.TEmailLogRoute.html">Prado\Util\TEmailLogRoute</a></li>
+				<li><a href="class-Prado.Util.TFileLogRoute.html">Prado\Util\TFileLogRoute</a></li>
+				<li><a href="class-Prado.Util.TFirebugLogRoute.html">Prado\Util\TFirebugLogRoute</a></li>
+				<li><a href="class-Prado.Util.TFirePhpLogRoute.html">Prado\Util\TFirePhpLogRoute</a></li>
+				<li><a href="class-Prado.Util.TJsonRpcClient.html">Prado\Util\TJsonRpcClient</a></li>
+				<li><a href="class-Prado.Util.TLogger.html">Prado\Util\TLogger</a></li>
+				<li><a href="class-Prado.Util.TLogRoute.html">Prado\Util\TLogRoute</a></li>
+				<li><a href="class-Prado.Util.TLogRouter.html">Prado\Util\TLogRouter</a></li>
+				<li><a href="class-Prado.Util.TParameterModule.html">Prado\Util\TParameterModule</a></li>
+				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
+				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
+				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
+				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
+				<li><a href="class-Prado.Web.Javascripts.JSMinException.html">Prado\Web\Javascripts\JSMinException</a></li>
+				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
+				<li><a href="class-Prado.Web.Javascripts.TJavaScriptLiteral.html">Prado\Web\Javascripts\TJavaScriptLiteral</a></li>
+				<li><a href="class-Prado.Web.Javascripts.TJavaScriptString.html">Prado\Web\Javascripts\TJavaScriptString</a></li>
+				<li><a href="class-Prado.Web.Services.TFeedService.html">Prado\Web\Services\TFeedService</a></li>
+				<li><a href="class-Prado.Web.Services.TJsonResponse.html">Prado\Web\Services\TJsonResponse</a></li>
+				<li><a href="class-Prado.Web.Services.TJsonRpcProtocol.html">Prado\Web\Services\TJsonRpcProtocol</a></li>
+				<li><a href="class-Prado.Web.Services.TJsonService.html">Prado\Web\Services\TJsonService</a></li>
+				<li><a href="class-Prado.Web.Services.TPageConfiguration.html">Prado\Web\Services\TPageConfiguration</a></li>
+				<li><a href="class-Prado.Web.Services.TPageService.html">Prado\Web\Services\TPageService</a></li>
+				<li><a href="class-Prado.Web.Services.TRpcApiProvider.html">Prado\Web\Services\TRpcApiProvider</a></li>
+				<li><a href="class-Prado.Web.Services.TRpcProtocol.html">Prado\Web\Services\TRpcProtocol</a></li>
+				<li><a href="class-Prado.Web.Services.TRpcServer.html">Prado\Web\Services\TRpcServer</a></li>
+				<li><a href="class-Prado.Web.Services.TRpcService.html">Prado\Web\Services\TRpcService</a></li>
+				<li><a href="class-Prado.Web.Services.TSoapServer.html">Prado\Web\Services\TSoapServer</a></li>
+				<li><a href="class-Prado.Web.Services.TSoapService.html">Prado\Web\Services\TSoapService</a></li>
+				<li><a href="class-Prado.Web.Services.TXmlRpcProtocol.html">Prado\Web\Services\TXmlRpcProtocol</a></li>
+				<li><a href="class-Prado.Web.TAssetManager.html">Prado\Web\TAssetManager</a></li>
+				<li><a href="class-Prado.Web.TCacheHttpSession.html">Prado\Web\TCacheHttpSession</a></li>
+				<li><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></li>
+				<li><a href="class-Prado.Web.THttpCookieCollection.html">Prado\Web\THttpCookieCollection</a></li>
+				<li><a href="class-Prado.Web.THttpRequest.html">Prado\Web\THttpRequest</a></li>
+				<li><a href="class-Prado.Web.THttpRequestUrlFormat.html">Prado\Web\THttpRequestUrlFormat</a></li>
+				<li><a href="class-Prado.Web.THttpResponse.html">Prado\Web\THttpResponse</a></li>
+				<li><a href="class-Prado.Web.THttpResponseAdapter.html">Prado\Web\THttpResponseAdapter</a></li>
+				<li><a href="class-Prado.Web.THttpSession.html">Prado\Web\THttpSession</a></li>
+				<li><a href="class-Prado.Web.THttpSessionCookieMode.html">Prado\Web\THttpSessionCookieMode</a></li>
+				<li><a href="class-Prado.Web.THttpUtility.html">Prado\Web\THttpUtility</a></li>
+				<li><a href="class-Prado.Web.TSessionIterator.html">Prado\Web\TSessionIterator</a></li>
+				<li><a href="class-Prado.Web.TUri.html">Prado\Web\TUri</a></li>
+				<li><a href="class-Prado.Web.TUrlManager.html">Prado\Web\TUrlManager</a></li>
+				<li><a href="class-Prado.Web.TUrlMapping.html">Prado\Web\TUrlMapping</a></li>
+				<li><a href="class-Prado.Web.TUrlMappingPattern.html">Prado\Web\TUrlMappingPattern</a></li>
+				<li><a href="class-Prado.Web.TUrlMappingPatternSecureConnection.html">Prado\Web\TUrlMappingPatternSecureConnection</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveBoundColumn.html">Prado\Web\UI\ActiveControls\TActiveBoundColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveButton.html">Prado\Web\UI\ActiveControls\TActiveButton</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveButtonColumn.html">Prado\Web\UI\ActiveControls\TActiveButtonColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveCheckBox.html">Prado\Web\UI\ActiveControls\TActiveCheckBox</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveCheckBoxColumn.html">Prado\Web\UI\ActiveControls\TActiveCheckBoxColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveCheckBoxList.html">Prado\Web\UI\ActiveControls\TActiveCheckBoxList</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveCheckBoxListItem.html">Prado\Web\UI\ActiveControls\TActiveCheckBoxListItem</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveClientScript.html">Prado\Web\UI\ActiveControls\TActiveClientScript</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveControlAdapter.html">Prado\Web\UI\ActiveControls\TActiveControlAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveCustomValidator.html">Prado\Web\UI\ActiveControls\TActiveCustomValidator</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveCustomValidatorClientSide.html">Prado\Web\UI\ActiveControls\TActiveCustomValidatorClientSide</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDataGrid.html">Prado\Web\UI\ActiveControls\TActiveDataGrid</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDataGridPager.html">Prado\Web\UI\ActiveControls\TActiveDataGridPager</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDataGridPagerEventParameter.html">Prado\Web\UI\ActiveControls\TActiveDataGridPagerEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDataList.html">Prado\Web\UI\ActiveControls\TActiveDataList</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDatePicker.html">Prado\Web\UI\ActiveControls\TActiveDatePicker</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDatePickerClientScript.html">Prado\Web\UI\ActiveControls\TActiveDatePickerClientScript</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDropDownList.html">Prado\Web\UI\ActiveControls\TActiveDropDownList</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveDropDownListColumn.html">Prado\Web\UI\ActiveControls\TActiveDropDownListColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveEditCommandColumn.html">Prado\Web\UI\ActiveControls\TActiveEditCommandColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUpload.html">Prado\Web\UI\ActiveControls\TActiveFileUpload</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadCallbackParams.html">Prado\Web\UI\ActiveControls\TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHiddenField.html">Prado\Web\UI\ActiveControls\TActiveHiddenField</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea4.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea4</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHyperLink.html">Prado\Web\UI\ActiveControls\TActiveHyperLink</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHyperLinkColumn.html">Prado\Web\UI\ActiveControls\TActiveHyperLinkColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveImage.html">Prado\Web\UI\ActiveControls\TActiveImage</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveImageButton.html">Prado\Web\UI\ActiveControls\TActiveImageButton</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveLabel.html">Prado\Web\UI\ActiveControls\TActiveLabel</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveLinkButton.html">Prado\Web\UI\ActiveControls\TActiveLinkButton</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveListBox.html">Prado\Web\UI\ActiveControls\TActiveListBox</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveListControlAdapter.html">Prado\Web\UI\ActiveControls\TActiveListControlAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveListItemCollection.html">Prado\Web\UI\ActiveControls\TActiveListItemCollection</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveLiteralColumn.html">Prado\Web\UI\ActiveControls\TActiveLiteralColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveMultiView.html">Prado\Web\UI\ActiveControls\TActiveMultiView</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActivePageAdapter.html">Prado\Web\UI\ActiveControls\TActivePageAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActivePager.html">Prado\Web\UI\ActiveControls\TActivePager</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActivePanel.html">Prado\Web\UI\ActiveControls\TActivePanel</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveRadioButton.html">Prado\Web\UI\ActiveControls\TActiveRadioButton</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveRadioButtonItem.html">Prado\Web\UI\ActiveControls\TActiveRadioButtonItem</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveRadioButtonList.html">Prado\Web\UI\ActiveControls\TActiveRadioButtonList</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveRatingList.html">Prado\Web\UI\ActiveControls\TActiveRatingList</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveRepeater.html">Prado\Web\UI\ActiveControls\TActiveRepeater</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveTableCell.html">Prado\Web\UI\ActiveControls\TActiveTableCell</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveTableCellEventParameter.html">Prado\Web\UI\ActiveControls\TActiveTableCellEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveTableRow.html">Prado\Web\UI\ActiveControls\TActiveTableRow</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveTableRowEventParameter.html">Prado\Web\UI\ActiveControls\TActiveTableRowEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveTemplateColumn.html">Prado\Web\UI\ActiveControls\TActiveTemplateColumn</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveTextBox.html">Prado\Web\UI\ActiveControls\TActiveTextBox</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TAutoComplete.html" class="deprecated">Prado\Web\UI\ActiveControls\TAutoComplete</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TAutoCompleteEventParameter.html">Prado\Web\UI\ActiveControls\TAutoCompleteEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TAutoCompleteTemplate.html">Prado\Web\UI\ActiveControls\TAutoCompleteTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TBaseActiveCallbackControl.html">Prado\Web\UI\ActiveControls\TBaseActiveCallbackControl</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TBaseActiveControl.html">Prado\Web\UI\ActiveControls\TBaseActiveControl</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallback.html">Prado\Web\UI\ActiveControls\TCallback</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackClientScript.html">Prado\Web\UI\ActiveControls\TCallbackClientScript</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackClientSide.html">Prado\Web\UI\ActiveControls\TCallbackClientSide</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackErrorHandler.html">Prado\Web\UI\ActiveControls\TCallbackErrorHandler</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackEventParameter.html">Prado\Web\UI\ActiveControls\TCallbackEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackOptions.html">Prado\Web\UI\ActiveControls\TCallbackOptions</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackPageStateTracker.html">Prado\Web\UI\ActiveControls\TCallbackPageStateTracker</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackResponseAdapter.html">Prado\Web\UI\ActiveControls\TCallbackResponseAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TCallbackResponseWriter.html">Prado\Web\UI\ActiveControls\TCallbackResponseWriter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TDraggable.html" class="deprecated">Prado\Web\UI\ActiveControls\TDraggable</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TDraggableConstraint.html">Prado\Web\UI\ActiveControls\TDraggableConstraint</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TDraggableGhostingOptions.html">Prado\Web\UI\ActiveControls\TDraggableGhostingOptions</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TDraggableRevertOptions.html">Prado\Web\UI\ActiveControls\TDraggableRevertOptions</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TDropContainer.html" class="deprecated">Prado\Web\UI\ActiveControls\TDropContainer</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TDropContainerEventParameter.html">Prado\Web\UI\ActiveControls\TDropContainerEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TEventTriggeredCallback.html">Prado\Web\UI\ActiveControls\TEventTriggeredCallback</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TInPlaceTextBox.html">Prado\Web\UI\ActiveControls\TInPlaceTextBox</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TMapCollectionDiff.html">Prado\Web\UI\ActiveControls\TMapCollectionDiff</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TScalarDiff.html">Prado\Web\UI\ActiveControls\TScalarDiff</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TStyleDiff.html">Prado\Web\UI\ActiveControls\TStyleDiff</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TTimeTriggeredCallback.html">Prado\Web\UI\ActiveControls\TTimeTriggeredCallback</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TTriggeredCallback.html">Prado\Web\UI\ActiveControls\TTriggeredCallback</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TValueTriggeredCallback.html">Prado\Web\UI\ActiveControls\TValueTriggeredCallback</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TViewStateDiff.html">Prado\Web\UI\ActiveControls\TViewStateDiff</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiAutoComplete.html">Prado\Web\UI\JuiControls\TJuiAutoComplete</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiAutoCompleteEventParameter.html">Prado\Web\UI\JuiControls\TJuiAutoCompleteEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiAutoCompleteTemplate.html">Prado\Web\UI\JuiControls\TJuiAutoCompleteTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiCallbackPageStateTracker.html">Prado\Web\UI\JuiControls\TJuiCallbackPageStateTracker</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiControlAdapter.html">Prado\Web\UI\JuiControls\TJuiControlAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiControlOptions.html">Prado\Web\UI\JuiControls\TJuiControlOptions</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiDatePicker.html">Prado\Web\UI\JuiControls\TJuiDatePicker</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiDialog.html">Prado\Web\UI\JuiControls\TJuiDialog</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiDialogButton.html">Prado\Web\UI\JuiControls\TJuiDialogButton</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiDraggable.html">Prado\Web\UI\JuiControls\TJuiDraggable</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiDroppable.html">Prado\Web\UI\JuiControls\TJuiDroppable</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiEventParameter.html">Prado\Web\UI\JuiControls\TJuiEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiProgressbar.html">Prado\Web\UI\JuiControls\TJuiProgressbar</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiResizable.html">Prado\Web\UI\JuiControls\TJuiResizable</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiSelectable.html">Prado\Web\UI\JuiControls\TJuiSelectable</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiSelectableTemplate.html">Prado\Web\UI\JuiControls\TJuiSelectableTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiSlider.html">Prado\Web\UI\JuiControls\TJuiSlider</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiSortable.html">Prado\Web\UI\JuiControls\TJuiSortable</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.TJuiSortableTemplate.html">Prado\Web\UI\JuiControls\TJuiSortableTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.TBroadcastEventParameter.html">Prado\Web\UI\TBroadcastEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.TCachePageStatePersister.html">Prado\Web\UI\TCachePageStatePersister</a></li>
+				<li><a href="class-Prado.Web.UI.TClientScriptManager.html">Prado\Web\UI\TClientScriptManager</a></li>
+				<li><a href="class-Prado.Web.UI.TClientSideOptions.html">Prado\Web\UI\TClientSideOptions</a></li>
+				<li><a href="class-Prado.Web.UI.TCommandEventParameter.html">Prado\Web\UI\TCommandEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.TCompositeControl.html">Prado\Web\UI\TCompositeControl</a></li>
+				<li><a href="class-Prado.Web.UI.TCompositeLiteral.html">Prado\Web\UI\TCompositeLiteral</a></li>
+				<li><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></li>
+				<li><a href="class-Prado.Web.UI.TControlAdapter.html">Prado\Web\UI\TControlAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.TControlCollection.html">Prado\Web\UI\TControlCollection</a></li>
+				<li><a href="class-Prado.Web.UI.TEmptyControlCollection.html">Prado\Web\UI\TEmptyControlCollection</a></li>
+				<li><a href="class-Prado.Web.UI.TForm.html">Prado\Web\UI\TForm</a></li>
+				<li><a href="class-Prado.Web.UI.THtmlWriter.html">Prado\Web\UI\THtmlWriter</a></li>
+				<li><a href="class-Prado.Web.UI.TPage.html">Prado\Web\UI\TPage</a></li>
+				<li><a href="class-Prado.Web.UI.TPageStateFormatter.html">Prado\Web\UI\TPageStateFormatter</a></li>
+				<li><a href="class-Prado.Web.UI.TPageStatePersister.html">Prado\Web\UI\TPageStatePersister</a></li>
+				<li><a href="class-Prado.Web.UI.TSessionPageStatePersister.html">Prado\Web\UI\TSessionPageStatePersister</a></li>
+				<li><a href="class-Prado.Web.UI.TTemplate.html">Prado\Web\UI\TTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.TTemplateControl.html">Prado\Web\UI\TTemplateControl</a></li>
+				<li><a href="class-Prado.Web.UI.TTemplateControlInheritable.html">Prado\Web\UI\TTemplateControlInheritable</a></li>
+				<li><a href="class-Prado.Web.UI.TTemplateManager.html">Prado\Web\UI\TTemplateManager</a></li>
+				<li><a href="class-Prado.Web.UI.TTheme.html">Prado\Web\UI\TTheme</a></li>
+				<li><a href="class-Prado.Web.UI.TThemeManager.html">Prado\Web\UI\TThemeManager</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TAccordion.html">Prado\Web\UI\WebControls\TAccordion</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TAccordionView.html">Prado\Web\UI\WebControls\TAccordionView</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TAccordionViewCollection.html">Prado\Web\UI\WebControls\TAccordionViewCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TBaseDataList.html">Prado\Web\UI\WebControls\TBaseDataList</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TBaseValidator.html">Prado\Web\UI\WebControls\TBaseValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TBoundColumn.html">Prado\Web\UI\WebControls\TBoundColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TBulletedList.html">Prado\Web\UI\WebControls\TBulletedList</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TBulletedListDisplayMode.html">Prado\Web\UI\WebControls\TBulletedListDisplayMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TBulletedListEventParameter.html">Prado\Web\UI\WebControls\TBulletedListEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TBulletStyle.html">Prado\Web\UI\WebControls\TBulletStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TButton.html">Prado\Web\UI\WebControls\TButton</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TButtonColumn.html">Prado\Web\UI\WebControls\TButtonColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TButtonColumnType.html">Prado\Web\UI\WebControls\TButtonColumnType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TButtonTag.html">Prado\Web\UI\WebControls\TButtonTag</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TButtonType.html">Prado\Web\UI\WebControls\TButtonType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCaptcha.html">Prado\Web\UI\WebControls\TCaptcha</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCaptchaValidator.html">Prado\Web\UI\WebControls\TCaptchaValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCheckBox.html">Prado\Web\UI\WebControls\TCheckBox</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCheckBoxColumn.html">Prado\Web\UI\WebControls\TCheckBoxColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCheckBoxItem.html">Prado\Web\UI\WebControls\TCheckBoxItem</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCheckBoxList.html">Prado\Web\UI\WebControls\TCheckBoxList</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCircleHotSpot.html">Prado\Web\UI\WebControls\TCircleHotSpot</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TClientScript.html">Prado\Web\UI\WebControls\TClientScript</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TClientSideValidationSummaryOptions.html">Prado\Web\UI\WebControls\TClientSideValidationSummaryOptions</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TColorPicker.html">Prado\Web\UI\WebControls\TColorPicker</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TColorPickerClientSide.html">Prado\Web\UI\WebControls\TColorPickerClientSide</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TColorPickerMode.html">Prado\Web\UI\WebControls\TColorPickerMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCompareValidator.html">Prado\Web\UI\WebControls\TCompareValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCompleteWizardStep.html">Prado\Web\UI\WebControls\TCompleteWizardStep</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TConditional.html">Prado\Web\UI\WebControls\TConditional</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TContent.html">Prado\Web\UI\WebControls\TContent</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TContentDirection.html">Prado\Web\UI\WebControls\TContentDirection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TContentPlaceHolder.html">Prado\Web\UI\WebControls\TContentPlaceHolder</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TCustomValidator.html">Prado\Web\UI\WebControls\TCustomValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataBoundControl.html">Prado\Web\UI\WebControls\TDataBoundControl</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGrid.html">Prado\Web\UI\WebControls\TDataGrid</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridColumn.html">Prado\Web\UI\WebControls\TDataGridColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridColumnCollection.html">Prado\Web\UI\WebControls\TDataGridColumnCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridCommandEventParameter.html">Prado\Web\UI\WebControls\TDataGridCommandEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridItem.html">Prado\Web\UI\WebControls\TDataGridItem</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridItemCollection.html">Prado\Web\UI\WebControls\TDataGridItemCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridItemEventParameter.html">Prado\Web\UI\WebControls\TDataGridItemEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridItemRenderer.html">Prado\Web\UI\WebControls\TDataGridItemRenderer</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridPageChangedEventParameter.html">Prado\Web\UI\WebControls\TDataGridPageChangedEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridPager.html">Prado\Web\UI\WebControls\TDataGridPager</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridPagerButtonType.html">Prado\Web\UI\WebControls\TDataGridPagerButtonType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridPagerEventParameter.html">Prado\Web\UI\WebControls\TDataGridPagerEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridPagerMode.html">Prado\Web\UI\WebControls\TDataGridPagerMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridPagerPosition.html">Prado\Web\UI\WebControls\TDataGridPagerPosition</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridPagerStyle.html">Prado\Web\UI\WebControls\TDataGridPagerStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataGridSortCommandEventParameter.html">Prado\Web\UI\WebControls\TDataGridSortCommandEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataList.html">Prado\Web\UI\WebControls\TDataList</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataListCommandEventParameter.html">Prado\Web\UI\WebControls\TDataListCommandEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataListItem.html">Prado\Web\UI\WebControls\TDataListItem</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataListItemCollection.html">Prado\Web\UI\WebControls\TDataListItemCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataListItemEventParameter.html">Prado\Web\UI\WebControls\TDataListItemEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataListItemRenderer.html">Prado\Web\UI\WebControls\TDataListItemRenderer</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataRenderer.html">Prado\Web\UI\WebControls\TDataRenderer</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataSourceControl.html">Prado\Web\UI\WebControls\TDataSourceControl</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataSourceSelectParameters.html">Prado\Web\UI\WebControls\TDataSourceSelectParameters</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataSourceView.html">Prado\Web\UI\WebControls\TDataSourceView</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDataTypeValidator.html">Prado\Web\UI\WebControls\TDataTypeValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDatePicker.html">Prado\Web\UI\WebControls\TDatePicker</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDatePickerClientScript.html">Prado\Web\UI\WebControls\TDatePickerClientScript</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDatePickerInputMode.html">Prado\Web\UI\WebControls\TDatePickerInputMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDatePickerMode.html">Prado\Web\UI\WebControls\TDatePickerMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDatePickerPositionMode.html">Prado\Web\UI\WebControls\TDatePickerPositionMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDisplayStyle.html">Prado\Web\UI\WebControls\TDisplayStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDropDownList.html">Prado\Web\UI\WebControls\TDropDownList</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TDropDownListColumn.html">Prado\Web\UI\WebControls\TDropDownListColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TEditCommandColumn.html">Prado\Web\UI\WebControls\TEditCommandColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TEmailAddressValidator.html">Prado\Web\UI\WebControls\TEmailAddressValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TExpression.html">Prado\Web\UI\WebControls\TExpression</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TFileUpload.html">Prado\Web\UI\WebControls\TFileUpload</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TFileUploadItem.html">Prado\Web\UI\WebControls\TFileUploadItem</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TFlushOutput.html">Prado\Web\UI\WebControls\TFlushOutput</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TFont.html">Prado\Web\UI\WebControls\TFont</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THead.html">Prado\Web\UI\WebControls\THead</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THeader1.html">Prado\Web\UI\WebControls\THeader1</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THeader2.html">Prado\Web\UI\WebControls\THeader2</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THeader3.html">Prado\Web\UI\WebControls\THeader3</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THeader4.html">Prado\Web\UI\WebControls\THeader4</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THeader5.html">Prado\Web\UI\WebControls\THeader5</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THeader6.html">Prado\Web\UI\WebControls\THeader6</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THiddenField.html">Prado\Web\UI\WebControls\THiddenField</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THorizontalAlign.html">Prado\Web\UI\WebControls\THorizontalAlign</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THotSpot.html">Prado\Web\UI\WebControls\THotSpot</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THotSpotCollection.html">Prado\Web\UI\WebControls\THotSpotCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THotSpotMode.html">Prado\Web\UI\WebControls\THotSpotMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THtmlArea.html">Prado\Web\UI\WebControls\THtmlArea</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THtmlArea4.html">Prado\Web\UI\WebControls\THtmlArea4</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THtmlElement.html">Prado\Web\UI\WebControls\THtmlElement</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THyperLink.html">Prado\Web\UI\WebControls\THyperLink</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.THyperLinkColumn.html">Prado\Web\UI\WebControls\THyperLinkColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TImage.html">Prado\Web\UI\WebControls\TImage</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TImageButton.html">Prado\Web\UI\WebControls\TImageButton</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TImageClickEventParameter.html">Prado\Web\UI\WebControls\TImageClickEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TImageMap.html">Prado\Web\UI\WebControls\TImageMap</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TImageMapEventParameter.html">Prado\Web\UI\WebControls\TImageMapEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TInlineFrame.html">Prado\Web\UI\WebControls\TInlineFrame</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TInlineFrameAlign.html">Prado\Web\UI\WebControls\TInlineFrameAlign</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TInlineFrameScrollBars.html">Prado\Web\UI\WebControls\TInlineFrameScrollBars</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TItemDataRenderer.html">Prado\Web\UI\WebControls\TItemDataRenderer</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TJavascriptLogger.html">Prado\Web\UI\WebControls\TJavascriptLogger</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TKeyboard.html">Prado\Web\UI\WebControls\TKeyboard</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TLabel.html">Prado\Web\UI\WebControls\TLabel</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TLinkButton.html">Prado\Web\UI\WebControls\TLinkButton</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TListBox.html">Prado\Web\UI\WebControls\TListBox</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TListControl.html">Prado\Web\UI\WebControls\TListControl</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TListControlValidator.html">Prado\Web\UI\WebControls\TListControlValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TListItem.html">Prado\Web\UI\WebControls\TListItem</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TListItemType.html">Prado\Web\UI\WebControls\TListItemType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TListSelectionMode.html">Prado\Web\UI\WebControls\TListSelectionMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TLiteral.html">Prado\Web\UI\WebControls\TLiteral</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TLiteralColumn.html">Prado\Web\UI\WebControls\TLiteralColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TMarkdown.html">Prado\Web\UI\WebControls\TMarkdown</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TMetaTag.html">Prado\Web\UI\WebControls\TMetaTag</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TMetaTagCollection.html">Prado\Web\UI\WebControls\TMetaTagCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TMultiView.html">Prado\Web\UI\WebControls\TMultiView</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TOutputCache.html">Prado\Web\UI\WebControls\TOutputCache</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TOutputCacheCalculateKeyEventParameter.html">Prado\Web\UI\WebControls\TOutputCacheCalculateKeyEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TOutputCacheCheckDependencyEventParameter.html">Prado\Web\UI\WebControls\TOutputCacheCheckDependencyEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TOutputCacheTextWriterMulti.html">Prado\Web\UI\WebControls\TOutputCacheTextWriterMulti</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPager.html">Prado\Web\UI\WebControls\TPager</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPagerButtonType.html">Prado\Web\UI\WebControls\TPagerButtonType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPagerMode.html">Prado\Web\UI\WebControls\TPagerMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPagerPageChangedEventParameter.html">Prado\Web\UI\WebControls\TPagerPageChangedEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPanel.html">Prado\Web\UI\WebControls\TPanel</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPanelStyle.html">Prado\Web\UI\WebControls\TPanelStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPlaceHolder.html">Prado\Web\UI\WebControls\TPlaceHolder</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TPolygonHotSpot.html">Prado\Web\UI\WebControls\TPolygonHotSpot</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRadioButton.html">Prado\Web\UI\WebControls\TRadioButton</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRadioButtonItem.html">Prado\Web\UI\WebControls\TRadioButtonItem</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRadioButtonList.html">Prado\Web\UI\WebControls\TRadioButtonList</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRangeValidationDataType.html">Prado\Web\UI\WebControls\TRangeValidationDataType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRangeValidator.html">Prado\Web\UI\WebControls\TRangeValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRatingList.html">Prado\Web\UI\WebControls\TRatingList</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TReadOnlyDataSource.html">Prado\Web\UI\WebControls\TReadOnlyDataSource</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TReadOnlyDataSourceView.html">Prado\Web\UI\WebControls\TReadOnlyDataSourceView</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TReCaptcha.html">Prado\Web\UI\WebControls\TReCaptcha</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TReCaptcha2.html">Prado\Web\UI\WebControls\TReCaptcha2</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TReCaptcha2Validator.html">Prado\Web\UI\WebControls\TReCaptcha2Validator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TReCaptchaValidator.html">Prado\Web\UI\WebControls\TReCaptchaValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRectangleHotSpot.html">Prado\Web\UI\WebControls\TRectangleHotSpot</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRegularExpressionValidator.html">Prado\Web\UI\WebControls\TRegularExpressionValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeatDirection.html">Prado\Web\UI\WebControls\TRepeatDirection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeater.html">Prado\Web\UI\WebControls\TRepeater</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeaterCommandEventParameter.html">Prado\Web\UI\WebControls\TRepeaterCommandEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeaterItem.html">Prado\Web\UI\WebControls\TRepeaterItem</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeaterItemCollection.html">Prado\Web\UI\WebControls\TRepeaterItemCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeaterItemEventParameter.html">Prado\Web\UI\WebControls\TRepeaterItemEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeaterItemRenderer.html">Prado\Web\UI\WebControls\TRepeaterItemRenderer</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeatInfo.html">Prado\Web\UI\WebControls\TRepeatInfo</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRepeatLayout.html">Prado\Web\UI\WebControls\TRepeatLayout</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TRequiredFieldValidator.html">Prado\Web\UI\WebControls\TRequiredFieldValidator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TSafeHtml.html">Prado\Web\UI\WebControls\TSafeHtml</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TScrollBars.html">Prado\Web\UI\WebControls\TScrollBars</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TServerValidateEventParameter.html">Prado\Web\UI\WebControls\TServerValidateEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TSlider.html">Prado\Web\UI\WebControls\TSlider</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TSliderClientScript.html">Prado\Web\UI\WebControls\TSliderClientScript</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TSliderDirection.html">Prado\Web\UI\WebControls\TSliderDirection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TStatements.html">Prado\Web\UI\WebControls\TStatements</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TStyle.html">Prado\Web\UI\WebControls\TStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TStyleSheet.html">Prado\Web\UI\WebControls\TStyleSheet</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTable.html">Prado\Web\UI\WebControls\TTable</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableCaptionAlign.html">Prado\Web\UI\WebControls\TTableCaptionAlign</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableCell.html">Prado\Web\UI\WebControls\TTableCell</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableCellCollection.html">Prado\Web\UI\WebControls\TTableCellCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableFooterRow.html">Prado\Web\UI\WebControls\TTableFooterRow</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableGridLines.html">Prado\Web\UI\WebControls\TTableGridLines</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableHeaderCell.html">Prado\Web\UI\WebControls\TTableHeaderCell</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableHeaderRow.html">Prado\Web\UI\WebControls\TTableHeaderRow</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableHeaderScope.html">Prado\Web\UI\WebControls\TTableHeaderScope</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableItemStyle.html">Prado\Web\UI\WebControls\TTableItemStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableRow.html">Prado\Web\UI\WebControls\TTableRow</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableRowCollection.html">Prado\Web\UI\WebControls\TTableRowCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableRowSection.html">Prado\Web\UI\WebControls\TTableRowSection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTableStyle.html">Prado\Web\UI\WebControls\TTableStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTabPanel.html">Prado\Web\UI\WebControls\TTabPanel</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTabView.html">Prado\Web\UI\WebControls\TTabView</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTabViewCollection.html">Prado\Web\UI\WebControls\TTabViewCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTemplateColumn.html">Prado\Web\UI\WebControls\TTemplateColumn</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTemplatedWizardStep.html">Prado\Web\UI\WebControls\TTemplatedWizardStep</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTextAlign.html">Prado\Web\UI\WebControls\TTextAlign</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTextBox.html">Prado\Web\UI\WebControls\TTextBox</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTextBoxAutoCompleteType.html">Prado\Web\UI\WebControls\TTextBoxAutoCompleteType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTextBoxMode.html">Prado\Web\UI\WebControls\TTextBoxMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTextHighlighter.html">Prado\Web\UI\WebControls\TTextHighlighter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTextHighlighterWriter.html">Prado\Web\UI\WebControls\TTextHighlighterWriter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TTextProcessor.html">Prado\Web\UI\WebControls\TTextProcessor</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TValidationCompareOperator.html">Prado\Web\UI\WebControls\TValidationCompareOperator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TValidationDataType.html">Prado\Web\UI\WebControls\TValidationDataType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TValidationSummary.html">Prado\Web\UI\WebControls\TValidationSummary</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TValidationSummaryDisplayMode.html">Prado\Web\UI\WebControls\TValidationSummaryDisplayMode</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TValidationSummaryDisplayStyle.html">Prado\Web\UI\WebControls\TValidationSummaryDisplayStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TValidatorClientSide.html">Prado\Web\UI\WebControls\TValidatorClientSide</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TValidatorDisplayStyle.html">Prado\Web\UI\WebControls\TValidatorDisplayStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TVerticalAlign.html">Prado\Web\UI\WebControls\TVerticalAlign</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TView.html">Prado\Web\UI\WebControls\TView</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TViewCollection.html">Prado\Web\UI\WebControls\TViewCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWebControl.html">Prado\Web\UI\WebControls\TWebControl</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWebControlAdapter.html">Prado\Web\UI\WebControls\TWebControlAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWebControlDecorator.html">Prado\Web\UI\WebControls\TWebControlDecorator</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizard.html">Prado\Web\UI\WebControls\TWizard</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardFinishNavigationTemplate.html">Prado\Web\UI\WebControls\TWizardFinishNavigationTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardNavigationButtonStyle.html">Prado\Web\UI\WebControls\TWizardNavigationButtonStyle</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardNavigationButtonType.html">Prado\Web\UI\WebControls\TWizardNavigationButtonType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardNavigationContainer.html">Prado\Web\UI\WebControls\TWizardNavigationContainer</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardNavigationEventParameter.html">Prado\Web\UI\WebControls\TWizardNavigationEventParameter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardNavigationTemplate.html">Prado\Web\UI\WebControls\TWizardNavigationTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardSideBarListItemTemplate.html">Prado\Web\UI\WebControls\TWizardSideBarListItemTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardSideBarTemplate.html">Prado\Web\UI\WebControls\TWizardSideBarTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardStartNavigationTemplate.html">Prado\Web\UI\WebControls\TWizardStartNavigationTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardStep.html">Prado\Web\UI\WebControls\TWizardStep</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardStepCollection.html">Prado\Web\UI\WebControls\TWizardStepCollection</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardStepNavigationTemplate.html">Prado\Web\UI\WebControls\TWizardStepNavigationTemplate</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TWizardStepType.html">Prado\Web\UI\WebControls\TWizardStepType</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.TXmlTransform.html">Prado\Web\UI\WebControls\TXmlTransform</a></li>
+				<li><a href="class-Prado.Wsat.TWsatARGenerator.html">Prado\Wsat\TWsatARGenerator</a></li>
+				<li><a href="class-Prado.Wsat.TWsatBaseGenerator.html">Prado\Wsat\TWsatBaseGenerator</a></li>
+				<li><a href="class-Prado.Wsat.TWsatScaffoldingGenerator.html">Prado\Wsat\TWsatScaffoldingGenerator</a></li>
+				<li><a href="class-Prado.Wsat.TWsatService.html">Prado\Wsat\TWsatService</a></li>
+				<li><a href="class-Prado.Xml.TXmlDocument.html">Prado\Xml\TXmlDocument</a></li>
+				<li><a href="class-Prado.Xml.TXmlElement.html">Prado\Xml\TXmlElement</a></li>
+				<li><a href="class-Prado.Xml.TXmlElementList.html">Prado\Xml\TXmlElementList</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-Prado.Caching.ICache.html">Prado\Caching\ICache</a></li>
+				<li><a href="class-Prado.Caching.ICacheDependency.html">Prado\Caching\ICacheDependency</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Scaffold.IScaffoldEditRenderer.html">Prado\Data\ActiveRecord\Scaffold\IScaffoldEditRenderer</a></li>
+				<li><a href="class-Prado.Data.SqlMap.Statements.IMappedStatement.html">Prado\Data\SqlMap\Statements\IMappedStatement</a></li>
+				<li><a href="class-Prado.IDataRenderer.html">Prado\IDataRenderer</a></li>
+				<li><a href="class-Prado.IModule.html">Prado\IModule</a></li>
+				<li><a href="class-Prado.IO.ITextWriter.html">Prado\IO\ITextWriter</a></li>
+				<li><a href="class-Prado.IService.html">Prado\IService</a></li>
+				<li><a href="class-Prado.IStatePersister.html">Prado\IStatePersister</a></li>
+				<li><a href="class-Prado.Security.IUser.html">Prado\Security\IUser</a></li>
+				<li><a href="class-Prado.Security.IUserManager.html">Prado\Security\IUserManager</a></li>
+				<li><a href="class-Prado.Util.IBaseBehavior.html">Prado\Util\IBaseBehavior</a></li>
+				<li><a href="class-Prado.Util.IBehavior.html">Prado\Util\IBehavior</a></li>
+				<li><a href="class-Prado.Util.IClassBehavior.html">Prado\Util\IClassBehavior</a></li>
+				<li><a href="class-Prado.Util.IDynamicMethods.html">Prado\Util\IDynamicMethods</a></li>
+				<li><a href="class-Prado.Util.IInstanceCheck.html">Prado\Util\IInstanceCheck</a></li>
+				<li><a href="class-Prado.Web.Services.IFeedContentProvider.html">Prado\Web\Services\IFeedContentProvider</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.IActiveControl.html">Prado\Web\UI\ActiveControls\IActiveControl</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.ICallbackEventHandler.html">Prado\Web\UI\ActiveControls\ICallbackEventHandler</a></li>
+				<li><a href="class-Prado.Web.UI.IBindable.html">Prado\Web\UI\IBindable</a></li>
+				<li><a href="class-Prado.Web.UI.IBroadcastEventReceiver.html">Prado\Web\UI\IBroadcastEventReceiver</a></li>
+				<li><a href="class-Prado.Web.UI.IButtonControl.html">Prado\Web\UI\IButtonControl</a></li>
+				<li><a href="class-Prado.Web.UI.INamingContainer.html">Prado\Web\UI\INamingContainer</a></li>
+				<li><a href="class-Prado.Web.UI.IPageStatePersister.html">Prado\Web\UI\IPageStatePersister</a></li>
+				<li><a href="class-Prado.Web.UI.IPostBackDataHandler.html">Prado\Web\UI\IPostBackDataHandler</a></li>
+				<li><a href="class-Prado.Web.UI.IPostBackEventHandler.html">Prado\Web\UI\IPostBackEventHandler</a></li>
+				<li><a href="class-Prado.Web.UI.IRenderable.html">Prado\Web\UI\IRenderable</a></li>
+				<li><a href="class-Prado.Web.UI.ISurroundable.html">Prado\Web\UI\ISurroundable</a></li>
+				<li><a href="class-Prado.Web.UI.ITemplate.html">Prado\Web\UI\ITemplate</a></li>
+				<li><a href="class-Prado.Web.UI.ITheme.html">Prado\Web\UI\ITheme</a></li>
+				<li><a href="class-Prado.Web.UI.IValidatable.html">Prado\Web\UI\IValidatable</a></li>
+				<li><a href="class-Prado.Web.UI.IValidator.html">Prado\Web\UI\IValidator</a></li>
+				<li><a href="class-Prado.Web.UI.JuiControls.IJuiOptions.html">Prado\Web\UI\JuiControls\IJuiOptions</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.IDataSource.html">Prado\Web\UI\WebControls\IDataSource</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.IItemDataRenderer.html">Prado\Web\UI\WebControls\IItemDataRenderer</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.IListControlAdapter.html">Prado\Web\UI\WebControls\IListControlAdapter</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.IRepeatInfoUser.html">Prado\Web\UI\WebControls\IRepeatInfoUser</a></li>
+				<li><a href="class-Prado.Web.UI.WebControls.IStyleable.html">Prado\Web\UI\WebControls\IStyleable</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-Prado.Data.ActiveRecord.Exceptions.TActiveRecordConfigurationException.html">Prado\Data\ActiveRecord\Exceptions\TActiveRecordConfigurationException</a></li>
+				<li><a href="class-Prado.Data.ActiveRecord.Exceptions.TActiveRecordException.html">Prado\Data\ActiveRecord\Exceptions\TActiveRecordException</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TInvalidPropertyException.html">Prado\Data\SqlMap\DataMapper\TInvalidPropertyException</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapConfigurationException.html">Prado\Data\SqlMap\DataMapper\TSqlMapConfigurationException</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapDuplicateException.html">Prado\Data\SqlMap\DataMapper\TSqlMapDuplicateException</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapException.html">Prado\Data\SqlMap\DataMapper\TSqlMapException</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapExecutionException.html">Prado\Data\SqlMap\DataMapper\TSqlMapExecutionException</a></li>
+				<li><a href="class-Prado.Data.SqlMap.DataMapper.TSqlMapUndefinedException.html">Prado\Data\SqlMap\DataMapper\TSqlMapUndefinedException</a></li>
+				<li><a href="class-Prado.Exceptions.TApplicationException.html">Prado\Exceptions\TApplicationException</a></li>
+				<li><a href="class-Prado.Exceptions.TConfigurationException.html">Prado\Exceptions\TConfigurationException</a></li>
+				<li><a href="class-Prado.Exceptions.TDbConnectionException.html">Prado\Exceptions\TDbConnectionException</a></li>
+				<li><a href="class-Prado.Exceptions.TDbException.html">Prado\Exceptions\TDbException</a></li>
+				<li><a href="class-Prado.Exceptions.TException.html">Prado\Exceptions\TException</a></li>
+				<li><a href="class-Prado.Exceptions.THttpException.html">Prado\Exceptions\THttpException</a></li>
+				<li><a href="class-Prado.Exceptions.TInvalidDataTypeException.html">Prado\Exceptions\TInvalidDataTypeException</a></li>
+				<li><a href="class-Prado.Exceptions.TInvalidDataValueException.html">Prado\Exceptions\TInvalidDataValueException</a></li>
+				<li><a href="class-Prado.Exceptions.TInvalidOperationException.html">Prado\Exceptions\TInvalidOperationException</a></li>
+				<li><a href="class-Prado.Exceptions.TIOException.html">Prado\Exceptions\TIOException</a></li>
+				<li><a href="class-Prado.Exceptions.TNotSupportedException.html">Prado\Exceptions\TNotSupportedException</a></li>
+				<li><a href="class-Prado.Exceptions.TPhpErrorException.html">Prado\Exceptions\TPhpErrorException</a></li>
+				<li><a href="class-Prado.Exceptions.TPhpFatalErrorException.html">Prado\Exceptions\TPhpFatalErrorException</a></li>
+				<li><a href="class-Prado.Exceptions.TSystemException.html">Prado\Exceptions\TSystemException</a></li>
+				<li><a href="class-Prado.Exceptions.TTemplateException.html">Prado\Exceptions\TTemplateException</a></li>
+				<li><a href="class-Prado.Util.TRpcClientRequestException.html">Prado\Util\TRpcClientRequestException</a></li>
+				<li><a href="class-Prado.Util.TRpcClientResponseException.html">Prado\Util\TRpcClientResponseException</a></li>
+				<li><a href="class-Prado.Web.Services.TRpcException.html">Prado\Web\Services\TRpcException</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TInvalidCallbackException.html">Prado\Web\UI\ActiveControls\TInvalidCallbackException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TActiveRecord</h1>
+
+
+	<div class="description">
+	<p>Base class for active records.</p>
+
+<p>An active record creates an object that wraps a row in a database table
+or view, encapsulates the database access, and adds domain logic on that data.</p>
+
+<p>Active record objects are stateful, this is main difference between the
+TActiveRecord implementation and the TTableGateway implementation.</p>
+
+<p>The essence of an Active Record is an object model of the
+domain (e.g. products, items) that incorporates both behavior and
+data in which the classes match very closely the record structure of an
+underlying database. Each Active Record is responsible for saving and
+loading to the database and also for any domain logic that acts on the data.</p>
+
+<p>The Active Record provides methods that do the following:
+ 1. Construct an instance of the Active Record from a SQL result set row.
+ 2. Construct a new instance for later insertion into the table.
+ 3. Finder methods to wrap commonly used SQL queries and return Active Record objects.
+ 4. Update the database and insert into it the data in the Active Record.</p>
+
+<p>Example:</p>
+
+<pre><span class="php-keyword1">class</span> UserRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+    <span class="php-keyword1">const</span> TABLE=<span class="php-quote">'users'</span>; <span class="php-comment">//optional table name.</span>
+
+    <span class="php-keyword1">public</span> <span class="php-var">$username</span>; <span class="php-comment">//corresponds to the fieldname in the table</span>
+    <span class="php-keyword1">public</span> <span class="php-var">$email</span>;
+
+    <span class="php-comment">//returns active record finder instance</span>
+    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> finder(<span class="php-var">$className</span>=__CLASS__)
+    {
+        <span class="php-keyword1">return</span> parent::finder(<span class="php-var">$className</span>);
+    }
+}
+
+<span class="php-comment">//create a connection and give it to the ActiveRecord manager.</span>
+<span class="php-var">$dsn</span> = <span class="php-quote">'pgsql:host=localhost;dbname=test'</span>;
+<span class="php-var">$conn</span> = <span class="php-keyword1">new</span> TDbConnection(<span class="php-var">$dsn</span>, <span class="php-quote">'dbuser'</span>,<span class="php-quote">'dbpass'</span>);
+TActiveRecordManager::getInstance()-&gt;setDbConnection(<span class="php-var">$conn</span>);
+
+<span class="php-comment">//load the user record with username (primary key) 'admin'.</span>
+<span class="php-var">$user</span> = UserRecord::finder()-&gt;findByPk(<span class="php-quote">'admin'</span>);
+<span class="php-var">$user</span>-&gt;email = <span class="php-quote">'admin@example.org'</span>;
+<span class="php-var">$user</span>-&gt;save(); <span class="php-comment">//update the 'admin' record.</span></pre>
+
+<p>Since v3.1.1, TActiveRecord starts to support column mapping. The physical
+column names (defined in database) can be mapped to logical column names
+(defined in active classes as public properties.) To use this feature, declare
+a static class variable COLUMN_MAPPING like the following:</p>
+
+<pre><span class="php-keyword1">class</span> UserRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+    <span class="php-keyword1">const</span> TABLE=<span class="php-quote">'users'</span>;
+    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$COLUMN_MAPPING</span>=<span class="php-keyword1">array</span>
+    (
+        <span class="php-quote">'user_id'</span>=&gt;<span class="php-quote">'username'</span>,
+        <span class="php-quote">'email_address'</span>=&gt;<span class="php-quote">'email'</span>,
+    );
+    <span class="php-keyword1">public</span> <span class="php-var">$username</span>;
+    <span class="php-keyword1">public</span> <span class="php-var">$email</span>;
+}</pre>
+
+<p>In the above, the 'users' table consists of 'user_id' and 'email_address' columns,
+while the UserRecord class declares 'username' and 'email' properties.
+By using column mapping, we can regularize the naming convention of column names
+in active record.</p>
+
+<p>Since v3.1.2, TActiveRecord enhanced its support to access of foreign objects.
+By declaring a public static variable RELATIONS like the following, one can access
+the corresponding foreign objects easily:</p>
+
+<pre><span class="php-keyword1">class</span> UserRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+    <span class="php-keyword1">const</span> TABLE=<span class="php-quote">'users'</span>;
+    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$RELATIONS</span>=<span class="php-keyword1">array</span>
+    (
+        <span class="php-quote">'department'</span>=&gt;<span class="php-keyword1">array</span>(self::BELONGS_TO, <span class="php-quote">'DepartmentRecord'</span>, <span class="php-quote">'department_id'</span>),
+        <span class="php-quote">'contacts'</span>=&gt;<span class="php-keyword1">array</span>(self::HAS_MANY, <span class="php-quote">'ContactRecord'</span>, <span class="php-quote">'user_id'</span>),
+    );
+}</pre>
+
+<p>In the above, the users table is related with departments table (represented by
+DepartmentRecord) and contacts table (represented by ContactRecord). Now, given a UserRecord
+instance $user, one can access its department and contacts simply by: $user->department and
+$user->contacts. No explicit data fetching is needed. Internally, the foreign objects are
+fetched in a lazy way, which avoids unnecessary overhead if the foreign objects are not accessed
+at all.</p>
+
+<p>Since v3.1.2, new events OnInsert, OnUpdate and OnDelete are available.
+The event OnInsert, OnUpdate and OnDelete methods are executed before
+inserting, updating, and deleting the current record, respectively. You may override
+these methods; a TActiveRecordChangeEventParameter parameter is passed to these methods.
+The property <a href="TActiveRecordChangeEventParameter::setIsValid">IsValid</a> of the parameter
+can be set to false to prevent the change action to be executed. This can be used,
+for example, to validate the record before the action is executed. For example,
+in the following the password property is hashed before a new record is inserted.</p>
+
+<pre><span class="php-keyword1">class</span> UserRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+     <span class="php-keyword1">function</span> OnInsert(<span class="php-var">$param</span>)
+     {
+         <span class="php-comment">//parent method should be called to raise the event</span>
+         parent::OnInsert(<span class="php-var">$param</span>);
+         <span class="php-var">$this</span>-&gt;nounce = <span class="php-keyword2">md5</span>(<span class="php-keyword2">time</span>());
+         <span class="php-var">$this</span>-&gt;password = <span class="php-keyword2">md5</span>(<span class="php-var">$this</span>-&gt;password.<span class="php-var">$this</span>-&gt;nounce);
+     }
+}</pre>
+
+<p>Since v3.1.3 you can also define a method that returns the table name.</p>
+
+<pre><span class="php-keyword1">class</span> UserRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> table()
+    {
+         <span class="php-keyword1">return</span> <span class="php-quote">'users'</span>;
+    }
+
+}</pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Prado.TComponent.html"><span>Prado\TComponent</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Prado\Data\ActiveRecord\TActiveRecord</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> Prado\Data\ActiveRecord<br>
+		<b>Package:</b> Prado\Data\ActiveRecord<br>
+
+				<b>Author:</b>
+				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
+				<b>Since:</b>
+				3.1<br>
+			<b>Located at</b> <a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#25-1057" title="Go to source code">Data/ActiveRecord/TActiveRecord.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__sleep" id="___sleep">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___sleep">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#205-211" title="Go to source code">__sleep</a>( )</code>
+
+		<div class="description short">
+			<p>Prevent __call() method creating __sleep() when serializing.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prevent __call() method creating __sleep() when serializing.</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Prado.TComponent.html#___sleep">Prado\TComponent::__sleep()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__wakeup" id="___wakeup">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___wakeup">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#213-220" title="Go to source code">__wakeup</a>( )</code>
+
+		<div class="description short">
+			<p>Prevent __call() method creating __wakeup() when unserializing.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prevent __call() method creating __wakeup() when unserializing.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#222-237" title="Go to source code">__construct</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span>, <span>TDbConnection <var>$connection</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Create a new instance of an active record with given $data. The record
+can be saved to the database specified by the $connection object.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new instance of an active record with given $data. The record
+can be saved to the database specified by the $connection object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>name value pair record data.</dd>
+					<dt><var>$connection</var></dt>
+					<dd>database connection this object record use.</dd>
+				</dl></div>
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Prado.TComponent.html#___construct">Prado\TComponent::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#239-255" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Magic method for reading properties.
+This method is overriden to provide read access to the foreign objects via
+the key names declared in the RELATIONS array.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Magic method for reading properties.
+This method is overriden to provide read access to the foreign objects via
+the key names declared in the RELATIONS array.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>property value.
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					TInvalidOperationException<br>if the property/event is not defined.
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Prado.TComponent.html#___get">Prado\TComponent::__get()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#257-271" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Magic method for writing properties.
+This method is overriden to provide write access to the foreign objects via
+the key names declared in the RELATIONS array.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Magic method for writing properties.
+This method is overriden to provide write access to the foreign objects via
+the key names declared in the RELATIONS array.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name</dd>
+					<dt><var>$value</var></dt>
+					<dd>value.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					TInvalidOperationException<br>If the property is not defined or read-only.
+				</div>
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Prado.TComponent.html#___set">Prado\TComponent::__set()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="copyFrom" id="_copyFrom">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_copyFrom">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#302-314" title="Go to source code">copyFrom</a>( <span> <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Copies data from an array or another object.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Copies data from an array or another object.</p>
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.Exceptions.TActiveRecordException.html">Prado\Data\ActiveRecord\Exceptions\TActiveRecordException</a></code><br>if data is not array or not object.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getActiveDbConnection" id="_getActiveDbConnection">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getActiveDbConnection">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#317-322" title="Go to source code">getActiveDbConnection</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDbConnection" id="_getDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			TDbConnection
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDbConnection">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#324-334" title="Go to source code">getDbConnection</a>( )</code>
+
+		<div class="description short">
+			<p>Gets the current Db connection, the connection object is obtained from
+the TActiveRecordManager if connection is currently null.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the current Db connection, the connection object is obtained from
+the TActiveRecordManager if connection is currently null.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					TDbConnection<br>current db connection for this object.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDbConnection" id="_setDbConnection">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDbConnection">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#336-342" title="Go to source code">setDbConnection</a>( <span>TDbConnection <var>$connection</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>connection object for this record.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordTableInfo" id="_getRecordTableInfo">
+
+		<td class="attributes"><code>
+			 public 
+
+			TDbTableInfo
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordTableInfo">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#344-350" title="Go to source code">getRecordTableInfo</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					TDbTableInfo<br>the meta information of the table associated with this AR class.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="equals" id="_equals">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_equals">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#352-378" title="Go to source code">equals</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code> <var>$record</var></span>, <span>boolean <var>$strict</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Compare two records using their primary key values (all column values if
+table does not defined primary keys). The default uses simple == for
+comparison of their values. Set $strict=true for identity comparison (===).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Compare two records using their primary key values (all column values if
+table does not defined primary keys). The default uses simple == for
+comparison of their values. Set $strict=true for identity comparison (===).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$record</var></dt>
+					<dd>record to compare with.</dd>
+					<dt><var>$strict</var></dt>
+					<dd>to perform strict identity comparison</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if $record equals, false otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="finder" id="_finder">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_finder">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#380-398" title="Go to source code">finder</a>( <span>string <var>$className</var> = __CLASS__</span> )</code>
+
+		<div class="description short">
+			<p>Returns the instance of a active record finder for a particular class.
+The finder objects are static instances for each ActiveRecord class.
+This means that event handlers bound to these finder instances are class wide.
+Create a new instance of the ActiveRecord class if you wish to bound the
+event handlers to object instance.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the instance of a active record finder for a particular class.
+The finder objects are static instances for each ActiveRecord class.
+This means that event handlers bound to these finder instances are class wide.
+Create a new instance of the ActiveRecord class if you wish to bound the
+event handlers to object instance.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$className</var></dt>
+					<dd>record class name.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code><br>active record finder instance.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordManager" id="_getRecordManager">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordManager.html">Prado\Data\ActiveRecord\TActiveRecordManager</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordManager">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#400-408" title="Go to source code">getRecordManager</a>( )</code>
+
+		<div class="description short">
+			<p>Gets the record manager for this object, the default is to call
+TActiveRecordManager::getInstance().</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets the record manager for this object, the default is to call
+TActiveRecordManager::getInstance().</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordManager.html">Prado\Data\ActiveRecord\TActiveRecordManager</a></code><br>default active record manager.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordGateway" id="_getRecordGateway">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordGateway.html">Prado\Data\ActiveRecord\TActiveRecordGateway</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordGateway">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#410-416" title="Go to source code">getRecordGateway</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordGateway.html">Prado\Data\ActiveRecord\TActiveRecordGateway</a></code><br>record table gateway.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#418-445" title="Go to source code">save</a>( )</code>
+
+		<div class="description short">
+			<p>Saves the current record to the database, insert or update is automatically determined.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Saves the current record to the database, insert or update is automatically determined.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if record was saved successfully, false otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#447-469" title="Go to source code">delete</a>( )</code>
+
+		<div class="description short">
+			<p>Deletes the current record from the database. Once deleted, this object
+can not be saved again in the same instance.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Deletes the current record from the database. Once deleted, this object
+can not be saved again in the same instance.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if the record was deleted successfully, false otherwise.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteByPk" id="_deleteByPk">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteByPk">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#471-499" title="Go to source code">deleteByPk</a>( <span>mixed <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			<p>Delete records by primary key. Usage:</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete records by primary key. Usage:</p>
+
+<pre><span class="php-var">$finder</span>-&gt;deleteByPk(<span class="php-var">$primaryKey</span>); <span class="php-comment">//delete 1 record</span>
+<span class="php-var">$finder</span>-&gt;deleteByPk(<span class="php-var">$key1</span>,<span class="php-var">$key2</span>,...); <span class="php-comment">//delete multiple records</span>
+<span class="php-var">$finder</span>-&gt;deleteByPk(<span class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span class="php-var">$key2</span>,...)); <span class="php-comment">//delete multiple records</span></pre>
+
+<p>For composite primary keys (determined from the table definitions):</p>
+
+<pre><span class="php-var">$finder</span>-&gt;deleteByPk(<span class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span class="php-var">$key2</span>)); <span class="php-comment">//delete 1 record</span>
+
+<span class="php-comment">//delete multiple records</span>
+<span class="php-var">$finder</span>-&gt;deleteByPk(<span class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span class="php-var">$key2</span>), <span class="php-keyword1">array</span>(<span class="php-var">$key3</span>,<span class="php-var">$key4</span>),...);
+
+<span class="php-comment">//delete multiple records</span>
+<span class="php-var">$finder</span>-&gt;deleteByPk(<span class="php-keyword1">array</span>( <span class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span class="php-var">$key2</span>), <span class="php-keyword1">array</span>(<span class="php-var">$key3</span>,<span class="php-var">$key4</span>), .. ));</pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd>key values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of records deleted.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteAllByPks" id="_deleteAllByPks">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteAllByPks">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#501-509" title="Go to source code">deleteAllByPks</a>( <span> <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			<p>Alias for deleteByPk()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Alias for deleteByPk()</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteAll" id="_deleteAll">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteAll">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#510-521" title="Go to source code">deleteAll</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Delete multiple records using a criteria.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete multiple records using a criteria.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd>condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of records deleted.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="populateObject" id="_populateObject">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_populateObject">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#523-532" title="Go to source code">populateObject</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Populates a new record with the query result.
+This is a wrapper of <code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html#_createRecord">Prado\Data\ActiveRecord\TActiveRecord::createRecord()</a></code>.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Populates a new record with the query result.
+This is a wrapper of <code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html#_createRecord">Prado\Data\ActiveRecord\TActiveRecord::createRecord()</a></code>.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>value pair of record data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code><br>object record, null if data is empty.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="populateObjects" id="_populateObjects">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_populateObjects">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#534-545" title="Go to source code">populateObjects</a>( <span>TDbDataReader <var>$reader</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$reader</var></dt>
+					<dd>reader</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>the AR objects populated by the query result
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createRecord" id="_createRecord">
+
+		<td class="attributes"><code>
+			 public static
+
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createRecord">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#547-563" title="Go to source code">createRecord</a>( <span>string <var>$type</var></span>, <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Create an AR instance specified by the AR class name and initial data.
+If the initial data is empty, the AR object will not be created and null will be returned.
+(You should use the "new" operator to create the AR instance in that case.)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create an AR instance specified by the AR class name and initial data.
+If the initial data is empty, the AR object will not be created and null will be returned.
+(You should use the "new" operator to create the AR instance in that case.)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd>AR class name</dd>
+					<dt><var>$data</var></dt>
+					<dd>data to be populated into the AR object.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code><br>the initialized AR object. Null if the initial data is empty.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="find" id="_find">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_find">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#565-589" title="Go to source code">find</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Find one single record that matches the criteria.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find one single record that matches the criteria.</p>
+
+<p>Usage:</p>
+
+<pre><span class="php-var">$finder</span>-&gt;find(<span class="php-quote">'username = :name AND password = :pass'</span>,
+                    <span class="php-keyword1">array</span>(<span class="php-quote">':name'</span>=&gt;<span class="php-var">$name</span>, <span class="php-quote">':pass'</span>=&gt;<span class="php-var">$pass</span>));
+<span class="php-var">$finder</span>-&gt;find(<span class="php-quote">'username = ? AND password = ?'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$name</span>, <span class="php-var">$pass</span>));
+<span class="php-var">$finder</span>-&gt;find(<span class="php-quote">'username = ? AND password = ?'</span>, <span class="php-var">$name</span>, <span class="php-var">$pass</span>);
+<span class="php-comment">//$criteria is of TActiveRecordCriteria</span>
+<span class="php-var">$finder</span>-&gt;find(<span class="php-var">$criteria</span>); <span class="php-comment">//the 2nd parameter for find() is ignored.</span></pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd>condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code><br>matching record object. Null if no result is found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAll" id="_findAll">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAll">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#591-605" title="Go to source code">findAll</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Same as find() but returns an array of objects.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Same as find() but returns an array of objects.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd>condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>matching record objects. Empty array if no result is found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findByPk" id="_findByPk">
+
+		<td class="attributes"><code>
+			 public 
+
+			TActiveRecord.
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findByPk">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#607-627" title="Go to source code">findByPk</a>( <span>mixed <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			<p>Find one record using only the primary key or composite primary keys. Usage:</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find one record using only the primary key or composite primary keys. Usage:</p>
+
+<pre><span class="php-var">$finder</span>-&gt;findByPk(<span class="php-var">$primaryKey</span>);
+<span class="php-var">$finder</span>-&gt;findByPk(<span class="php-var">$key1</span>, <span class="php-var">$key2</span>, ...);
+<span class="php-var">$finder</span>-&gt;findByPk(<span class="php-keyword1">array</span>(<span class="php-var">$key1</span>,<span class="php-var">$key2</span>,...));</pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd>keys</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					TActiveRecord.<br>Null if no result is found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAllByPks" id="_findAllByPks">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAllByPks">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#629-652" title="Go to source code">findAllByPks</a>( <span>mixed <var>$keys</var></span> )</code>
+
+		<div class="description short">
+			<p>Find multiple records matching a list of primary or composite keys.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find multiple records matching a list of primary or composite keys.</p>
+
+<p>For scalar primary keys:</p>
+
+<pre><span class="php-var">$finder</span>-&gt;findAllByPk(<span class="php-var">$key1</span>, <span class="php-var">$key2</span>, ...);
+<span class="php-var">$finder</span>-&gt;findAllByPk(<span class="php-keyword1">array</span>(<span class="php-var">$key1</span>, <span class="php-var">$key2</span>, ...));</pre>
+
+<p>For composite keys:</p>
+
+<pre><span class="php-var">$finder</span>-&gt;findAllByPk(<span class="php-keyword1">array</span>(<span class="php-var">$key1</span>, <span class="php-var">$key2</span>), <span class="php-keyword1">array</span>(<span class="php-var">$key3</span>, <span class="php-var">$key4</span>), ...);
+<span class="php-var">$finder</span>-&gt;findAllByPk(<span class="php-keyword1">array</span>(<span class="php-keyword1">array</span>(<span class="php-var">$key1</span>, <span class="php-var">$key2</span>), <span class="php-keyword1">array</span>(<span class="php-var">$key3</span>, <span class="php-var">$key4</span>), ...));</pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$keys</var></dt>
+					<dd>keys</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>matching ActiveRecords. Empty array is returned if no result is found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findBySql" id="_findBySql">
+
+		<td class="attributes"><code>
+			 public 
+
+			TActiveRecord,
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findBySql">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#654-669" title="Go to source code">findBySql</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Find records using full SQL, returns corresponding record object.
+The names of the column retrieved must be defined in your Active Record
+class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find records using full SQL, returns corresponding record object.
+The names of the column retrieved must be defined in your Active Record
+class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>SQL</dd>
+					<dt><var>$parameters</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					TActiveRecord,<br>null if no result is returned.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAllBySql" id="_findAllBySql">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAllBySql">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#671-685" title="Go to source code">findAllBySql</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Find records using full SQL, returns corresponding record object.
+The names of the column retrieved must be defined in your Active Record
+class.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find records using full SQL, returns corresponding record object.
+The names of the column retrieved must be defined in your Active Record
+class.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>SQL</dd>
+					<dt><var>$parameters</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>matching active records. Empty array is returned if no result is found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAllByIndex" id="_findAllByIndex">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findAllByIndex">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#687-703" title="Go to source code">findAllByIndex</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>array <var>$fields</var></span>, <span>array <var>$values</var></span> )</code>
+
+		<div class="description short">
+			<p>Fetches records using the sql clause "(fields) IN (values)", where
+fields is an array of column names and values is an array of values that
+the columns must have.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetches records using the sql clause "(fields) IN (values)", where
+fields is an array of column names and values is an array of values that
+the columns must have.</p>
+
+<p>This method is to be used by the relationship handler.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd>criteria</dd>
+					<dt><var>$fields</var></dt>
+					<dd>names to match with "(fields) IN (values)" sql clause.</dd>
+					<dt><var>$values</var></dt>
+					<dd>field values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>matching active records. Empty array is returned if no result is found.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#705-717" title="Go to source code">count</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Find the number of records.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Find the number of records.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd>condition or criteria object.</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>values.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>number of records.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRelationHandler" id="_getRelationHandler">
+
+		<td class="attributes"><code>
+			 protected 
+
+			TActiveRecordRelation,
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRelationHandler">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#719-735" title="Go to source code">getRelationHandler</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Returns the active record relationship handler for $RELATION with key
+value equal to the $property value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the active record relationship handler for $RELATION with key
+value equal to the $property value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name corresponding to keys in $RELATION array.</dd>
+					<dt><var>$args</var></dt>
+					<dd>call arguments.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					TActiveRecordRelation,<br>null if the context or the handler doesn't exist
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createRelationContext" id="_createRelationContext">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordRelationContext.html">Prado\Data\ActiveRecord\Relations\TActiveRecordRelationContext</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createRelationContext">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#737-755" title="Go to source code">createRelationContext</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Gets a static copy of the relationship context for given property (a key
+in $RELATIONS), returns null if invalid relationship. Keeps a null
+reference to all invalid relations called.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets a static copy of the relationship context for given property (a key
+in $RELATIONS), returns null if invalid relationship. Keeps a null
+reference to all invalid relations called.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>name corresponding to keys in $RELATION array.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.Relations.TActiveRecordRelationContext.html">Prado\Data\ActiveRecord\Relations\TActiveRecordRelationContext</a></code><br><p>object containing information on
+the active record relationships for given property, null if invalid relationship</p>
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchResultsFor" id="_fetchResultsFor">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchResultsFor">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#757-798" title="Go to source code">fetchResultsFor</a>( <span>string <var>$property</var></span> )</code>
+
+		<div class="description short">
+			<p>Tries to load the relationship results for the given property. The $property
+value should correspond to an entry key in the $RELATION array.
+This method can be used to lazy load relationships.
+<code>
+class TeamRecord extends TActiveRecord
+{
+    ...</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Tries to load the relationship results for the given property. The $property
+value should correspond to an entry key in the $RELATION array.
+This method can be used to lazy load relationships.</p>
+
+<pre><span class="php-keyword1">class</span> TeamRecord <span class="php-keyword1">extends</span> TActiveRecord
+{
+    ...
+
+<span class="php-keyword1">private</span> <span class="php-var">$_players</span>;
+    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$RELATION</span>=<span class="php-keyword1">array</span>
+    (
+        <span class="php-quote">'players'</span> =&gt; <span class="php-keyword1">array</span>(self::HAS_MANY, <span class="php-quote">'PlayerRecord'</span>),
+    );
+
+    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> setPlayers(<span class="php-var">$array</span>)
+    {
+        <span class="php-var">$this</span>-&gt;_players=<span class="php-var">$array</span>;
+    }
+
+    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> getPlayers()
+    {
+        <span class="php-keyword1">if</span>(<span class="php-var">$this</span>-&gt;_players===<span class="php-keyword1">null</span>)
+            <span class="php-var">$this</span>-&gt;fetchResultsFor(<span class="php-quote">'players'</span>);
+        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_players;
+    }
+}
+Usage example:
+<span class="php-var">$team</span> = TeamRecord::finder()-&gt;findByPk(<span class="php-num">1</span>);
+<span class="php-keyword2">var_dump</span>(<span class="php-var">$team</span>-&gt;players); <span class="php-comment">//uses lazy load to fetch 'players' relation</span></pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$property</var></dt>
+					<dd>name corresponding to keys in $RELATION array.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if relationship exists, false otherwise.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#800-858" title="Go to source code">__call</a>( <span>string <var>$method</var></span>, <span>mixed <var>$args</var></span> )</code>
+
+		<div class="description short">
+			<p>Dynamic find method using parts of method name as search criteria.
+Method name starting with "findBy" only returns 1 record.
+Method name starting with "findAllBy" returns 0 or more records.
+Method name starting with "deleteBy" deletes records by the trail criteria.
+The condition is taken as part of the method name after "findBy", "findAllBy"
+or "deleteBy".</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Dynamic find method using parts of method name as search criteria.
+Method name starting with "findBy" only returns 1 record.
+Method name starting with "findAllBy" returns 0 or more records.
+Method name starting with "deleteBy" deletes records by the trail criteria.
+The condition is taken as part of the method name after "findBy", "findAllBy"
+or "deleteBy".</p>
+
+<p>The following are equivalent:</p>
+
+<pre><span class="php-var">$finder</span>-&gt;findByName(<span class="php-var">$name</span>)
+<span class="php-var">$finder</span>-&gt;find(<span class="php-quote">'Name = ?'</span>, <span class="php-var">$name</span>);</pre>
+
+<pre><span class="php-var">$finder</span>-&gt;findByUsernameAndPassword(<span class="php-var">$name</span>,<span class="php-var">$pass</span>); <span class="php-comment">// OR may be used</span>
+<span class="php-var">$finder</span>-&gt;findBy_Username_And_Password(<span class="php-var">$name</span>,<span class="php-var">$pass</span>); <span class="php-comment">// _OR_ may be used</span>
+<span class="php-var">$finder</span>-&gt;find(<span class="php-quote">'Username = ? AND Password = ?'</span>, <span class="php-var">$name</span>, <span class="php-var">$pass</span>);</pre>
+
+<pre><span class="php-var">$finder</span>-&gt;findAllByAge(<span class="php-var">$age</span>);
+<span class="php-var">$finder</span>-&gt;findAll(<span class="php-quote">'Age = ?'</span>, <span class="php-var">$age</span>);</pre>
+
+<pre><span class="php-var">$finder</span>-&gt;deleteAll(<span class="php-quote">'Name = ?'</span>, <span class="php-var">$name</span>);
+<span class="php-var">$finder</span>-&gt;deleteByName(<span class="php-var">$name</span>);</pre>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd>name that doesn't exist and is being called on the object</dd>
+					<dt><var>$args</var></dt>
+					<dd>parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br><p>single record if method name starts with "findBy", 0 or more records
+if method name starts with "findAllBy"</p>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					TInvalidOperationException<br><p>If the property is not defined or read-only or
+        method is undefined</p>
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Prado.TComponent.html#___call">Prado\TComponent::__call()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInvalidFinderResult" id="_getInvalidFinderResult">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordInvalidFinderResult.html">Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInvalidFinderResult">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#860-871" title="Go to source code">getInvalidFinderResult</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordInvalidFinderResult.html">Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult</a></code><br>Defaults to '<a href="TActiveRecordInvalidFinderResult::Null">Null</a>'.
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						TActiveRecordManager::getInvalidFinderResult<br>
+				</div>
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setInvalidFinderResult" id="_setInvalidFinderResult">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setInvalidFinderResult">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#873-886" title="Go to source code">setInvalidFinderResult</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordInvalidFinderResult.html">Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult</a></code>|null <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Define the way an active record finder react if an invalid magic-finder invoked</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Define the way an active record finder react if an invalid magic-finder invoked</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						TActiveRecordManager::setInvalidFinderResult<br>
+				</div>
+				<h4>Since</h4>
+				<div class="list">
+						3.1.5<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordCriteria" id="_getRecordCriteria">
+
+		<td class="attributes"><code>
+			 protected 
+
+			<code><a href="class-Prado.Data.DataGateway.TSqlCriteria.html">Prado\Data\DataGateway\TSqlCriteria</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordCriteria">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#888-909" title="Go to source code">getRecordCriteria</a>( <span>string|<code><a href="class-Prado.Data.DataGateway.TSqlCriteria.html">Prado\Data\DataGateway\TSqlCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Create a new TSqlCriteria object from a string $criteria. The $args
+are additional parameters and are used in place of the $parameters
+if $parameters is not an array and $args is an arrary.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a new TSqlCriteria object from a string $criteria. The $args
+are additional parameters and are used in place of the $parameters
+if $parameters is not an array and $args is an arrary.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$criteria</var></dt>
+					<dd>criteria</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>passed by the user.</dd>
+					<dt><var>$args</var></dt>
+					<dd>parameters obtained from function_get_args().</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Prado.Data.DataGateway.TSqlCriteria.html">Prado\Data\DataGateway\TSqlCriteria</a></code><br>criteria object.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onCreateCommand" id="_onCreateCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onCreateCommand">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#911-925" title="Go to source code">onCreateCommand</a>( <span>TDataGatewayEventParameter <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raised when a command is prepared and parameter binding is completed.
+The parameter object is TDataGatewayEventParameter of which the
+<a href="TDataGatewayEventParameter::getCommand">Command</a> property can be
+inspected to obtain the sql query to be executed.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raised when a command is prepared and parameter binding is completed.
+The parameter object is TDataGatewayEventParameter of which the
+<a href="TDataGatewayEventParameter::getCommand">Command</a> property can be
+inspected to obtain the sql query to be executed.</p>
+
+<p>Note well that the finder objects obtained from ActiveRecord::finder()
+method are static objects. This means that the event handlers are
+bound to a static finder object and not to each distinct active record object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onExecuteCommand" id="_onExecuteCommand">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onExecuteCommand">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#927-942" title="Go to source code">onExecuteCommand</a>( <span>TDataGatewayResultEventParameter <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raised when a command is executed and the result from the database was returned.
+The parameter object is TDataGatewayResultEventParameter of which the
+<a href="TDataGatewayEventParameter::getResult">Result</a> property contains
+the data return from the database. The data returned can be changed
+by setting the <a href="TDataGatewayEventParameter::setResult">Result</a> property.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raised when a command is executed and the result from the database was returned.
+The parameter object is TDataGatewayResultEventParameter of which the
+<a href="TDataGatewayEventParameter::getResult">Result</a> property contains
+the data return from the database. The data returned can be changed
+by setting the <a href="TDataGatewayEventParameter::setResult">Result</a> property.</p>
+
+<p>Note well that the finder objects obtained from ActiveRecord::finder()
+method are static objects. This means that the event handlers are
+bound to a static finder object and not to each distinct active record object.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onInsert" id="_onInsert">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onInsert">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#944-952" title="Go to source code">onInsert</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raised before the record attempt to insert its data into the database.
+To prevent the insert operation, set the TActiveRecordChangeEventParameter::IsValid parameter to false.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raised before the record attempt to insert its data into the database.
+To prevent the insert operation, set the TActiveRecordChangeEventParameter::IsValid parameter to false.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onDelete" id="_onDelete">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onDelete">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#954-962" title="Go to source code">onDelete</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raised before the record attempt to delete its data from the database.
+To prevent the delete operation, set the TActiveRecordChangeEventParameter::IsValid parameter to false.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raised before the record attempt to delete its data from the database.
+To prevent the delete operation, set the TActiveRecordChangeEventParameter::IsValid parameter to false.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onUpdate" id="_onUpdate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onUpdate">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#964-972" title="Go to source code">onUpdate</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+
+		<div class="description short">
+			<p>Raised before the record attempt to update its data in the database.
+To prevent the update operation, set the TActiveRecordChangeEventParameter::IsValid parameter to false.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Raised before the record attempt to update its data in the database.
+To prevent the update operation, set the TActiveRecordChangeEventParameter::IsValid parameter to false.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>parameter to be passed to the event handlers</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getColumnValue" id="_getColumnValue">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getColumnValue">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#974-987" title="Go to source code">getColumnValue</a>( <span>string <var>$columnName</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieves the column value according to column name.
+This method is used internally.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieves the column value according to column name.
+This method is used internally.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columnName</var></dt>
+					<dd>column name (as defined in database schema)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed<br>the corresponding column value
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setColumnValue" id="_setColumnValue">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setColumnValue">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#989-1002" title="Go to source code">setColumnValue</a>( <span>string <var>$columnName</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the column value according to column name.
+This method is used internally.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the column value according to column name.
+This method is used internally.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$columnName</var></dt>
+					<dd>column name (as defined in database schema)</dd>
+					<dt><var>$value</var></dt>
+					<dd>corresponding column value</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordRelation" id="_getRecordRelation">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordRelation">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1004-1014" title="Go to source code">getRecordRelation</a>( <span>string <var>$property</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$property</var></dt>
+					<dd>property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>relation definition for the specified property
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRecordRelations" id="_getRecordRelations">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRecordRelations">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1016-1023" title="Go to source code">getRecordRelations</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>all relation definitions declared in the AR class
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasRecordRelation" id="_hasRecordRelation">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasRecordRelation">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1025-1033" title="Go to source code">hasRecordRelation</a>( <span>string <var>$property</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$property</var></dt>
+					<dd>property name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether a relation is declared for the specified AR property
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.1.2<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toArray" id="_toArray">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toArray">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1035-1047" title="Go to source code">toArray</a>( )</code>
+
+		<div class="description short">
+			<p>Return record data as array</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return record data as array</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>of column name and column values
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.4<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toJSON" id="_toJSON">
+
+		<td class="attributes"><code>
+			 public 
+
+			JSON
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toJSON">#</a>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1049-1056" title="Go to source code">toJSON</a>( )</code>
+
+		<div class="description short">
+			<p>Return record data as JSON</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return record data as JSON</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					JSON
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						3.2.4<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Prado.TComponent.html#methods">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#___destruct">__destruct()</a>, 
+			<a href="class-Prado.TComponent.html#___isset">__isset()</a>, 
+			<a href="class-Prado.TComponent.html#___unset">__unset()</a>, 
+			<a href="class-Prado.TComponent.html#__getZappableSleepProps">_getZappableSleepProps()</a>, 
+			<a href="class-Prado.TComponent.html#_addParsedObject">addParsedObject()</a>, 
+			<a href="class-Prado.TComponent.html#_asa">asa()</a>, 
+			<a href="class-Prado.TComponent.html#_attachBehavior">attachBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_attachBehaviors">attachBehaviors()</a>, 
+			<a href="class-Prado.TComponent.html#_attachClassBehavior">attachClassBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_attachEventHandler">attachEventHandler()</a>, 
+			<a href="class-Prado.TComponent.html#_canGetProperty">canGetProperty()</a>, 
+			<a href="class-Prado.TComponent.html#_canSetProperty">canSetProperty()</a>, 
+			<a href="class-Prado.TComponent.html#_clearBehaviors">clearBehaviors()</a>, 
+			<a href="class-Prado.TComponent.html#_createdOnTemplate">createdOnTemplate()</a>, 
+			<a href="class-Prado.TComponent.html#_detachBehavior">detachBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_detachBehaviors">detachBehaviors()</a>, 
+			<a href="class-Prado.TComponent.html#_detachClassBehavior">detachClassBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_detachEventHandler">detachEventHandler()</a>, 
+			<a href="class-Prado.TComponent.html#_disableBehavior">disableBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_disableBehaviors">disableBehaviors()</a>, 
+			<a href="class-Prado.TComponent.html#_enableBehavior">enableBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_enableBehaviors">enableBehaviors()</a>, 
+			<a href="class-Prado.TComponent.html#_evaluateExpression">evaluateExpression()</a>, 
+			<a href="class-Prado.TComponent.html#_evaluateStatements">evaluateStatements()</a>, 
+			<a href="class-Prado.TComponent.html#_fxAttachClassBehavior">fxAttachClassBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_fxDetachClassBehavior">fxDetachClassBehavior()</a>, 
+			<a href="class-Prado.TComponent.html#_getAutoGlobalListen">getAutoGlobalListen()</a>, 
+			<a href="class-Prado.TComponent.html#_getBehaviorsEnabled">getBehaviorsEnabled()</a>, 
+			<a href="class-Prado.TComponent.html#_getClassHierarchy">getClassHierarchy()</a>, 
+			<a href="class-Prado.TComponent.html#_getEventHandlers">getEventHandlers()</a>, 
+			<a href="class-Prado.TComponent.html#_getListeningToGlobalEvents">getListeningToGlobalEvents()</a>, 
+			<a href="class-Prado.TComponent.html#_getSubProperty">getSubProperty()</a>, 
+			<a href="class-Prado.TComponent.html#_hasEvent">hasEvent()</a>, 
+			<a href="class-Prado.TComponent.html#_hasEventHandler">hasEventHandler()</a>, 
+			<a href="class-Prado.TComponent.html#_hasProperty">hasProperty()</a>, 
+			<a href="class-Prado.TComponent.html#_isa">isa()</a>, 
+			<a href="class-Prado.TComponent.html#_listen">listen()</a>, 
+			<a href="class-Prado.TComponent.html#_raiseEvent">raiseEvent()</a>, 
+			<a href="class-Prado.TComponent.html#_setSubProperty">setSubProperty()</a>, 
+			<a href="class-Prado.TComponent.html#_unlisten">unlisten()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="BELONGS_TO" id="BELONGS_TO">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-constant-BELONGS_TO.html#155" title="Go to source code"><b>BELONGS_TO</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#BELONGS_TO" class="anchor">#</a>
+				<code><span class="php-quote">'BELONGS_TO'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="HAS_ONE" id="HAS_ONE">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-constant-HAS_ONE.html#156" title="Go to source code"><b>HAS_ONE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#HAS_ONE" class="anchor">#</a>
+				<code><span class="php-quote">'HAS_ONE'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="HAS_MANY" id="HAS_MANY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-constant-HAS_MANY.html#157" title="Go to source code"><b>HAS_MANY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#HAS_MANY" class="anchor">#</a>
+				<code><span class="php-quote">'HAS_MANY'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="MANY_TO_MANY" id="MANY_TO_MANY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-constant-MANY_TO_MANY.html#158" title="Go to source code"><b>MANY_TO_MANY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#MANY_TO_MANY" class="anchor">#</a>
+				<code><span class="php-quote">'MANY_TO_MANY'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="STATE_NEW" id="STATE_NEW">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-constant-STATE_NEW.html#160" title="Go to source code"><b>STATE_NEW</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#STATE_NEW" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="STATE_LOADED" id="STATE_LOADED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-constant-STATE_LOADED.html#161" title="Go to source code"><b>STATE_LOADED</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#STATE_LOADED" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="STATE_DELETED" id="STATE_DELETED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-constant-STATE_DELETED.html#162" title="Go to source code"><b>STATE_DELETED</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#STATE_DELETED" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-Prado.TComponent.html#constants">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#GLOBAL_RAISE_EVENT_LISTENER"><b>GLOBAL_RAISE_EVENT_LISTENER</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_recordState" id="$_recordState">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#164-168" title="Go to source code"><var>$_recordState</var></a>
+
+			<div class="description short">
+				<p>record state: 0 = new, 1 = loaded, 2 = deleted.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>record state: 0 = new, 1 = loaded, 2 = deleted.</p>
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.2<br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_recordState" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="COLUMN_MAPPING" id="$COLUMN_MAPPING">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#170-178" title="Go to source code"><var>$COLUMN_MAPPING</var></a>
+
+			<div class="description short">
+				<p>This static variable defines the column mapping.
+The keys are physical column names as defined in database,
+and the values are logical column names as defined as public variable/property names
+for the corresponding active record class.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>This static variable defines the column mapping.
+The keys are physical column names as defined in database,
+and the values are logical column names as defined as public variable/property names
+for the corresponding active record class.</p>
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.1<br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$COLUMN_MAPPING" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="RELATIONS" id="$RELATIONS">
+		<td class="attributes"><code>
+			public static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#181-188" title="Go to source code"><var>$RELATIONS</var></a>
+
+			<div class="description short">
+				<p>This static variable defines the relationships.
+The keys are public variable/property names defined in the AR class.
+Each value is an array, e.g. array(self::HAS_MANY, 'PlayerRecord').</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>This static variable defines the relationships.
+The keys are public variable/property names defined in the AR class.
+Each value is an array, e.g. array(self::HAS_MANY, 'PlayerRecord').</p>
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.1<br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$RELATIONS" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_connection" id="$_connection">
+		<td class="attributes"><code>
+			protected  
+			TDbConnection
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#191-194" title="Go to source code"><var>$_connection</var></a>
+
+			<div class="description short">
+				<p>database connection object.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>database connection object.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_connection" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_invalidFinderResult" id="$_invalidFinderResult">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordInvalidFinderResult.html">Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#197-203" title="Go to source code"><var>$_invalidFinderResult</var></a>
+
+			<div class="description short">
+				<p>Defaults to 'null'</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Defaults to 'null'</p>
+
+					<h4>Since</h4>
+					<div class="list">
+							3.1.5<br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_invalidFinderResult" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Prado 4.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+
+<script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
+<script src="elementlist.js?2b4d23921392ba3b3f5800c300c55849bca59fa2"></script>
+</body>
+</html>
