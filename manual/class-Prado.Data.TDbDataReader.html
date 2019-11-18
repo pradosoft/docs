@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Data\TDbDataReader | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Data\TDbDataReader | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,8 +727,8 @@
 	<h1>Class TDbDataReader</h1>
 
 
-	<div class="description">
-	<p>TDbDataReader class.</p>
+		<div class="description">
+		<p>TDbDataReader class.</p>
 
 <p>TDbDataReader represents a forward-only stream of rows from a query result set.</p>
 
@@ -744,7 +745,7 @@ returns all the rows in a single array.</p>
 <p>It is possible to use a specific mode of data fetching by setting
 <code><a href="class-Prado.Data.TDbDataReader.html#_setFetchMode">FetchMode</a></code>. See <a href="http://www.php.net/manual/en/function.PDOStatement-setFetchMode.php">http://www.php.net/manual/en/function.PDOStatement-setFetchMode.php</a>
 for more details.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -780,7 +781,7 @@ for more details.</p>
 				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
 				<b>Since:</b>
 				3.0<br>
-			<b>Located at</b> <a href="source-class-Prado.Data.TDbDataReader.html#17-228" title="Go to source code">Data/TDbDataReader.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Data.TDbDataReader.html#16-227" title="Go to source code">Data/TDbDataReader.php</a>
 		<br>
 	</div>
 
@@ -800,7 +801,7 @@ for more details.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#47-55" title="Go to source code">__construct</a>( <span><code><a href="class-Prado.Data.TDbCommand.html">Prado\Data\TDbCommand</a></code> <var>$command</var></span> )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#46-54" title="Go to source code">__construct</a>( <span><code><a href="class-Prado.Data.TDbCommand.html">Prado\Data\TDbCommand</a></code> <var>$command</var></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.</p>
@@ -837,7 +838,7 @@ for more details.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_bindColumn">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#57-75" title="Go to source code">bindColumn</a>( <span>mixed <var>$column</var></span>, <span>mixed <var>&amp; $value</var></span>, <span>null|integer <var>$dataType</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#56-74" title="Go to source code">bindColumn</a>( <span>mixed <var>$column</var></span>, <span>mixed <var>&amp; $value</var></span>, <span>null|integer <var>$dataType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Binds a column to a PHP variable.
@@ -886,7 +887,7 @@ should match the case of the column, as returned by the driver.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setFetchMode">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#77-85" title="Go to source code">setFetchMode</a>( <span>mixed <var>$mode</var></span> )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#76-84" title="Go to source code">setFetchMode</a>( <span>mixed <var>$mode</var></span> )</code>
 
 		<div class="description short">
 			
@@ -925,7 +926,7 @@ should match the case of the column, as returned by the driver.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_read">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#87-94" title="Go to source code">read</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#86-93" title="Go to source code">read</a>( )</code>
 
 		<div class="description short">
 			<p>Advances the reader to the next row in a result set.</p>
@@ -959,7 +960,7 @@ should match the case of the column, as returned by the driver.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_readColumn">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#96-104" title="Go to source code">readColumn</a>( <span>integer <var>$columnIndex</var></span> )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#95-103" title="Go to source code">readColumn</a>( <span>integer <var>$columnIndex</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns a single column from the next row of a result set.</p>
@@ -998,7 +999,7 @@ should match the case of the column, as returned by the driver.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_readObject">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#106-115" title="Go to source code">readObject</a>( <span>string <var>$className</var></span>, <span>array <var>$fields</var></span> )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#105-114" title="Go to source code">readObject</a>( <span>string <var>$className</var></span>, <span>array <var>$fields</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns a single column from the next row of a result set.</p>
@@ -1039,7 +1040,7 @@ should match the case of the column, as returned by the driver.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_readAll">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#117-125" title="Go to source code">readAll</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#116-124" title="Go to source code">readAll</a>( )</code>
 
 		<div class="description short">
 			<p>Reads the whole result set into an array.</p>
@@ -1074,7 +1075,7 @@ An empty array will be returned if the result contains no row.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_nextResult">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#127-135" title="Go to source code">nextResult</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#126-134" title="Go to source code">nextResult</a>( )</code>
 
 		<div class="description short">
 			<p>Advances the reader to the next result when reading the results of a batch of statements.
@@ -1108,7 +1109,7 @@ returned by the query. Not all DBMS support this feature.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_close">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#137-145" title="Go to source code">close</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#136-144" title="Go to source code">close</a>( )</code>
 
 		<div class="description short">
 			<p>Closes the reader.
@@ -1140,7 +1141,7 @@ Any further data reading will result in an exception.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIsClosed">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#147-153" title="Go to source code">getIsClosed</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#146-152" title="Go to source code">getIsClosed</a>( )</code>
 
 		<div class="description short">
 			
@@ -1174,7 +1175,7 @@ Any further data reading will result in an exception.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRowCount">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#155-163" title="Go to source code">getRowCount</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#154-162" title="Go to source code">getRowCount</a>( )</code>
 
 		<div class="description short">
 			
@@ -1210,7 +1211,7 @@ In this case, use "SELECT COUNT(*) FROM tableName" to obtain the number of rows.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getColumnCount">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#165-172" title="Go to source code">getColumnCount</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#164-171" title="Go to source code">getColumnCount</a>( )</code>
 
 		<div class="description short">
 			
@@ -1245,7 +1246,7 @@ Note, even there's no row in the reader, this still gives correct column number.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rewind">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#174-187" title="Go to source code">rewind</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#173-186" title="Go to source code">rewind</a>( )</code>
 
 		<div class="description short">
 			<p>Resets the iterator to the initial state.
@@ -1267,7 +1268,7 @@ This method is required by the interface Iterator.</p>
 
 
 				<h4>Implementation of</h4>
-				<div class="list"><code>Iterator::rewind()</code></div>
+				<div class="list"><code><a href="class-Iterator.html#_rewind">Iterator::rewind()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
@@ -1283,7 +1284,7 @@ This method is required by the interface Iterator.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_key">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#189-197" title="Go to source code">key</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#188-196" title="Go to source code">key</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the index of the current row.
@@ -1305,7 +1306,7 @@ This method is required by the interface Iterator.</p>
 
 
 				<h4>Implementation of</h4>
-				<div class="list"><code>Iterator::key()</code></div>
+				<div class="list"><code><a href="class-Iterator.html#_key">Iterator::key()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
@@ -1321,7 +1322,7 @@ This method is required by the interface Iterator.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_current">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#199-207" title="Go to source code">current</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#198-206" title="Go to source code">current</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the current row.
@@ -1343,7 +1344,7 @@ This method is required by the interface Iterator.</p>
 
 
 				<h4>Implementation of</h4>
-				<div class="list"><code>Iterator::current()</code></div>
+				<div class="list"><code><a href="class-Iterator.html#_current">Iterator::current()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
@@ -1359,7 +1360,7 @@ This method is required by the interface Iterator.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_next">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#209-217" title="Go to source code">next</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#208-216" title="Go to source code">next</a>( )</code>
 
 		<div class="description short">
 			<p>Moves the internal pointer to the next row.
@@ -1377,7 +1378,7 @@ This method is required by the interface Iterator.</p>
 
 
 				<h4>Implementation of</h4>
-				<div class="list"><code>Iterator::next()</code></div>
+				<div class="list"><code><a href="class-Iterator.html#_next">Iterator::next()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
@@ -1393,7 +1394,7 @@ This method is required by the interface Iterator.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_valid">#</a>
-		<code><a href="source-class-Prado.Data.TDbDataReader.html#219-227" title="Go to source code">valid</a>( )</code>
+		<code><a href="source-class-Prado.Data.TDbDataReader.html#218-226" title="Go to source code">valid</a>( )</code>
 
 		<div class="description short">
 			<p>Returns whether there is a row of data at current position.
@@ -1415,7 +1416,7 @@ This method is required by the interface Iterator.</p>
 
 
 				<h4>Implementation of</h4>
-				<div class="list"><code>Iterator::valid()</code></div>
+				<div class="list"><code><a href="class-Iterator.html#_valid">Iterator::valid()</a></code></div>
 		</div>
 		</div></td>
 	</tr>
@@ -1492,6 +1493,17 @@ This method is required by the interface Iterator.</p>
 
 
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -1500,12 +1512,12 @@ This method is required by the interface Iterator.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

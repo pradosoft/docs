@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Caching\TRedisCache | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Caching\TRedisCache | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,8 +727,8 @@
 	<h1>Class TRedisCache</h1>
 
 
-	<div class="description">
-	<p>TRedisCache class</p>
+		<div class="description">
+		<p>TRedisCache class</p>
 
 <p>TRedisCache implements a cache application module based on <a href="https://redis.io/">redis</a> key-value store.</p>
 
@@ -782,7 +783,7 @@ default cache module. It can be accessed via <a href="TApplication::getCache()">
 
 <p>where <code><a href="class-Prado.Caching.TRedisCache.html#_setHost">Host</a></code> and <code><a href="class-Prado.Caching.TRedisCache.html#_setPort">Port</a></code> or <code><a href="class-Prado.Caching.TRedisCache.html#_setSocket">Socket</a></code> are configurable properties
 of TRedisCache.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -837,7 +838,7 @@ of TRedisCache.</p>
 		
 		
 		<b>Namespace:</b> Prado\Caching<br>
-		
+		<b>Package:</b> Prado\Caching<br>
 
 				<b>Author:</b>
 				Jens Klaer <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6b;&#x6a;&#x2e;&#x6c;&#x61;&#x6e;&#x64;&#119;&#101;&#104;&#114;&#46;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#103;&#109;ail&#x2e;&#x63;&#x6f;&#x6d;">&#x6b;&#x6a;&#x2e;&#x6c;&#x61;&#x6e;&#x64;&#119;&#101;&#104;&#114;&#46;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#64;&#103;&#109;ail&#x2e;&#x63;&#x6f;&#x6d;</a><br>
@@ -845,7 +846,7 @@ of TRedisCache.</p>
 				LANDWEHR Computer und Software GmbH<br>
 				<b>Since:</b>
 				4.0<br>
-			<b>Located at</b> <a href="source-class-Prado.Caching.TRedisCache.html#21-293" title="Go to source code">Caching/TRedisCache.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Caching.TRedisCache.html#21-294" title="Go to source code">Caching/TRedisCache.php</a>
 		<br>
 	</div>
 
@@ -865,7 +866,7 @@ of TRedisCache.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___destruct">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#110-119" title="Go to source code">__destruct</a>( )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#111-120" title="Go to source code">__destruct</a>( )</code>
 
 		<div class="description short">
 			<p>Destructor.
@@ -899,7 +900,7 @@ Disconnect the redis cache server.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_init">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#121-142" title="Go to source code">init</a>( <span><code><a href="class-Prado.Xml.TXmlElement.html">Prado\Xml\TXmlElement</a></code> <var>$config</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#122-143" title="Go to source code">init</a>( <span><code><a href="class-Prado.Xml.TXmlElement.html">Prado\Xml\TXmlElement</a></code> <var>$config</var></span> )</code>
 
 		<div class="description short">
 			<p>Initializes this module.
@@ -942,7 +943,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_valid">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#144-147" title="Go to source code">valid</a>( <span> <var>$key</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#145-148" title="Go to source code">valid</a>( <span> <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -972,7 +973,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getHost">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#149-155" title="Go to source code">getHost</a>( )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#150-156" title="Go to source code">getHost</a>( )</code>
 
 		<div class="description short">
 			
@@ -1006,7 +1007,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setHost">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#157-168" title="Go to source code">setHost</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#158-169" title="Go to source code">setHost</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1045,7 +1046,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPort">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#170-176" title="Go to source code">getPort</a>( )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#171-177" title="Go to source code">getPort</a>( )</code>
 
 		<div class="description short">
 			
@@ -1079,7 +1080,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPort">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#178-189" title="Go to source code">setPort</a>( <span>integer <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#179-190" title="Go to source code">setPort</a>( <span>integer <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1118,7 +1119,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getSocket">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#191-197" title="Go to source code">getSocket</a>( )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#192-198" title="Go to source code">getSocket</a>( )</code>
 
 		<div class="description short">
 			
@@ -1152,7 +1153,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setSocket">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#199-210" title="Go to source code">setSocket</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#200-211" title="Go to source code">setSocket</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1191,7 +1192,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIndex">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#212-218" title="Go to source code">getIndex</a>( )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#213-219" title="Go to source code">getIndex</a>( )</code>
 
 		<div class="description short">
 			
@@ -1225,7 +1226,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setIndex">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#220-231" title="Go to source code">setIndex</a>( <span>integer <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#221-232" title="Go to source code">setIndex</a>( <span>integer <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1264,7 +1265,7 @@ This method is required by the IModule interface. It creates a Redis instance an
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getValue">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#233-242" title="Go to source code">getValue</a>( <span>string <var>$key</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#234-243" title="Go to source code">getValue</a>( <span>string <var>$key</var></span> )</code>
 
 		<div class="description short">
 			<p>Retrieves a value from cache with a specified key.
@@ -1305,7 +1306,7 @@ This is the implementation of the method declared in the parent class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setValue">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#244-257" title="Go to source code">setValue</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#245-258" title="Go to source code">setValue</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
 
 		<div class="description short">
 			<p>Stores a value identified by a key in cache.
@@ -1350,7 +1351,7 @@ This is the implementation of the method declared in the parent class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addValue">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#259-272" title="Go to source code">addValue</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#260-273" title="Go to source code">addValue</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>integer <var>$expire</var></span> )</code>
 
 		<div class="description short">
 			<p>Stores a value identified by a key into cache if the cache does not contain this key.
@@ -1395,7 +1396,7 @@ This is the implementation of the method declared in the parent class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_deleteValue">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#274-284" title="Go to source code">deleteValue</a>( <span>string <var>$key</var></span> )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#275-285" title="Go to source code">deleteValue</a>( <span>string <var>$key</var></span> )</code>
 
 		<div class="description short">
 			<p>Deletes a value with the specified key from cache
@@ -1436,7 +1437,7 @@ This is the implementation of the method declared in the parent class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_flush">#</a>
-		<code><a href="source-class-Prado.Caching.TRedisCache.html#286-292" title="Go to source code">flush</a>( )</code>
+		<code><a href="source-class-Prado.Caching.TRedisCache.html#287-293" title="Go to source code">flush</a>( )</code>
 
 		<div class="description short">
 			<p>Deletes all values from cache, only clearing the currently selected database.</p>
@@ -1577,6 +1578,17 @@ This is the implementation of the method declared in the parent class.</p>
 
 
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -1585,12 +1597,12 @@ This is the implementation of the method declared in the parent class.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

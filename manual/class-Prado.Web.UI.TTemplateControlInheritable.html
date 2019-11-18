@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\UI\TTemplateControlInheritable | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Web\UI\TTemplateControlInheritable | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,15 +727,15 @@
 	<h1>Class TTemplateControlInheritable</h1>
 
 
-	<div class="description">
-	<p>TTemplateControlInheritable class.
+		<div class="description">
+		<p>TTemplateControlInheritable class.
 TTemplateControlInheritable is an extension to the base class for all controls that use templates.
 By default, a control template is assumed to be in a file under the same
 directory with the control class file. They have the same file name and
 different extension name. For template file, the extension name is ".tpl".
 If a TTemplateControlInheritable is inherited it uses the base class template unless the
 inheriting control defines an own.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -804,7 +805,7 @@ inheriting control defines an own.</p>
 				Kyle Caine<br>
 				<b>Since:</b>
 				3.1.8<br>
-			<b>Located at</b> <a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#17-116" title="Go to source code">Web/UI/TTemplateControlInheritable.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#16-115" title="Go to source code">Web/UI/TTemplateControlInheritable.php</a>
 		<br>
 	</div>
 
@@ -824,7 +825,7 @@ inheriting control defines an own.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createChildControls">#</a>
-		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#35-59" title="Go to source code">createChildControls</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#34-58" title="Go to source code">createChildControls</a>( )</code>
 
 		<div class="description short">
 			<p>Creates child controls.
@@ -866,7 +867,7 @@ Uses the controls template if available or the base class template otherwise.</p
 
 		<td class="name"><div>
 		<a class="anchor" href="#_doCreateChildControlsFor">#</a>
-		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#61-74" title="Go to source code">doCreateChildControlsFor</a>( <span>string <var>$parentClass</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#60-73" title="Go to source code">doCreateChildControlsFor</a>( <span>string <var>$parentClass</var></span> )</code>
 
 		<div class="description short">
 			<p>This method creates the cild controls for the given class</p>
@@ -901,7 +902,7 @@ Uses the controls template if available or the base class template otherwise.</p
 
 		<td class="name"><div>
 		<a class="anchor" href="#_doTemplateForClass">#</a>
-		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#76-96" title="Go to source code">doTemplateForClass</a>( <span>string <var>$parentClass</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#75-95" title="Go to source code">doTemplateForClass</a>( <span>string <var>$parentClass</var></span> )</code>
 
 		<div class="description short">
 			<p>This method creates the template object for the given class</p>
@@ -940,7 +941,7 @@ Uses the controls template if available or the base class template otherwise.</p
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIsSourceTemplateControl">#</a>
-		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#100-115" title="Go to source code">getIsSourceTemplateControl</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TTemplateControlInheritable.html#99-114" title="Go to source code">getIsSourceTemplateControl</a>( )</code>
 
 		<div class="description short">
 			<p>A source template control loads its template from external storage,
@@ -1220,6 +1221,17 @@ such as file, db, rather than from within another template.</p>
 
 
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -1228,12 +1240,12 @@ such as file, db, rather than from within another template.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

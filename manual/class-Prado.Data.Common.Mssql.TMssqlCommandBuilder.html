@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Data\Common\Mssql\TMssqlCommandBuilder | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Data\Common\Mssql\TMssqlCommandBuilder | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,10 +727,10 @@
 	<h1>Class TMssqlCommandBuilder</h1>
 
 
-	<div class="description">
-	<p>TMssqlCommandBuilder provides specifics methods to create limit/offset query commands
+		<div class="description">
+		<p>TMssqlCommandBuilder provides specifics methods to create limit/offset query commands
 for MSSQL servers.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -770,7 +771,7 @@ for MSSQL servers.</p>
 				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
 				<b>Since:</b>
 				3.1<br>
-			<b>Located at</b> <a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#17-170" title="Go to source code">Data/Common/Mssql/TMssqlCommandBuilder.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#16-169" title="Go to source code">Data/Common/Mssql/TMssqlCommandBuilder.php</a>
 		<br>
 	</div>
 
@@ -790,7 +791,7 @@ for MSSQL servers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getLastInsertID">#</a>
-		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#27-39" title="Go to source code">getLastInsertID</a>( )</code>
+		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#26-38" title="Go to source code">getLastInsertID</a>( )</code>
 
 		<div class="description short">
 			<p>Overrides parent implementation. Uses "SELECT @@Identity".</p>
@@ -826,7 +827,7 @@ for MSSQL servers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_applyLimitOffset">#</a>
-		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#41-91" title="Go to source code">applyLimitOffset</a>( <span>string <var>$sql</var></span>, <span>integer <var>$limit</var> = -<span class="php-num">1</span></span>, <span>integer <var>$offset</var> = -<span class="php-num">1</span></span> )</code>
+		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#40-90" title="Go to source code">applyLimitOffset</a>( <span>string <var>$sql</var></span>, <span>integer <var>$limit</var> = -<span class="php-num">1</span></span>, <span>integer <var>$offset</var> = -<span class="php-num">1</span></span> )</code>
 
 		<div class="description short">
 			<p>Overrides parent implementation. Alters the sql to apply $limit and $offset.
@@ -905,7 +906,7 @@ No clauses should follow the ORDER BY clause, e.g. no COMPUTE or FOR clauses.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rewriteLimitOffsetSql">#</a>
-		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#93-111" title="Go to source code">rewriteLimitOffsetSql</a>( <span>string <var>$sql</var></span>, <span>integer <var>$limit</var></span>, <span>integer <var>$offset</var></span> )</code>
+		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#92-110" title="Go to source code">rewriteLimitOffsetSql</a>( <span>string <var>$sql</var></span>, <span>integer <var>$limit</var></span>, <span>integer <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			<p>Rewrite sql to apply $limit > and $offset > 0 for MSSQL database.
@@ -954,7 +955,7 @@ See http://troels.arvin.dk/db/rdbms/#select-limit-offset</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_findOrdering">#</a>
-		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#113-142" title="Go to source code">findOrdering</a>( <span>string <var>$sql</var></span> )</code>
+		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#112-141" title="Go to source code">findOrdering</a>( <span>string <var>$sql</var></span> )</code>
 
 		<div class="description short">
 			<p>Base on simplified syntax http://msdn2.microsoft.com/en-us/library/aa259187(SQL.80).aspx</p>
@@ -993,7 +994,7 @@ See http://troels.arvin.dk/db/rdbms/#select-limit-offset</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_joinOrdering">#</a>
-		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#144-157" title="Go to source code">joinOrdering</a>( <span>array <var>$orders</var></span> )</code>
+		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#143-156" title="Go to source code">joinOrdering</a>( <span>array <var>$orders</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1032,7 +1033,7 @@ See http://troels.arvin.dk/db/rdbms/#select-limit-offset</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_reverseDirection">#</a>
-		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#159-169" title="Go to source code">reverseDirection</a>( <span>array <var>$orders</var></span> )</code>
+		<code><a href="source-class-Prado.Data.Common.Mssql.TMssqlCommandBuilder.html#158-168" title="Go to source code">reverseDirection</a>( <span>array <var>$orders</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1161,6 +1162,17 @@ See http://troels.arvin.dk/db/rdbms/#select-limit-offset</p>
 
 
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -1169,12 +1181,12 @@ See http://troels.arvin.dk/db/rdbms/#select-limit-offset</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\I18N\TDateFormat | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\I18N\TDateFormat | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,13 +727,21 @@
 	<h1>Class TDateFormat</h1>
 
 
-	<div class="description">
-	<p>To format dates and/or time according to the current locale use</p>
+		<div class="description">
+		<p>To format dates and/or time according to the current locale use</p>
 
 <pre>&lt;com:TDateFormat <span class="php-keyword2">Pattern</span>=<span class="php-quote">&quot;dd:MMM:yyyy&quot;</span> Value=<span class="php-quote">&quot;01/01/2001&quot;</span> /&gt;</pre>
 
 <p>The date will be formatted according to the current locale (or culture)
-using the format specified by 'Pattern' attribute.</p>
+using the format specified by 'Pattern' attribute.
+The 'Pattern' attribute can also contain two of the predefined presets,
+the first one for the date part and the second for the time part:
+'full', 'long', 'medium', 'short', 'none'.
+If only one preset is present, it will be used for both the date and the
+time parts.</p>
+
+<pre>&lt;com:TDateFormat <span class="php-keyword2">Pattern</span>=<span class="php-quote">&quot;medium long&quot;</span> Value=<span class="php-quote">&quot;01/01/2001 15:30:45&quot;</span> /&gt;
+&lt;com:TDateFormat <span class="php-keyword2">Pattern</span>=<span class="php-quote">&quot;full&quot;</span> Value=<span class="php-quote">&quot;01/01/2001 15:30:45&quot;</span> /&gt;</pre>
 
 <p>To format date and/or time for a locale (e.g. de_DE) include a Culture
 attribute, for example:</p>
@@ -748,22 +757,7 @@ then the current date will be used. E.g.:</p>
 <pre>&lt;com:TDateFormat /&gt;</pre>
 
 <p>will result in the current date, formatted with default localized pattern.</p>
-
-<p>Namespace: System.I18N</p>
-
-<p>Properties
-- <b>Value</b>, date,
-  <br>Gets or sets the date to format. The tag content is used as Value
-  if the Value property is not specified.
-- <b>Pattern</b>, string,
-  <br>Gets or sets the formatting pattern. The predefined patterns are
-  'fulldate',           'longdate', 'mediumdate', 'shortdate', 'fulltime',
-'longtime', 'mediumtime', and 'shorttime'. Custom patterns can   specified
-when the Pattern property does not match the predefined   patterns.
-- <b>DefaultText</b>, string,
-<br>Gets or sets the default text. If Value is not set, DefaultText will be
-shown instead of todays date and time.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -822,7 +816,9 @@ shown instead of todays date and time.</p>
 
 				<b>Author:</b>
 				Xiang Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
-			<b>Located at</b> <a href="source-class-Prado.I18N.TDateFormat.html#24-258" title="Go to source code">I18N/TDateFormat.php</a>
+				<b>Author:</b>
+				Fabio Bas &lt;ctrlaltca[at]gmail[dot]com><br>
+			<b>Located at</b> <a href="source-class-Prado.I18N.TDateFormat.html#16-274" title="Go to source code">I18N/TDateFormat.php</a>
 		<br>
 	</div>
 
@@ -842,7 +838,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPattern">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#82-89" title="Go to source code">setPattern</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#77-84" title="Go to source code">setPattern</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the date time formatting pattern.</p>
@@ -877,7 +873,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPattern">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#91-127" title="Go to source code">getPattern</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#86-93" title="Go to source code">getPattern</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the date time format pattern.</p>
@@ -911,7 +907,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPreset">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#129-142" title="Go to source code">getPreset</a>( <span>string <var>$string</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#95-109" title="Go to source code">getPreset</a>( <span>string <var>$string</var></span> )</code>
 
 		<div class="description short">
 			<p>For a given string, try and find a preset pattern.</p>
@@ -950,7 +946,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getValue">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#144-158" title="Go to source code">getValue</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#111-125" title="Go to source code">getValue</a>( )</code>
 
 		<div class="description short">
 			<p>Get the date-time value for this control.</p>
@@ -984,7 +980,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setValue">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#160-167" title="Go to source code">setValue</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#127-134" title="Go to source code">setValue</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the date-time value for this control.</p>
@@ -1019,7 +1015,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefaultText">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#169-176" title="Go to source code">getDefaultText</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#136-143" title="Go to source code">getDefaultText</a>( )</code>
 
 		<div class="description short">
 			<p>Get the default text value for this control.</p>
@@ -1053,7 +1049,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDefaultText">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#178-185" title="Go to source code">setDefaultText</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#145-152" title="Go to source code">setDefaultText</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the default text value for this control.</p>
@@ -1088,7 +1084,7 @@ shown instead of todays date and time.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getData">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#187-198" title="Go to source code">getData</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#154-165" title="Go to source code">getData</a>( )</code>
 
 		<div class="description short">
 			<p>Get the date-time value for this control.
@@ -1136,7 +1132,7 @@ It is the same as <code><a href="class-Prado.I18N.TDateFormat.html#_getValue">Pr
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setData">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#200-211" title="Go to source code">setData</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#167-178" title="Go to source code">setData</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the date-time value for this control.
@@ -1173,6 +1169,53 @@ It is the same as <code><a href="class-Prado.I18N.TDateFormat.html#_setValue">Pr
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="getFormatter" id="_getFormatter">
+
+		<td class="attributes"><code>
+			 protected 
+
+			NumberFormatter
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFormatter">#</a>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#180-202" title="Go to source code">getFormatter</a>( <span>string <var>$culture</var></span>, <span>mixed <var>$datetype</var></span>, <span>mixed <var>$timetype</var></span> )</code>
+
+		<div class="description short">
+			<p>Formats the localized number, be it currency or decimal, or percentage.
+If the culture is not specified, the default application
+culture will be used.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Formats the localized number, be it currency or decimal, or percentage.
+If the culture is not specified, the default application
+culture will be used.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$culture</var></dt>
+					<dd></dd>
+					<dt><var>$datetype</var></dt>
+					<dd></dd>
+					<dt><var>$timetype</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					NumberFormatter
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="getFormattedDate" id="_getFormattedDate">
 
 		<td class="attributes"><code>
@@ -1185,7 +1228,7 @@ It is the same as <code><a href="class-Prado.I18N.TDateFormat.html#_setValue">Pr
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getFormattedDate">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#213-252" title="Go to source code">getFormattedDate</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#204-268" title="Go to source code">getFormattedDate</a>( )</code>
 
 		<div class="description short">
 			<p>Renders the localized version of the date-time value.
@@ -1221,7 +1264,7 @@ This method overrides parent's implementation.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render">#</a>
-		<code><a href="source-class-Prado.I18N.TDateFormat.html#254-257" title="Go to source code">render</a>( <span>THtmlWriter <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TDateFormat.html#270-273" title="Go to source code">render</a>( <span>THtmlWriter <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			<p>Renders the control.
@@ -1491,33 +1534,44 @@ By default, the control simply renders all its child contents.</p>
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="formatter" id="$formatter">
+	<tr data-order="formatters" id="$formatters">
 		<td class="attributes"><code>
 			protected static 
-			Prado\I18N\core\DateFormat
+			IntlDateFormatter
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.I18N.TDateFormat.html#64-68" title="Go to source code"><var>$formatter</var></a>
+				<a href="source-class-Prado.I18N.TDateFormat.html#51-55" title="Go to source code"><var>$formatters</var></a>
 
 			<div class="description short">
-				<p>Default DateFormat, set to the application culture.</p>
+				<p>Cached IntlDateFormatter set to the application culture.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Default DateFormat, set to the application culture.</p>
+				<p>Cached IntlDateFormatter set to the application culture.</p>
 
 			</div>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$formatter" class="anchor">#</a>
+				<a href="#$formatters" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
 	</tr>
 	</table>
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -1526,12 +1580,12 @@ By default, the control simply renders all its child contents.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

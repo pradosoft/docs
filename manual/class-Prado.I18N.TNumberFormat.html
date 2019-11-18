@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\I18N\TNumberFormat | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\I18N\TNumberFormat | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,14 +727,14 @@
 	<h1>Class TNumberFormat</h1>
 
 
-	<div class="description">
-	<p>To format numbers in locale sensitive manner use</p>
+		<div class="description">
+		<p>To format numbers in locale sensitive manner use</p>
 
 <pre>&lt;com:TNumberFormat <span class="php-keyword2">Pattern</span>=<span class="php-quote">&quot;0.##&quot;</span> value=<span class="php-quote">&quot;2.0&quot;</span> /&gt;</pre>
 
-<p>Numbers can be formatted as currency, percentage, decimal or scientific
-numbers by specifying the Type attribute. The known types are
-"currency", "percentage", "decimal" and "scientific".</p>
+<p>The format used for numbers can be selected by specifying the Type attribute.
+The known types are "decimal", "currency", "percentage", "scientific",
+"spellout", "ordinal" and "duration"</p>
 
 <p>If someone from US want to see sales figures from a store in
 Germany (say using the EURO currency), formatted using the german
@@ -745,25 +746,7 @@ attribute is available, so that the output from the following example
 results in 100.00.</p>
 
 <pre>&lt;com:TNumberFormat Type=<span class="php-quote">&quot;currency&quot;</span> Culture=<span class="php-quote">&quot;en_US&quot;</span> Currency=<span class="php-quote">&quot;EUR&quot;</span> Value=<span class="php-quote">&quot;100&quot;</span> /&gt;</pre>
-
-<p>Namespace: System.I18N</p>
-
-<p>Properties
-- <b>Value</b>, number,
-  <br>Gets or sets the number to format. The tag content is used as Value
-  if the Value property is not specified.
-- <b>Type</b>, string,
-  <br>Gets or sets the formatting type. The valid types are
-   'decimal', 'currency', 'percentage' and 'scientific'.
-- <b>Currency</b>, string,
-  <br>Gets or sets the currency symbol for the currency format.
-  The default is 'USD' if the Currency property is not specified.
-- <b>Pattern</b>, string,
-  <br>Gets or sets the custom number formatting pattern.
-- <b>DefaultText</b>, string,
-<br>Gets or sets the default text. If Value is not set, DefaultText will be
-shown instead of the default currency Value/Pattern.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -822,7 +805,9 @@ shown instead of the default currency Value/Pattern.</p>
 
 				<b>Author:</b>
 				Xiang Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
-			<b>Located at</b> <a href="source-class-Prado.I18N.TNumberFormat.html#25-254" title="Go to source code">I18N/TNumberFormat.php</a>
+				<b>Author:</b>
+				Fabio Bas &lt;ctrlaltca[at]gmail[dot]com><br>
+			<b>Located at</b> <a href="source-class-Prado.I18N.TNumberFormat.html#17-245" title="Go to source code">I18N/TNumberFormat.php</a>
 		<br>
 	</div>
 
@@ -842,7 +827,7 @@ shown instead of the default currency Value/Pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPattern">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#76-83" title="Go to source code">getPattern</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#51-58" title="Go to source code">getPattern</a>( )</code>
 
 		<div class="description short">
 			<p>Get the number formatting pattern.</p>
@@ -876,7 +861,7 @@ shown instead of the default currency Value/Pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPattern">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#85-92" title="Go to source code">setPattern</a>( <span>string <var>$pattern</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#60-67" title="Go to source code">setPattern</a>( <span>string <var>$pattern</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the number format pattern.</p>
@@ -911,7 +896,7 @@ shown instead of the default currency Value/Pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getValue">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#94-101" title="Go to source code">getValue</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#69-76" title="Go to source code">getValue</a>( )</code>
 
 		<div class="description short">
 			<p>Get the numberic value for this control.</p>
@@ -945,7 +930,7 @@ shown instead of the default currency Value/Pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setValue">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#103-110" title="Go to source code">setValue</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#78-85" title="Go to source code">setValue</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the numberic value for this control.</p>
@@ -980,7 +965,7 @@ shown instead of the default currency Value/Pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefaultText">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#112-119" title="Go to source code">getDefaultText</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#87-94" title="Go to source code">getDefaultText</a>( )</code>
 
 		<div class="description short">
 			<p>Get the default text value for this control.</p>
@@ -1014,7 +999,7 @@ shown instead of the default currency Value/Pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDefaultText">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#121-128" title="Go to source code">setDefaultText</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#96-103" title="Go to source code">setDefaultText</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the default text value for this control.</p>
@@ -1049,7 +1034,7 @@ shown instead of the default currency Value/Pattern.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getData">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#130-141" title="Go to source code">getData</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#105-116" title="Go to source code">getData</a>( )</code>
 
 		<div class="description short">
 			<p>Get the numberic value for this control.
@@ -1097,7 +1082,7 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_getValue">
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setData">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#143-154" title="Go to source code">setData</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#118-129" title="Go to source code">setData</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the numberic value for this control.
@@ -1146,7 +1131,7 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_setValue">
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getType">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#156-163" title="Go to source code">getType</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#131-138" title="Go to source code">getType</a>( )</code>
 
 		<div class="description short">
 			<p>Get the formatting type for this control.</p>
@@ -1180,7 +1165,7 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_setValue">
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setType">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#165-186" title="Go to source code">setType</a>( <span>string <var>$type</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#140-167" title="Go to source code">setType</a>( <span>string <var>$type</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the formatting type for this control.</p>
@@ -1193,7 +1178,7 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_setValue">
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$type</var></dt>
-					<dd>formatting type, either "decimal", "currency","percentage" or "scientific"</dd>
+					<dd>formatting type, either "decimal", "currency", "percentage", "scientific", "spellout", "ordinal" or "duration"</dd>
 				</dl></div>
 
 
@@ -1219,7 +1204,7 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_setValue">
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCurrency">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#188-194" title="Go to source code">getCurrency</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#169-175" title="Go to source code">getCurrency</a>( )</code>
 
 		<div class="description short">
 			
@@ -1253,7 +1238,7 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_setValue">
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCurrency">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#196-204" title="Go to source code">setCurrency</a>( <span>string <var>$currency</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#177-185" title="Go to source code">setCurrency</a>( <span>string <var>$currency</var></span> )</code>
 
 		<div class="description short">
 			<p>Set the 3-letter ISO 4217 code. For example, the code
@@ -1278,6 +1263,51 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_setValue">
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="getFormatter" id="_getFormatter">
+
+		<td class="attributes"><code>
+			 protected 
+
+			NumberFormatter
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFormatter">#</a>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#187-205" title="Go to source code">getFormatter</a>( <span>string <var>$culture</var></span>, <span>mixed <var>$type</var></span> )</code>
+
+		<div class="description short">
+			<p>Formats the localized number, be it currency or decimal, or percentage.
+If the culture is not specified, the default application
+culture will be used.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Formats the localized number, be it currency or decimal, or percentage.
+If the culture is not specified, the default application
+culture will be used.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$culture</var></dt>
+					<dd></dd>
+					<dt><var>$type</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					NumberFormatter
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="getFormattedValue" id="_getFormattedValue">
 
 		<td class="attributes"><code>
@@ -1290,7 +1320,7 @@ It is the same as <code><a href="class-Prado.I18N.TNumberFormat.html#_setValue">
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getFormattedValue">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#206-248" title="Go to source code">getFormattedValue</a>( )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#207-239" title="Go to source code">getFormattedValue</a>( )</code>
 
 		<div class="description short">
 			<p>Formats the localized number, be it currency or decimal, or percentage.
@@ -1328,7 +1358,7 @@ culture will be used.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render">#</a>
-		<code><a href="source-class-Prado.I18N.TNumberFormat.html#250-253" title="Go to source code">render</a>( <span>THtmlWriter <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.I18N.TNumberFormat.html#241-244" title="Go to source code">render</a>( <span>THtmlWriter <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			<p>Renders the control.
@@ -1598,33 +1628,44 @@ By default, the control simply renders all its child contents.</p>
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="formatter" id="$formatter">
+	<tr data-order="formatters" id="$formatters">
 		<td class="attributes"><code>
 			protected static 
-			Prado\I18N\core\NumberFormat
+			NumberFormatter
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.I18N.TNumberFormat.html#70-74" title="Go to source code"><var>$formatter</var></a>
+				<a href="source-class-Prado.I18N.TNumberFormat.html#45-49" title="Go to source code"><var>$formatters</var></a>
 
 			<div class="description short">
-				<p>Default NumberFormat, set to the application culture.</p>
+				<p>Cached NumberFormatters set to the application culture.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Default NumberFormat, set to the application culture.</p>
+				<p>Cached NumberFormatters set to the application culture.</p>
 
 			</div>
 		</td>
 		<td class="value">
 			<div>
-				<a href="#$formatter" class="anchor">#</a>
+				<a href="#$formatters" class="anchor">#</a>
 				<code></code>
 			</div>
 		</td>
 	</tr>
 	</table>
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -1633,12 +1674,12 @@ By default, the control simply renders all its child contents.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

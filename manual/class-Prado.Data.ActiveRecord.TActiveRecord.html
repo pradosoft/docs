@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Data\ActiveRecord\TActiveRecord | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Data\ActiveRecord\TActiveRecord | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,8 +727,8 @@
 	<h1>Class TActiveRecord</h1>
 
 
-	<div class="description">
-	<p>Base class for active records.</p>
+		<div class="description">
+		<p>Base class for active records.</p>
 
 <p>An active record creates an object that wraps a row in a database table
 or view, encapsulates the database access, and adds domain logic on that data.</p>
@@ -846,7 +847,7 @@ in the following the password property is hashed before a new record is inserted
     }
 
 }</pre>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -880,7 +881,7 @@ in the following the password property is hashed before a new record is inserted
 				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
 				<b>Since:</b>
 				3.1<br>
-			<b>Located at</b> <a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#24-1074" title="Go to source code">Data/ActiveRecord/TActiveRecord.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#23-1075" title="Go to source code">Data/ActiveRecord/TActiveRecord.php</a>
 		<br>
 	</div>
 
@@ -900,7 +901,7 @@ in the following the password property is hashed before a new record is inserted
 
 		<td class="name"><div>
 		<a class="anchor" href="#___sleep">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#204-210" title="Go to source code">__sleep</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#203-209" title="Go to source code">__sleep</a>( )</code>
 
 		<div class="description short">
 			<p>Prevent __call() method creating __sleep() when serializing.</p>
@@ -932,7 +933,7 @@ in the following the password property is hashed before a new record is inserted
 
 		<td class="name"><div>
 		<a class="anchor" href="#___wakeup">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#212-219" title="Go to source code">__wakeup</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#211-218" title="Go to source code">__wakeup</a>( )</code>
 
 		<div class="description short">
 			<p>Prevent __call() method creating __wakeup() when unserializing.</p>
@@ -962,7 +963,7 @@ in the following the password property is hashed before a new record is inserted
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#221-238" title="Go to source code">__construct</a>( <span>array <var>$data</var> = []</span>, <span>null|TDbConnection <var>$connection</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#220-237" title="Go to source code">__construct</a>( <span>array <var>$data</var> = []</span>, <span>null|TDbConnection <var>$connection</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Create a new instance of an active record with given $data. The record
@@ -1003,7 +1004,7 @@ can be saved to the database specified by the $connection object.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___get">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#240-255" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#239-254" title="Go to source code">__get</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Magic method for reading properties.
@@ -1056,7 +1057,7 @@ the key names declared in the RELATIONS array.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___set">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#257-272" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#256-271" title="Go to source code">__set</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Magic method for writing properties.
@@ -1107,7 +1108,7 @@ the key names declared in the RELATIONS array.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_copyFrom">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#302-318" title="Go to source code">copyFrom</a>( <span>mixed <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#301-317" title="Go to source code">copyFrom</a>( <span>mixed <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Copies data from an array or another object.</p>
@@ -1146,7 +1147,7 @@ the key names declared in the RELATIONS array.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getActiveDbConnection">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#321-327" title="Go to source code">getActiveDbConnection</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#320-326" title="Go to source code">getActiveDbConnection</a>( )</code>
 
 		<div class="description short">
 			
@@ -1176,7 +1177,7 @@ the key names declared in the RELATIONS array.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDbConnection">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#329-340" title="Go to source code">getDbConnection</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#328-339" title="Go to source code">getDbConnection</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the current Db connection, the connection object is obtained from
@@ -1212,7 +1213,7 @@ the TActiveRecordManager if connection is currently null.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDbConnection">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#342-348" title="Go to source code">setDbConnection</a>( <span>TDbConnection <var>$connection</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#341-347" title="Go to source code">setDbConnection</a>( <span>TDbConnection <var>$connection</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1247,7 +1248,7 @@ the TActiveRecordManager if connection is currently null.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRecordTableInfo">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#350-356" title="Go to source code">getRecordTableInfo</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#349-355" title="Go to source code">getRecordTableInfo</a>( )</code>
 
 		<div class="description short">
 			
@@ -1281,7 +1282,7 @@ the TActiveRecordManager if connection is currently null.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_equals">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#358-386" title="Go to source code">equals</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code> <var>$record</var></span>, <span>boolean <var>$strict</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#357-385" title="Go to source code">equals</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.html">Prado\Data\ActiveRecord\TActiveRecord</a></code> <var>$record</var></span>, <span>boolean <var>$strict</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Compare two records using their primary key values (all column values if
@@ -1326,7 +1327,7 @@ comparison of their values. Set $strict=true for identity comparison (===).</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_finder">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#388-405" title="Go to source code">finder</a>( <span>string <var>$className</var> = __CLASS__</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#387-404" title="Go to source code">finder</a>( <span>string <var>$className</var> = __CLASS__</span> )</code>
 
 		<div class="description short">
 			<p>Returns the instance of a active record finder for a particular class.
@@ -1373,7 +1374,7 @@ event handlers to object instance.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRecordManager">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#407-415" title="Go to source code">getRecordManager</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#406-414" title="Go to source code">getRecordManager</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the record manager for this object, the default is to call
@@ -1409,7 +1410,7 @@ TActiveRecordManager::getInstance().</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRecordGateway">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#417-423" title="Go to source code">getRecordGateway</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#416-422" title="Go to source code">getRecordGateway</a>( )</code>
 
 		<div class="description short">
 			
@@ -1443,7 +1444,7 @@ TActiveRecordManager::getInstance().</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_save">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#425-449" title="Go to source code">save</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#424-448" title="Go to source code">save</a>( )</code>
 
 		<div class="description short">
 			<p>Saves the current record to the database, insert or update is automatically determined.</p>
@@ -1477,7 +1478,7 @@ TActiveRecordManager::getInstance().</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_delete">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#451-471" title="Go to source code">delete</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#450-470" title="Go to source code">delete</a>( )</code>
 
 		<div class="description short">
 			<p>Deletes the current record from the database. Once deleted, this object
@@ -1513,7 +1514,7 @@ can not be saved again in the same instance.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_deleteByPk">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#473-502" title="Go to source code">deleteByPk</a>( <span>mixed <var>$keys</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#472-501" title="Go to source code">deleteByPk</a>( <span>mixed <var>$keys</var></span> )</code>
 
 		<div class="description short">
 			<p>Delete records by primary key. Usage:</p>
@@ -1566,7 +1567,7 @@ can not be saved again in the same instance.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_deleteAllByPks">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#504-514" title="Go to source code">deleteAllByPks</a>( <span>mixed <var>$keys</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#503-513" title="Go to source code">deleteAllByPks</a>( <span>mixed <var>$keys</var></span> )</code>
 
 		<div class="description short">
 			<p>Alias for deleteByPk()</p>
@@ -1601,7 +1602,7 @@ can not be saved again in the same instance.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_deleteAll">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#515-526" title="Go to source code">deleteAll</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#514-525" title="Go to source code">deleteAll</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Delete multiple records using a criteria.</p>
@@ -1642,7 +1643,7 @@ can not be saved again in the same instance.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_populateObject">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#528-537" title="Go to source code">populateObject</a>( <span>array <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#527-536" title="Go to source code">populateObject</a>( <span>array <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Populates a new record with the query result.
@@ -1683,7 +1684,7 @@ This is a wrapper of <code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_populateObjects">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#539-551" title="Go to source code">populateObjects</a>( <span>TDbDataReader <var>$reader</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#538-550" title="Go to source code">populateObjects</a>( <span>TDbDataReader <var>$reader</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1726,7 +1727,7 @@ This is a wrapper of <code><a href="class-Prado.Data.ActiveRecord.TActiveRecord.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createRecord">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#553-570" title="Go to source code">createRecord</a>( <span>string <var>$type</var></span>, <span>array <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#552-569" title="Go to source code">createRecord</a>( <span>string <var>$type</var></span>, <span>array <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Create an AR instance specified by the AR class name and initial data.
@@ -1775,7 +1776,7 @@ If the initial data is empty, the AR object will not be created and null will be
 
 		<td class="name"><div>
 		<a class="anchor" href="#_find">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#572-596" title="Go to source code">find</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#571-595" title="Go to source code">find</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Find one single record that matches the criteria.</p>
@@ -1825,7 +1826,7 @@ If the initial data is empty, the AR object will not be created and null will be
 
 		<td class="name"><div>
 		<a class="anchor" href="#_findAll">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#598-613" title="Go to source code">findAll</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#597-612" title="Go to source code">findAll</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Same as find() but returns an array of objects.</p>
@@ -1866,7 +1867,7 @@ If the initial data is empty, the AR object will not be created and null will be
 
 		<td class="name"><div>
 		<a class="anchor" href="#_findByPk">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#615-637" title="Go to source code">findByPk</a>( <span>mixed <var>$keys</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#614-636" title="Go to source code">findByPk</a>( <span>mixed <var>$keys</var></span> )</code>
 
 		<div class="description short">
 			<p>Find one record using only the primary key or composite primary keys. Usage:</p>
@@ -1909,7 +1910,7 @@ If the initial data is empty, the AR object will not be created and null will be
 
 		<td class="name"><div>
 		<a class="anchor" href="#_findAllByPks">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#639-663" title="Go to source code">findAllByPks</a>( <span>mixed <var>$keys</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#638-662" title="Go to source code">findAllByPks</a>( <span>mixed <var>$keys</var></span> )</code>
 
 		<div class="description short">
 			<p>Find multiple records matching a list of primary or composite keys.</p>
@@ -1958,7 +1959,7 @@ If the initial data is empty, the AR object will not be created and null will be
 
 		<td class="name"><div>
 		<a class="anchor" href="#_findBySql">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#665-680" title="Go to source code">findBySql</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#664-679" title="Go to source code">findBySql</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Find records using full SQL, returns corresponding record object.
@@ -2003,7 +2004,7 @@ class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_findAllBySql">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#682-696" title="Go to source code">findAllBySql</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#681-695" title="Go to source code">findAllBySql</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Find records using full SQL, returns corresponding record object.
@@ -2048,7 +2049,7 @@ class.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_findAllByIndex">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#698-714" title="Go to source code">findAllByIndex</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>array <var>$fields</var></span>, <span>array <var>$values</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#697-713" title="Go to source code">findAllByIndex</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var></span>, <span>array <var>$fields</var></span>, <span>array <var>$values</var></span> )</code>
 
 		<div class="description short">
 			<p>Fetches records using the sql clause "(fields) IN (values)", where
@@ -2097,7 +2098,7 @@ the columns must have.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_count">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#716-729" title="Go to source code">count</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#715-728" title="Go to source code">count</a>( <span>string|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordCriteria.html">Prado\Data\ActiveRecord\TActiveRecordCriteria</a></code> <var>$criteria</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$parameters</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Find the number of records.</p>
@@ -2138,7 +2139,7 @@ the columns must have.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRelationHandler">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#731-746" title="Go to source code">getRelationHandler</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#730-745" title="Go to source code">getRelationHandler</a>( <span>string <var>$name</var></span>, <span>array <var>$args</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Returns the active record relationship handler for $RELATION with key
@@ -2181,7 +2182,7 @@ value equal to the $property value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createRelationContext">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#748-765" title="Go to source code">createRelationContext</a>( <span>string <var>$name</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#747-764" title="Go to source code">createRelationContext</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
 			<p>Gets a static copy of the relationship context for given property (a key
@@ -2229,7 +2230,7 @@ the active record relationships for given property, null if invalid relationship
 
 		<td class="name"><div>
 		<a class="anchor" href="#_fetchResultsFor">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#767-809" title="Go to source code">fetchResultsFor</a>( <span>string <var>$property</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#766-808" title="Go to source code">fetchResultsFor</a>( <span>string <var>$property</var></span> )</code>
 
 		<div class="description short">
 			<p>Tries to load the relationship results for the given property. The $property
@@ -2306,7 +2307,7 @@ Usage example:
 
 		<td class="name"><div>
 		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#811-870" title="Go to source code">__call</a>( <span>mixed <var>$method</var></span>, <span>mixed <var>$args</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#810-871" title="Go to source code">__call</a>( <span>mixed <var>$method</var></span>, <span>mixed <var>$args</var></span> )</code>
 
 		<div class="description short">
 			<p>Dynamic find method using parts of method name as search criteria.
@@ -2380,7 +2381,7 @@ if method name starts with "findAllBy"</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getInvalidFinderResult">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#872-884" title="Go to source code">getInvalidFinderResult</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#873-885" title="Go to source code">getInvalidFinderResult</a>( )</code>
 
 		<div class="description short">
 			
@@ -2422,7 +2423,7 @@ if method name starts with "findAllBy"</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setInvalidFinderResult">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#886-900" title="Go to source code">setInvalidFinderResult</a>( <span>null|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordInvalidFinderResult.html">Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult</a></code> <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#887-901" title="Go to source code">setInvalidFinderResult</a>( <span>null|<code><a href="class-Prado.Data.ActiveRecord.TActiveRecordInvalidFinderResult.html">Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult</a></code> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Define the way an active record finder react if an invalid magic-finder invoked</p>
@@ -2465,7 +2466,7 @@ if method name starts with "findAllBy"</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRecordCriteria">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#902-922" title="Go to source code">getRecordCriteria</a>( <span>string|<code><a href="class-Prado.Data.DataGateway.TSqlCriteria.html">Prado\Data\DataGateway\TSqlCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var></span>, <span>array <var>$args</var> = []</span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#903-923" title="Go to source code">getRecordCriteria</a>( <span>string|<code><a href="class-Prado.Data.DataGateway.TSqlCriteria.html">Prado\Data\DataGateway\TSqlCriteria</a></code> <var>$criteria</var></span>, <span>mixed <var>$parameters</var></span>, <span>array <var>$args</var> = []</span> )</code>
 
 		<div class="description short">
 			<p>Create a new TSqlCriteria object from a string $criteria. The $args
@@ -2512,7 +2513,7 @@ if $parameters is not an array and $args is an arrary.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onCreateCommand">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#924-938" title="Go to source code">onCreateCommand</a>( <span>TDataGatewayEventParameter <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#925-939" title="Go to source code">onCreateCommand</a>( <span>TDataGatewayEventParameter <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raised when a command is prepared and parameter binding is completed.
@@ -2557,7 +2558,7 @@ bound to a static finder object and not to each distinct active record object.</
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onExecuteCommand">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#940-955" title="Go to source code">onExecuteCommand</a>( <span>TDataGatewayResultEventParameter <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#941-956" title="Go to source code">onExecuteCommand</a>( <span>TDataGatewayResultEventParameter <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raised when a command is executed and the result from the database was returned.
@@ -2604,7 +2605,7 @@ bound to a static finder object and not to each distinct active record object.</
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onInsert">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#957-965" title="Go to source code">onInsert</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#958-966" title="Go to source code">onInsert</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raised before the record attempt to insert its data into the database.
@@ -2641,7 +2642,7 @@ To prevent the insert operation, set the TActiveRecordChangeEventParameter::IsVa
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onDelete">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#967-975" title="Go to source code">onDelete</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#968-976" title="Go to source code">onDelete</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raised before the record attempt to delete its data from the database.
@@ -2678,7 +2679,7 @@ To prevent the delete operation, set the TActiveRecordChangeEventParameter::IsVa
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onUpdate">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#977-985" title="Go to source code">onUpdate</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#978-986" title="Go to source code">onUpdate</a>( <span><code><a href="class-Prado.Data.ActiveRecord.TActiveRecordChangeEventParameter.html">Prado\Data\ActiveRecord\TActiveRecordChangeEventParameter</a></code> <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raised before the record attempt to update its data in the database.
@@ -2715,7 +2716,7 @@ To prevent the update operation, set the TActiveRecordChangeEventParameter::IsVa
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getColumnValue">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#987-1001" title="Go to source code">getColumnValue</a>( <span>string <var>$columnName</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#988-1002" title="Go to source code">getColumnValue</a>( <span>string <var>$columnName</var></span> )</code>
 
 		<div class="description short">
 			<p>Retrieves the column value according to column name.
@@ -2760,7 +2761,7 @@ This method is used internally.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setColumnValue">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1003-1017" title="Go to source code">setColumnValue</a>( <span>string <var>$columnName</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1004-1018" title="Go to source code">setColumnValue</a>( <span>string <var>$columnName</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the column value according to column name.
@@ -2803,7 +2804,7 @@ This method is used internally.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRecordRelation">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1019-1029" title="Go to source code">getRecordRelation</a>( <span>string <var>$property</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1020-1030" title="Go to source code">getRecordRelation</a>( <span>string <var>$property</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2846,7 +2847,7 @@ This method is used internally.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRecordRelations">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1031-1038" title="Go to source code">getRecordRelations</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1032-1039" title="Go to source code">getRecordRelations</a>( )</code>
 
 		<div class="description short">
 			
@@ -2884,7 +2885,7 @@ This method is used internally.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasRecordRelation">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1040-1048" title="Go to source code">hasRecordRelation</a>( <span>string <var>$property</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1041-1049" title="Go to source code">hasRecordRelation</a>( <span>string <var>$property</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2927,7 +2928,7 @@ This method is used internally.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_toArray">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1050-1063" title="Go to source code">toArray</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1051-1064" title="Go to source code">toArray</a>( )</code>
 
 		<div class="description short">
 			<p>Return record data as array</p>
@@ -2965,7 +2966,7 @@ This method is used internally.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_toJSON">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1065-1073" title="Go to source code">toJSON</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#1066-1074" title="Go to source code">toJSON</a>( )</code>
 
 		<div class="description short">
 			<p>Return record data as JSON</p>
@@ -3050,11 +3051,12 @@ This method is used internally.</p>
 	<table class="summary constants" id="constants">
 	<caption>Constants summary</caption>
 	<tr data-order="BELONGS_TO" id="BELONGS_TO">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-BELONGS_TO.html#154" title="Go to source code"><b>BELONGS_TO</b></a>
+				<a href="source-constant-BELONGS_TO.html#153" title="Go to source code"><b>BELONGS_TO</b></a>
 			</code>
 
 			<div class="description short">
@@ -3074,11 +3076,12 @@ This method is used internally.</p>
 		</td>
 	</tr>
 	<tr data-order="HAS_ONE" id="HAS_ONE">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-HAS_ONE.html#155" title="Go to source code"><b>HAS_ONE</b></a>
+				<a href="source-constant-HAS_ONE.html#154" title="Go to source code"><b>HAS_ONE</b></a>
 			</code>
 
 			<div class="description short">
@@ -3098,11 +3101,12 @@ This method is used internally.</p>
 		</td>
 	</tr>
 	<tr data-order="HAS_MANY" id="HAS_MANY">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-HAS_MANY.html#156" title="Go to source code"><b>HAS_MANY</b></a>
+				<a href="source-constant-HAS_MANY.html#155" title="Go to source code"><b>HAS_MANY</b></a>
 			</code>
 
 			<div class="description short">
@@ -3122,11 +3126,12 @@ This method is used internally.</p>
 		</td>
 	</tr>
 	<tr data-order="MANY_TO_MANY" id="MANY_TO_MANY">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-MANY_TO_MANY.html#157" title="Go to source code"><b>MANY_TO_MANY</b></a>
+				<a href="source-constant-MANY_TO_MANY.html#156" title="Go to source code"><b>MANY_TO_MANY</b></a>
 			</code>
 
 			<div class="description short">
@@ -3146,11 +3151,12 @@ This method is used internally.</p>
 		</td>
 	</tr>
 	<tr data-order="STATE_NEW" id="STATE_NEW">
+		
 
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-STATE_NEW.html#159" title="Go to source code"><b>STATE_NEW</b></a>
+				<a href="source-constant-STATE_NEW.html#158" title="Go to source code"><b>STATE_NEW</b></a>
 			</code>
 
 			<div class="description short">
@@ -3170,11 +3176,12 @@ This method is used internally.</p>
 		</td>
 	</tr>
 	<tr data-order="STATE_LOADED" id="STATE_LOADED">
+		
 
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-STATE_LOADED.html#160" title="Go to source code"><b>STATE_LOADED</b></a>
+				<a href="source-constant-STATE_LOADED.html#159" title="Go to source code"><b>STATE_LOADED</b></a>
 			</code>
 
 			<div class="description short">
@@ -3194,11 +3201,12 @@ This method is used internally.</p>
 		</td>
 	</tr>
 	<tr data-order="STATE_DELETED" id="STATE_DELETED">
+		
 
 		<td class="attributes"><code>integer</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-STATE_DELETED.html#161" title="Go to source code"><b>STATE_DELETED</b></a>
+				<a href="source-constant-STATE_DELETED.html#160" title="Go to source code"><b>STATE_DELETED</b></a>
 			</code>
 
 			<div class="description short">
@@ -3239,7 +3247,7 @@ This method is used internally.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#163-167" title="Go to source code"><var>$_recordState</var></a>
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#162-166" title="Go to source code"><var>$_recordState</var></a>
 
 			<div class="description short">
 				<p>record state: 0 = new, 1 = loaded, 2 = deleted.</p>
@@ -3268,7 +3276,7 @@ This method is used internally.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#169-177" title="Go to source code"><var>$COLUMN_MAPPING</var></a>
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#168-176" title="Go to source code"><var>$COLUMN_MAPPING</var></a>
 
 			<div class="description short">
 				<p>This static variable defines the column mapping.
@@ -3303,7 +3311,7 @@ for the corresponding active record class.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#180-187" title="Go to source code"><var>$RELATIONS</var></a>
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#179-186" title="Go to source code"><var>$RELATIONS</var></a>
 
 			<div class="description short">
 				<p>This static variable defines the relationships.
@@ -3336,7 +3344,7 @@ Each value is an array, e.g. array(self::HAS_MANY, 'PlayerRecord').</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#190-193" title="Go to source code"><var>$_connection</var></a>
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#189-192" title="Go to source code"><var>$_connection</var></a>
 
 			<div class="description short">
 				<p>database connection object.</p>
@@ -3361,7 +3369,7 @@ Each value is an array, e.g. array(self::HAS_MANY, 'PlayerRecord').</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#196-202" title="Go to source code"><var>$_invalidFinderResult</var></a>
+				<a href="source-class-Prado.Data.ActiveRecord.TActiveRecord.html#195-201" title="Go to source code"><var>$_invalidFinderResult</var></a>
 
 			<div class="description short">
 				<p>Defaults to 'null'</p>
@@ -3385,6 +3393,17 @@ Each value is an array, e.g. array(self::HAS_MANY, 'PlayerRecord').</p>
 	</tr>
 	</table>
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -3393,12 +3412,12 @@ Each value is an array, e.g. array(self::HAS_MANY, 'PlayerRecord').</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

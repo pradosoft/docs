@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\UI\TPage | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Web\UI\TPage | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,9 +727,9 @@
 	<h1>Class TPage</h1>
 
 
-	<div class="description">
-	<p>TPage class</p>
-	</div>
+		<div class="description">
+		<p>TPage class</p>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -796,7 +797,7 @@
 				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
 				<b>Since:</b>
 				3.0<br>
-			<b>Located at</b> <a href="source-class-Prado.Web.UI.TPage.html#32-1243" title="Go to source code">Web/UI/TPage.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Web.UI.TPage.html#31-1266" title="Go to source code">Web/UI/TPage.php</a>
 		<br>
 	</div>
 
@@ -816,7 +817,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#180-188" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#184-192" title="Go to source code">__construct</a>( )</code>
 
 		<div class="description short">
 			<p>Constructor.
@@ -852,7 +853,7 @@ Derived classes must call parent implementation.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_run">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#190-212" title="Go to source code">run</a>( <span>THtmlTextWriter <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#194-216" title="Go to source code">run</a>( <span>THtmlTextWriter <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			<p>Runs through the page lifecycles.</p>
@@ -887,7 +888,7 @@ Derived classes must call parent implementation.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_processNormalRequest">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#214-246" title="Go to source code">processNormalRequest</a>( <span> <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#218-250" title="Go to source code">processNormalRequest</a>( <span> <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			
@@ -917,7 +918,7 @@ Derived classes must call parent implementation.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_processPostBackRequest">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#248-291" title="Go to source code">processPostBackRequest</a>( <span> <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#252-295" title="Go to source code">processPostBackRequest</a>( <span> <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			
@@ -947,7 +948,7 @@ Derived classes must call parent implementation.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_decodeUTF8">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#293-305" title="Go to source code">decodeUTF8</a>( <span> <var>$data</var></span>, <span> <var>$enc</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#297-309" title="Go to source code">decodeUTF8</a>( <span> <var>$data</var></span>, <span> <var>$enc</var></span> )</code>
 
 		<div class="description short">
 			
@@ -977,7 +978,7 @@ Derived classes must call parent implementation.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_processCallbackRequest">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#307-382" title="Go to source code">processCallbackRequest</a>( <span>mixed <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#311-386" title="Go to source code">processCallbackRequest</a>( <span>mixed <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets Adapter to TActivePageAdapter and calls apter to process the
@@ -1014,7 +1015,7 @@ callback request.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCallbackClient">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#384-396" title="Go to source code">getCallbackClient</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#388-400" title="Go to source code">getCallbackClient</a>( )</code>
 
 		<div class="description short">
 			<p>Gets the callback client script handler that allows javascript functions
@@ -1050,7 +1051,7 @@ to be executed during the callback response.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCallbackClient">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#398-405" title="Go to source code">setCallbackClient</a>( <span><code><a href="class-Prado.Web.UI.ActiveControls.TCallbackClientScript.html">Prado\Web\UI\ActiveControls\TCallbackClientScript</a></code> <var>$client</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#402-409" title="Go to source code">setCallbackClient</a>( <span><code><a href="class-Prado.Web.UI.ActiveControls.TCallbackClientScript.html">Prado\Web\UI\ActiveControls\TCallbackClientScript</a></code> <var>$client</var></span> )</code>
 
 		<div class="description short">
 			<p>Set a new callback client handler.</p>
@@ -1085,7 +1086,7 @@ to be executed during the callback response.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCallbackEventTarget">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#407-414" title="Go to source code">getCallbackEventTarget</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#411-418" title="Go to source code">getCallbackEventTarget</a>( )</code>
 
 		<div class="description short">
 			
@@ -1120,7 +1121,7 @@ null if nonexistent</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCallbackEventTarget">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#416-423" title="Go to source code">setCallbackEventTarget</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#420-427" title="Go to source code">setCallbackEventTarget</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
 
 		<div class="description short">
 			<p>Registers a control to raise callback event in the current request.</p>
@@ -1155,7 +1156,7 @@ null if nonexistent</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCallbackEventParameter">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#425-432" title="Go to source code">getCallbackEventParameter</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#429-436" title="Go to source code">getCallbackEventParameter</a>( )</code>
 
 		<div class="description short">
 			<p>Callback parameter is decoded assuming JSON encoding.</p>
@@ -1189,7 +1190,7 @@ null if nonexistent</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCallbackEventParameter">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#434-440" title="Go to source code">setCallbackEventParameter</a>( <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#438-444" title="Go to source code">setCallbackEventParameter</a>( <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1224,7 +1225,7 @@ null if nonexistent</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getForm">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#442-448" title="Go to source code">getForm</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#446-452" title="Go to source code">getForm</a>( )</code>
 
 		<div class="description short">
 			
@@ -1258,7 +1259,7 @@ null if nonexistent</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setForm">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#450-463" title="Go to source code">setForm</a>( <span><code><a href="class-Prado.Web.UI.TForm.html">Prado\Web\UI\TForm</a></code> <var>$form</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#454-467" title="Go to source code">setForm</a>( <span><code><a href="class-Prado.Web.UI.TForm.html">Prado\Web\UI\TForm</a></code> <var>$form</var></span> )</code>
 
 		<div class="description short">
 			<p>Registers a TForm instance to the page.
@@ -1299,7 +1300,7 @@ Note, a page can contain at most one TForm instance.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getValidators">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#465-487" title="Go to source code">getValidators</a>( <span>null|string <var>$validationGroup</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#469-491" title="Go to source code">getValidators</a>( <span>null|string <var>$validationGroup</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Returns a list of registered validators.
@@ -1340,7 +1341,7 @@ If validation group is specified, only the validators in that group will be retu
 
 		<td class="name"><div>
 		<a class="anchor" href="#_validate">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#489-512" title="Go to source code">validate</a>( <span>string <var>$validationGroup</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#493-516" title="Go to source code">validate</a>( <span>string <var>$validationGroup</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Performs input validation.
@@ -1379,7 +1380,7 @@ If validation group is specified, only the validators in that group will be invo
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIsValid">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#514-534" title="Go to source code">getIsValid</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#518-538" title="Go to source code">getIsValid</a>( )</code>
 
 		<div class="description short">
 			<p>Returns whether user input is valid or not.
@@ -1419,7 +1420,7 @@ This method must be invoked after <code><a href="class-Prado.Web.UI.TPage.html#_
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTheme">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#536-545" title="Go to source code">getTheme</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#540-549" title="Go to source code">getTheme</a>( )</code>
 
 		<div class="description short">
 			
@@ -1453,7 +1454,7 @@ This method must be invoked after <code><a href="class-Prado.Web.UI.TPage.html#_
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setTheme">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#547-554" title="Go to source code">setTheme</a>( <span>string|<code><a href="class-Prado.Web.UI.TTheme.html">Prado\Web\UI\TTheme</a></code> <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#551-558" title="Go to source code">setTheme</a>( <span>string|<code><a href="class-Prado.Web.UI.TTheme.html">Prado\Web\UI\TTheme</a></code> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the theme to be used for the page.</p>
@@ -1488,7 +1489,7 @@ This method must be invoked after <code><a href="class-Prado.Web.UI.TPage.html#_
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getStyleSheetTheme">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#557-566" title="Go to source code">getStyleSheetTheme</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#561-570" title="Go to source code">getStyleSheetTheme</a>( )</code>
 
 		<div class="description short">
 			
@@ -1522,7 +1523,7 @@ This method must be invoked after <code><a href="class-Prado.Web.UI.TPage.html#_
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setStyleSheetTheme">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#568-575" title="Go to source code">setStyleSheetTheme</a>( <span>string|<code><a href="class-Prado.Web.UI.TTheme.html">Prado\Web\UI\TTheme</a></code> <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#572-579" title="Go to source code">setStyleSheetTheme</a>( <span>string|<code><a href="class-Prado.Web.UI.TTheme.html">Prado\Web\UI\TTheme</a></code> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the stylesheet theme to be used for the page.</p>
@@ -1557,7 +1558,7 @@ This method must be invoked after <code><a href="class-Prado.Web.UI.TPage.html#_
 
 		<td class="name"><div>
 		<a class="anchor" href="#_applyControlSkin">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#577-587" title="Go to source code">applyControlSkin</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#581-591" title="Go to source code">applyControlSkin</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
 
 		<div class="description short">
 			<p>Applies a skin in the current theme to a control.
@@ -1594,7 +1595,7 @@ This method should only be used by framework developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_applyControlStyleSheet">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#589-599" title="Go to source code">applyControlStyleSheet</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#593-603" title="Go to source code">applyControlStyleSheet</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
 
 		<div class="description short">
 			<p>Applies a stylesheet skin in the current theme to a control.
@@ -1631,7 +1632,7 @@ This method should only be used by framework developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getClientScript">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#601-616" title="Go to source code">getClientScript</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#605-620" title="Go to source code">getClientScript</a>( )</code>
 
 		<div class="description short">
 			
@@ -1665,7 +1666,7 @@ This method should only be used by framework developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onPreInit">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#618-630" title="Go to source code">onPreInit</a>( <span>mixed <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#622-634" title="Go to source code">onPreInit</a>( <span>mixed <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raises OnPreInit event.
@@ -1710,7 +1711,7 @@ Remember to call the parent implementation to ensure OnPreInit event is raised.<
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onInitComplete">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#632-643" title="Go to source code">onInitComplete</a>( <span>mixed <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#636-647" title="Go to source code">onInitComplete</a>( <span>mixed <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raises OnInitComplete event.
@@ -1753,7 +1754,7 @@ Remember to call the parent implementation to ensure OnInitComplete event is rai
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onPreLoad">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#645-656" title="Go to source code">onPreLoad</a>( <span>mixed <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#649-660" title="Go to source code">onPreLoad</a>( <span>mixed <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raises OnPreLoad event.
@@ -1796,7 +1797,7 @@ Remember to call the parent implementation to ensure OnPreLoad event is raised.<
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onLoadComplete">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#658-669" title="Go to source code">onLoadComplete</a>( <span>mixed <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#662-673" title="Go to source code">onLoadComplete</a>( <span>mixed <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raises OnLoadComplete event.
@@ -1839,7 +1840,7 @@ Remember to call the parent implementation to ensure OnLoadComplete event is rai
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onPreRenderComplete">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#671-705" title="Go to source code">onPreRenderComplete</a>( <span>mixed <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#675-709" title="Go to source code">onPreRenderComplete</a>( <span>mixed <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raises OnPreRenderComplete event.
@@ -1882,7 +1883,7 @@ Remember to call the parent implementation to ensure OnPreRenderComplete event i
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onSaveStateComplete">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#725-735" title="Go to source code">onSaveStateComplete</a>( <span>mixed <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#729-739" title="Go to source code">onSaveStateComplete</a>( <span>mixed <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>Raises OnSaveStateComplete event.
@@ -1923,7 +1924,7 @@ Remember to call the parent implementation to ensure OnSaveStateComplete event i
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIsPostBack">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#749-755" title="Go to source code">getIsPostBack</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#753-759" title="Go to source code">getIsPostBack</a>( )</code>
 
 		<div class="description short">
 			
@@ -1957,7 +1958,7 @@ Remember to call the parent implementation to ensure OnSaveStateComplete event i
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIsCallback">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#757-763" title="Go to source code">getIsCallback</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#761-767" title="Go to source code">getIsCallback</a>( )</code>
 
 		<div class="description short">
 			
@@ -1991,7 +1992,7 @@ Remember to call the parent implementation to ensure OnSaveStateComplete event i
 
 		<td class="name"><div>
 		<a class="anchor" href="#_saveState">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#765-774" title="Go to source code">saveState</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#769-778" title="Go to source code">saveState</a>( )</code>
 
 		<div class="description short">
 			<p>This method is invoked when control state is to be saved.
@@ -2027,7 +2028,7 @@ Parent implementation must be invoked.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_loadState">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#776-785" title="Go to source code">loadState</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#780-789" title="Go to source code">loadState</a>( )</code>
 
 		<div class="description short">
 			<p>This method is invoked right after the control has loaded its state.
@@ -2063,7 +2064,7 @@ Parent implementation must be invoked.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_loadPageState">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#787-795" title="Go to source code">loadPageState</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#791-799" title="Go to source code">loadPageState</a>( )</code>
 
 		<div class="description short">
 			<p>Loads page state from persistent storage.</p>
@@ -2093,7 +2094,7 @@ Parent implementation must be invoked.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_savePageState">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#797-805" title="Go to source code">savePageState</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#801-809" title="Go to source code">savePageState</a>( )</code>
 
 		<div class="description short">
 			<p>Saves page state from persistent storage.</p>
@@ -2123,7 +2124,7 @@ Parent implementation must be invoked.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isSystemPostField">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#807-814" title="Go to source code">isSystemPostField</a>( <span>string <var>$field</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#811-818" title="Go to source code">isSystemPostField</a>( <span>string <var>$field</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2162,7 +2163,7 @@ Parent implementation must be invoked.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_registerRequiresPostData">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#816-831" title="Go to source code">registerRequiresPostData</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#820-835" title="Go to source code">registerRequiresPostData</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
 
 		<div class="description short">
 			<p>Registers a control for loading post data in the next postback.
@@ -2203,7 +2204,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPostBackEventTarget">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#833-845" title="Go to source code">getPostBackEventTarget</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#837-849" title="Go to source code">getPostBackEventTarget</a>( )</code>
 
 		<div class="description short">
 			
@@ -2237,7 +2238,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPostBackEventTarget">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#847-854" title="Go to source code">setPostBackEventTarget</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#851-858" title="Go to source code">setPostBackEventTarget</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
 
 		<div class="description short">
 			<p>Registers a control to raise postback event in the current request.</p>
@@ -2272,7 +2273,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPostBackEventParameter">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#856-867" title="Go to source code">getPostBackEventParameter</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#860-871" title="Go to source code">getPostBackEventParameter</a>( )</code>
 
 		<div class="description short">
 			
@@ -2306,7 +2307,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPostBackEventParameter">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#869-875" title="Go to source code">setPostBackEventParameter</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#873-879" title="Go to source code">setPostBackEventParameter</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2341,7 +2342,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_processPostData">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#877-919" title="Go to source code">processPostData</a>( <span><code><a href="class-Prado.Collections.TMap.html">Prado\Collections\TMap</a></code> <var>$postData</var></span>, <span>boolean <var>$beforeLoad</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#881-924" title="Go to source code">processPostData</a>( <span><code><a href="class-Prado.Collections.TMap.html">Prado\Collections\TMap</a></code> <var>$postData</var></span>, <span>boolean <var>$beforeLoad</var></span> )</code>
 
 		<div class="description short">
 			<p>Processes post data.</p>
@@ -2378,7 +2379,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIsLoadingPostData">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#921-927" title="Go to source code">getIsLoadingPostData</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#926-932" title="Go to source code">getIsLoadingPostData</a>( )</code>
 
 		<div class="description short">
 			
@@ -2412,7 +2413,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_raiseChangedEvents">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#929-937" title="Go to source code">raiseChangedEvents</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#934-942" title="Go to source code">raiseChangedEvents</a>( )</code>
 
 		<div class="description short">
 			<p>Raises OnPostDataChangedEvent for controls whose data have been changed due to the postback.</p>
@@ -2442,7 +2443,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_raisePostBackEvent">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#939-949" title="Go to source code">raisePostBackEvent</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#944-954" title="Go to source code">raisePostBackEvent</a>( )</code>
 
 		<div class="description short">
 			<p>Raises PostBack event.</p>
@@ -2472,7 +2473,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getInFormRender">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#951-957" title="Go to source code">getInFormRender</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#956-962" title="Go to source code">getInFormRender</a>( )</code>
 
 		<div class="description short">
 			
@@ -2506,7 +2507,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_ensureRenderInForm">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#959-969" title="Go to source code">ensureRenderInForm</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#964-974" title="Go to source code">ensureRenderInForm</a>( <span><code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$control</var></span> )</code>
 
 		<div class="description short">
 			<p>Ensures the control is rendered within a form.</p>
@@ -2545,7 +2546,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setFocus">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1004-1011" title="Go to source code">setFocus</a>( <span>string|<code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1009-1016" title="Go to source code">setFocus</a>( <span>string|<code><a href="class-Prado.Web.UI.TControl.html">Prado\Web\UI\TControl</a></code> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets input focus on a control after the page is rendered to users.</p>
@@ -2580,7 +2581,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getClientSupportsJavaScript">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1013-1019" title="Go to source code">getClientSupportsJavaScript</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1018-1024" title="Go to source code">getClientSupportsJavaScript</a>( )</code>
 
 		<div class="description short">
 			
@@ -2614,7 +2615,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setClientSupportsJavaScript">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1021-1027" title="Go to source code">setClientSupportsJavaScript</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1026-1032" title="Go to source code">setClientSupportsJavaScript</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2649,7 +2650,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getHead">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1029-1035" title="Go to source code">getHead</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1034-1040" title="Go to source code">getHead</a>( )</code>
 
 		<div class="description short">
 			
@@ -2683,7 +2684,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setHead">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1037-1051" title="Go to source code">setHead</a>( <span><code><a href="class-Prado.Web.UI.WebControls.THead.html">Prado\Web\UI\WebControls\THead</a></code> <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1042-1056" title="Go to source code">setHead</a>( <span><code><a href="class-Prado.Web.UI.WebControls.THead.html">Prado\Web\UI\WebControls\THead</a></code> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2722,7 +2723,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTitle">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1053-1063" title="Go to source code">getTitle</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1058-1068" title="Go to source code">getTitle</a>( )</code>
 
 		<div class="description short">
 			
@@ -2756,7 +2757,7 @@ if not checked, will not have a post value.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setTitle">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1065-1078" title="Go to source code">setTitle</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1070-1083" title="Go to source code">setTitle</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the page title.
@@ -2795,7 +2796,7 @@ in order that this title be rendered.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getClientState">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1080-1088" title="Go to source code">getClientState</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1085-1093" title="Go to source code">getClientState</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the state to be stored on the client side.
@@ -2831,7 +2832,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setClientState">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1090-1098" title="Go to source code">setClientState</a>( <span>string <var>$state</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1095-1103" title="Go to source code">setClientState</a>( <span>string <var>$state</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the state to be stored on the client side.
@@ -2868,7 +2869,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRequestClientState">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1100-1106" title="Go to source code">getRequestClientState</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1105-1111" title="Go to source code">getRequestClientState</a>( )</code>
 
 		<div class="description short">
 			
@@ -2902,7 +2903,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getStatePersisterClass">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1108-1114" title="Go to source code">getStatePersisterClass</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1113-1119" title="Go to source code">getStatePersisterClass</a>( )</code>
 
 		<div class="description short">
 			
@@ -2936,7 +2937,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setStatePersisterClass">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1116-1122" title="Go to source code">setStatePersisterClass</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1121-1127" title="Go to source code">setStatePersisterClass</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2971,7 +2972,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getStatePersister">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1124-1137" title="Go to source code">getStatePersister</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1129-1142" title="Go to source code">getStatePersister</a>( )</code>
 
 		<div class="description short">
 			
@@ -3005,7 +3006,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getEnableStateValidation">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1139-1145" title="Go to source code">getEnableStateValidation</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1144-1150" title="Go to source code">getEnableStateValidation</a>( )</code>
 
 		<div class="description short">
 			
@@ -3039,7 +3040,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setEnableStateValidation">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1147-1153" title="Go to source code">setEnableStateValidation</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1152-1158" title="Go to source code">setEnableStateValidation</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -3074,7 +3075,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getEnableStateEncryption">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1155-1161" title="Go to source code">getEnableStateEncryption</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1160-1166" title="Go to source code">getEnableStateEncryption</a>( )</code>
 
 		<div class="description short">
 			
@@ -3108,7 +3109,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setEnableStateEncryption">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1163-1169" title="Go to source code">setEnableStateEncryption</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1168-1174" title="Go to source code">setEnableStateEncryption</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -3143,7 +3144,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getEnableStateCompression">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1171-1178" title="Go to source code">getEnableStateCompression</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1176-1183" title="Go to source code">getEnableStateCompression</a>( )</code>
 
 		<div class="description short">
 			
@@ -3181,7 +3182,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setEnableStateCompression">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1180-1187" title="Go to source code">setEnableStateCompression</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1185-1192" title="Go to source code">setEnableStateCompression</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -3208,6 +3209,83 @@ This method should only be used by framework and control developers.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="getEnableStateIGBinary" id="_getEnableStateIGBinary">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEnableStateIGBinary">#</a>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1194-1201" title="Go to source code">getEnableStateIGBinary</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>whether page state should be serialized using igbinary if available. Defaults to true.
+				</div>
+
+
+				<h4>Since</h4>
+				<div class="list">
+						4.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setEnableStateIGBinary" id="_setEnableStateIGBinary">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setEnableStateIGBinary">#</a>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1203-1210" title="Go to source code">setEnableStateIGBinary</a>( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>whether page state should be serialized using igbinary if available.</dd>
+				</dl></div>
+
+
+
+				<h4>Since</h4>
+				<div class="list">
+						4.1<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="getPagePath" id="_getPagePath">
 
 		<td class="attributes"><code>
@@ -3220,7 +3298,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPagePath">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1189-1195" title="Go to source code">getPagePath</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1212-1218" title="Go to source code">getPagePath</a>( )</code>
 
 		<div class="description short">
 			
@@ -3254,7 +3332,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPagePath">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1197-1203" title="Go to source code">setPagePath</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1220-1226" title="Go to source code">setPagePath</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -3289,7 +3367,7 @@ This method should only be used by framework and control developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_registerCachingAction">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1205-1221" title="Go to source code">registerCachingAction</a>( <span>string <var>$context</var></span>, <span>string <var>$funcName</var></span>, <span>array <var>$funcParams</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1228-1244" title="Go to source code">registerCachingAction</a>( <span>string <var>$context</var></span>, <span>string <var>$funcName</var></span>, <span>array <var>$funcParams</var></span> )</code>
 
 		<div class="description short">
 			<p>Registers an action associated with the content being cached.
@@ -3333,7 +3411,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCachingStack">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1223-1232" title="Go to source code">getCachingStack</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1246-1255" title="Go to source code">getCachingStack</a>( )</code>
 
 		<div class="description short">
 			
@@ -3367,7 +3445,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_flushWriter">#</a>
-		<code><a href="source-class-Prado.Web.UI.TPage.html#1234-1242" title="Go to source code">flushWriter</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.TPage.html#1257-1265" title="Go to source code">flushWriter</a>( )</code>
 
 		<div class="description short">
 			<p>Flushes output</p>
@@ -3585,11 +3663,12 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 	<table class="summary constants" id="constants">
 	<caption>Constants summary</caption>
 	<tr data-order="FIELD_POSTBACK_TARGET" id="FIELD_POSTBACK_TARGET">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-FIELD_POSTBACK_TARGET.html#41-44" title="Go to source code"><b>FIELD_POSTBACK_TARGET</b></a>
+				<a href="source-constant-FIELD_POSTBACK_TARGET.html#40-43" title="Go to source code"><b>FIELD_POSTBACK_TARGET</b></a>
 			</code>
 
 			<div class="description short">
@@ -3609,11 +3688,12 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</td>
 	</tr>
 	<tr data-order="FIELD_POSTBACK_PARAMETER" id="FIELD_POSTBACK_PARAMETER">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-FIELD_POSTBACK_PARAMETER.html#45" title="Go to source code"><b>FIELD_POSTBACK_PARAMETER</b></a>
+				<a href="source-constant-FIELD_POSTBACK_PARAMETER.html#44" title="Go to source code"><b>FIELD_POSTBACK_PARAMETER</b></a>
 			</code>
 
 			<div class="description short">
@@ -3633,11 +3713,12 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</td>
 	</tr>
 	<tr data-order="FIELD_LASTFOCUS" id="FIELD_LASTFOCUS">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-FIELD_LASTFOCUS.html#46" title="Go to source code"><b>FIELD_LASTFOCUS</b></a>
+				<a href="source-constant-FIELD_LASTFOCUS.html#45" title="Go to source code"><b>FIELD_LASTFOCUS</b></a>
 			</code>
 
 			<div class="description short">
@@ -3657,11 +3738,12 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</td>
 	</tr>
 	<tr data-order="FIELD_PAGESTATE" id="FIELD_PAGESTATE">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-FIELD_PAGESTATE.html#47" title="Go to source code"><b>FIELD_PAGESTATE</b></a>
+				<a href="source-constant-FIELD_PAGESTATE.html#46" title="Go to source code"><b>FIELD_PAGESTATE</b></a>
 			</code>
 
 			<div class="description short">
@@ -3681,11 +3763,12 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</td>
 	</tr>
 	<tr data-order="FIELD_CALLBACK_TARGET" id="FIELD_CALLBACK_TARGET">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-FIELD_CALLBACK_TARGET.html#48" title="Go to source code"><b>FIELD_CALLBACK_TARGET</b></a>
+				<a href="source-constant-FIELD_CALLBACK_TARGET.html#47" title="Go to source code"><b>FIELD_CALLBACK_TARGET</b></a>
 			</code>
 
 			<div class="description short">
@@ -3705,11 +3788,12 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</td>
 	</tr>
 	<tr data-order="FIELD_CALLBACK_PARAMETER" id="FIELD_CALLBACK_PARAMETER">
+		
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name">
 			<code>
-				<a href="source-constant-FIELD_CALLBACK_PARAMETER.html#49" title="Go to source code"><b>FIELD_CALLBACK_PARAMETER</b></a>
+				<a href="source-constant-FIELD_CALLBACK_PARAMETER.html#48" title="Go to source code"><b>FIELD_CALLBACK_PARAMETER</b></a>
 			</code>
 
 			<div class="description short">
@@ -3793,7 +3877,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#94-97" title="Go to source code"><var>$_postData</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#93-96" title="Go to source code"><var>$_postData</var></a>
 
 			<div class="description short">
 				<p>data post back by user</p>
@@ -3818,7 +3902,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#98-101" title="Go to source code"><var>$_restPostData</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#97-100" title="Go to source code"><var>$_restPostData</var></a>
 
 			<div class="description short">
 				<p>postback data that is not handled during first invocation of LoadPostData.</p>
@@ -3843,7 +3927,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#102-105" title="Go to source code"><var>$_controlsPostDataChanged</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#101-104" title="Go to source code"><var>$_controlsPostDataChanged</var></a>
 
 			<div class="description short">
 				<p>list of controls whose data have been changed due to the postback</p>
@@ -3868,7 +3952,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#106-109" title="Go to source code"><var>$_controlsRequiringPostData</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#105-108" title="Go to source code"><var>$_controlsRequiringPostData</var></a>
 
 			<div class="description short">
 				<p>list of controls that need to load post data in the current request</p>
@@ -3893,7 +3977,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#110-113" title="Go to source code"><var>$_controlsRegisteredForPostData</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#109-112" title="Go to source code"><var>$_controlsRegisteredForPostData</var></a>
 
 			<div class="description short">
 				<p>list of controls that need to load post data in the next postback</p>
@@ -3918,7 +4002,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#122-125" title="Go to source code"><var>$_formRendered</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#121-124" title="Go to source code"><var>$_formRendered</var></a>
 
 			<div class="description short">
 				<p>whether the form has been rendered</p>
@@ -3943,7 +4027,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#126-129" title="Go to source code"><var>$_inFormRender</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#125-128" title="Go to source code"><var>$_inFormRender</var></a>
 
 			<div class="description short">
 				<p>whether the current rendering is within a form</p>
@@ -3968,7 +4052,7 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.UI.TPage.html#167-170" title="Go to source code"><var>$_isLoadingPostData</var></a>
+				<a href="source-class-Prado.Web.UI.TPage.html#171-174" title="Go to source code"><var>$_isLoadingPostData</var></a>
 
 			<div class="description short">
 				<p>true if loading post data.</p>
@@ -3988,6 +4072,17 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 	</tr>
 	</table>
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -3996,12 +4091,12 @@ referring to the context object (e.g. Page, Page.ClientScript).</p></dd>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

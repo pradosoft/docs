@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\Services\TRpcProtocol | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Web\Services\TRpcProtocol | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,13 +727,13 @@
 	<h1>Class TRpcProtocol</h1>
 
 
-	<div class="description">
-	<p>TRpcProtocol class</p>
+		<div class="description">
+		<p>TRpcProtocol class</p>
 
 <p>TRpcProtocol is the base class used to implement a protocol in a <code><a href="class-Prado.Web.Services.TRpcService.html">Prado\Web\Services\TRpcService</a></code>.
 Prado already implements two protocols: <code><a href="class-Prado.Web.Services.TXmlRpcProtocol.html">Prado\Web\Services\TXmlRpcProtocol</a></code> for Xml-Rpc request
 and <code><a href="class-Prado.Web.Services.TJsonRpcProtocol.html">Prado\Web\Services\TJsonRpcProtocol</a></code> for JSON-Rpc requests.</p>
-	</div>
+		</div>
 
 
 
@@ -757,7 +758,7 @@ and <code><a href="class-Prado.Web.Services.TJsonRpcProtocol.html">Prado\Web\Ser
 				Robin J. Rogge <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x72;&#x72;&#x6f;&#x67;&#x67;&#x65;&#x40;&#x62;&#x69;&#x67;&#x70;&#x6f;&#x69;&#x6e;&#x74;&#x2e;&#x6e;&#x65;&#x74;">&#x72;&#x72;&#x6f;&#x67;&#x67;&#x65;&#x40;&#x62;&#x69;&#x67;&#x70;&#x6f;&#x69;&#x6e;&#x74;&#x2e;&#x6e;&#x65;&#x74;</a><br>
 				<b>Since:</b>
 				3.2<br>
-			<b>Located at</b> <a href="source-class-Prado.Web.Services.TRpcProtocol.html#13-100" title="Go to source code">Web/Services/TRpcProtocol.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Web.Services.TRpcProtocol.html#12-99" title="Go to source code">Web/Services/TRpcProtocol.php</a>
 		<br>
 	</div>
 
@@ -777,7 +778,7 @@ and <code><a href="class-Prado.Web.Services.TJsonRpcProtocol.html">Prado\Web\Ser
 
 		<td class="name"><div>
 		<a class="anchor" href="#_callMethod">#</a>
-		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#33-39" title="Go to source code">callMethod</a>( <span>string <var>$requestPayload</var></span> )</code>
+		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#32-38" title="Go to source code">callMethod</a>( <span>string <var>$requestPayload</var></span> )</code>
 
 		<div class="description short">
 			
@@ -817,7 +818,7 @@ Processed the request ans returns the response, if any</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createErrorResponse">#</a>
-		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#40-46" title="Go to source code">createErrorResponse</a>( <span><code><a href="class-Prado.Web.Services.TRpcException.html">Prado\Web\Services\TRpcException</a></code> <var>$exception</var></span> )</code>
+		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#39-45" title="Go to source code">createErrorResponse</a>( <span><code><a href="class-Prado.Web.Services.TRpcException.html">Prado\Web\Services\TRpcException</a></code> <var>$exception</var></span> )</code>
 
 		<div class="description short">
 			
@@ -857,7 +858,7 @@ Creates a proper response for an error condition</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createResponseHeaders">#</a>
-		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#47-51" title="Go to source code">createResponseHeaders</a>( <span>response <var>$response</var></span> )</code>
+		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#46-50" title="Go to source code">createResponseHeaders</a>( <span>response <var>$response</var></span> )</code>
 
 		<div class="description short">
 			
@@ -894,7 +895,7 @@ Creates a proper response for an error condition</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_encode">#</a>
-		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#52-58" title="Go to source code">encode</a>( <span>mixed <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#51-57" title="Go to source code">encode</a>( <span>mixed <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Encodes the response</p>
@@ -933,7 +934,7 @@ Creates a proper response for an error condition</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_decode">#</a>
-		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#59-65" title="Go to source code">decode</a>( <span>string <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#58-64" title="Go to source code">decode</a>( <span>string <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Decodes the request payload</p>
@@ -972,7 +973,7 @@ Creates a proper response for an error condition</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addMethod">#</a>
-		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#69-77" title="Go to source code">addMethod</a>( <span>string <var>$methodName</var></span>, <span>array <var>$handlerDetails</var></span> )</code>
+		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#68-76" title="Go to source code">addMethod</a>( <span>string <var>$methodName</var></span>, <span>array <var>$handlerDetails</var></span> )</code>
 
 		<div class="description short">
 			<p>Registers a new RPC method and handler details</p>
@@ -1009,7 +1010,7 @@ Creates a proper response for an error condition</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_callApiMethod">#</a>
-		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#79-99" title="Go to source code">callApiMethod</a>( <span>string <var>$methodName</var></span>, <span>array <var>$parameters</var></span> )</code>
+		<code><a href="source-class-Prado.Web.Services.TRpcProtocol.html#78-98" title="Go to source code">callApiMethod</a>( <span>string <var>$methodName</var></span>, <span>array <var>$parameters</var></span> )</code>
 
 		<div class="description short">
 			<p>Calls the callback handler for the given method</p>
@@ -1060,7 +1061,7 @@ Creates a proper response for an error condition</p></dd>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Prado.Web.Services.TRpcProtocol.html#26-29" title="Go to source code"><var>$rpcMethods</var></a>
+				<a href="source-class-Prado.Web.Services.TRpcProtocol.html#25-28" title="Go to source code"><var>$rpcMethods</var></a>
 
 			<div class="description short">
 				<p>containing the mapping from RPC method names to the actual handlers</p>
@@ -1088,12 +1089,12 @@ Creates a proper response for an error condition</p></dd>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

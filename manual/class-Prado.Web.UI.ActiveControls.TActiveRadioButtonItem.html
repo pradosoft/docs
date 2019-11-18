@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\UI\ActiveControls\TActiveRadioButtonItem | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Web\UI\ActiveControls\TActiveRadioButtonItem | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,20 +727,9 @@
 	<h1>Class TActiveRadioButtonItem</h1>
 
 
-	<div class="description">
-	<p>TActiveRadioButton class.</p>
-
-<p>The active control counter part to radio button. The <code><a href="class-Prado.Web.UI.WebControls.TCheckBox.html#_setAutoPostBack">AutoPostBack</a></code>
-property is set to true by default. Thus, when the radio button is clicked a
-<code><a href="class-Prado.Web.UI.ActiveControls.TActiveRadioButton.html#_onCallback">OnCallback</a></code> event is raise after OnCheckedChanged event.</p>
-
-<p>The <code><a href="class-Prado.Web.UI.ActiveControls.TActiveRadioButton.html#_setText">Text</a></code> and <code><a href="class-Prado.Web.UI.ActiveControls.TActiveRadioButton.html#_setChecked">Checked</a></code> properties can be
-changed during a callback.</p>
-
-<p>The <code><a href="class-Prado.Web.UI.WebControls.TRadioButton.html#_setGroupName">GroupName</a></code> property may <b>NOT</b> be changed
-during callback because the client-side <tt>name</tt> attribute is read-only
-and can not be changed using javascript.</p>
-	</div>
+		<div class="description">
+		<p>TActiveRadioButtonItem class.</p>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -830,10 +820,8 @@ and can not be changed using javascript.</p>
 		<b>Package:</b> Prado\Web\UI\ActiveControls<br>
 
 				<b>Author:</b>
-				Wei Zhuo &lt;weizhuo[at]gmail[dot]com><br>
-				<b>Since:</b>
-				3.1<br>
-			<b>Located at</b> <a href="source-class-Prado.Web.UI.ActiveControls.TActiveRadioButtonItem.html#16-29" title="Go to source code">Web/UI/ActiveControls/TActiveRadioButtonItem.php</a>
+				Wei Zhuo &lt;weizhuo[at]gamil[dot]com><br>
+			<b>Located at</b> <a href="source-class-Prado.Web.UI.ActiveControls.TActiveRadioButtonItem.html#16-35" title="Go to source code">Web/UI/ActiveControls/TActiveRadioButtonItem.php</a>
 		<br>
 	</div>
 
@@ -853,7 +841,7 @@ and can not be changed using javascript.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_renderInputTag">#</a>
-		<code><a href="source-class-Prado.Web.UI.ActiveControls.TActiveRadioButtonItem.html#18-28" title="Go to source code">renderInputTag</a>( <span>THtmlWriter <var>$writer</var></span>, <span>string <var>$clientID</var></span>, <span>string <var>$onclick</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.ActiveControls.TActiveRadioButtonItem.html#24-34" title="Go to source code">renderInputTag</a>( <span>THtmlWriter <var>$writer</var></span>, <span>string <var>$clientID</var></span>, <span>string <var>$onclick</var></span> )</code>
 
 		<div class="description short">
 			<p>Override client implementation to avoid emitting the javascript</p>
@@ -1231,6 +1219,17 @@ and can not be changed using javascript.</p>
 		</code></td>
 	</tr>
 	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -1239,12 +1238,12 @@ and can not be changed using javascript.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

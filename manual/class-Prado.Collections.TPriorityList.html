@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Collections\TPriorityList | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Collections\TPriorityList | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,8 +727,8 @@
 	<h1>Class TPriorityList</h1>
 
 
-	<div class="description">
-	<p>TPriorityList class</p>
+		<div class="description">
+		<p>TPriorityList class</p>
 
 <p>TPriorityList implements a priority ordered list collection class.  It allows you to specify
 any numeric for priorities down to a specific precision.  The lower the numeric, the high the priority of the item in the
@@ -756,7 +757,7 @@ TPriorityList can also be used like a regular array as follows,</p>
 
 <p>To extend TPriorityList for doing your own operations with each addition or removal,
 override <code><a href="class-Prado.Collections.TPriorityList.html#_insertAtIndexInPriority">Prado\Collections\TPriorityList::insertAtIndexInPriority()</a></code> and <code><a href="class-Prado.Collections.TPriorityList.html#_removeAtIndexInPriority">Prado\Collections\TPriorityList::removeAtIndexInPriority()</a></code> and then call the parent.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -803,7 +804,7 @@ override <code><a href="class-Prado.Collections.TPriorityList.html#_insertAtInde
 				Brad Anderson <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;">&#x6a;&#x61;&#118;&#97;&#x6c;&#105;&#122;&#x61;&#114;&#100;&#x40;g&#109;&#x61;i&#108;&#x2e;&#x63;&#111;&#x6d;</a><br>
 				<b>Since:</b>
 				3.2a<br>
-			<b>Located at</b> <a href="source-class-Prado.Collections.TPriorityList.html#19-784" title="Go to source code">Collections/TPriorityList.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Collections.TPriorityList.html#18-783" title="Go to source code">Collections/TPriorityList.php</a>
 		<br>
 	</div>
 
@@ -823,7 +824,7 @@ override <code><a href="class-Prado.Collections.TPriorityList.html#_insertAtInde
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#82-100" title="Go to source code">__construct</a>( <span>null|array|Iterator <var>$data</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$readOnly</var> = <span class="php-keyword1">false</span></span>, <span>numeric <var>$defaultPriority</var> = <span class="php-num">10</span></span>, <span>integer <var>$precision</var> = <span class="php-num">8</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#81-99" title="Go to source code">__construct</a>( <span>null|array|Iterator <var>$data</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$readOnly</var> = <span class="php-keyword1">false</span></span>, <span>numeric <var>$defaultPriority</var> = <span class="php-num">10</span></span>, <span>integer <var>$precision</var> = <span class="php-num">8</span></span> )</code>
 
 		<div class="description short">
 			<p>Constructor.
@@ -872,7 +873,7 @@ Initializes the list with an array or an iterable object.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_count">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#102-110" title="Go to source code">count</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#101-109" title="Go to source code">count</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the number of items in the list.
@@ -910,7 +911,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCount">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#112-119" title="Go to source code">getCount</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#111-118" title="Go to source code">getCount</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the total number of items in the list</p>
@@ -946,7 +947,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPriorityCount">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#121-137" title="Go to source code">getPriorityCount</a>( <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#120-136" title="Go to source code">getPriorityCount</a>( <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Gets the number of items at a priority within the list</p>
@@ -985,7 +986,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDefaultPriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#139-145" title="Go to source code">getDefaultPriority</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#138-144" title="Go to source code">getDefaultPriority</a>( )</code>
 
 		<div class="description short">
 			
@@ -1019,7 +1020,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDefaultPriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#147-154" title="Go to source code">setDefaultPriority</a>( <span>numeric <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#146-153" title="Go to source code">setDefaultPriority</a>( <span>numeric <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>This must be called internally or when instantiated.</p>
@@ -1054,7 +1055,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPrecision">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#156-162" title="Go to source code">getPrecision</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#155-161" title="Go to source code">getPrecision</a>( )</code>
 
 		<div class="description short">
 			
@@ -1088,7 +1089,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPrecision">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#164-171" title="Go to source code">setPrecision</a>( <span>integer <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#163-170" title="Go to source code">setPrecision</a>( <span>integer <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>This must be called internally or when instantiated.</p>
@@ -1123,7 +1124,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIterator">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#173-181" title="Go to source code">getIterator</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#172-180" title="Go to source code">getIterator</a>( )</code>
 
 		<div class="description short">
 			<p>Returns an iterator for traversing the items in the list.
@@ -1161,7 +1162,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPriorities">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#183-191" title="Go to source code">getPriorities</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#182-190" title="Go to source code">getPriorities</a>( )</code>
 
 		<div class="description short">
 			<p>This returns a list of the priorities within this list, ordered lowest to highest.</p>
@@ -1195,7 +1196,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sortPriorities">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#194-203" title="Go to source code">sortPriorities</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#193-202" title="Go to source code">sortPriorities</a>( )</code>
 
 		<div class="description short">
 			<p>This orders the priority list internally.</p>
@@ -1225,7 +1226,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_flattenPriorities">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#205-221" title="Go to source code">flattenPriorities</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#204-220" title="Go to source code">flattenPriorities</a>( )</code>
 
 		<div class="description short">
 			<p>This flattens the priority list into a flat array [0,...,n-1]</p>
@@ -1259,7 +1260,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_itemAt">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#224-239" title="Go to source code">itemAt</a>( <span>integer <var>$index</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#223-238" title="Go to source code">itemAt</a>( <span>integer <var>$index</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns the item at the index of a flattened priority list.
@@ -1306,7 +1307,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_itemsAtPriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#241-254" title="Go to source code">itemsAtPriority</a>( <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#240-253" title="Go to source code">itemsAtPriority</a>( <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Gets all the items at a specific priority.</p>
@@ -1345,7 +1346,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_itemAtIndexInPriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#256-272" title="Go to source code">itemAtIndexInPriority</a>( <span>integer <var>$index</var></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#255-271" title="Go to source code">itemAtIndexInPriority</a>( <span>integer <var>$index</var></span>, <span>numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Returns the item at an index within a priority</p>
@@ -1386,7 +1387,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_add">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#274-289" title="Go to source code">add</a>( <span>mixed <var>$item</var></span>, <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#273-288" title="Go to source code">add</a>( <span>mixed <var>$item</var></span>, <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Appends an item into the list at the end of the specified priority.  The position of the added item may
@@ -1435,7 +1436,7 @@ not be at the end of the list.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_insertAt">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#291-310" title="Go to source code">insertAt</a>( <span>integer <var>$index</var></span>, <span>mixed <var>$item</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#290-309" title="Go to source code">insertAt</a>( <span>integer <var>$index</var></span>, <span>mixed <var>$item</var></span> )</code>
 
 		<div class="description short">
 			<p>Inserts an item at an index.  It reads the priority of the item at index within the flattened list
@@ -1481,7 +1482,7 @@ and then inserts the item at that priority-index.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_insertAtIndexInPriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#312-383" title="Go to source code">insertAtIndexInPriority</a>( <span>mixed <var>$item</var></span>, <span>integer <var>$index</var> = <span class="php-keyword1">false</span></span>, <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$preserveCache</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#311-382" title="Go to source code">insertAtIndexInPriority</a>( <span>mixed <var>$item</var></span>, <span>integer <var>$index</var> = <span class="php-keyword1">false</span></span>, <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$preserveCache</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Inserts an item at the specified index within a priority.  Override and call this method to
@@ -1529,7 +1530,7 @@ insert your own functionality.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_remove">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#386-417" title="Go to source code">remove</a>( <span>mixed <var>$item</var></span>, <span>null|boolean|float <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#385-416" title="Go to source code">remove</a>( <span>mixed <var>$item</var></span>, <span>null|boolean|float <var>$priority</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Removes an item from the priority list.
@@ -1579,7 +1580,7 @@ A value of false means any priority. null will be filled in with the default pri
 
 		<td class="name"><div>
 		<a class="anchor" href="#_removeAt">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#419-436" title="Go to source code">removeAt</a>( <span>integer <var>$index</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#418-435" title="Go to source code">removeAt</a>( <span>integer <var>$index</var></span> )</code>
 
 		<div class="description short">
 			<p>Removes an item at the specified index in the flattened list.</p>
@@ -1625,7 +1626,7 @@ A value of false means any priority. null will be filled in with the default pri
 
 		<td class="name"><div>
 		<a class="anchor" href="#_removeAtIndexInPriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#438-472" title="Go to source code">removeAtIndexInPriority</a>( <span>integer <var>$index</var></span>, <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#437-471" title="Go to source code">removeAtIndexInPriority</a>( <span>integer <var>$index</var></span>, <span>null|numeric <var>$priority</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Removes the item at a specific index within a priority.  Override
@@ -1672,7 +1673,7 @@ and call this method to insert your own functionality.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_clear">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#474-489" title="Go to source code">clear</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#473-488" title="Go to source code">clear</a>( )</code>
 
 		<div class="description short">
 			<p>Removes all items in the priority list by calling removeAtIndexInPriority from the last item to the first.</p>
@@ -1708,7 +1709,7 @@ and call this method to insert your own functionality.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_contains">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#491-498" title="Go to source code">contains</a>( <span>mixed <var>$item</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#490-497" title="Go to source code">contains</a>( <span>mixed <var>$item</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1749,7 +1750,7 @@ and call this method to insert your own functionality.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_indexOf">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#500-511" title="Go to source code">indexOf</a>( <span>mixed <var>$item</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#499-510" title="Go to source code">indexOf</a>( <span>mixed <var>$item</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1790,7 +1791,7 @@ and call this method to insert your own functionality.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_priorityOf">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#513-538" title="Go to source code">priorityOf</a>( <span>mixed <var>$item</var></span>, <span>boolean <var>$withindex</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#512-537" title="Go to source code">priorityOf</a>( <span>mixed <var>$item</var></span>, <span>boolean <var>$withindex</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Returns the priority of a particular item</p>
@@ -1834,7 +1835,7 @@ and call this method to insert your own functionality.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_priorityAt">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#540-566" title="Go to source code">priorityAt</a>( <span>integer <var>$index</var></span>, <span>boolean <var>$withindex</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#539-565" title="Go to source code">priorityAt</a>( <span>integer <var>$index</var></span>, <span>boolean <var>$withindex</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Retutrns the priority of an item at a particular flattened index.</p>
@@ -1878,7 +1879,7 @@ and call this method to insert your own functionality.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_insertBefore">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#568-589" title="Go to source code">insertBefore</a>( <span>mixed <var>$indexitem</var></span>, <span>mixed <var>$item</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#567-588" title="Go to source code">insertBefore</a>( <span>mixed <var>$indexitem</var></span>, <span>mixed <var>$item</var></span> )</code>
 
 		<div class="description short">
 			<p>This inserts an item before another item within the list.  It uses the same priority as the
@@ -1927,7 +1928,7 @@ found index item and places the new item before it.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_insertAfter">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#591-612" title="Go to source code">insertAfter</a>( <span>mixed <var>$indexitem</var></span>, <span>mixed <var>$item</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#590-611" title="Go to source code">insertAfter</a>( <span>mixed <var>$indexitem</var></span>, <span>mixed <var>$item</var></span> )</code>
 
 		<div class="description short">
 			<p>This inserts an item after another item within the list.  It uses the same priority as the
@@ -1976,7 +1977,7 @@ found index item and places the new item after it.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_toArray">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#614-620" title="Go to source code">toArray</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#613-619" title="Go to source code">toArray</a>( )</code>
 
 		<div class="description short">
 			
@@ -2012,7 +2013,7 @@ found index item and places the new item after it.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_toPriorityArray">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#622-629" title="Go to source code">toPriorityArray</a>( )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#621-628" title="Go to source code">toPriorityArray</a>( )</code>
 
 		<div class="description short">
 			
@@ -2046,7 +2047,7 @@ found index item and places the new item after it.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_toArrayBelowPriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#631-649" title="Go to source code">toArrayBelowPriority</a>( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#630-648" title="Go to source code">toArrayBelowPriority</a>( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Combines the map elements which have a priority below the parameter value</p>
@@ -2088,7 +2089,7 @@ found index item and places the new item after it.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_toArrayAbovePriority">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#651-669" title="Go to source code">toArrayAbovePriority</a>( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#650-668" title="Go to source code">toArrayAbovePriority</a>( <span>numeric <var>$priority</var></span>, <span>boolean <var>$inclusive</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			<p>Combines the map elements which have a priority above the parameter value</p>
@@ -2130,7 +2131,7 @@ found index item and places the new item after it.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_copyFrom">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#672-699" title="Go to source code">copyFrom</a>( <span>mixed <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#671-698" title="Go to source code">copyFrom</a>( <span>mixed <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Copies iterable data into the priority list.
@@ -2173,7 +2174,7 @@ Note, existing data in the map will be cleared first.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_mergeWith">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#701-724" title="Go to source code">mergeWith</a>( <span>mixed <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#700-723" title="Go to source code">mergeWith</a>( <span>mixed <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Merges iterable data into the priority list.
@@ -2220,7 +2221,7 @@ to the end of the existing items with equal priorities, if there are any.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetExists">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#726-735" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#725-734" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns whether there is an element at the specified offset.
@@ -2263,7 +2264,7 @@ This method is required by the interface \ArrayAccess.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetGet">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#737-746" title="Go to source code">offsetGet</a>( <span>integer <var>$offset</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#736-745" title="Go to source code">offsetGet</a>( <span>integer <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns the element at the specified offset.
@@ -2310,7 +2311,7 @@ This method is required by the interface \ArrayAccess.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetSet">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#748-773" title="Go to source code">offsetSet</a>( <span>integer <var>$offset</var></span>, <span>mixed <var>$item</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#747-772" title="Go to source code">offsetSet</a>( <span>integer <var>$offset</var></span>, <span>mixed <var>$item</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the element at the specified offset. This method is required by the interface \ArrayAccess.
@@ -2360,7 +2361,7 @@ an item into a priority list doesn't mean the item is at the end of the list.</p
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetUnset">#</a>
-		<code><a href="source-class-Prado.Collections.TPriorityList.html#775-783" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-Prado.Collections.TPriorityList.html#774-782" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			<p>Unsets the element at the specified offset.
@@ -2469,6 +2470,17 @@ This method is required by the interface \ArrayAccess.</p>
 
 
 
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Prado.TComponent.html#$_behaviorsenabled"><var>$_behaviorsenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_e"><var>$_e</var></a>, 
+			<a href="class-Prado.TComponent.html#$_listeningenabled"><var>$_listeningenabled</var></a>, 
+			<a href="class-Prado.TComponent.html#$_m"><var>$_m</var></a>
+		</code></td>
+	</tr>
+	</table>
 
 
 
@@ -2477,12 +2489,12 @@ This method is required by the interface \ArrayAccess.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 
 	<meta http-equiv="content-language" content="en">
 	<meta name="Keywords" content="PRADO PHP framework component template event property OOP PHP5 object oriented programming Web programming development">
-	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 5.">
+	<meta name="Description" content="PRADO is a component-based and event-driven framework for Web application development in PHP 7.">
 	<meta name="Author" content="Qiang Xue">
 	<meta name="Subject" content="Web programming, PHP framework">
 	<meta name="Language" content="en">
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Data\ActiveRecord\Relations\TActiveRecordHasManyAssociation | Prado 4.0.1 API Manual</title>
+	<title>Class Prado\Data\ActiveRecord\Relations\TActiveRecordHasManyAssociation | Prado 4.1.0 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -232,6 +232,7 @@
 				<li><a href="class-Prado.Util.TRpcClient.html">Prado\Util\TRpcClient</a></li>
 				<li><a href="class-Prado.Util.TRpcClientTypesEnumerable.html">Prado\Util\TRpcClientTypesEnumerable</a></li>
 				<li><a href="class-Prado.Util.TSimpleDateFormatter.html">Prado\Util\TSimpleDateFormatter</a></li>
+				<li><a href="class-Prado.Util.TUtf8Converter.html">Prado\Util\TUtf8Converter</a></li>
 				<li><a href="class-Prado.Util.TVarDumper.html">Prado\Util\TVarDumper</a></li>
 				<li><a href="class-Prado.Util.TXmlRpcClient.html">Prado\Util\TXmlRpcClient</a></li>
 				<li><a href="class-Prado.Web.Javascripts.TJavaScript.html">Prado\Web\Javascripts\TJavaScript</a></li>
@@ -726,8 +727,8 @@
 	<h1>Class TActiveRecordHasManyAssociation</h1>
 
 
-	<div class="description">
-	<p>Implements the M-N (many to many) relationship via association table.
+		<div class="description">
+		<p>Implements the M-N (many to many) relationship via association table.
 Consider the <b>entity</b> relationship between Articles and Categories
 via the association table <tt>Article_Category</tt>.</p>
 
@@ -786,7 +787,7 @@ static <tt>$RELATIONS</tt> property of CategoryRecord defines many ArticleRecord
 name, in this case, <tt>Categories</tt>) fetchs the corresponding CategoryRecords using
 a second query (not by using a join). The <tt>with_xxx()</tt> accepts the same
 arguments as other finder methods of TActiveRecord.</p>
-	</div>
+		</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
@@ -820,7 +821,7 @@ arguments as other finder methods of TActiveRecord.</p>
 				Wei Zhuo &lt;weizho[at]gmail[dot]com><br>
 				<b>Since:</b>
 				3.1<br>
-			<b>Located at</b> <a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#20-380" title="Go to source code">Data/ActiveRecord/Relations/TActiveRecordHasManyAssociation.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#19-380" title="Go to source code">Data/ActiveRecord/Relations/TActiveRecordHasManyAssociation.php</a>
 		<br>
 	</div>
 
@@ -840,7 +841,7 @@ arguments as other finder methods of TActiveRecord.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_collectForeignObjects">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#93-104" title="Go to source code">collectForeignObjects</a>( <span>array <var>&amp; $results</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#92-103" title="Go to source code">collectForeignObjects</a>( <span>array <var>&amp; $results</var></span> )</code>
 
 		<div class="description short">
 			<p>Get the foreign key index values from the results and make calls to the
@@ -877,7 +878,7 @@ database to find the corresponding foreign objects using association table.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRelationForeignKeys">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#106-116" title="Go to source code">getRelationForeignKeys</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#105-115" title="Go to source code">getRelationForeignKeys</a>( )</code>
 
 		<div class="description short">
 			
@@ -911,7 +912,7 @@ database to find the corresponding foreign objects using association table.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getAssociationTable">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#118-135" title="Go to source code">getAssociationTable</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#117-134" title="Go to source code">getAssociationTable</a>( )</code>
 
 		<div class="description short">
 			
@@ -945,7 +946,7 @@ database to find the corresponding foreign objects using association table.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getSourceTable">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#137-147" title="Go to source code">getSourceTable</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#136-146" title="Go to source code">getSourceTable</a>( )</code>
 
 		<div class="description short">
 			
@@ -979,7 +980,7 @@ database to find the corresponding foreign objects using association table.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getForeignTable">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#149-160" title="Go to source code">getForeignTable</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#148-159" title="Go to source code">getForeignTable</a>( )</code>
 
 		<div class="description short">
 			
@@ -1013,7 +1014,7 @@ database to find the corresponding foreign objects using association table.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCommandBuilder">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#162-168" title="Go to source code">getCommandBuilder</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#161-167" title="Go to source code">getCommandBuilder</a>( )</code>
 
 		<div class="description short">
 			
@@ -1047,7 +1048,7 @@ database to find the corresponding foreign objects using association table.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getForeignCommandBuilder">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#170-177" title="Go to source code">getForeignCommandBuilder</a>( )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#169-176" title="Go to source code">getForeignCommandBuilder</a>( )</code>
 
 		<div class="description short">
 			
@@ -1081,7 +1082,7 @@ database to find the corresponding foreign objects using association table.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_fetchForeignObjects">#</a>
-		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#180-204" title="Go to source code">fetchForeignObjects</a>( <span>array <var>&amp; $results</var></span>, <span>array <var>$foreignKeys</var></span>, <span>array <var>$indexValues</var></span>, <span>array <var>$sourceKeys</var></span> )</code>
+		<code><a href="source-class-Prado.Data.ActiveRecord.Relations.TActiveRecordHasManyAssociation.html#179-204" title="Go to source code">fetchForeignObjects</a>( <span>array <var>&amp; $results</var></span>, <span>array <var>$foreignKeys</var></span>, <span>array <var>$indexValues</var></span>, <span>array <var>$sourceKeys</var></span>, <span>mixed <var>$results</var>,…</span> )</code>
 
 		<div class="description short">
 			<p>Fetches the foreign objects using TActiveRecord::findAllByIndex()</p>
@@ -1101,6 +1102,8 @@ database to find the corresponding foreign objects using association table.</p>
 					<dd>foreign key index values.</dd>
 					<dt><var>$sourceKeys</var></dt>
 					<dd>source table column names.</dd>
+					<dt><var>$results</var>,…</dt>
+					<dd></dd>
 				</dl></div>
 
 
@@ -1386,12 +1389,12 @@ database to find the corresponding foreign objects using association table.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.0.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.0 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
 <script src="resources/combined.js?36830aaf0adef94ad072c4a659f6d92449fab4a2"></script>
-<script src="elementlist.js?db317aece4b6d81ddb348352df622b26e6e5bcc1"></script>
+<script src="elementlist.js?82e93db2b138688b9c20b686ce154aea7876d577"></script>
 </body>
 </html>
