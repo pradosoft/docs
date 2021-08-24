@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\UI\WebControls\TOutputCache | Prado 4.1.1 API Manual</title>
+	<title>Class Prado\Web\UI\WebControls\TOutputCache | Prado 4.1.2 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -255,6 +255,7 @@
 				<li><a href="class-Prado.Web.TCacheHttpSession.html">Prado\Web\TCacheHttpSession</a></li>
 				<li><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></li>
 				<li><a href="class-Prado.Web.THttpCookieCollection.html">Prado\Web\THttpCookieCollection</a></li>
+				<li><a href="class-Prado.Web.THttpCookieSameSite.html">Prado\Web\THttpCookieSameSite</a></li>
 				<li><a href="class-Prado.Web.THttpRequest.html">Prado\Web\THttpRequest</a></li>
 				<li><a href="class-Prado.Web.THttpRequestUrlFormat.html">Prado\Web\THttpRequestUrlFormat</a></li>
 				<li><a href="class-Prado.Web.THttpResponse.html">Prado\Web\THttpResponse</a></li>
@@ -290,6 +291,7 @@
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveEditCommandColumn.html">Prado\Web\UI\ActiveControls\TActiveEditCommandColumn</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUpload.html">Prado\Web\UI\ActiveControls\TActiveFileUpload</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadCallbackParams.html">Prado\Web\UI\ActiveControls\TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadItem.html">Prado\Web\UI\ActiveControls\TActiveFileUploadItem</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHiddenField.html">Prado\Web\UI\ActiveControls\TActiveHiddenField</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea4.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea4</a></li>
@@ -832,7 +834,7 @@ to determine whether the content is cached or not.</p>
 				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
 				<b>Since:</b>
 				3.1<br>
-			<b>Located at</b> <a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#20-493" title="Go to source code">Web/UI/WebControls/TOutputCache.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#20-490" title="Go to source code">Web/UI/WebControls/TOutputCache.php</a>
 		<br>
 	</div>
 
@@ -1013,7 +1015,7 @@ Only framework developers should use this method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_loadStateRecursive">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#212-224" title="Go to source code">loadStateRecursive</a>( <span>array <var>&amp; $state</var></span>, <span>boolean <var>$needViewState</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#212-223" title="Go to source code">loadStateRecursive</a>( <span>array <var>&amp; $state</var></span>, <span>boolean <var>$needViewState</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			<p>Loads state (viewstate and controlstate) into a control and its children.
@@ -1058,7 +1060,7 @@ This method should only be used by framework developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_saveStateRecursive">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#226-244" title="Go to source code">saveStateRecursive</a>( <span>boolean <var>$needViewState</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#225-241" title="Go to source code">saveStateRecursive</a>( <span>boolean <var>$needViewState</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			<p>Saves all control state (viewstate and controlstate) as a collection.
@@ -1105,7 +1107,7 @@ This method should only be used by framework developers.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_registerAction">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#246-258" title="Go to source code">registerAction</a>( <span>string <var>$context</var></span>, <span>string <var>$funcName</var></span>, <span>array <var>$funcParams</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#243-255" title="Go to source code">registerAction</a>( <span>string <var>$context</var></span>, <span>string <var>$funcName</var></span>, <span>array <var>$funcParams</var></span> )</code>
 
 		<div class="description short">
 			<p>Registers an action associated with the content being cached.
@@ -1149,7 +1151,7 @@ referring to the context object (e.g. Page, Page.ClientScript)</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCacheKey">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#260-266" title="Go to source code">getCacheKey</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#257-263" title="Go to source code">getCacheKey</a>( )</code>
 
 		<div class="description short">
 			
@@ -1179,7 +1181,7 @@ referring to the context object (e.g. Page, Page.ClientScript)</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_calculateCacheKey">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#268-297" title="Go to source code">calculateCacheKey</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#265-294" title="Go to source code">calculateCacheKey</a>( )</code>
 
 		<div class="description short">
 			<p>Calculates the cache key.
@@ -1225,7 +1227,7 @@ the calculated cache key.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getBaseCacheKey">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#299-305" title="Go to source code">getBaseCacheKey</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#296-302" title="Go to source code">getBaseCacheKey</a>( )</code>
 
 		<div class="description short">
 			
@@ -1259,7 +1261,7 @@ the calculated cache key.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCacheModuleID">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#307-313" title="Go to source code">getCacheModuleID</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#304-310" title="Go to source code">getCacheModuleID</a>( )</code>
 
 		<div class="description short">
 			
@@ -1293,7 +1295,7 @@ the calculated cache key.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCacheModuleID">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#315-321" title="Go to source code">setCacheModuleID</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#312-318" title="Go to source code">setCacheModuleID</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1328,7 +1330,7 @@ the calculated cache key.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCacheKeyPrefix">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#323-331" title="Go to source code">setCacheKeyPrefix</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#320-328" title="Go to source code">setCacheKeyPrefix</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the prefix of the cache key.
@@ -1365,7 +1367,7 @@ This method is used internally by TTemplate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCacheTime">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#333-340" title="Go to source code">getCacheTime</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#330-337" title="Go to source code">getCacheTime</a>( )</code>
 
 		<div class="description short">
 			
@@ -1403,7 +1405,7 @@ This method is used internally by TTemplate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCacheDependency">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#342-352" title="Go to source code">getCacheDependency</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#339-349" title="Go to source code">getCacheDependency</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the dependency of the data to be cached.
@@ -1443,7 +1445,7 @@ with additional dependencies.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getContentCached">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#354-360" title="Go to source code">getContentCached</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#351-357" title="Go to source code">getContentCached</a>( )</code>
 
 		<div class="description short">
 			
@@ -1477,7 +1479,7 @@ with additional dependencies.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getDuration">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#362-370" title="Go to source code">getDuration</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#359-367" title="Go to source code">getDuration</a>( )</code>
 
 		<div class="description short">
 			
@@ -1513,7 +1515,7 @@ the data may be purged out of cache earlier.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDuration">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#372-382" title="Go to source code">setDuration</a>( <span>integer <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#369-379" title="Go to source code">setDuration</a>( <span>integer <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1552,7 +1554,7 @@ the data may be purged out of cache earlier.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getVaryByParam">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#384-390" title="Go to source code">getVaryByParam</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#381-387" title="Go to source code">getVaryByParam</a>( )</code>
 
 		<div class="description short">
 			
@@ -1586,7 +1588,7 @@ the data may be purged out of cache earlier.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setVaryByParam">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#392-403" title="Go to source code">setVaryByParam</a>( <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#389-400" title="Go to source code">setVaryByParam</a>( <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the names of the request parameters that should be used in calculating the cache key.
@@ -1631,7 +1633,7 @@ for each different set of request parameter values.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getVaryBySession">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#405-411" title="Go to source code">getVaryBySession</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#402-408" title="Go to source code">getVaryBySession</a>( )</code>
 
 		<div class="description short">
 			
@@ -1665,7 +1667,7 @@ for each different set of request parameter values.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setVaryBySession">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#413-419" title="Go to source code">setVaryBySession</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#410-416" title="Go to source code">setVaryBySession</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1700,7 +1702,7 @@ for each different set of request parameter values.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCachingPostBack">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#421-427" title="Go to source code">getCachingPostBack</a>( )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#418-424" title="Go to source code">getCachingPostBack</a>( )</code>
 
 		<div class="description short">
 			
@@ -1734,7 +1736,7 @@ for each different set of request parameter values.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCachingPostBack">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#429-439" title="Go to source code">setCachingPostBack</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#426-436" title="Go to source code">setCachingPostBack</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets a value indicating whether cached output will be used on postback requests.
@@ -1775,7 +1777,7 @@ TTextBox, TDropDownList, your page may fail to render on postbacks.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onCheckDependency">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#441-451" title="Go to source code">onCheckDependency</a>( <span><code><a href="class-Prado.Web.UI.WebControls.TOutputCacheCheckDependencyEventParameter.html">Prado\Web\UI\WebControls\TOutputCacheCheckDependencyEventParameter</a></code> <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#438-448" title="Go to source code">onCheckDependency</a>( <span><code><a href="class-Prado.Web.UI.WebControls.TOutputCacheCheckDependencyEventParameter.html">Prado\Web\UI\WebControls\TOutputCacheCheckDependencyEventParameter</a></code> <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>This event is raised when the output cache is checking cache dependency.
@@ -1816,7 +1818,7 @@ property of the event parameter (which defaults to true).</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_onCalculateKey">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#453-464" title="Go to source code">onCalculateKey</a>( <span><code><a href="class-Prado.Web.UI.WebControls.TOutputCacheCalculateKeyEventParameter.html">Prado\Web\UI\WebControls\TOutputCacheCalculateKeyEventParameter</a></code> <var>$param</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#450-461" title="Go to source code">onCalculateKey</a>( <span><code><a href="class-Prado.Web.UI.WebControls.TOutputCacheCalculateKeyEventParameter.html">Prado\Web\UI\WebControls\TOutputCacheCalculateKeyEventParameter</a></code> <var>$param</var></span> )</code>
 
 		<div class="description short">
 			<p>This event is raised when the output cache is calculating cache key.
@@ -1859,7 +1861,7 @@ this event parameter will be appended to the default key calculation scheme.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render">#</a>
-		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#466-492" title="Go to source code">render</a>( <span>THtmlWriter <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.Web.UI.WebControls.TOutputCache.html#463-489" title="Go to source code">render</a>( <span>THtmlWriter <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			<p>Renders the output cache control.
@@ -2156,12 +2158,12 @@ from its child controls and saving it into cache, if output cache is needed.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.1.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.2 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
-<script src="resources/combined.js?56c7d4f6ab375f380b6dd78d2ae23650519abbb5"></script>
-<script src="elementlist.js?634870e4111b62a3688556c459ff9f4791989745"></script>
+<script src="resources/combined.js?18a9f18dd84d2c8b5202bb6c783a8174b25654dc"></script>
+<script src="elementlist.js?d63085344195f084a6a07c368a8ab6de926ef160"></script>
 </body>
 </html>

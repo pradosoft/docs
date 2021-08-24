@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\UI\WebControls\TFileUploadItem | Prado 4.1.1 API Manual</title>
+	<title>Class Prado\Web\UI\WebControls\TFileUploadItem | Prado 4.1.2 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -255,6 +255,7 @@
 				<li><a href="class-Prado.Web.TCacheHttpSession.html">Prado\Web\TCacheHttpSession</a></li>
 				<li><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></li>
 				<li><a href="class-Prado.Web.THttpCookieCollection.html">Prado\Web\THttpCookieCollection</a></li>
+				<li><a href="class-Prado.Web.THttpCookieSameSite.html">Prado\Web\THttpCookieSameSite</a></li>
 				<li><a href="class-Prado.Web.THttpRequest.html">Prado\Web\THttpRequest</a></li>
 				<li><a href="class-Prado.Web.THttpRequestUrlFormat.html">Prado\Web\THttpRequestUrlFormat</a></li>
 				<li><a href="class-Prado.Web.THttpResponse.html">Prado\Web\THttpResponse</a></li>
@@ -290,6 +291,7 @@
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveEditCommandColumn.html">Prado\Web\UI\ActiveControls\TActiveEditCommandColumn</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUpload.html">Prado\Web\UI\ActiveControls\TActiveFileUpload</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadCallbackParams.html">Prado\Web\UI\ActiveControls\TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadItem.html">Prado\Web\UI\ActiveControls\TActiveFileUploadItem</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHiddenField.html">Prado\Web\UI\ActiveControls\TActiveHiddenField</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea4.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea4</a></li>
@@ -752,6 +754,10 @@ is especially needed when <a href="TFileUpload::setMultiple">TFileUpload::setMul
 	</dl>
 
 
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadItem.html">Prado\Web\UI\ActiveControls\TActiveFileUploadItem</a>
+	</div>
 
 
 
@@ -1248,6 +1254,134 @@ If true, you will not be able to save the uploaded file again.</p></dd>
 
 
 
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_fileSize" id="$_fileSize">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Web.UI.WebControls.TFileUploadItem.html#27-30" title="Go to source code"><var>$_fileSize</var></a>
+
+			<div class="description short">
+				<p>the size of the uploaded file (in bytes)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>the size of the uploaded file (in bytes)</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_fileSize" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_fileName" id="$_fileName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Web.UI.WebControls.TFileUploadItem.html#31-34" title="Go to source code"><var>$_fileName</var></a>
+
+			<div class="description short">
+				<p>The original name of the file on the client machine</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>The original name of the file on the client machine</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_fileName" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_localName" id="$_localName">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Web.UI.WebControls.TFileUploadItem.html#35-38" title="Go to source code"><var>$_localName</var></a>
+
+			<div class="description short">
+				<p>the name of the temporary file storing the uploaded file</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>the name of the temporary file storing the uploaded file</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_localName" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_fileType" id="$_fileType">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Web.UI.WebControls.TFileUploadItem.html#39-42" title="Go to source code"><var>$_fileType</var></a>
+
+			<div class="description short">
+				<p>the uploaded file mime type</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>the uploaded file mime type</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_fileType" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_errorCode" id="$_errorCode">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Prado.Web.UI.WebControls.TFileUploadItem.html#43-46" title="Go to source code"><var>$_errorCode</var></a>
+
+			<div class="description short">
+				<p>error code of the current file upload</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>error code of the current file upload</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_errorCode" class="anchor">#</a>
+				<code>UPLOAD_ERR_NO_FILE</code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 	<table class="summary inherited">
 	<caption>Properties inherited from <a href="class-Prado.TComponent.html#properties">Prado\TComponent</a></caption>
@@ -1268,12 +1402,12 @@ If true, you will not be able to save the uploaded file again.</p></dd>
 </div>
 
 	<div id="footer">
-		Prado 4.1.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.2 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
-<script src="resources/combined.js?56c7d4f6ab375f380b6dd78d2ae23650519abbb5"></script>
-<script src="elementlist.js?634870e4111b62a3688556c459ff9f4791989745"></script>
+<script src="resources/combined.js?18a9f18dd84d2c8b5202bb6c783a8174b25654dc"></script>
+<script src="elementlist.js?d63085344195f084a6a07c368a8ab6de926ef160"></script>
 </body>
 </html>

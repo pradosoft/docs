@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\THttpSession | Prado 4.1.1 API Manual</title>
+	<title>Class Prado\Web\THttpSession | Prado 4.1.2 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -255,6 +255,7 @@
 				<li><a href="class-Prado.Web.TCacheHttpSession.html">Prado\Web\TCacheHttpSession</a></li>
 				<li><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></li>
 				<li><a href="class-Prado.Web.THttpCookieCollection.html">Prado\Web\THttpCookieCollection</a></li>
+				<li><a href="class-Prado.Web.THttpCookieSameSite.html">Prado\Web\THttpCookieSameSite</a></li>
 				<li><a href="class-Prado.Web.THttpRequest.html">Prado\Web\THttpRequest</a></li>
 				<li><a href="class-Prado.Web.THttpRequestUrlFormat.html">Prado\Web\THttpRequestUrlFormat</a></li>
 				<li><a href="class-Prado.Web.THttpResponse.html">Prado\Web\THttpResponse</a></li>
@@ -290,6 +291,7 @@
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveEditCommandColumn.html">Prado\Web\UI\ActiveControls\TActiveEditCommandColumn</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUpload.html">Prado\Web\UI\ActiveControls\TActiveFileUpload</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadCallbackParams.html">Prado\Web\UI\ActiveControls\TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadItem.html">Prado\Web\UI\ActiveControls\TActiveFileUploadItem</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHiddenField.html">Prado\Web\UI\ActiveControls\TActiveHiddenField</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea4.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea4</a></li>
@@ -829,7 +831,7 @@ module as follows,</p>
 				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
 				<b>Since:</b>
 				3.0<br>
-			<b>Located at</b> <a href="source-class-Prado.Web.THttpSession.html#18-641" title="Go to source code">Web/THttpSession.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Web.THttpSession.html#18-645" title="Go to source code">Web/THttpSession.php</a>
 		<br>
 	</div>
 
@@ -963,7 +965,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_open">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#135-152" title="Go to source code">open</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#135-156" title="Go to source code">open</a>( )</code>
 
 		<div class="description short">
 			<p>Starts the session if it has not started yet.</p>
@@ -993,7 +995,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_close">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#154-163" title="Go to source code">close</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#158-167" title="Go to source code">close</a>( )</code>
 
 		<div class="description short">
 			<p>Ends the current session and store session data.</p>
@@ -1023,7 +1025,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_destroy">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#165-174" title="Go to source code">destroy</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#169-178" title="Go to source code">destroy</a>( )</code>
 
 		<div class="description short">
 			<p>Destroys all data registered to a session.</p>
@@ -1053,7 +1055,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_regenerate">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#176-188" title="Go to source code">regenerate</a>( <span>boolean <var>$deleteOld</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#180-192" title="Go to source code">regenerate</a>( <span>boolean <var>$deleteOld</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Update the current session id with a newly generated one</p>
@@ -1096,7 +1098,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIsStarted">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#190-196" title="Go to source code">getIsStarted</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#194-200" title="Go to source code">getIsStarted</a>( )</code>
 
 		<div class="description short">
 			
@@ -1130,7 +1132,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getSessionID">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#198-204" title="Go to source code">getSessionID</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#202-208" title="Go to source code">getSessionID</a>( )</code>
 
 		<div class="description short">
 			
@@ -1164,7 +1166,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setSessionID">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#206-217" title="Go to source code">setSessionID</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#210-221" title="Go to source code">setSessionID</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1203,7 +1205,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getSessionName">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#219-225" title="Go to source code">getSessionName</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#223-229" title="Go to source code">getSessionName</a>( )</code>
 
 		<div class="description short">
 			
@@ -1237,7 +1239,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setSessionName">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#227-240" title="Go to source code">setSessionName</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#231-244" title="Go to source code">setSessionName</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1276,7 +1278,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getSavePath">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#242-248" title="Go to source code">getSavePath</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#246-252" title="Go to source code">getSavePath</a>( )</code>
 
 		<div class="description short">
 			
@@ -1310,7 +1312,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setSavePath">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#250-265" title="Go to source code">setSavePath</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#254-269" title="Go to source code">setSavePath</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1349,7 +1351,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getUseCustomStorage">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#267-273" title="Go to source code">getUseCustomStorage</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#271-277" title="Go to source code">getUseCustomStorage</a>( )</code>
 
 		<div class="description short">
 			
@@ -1383,7 +1385,7 @@ If AutoStart is true, the session will be started.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setUseCustomStorage">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#275-284" title="Go to source code">setUseCustomStorage</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#279-288" title="Go to source code">setUseCustomStorage</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1421,7 +1423,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCookie">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#286-295" title="Go to source code">getCookie</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#290-299" title="Go to source code">getCookie</a>( )</code>
 
 		<div class="description short">
 			
@@ -1455,7 +1457,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCookieMode">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#297-309" title="Go to source code">getCookieMode</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#301-313" title="Go to source code">getCookieMode</a>( )</code>
 
 		<div class="description short">
 			
@@ -1489,7 +1491,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCookieMode">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#311-333" title="Go to source code">setCookieMode</a>( <span><code><a href="class-Prado.Web.THttpSessionCookieMode.html">Prado\Web\THttpSessionCookieMode</a></code> <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#315-337" title="Go to source code">setCookieMode</a>( <span><code><a href="class-Prado.Web.THttpSessionCookieMode.html">Prado\Web\THttpSessionCookieMode</a></code> <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1528,7 +1530,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getAutoStart">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#335-341" title="Go to source code">getAutoStart</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#339-345" title="Go to source code">getAutoStart</a>( )</code>
 
 		<div class="description short">
 			
@@ -1562,7 +1564,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setAutoStart">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#343-354" title="Go to source code">setAutoStart</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#347-358" title="Go to source code">setAutoStart</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1601,7 +1603,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getGCProbability">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#356-362" title="Go to source code">getGCProbability</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#360-366" title="Go to source code">getGCProbability</a>( )</code>
 
 		<div class="description short">
 			
@@ -1635,7 +1637,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setGCProbability">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#364-382" title="Go to source code">setGCProbability</a>( <span>integer <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#368-386" title="Go to source code">setGCProbability</a>( <span>integer <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1675,7 +1677,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getUseTransparentSessionID">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#384-390" title="Go to source code">getUseTransparentSessionID</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#388-394" title="Go to source code">getUseTransparentSessionID</a>( )</code>
 
 		<div class="description short">
 			
@@ -1709,7 +1711,7 @@ class, because they will be used as the callback handlers.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setUseTransparentSessionID">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#392-410" title="Go to source code">setUseTransparentSessionID</a>( <span>boolean <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#396-414" title="Go to source code">setUseTransparentSessionID</a>( <span>boolean <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Ensure that <code><a href="class-Prado.Web.THttpSession.html#_setCookieMode">CookieMode</a></code> is not set to "None" before enabling
@@ -1748,7 +1750,7 @@ THttpSession class for a configuration example.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getTimeout">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#412-418" title="Go to source code">getTimeout</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#416-422" title="Go to source code">getTimeout</a>( )</code>
 
 		<div class="description short">
 			
@@ -1782,7 +1784,7 @@ THttpSession class for a configuration example.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setTimeout">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#420-431" title="Go to source code">setTimeout</a>( <span>integer <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#424-435" title="Go to source code">setTimeout</a>( <span>integer <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1821,7 +1823,7 @@ THttpSession class for a configuration example.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__open">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#433-443" title="Go to source code">_open</a>( <span>string <var>$savePath</var></span>, <span>string <var>$sessionName</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#437-447" title="Go to source code">_open</a>( <span>string <var>$savePath</var></span>, <span>string <var>$sessionName</var></span> )</code>
 
 		<div class="description short">
 			<p>Session open handler.
@@ -1864,7 +1866,7 @@ This method should be overridden if <code><a href="class-Prado.Web.THttpSession.
 
 		<td class="name"><div>
 		<a class="anchor" href="#__close">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#445-453" title="Go to source code">_close</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#449-457" title="Go to source code">_close</a>( )</code>
 
 		<div class="description short">
 			<p>Session close handler.
@@ -1900,7 +1902,7 @@ This method should be overridden if <code><a href="class-Prado.Web.THttpSession.
 
 		<td class="name"><div>
 		<a class="anchor" href="#__read">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#455-464" title="Go to source code">_read</a>( <span>string <var>$id</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#459-468" title="Go to source code">_read</a>( <span>string <var>$id</var></span> )</code>
 
 		<div class="description short">
 			<p>Session read handler.
@@ -1941,7 +1943,7 @@ This method should be overridden if <code><a href="class-Prado.Web.THttpSession.
 
 		<td class="name"><div>
 		<a class="anchor" href="#__write">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#466-476" title="Go to source code">_write</a>( <span>string <var>$id</var></span>, <span>string <var>$data</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#470-480" title="Go to source code">_write</a>( <span>string <var>$id</var></span>, <span>string <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Session write handler.
@@ -1984,7 +1986,7 @@ This method should be overridden if <code><a href="class-Prado.Web.THttpSession.
 
 		<td class="name"><div>
 		<a class="anchor" href="#__destroy">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#478-487" title="Go to source code">_destroy</a>( <span>string <var>$id</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#482-491" title="Go to source code">_destroy</a>( <span>string <var>$id</var></span> )</code>
 
 		<div class="description short">
 			<p>Session destroy handler.
@@ -2025,7 +2027,7 @@ This method should be overridden if <code><a href="class-Prado.Web.THttpSession.
 
 		<td class="name"><div>
 		<a class="anchor" href="#__gc">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#489-498" title="Go to source code">_gc</a>( <span>integer <var>$maxLifetime</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#493-502" title="Go to source code">_gc</a>( <span>integer <var>$maxLifetime</var></span> )</code>
 
 		<div class="description short">
 			<p>Session GC (garbage collection) handler.
@@ -2066,7 +2068,7 @@ This method should be overridden if <code><a href="class-Prado.Web.THttpSession.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getIterator">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#502-510" title="Go to source code">getIterator</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#506-514" title="Go to source code">getIterator</a>( )</code>
 
 		<div class="description short">
 			<p>Returns an iterator for traversing the session variables.
@@ -2104,7 +2106,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getCount">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#512-518" title="Go to source code">getCount</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#516-522" title="Go to source code">getCount</a>( )</code>
 
 		<div class="description short">
 			
@@ -2138,7 +2140,7 @@ This method is required by the interface \IteratorAggregate.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_count">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#520-528" title="Go to source code">count</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#524-532" title="Go to source code">count</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the number of items in the session.
@@ -2176,7 +2178,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getKeys">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#530-536" title="Go to source code">getKeys</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#534-540" title="Go to source code">getKeys</a>( )</code>
 
 		<div class="description short">
 			
@@ -2210,7 +2212,7 @@ This method is required by \Countable interface.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_itemAt">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#538-547" title="Go to source code">itemAt</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#542-551" title="Go to source code">itemAt</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			<p>Returns the session variable value with the session variable name.
@@ -2251,7 +2253,7 @@ This method is exactly the same as <code><a href="class-Prado.Web.THttpSession.h
 
 		<td class="name"><div>
 		<a class="anchor" href="#_add">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#549-558" title="Go to source code">add</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#553-562" title="Go to source code">add</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Adds a session variable.
@@ -2290,7 +2292,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_remove">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#560-574" title="Go to source code">remove</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#564-578" title="Go to source code">remove</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			<p>Removes a session variable.</p>
@@ -2329,7 +2331,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_clear">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#576-584" title="Go to source code">clear</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#580-588" title="Go to source code">clear</a>( )</code>
 
 		<div class="description short">
 			<p>Removes all session variables</p>
@@ -2359,7 +2361,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_contains">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#586-593" title="Go to source code">contains</a>( <span>mixed <var>$key</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#590-597" title="Go to source code">contains</a>( <span>mixed <var>$key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2398,7 +2400,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_toArray">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#595-601" title="Go to source code">toArray</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#599-605" title="Go to source code">toArray</a>( )</code>
 
 		<div class="description short">
 			
@@ -2432,7 +2434,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetExists">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#603-611" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#607-615" title="Go to source code">offsetExists</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			<p>This method is required by the interface \ArrayAccess.</p>
@@ -2473,7 +2475,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetGet">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#613-621" title="Go to source code">offsetGet</a>( <span>integer <var>$offset</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#617-625" title="Go to source code">offsetGet</a>( <span>integer <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			<p>This method is required by the interface \ArrayAccess.</p>
@@ -2514,7 +2516,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetSet">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#623-631" title="Go to source code">offsetSet</a>( <span>integer <var>$offset</var></span>, <span>mixed <var>$item</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#627-635" title="Go to source code">offsetSet</a>( <span>integer <var>$offset</var></span>, <span>mixed <var>$item</var></span> )</code>
 
 		<div class="description short">
 			<p>This method is required by the interface \ArrayAccess.</p>
@@ -2553,7 +2555,7 @@ Note, if the specified name already exists, the old value will be removed first.
 
 		<td class="name"><div>
 		<a class="anchor" href="#_offsetUnset">#</a>
-		<code><a href="source-class-Prado.Web.THttpSession.html#633-640" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpSession.html#637-644" title="Go to source code">offsetUnset</a>( <span>mixed <var>$offset</var></span> )</code>
 
 		<div class="description short">
 			<p>This method is required by the interface \ArrayAccess.</p>
@@ -2686,12 +2688,12 @@ Note, if the specified name already exists, the old value will be removed first.
 </div>
 
 	<div id="footer">
-		Prado 4.1.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.2 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
-<script src="resources/combined.js?56c7d4f6ab375f380b6dd78d2ae23650519abbb5"></script>
-<script src="elementlist.js?634870e4111b62a3688556c459ff9f4791989745"></script>
+<script src="resources/combined.js?18a9f18dd84d2c8b5202bb6c783a8174b25654dc"></script>
+<script src="elementlist.js?d63085344195f084a6a07c368a8ab6de926ef160"></script>
 </body>
 </html>

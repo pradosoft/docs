@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\Web\THttpResponse | Prado 4.1.1 API Manual</title>
+	<title>Class Prado\Web\THttpResponse | Prado 4.1.2 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -255,6 +255,7 @@
 				<li><a href="class-Prado.Web.TCacheHttpSession.html">Prado\Web\TCacheHttpSession</a></li>
 				<li><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></li>
 				<li><a href="class-Prado.Web.THttpCookieCollection.html">Prado\Web\THttpCookieCollection</a></li>
+				<li><a href="class-Prado.Web.THttpCookieSameSite.html">Prado\Web\THttpCookieSameSite</a></li>
 				<li><a href="class-Prado.Web.THttpRequest.html">Prado\Web\THttpRequest</a></li>
 				<li><a href="class-Prado.Web.THttpRequestUrlFormat.html">Prado\Web\THttpRequestUrlFormat</a></li>
 				<li class="active"><a href="class-Prado.Web.THttpResponse.html">Prado\Web\THttpResponse</a></li>
@@ -290,6 +291,7 @@
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveEditCommandColumn.html">Prado\Web\UI\ActiveControls\TActiveEditCommandColumn</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUpload.html">Prado\Web\UI\ActiveControls\TActiveFileUpload</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadCallbackParams.html">Prado\Web\UI\ActiveControls\TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadItem.html">Prado\Web\UI\ActiveControls\TActiveFileUploadItem</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHiddenField.html">Prado\Web\UI\ActiveControls\TActiveHiddenField</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea4.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea4</a></li>
@@ -821,7 +823,7 @@ will force the browser to ask for a username and a password.</p>
 				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
 				<b>Since:</b>
 				3.0<br>
-			<b>Located at</b> <a href="source-class-Prado.Web.THttpResponse.html#18-752" title="Go to source code">Web/THttpResponse.php</a>
+			<b>Located at</b> <a href="source-class-Prado.Web.THttpResponse.html#18-763" title="Go to source code">Web/THttpResponse.php</a>
 		<br>
 	</div>
 
@@ -2140,7 +2142,7 @@ This method is simple wrapper of PHP function error_log.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addCookie">#</a>
-		<code><a href="source-class-Prado.Web.THttpResponse.html#659-689" title="Go to source code">addCookie</a>( <span><code><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></code> <var>$cookie</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpResponse.html#659-690" title="Go to source code">addCookie</a>( <span><code><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></code> <var>$cookie</var></span> )</code>
 
 		<div class="description short">
 			<p>Sends a cookie.
@@ -2177,7 +2179,7 @@ Do not call this method directly. Operate with the result of <code><a href="clas
 
 		<td class="name"><div>
 		<a class="anchor" href="#_removeCookie">#</a>
-		<code><a href="source-class-Prado.Web.THttpResponse.html#691-707" title="Go to source code">removeCookie</a>( <span><code><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></code> <var>$cookie</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpResponse.html#692-718" title="Go to source code">removeCookie</a>( <span><code><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></code> <var>$cookie</var></span> )</code>
 
 		<div class="description short">
 			<p>Deletes a cookie.
@@ -2214,7 +2216,7 @@ Do not call this method directly. Operate with the result of <code><a href="clas
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getHtmlWriterType">#</a>
-		<code><a href="source-class-Prado.Web.THttpResponse.html#709-715" title="Go to source code">getHtmlWriterType</a>( )</code>
+		<code><a href="source-class-Prado.Web.THttpResponse.html#720-726" title="Go to source code">getHtmlWriterType</a>( )</code>
 
 		<div class="description short">
 			
@@ -2248,7 +2250,7 @@ Do not call this method directly. Operate with the result of <code><a href="clas
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setHtmlWriterType">#</a>
-		<code><a href="source-class-Prado.Web.THttpResponse.html#717-723" title="Go to source code">setHtmlWriterType</a>( <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpResponse.html#728-734" title="Go to source code">setHtmlWriterType</a>( <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2283,7 +2285,7 @@ Do not call this method directly. Operate with the result of <code><a href="clas
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createHtmlWriter">#</a>
-		<code><a href="source-class-Prado.Web.THttpResponse.html#725-740" title="Go to source code">createHtmlWriter</a>( <span>string <var>$type</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpResponse.html#736-751" title="Go to source code">createHtmlWriter</a>( <span>string <var>$type</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Creates a new instance of HTML writer.
@@ -2320,7 +2322,7 @@ If the type of the HTML writer is not supplied, <code><a href="class-Prado.Web.T
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createNewHtmlWriter">#</a>
-		<code><a href="source-class-Prado.Web.THttpResponse.html#742-751" title="Go to source code">createNewHtmlWriter</a>( <span>string <var>$type</var></span>, <span>ITextWriter <var>$writer</var></span> )</code>
+		<code><a href="source-class-Prado.Web.THttpResponse.html#753-762" title="Go to source code">createNewHtmlWriter</a>( <span>string <var>$type</var></span>, <span>ITextWriter <var>$writer</var></span> )</code>
 
 		<div class="description short">
 			<p>Create a new html writer instance.
@@ -2516,12 +2518,12 @@ This method is used internally. Please use <code><a href="class-Prado.Web.THttpR
 </div>
 
 	<div id="footer">
-		Prado 4.1.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.2 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
-<script src="resources/combined.js?56c7d4f6ab375f380b6dd78d2ae23650519abbb5"></script>
-<script src="elementlist.js?634870e4111b62a3688556c459ff9f4791989745"></script>
+<script src="resources/combined.js?18a9f18dd84d2c8b5202bb6c783a8174b25654dc"></script>
+<script src="elementlist.js?d63085344195f084a6a07c368a8ab6de926ef160"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/manual.css">
 
-	<title>Class Prado\PradoBase | Prado 4.1.1 API Manual</title>
+	<title>Class Prado\PradoBase | Prado 4.1.2 API Manual</title>
 
 	<link rel="stylesheet" href="resources/style.css?156e1f7b7b33338aff331811a5808582bb99d288">
 
@@ -255,6 +255,7 @@
 				<li><a href="class-Prado.Web.TCacheHttpSession.html">Prado\Web\TCacheHttpSession</a></li>
 				<li><a href="class-Prado.Web.THttpCookie.html">Prado\Web\THttpCookie</a></li>
 				<li><a href="class-Prado.Web.THttpCookieCollection.html">Prado\Web\THttpCookieCollection</a></li>
+				<li><a href="class-Prado.Web.THttpCookieSameSite.html">Prado\Web\THttpCookieSameSite</a></li>
 				<li><a href="class-Prado.Web.THttpRequest.html">Prado\Web\THttpRequest</a></li>
 				<li><a href="class-Prado.Web.THttpRequestUrlFormat.html">Prado\Web\THttpRequestUrlFormat</a></li>
 				<li><a href="class-Prado.Web.THttpResponse.html">Prado\Web\THttpResponse</a></li>
@@ -290,6 +291,7 @@
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveEditCommandColumn.html">Prado\Web\UI\ActiveControls\TActiveEditCommandColumn</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUpload.html">Prado\Web\UI\ActiveControls\TActiveFileUpload</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadCallbackParams.html">Prado\Web\UI\ActiveControls\TActiveFileUploadCallbackParams</a></li>
+				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveFileUploadItem.html">Prado\Web\UI\ActiveControls\TActiveFileUploadItem</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHiddenField.html">Prado\Web\UI\ActiveControls\TActiveHiddenField</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea</a></li>
 				<li><a href="class-Prado.Web.UI.ActiveControls.TActiveHtmlArea4.html">Prado\Web\UI\ActiveControls\TActiveHtmlArea4</a></li>
@@ -759,7 +761,7 @@ rewritten for customization.</p>
 				Qiang Xue <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;:&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m">&#x71;&#105;&#x61;&#110;&#x67;&#46;&#120;&#x75;&#101;&#x40;&#103;m&#x61;&#105;&#x6c;&#46;&#x63;&#111;m</a><br>
 				<b>Since:</b>
 				3.0<br>
-			<b>Located at</b> <a href="source-class-Prado.PradoBase.html#40-673" title="Go to source code">PradoBase.php</a>
+			<b>Located at</b> <a href="source-class-Prado.PradoBase.html#40-675" title="Go to source code">PradoBase.php</a>
 		<br>
 	</div>
 
@@ -911,12 +913,12 @@ defined in this class.</p>
 
 		<div class="description short">
 			<p>Class autoload loader.
-This method is provided to be invoked within an __autoload() magic method.</p>
+This method is provided to be registered within an spl_autoload_register() method.</p>
 		</div>
 
 		<div class="description detailed hidden">
 			<p>Class autoload loader.
-This method is provided to be invoked within an __autoload() magic method.</p>
+This method is provided to be registered within an spl_autoload_register() method.</p>
 
 
 				<h4>Parameters</h4>
@@ -1324,7 +1326,7 @@ will be supplied as component constructor parameters.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_using">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#310-365" title="Go to source code">using</a>( <span>string <var>$namespace</var></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#310-367" title="Go to source code">using</a>( <span>string <var>$namespace</var></span> )</code>
 
 		<div class="description short">
 			<p>Uses a namespace.
@@ -1369,7 +1371,7 @@ to the include path. If the namespace corresponds to a file, it will be included
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPathOfNamespace">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#367-401" title="Go to source code">getPathOfNamespace</a>( <span>string <var>$namespace</var></span>, <span>string <var>$ext</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#369-403" title="Go to source code">getPathOfNamespace</a>( <span>string <var>$namespace</var></span>, <span>string <var>$ext</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			<p>Translates a namespace into a file path.
@@ -1422,7 +1424,7 @@ Note, this method does not ensure the existence of the resulting file path.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPathOfAlias">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#403-410" title="Go to source code">getPathOfAlias</a>( <span>string <var>$alias</var></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#405-412" title="Go to source code">getPathOfAlias</a>( <span>string <var>$alias</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1461,7 +1463,7 @@ Note, this method does not ensure the existence of the resulting file path.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPathAliases">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#412-415" title="Go to source code">getPathAliases</a>( )</code>
+		<code><a href="source-class-Prado.PradoBase.html#414-417" title="Go to source code">getPathAliases</a>( )</code>
 
 		<div class="description short">
 			
@@ -1491,7 +1493,7 @@ Note, this method does not ensure the existence of the resulting file path.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPathOfAlias">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#417-436" title="Go to source code">setPathOfAlias</a>( <span>string <var>$alias</var></span>, <span>string <var>$path</var></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#419-438" title="Go to source code">setPathOfAlias</a>( <span>string <var>$alias</var></span>, <span>string <var>$path</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1533,7 +1535,7 @@ Note, this method does not ensure the existence of the resulting file path.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_fatalError">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#438-503" title="Go to source code">fatalError</a>( <span>string <var>$msg</var></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#440-505" title="Go to source code">fatalError</a>( <span>string <var>$msg</var></span> )</code>
 
 		<div class="description short">
 			<p>Fatal error handler.
@@ -1572,7 +1574,7 @@ The application will exit after calling this method.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getUserLanguages">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#505-532" title="Go to source code">getUserLanguages</a>( )</code>
+		<code><a href="source-class-Prado.PradoBase.html#507-534" title="Go to source code">getUserLanguages</a>( )</code>
 
 		<div class="description short">
 			<p>Returns a list of user preferred languages.
@@ -1612,7 +1614,7 @@ according to user preferences. The first language is the most preferred.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getPreferredLanguage">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#534-551" title="Go to source code">getPreferredLanguage</a>( )</code>
+		<code><a href="source-class-Prado.PradoBase.html#536-553" title="Go to source code">getPreferredLanguage</a>( )</code>
 
 		<div class="description short">
 			<p>Returns the most preferred language by the client user.</p>
@@ -1646,7 +1648,7 @@ according to user preferences. The first language is the most preferred.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_trace">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#553-580" title="Go to source code">trace</a>( <span>string <var>$msg</var></span>, <span>string <var>$category</var> = <span class="php-quote">'Uncategorized'</span></span>, <span>(string|TControl) <var>$ctl</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#555-582" title="Go to source code">trace</a>( <span>string <var>$msg</var></span>, <span>string <var>$category</var> = <span class="php-quote">'Uncategorized'</span></span>, <span>(string|TControl) <var>$ctl</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Writes a log message.
@@ -1699,7 +1701,7 @@ Otherwise, the message is logged at INFO level.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_log">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#582-600" title="Go to source code">log</a>( <span>string <var>$msg</var></span>, <span>integer <var>$level</var> = Prado\TLogger::INFO</span>, <span>string <var>$category</var> = <span class="php-quote">'Uncategorized'</span></span>, <span>(string|TControl) <var>$ctl</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#584-602" title="Go to source code">log</a>( <span>string <var>$msg</var></span>, <span>integer <var>$level</var> = Prado\TLogger::INFO</span>, <span>string <var>$category</var> = <span class="php-quote">'Uncategorized'</span></span>, <span>(string|TControl) <var>$ctl</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Logs a message.
@@ -1748,7 +1750,7 @@ TLogger::ERROR, TLogger::ALERT, TLogger::FATAL.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getLogger">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#602-611" title="Go to source code">getLogger</a>( )</code>
+		<code><a href="source-class-Prado.PradoBase.html#604-613" title="Go to source code">getLogger</a>( )</code>
 
 		<div class="description short">
 			
@@ -1782,7 +1784,7 @@ TLogger::ERROR, TLogger::ALERT, TLogger::FATAL.</p></dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_varDump">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#613-625" title="Go to source code">varDump</a>( <span>mixed <var>$var</var></span>, <span>integer <var>$depth</var> = <span class="php-num">10</span></span>, <span>boolean <var>$highlight</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#615-627" title="Go to source code">varDump</a>( <span>mixed <var>$var</var></span>, <span>integer <var>$depth</var> = <span class="php-num">10</span></span>, <span>boolean <var>$highlight</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>Converts a variable into a string representation.
@@ -1829,7 +1831,7 @@ but is more robust when handling complex objects such as PRADO controls.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_localize">#</a>
-		<code><a href="source-class-Prado.PradoBase.html#627-672" title="Go to source code">localize</a>( <span>string <var>$text</var></span>, <span>array <var>$parameters</var> = []</span>, <span>string <var>$catalogue</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$charset</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Prado.PradoBase.html#629-674" title="Go to source code">localize</a>( <span>string <var>$text</var></span>, <span>array <var>$parameters</var> = []</span>, <span>string <var>$catalogue</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$charset</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>Localize a text to the locale/culture specified in the globalization handler.</p>
@@ -1970,12 +1972,12 @@ but is more robust when handling complex objects such as PRADO controls.</p>
 </div>
 
 	<div id="footer">
-		Prado 4.1.1 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Prado 4.1.2 API Manual API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
 
-<script src="resources/combined.js?56c7d4f6ab375f380b6dd78d2ae23650519abbb5"></script>
-<script src="elementlist.js?634870e4111b62a3688556c459ff9f4791989745"></script>
+<script src="resources/combined.js?18a9f18dd84d2c8b5202bb6c783a8174b25654dc"></script>
+<script src="elementlist.js?d63085344195f084a6a07c368a8ab6de926ef160"></script>
 </body>
 </html>
