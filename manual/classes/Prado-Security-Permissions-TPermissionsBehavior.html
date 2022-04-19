@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TPermissionsBehavior &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,224 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-security.html">Security</a>\<a href="namespaces/prado-security-permissions.html">Permissions</a>\<a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html">TPermissionsBehavior</a>
+    </h1>
+
+    <div class="description">
+        TPermissionsBehavior class.
+        <p>TPermissionsBehavior class is a class behavior attached to <a href="IPermissions"></a>.
+This class calls getPermissions to get an array of <a href="TPermissionEvent"></a>
+and/or to have the implementation register their own permissions.
+Any returned TPermissionEvents will have their permission registered for rules.</p>
+<p>This class also handles all dynamic events and when a listed Event from a
+TPermissionEvent is raised, this code checks if the current application
+user permission is checked.</p>
+<p>Example getPermissions method:
+<code class="prettyprint">
+public function getPermissions($manager) {
+$manager-&gt;registerPermission('module_perm_edit', 'Short Description');
+return [ new TPermissionEvent('module_perm_name', 'Short Description.', ['dyPermissionAction', 'dyOtherAction']) ];
+}
+</code></p>
+<p>In this example, the methods dyPermissionAction and dyOtherAction would have an
+authorization check on the given permission.</p>
+<p>The way to implement a dynamic event is like this, from the example above:
+the first return value parameter is always false.
+<code class="prettyprint">
+public function myFunctionToAuth($param1, $param2) {
+if ($this-&gt;dyPermissionAction(false, $param1, $param2) === true)
+return false;
+....
+return true;
+}
+</code>
+Together, TPermissionsBehavior will check the user for the 'module_perm_name'
+permission.</p>
+<p>This can be alternatively implemented as a call to the user::can, eg
+<code class="prettyprint">
+if(!Prado::getApplication()-&gt;getUser()-&gt;can('module_perm_name'))
+return false;
+</code></p>
+<p>The application user is available on and after the onAuthenticationComplete
+in the application stack.</p>
+<p>The default is to allow without any rules in place.  To automatically
+block functionality, there needs to be a (final) Permission Rule to deny all.
+The TPermissionsManager, by default, adds a final rule to deny all on all
+permissions via <a href="TPermissionsManager::setAutoDenyAll"></a>.</p>
+<p>The <a href="TUserPermissionsBehavior"></a> attaches to <a href="TUser"></a> to
+provide <a href="TUserPermissionsBehavior::can"></a>, whether or note a user has authorization for a
+permission.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html">\Prado\Security\Permissions\TPermissionsBehavior</a>
+                    implements
+                            <a href="classes/Prado-Util-IDynamicMethods.html">\Prado\Util\IDynamicMethods</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Util-TBehavior.html">\Prado\Util\TBehavior</a>
+                    implements
+                            <a href="classes/Prado-Util-IDynamicMethods.html">\Prado\Util\IDynamicMethods</a>                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Security\Permissions<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.2.0<br/>
+                    <b>Located at:</b> <a href="framework/Security/Permissions/TPermissionsBehavior.php"><abbr title="framework/Security/Permissions/TPermissionsBehavior.php">TPermissionsBehavior.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Security-Permissions-TPermissionsManager.html"><abbr title="\Prado\Security\Permissions\TPermissionsManager">TPermissionsManager</abbr></a>&nbsp;</span><var>$manager</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="__dycall" id="__dycall" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___dycall"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method___dycall">__dycall</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$method</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$args</var></span><span>)</span><span> : </span><span>bool|mixed</span>                </code>
+
+                <div class="description short">
+                    If in a proper dynamic event, checks if the application user
+can perform a permission, if it can&#039;t, flag as handled.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="attach" id="attach" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_attach"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_attach">attach</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-TComponent.html"><abbr title="\Prado\TComponent">TComponent</abbr></a>&nbsp;</span><var>$owner</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Attaches the behavior object to the component.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getManager" id="getManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getManager"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_getManager">getManager</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Security-Permissions-TPermissionsManager.html"><abbr title="\Prado\Security\Permissions\TPermissionsManager">TPermissionsManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Gets the TPermissionsManager for the behavior
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPermissionEvents" id="getPermissionEvents" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPermissionEvents"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_getPermissionEvents">getPermissionEvents</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Security-Permissions-TPermissionEvent.html"><abbr title="\Prado\Security\Permissions\TPermissionEvent">TPermissionEvent</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setManager" id="setManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setManager"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_setManager">setManager</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-Permissions-TPermissionsManager.html"><abbr title="\Prado\Security\Permissions\TPermissionsManager">TPermissionsManager</abbr></a>|<abbr title="\WeakReference">WeakReference</abbr>&nbsp;</span><var>$manager</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the TPermissionsManager for the behavior
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method___dycall">__dycall</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_attach">attach</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Util-TBehavior.html#method_detach">detach</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Util-TBehavior.html#method_events">events</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Util-TBehavior.html#method_getEnabled">getEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_getManager">getManager</a>,                             <a href="classes/Prado-Util-TBehavior.html#method_getOwner">getOwner</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_getPermissionEvents">getPermissionEvents</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Util-TBehavior.html#method_setEnabled">setEnabled</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_setManager">setManager</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

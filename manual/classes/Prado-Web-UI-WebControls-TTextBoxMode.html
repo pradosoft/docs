@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TTextBoxMode &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,468 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html">TTextBoxMode</a>
+    </h1>
+
+    <div class="description">
+        TTextBoxMode class.
+        <p>TTextBoxMode defines the enumerable type for the possible mode
+that a <a href="TTextBox"></a> control could be at.</p>
+<p>The following enumerable values are defined:</p>
+<ul>
+<li>SingleLine: the textbox will be a regular single line input</li>
+<li>MultiLine: the textbox will be a textarea allowing multiple line input</li>
+<li>Password: the textbox will hide user input like a password input box</li>
+</ul>
+<p>Html5 declares new types that will degrade as plain textboxes on unsupported browsers:</p>
+<ul>
+<li>Color: a color picker can show up in the input field.</li>
+<li>Date: a date picker can show up in the input field.</li>
+<li>Datetime: a date / time / timezone picker can show up in the input field.</li>
+<li>DatetimeLocal: a date / time picker can show up in the input field.</li>
+<li>Email: the e-mail address can be automatically validated when submitted.</li>
+<li>Month: a month / year picker can show up in the input field.</li>
+<li>Number: a spinner can show up in the input field.</li>
+<li>Range: a slider can show up in the input field.</li>
+<li>Search: the textbox will be optimized for searches</li>
+<li>Tel: the text will be formatted as a telephone number.</li>
+<li>Time: a time picker can show up in the input field.</li>
+<li>Url: the url can be automatically validated when submitted.</li>
+<li>Week: a week / year picker can show up in the input field.</li>
+</ul>
+<p>In order to use the new types introduced with html5, you need to declare a proper
+html doctype and use a browser supporting the specific inut type.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html">\Prado\Web\UI\WebControls\TTextBoxMode</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TEnumerable.html">\Prado\TEnumerable</a>
+                    implements
+                        </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0.4<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/TTextBoxMode.php"><abbr title="framework/Web/UI/WebControls/TTextBoxMode.php">TTextBoxMode.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TEnumerable.html#method___construct">__construct</a>,                             <a href="classes/Prado-TEnumerable.html#method_current">current</a>,                             <a href="classes/Prado-TEnumerable.html#method_key">key</a>,                             <a href="classes/Prado-TEnumerable.html#method_next">next</a>,                             <a href="classes/Prado-TEnumerable.html#method_rewind">rewind</a>,                             <a href="classes/Prado-TEnumerable.html#method_valid">valid</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="Color" id="Color" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Color"><b>Color</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Color&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Date" id="Date" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Date"><b>Date</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Date&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Datetime" id="Datetime" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Datetime"><b>Datetime</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Datetime&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DatetimeLocal" id="DatetimeLocal" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DatetimeLocal"><b>DatetimeLocal</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;DatetimeLocal&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Email" id="Email" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Email"><b>Email</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Email&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Month" id="Month" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Month"><b>Month</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Month&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="MultiLine" id="MultiLine" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_MultiLine"><b>MultiLine</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;MultiLine&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Number" id="Number" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Number"><b>Number</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Number&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Password" id="Password" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Password"><b>Password</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Password&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Range" id="Range" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Range"><b>Range</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Range&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Search" id="Search" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Search"><b>Search</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Search&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="SingleLine" id="SingleLine" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_SingleLine"><b>SingleLine</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;SingleLine&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Tel" id="Tel" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Tel"><b>Tel</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Tel&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Time" id="Time" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Time"><b>Time</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Time&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Url" id="Url" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Url"><b>Url</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Url&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Week" id="Week" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Week"><b>Week</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Week&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Color"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Color</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Date"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Date</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Datetime"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Datetime</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_DatetimeLocal"><b>\Prado\Web\UI\WebControls\TTextBoxMode::DatetimeLocal</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Email"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Email</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Month"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Month</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_MultiLine"><b>\Prado\Web\UI\WebControls\TTextBoxMode::MultiLine</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Number"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Number</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Password"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Password</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Range"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Range</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Search"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Search</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_SingleLine"><b>\Prado\Web\UI\WebControls\TTextBoxMode::SingleLine</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Tel"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Tel</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Time"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Time</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Url"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Url</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBoxMode.html#constant_Week"><b>\Prado\Web\UI\WebControls\TTextBoxMode::Week</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

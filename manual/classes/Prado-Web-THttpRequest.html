@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    THttpRequest &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1567 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="classes/Prado-Web-THttpRequest.html">THttpRequest</a>
+    </h1>
+
+    <div class="description">
+        THttpRequest class
+        <p>THttpRequest provides storage and access scheme for user request sent via HTTP.
+It also encapsulates a uniform way to parse and construct URLs.</p>
+<p>User post data can be retrieved from THttpRequest by using it like an associative array.
+For example, to test if a user supplies a variable named 'param1', you can use,
+<code class="prettyprint">
+if(isset($request['param1'])) ...
+// equivalent to:
+// if($request-&gt;contains('param1')) ...
+</code>
+To get the value of 'param1', use,
+<code class="prettyprint">
+$value=$request['param1'];
+// equivalent to:
+//   $value=$request-&gt;itemAt('param1');
+</code>
+To traverse the user post data, use
+<code class="prettyprint">
+foreach($request as $name=&gt;$value) ...
+</code>
+Note, POST and GET variables are merged together in THttpRequest.
+If a variable name appears in both POST and GET data, then POST data
+takes precedence.</p>
+<p>To construct a URL that can be recognized by Prado, use <a href="constructUrl()"></a>.
+The format of the recognizable URLs is determined according to
+<a href="setUrlManager">UrlManager</a>. By default, the following two formats
+are recognized:
+<code class="prettyprint">
+/index.php?ServiceID=ServiceParameter&amp;Name1=Value1&amp;Name2=Value2
+/index.php/ServiceID,ServiceParameter/Name1,Value1/Name2,Value2
+</code>
+The first format is called 'Get' while the second 'Path', which is specified
+via <a href="setUrlFormat">UrlFormat</a>. For advanced users who want to use
+their own URL formats, they can write customized URL management modules
+and install the managers as application modules and set <a href="setUrlManager">UrlManager</a>.</p>
+<p>The ServiceID in the above URLs is as defined in the application configuration
+(e.g. the default page service's service ID is 'page').
+As a consequence, your GET variable names should not conflict with the service
+IDs that your application supports.</p>
+<p>THttpRequest also provides the cookies sent by the user, user information such
+as his browser capabilities, accepted languages, etc.</p>
+<p>By default, THttpRequest is registered with <a href="TApplication"></a> as the
+request module. It can be accessed via <a href="TApplication::getRequest()"></a>.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-THttpRequest.html">\Prado\Web\THttpRequest</a>
+                    implements
+                            <a href="\IteratorAggregate">\IteratorAggregate</a>,                             <a href="\ArrayAccess">\ArrayAccess</a>,                             <a href="\Countable">\Countable</a>,                             <a href="classes/Prado-IModule.html">\Prado\IModule</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/THttpRequest.php"><abbr title="framework/Web/THttpRequest.php">THttpRequest.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="add" id="add" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_add"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_add">add</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds an item into the request.
+                    <p>Note, if the specified key already exists, the old value will be overwritten.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clear" id="clear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clear"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_clear">clear</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes all items in the request.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="constructUrl" id="constructUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_constructUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_constructUrl">constructUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$serviceID</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$serviceParam</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;&nbsp;</span><var>$getItems</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$encodeAmpersand</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$encodeGetItems</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Constructs a URL that can be recognized by PRADO.
+                    <p>The actual construction work is done by the URL manager module.
+This method may append session information to the generated URL if needed.
+You may provide your own URL manager module by setting <a href="setUrlManager">UrlManager</a>
+to provide your own URL scheme.</p>
+<p>Note, the constructed URL does not contain the protocol and hostname part.
+You may obtain an absolute URL by prepending the constructed URL with <a href="getBaseUrl">BaseUrl</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="contains" id="contains" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_contains"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_contains">contains</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="count" id="count" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_count"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_count">count</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Returns the number of items in the request.
+                    <p>This method is required by \Countable interface.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAbsoluteApplicationUrl" id="getAbsoluteApplicationUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAbsoluteApplicationUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getAbsoluteApplicationUrl">getAbsoluteApplicationUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|bool&nbsp;</span><var>$forceSecureConnection</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAcceptTypes" id="getAcceptTypes" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAcceptTypes"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getAcceptTypes">getAcceptTypes</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getApplicationFilePath" id="getApplicationFilePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getApplicationFilePath"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getApplicationFilePath">getApplicationFilePath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getApplicationUrl" id="getApplicationUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getApplicationUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getApplicationUrl">getApplicationUrl</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getBaseUrl" id="getBaseUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getBaseUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getBaseUrl">getBaseUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|bool&nbsp;</span><var>$forceSecureConnection</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getBrowser" id="getBrowser" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getBrowser"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getBrowser">getBrowser</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCgiFix" id="getCgiFix" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCgiFix"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getCgiFix">getCgiFix</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getContentType" id="getContentType" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getContentType"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getContentType">getContentType</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$mimetypeOnly</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCookies" id="getCookies" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCookies"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getCookies">getCookies</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-THttpCookieCollection.html"><abbr title="\Prado\Web\THttpCookieCollection">THttpCookieCollection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCount" id="getCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCount"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getCount">getCount</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEnableCache" id="getEnableCache" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEnableCache"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getEnableCache">getEnableCache</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEnableCookieValidation" id="getEnableCookieValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEnableCookieValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getEnableCookieValidation">getEnableCookieValidation</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEnvironmentVariables" id="getEnvironmentVariables" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEnvironmentVariables"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getEnvironmentVariables">getEnvironmentVariables</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeaders" id="getHeaders" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeaders"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getHeaders">getHeaders</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$case</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHttpProtocolVersion" id="getHttpProtocolVersion" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHttpProtocolVersion"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getHttpProtocolVersion">getHttpProtocolVersion</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getID" id="getID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getID">getID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIsSecureConnection" id="getIsSecureConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIsSecureConnection"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getIsSecureConnection">getIsSecureConnection</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIterator" id="getIterator" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIterator"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getIterator">getIterator</a><span>(</span><span>)</span><span> : </span><span><abbr title="\Iterator">Iterator</abbr></span>                </code>
+
+                <div class="description short">
+                    Returns an iterator for traversing the items in the list.
+                    <p>This method is required by the interface \IteratorAggregate.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getKeys" id="getKeys" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getKeys"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getKeys">getKeys</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPathInfo" id="getPathInfo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPathInfo"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getPathInfo">getPathInfo</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getQueryString" id="getQueryString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getQueryString"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getQueryString">getQueryString</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRequestResolved" id="getRequestResolved" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRequestResolved"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getRequestResolved">getRequestResolved</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRequestType" id="getRequestType" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRequestType"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getRequestType">getRequestType</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRequestUri" id="getRequestUri" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRequestUri"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getRequestUri">getRequestUri</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getServerName" id="getServerName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getServerName"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getServerName">getServerName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getServerPort" id="getServerPort" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getServerPort"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getServerPort">getServerPort</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getServerSoftware" id="getServerSoftware" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getServerSoftware"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getServerSoftware">getServerSoftware</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getServerVariables" id="getServerVariables" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getServerVariables"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getServerVariables">getServerVariables</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getServiceID" id="getServiceID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getServiceID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getServiceID">getServiceID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getServiceParameter" id="getServiceParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getServiceParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getServiceParameter">getServiceParameter</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUploadedFiles" id="getUploadedFiles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUploadedFiles"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUploadedFiles">getUploadedFiles</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUrl" id="getUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUrl">getUrl</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-TUri.html"><abbr title="\Prado\Web\TUri">TUri</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUrlFormat" id="getUrlFormat" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUrlFormat"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUrlFormat">getUrlFormat</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-THttpRequestUrlFormat.html"><abbr title="\Prado\Web\THttpRequestUrlFormat">THttpRequestUrlFormat</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUrlManager" id="getUrlManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUrlManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUrlManager">getUrlManager</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUrlManagerModule" id="getUrlManagerModule" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUrlManagerModule"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUrlManagerModule">getUrlManagerModule</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-TUrlManager.html"><abbr title="\Prado\Web\TUrlManager">TUrlManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUrlParamSeparator" id="getUrlParamSeparator" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUrlParamSeparator"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUrlParamSeparator">getUrlParamSeparator</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUrlReferrer" id="getUrlReferrer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUrlReferrer"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUrlReferrer">getUrlReferrer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUserAgent" id="getUserAgent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUserAgent"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUserAgent">getUserAgent</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUserHost" id="getUserHost" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUserHost"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUserHost">getUserHost</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUserHostAddress" id="getUserHostAddress" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUserHostAddress"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUserHostAddress">getUserHostAddress</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUserLanguages" id="getUserLanguages" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUserLanguages"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getUserLanguages">getUserLanguages</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns a list of user preferred languages.
+                    <p>The languages are returned as an array. Each array element
+represents a single language preference. The languages are ordered
+according to user preferences. The first language is the most preferred.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the module.
+                    <p>This method is required by IModule and is invoked by application.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="itemAt" id="itemAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_itemAt"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_itemAt">itemAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the item with the specified key.
+                    <p>This method is exactly the same as <a href="offsetGet"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetExists" id="offsetExists" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetExists"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_offsetExists">offsetExists</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Returns whether there is an element at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetGet" id="offsetGet" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetGet"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_offsetGet">offsetGet</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the element at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetSet" id="offsetSet" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetSet"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_offsetSet">offsetSet</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Sets the element at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetUnset" id="offsetUnset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetUnset"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_offsetUnset">offsetUnset</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Unsets the element at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="remove" id="remove" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_remove"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_remove">remove</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes an item from the request by its key.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="resolveRequest" id="resolveRequest" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_resolveRequest"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_resolveRequest">resolveRequest</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$serviceIDs</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Resolves the requested service.
+                    <p>This method implements a URL-based service resolution.
+A URL in the format of /index.php?sp=serviceID.serviceParameter
+will be resolved with the serviceID and the serviceParameter.
+You may override this method to provide your own way of service resolution.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCgiFix" id="setCgiFix" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCgiFix"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setCgiFix">setCgiFix</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Enable this, if you&#039;re using PHP via CGI with php.ini setting &quot;cgi.fix_pathinfo=1&quot;
+and have trouble with friendly URL feature. Enable this only if you really know what you are doing!
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEnableCache" id="setEnableCache" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEnableCache"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setEnableCache">setEnableCache</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set true to cache the UrlManager instance. Consider to enable this cache
+when the application defines a lot of TUrlMappingPatterns
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEnableCookieValidation" id="setEnableCookieValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEnableCookieValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setEnableCookieValidation">setEnableCookieValidation</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setID" id="setID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setID">setID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setServiceID" id="setServiceID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setServiceID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setServiceID">setServiceID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the requested service ID.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setServiceParameter" id="setServiceParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setServiceParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setServiceParameter">setServiceParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the requested service parameter.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUrlFormat" id="setUrlFormat" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUrlFormat"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setUrlFormat">setUrlFormat</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-THttpRequestUrlFormat.html"><abbr title="\Prado\Web\THttpRequestUrlFormat">THttpRequestUrlFormat</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the format of URLs constructed and interpretted by the request module.
+                    <p>A Get URL format is like index.php?name1=value1&amp;name2=value2
+while a Path URL format is like index.php/name1,value1/name2,value.
+Changing the UrlFormat will affect <a href="constructUrl"></a> and how GET variables
+are parsed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUrlManager" id="setUrlManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUrlManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setUrlManager">setUrlManager</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the URL manager module.
+                    <p>By default, <a href="TUrlManager"></a> is used for managing URLs.
+You may specify a different module for URL managing tasks
+by loading it as an application module and setting this property
+with the module ID.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUrlParamSeparator" id="setUrlParamSeparator" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUrlParamSeparator"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_setUrlParamSeparator">setUrlParamSeparator</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="stripSlashes" id="stripSlashes" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_stripSlashes"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_stripSlashes">stripSlashes</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Strips slashes from input data.
+                    <p>This method is applied when magic quotes is enabled.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toArray" id="toArray" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toArray"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_toArray">toArray</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="cacheUrlManager" id="cacheUrlManager" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_cacheUrlManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_cacheUrlManager">cacheUrlManager</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$manager</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Saves the current UrlManager instance to cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCacheKey" id="getCacheKey" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCacheKey"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_getCacheKey">getCacheKey</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadCachedUrlManager" id="loadCachedUrlManager" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadCachedUrlManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_loadCachedUrlManager">loadCachedUrlManager</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-TUrlManager.html"><abbr title="\Prado\Web\TUrlManager">TUrlManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Loads UrlManager instance from cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parseUrl" id="parseUrl" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parseUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpRequest.html#method_parseUrl">parseUrl</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Parses the request URL and returns an array of input parameters (excluding GET variables).
+                    <p>You may override this method to support customized URL format.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_add">add</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_clear">clear</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_constructUrl">constructUrl</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_contains">contains</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_count">count</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getAbsoluteApplicationUrl">getAbsoluteApplicationUrl</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getAcceptTypes">getAcceptTypes</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getApplicationFilePath">getApplicationFilePath</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getApplicationUrl">getApplicationUrl</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getBaseUrl">getBaseUrl</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getBrowser">getBrowser</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getCgiFix">getCgiFix</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getContentType">getContentType</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getCookies">getCookies</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getCount">getCount</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getEnableCache">getEnableCache</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getEnableCookieValidation">getEnableCookieValidation</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getEnvironmentVariables">getEnvironmentVariables</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getHeaders">getHeaders</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getHttpProtocolVersion">getHttpProtocolVersion</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getIsSecureConnection">getIsSecureConnection</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getIterator">getIterator</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getKeys">getKeys</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getPathInfo">getPathInfo</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getQueryString">getQueryString</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getRequestResolved">getRequestResolved</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getRequestType">getRequestType</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getRequestUri">getRequestUri</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getServerName">getServerName</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getServerPort">getServerPort</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getServerSoftware">getServerSoftware</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getServerVariables">getServerVariables</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getServiceID">getServiceID</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getServiceParameter">getServiceParameter</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUploadedFiles">getUploadedFiles</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUrl">getUrl</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUrlFormat">getUrlFormat</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUrlManager">getUrlManager</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUrlManagerModule">getUrlManagerModule</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUrlParamSeparator">getUrlParamSeparator</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUrlReferrer">getUrlReferrer</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUserAgent">getUserAgent</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUserHost">getUserHost</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUserHostAddress">getUserHostAddress</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getUserLanguages">getUserLanguages</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_itemAt">itemAt</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_offsetExists">offsetExists</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_offsetGet">offsetGet</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_offsetSet">offsetSet</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_offsetUnset">offsetUnset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_remove">remove</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_resolveRequest">resolveRequest</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setCgiFix">setCgiFix</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setEnableCache">setEnableCache</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setEnableCookieValidation">setEnableCookieValidation</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setServiceID">setServiceID</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setServiceParameter">setServiceParameter</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setUrlFormat">setUrlFormat</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setUrlManager">setUrlManager</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_setUrlParamSeparator">setUrlParamSeparator</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_stripSlashes">stripSlashes</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_toArray">toArray</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_cacheUrlManager">cacheUrlManager</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_getCacheKey">getCacheKey</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_loadCachedUrlManager">loadCachedUrlManager</a>,                             <a href="classes/Prado-Web-THttpRequest.html#method_parseUrl">parseUrl</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="CGIFIX__PATH_INFO" id="CGIFIX__PATH_INFO" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CGIFIX__PATH_INFO"><b>CGIFIX__PATH_INFO</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>1</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CGIFIX__SCRIPT_NAME" id="CGIFIX__SCRIPT_NAME" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CGIFIX__SCRIPT_NAME"><b>CGIFIX__SCRIPT_NAME</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>2</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-THttpRequest.html#constant_CGIFIX__PATH_INFO"><b>\Prado\Web\THttpRequest::CGIFIX__PATH_INFO</b></a>,                                     <a href="classes/Prado-Web-THttpRequest.html#constant_CGIFIX__SCRIPT_NAME"><b>\Prado\Web\THttpRequest::CGIFIX__SCRIPT_NAME</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

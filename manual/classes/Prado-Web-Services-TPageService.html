@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TPageService &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,821 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-services.html">Services</a>\<a href="classes/Prado-Web-Services-TPageService.html">TPageService</a>
+    </h1>
+
+    <div class="description">
+        TPageService class.
+        <p>TPageService implements the service for serving user page requests.</p>
+<p>Pages that are available to client users are stored under a directory specified by
+<a href="setBasePath">BasePath</a>. The directory may contain subdirectories.
+Pages serving for a similar goal are usually placed under the same directory.
+A directory may contain a configuration file <b>config.xml</b> whose content
+is similar to that of application configuration file.</p>
+<p>A page is requested via page path, which is a dot-connected directory names
+appended by the page name. Assume '&lt;BasePath&gt;/Users/Admin' is the directory
+containing the page 'Update'. Then the page can be requested via 'Users.Admin.Update'.
+By default, the <a href="setBasePath">BasePath</a> of the page service is the &quot;pages&quot;
+directory under the application base path. You may change this default
+by setting <a href="setBasePath">BasePath</a> with a different path you prefer.</p>
+<p>Page name refers to the file name (without extension) of the page template.
+In order to differentiate from the common control template files, the extension
+name of the page template files must be '.page'. If there is a PHP file with
+the same page name under the same directory as the template file, that file
+will be considered as the page class file and the file name is the page class name.
+If such a file is not found, the page class is assumed as <a href="TPage"></a>.</p>
+<p>Modules can be configured and loaded in page directory configurations.
+Configuration of a module in a subdirectory will overwrite its parent
+directory's configuration, if both configurations refer to the same module.</p>
+<p>By default, TPageService will automatically load two modules:</p>
+<ul>
+<li>
+<a href="TTemplateManager"></a> : manages page and control templates</li>
+<li>
+<a href="TThemeManager"></a> : manages themes used in a Prado application</li>
+</ul>
+<p>In page directory configurations, static authorization rules can also be specified,
+which governs who and which roles can access particular pages.
+Refer to <a href="TAuthorizationRule"></a> for more details about authorization rules.
+Page authorization rules can be configured within an <authorization> tag in
+each page directory configuration as follows,
+<authorization>
+<deny pages="Update" users="?" />
+<allow pages="Admin" roles="administrator" />
+<deny pages="Admin" users="*" />
+</authorization>
+where the 'pages' attribute may be filled with a sequence of comma-separated
+page IDs. If 'pages' attribute does not appear in a rule, the rule will be
+applied to all pages in this directory and all subdirectories (recursively).
+Application of authorization rules are in a bottom-up fashion, starting from
+the directory containing the requested page up to all parent directories.
+The first matching rule will be used. The last rule always allows all users
+accessing to any resources.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-Services-TPageService.html">\Prado\Web\Services\TPageService</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TService.html">\Prado\TService</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\Services<br/>
+                <b>Author:</b> <br/>
+            <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/Services/TPageService.php"><abbr title="framework/Web/Services/TPageService.php">TPageService.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="constructUrl" id="constructUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_constructUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_constructUrl">constructUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$pagePath</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$getParams</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$encodeAmpersand</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$encodeGetItems</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Constructs a URL with specified page path and GET parameters.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getBasePageClass" id="getBasePageClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getBasePageClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getBasePageClass">getBasePageClass</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getBasePath" id="getBasePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getBasePath"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getBasePath">getBasePath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getClientScriptManagerClass" id="getClientScriptManagerClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getClientScriptManagerClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getClientScriptManagerClass">getClientScriptManagerClass</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDefaultPage" id="getDefaultPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDefaultPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getDefaultPage">getDefaultPage</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDefaultPageUrl" id="getDefaultPageUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDefaultPageUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getDefaultPageUrl">getDefaultPageUrl</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRequestedPage" id="getRequestedPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRequestedPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getRequestedPage">getRequestedPage</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRequestedPagePath" id="getRequestedPagePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRequestedPagePath"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getRequestedPagePath">getRequestedPagePath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTemplateManager" id="getTemplateManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTemplateManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getTemplateManager">getTemplateManager</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TTemplateManager.html"><abbr title="\Prado\Web\UI\TTemplateManager">TTemplateManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getThemeManager" id="getThemeManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getThemeManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_getThemeManager">getThemeManager</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TThemeManager.html"><abbr title="\Prado\Web\UI\TThemeManager">TThemeManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the service.
+                    <p>This method is required by IService interface and is invoked by application.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onAdditionalPagePaths" id="onAdditionalPagePaths" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onAdditionalPagePaths"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_onAdditionalPagePaths">onAdditionalPagePaths</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This event is raised if the page is not found in the BasePath.
+                    <p>This provides additional possible Page Paths to look for the page.
+The typical handler would look like:
+<code class="prettyprint">
+public function additionalPagePaths($service, $pagePath)
+{
+return $this-&gt;getPluginPagesPath() . DIRECTORY_SEPARATOR . strtr($pagePath, '.', DIRECTORY_SEPARATOR);
+}
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onPreRunPage" id="onPreRunPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onPreRunPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_onPreRunPage">onPreRunPage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This event is raised just before the page is run.  Any part of the system can  patch into the page
+events with an onPreRunPage handler.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="run" id="run" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_run"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_run">run</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Runs the service.
+                    <p>This will create the requested page, initializes it with the property values
+specified in the configuration, and executes the page.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setBasePageClass" id="setBasePageClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setBasePageClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_setBasePageClass">setBasePageClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the base page class name (in namespace format).
+                    <p>If a page only has a template file without page class file,
+this base page class will be instantiated.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setBasePath" id="setBasePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setBasePath"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_setBasePath">setBasePath</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setClientScriptManagerClass" id="setClientScriptManagerClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setClientScriptManagerClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_setClientScriptManagerClass">setClientScriptManagerClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the clientscript manager class (in namespace format).
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDefaultPage" id="setDefaultPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDefaultPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_setDefaultPage">setDefaultPage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTemplateManager" id="setTemplateManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTemplateManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_setTemplateManager">setTemplateManager</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TTemplateManager.html"><abbr title="\Prado\Web\UI\TTemplateManager">TTemplateManager</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setThemeManager" id="setThemeManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setThemeManager"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_setThemeManager">setThemeManager</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TThemeManager.html"><abbr title="\Prado\Web\UI\TThemeManager">TThemeManager</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="applyConfiguration" id="applyConfiguration" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_applyConfiguration"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_applyConfiguration">applyConfiguration</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-Services-TPageConfiguration.html"><abbr title="\Prado\Web\Services\TPageConfiguration">TPageConfiguration</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Applies a page configuration.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createPage" id="createPage" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_createPage">createPage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$pagePath</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a page instance based on requested page path.  If the Page is not
+found in the BasePath then this method raises onAdditionalPagePaths($pagePath)
+to query for any additional page paths. eg. from composer package modules.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="determineRequestedPagePath" id="determineRequestedPagePath" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_determineRequestedPagePath"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_determineRequestedPagePath">determineRequestedPagePath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Determines the requested page path.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initPageContext" id="initPageContext" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initPageContext"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_initPageContext">initPageContext</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-Services-TPageConfiguration.html"><abbr title="\Prado\Web\Services\TPageConfiguration">TPageConfiguration</abbr></a>&nbsp;</span><var>$pageConfig</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes page context.
+                    <p>Page context includes path alias settings, namespace usages,
+parameter initialization, module loadings, page initial properties
+and authorization rules.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadPageConfig" id="loadPageConfig" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadPageConfig"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_loadPageConfig">loadPageConfig</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-Services-TPageConfiguration.html"><abbr title="\Prado\Web\Services\TPageConfiguration">TPageConfiguration</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Collects configuration for a page.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="runPage" id="runPage" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_runPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-Services-TPageService.html#method_runPage">runPage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a>&nbsp;</span><var>$page</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$properties</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Executes a page.  Between setting the subproperties and running the page, onPreRunPage event is raised
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_constructUrl">constructUrl</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getBasePageClass">getBasePageClass</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getBasePath">getBasePath</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getClientScriptManagerClass">getClientScriptManagerClass</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getDefaultPage">getDefaultPage</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getDefaultPageUrl">getDefaultPageUrl</a>,                             <a href="classes/Prado-TService.html#method_getEnabled">getEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TService.html#method_getID">getID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getRequestedPage">getRequestedPage</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getRequestedPagePath">getRequestedPagePath</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getTemplateManager">getTemplateManager</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_getThemeManager">getThemeManager</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_onAdditionalPagePaths">onAdditionalPagePaths</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_onPreRunPage">onPreRunPage</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_run">run</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_setBasePageClass">setBasePageClass</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_setBasePath">setBasePath</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_setClientScriptManagerClass">setClientScriptManagerClass</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_setDefaultPage">setDefaultPage</a>,                             <a href="classes/Prado-TService.html#method_setEnabled">setEnabled</a>,                             <a href="classes/Prado-TService.html#method_setID">setID</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_setTemplateManager">setTemplateManager</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_setThemeManager">setThemeManager</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_applyConfiguration">applyConfiguration</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_createPage">createPage</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_determineRequestedPagePath">determineRequestedPagePath</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_initPageContext">initPageContext</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_loadPageConfig">loadPageConfig</a>,                             <a href="classes/Prado-Web-Services-TPageService.html#method_runPage">runPage</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="CONFIG_CACHE_PREFIX" id="CONFIG_CACHE_PREFIX" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_CACHE_PREFIX"><b>CONFIG_CACHE_PREFIX</b></a>
+            </code>
+
+            <div class="description short">
+                Prefix of ID used for storing parsed configuration in cache
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;prado:pageservice:&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONFIG_FILE_PHP" id="CONFIG_FILE_PHP" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_FILE_PHP"><b>CONFIG_FILE_PHP</b></a>
+            </code>
+
+            <div class="description short">
+                Configuration file name
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;config.php&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONFIG_FILE_XML" id="CONFIG_FILE_XML" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_FILE_XML"><b>CONFIG_FILE_XML</b></a>
+            </code>
+
+            <div class="description short">
+                Configuration file name
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;config.xml&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DEFAULT_BASEPATH" id="DEFAULT_BASEPATH" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DEFAULT_BASEPATH"><b>DEFAULT_BASEPATH</b></a>
+            </code>
+
+            <div class="description short">
+                Default base path
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Pages&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="FALLBACK_BASEPATH" id="FALLBACK_BASEPATH" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_FALLBACK_BASEPATH"><b>FALLBACK_BASEPATH</b></a>
+            </code>
+
+            <div class="description short">
+                Fallback base path - used to be the default up to Prado &lt; 3.2
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;pages&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PAGE_FILE_EXT" id="PAGE_FILE_EXT" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PAGE_FILE_EXT"><b>PAGE_FILE_EXT</b></a>
+            </code>
+
+            <div class="description short">
+                Page template file extension
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;.page&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PAGE_NAMESPACE_PREFIX" id="PAGE_NAMESPACE_PREFIX" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PAGE_NAMESPACE_PREFIX"><b>PAGE_NAMESPACE_PREFIX</b></a>
+            </code>
+
+            <div class="description short">
+                Prefix of Pages used for instantiating new pages
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Application\\Pages\\&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-Services-TPageService.html#constant_CONFIG_CACHE_PREFIX"><b>\Prado\Web\Services\TPageService::CONFIG_CACHE_PREFIX</b></a>,                                     <a href="classes/Prado-Web-Services-TPageService.html#constant_CONFIG_FILE_PHP"><b>\Prado\Web\Services\TPageService::CONFIG_FILE_PHP</b></a>,                                     <a href="classes/Prado-Web-Services-TPageService.html#constant_CONFIG_FILE_XML"><b>\Prado\Web\Services\TPageService::CONFIG_FILE_XML</b></a>,                                     <a href="classes/Prado-Web-Services-TPageService.html#constant_DEFAULT_BASEPATH"><b>\Prado\Web\Services\TPageService::DEFAULT_BASEPATH</b></a>,                                     <a href="classes/Prado-Web-Services-TPageService.html#constant_FALLBACK_BASEPATH"><b>\Prado\Web\Services\TPageService::FALLBACK_BASEPATH</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Web-Services-TPageService.html#constant_PAGE_FILE_EXT"><b>\Prado\Web\Services\TPageService::PAGE_FILE_EXT</b></a>,                                     <a href="classes/Prado-Web-Services-TPageService.html#constant_PAGE_NAMESPACE_PREFIX"><b>\Prado\Web\Services\TPageService::PAGE_NAMESPACE_PREFIX</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

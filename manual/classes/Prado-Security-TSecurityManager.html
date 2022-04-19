@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TSecurityManager &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,479 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-security.html">Security</a>\<a href="classes/Prado-Security-TSecurityManager.html">TSecurityManager</a>
+    </h1>
+
+    <div class="description">
+        TSecurityManager class
+        <p>TSecurityManager provides private keys, hashing and encryption
+functionalities that may be used by other PRADO components,
+such as viewstate persister, cookies.</p>
+<p>TSecurityManager is mainly used to protect data from being tampered
+and viewed. It can generate HMAC and encrypt the data.
+The private key used to generate HMAC is set by <a href="setValidationKey">ValidationKey</a>.
+The key used to encrypt data is specified by <a href="setEncryptionKey">EncryptionKey</a>.
+If the above keys are not explicitly set, random keys will be generated
+and used.</p>
+<p>To prefix data with an HMAC, call <a href="hashData()"></a>.
+To validate if data is tampered, call <a href="validateData()"></a>, which will
+return the real data if it is not tampered.
+The algorithm used to generated HMAC is specified by <a href="setHashAlgorithm">HashAlgorithm</a>.</p>
+<p>To encrypt and decrypt data, call <a href="encrypt()"></a> and <a href="decrypt()"></a>
+respectively. The encryption algorithm can be set by <a href="setCryptAlgorithm">CryptAlgorithm</a>.</p>
+<p>Note, to use encryption, the PHP OpenSSL extension must be loaded. This was introduced in
+Prado4, older versions used the deprecated mcrypt extension with rijndael-256 cipher as
+default, which does not have an equivalent in OpenSSL. Developers should keep that in mind
+when migrating from Prado3 to Prado4.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Security-TSecurityManager.html">\Prado\Security\TSecurityManager</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Security<br/>
+                <b>Author:</b> <br/>
+            <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Security/TSecurityManager.php"><abbr title="framework/Security/TSecurityManager.php">TSecurityManager.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="decrypt" id="decrypt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_decrypt"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_decrypt">decrypt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Decrypts data with {@link getEncryptionKey EncryptionKey}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="encrypt" id="encrypt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_encrypt"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_encrypt">encrypt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Encrypts data with {@link getEncryptionKey EncryptionKey}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCryptAlgorithm" id="getCryptAlgorithm" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCryptAlgorithm"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_getCryptAlgorithm">getCryptAlgorithm</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEncryptionKey" id="getEncryptionKey" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEncryptionKey"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_getEncryptionKey">getEncryptionKey</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHashAlgorithm" id="getHashAlgorithm" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHashAlgorithm"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_getHashAlgorithm">getHashAlgorithm</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getValidationKey" id="getValidationKey" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getValidationKey"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_getValidationKey">getValidationKey</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hashData" id="hashData" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hashData"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_hashData">hashData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Prefixes data with an HMAC.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the module.
+                    <p>The security module is registered with the application.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCryptAlgorithm" id="setCryptAlgorithm" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCryptAlgorithm"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_setCryptAlgorithm">setCryptAlgorithm</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the crypt algorithm (also known as cipher or cypher) that will be used for {@link encrypt} and {@link decrypt}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEncryptionKey" id="setEncryptionKey" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEncryptionKey"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_setEncryptionKey">setEncryptionKey</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setHashAlgorithm" id="setHashAlgorithm" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setHashAlgorithm"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_setHashAlgorithm">setHashAlgorithm</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method accepts all hash algorithms returned by hash_algos().
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setValidationKey" id="setValidationKey" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setValidationKey"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_setValidationKey">setValidationKey</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="validateData" id="validateData" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_validateData"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_validateData">validateData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Validates if data is tampered.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="computeHMAC" id="computeHMAC" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_computeHMAC"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_computeHMAC">computeHMAC</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Computes the HMAC for the data with {@link getValidationKey ValidationKey}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="generateRandomKey" id="generateRandomKey" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_generateRandomKey"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_generateRandomKey">generateRandomKey</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Generates a random key.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="strlen" id="strlen" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_strlen"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_strlen">strlen</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$string</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Returns the length of the given string.
+                    <p>If available uses the multibyte string function mb_strlen.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="substr" id="substr" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_substr"></a>
+                <code>
+                    <a href="classes/Prado-Security-TSecurityManager.html#method_substr">substr</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$string</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$start</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$length</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Returns the portion of string specified by the start and length parameters.
+                    <p>If available uses the multibyte string function mb_substr</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_decrypt">decrypt</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_encrypt">encrypt</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_getCryptAlgorithm">getCryptAlgorithm</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_getEncryptionKey">getEncryptionKey</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_getHashAlgorithm">getHashAlgorithm</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_getValidationKey">getValidationKey</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_hashData">hashData</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_setCryptAlgorithm">setCryptAlgorithm</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_setEncryptionKey">setEncryptionKey</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_setHashAlgorithm">setHashAlgorithm</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_setValidationKey">setValidationKey</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_validateData">validateData</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_computeHMAC">computeHMAC</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_generateRandomKey">generateRandomKey</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_strlen">strlen</a>,                             <a href="classes/Prado-Security-TSecurityManager.html#method_substr">substr</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="STATE_ENCRYPTION_KEY" id="STATE_ENCRYPTION_KEY" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_STATE_ENCRYPTION_KEY"><b>STATE_ENCRYPTION_KEY</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;prado:securitymanager:encryptionkey&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="STATE_VALIDATION_KEY" id="STATE_VALIDATION_KEY" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_STATE_VALIDATION_KEY"><b>STATE_VALIDATION_KEY</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;prado:securitymanager:validationkey&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Security-TSecurityManager.html#constant_STATE_ENCRYPTION_KEY"><b>\Prado\Security\TSecurityManager::STATE_ENCRYPTION_KEY</b></a>,                                     <a href="classes/Prado-Security-TSecurityManager.html#constant_STATE_VALIDATION_KEY"><b>\Prado\Security\TSecurityManager::STATE_VALIDATION_KEY</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

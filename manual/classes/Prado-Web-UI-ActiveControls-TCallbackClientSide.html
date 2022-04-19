@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TCallbackClientSide &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,723 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-activecontrols.html">ActiveControls</a>\<a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html">TCallbackClientSide</a>
+    </h1>
+
+    <div class="description">
+        TCallbackClientSide class.
+        <p>The following client side events are executing in order if the callback
+request and response are send and received successfuly.</p>
+<ul>
+<li>
+<b>onPreDispatch</b> executed before a request is dispatched.</li>
+<li>
+<b>onUninitialized</b> executed when callback request is uninitialized.</li>
+<li>
+<b>onLoading</b>* executed when callback request is initiated</li>
+<li>
+<b>onLoaded</b>* executed when callback request begins.</li>
+<li>
+<b>onInteractive</b> executed when callback request is in progress.</li>
+<li>
+<b>onComplete</b>executed when callback response returns.</li>
+<li>
+<b>onSuccess</b> executed when callback request returns and is successful.</li>
+<li>
+<b>onFailure</b> executed when callback request returns and fails.</li>
+<li>
+<b>onException</b> raised when callback request fails due to request/response errors.</li>
+</ul>
+<ul>
+<li>Note that theses 2 events are not fired correctly by Opera. To make
+them work in this browser, Prado will fire them just after onPreDispatch.</li>
+</ul>
+<p>In a general way, onUninitialized, onLoading, onLoaded and onInteractive events
+are not implemented consistently in all browsers.When cross browser compatibility is
+needed, it is best to avoid use them</p>
+<p>The OnSuccess and OnFailure events are raised when the
+response is returned. A successful request/response will raise
+OnSuccess event otherwise OnFailure will be raised.</p>
+<ul>
+<li>
+<b>PostState</b> true to collect the form inputs and post them during callback, default is true.</li>
+<li>
+<b>RequestTimeOut</b> The request timeout in milliseconds.</li>
+<li>
+<b>RetryLimit</b> The number of times the request is retried when it timeouts, default 1</li>
+<li>
+<b>EnablePageStateUpdate</b> enable the callback response to enable the
+viewstate update.</li>
+</ul>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html">\Prado\Web\UI\ActiveControls\TCallbackClientSide</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TClientSideOptions.html">\Prado\Web\UI\TClientSideOptions</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\ActiveControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/ActiveControls/TCallbackClientSide.php"><abbr title="framework/Web/UI/ActiveControls/TCallbackClientSide.php">TCallbackClientSide.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getEnablePageStateUpdate" id="getEnablePageStateUpdate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEnablePageStateUpdate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getEnablePageStateUpdate">getEnablePageStateUpdate</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnComplete" id="getOnComplete" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnComplete"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnComplete">getOnComplete</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnException" id="getOnException" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnException"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnException">getOnException</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnFailure" id="getOnFailure" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnFailure"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnFailure">getOnFailure</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnInteractive" id="getOnInteractive" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnInteractive"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnInteractive">getOnInteractive</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnLoaded" id="getOnLoaded" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnLoaded"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnLoaded">getOnLoaded</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnLoading" id="getOnLoading" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnLoading"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnLoading">getOnLoading</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnPreDispatch" id="getOnPreDispatch" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnPreDispatch"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnPreDispatch">getOnPreDispatch</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnSuccess" id="getOnSuccess" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnSuccess"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnSuccess">getOnSuccess</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOnUninitialized" id="getOnUninitialized" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOnUninitialized"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnUninitialized">getOnUninitialized</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostBackParameter" id="getPostBackParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostBackParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getPostBackParameter">getPostBackParameter</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostBackTarget" id="getPostBackTarget" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostBackTarget"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getPostBackTarget">getPostBackTarget</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostState" id="getPostState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getPostState">getPostState</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRequestTimeOut" id="getRequestTimeOut" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRequestTimeOut"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getRequestTimeOut">getRequestTimeOut</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRetryLimit" id="getRetryLimit" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRetryLimit"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getRetryLimit">getRetryLimit</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEnablePageStateUpdate" id="setEnablePageStateUpdate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEnablePageStateUpdate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setEnablePageStateUpdate">setEnablePageStateUpdate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set to true to enable the callback response to enable the viewstate
+update. This will automatically set HasPrority to true.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnComplete" id="setOnComplete" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnComplete"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnComplete">setOnComplete</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnException" id="setOnException" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnException"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnException">setOnException</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnFailure" id="setOnFailure" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnFailure"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnFailure">setOnFailure</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnInteractive" id="setOnInteractive" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnInteractive"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnInteractive">setOnInteractive</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnLoaded" id="setOnLoaded" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnLoaded"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnLoaded">setOnLoaded</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnLoading" id="setOnLoading" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnLoading"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnLoading">setOnLoading</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnPreDispatch" id="setOnPreDispatch" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnPreDispatch"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnPreDispatch">setOnPreDispatch</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnSuccess" id="setOnSuccess" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnSuccess"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnSuccess">setOnSuccess</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOnUninitialized" id="setOnUninitialized" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOnUninitialized"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnUninitialized">setOnUninitialized</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPostBackParameter" id="setPostBackParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPostBackParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setPostBackParameter">setPostBackParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPostBackTarget" id="setPostBackTarget" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPostBackTarget"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setPostBackTarget">setPostBackTarget</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPostState" id="setPostState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPostState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setPostState">setPostState</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setRequestTimeOut" id="setRequestTimeOut" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setRequestTimeOut"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setRequestTimeOut">setRequestTimeOut</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setRetryLimit" id="setRetryLimit" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setRetryLimit"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setRetryLimit">setRetryLimit</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureFunction" id="ensureFunction" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureFunction"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_ensureFunction">ensureFunction</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$javascript</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Returns javascript statement enclosed within a javascript function.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getEnablePageStateUpdate">getEnablePageStateUpdate</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnComplete">getOnComplete</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnException">getOnException</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnFailure">getOnFailure</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnInteractive">getOnInteractive</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnLoaded">getOnLoaded</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnLoading">getOnLoading</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnPreDispatch">getOnPreDispatch</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnSuccess">getOnSuccess</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getOnUninitialized">getOnUninitialized</a>,                             <a href="classes/Prado-Web-UI-TClientSideOptions.html#method_getOptions">getOptions</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getPostBackParameter">getPostBackParameter</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getPostBackTarget">getPostBackTarget</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getPostState">getPostState</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getRequestTimeOut">getRequestTimeOut</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_getRetryLimit">getRetryLimit</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setEnablePageStateUpdate">setEnablePageStateUpdate</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnComplete">setOnComplete</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnException">setOnException</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnFailure">setOnFailure</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnInteractive">setOnInteractive</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnLoaded">setOnLoaded</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnLoading">setOnLoading</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnPreDispatch">setOnPreDispatch</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnSuccess">setOnSuccess</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setOnUninitialized">setOnUninitialized</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setPostBackParameter">setPostBackParameter</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setPostBackTarget">setPostBackTarget</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setPostState">setPostState</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setRequestTimeOut">setRequestTimeOut</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_setRetryLimit">setRetryLimit</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html#method_ensureFunction">ensureFunction</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-TClientSideOptions.html#method_getOption">getOption</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-TClientSideOptions.html#method_setFunction">setFunction</a>,                             <a href="classes/Prado-Web-UI-TClientSideOptions.html#method_setOption">setOption</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

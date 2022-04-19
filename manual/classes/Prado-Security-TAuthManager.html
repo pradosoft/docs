@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TAuthManager &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,693 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-security.html">Security</a>\<a href="classes/Prado-Security-TAuthManager.html">TAuthManager</a>
+    </h1>
+
+    <div class="description">
+        TAuthManager class
+        <p>TAuthManager performs user authentication and authorization for a Prado application.
+TAuthManager works together with a <a href="IUserManager"></a> module that can be
+specified via the <a href="setUserManager">UserManager</a> property.
+If an authorization fails, TAuthManager will try to redirect the client
+browser to a login page that is specified via the <a href="setLoginPage">LoginPage</a>.
+To login or logout a user, call <a href="login"></a> or <a href="logout"></a>, respectively.</p>
+<p>The <a href="setAuthExpire">AuthExpire</a> property can be used to define the time
+in seconds after which the authentication should expire.
+<a href="setAllowAutoLogin">AllowAutoLogin</a> specifies if the login information
+should be stored in a cookie to perform automatic login. Enabling this
+feature will cause that <a href="setAuthExpire">AuthExpire</a> has no effect
+since the user will be logged in again on authentication expiration.</p>
+<p>To load TAuthManager, configure it in application configuration as follows,
+&lt;module id=&quot;auth&quot; class=&quot;Prado\Security\TAuthManager&quot; UserManager=&quot;users&quot; LoginPage=&quot;login&quot; /&gt;
+<module id="users" class="Prado\Security\TUserManager" /></p>
+<p>When a user logs in, onLogin event is raised with the TUser as the parameter.
+If the user trying to login but fails the check, onLoginFailed is raised with the
+user name as parameter.  When the user logs out, onLogout is raised with the TUser
+as parameter.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Security-TAuthManager.html">\Prado\Security\TAuthManager</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Security<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Security/TAuthManager.php"><abbr title="framework/Security/TAuthManager.php">TAuthManager.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="doAuthentication" id="doAuthentication" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_doAuthentication"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_doAuthentication">doAuthentication</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Performs authentication.
+                    <p>This is the event handler attached to application's Authentication event.
+Do not call this method directly.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="doAuthorization" id="doAuthorization" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_doAuthorization"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_doAuthorization">doAuthorization</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Performs authorization.
+                    <p>This is the event handler attached to application's Authorization event.
+Do not call this method directly.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAllowAutoLogin" id="getAllowAutoLogin" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAllowAutoLogin"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_getAllowAutoLogin">getAllowAutoLogin</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAuthExpire" id="getAuthExpire" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAuthExpire"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_getAuthExpire">getAuthExpire</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLoginPage" id="getLoginPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLoginPage"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_getLoginPage">getLoginPage</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getReturnUrl" id="getReturnUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getReturnUrl"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_getReturnUrl">getReturnUrl</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getReturnUrlVarName" id="getReturnUrlVarName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getReturnUrlVarName"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_getReturnUrlVarName">getReturnUrlVarName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUserKey" id="getUserKey" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUserKey"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_getUserKey">getUserKey</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUserManager" id="getUserManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUserManager"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_getUserManager">getUserManager</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Security-IUserManager.html"><abbr title="\Prado\Security\IUserManager">IUserManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes this module.
+                    <p>This method is required by the IModule interface.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="leave" id="leave" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_leave"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_leave">leave</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Performs login redirect if authorization fails.
+                    <p>This is the event handler attached to application's EndRequest event.
+Do not call this method directly.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="login" id="login" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_login"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_login">login</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$username</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$password</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$expire</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Logs in a user with username and password.
+                    <p>The username and password will be used to validate if login is successful.
+If yes, a user object will be created for the application.
+On successful Login, onLogin is raised with the TUser as parameter.
+When the login fails, onLoginFailed is raised with the username as parameter.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="logout" id="logout" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_logout"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_logout">logout</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Logs out a user.  Raises onLogout with the TUser as parameter
+before logging out. User session will be destroyed after this
+method is called.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onAuthenticate" id="onAuthenticate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onAuthenticate"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_onAuthenticate">onAuthenticate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Performs the real authentication work.
+                    <p>An OnAuthenticate event will be raised if there is any handler attached to it.
+If the application already has a non-null user, it will return without further authentication.
+Otherwise, user information will be restored from session data.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onAuthExpire" id="onAuthExpire" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onAuthExpire"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_onAuthExpire">onAuthExpire</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Performs user logout on authentication expiration.
+                    <p>An 'OnAuthExpire' event will be raised if there is any handler attached to it.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onAuthorize" id="onAuthorize" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onAuthorize"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_onAuthorize">onAuthorize</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Performs the real authorization work.
+                    <p>Authorization rules obtained from the application will be used to check
+if a user is allowed. If authorization fails, the response status code
+will be set as 401 and the application terminates.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onLogin" id="onLogin" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onLogin"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_onLogin">onLogin</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-TUser.html"><abbr title="\Prado\Security\TUser">TUser</abbr></a>&nbsp;</span><var>$user</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    onLogin event is raised when a user logs in
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onLoginFailed" id="onLoginFailed" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onLoginFailed"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_onLoginFailed">onLoginFailed</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$username</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    onLoginFailed event is raised when a user login fails
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onLogout" id="onLogout" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onLogout"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_onLogout">onLogout</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-TUser.html"><abbr title="\Prado\Security\TUser">TUser</abbr></a>&nbsp;</span><var>$user</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    onLogout event is raised when a user logs out.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAllowAutoLogin" id="setAllowAutoLogin" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAllowAutoLogin"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_setAllowAutoLogin">setAllowAutoLogin</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAuthExpire" id="setAuthExpire" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAuthExpire"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_setAuthExpire">setAuthExpire</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setLoginPage" id="setLoginPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setLoginPage"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_setLoginPage">setLoginPage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$pagePath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the login page that the client browser will be redirected to if login is needed.
+                    <p>Login page should be specified in the format of page path.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setReturnUrl" id="setReturnUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setReturnUrl"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_setReturnUrl">setReturnUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the URL that the browser should be redirected to when login succeeds.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setReturnUrlVarName" id="setReturnUrlVarName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setReturnUrlVarName"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_setReturnUrlVarName">setReturnUrlVarName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUserManager" id="setUserManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUserManager"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_setUserManager">setUserManager</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-IUserManager.html"><abbr title="\Prado\Security\IUserManager">IUserManager</abbr></a>|string&nbsp;</span><var>$provider</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="switchUser" id="switchUser" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_switchUser"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_switchUser">switchUser</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$username</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Switches to a new user.
+                    <p>This method will logout the current user first and login with a new one (without password.)</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateSessionUser" id="updateSessionUser" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateSessionUser"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_updateSessionUser">updateSessionUser</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-IUser.html"><abbr title="\Prado\Security\IUser">IUser</abbr></a>&nbsp;</span><var>$user</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Updates the user data stored in session.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="generateUserKey" id="generateUserKey" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_generateUserKey"></a>
+                <code>
+                    <a href="classes/Prado-Security-TAuthManager.html#method_generateUserKey">generateUserKey</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_doAuthentication">doAuthentication</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_doAuthorization">doAuthorization</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_getAllowAutoLogin">getAllowAutoLogin</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_getAuthExpire">getAuthExpire</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_getLoginPage">getLoginPage</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_getReturnUrl">getReturnUrl</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_getReturnUrlVarName">getReturnUrlVarName</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_getUserKey">getUserKey</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_getUserManager">getUserManager</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_leave">leave</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_login">login</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_logout">logout</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_onAuthenticate">onAuthenticate</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_onAuthExpire">onAuthExpire</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_onAuthorize">onAuthorize</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_onLogin">onLogin</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_onLoginFailed">onLoginFailed</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_onLogout">onLogout</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_setAllowAutoLogin">setAllowAutoLogin</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_setAuthExpire">setAuthExpire</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_setLoginPage">setLoginPage</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_setReturnUrl">setReturnUrl</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_setReturnUrlVarName">setReturnUrlVarName</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_setUserManager">setUserManager</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_switchUser">switchUser</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_updateSessionUser">updateSessionUser</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Security-TAuthManager.html#method_generateUserKey">generateUserKey</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="RETURN_URL_VAR" id="RETURN_URL_VAR" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_RETURN_URL_VAR"><b>RETURN_URL_VAR</b></a>
+            </code>
+
+            <div class="description short">
+                GET variable name for return url
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;ReturnUrl&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Security-TAuthManager.html#constant_RETURN_URL_VAR"><b>\Prado\Security\TAuthManager::RETURN_URL_VAR</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

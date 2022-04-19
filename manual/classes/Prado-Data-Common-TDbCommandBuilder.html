@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDbCommandBuilder &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,583 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-common.html">Common</a>\<a href="classes/Prado-Data-Common-TDbCommandBuilder.html">TDbCommandBuilder</a>
+    </h1>
+
+    <div class="description">
+        TDbCommandBuilder provides basic methods to create query commands for tables
+giving by {@link setTableInfo TableInfo} the property.
+        
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-Common-TDbCommandBuilder.html">\Prado\Data\Common\TDbCommandBuilder</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\Common<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/Common/TDbCommandBuilder.php"><abbr title="framework/Data/Common/TDbCommandBuilder.php">TDbCommandBuilder.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a>&nbsp;</span><var>$connection</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a>&nbsp;</span><var>$tableInfo</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    The common __construct
+If desired by the new object, this will auto install and listen to global event functions
+as defined by the object via &#039;fx&#039; methods. This also attaches any predefined behaviors.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="applyCriterias" id="applyCriterias" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_applyCriterias"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_applyCriterias">applyCriterias</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sql</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$ordering</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$limit</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$offset</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="applyLimitOffset" id="applyLimitOffset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_applyLimitOffset"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_applyLimitOffset">applyLimitOffset</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$sql</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$limit</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Alters the sql to apply $limit and $offset. Default implementation is applicable
+for PostgreSQL, MySQL and SQLite.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="applyOrdering" id="applyOrdering" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_applyOrdering"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_applyOrdering">applyOrdering</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$sql</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$ordering</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="bindArrayValues" id="bindArrayValues" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_bindArrayValues"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_bindArrayValues">bindArrayValues</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a>&nbsp;</span><var>$command</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$values</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="bindColumnValues" id="bindColumnValues" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_bindColumnValues"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_bindColumnValues">bindColumnValues</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a>&nbsp;</span><var>$command</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$values</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Bind the name-value pairs of $values where the array keys correspond to column names.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createCommand" id="createCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createCommand">createCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$sql</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createCountCommand" id="createCountCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createCountCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createCountCommand">createCountCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$where</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;1=1&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$ordering</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$limit</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a count(*) command for the table described in {@link setTableInfo TableInfo}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createDeleteCommand" id="createDeleteCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createDeleteCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createDeleteCommand">createDeleteCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$where</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a delete command for the table described in {@link setTableInfo TableInfo}.
+                    <p>The conditions for delete is given by the $where argument and the parameters
+for the condition is given by $parameters.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createFindCommand" id="createFindCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createFindCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createFindCommand">createFindCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$where</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;1=1&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$ordering</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$limit</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$select</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;*&#039;</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Appends the $where condition to the string &quot;SELECT * FROM tableName WHERE &quot;.
+                    <p>The tableName is obtained from the <a href="setTableInfo">TableInfo</a> property.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createInsertCommand" id="createInsertCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createInsertCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createInsertCommand">createInsertCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates an insert command for the table described in {@link setTableInfo TableInfo} for the given data.
+                    <p>Each array key in the $data array must correspond to the column name of the table
+(if a column allows to be null, it may be omitted) to be inserted with
+the corresponding array value.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createUpdateCommand" id="createUpdateCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createUpdateCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createUpdateCommand">createUpdateCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$where</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates an update command for the table described in {@link setTableInfo TableInfo} for the given data.
+                    <p>Each array key in the $data array must correspond to the column name to be updated with the corresponding array value.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLastInsertID" id="getLastInsertID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLastInsertID"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getLastInsertID">getLastInsertID</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Iterate through all the columns and returns the last insert id of the
+first column that has a sequence or serial.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPdoType" id="getPdoType" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPdoType"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getPdoType">getPdoType</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>null|int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSearchExpression" id="getSearchExpression" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSearchExpression"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getSearchExpression">getSearchExpression</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$fields</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$keywords</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Computes the SQL condition for search a set of column using regular expression
+(or LIKE, depending on database implementation) to match a string of
+keywords (default matches all keywords).
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSelectFieldList" id="getSelectFieldList" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSelectFieldList"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getSelectFieldList">getSelectFieldList</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;*&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Different behavior depends on type of passed data
+string
+	usage without modification
+                    <p>null
+will be expanded to full list of quoted table column names (quoting depends on database)</p>
+<p>array</p>
+<ul>
+<li>
+<p>Column names will be quoted if used as key or value of array
+<code class="prettyprint">
+array('col1', 'col2', 'col2')
+// SELECT <code class="prettyprint">col1</code>, <code class="prettyprint">col2</code>, <code class="prettyprint">col3</code> FROM...
+</code></p>
+</li>
+<li>
+<p>Column aliasing
+<code class="prettyprint">
+array('mycol1' =&gt; 'col1', 'mycol2' =&gt; 'COUNT(<em>)')
+// SELECT <code class="prettyprint">col1</code> AS mycol1, COUNT(</em>) AS mycol2 FROM...
+</code></p>
+</li>
+<li>
+<p>NULL and scalar values (strings will be quoted depending on database)
+<code class="prettyprint">
+array('col1' =&gt; 'my custom string', 'col2' =&gt; 1.0, 'col3' =&gt; 'NULL')
+// SELECT &quot;my custom string&quot; AS <code class="prettyprint">col1</code>, 1.0 AS <code class="prettyprint">col2</code>, NULL AS <code class="prettyprint">col3</code> FROM...
+</code></p>
+</li>
+<li>
+<p>If the <em>-wildcard char is used as key or value, add the full list of quoted table column names
+<code class="prettyprint">
+array('col1' =&gt; 'NULL', '</em>')
+// SELECT <code class="prettyprint">col1</code>, <code class="prettyprint">col2</code>, <code class="prettyprint">col3</code>, NULL AS <code class="prettyprint">col1</code> FROM...
+</code></p>
+</li>
+</ul>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTableInfo" id="getTableInfo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTableInfo"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getTableInfo">getTableInfo</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDbConnection" id="setDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_setDbConnection">setDbConnection</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTableInfo" id="setTableInfo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTableInfo"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_setTableInfo">setTableInfo</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getColumnBindings" id="getColumnBindings" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getColumnBindings"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getColumnBindings">getColumnBindings</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$values</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$position</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Create a name-value or position-value if $position=true binding strings.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getInsertFieldBindings" id="getInsertFieldBindings" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getInsertFieldBindings"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getInsertFieldBindings">getInsertFieldBindings</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$values</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns a list of insert field name and a list of binding names.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSearchCondition" id="getSearchCondition" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSearchCondition"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getSearchCondition">getSearchCondition</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$column</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$words</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hasIntegerKey" id="hasIntegerKey" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hasIntegerKey"></a>
+                <code>
+                    <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_hasIntegerKey">hasIntegerKey</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$array</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_applyCriterias">applyCriterias</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_applyLimitOffset">applyLimitOffset</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_applyOrdering">applyOrdering</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_bindArrayValues">bindArrayValues</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_bindColumnValues">bindColumnValues</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createCommand">createCommand</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createCountCommand">createCountCommand</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createDeleteCommand">createDeleteCommand</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createFindCommand">createFindCommand</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createInsertCommand">createInsertCommand</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_createUpdateCommand">createUpdateCommand</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getLastInsertID">getLastInsertID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getPdoType">getPdoType</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getSearchExpression">getSearchExpression</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getSelectFieldList">getSelectFieldList</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getTableInfo">getTableInfo</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_setDbConnection">setDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_setTableInfo">setTableInfo</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getColumnBindings">getColumnBindings</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getInsertFieldBindings">getInsertFieldBindings</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_getSearchCondition">getSearchCondition</a>,                             <a href="classes/Prado-Data-Common-TDbCommandBuilder.html#method_hasIntegerKey">hasIntegerKey</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

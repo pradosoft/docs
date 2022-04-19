@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDropDownListColumn &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,552 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html">TDropDownListColumn</a>
+    </h1>
+
+    <div class="description">
+        TDropDownListColumn class
+        <p>TDropDownListColumn represents a column that is bound to a field in a data source.
+The cells in the column will be displayed using the data indexed by
+<a href="setDataTextField">DataTextField</a>. You can customize the display by
+setting <a href="setDataTextFormatString">DataTextFormatString</a>.</p>
+<p>If <a href="setReadOnly">ReadOnly</a> is false, TDropDownListColumn will display cells in edit mode
+with dropdown lists. Otherwise, a static text is displayed.
+The currently selected dropndown list item is specified by the data indexed with
+<a href="setDataValueField">DataValueField</a>.</p>
+<p>There are two approaches to specify the list items available for selection.
+The first approach uses template syntax as follows,
+<code class="prettyprint">
+&lt;com:TDropDownListColumn ....&gt;
+&lt;com:TListItem Value=&quot;1&quot; Text=&quot;first item&quot; /&gt;
+&lt;com:TListItem Value=&quot;2&quot; Text=&quot;second item&quot; /&gt;
+&lt;com:TListItem Value=&quot;3&quot; Text=&quot;third item&quot; /&gt;
+&lt;/com:TDropDownListColumn&gt;
+</code>
+The second approach specifies a data source to be bound to the dropdown lists
+by setting <a href="setListDataSource">ListDataSource</a>. Like generic list controls,
+you may also want to specify which data fields are used for item values and texts
+by setting <a href="setListValueField">ListValueField</a> and
+<a href="setListTextField">ListTextField</a>, respectively.
+Furthermore, the item texts may be formatted by using <a href="setListTextFormatString">ListTextFormatString</a>.
+Note, if you specify <a href="setListDataSource">ListDataSource</a>, do it before
+calling the datagrid's dataBind().</p>
+<p>The dropdown list control in the TDropDownListColumn can be accessed by one of
+the following two methods:
+<code class="prettyprint">
+$datagridItem-&gt;DropDownListColumnID-&gt;DropDownList
+$datagridItem-&gt;DropDownListColumnID-&gt;Controls[0]
+</code>
+The second method is possible because the dropdown list control created within the
+datagrid cell is the first child.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html">\Prado\Web\UI\WebControls\TDropDownListColumn</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html">\Prado\Web\UI\WebControls\TDataGridColumn</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0.4<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/TDropDownListColumn.php"><abbr title="framework/Web/UI/WebControls/TDropDownListColumn.php">TDropDownListColumn.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method___construct">__construct</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addParsedObject" id="addParsedObject" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addParsedObject"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_addParsedObject">addParsedObject</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$object</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds object parsed from template to the control.
+                    <p>This method adds only <a href="TListItem"></a> objects into the <a href="getItems">Items</a> collection.
+All other objects are ignored.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="dataBindColumn" id="dataBindColumn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_dataBindColumn"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_dataBindColumn">dataBindColumn</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Databinds a cell in the column.
+                    <p>This method is invoked when datagrid performs databinding.
+It populates the content of the cell with the relevant data from data source.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataTextField" id="getDataTextField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataTextField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getDataTextField">getDataTextField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataTextFormatString" id="getDataTextFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataTextFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getDataTextFormatString">getDataTextFormatString</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataValueField" id="getDataValueField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataValueField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getDataValueField">getDataValueField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getListDataSource" id="getListDataSource" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getListDataSource"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListDataSource">getListDataSource</a><span>(</span><span>)</span><span> : </span><span><abbr title="\Traversable">Traversable</abbr></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getListTextField" id="getListTextField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getListTextField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListTextField">getListTextField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getListTextFormatString" id="getListTextFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getListTextFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListTextFormatString">getListTextFormatString</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getListValueField" id="getListValueField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getListValueField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListValueField">getListValueField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getReadOnly" id="getReadOnly" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getReadOnly"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getReadOnly">getReadOnly</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initializeCell" id="initializeCell" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initializeCell"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_initializeCell">initializeCell</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TTableCell.html"><abbr title="\Prado\Web\UI\WebControls\TTableCell">TTableCell</abbr></a>&nbsp;</span><var>$cell</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$columnIndex</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$itemType</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the specified cell to its initial values.
+                    <p>This method overrides the parent implementation.
+It creates a textbox for item in edit mode and the column is not read-only.
+Otherwise it displays a static text.
+The caption of the button and the static text are retrieved
+from the datasource.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadState" id="loadState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_loadState">loadState</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$state</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads items from viewstate.
+                    <p>This method overrides the parent implementation by loading list items</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="saveState" id="saveState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_saveState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_saveState">saveState</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Saves items into viewstate.
+                    <p>This method overrides the parent implementation by saving list items</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataTextField" id="setDataTextField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataTextField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setDataTextField">setDataTextField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the field of the data source that provides the text content of the column.
+                    <p>If this is not set, the data specified via <a href="getDataValueField">DataValueField</a>
+will be displayed in the column.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataTextFormatString" id="setDataTextFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataTextFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setDataTextFormatString">setDataTextFormatString</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataValueField" id="setDataValueField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataValueField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setDataValueField">setDataValueField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the field of the data source that provides the key selecting an item in dropdown list.
+                    <p>If this is not present, the data specified via <a href="getDataTextField">DataTextField</a> (without
+applying the formatting string) will be used for selection, instead.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setListDataSource" id="setListDataSource" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setListDataSource"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListDataSource">setListDataSource</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|string|<abbr title="\Traversable">Traversable</abbr>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setListTextField" id="setListTextField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setListTextField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListTextField">setListTextField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setListTextFormatString" id="setListTextFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setListTextFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListTextFormatString">setListTextFormatString</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setListValueField" id="setListValueField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setListValueField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListValueField">setListValueField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setReadOnly" id="setReadOnly" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setReadOnly"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setReadOnly">setReadOnly</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_dataBindColumn">dataBindColumn</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getAllowSorting">getAllowSorting</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getDataTextField">getDataTextField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getDataTextFormatString">getDataTextFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getDataValueField">getDataValueField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getEnableCellGrouping">getEnableCellGrouping</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterRenderer">getFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterStyle">getFooterStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterText">getFooterText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderImageUrl">getHeaderImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderRenderer">getHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderStyle">getHeaderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderText">getHeaderText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getItemStyle">getItemStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListDataSource">getListDataSource</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListTextField">getListTextField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListTextFormatString">getListTextFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getListValueField">getListValueField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getOwner">getOwner</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_getReadOnly">getReadOnly</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getSortExpression">getSortExpression</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getVisible">getVisible</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initialize">initialize</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_initializeCell">initializeCell</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_loadState">loadState</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setDataTextField">setDataTextField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setDataTextFormatString">setDataTextFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setDataValueField">setDataValueField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setEnableCellGrouping">setEnableCellGrouping</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterRenderer">setFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterText">setFooterText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderImageUrl">setHeaderImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderRenderer">setHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderText">setHeaderText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListDataSource">setListDataSource</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListTextField">setListTextField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListTextFormatString">setListTextFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setListValueField">setListValueField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setOwner">setOwner</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDropDownListColumn.html#method_setReadOnly">setReadOnly</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setSortExpression">setSortExpression</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setVisible">setVisible</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_formatDataValue">formatDataValue</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getDataFieldValue">getDataFieldValue</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getViewState">getViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeCellRendererControl">initializeCellRendererControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeFooterCell">initializeFooterCell</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeHeaderCell">initializeHeaderCell</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setViewState">setViewState</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

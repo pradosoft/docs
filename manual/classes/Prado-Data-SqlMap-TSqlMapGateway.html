@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TSqlMapGateway &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,392 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-sqlmap.html">SqlMap</a>\<a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html">TSqlMapGateway</a>
+    </h1>
+
+    <div class="description">
+        DataMapper client, a fascade to provide access the rest of the DataMapper
+framework. It provides three core functions:
+        <h1>execute an update query (including insert and delete).</h1>
+<h1>execute a select query for a single object</h1>
+<h1>execute a select query for a list of objects</h1>
+<p>This class should be instantiated from a TSqlMapManager instance.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html">\Prado\Data\SqlMap\TSqlMapGateway</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\SqlMap<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/SqlMap/TSqlMapGateway.php"><abbr title="framework/Data/SqlMap/TSqlMapGateway.php">TSqlMapGateway.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$manager</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    The common __construct
+If desired by the new object, this will auto install and listen to global event functions
+as defined by the object via &#039;fx&#039; methods. This also attaches any predefined behaviors.
+                    <p>This function installs all class behaviors in a class hierarchy from the deepest subclass
+through each parent to the top most class, TComponent.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="delete" id="delete" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_delete"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_delete">delete</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Executes a Sql DELETE statement.  Delete returns the number of rows effected.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="flushCaches" id="flushCaches" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flushCaches"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_flushCaches">flushCaches</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Flushes all cached objects that belong to this SqlMap
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSqlMapManager" id="getSqlMapManager" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSqlMapManager"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_getSqlMapManager">getSqlMapManager</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-SqlMap-TSqlMapManager.html"><abbr title="\Prado\Data\SqlMap\TSqlMapManager">TSqlMapManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="insert" id="insert" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_insert"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_insert">insert</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Executes a Sql INSERT statement.
+                    <p>Insert is a bit different from other update methods, as it provides
+facilities for returning the primary key of the newly inserted row
+(rather than the effected rows),</p>
+<p>The parameter object is generally used to supply the input data for the
+INSERT values.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryForList" id="queryForList" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryForList"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForList">queryForList</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Collections-TList.html"><abbr title="\Prado\Collections\TList">TList</abbr></a>&nbsp;</span><var>$result</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$skip</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$max</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TList.html"><abbr title="\Prado\Collections\TList">TList</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Executes a Sql SELECT statement that returns data to populate a number
+of result objects.
+                    <p>The parameter object is generally used to supply the input
+data for the WHERE clause parameter(s) of the SELECT statement.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryForMap" id="queryForMap" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryForMap"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForMap">queryForMap</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$keyProperty</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$valueProperty</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$skip</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$max</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TMap.html"><abbr title="\Prado\Collections\TMap">TMap</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Executes the SQL and retuns all rows selected in a map that is keyed on
+the property named  in the keyProperty parameter.  The value at each key
+will be the value of the property specified in the valueProperty
+parameter.  If valueProperty is null, the entire result object will be
+entered.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryForMapWithRowDelegate" id="queryForMapWithRowDelegate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryForMapWithRowDelegate"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForMapWithRowDelegate">queryForMapWithRowDelegate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><var>$delegate</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$keyProperty</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$valueProperty</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$skip</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$max</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TMap.html"><abbr title="\Prado\Collections\TMap">TMap</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Runs a query with a custom object that gets a chance to deal
+with each row as it is processed.
+                    <p>Example: $sqlmap-&gt;queryForMapWithRowDelegate('getAccounts', array($this, 'rowHandler'));</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryForObject" id="queryForObject" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryForObject"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForObject">queryForObject</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$result</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>object</span>                </code>
+
+                <div class="description short">
+                    Executes a Sql SELECT statement that returns that returns data
+to populate a single object instance.
+                    <p>The parameter object is generally used to supply the input
+data for the WHERE clause parameter(s) of the SELECT statement.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryForPagedList" id="queryForPagedList" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryForPagedList"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForPagedList">queryForPagedList</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$pageSize</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$page</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TPagedList.html"><abbr title="\Prado\Collections\TPagedList">TPagedList</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Executes the SQL and retuns a subset of the results in a dynamic
+TPagedList that can be used to automatically scroll through results
+from a database table.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryForPagedListWithRowDelegate" id="queryForPagedListWithRowDelegate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryForPagedListWithRowDelegate"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForPagedListWithRowDelegate">queryForPagedListWithRowDelegate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><var>$delegate</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$pageSize</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$page</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TPagedList.html"><abbr title="\Prado\Collections\TPagedList">TPagedList</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Executes the SQL and retuns a subset of the results in a dynamic
+TPagedList that can be used to automatically scroll through results
+from a database table.
+                    <p>Runs paged list query with row delegate
+Example: $sqlmap-&gt;queryForPagedListWithRowDelegate('getAccounts', array($this, 'rowHandler'));</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryWithRowDelegate" id="queryWithRowDelegate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryWithRowDelegate"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryWithRowDelegate">queryWithRowDelegate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><var>$delegate</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Collections-TList.html"><abbr title="\Prado\Collections\TList">TList</abbr></a>&nbsp;</span><var>$result</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$skip</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$max</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">-1</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TList.html"><abbr title="\Prado\Collections\TList">TList</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Runs a query for list with a custom object that gets a chance to deal
+with each row as it is processed.
+                    <p>Example: $sqlmap-&gt;queryWithRowDelegate('getAccounts', array($this, 'rowHandler'));</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerTypeHandler" id="registerTypeHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerTypeHandler"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_registerTypeHandler">registerTypeHandler</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapTypeHandler.html"><abbr title="\Prado\Data\SqlMap\DataMapper\TSqlMapTypeHandler">TSqlMapTypeHandler</abbr></a>&nbsp;</span><var>$typeHandler</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="update" id="update" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_update"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_update">update</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$statementName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Executes a Sql UPDATE statement.
+                    <p>Update can also be used for any other update statement type, such as
+inserts and deletes.  Update returns the number of rows effected.</p>
+<p>The parameter object is generally used to supply the input data for the
+UPDATE values as well as the WHERE clause parameter(s).</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_delete">delete</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_flushCaches">flushCaches</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_getSqlMapManager">getSqlMapManager</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_insert">insert</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForList">queryForList</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForMap">queryForMap</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForMapWithRowDelegate">queryForMapWithRowDelegate</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForObject">queryForObject</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForPagedList">queryForPagedList</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryForPagedListWithRowDelegate">queryForPagedListWithRowDelegate</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_queryWithRowDelegate">queryWithRowDelegate</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_registerTypeHandler">registerTypeHandler</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Data-SqlMap-TSqlMapGateway.html#method_update">update</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

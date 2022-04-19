@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TPageStateFormatter &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,83 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="classes/Prado-Web-UI-TPageStateFormatter.html">TPageStateFormatter</a>
+    </h1>
+
+    <div class="description">
+        TPageStateFormatter class.
+        <p>TPageStateFormatter is a utility class to transform the page state
+into and from a string that can be properly saved in persistent storage.</p>
+<p>Depending on the <a href="TPage::getEnableStateValidation()">EnableStateValidation</a>
+and <a href="TPage::getEnableStateEncryption()">EnableStateEncryption</a>,
+TPageStateFormatter may do HMAC validation and encryption to prevent
+the state data from being tampered or viewed.
+The private keys and hashing/encryption methods are determined by
+<a href="TApplication::getSecurityManager()">SecurityManager</a>.</p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\Web\UI<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/TPageStateFormatter.php"><abbr title="framework/Web/UI/TPageStateFormatter.php">TPageStateFormatter.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="serialize" id="serialize" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_serialize"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TPageStateFormatter.html#method_serialize">serialize</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a>&nbsp;</span><var>$page</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="unserialize" id="unserialize" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_unserialize"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TPageStateFormatter.html#method_unserialize">unserialize</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a>&nbsp;</span><var>$page</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Web-UI-TPageStateFormatter.html#method_serialize">serialize</a>,                             <a href="classes/Prado-Web-UI-TPageStateFormatter.html#method_unserialize">unserialize</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

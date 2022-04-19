@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TActivePageAdapter &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,592 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-activecontrols.html">ActiveControls</a>\<a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html">TActivePageAdapter</a>
+    </h1>
+
+    <div class="description">
+        TActivePageAdapter class.
+        <p>Callback request handler.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html">\Prado\Web\UI\ActiveControls\TActivePageAdapter</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TControlAdapter.html">\Prado\Web\UI\TControlAdapter</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\ActiveControls<br/>
+                <b>Author:</b> <br/>
+            <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/ActiveControls/TActivePageAdapter.php"><abbr title="framework/Web/UI/ActiveControls/TActivePageAdapter.php">TActivePageAdapter.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a>&nbsp;</span><var>$control</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor, trap errors and exception to let the callback response
+handle them.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCallbackClientHandler" id="getCallbackClientHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCallbackClientHandler"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_getCallbackClientHandler">getCallbackClientHandler</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html"><abbr title="\Prado\Web\UI\ActiveControls\TCallbackClientScript">TCallbackClientScript</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Gets the callback client script handler. It handlers the javascript functions
+to be executed during the callback response.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCallbackEventParameter" id="getCallbackEventParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCallbackEventParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_getCallbackEventParameter">getCallbackEventParameter</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Gets callback parameter.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCallbackEventTarget" id="getCallbackEventTarget" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCallbackEventTarget"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_getCallbackEventTarget">getCallbackEventTarget</a><span>(</span><span>)</span><span> : </span><span>null|<a href="classes/Prado-Web-UI-ActiveControls-IActiveControl.html"><abbr title="\Prado\Web\UI\ActiveControls\IActiveControl">IActiveControl</abbr></a>|<a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="processCallbackEvent" id="processCallbackEvent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_processCallbackEvent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_processCallbackEvent">processCallbackEvent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Process the callback request.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerControlToRender" id="registerControlToRender" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerControlToRender"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_registerControlToRender">registerControlToRender</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Register a control for defered render() call.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderCallbackResponse" id="renderCallbackResponse" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderCallbackResponse"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_renderCallbackResponse">renderCallbackResponse</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Render the callback response.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCallbackEventParameter" id="setCallbackEventParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCallbackEventParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_setCallbackEventParameter">setCallbackEventParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCallbackEventTarget" id="setCallbackEventTarget" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCallbackEventTarget"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_setCallbackEventTarget">setCallbackEventTarget</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Registers a control to raise callback event in the current request.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="redirect" id="redirect" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_redirect"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_redirect">redirect</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$url</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Redirect url on the client-side using javascript.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderResponse" id="renderResponse" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderResponse"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_renderResponse">renderResponse</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the callback response by adding additional callback data and
+javascript actions in the header and page state if required.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="trapCallbackErrorsExceptions" id="trapCallbackErrorsExceptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_trapCallbackErrorsExceptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_trapCallbackErrorsExceptions">trapCallbackErrorsExceptions</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Trap errors and exceptions to be handled by TCallbackErrorHandler.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="appendContentPart" id="appendContentPart" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_appendContentPart"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_appendContentPart">appendContentPart</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$response</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$delimiter</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Appends data or javascript code to the body content surrounded with delimiters
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="raiseCallbackEvent" id="raiseCallbackEvent" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_raiseCallbackEvent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_raiseCallbackEvent">raiseCallbackEvent</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Trys to find the callback event handler and raise its callback event.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_createChildControls">createChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_getCallbackClientHandler">getCallbackClientHandler</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_getCallbackEventParameter">getCallbackEventParameter</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_getCallbackEventTarget">getCallbackEventTarget</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_getControl">getControl</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_getPage">getPage</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_loadState">loadState</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_onInit">onInit</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_onLoad">onLoad</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_onPreRender">onPreRender</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_onUnload">onUnload</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_processCallbackEvent">processCallbackEvent</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_registerControlToRender">registerControlToRender</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_render">render</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_renderCallbackResponse">renderCallbackResponse</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_renderChildren">renderChildren</a>,                             <a href="classes/Prado-Web-UI-TControlAdapter.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_setCallbackEventParameter">setCallbackEventParameter</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_setCallbackEventTarget">setCallbackEventTarget</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_redirect">redirect</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_renderResponse">renderResponse</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_trapCallbackErrorsExceptions">trapCallbackErrorsExceptions</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_appendContentPart">appendContentPart</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#method_raiseCallbackEvent">raiseCallbackEvent</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="CALLBACK_ACTION_HEADER" id="CALLBACK_ACTION_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_ACTION_HEADER"><b>CALLBACK_ACTION_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Callback response client-side action header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-ACTIONS&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_DATA_HEADER" id="CALLBACK_DATA_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_DATA_HEADER"><b>CALLBACK_DATA_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Callback response data header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-DATA&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_DEBUG_HEADER" id="CALLBACK_DEBUG_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_DEBUG_HEADER"><b>CALLBACK_DEBUG_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Callback error header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-DEBUG&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_ERROR_HEADER" id="CALLBACK_ERROR_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_ERROR_HEADER"><b>CALLBACK_ERROR_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Callback error header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-ERROR&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_HIDDENFIELDLIST_HEADER" id="CALLBACK_HIDDENFIELDLIST_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_HIDDENFIELDLIST_HEADER"><b>CALLBACK_HIDDENFIELDLIST_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Hidden field list header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-HIDDENFIELDLIST&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_PAGESTATE_HEADER" id="CALLBACK_PAGESTATE_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_PAGESTATE_HEADER"><b>CALLBACK_PAGESTATE_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Callback page state header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-PAGESTATE&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_REDIRECT" id="CALLBACK_REDIRECT" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_REDIRECT"><b>CALLBACK_REDIRECT</b></a>
+            </code>
+
+            <div class="description short">
+                Callback redirect url header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-REDIRECT&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_SCRIPTLIST_HEADER" id="CALLBACK_SCRIPTLIST_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_SCRIPTLIST_HEADER"><b>CALLBACK_SCRIPTLIST_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Script list header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-SCRIPTLIST&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_STYLESHEET_HEADER" id="CALLBACK_STYLESHEET_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_STYLESHEET_HEADER"><b>CALLBACK_STYLESHEET_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Stylesheet header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-STYLESHEET&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CALLBACK_STYLESHEETLIST_HEADER" id="CALLBACK_STYLESHEETLIST_HEADER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CALLBACK_STYLESHEETLIST_HEADER"><b>CALLBACK_STYLESHEETLIST_HEADER</b></a>
+            </code>
+
+            <div class="description short">
+                Stylesheet list header name.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;X-PRADO-STYLESHEETLIST&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_ACTION_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_ACTION_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_DATA_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_DATA_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_DEBUG_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_DEBUG_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_ERROR_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_ERROR_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_HIDDENFIELDLIST_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_HIDDENFIELDLIST_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_PAGESTATE_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_PAGESTATE_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_REDIRECT"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_REDIRECT</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_SCRIPTLIST_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_SCRIPTLIST_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_STYLESHEET_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_STYLESHEET_HEADER</b></a>,                                     <a href="classes/Prado-Web-UI-ActiveControls-TActivePageAdapter.html#constant_CALLBACK_STYLESHEETLIST_HEADER"><b>\Prado\Web\UI\ActiveControls\TActivePageAdapter::CALLBACK_STYLESHEETLIST_HEADER</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

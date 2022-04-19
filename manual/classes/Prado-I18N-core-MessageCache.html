@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    MessageCache &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,215 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-i18n.html">I18N</a>\<a href="namespaces/prado-i18n-core.html">core</a>\<a href="classes/Prado-I18N-core-MessageCache.html">MessageCache</a>
+    </h1>
+
+    <div class="description">
+        Cache the translation table into the file system.
+        <p>It can cache each cataloug+variant or just the whole section.</p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\I18N\core<br/>
+                <b>Author:</b> <br/>
+                        <b>Located at:</b> <a href="framework/I18N/core/MessageCache.php"><abbr title="framework/I18N/core/MessageCache.php">MessageCache.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$cacheDir</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Create a new Translation cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clean" id="clean" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clean"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_clean">clean</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$culture</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clean up the cache for the specified section and locale.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clear" id="clear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clear"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_clear">clear</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Flush the cache. Deletes all the cache files.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="get" id="get" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_get"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_get">get</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$culture</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$lastmodified</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Get the data from the cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLifeTime" id="getLifeTime" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLifeTime"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_getLifeTime">getLifeTime</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Get the cache life time.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="save" id="save" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_save"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_save">save</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$culture</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Save the data to cache for the specified section and locale.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setLifeTime" id="setLifeTime" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setLifeTime"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_setLifeTime">setLifeTime</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$time</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set the cache life time.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getGroup" id="getGroup" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getGroup"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_getGroup">getGroup</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$culture</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Get the cache file GROUP based section and locale.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getID" id="getID" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getID"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageCache.html#method_getID">getID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$culture</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Get the cache file ID based section and locale.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-I18N-core-MessageCache.html#method___construct">__construct</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_clean">clean</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_clear">clear</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_get">get</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_getLifeTime">getLifeTime</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_save">save</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_setLifeTime">setLifeTime</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_getGroup">getGroup</a>,                             <a href="classes/Prado-I18N-core-MessageCache.html#method_getID">getID</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

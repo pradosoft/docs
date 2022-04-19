@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TWebControlDecorator &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,593 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html">TWebControlDecorator</a>
+    </h1>
+
+    <div class="description">
+        TWebControlDecorator class
+        <p>A TWebControlDecorator can be applied to a <a href="TWebControl"></a> to customize its rendering.
+TWebControlDecorator can add custom html code before and after both the open and close
+tag of a <a href="TWebControl"></a>.
+The html code can be an user-defined text or an external template file that will be
+instantiated and rendered in place.</p>
+<p>This is an easy way to have your look and feel depend upon the theme instead of writing
+specific html in your templates to achieve your website desires.
+Here is an example of how to code your theme skin:
+<code class="prettyprint">
+<a href="com:THeader3">com:THeader3</a>
+<a href="prop:Decorator.PreTagText">prop:Decorator.PreTagText</a>
+<!-- Surround the control with a div and apply a css class to it -->
+<div class="imported-theme-h3-container">
+&lt;/prop:Decorator.PreTagText&gt;
+<a href="prop:Decorator.PostTagText">prop:Decorator.PostTagText</a>
+<!-- Properly close the tag -->
+</div>
+&lt;/prop:Decorator.PostTagText&gt;
+&lt;/com:THeader3&gt;
+</code></p>
+<p>The order of the inclusion of the decoration into the page goes like this:</p>
+<ul>
+<li>PreTagTemplate</li>
+<li>PreTagText</li>
+<li>TWebControl Open Tag Rendered</li>
+<li>PreContentsText</li>
+<li>PreContentsTemplate</li>
+<li>TWebControl Children Rendered</li>
+<li>PostContentsTemplate</li>
+<li>PostContentsText</li>
+<li>TWebControl CloseTag Rendered</li>
+<li>PostTagText</li>
+<li>PostTagTemplate</li>
+</ul>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html">\Prado\Web\UI\WebControls\TWebControlDecorator</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.2<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/TWebControlDecorator.php"><abbr title="framework/Web/UI/WebControls/TWebControlDecorator.php">TWebControlDecorator.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TWebControl.html"><abbr title="\Prado\Web\UI\WebControls\TWebControl">TWebControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$onlyinternal</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    <p>Initializes the control .</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureTemplateDecoration" id="ensureTemplateDecoration" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureTemplateDecoration"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_ensureTemplateDecoration">ensureTemplateDecoration</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-TComponent.html"><abbr title="\Prado\TComponent">TComponent</abbr></a>&nbsp;</span><var>$sender</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$param</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This method places the templates around the open and close tag.  This takes a parameter which is
+to specify the control to get the outer template decoration.  If no outer control is specified
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostContentsTemplate" id="getPostContentsTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostContentsTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostContentsTemplate">getPostContentsTemplate</a><span>(</span><span>)</span><span> : </span><span>null|<a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostContentsText" id="getPostContentsText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostContentsText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostContentsText">getPostContentsText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostTagTemplate" id="getPostTagTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostTagTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostTagTemplate">getPostTagTemplate</a><span>(</span><span>)</span><span> : </span><span>null|<a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostTagText" id="getPostTagText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostTagText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostTagText">getPostTagText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPreContentsTemplate" id="getPreContentsTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPreContentsTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreContentsTemplate">getPreContentsTemplate</a><span>(</span><span>)</span><span> : </span><span>null|<a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPreContentsText" id="getPreContentsText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPreContentsText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreContentsText">getPreContentsText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPreTagTemplate" id="getPreTagTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPreTagTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreTagTemplate">getPreTagTemplate</a><span>(</span><span>)</span><span> : </span><span>null|<a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPreTagText" id="getPreTagText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPreTagText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreTagText">getPreTagText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUseState" id="getUseState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUseState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getUseState">getUseState</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="instantiate" id="instantiate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_instantiate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_instantiate">instantiate</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$outercontrol</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This is a framework call.  The Text decoration can&#039;t
+influence the object hierarchy because they are rendered into into the writer directly.
+                    <p>This call attaches the ensureTemplateDecoration to the TPage onSaveStateComplete so
+these controls don't have page states.  This is as close to not influencing the page as possible.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderPostContentsText" id="renderPostContentsText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderPostContentsText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPostContentsText">renderPostContentsText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-IO-TTextWriter.html"><abbr title="\Prado\IO\TTextWriter">TTextWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method places the post contents text into the {@link TTextWriter}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderPostTagText" id="renderPostTagText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderPostTagText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPostTagText">renderPostTagText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-IO-TTextWriter.html"><abbr title="\Prado\IO\TTextWriter">TTextWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method places the post tag text into the {@link TTextWriter}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderPreContentsText" id="renderPreContentsText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderPreContentsText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPreContentsText">renderPreContentsText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-IO-TTextWriter.html"><abbr title="\Prado\IO\TTextWriter">TTextWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method places the pre contents text into the {@link TTextWriter}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderPreTagText" id="renderPreTagText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderPreTagText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPreTagText">renderPreTagText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-IO-TTextWriter.html"><abbr title="\Prado\IO\TTextWriter">TTextWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method places the pre tag text into the {@link TTextWriter}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPostContentsTemplate" id="setPostContentsTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPostContentsTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostContentsTemplate">setPostContentsTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPostContentsText" id="setPostContentsText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPostContentsText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostContentsText">setPostContentsText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPostTagTemplate" id="setPostTagTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPostTagTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostTagTemplate">setPostTagTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPostTagText" id="setPostTagText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPostTagText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostTagText">setPostTagText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPreContentsTemplate" id="setPreContentsTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPreContentsTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreContentsTemplate">setPreContentsTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPreContentsText" id="setPreContentsText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPreContentsText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreContentsText">setPreContentsText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPreTagTemplate" id="setPreTagTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPreTagTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreTagTemplate">setPreTagTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TTemplate.html"><abbr title="\Prado\Web\UI\TTemplate">TTemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPreTagText" id="setPreTagText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPreTagText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreTagText">setPreTagText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUseState" id="setUseState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUseState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setUseState">setUseState</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_ensureTemplateDecoration">ensureTemplateDecoration</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostContentsTemplate">getPostContentsTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostContentsText">getPostContentsText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostTagTemplate">getPostTagTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPostTagText">getPostTagText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreContentsTemplate">getPreContentsTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreContentsText">getPreContentsText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreTagTemplate">getPreTagTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getPreTagText">getPreTagText</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_getUseState">getUseState</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_instantiate">instantiate</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPostContentsText">renderPostContentsText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPostTagText">renderPostTagText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPreContentsText">renderPreContentsText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPreTagText">renderPreTagText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostContentsTemplate">setPostContentsTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostContentsText">setPostContentsText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostTagTemplate">setPostTagTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPostTagText">setPostTagText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreContentsTemplate">setPreContentsTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreContentsText">setPreContentsText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreTagTemplate">setPreTagTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setPreTagText">setPreTagText</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_setUseState">setUseState</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

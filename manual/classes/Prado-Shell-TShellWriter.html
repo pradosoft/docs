@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TShellWriter &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1896 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-shell.html">Shell</a>\<a href="classes/Prado-Shell-TShellWriter.html">TShellWriter</a>
+    </h1>
+
+    <div class="description">
+        TShellWriter class.
+        <p>Similar to the <a href="THtmlWriter"></a>, the TShellWriter writes and formats text
+with color, and processes other commands to the terminal to another ITextWriter.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Shell-TShellWriter.html">\Prado\Shell\TShellWriter</a>
+                    implements
+                            <a href="classes/Prado-IO-ITextWriter.html">\Prado\IO\ITextWriter</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Shell<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.2.0<br/>
+                    <b>Located at:</b> <a href="framework/Shell/TShellWriter.php"><abbr title="framework/Shell/TShellWriter.php">TShellWriter.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-IO-ITextWriter.html"><abbr title="\Prado\IO\ITextWriter">ITextWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearLine" id="clearLine" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearLine"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_clearLine">clearLine</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears the line, the cursor is currently on by sending ANSI control code EL with argument 2 to the terminal.
+                    <p>Cursor position will not be changed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearLineAfterCursor" id="clearLineAfterCursor" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearLineAfterCursor"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_clearLineAfterCursor">clearLineAfterCursor</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears text from cursor position to the end of the line by sending ANSI control code EL with argument 0 to the terminal.
+                    <p>Cursor position will not be changed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearLineBeforeCursor" id="clearLineBeforeCursor" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearLineBeforeCursor"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_clearLineBeforeCursor">clearLineBeforeCursor</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears text from cursor position to the beginning of the line by sending ANSI control code EL with argument 1 to the terminal.
+                    <p>Cursor position will not be changed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearScreen" id="clearScreen" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearScreen"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_clearScreen">clearScreen</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears entire screen content by sending ANSI control code ED with argument 2 to the terminal.
+                    <p>Cursor position will not be changed.
+<strong>Note:</strong> ANSI.SYS implementation used in windows will reset cursor position to upper left corner of the screen.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearScreenAfterCursor" id="clearScreenAfterCursor" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearScreenAfterCursor"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_clearScreenAfterCursor">clearScreenAfterCursor</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears text from cursor to the end of the screen by sending ANSI control code ED with argument 0 to the terminal.
+                    <p>Cursor position will not be changed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearScreenBeforeCursor" id="clearScreenBeforeCursor" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearScreenBeforeCursor"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_clearScreenBeforeCursor">clearScreenBeforeCursor</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears text from cursor to the beginning of the screen by sending ANSI control code ED with argument 1 to the terminal.
+                    <p>Cursor position will not be changed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="flush" id="flush" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flush"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_flush">flush</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Flushes the rendering result.
+                    <p>This will invoke the underlying writer's flush method.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="format" id="format" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_format"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_format">format</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$str</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|array&lt;string|int, string&gt;&nbsp;</span><var>$attr</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getColorSupported" id="getColorSupported" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getColorSupported"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_getColorSupported">getColorSupported</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getScreenSize" id="getScreenSize" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getScreenSize"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_getScreenSize">getScreenSize</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$refresh</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;|bool</span>                </code>
+
+                <div class="description short">
+                    Returns terminal screen size.
+                    <p>Usage:</p>
+<code class="prettyprint">
+[$width, $height] = TShellWriter::getScreenSize();
+</code>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getWriter" id="getWriter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getWriter"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_getWriter">getWriter</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-IO-ITextWriter.html"><abbr title="\Prado\IO\ITextWriter">ITextWriter</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hideCursor" id="hideCursor" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hideCursor"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_hideCursor">hideCursor</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Hides the cursor by sending ANSI DECTCEM code ?25l to the terminal.
+                    <p>Use <a href="showCursor"></a> to bring it back.
+Do not forget to show cursor when your application exits. Cursor might stay hidden in terminal after exit.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isRunningOnWindows" id="isRunningOnWindows" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isRunningOnWindows"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_isRunningOnWindows">isRunningOnWindows</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Returns true if the console is running on windows.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="moveCursorBackward" id="moveCursorBackward" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_moveCursorBackward"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorBackward">moveCursorBackward</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$steps</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Moves the terminal cursor backward by sending ANSI control code CUB to the terminal.
+                    <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="moveCursorDown" id="moveCursorDown" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_moveCursorDown"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorDown">moveCursorDown</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$rows</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Moves the terminal cursor down by sending ANSI control code CUD to the terminal.
+                    <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="moveCursorForward" id="moveCursorForward" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_moveCursorForward"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorForward">moveCursorForward</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$steps</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Moves the terminal cursor forward by sending ANSI control code CUF to the terminal.
+                    <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="moveCursorNextLine" id="moveCursorNextLine" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_moveCursorNextLine"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorNextLine">moveCursorNextLine</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$lines</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Moves the terminal cursor to the beginning of the next line by sending ANSI control code CNL to the terminal.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="moveCursorPrevLine" id="moveCursorPrevLine" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_moveCursorPrevLine"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorPrevLine">moveCursorPrevLine</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$lines</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Moves the terminal cursor to the beginning of the previous line by sending ANSI control code CPL to the terminal.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="moveCursorTo" id="moveCursorTo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_moveCursorTo"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorTo">moveCursorTo</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$column</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$row</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Moves the cursor to an absolute position given as column and row by sending ANSI control code CUP or CHA to the terminal.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="moveCursorUp" id="moveCursorUp" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_moveCursorUp"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorUp">moveCursorUp</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$rows</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Moves the terminal cursor up by sending ANSI control code CUU to the terminal.
+                    <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="pad" id="pad" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_pad"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_pad">pad</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$str</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$len</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$pad</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039; &#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$place</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">STR_PAD_RIGHT</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="restoreCursorPosition" id="restoreCursorPosition" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_restoreCursorPosition"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_restoreCursorPosition">restoreCursorPosition</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Restores the cursor position saved with {@link saveCursorPosition} by sending ANSI control code RCP to the terminal.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="saveCursorPosition" id="saveCursorPosition" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_saveCursorPosition"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_saveCursorPosition">saveCursorPosition</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Saves the current cursor position by sending ANSI control code SCP to the terminal.
+                    <p>Position can then be restored with <a href="restoreCursorPosition"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="scrollDown" id="scrollDown" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_scrollDown"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_scrollDown">scrollDown</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$lines</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Scrolls whole page down by sending ANSI control code SD to the terminal.
+                    <p>New lines are added at the top. This is not supported by ANSI.SYS used in windows.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="scrollUp" id="scrollUp" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_scrollUp"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_scrollUp">scrollUp</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$lines</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">1</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Scrolls whole page up by sending ANSI control code SU to the terminal.
+                    <p>New lines are added at the bottom. This is not supported by ANSI.SYS used in windows.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setColorSupported" id="setColorSupported" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setColorSupported"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_setColorSupported">setColorSupported</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$color</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setWriter" id="setWriter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setWriter"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_setWriter">setWriter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-IO-ITextWriter.html"><abbr title="\Prado\IO\ITextWriter">ITextWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="showCursor" id="showCursor" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_showCursor"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_showCursor">showCursor</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Will show a cursor again when it has been hidden by {@link hideCursor}  by sending ANSI DECTCEM code ?25h to the terminal.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="tableWidget" id="tableWidget" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_tableWidget"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_tableWidget">tableWidget</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$table</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    renders a table widget.
+                    <code class="prettyprint">
+ $writer->tableWidget(
+	'headers' => ['title 1', 'title 2', 'count'],
+	'rows' => [['a', 'b', 1], ['s', 't', 2], ['c', 'd', 3], ['e', 'f', 10],
+		['span' => 'text spanning all columns']]
+);
+</code>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="unformat" id="unformat" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_unformat"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_unformat">unformat</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$str</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    removes ANSI formatting
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="wrapText" id="wrapText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_wrapText"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_wrapText">wrapText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$text</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$indent</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$refresh</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Word wrap text with indentation to fit the screen size.
+                    <p>If screen size could not be detected, or the indentation is greater than the screen size, the text will not be wrapped.</p>
+<p>The first line will <strong>not</strong> be indented, so <code class="prettyprint">TShellWriter::wrapText(&quot;Lorem ipsum dolor sit amet.&quot;, 4)</code> will result in the
+following output, given the screen width is 16 characters:</p>
+<code class="prettyprint">
+Lorem ipsum
+    dolor sit
+    amet.
+</code>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="write" id="write" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_write"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_write">write</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$str</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$attr</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders a string.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="writeError" id="writeError" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_writeError"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_writeError">writeError</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$text</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Writes an error block to the writer with color
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="writeLine" id="writeLine" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_writeLine"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_writeLine">writeLine</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$str</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$attr</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders a string and appends a newline to it.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isColorSupported" id="isColorSupported" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isColorSupported"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellWriter.html#method_isColorSupported">isColorSupported</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    is color TTY supported
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_clearLine">clearLine</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_clearLineAfterCursor">clearLineAfterCursor</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_clearLineBeforeCursor">clearLineBeforeCursor</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_clearScreen">clearScreen</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_clearScreenAfterCursor">clearScreenAfterCursor</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_clearScreenBeforeCursor">clearScreenBeforeCursor</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_flush">flush</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_format">format</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_getColorSupported">getColorSupported</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_getScreenSize">getScreenSize</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_getWriter">getWriter</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_hideCursor">hideCursor</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_isRunningOnWindows">isRunningOnWindows</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorBackward">moveCursorBackward</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorDown">moveCursorDown</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorForward">moveCursorForward</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorNextLine">moveCursorNextLine</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorPrevLine">moveCursorPrevLine</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorTo">moveCursorTo</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_moveCursorUp">moveCursorUp</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_pad">pad</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_restoreCursorPosition">restoreCursorPosition</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_saveCursorPosition">saveCursorPosition</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_scrollDown">scrollDown</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_scrollUp">scrollUp</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_setColorSupported">setColorSupported</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_setWriter">setWriter</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_showCursor">showCursor</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_tableWidget">tableWidget</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_unformat">unformat</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_wrapText">wrapText</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_write">write</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_writeError">writeError</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_writeLine">writeLine</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Shell-TShellWriter.html#method_isColorSupported">isColorSupported</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="BG_BLACK" id="BG_BLACK" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_BLACK"><b>BG_BLACK</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>40</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_BLUE" id="BG_BLUE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_BLUE"><b>BG_BLUE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>44</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_CYAN" id="BG_CYAN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_CYAN"><b>BG_CYAN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>46</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_DARK_GRAY" id="BG_DARK_GRAY" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_DARK_GRAY"><b>BG_DARK_GRAY</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>100</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_DEFAULT" id="BG_DEFAULT" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_DEFAULT"><b>BG_DEFAULT</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>49</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_GREEN" id="BG_GREEN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_GREEN"><b>BG_GREEN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>42</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_LIGHT_BLUE" id="BG_LIGHT_BLUE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_LIGHT_BLUE"><b>BG_LIGHT_BLUE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>104</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_LIGHT_CYAN" id="BG_LIGHT_CYAN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_LIGHT_CYAN"><b>BG_LIGHT_CYAN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>106</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_LIGHT_GRAY" id="BG_LIGHT_GRAY" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_LIGHT_GRAY"><b>BG_LIGHT_GRAY</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>47</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_LIGHT_GREEN" id="BG_LIGHT_GREEN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_LIGHT_GREEN"><b>BG_LIGHT_GREEN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>102</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_LIGHT_MAGENTA" id="BG_LIGHT_MAGENTA" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_LIGHT_MAGENTA"><b>BG_LIGHT_MAGENTA</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>105</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_LIGHT_RED" id="BG_LIGHT_RED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_LIGHT_RED"><b>BG_LIGHT_RED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>101</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_LIGHT_YELLOW" id="BG_LIGHT_YELLOW" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_LIGHT_YELLOW"><b>BG_LIGHT_YELLOW</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>103</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_MAGENTA" id="BG_MAGENTA" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_MAGENTA"><b>BG_MAGENTA</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>45</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_RED" id="BG_RED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_RED"><b>BG_RED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>41</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_WHITE" id="BG_WHITE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_WHITE"><b>BG_WHITE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>107</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BG_YELLOW" id="BG_YELLOW" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BG_YELLOW"><b>BG_YELLOW</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>43</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BLACK" id="BLACK" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BLACK"><b>BLACK</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>30</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BLINK" id="BLINK" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BLINK"><b>BLINK</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>5</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BLUE" id="BLUE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BLUE"><b>BLUE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>34</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="BOLD" id="BOLD" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_BOLD"><b>BOLD</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>1</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONCEALED" id="CONCEALED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONCEALED"><b>CONCEALED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>8</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CROSSED" id="CROSSED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CROSSED"><b>CROSSED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>9</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CYAN" id="CYAN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CYAN"><b>CYAN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>36</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DARK" id="DARK" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DARK"><b>DARK</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>2</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DARK_GRAY" id="DARK_GRAY" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DARK_GRAY"><b>DARK_GRAY</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>90</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DEFAULT" id="DEFAULT" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DEFAULT"><b>DEFAULT</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>39</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="ENCIRCLED" id="ENCIRCLED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_ENCIRCLED"><b>ENCIRCLED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>52</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="FRAMED" id="FRAMED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_FRAMED"><b>FRAMED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>51</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="GREEN" id="GREEN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_GREEN"><b>GREEN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>32</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="ITALIC" id="ITALIC" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_ITALIC"><b>ITALIC</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>3</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="LIGHT_BLUE" id="LIGHT_BLUE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_LIGHT_BLUE"><b>LIGHT_BLUE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>94</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="LIGHT_CYAN" id="LIGHT_CYAN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_LIGHT_CYAN"><b>LIGHT_CYAN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>96</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="LIGHT_GRAY" id="LIGHT_GRAY" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_LIGHT_GRAY"><b>LIGHT_GRAY</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>37</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="LIGHT_GREEN" id="LIGHT_GREEN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_LIGHT_GREEN"><b>LIGHT_GREEN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>92</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="LIGHT_MAGENTA" id="LIGHT_MAGENTA" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_LIGHT_MAGENTA"><b>LIGHT_MAGENTA</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>95</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="LIGHT_RED" id="LIGHT_RED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_LIGHT_RED"><b>LIGHT_RED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>91</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="LIGHT_YELLOW" id="LIGHT_YELLOW" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_LIGHT_YELLOW"><b>LIGHT_YELLOW</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>93</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="MAGENTA" id="MAGENTA" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_MAGENTA"><b>MAGENTA</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>35</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="OVERLINED" id="OVERLINED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_OVERLINED"><b>OVERLINED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>53</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="RED" id="RED" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_RED"><b>RED</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>31</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="REVERSE" id="REVERSE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_REVERSE"><b>REVERSE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>7</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="UNDERLINE" id="UNDERLINE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_UNDERLINE"><b>UNDERLINE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>4</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="WHITE" id="WHITE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_WHITE"><b>WHITE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>97</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="YELLOW" id="YELLOW" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_YELLOW"><b>YELLOW</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>33</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_BLACK"><b>\Prado\Shell\TShellWriter::BG_BLACK</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_BLUE"><b>\Prado\Shell\TShellWriter::BG_BLUE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_CYAN"><b>\Prado\Shell\TShellWriter::BG_CYAN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_DARK_GRAY"><b>\Prado\Shell\TShellWriter::BG_DARK_GRAY</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_DEFAULT"><b>\Prado\Shell\TShellWriter::BG_DEFAULT</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_GREEN"><b>\Prado\Shell\TShellWriter::BG_GREEN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_LIGHT_BLUE"><b>\Prado\Shell\TShellWriter::BG_LIGHT_BLUE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_LIGHT_CYAN"><b>\Prado\Shell\TShellWriter::BG_LIGHT_CYAN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_LIGHT_GRAY"><b>\Prado\Shell\TShellWriter::BG_LIGHT_GRAY</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_LIGHT_GREEN"><b>\Prado\Shell\TShellWriter::BG_LIGHT_GREEN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_LIGHT_MAGENTA"><b>\Prado\Shell\TShellWriter::BG_LIGHT_MAGENTA</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_LIGHT_RED"><b>\Prado\Shell\TShellWriter::BG_LIGHT_RED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_LIGHT_YELLOW"><b>\Prado\Shell\TShellWriter::BG_LIGHT_YELLOW</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_MAGENTA"><b>\Prado\Shell\TShellWriter::BG_MAGENTA</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_RED"><b>\Prado\Shell\TShellWriter::BG_RED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_WHITE"><b>\Prado\Shell\TShellWriter::BG_WHITE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BG_YELLOW"><b>\Prado\Shell\TShellWriter::BG_YELLOW</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BLACK"><b>\Prado\Shell\TShellWriter::BLACK</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BLINK"><b>\Prado\Shell\TShellWriter::BLINK</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BLUE"><b>\Prado\Shell\TShellWriter::BLUE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_BOLD"><b>\Prado\Shell\TShellWriter::BOLD</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_CONCEALED"><b>\Prado\Shell\TShellWriter::CONCEALED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_CROSSED"><b>\Prado\Shell\TShellWriter::CROSSED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_CYAN"><b>\Prado\Shell\TShellWriter::CYAN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_DARK"><b>\Prado\Shell\TShellWriter::DARK</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_DARK_GRAY"><b>\Prado\Shell\TShellWriter::DARK_GRAY</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_DEFAULT"><b>\Prado\Shell\TShellWriter::DEFAULT</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_ENCIRCLED"><b>\Prado\Shell\TShellWriter::ENCIRCLED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_FRAMED"><b>\Prado\Shell\TShellWriter::FRAMED</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_GREEN"><b>\Prado\Shell\TShellWriter::GREEN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_ITALIC"><b>\Prado\Shell\TShellWriter::ITALIC</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_LIGHT_BLUE"><b>\Prado\Shell\TShellWriter::LIGHT_BLUE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_LIGHT_CYAN"><b>\Prado\Shell\TShellWriter::LIGHT_CYAN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_LIGHT_GRAY"><b>\Prado\Shell\TShellWriter::LIGHT_GRAY</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_LIGHT_GREEN"><b>\Prado\Shell\TShellWriter::LIGHT_GREEN</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_LIGHT_MAGENTA"><b>\Prado\Shell\TShellWriter::LIGHT_MAGENTA</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_LIGHT_RED"><b>\Prado\Shell\TShellWriter::LIGHT_RED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_LIGHT_YELLOW"><b>\Prado\Shell\TShellWriter::LIGHT_YELLOW</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_MAGENTA"><b>\Prado\Shell\TShellWriter::MAGENTA</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_OVERLINED"><b>\Prado\Shell\TShellWriter::OVERLINED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_RED"><b>\Prado\Shell\TShellWriter::RED</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_REVERSE"><b>\Prado\Shell\TShellWriter::REVERSE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_UNDERLINE"><b>\Prado\Shell\TShellWriter::UNDERLINE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_WHITE"><b>\Prado\Shell\TShellWriter::WHITE</b></a>,                                     <a href="classes/Prado-Shell-TShellWriter.html#constant_YELLOW"><b>\Prado\Shell\TShellWriter::YELLOW</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

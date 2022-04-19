@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDataFieldAccessor &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,81 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="classes/Prado-Util-TDataFieldAccessor.html">TDataFieldAccessor</a>
+    </h1>
+
+    <div class="description">
+        TDataFieldAccessor class
+        <p>TDataFieldAccessor is a utility class that provides access to a field of some data.
+The accessor attempts to obtain the field value in the following order:</p>
+<ul>
+<li>If the data is an array, then the field is treated as an array index
+and the corresponding element value is returned;</li>
+<li>If the data is a TMap or TList object, then the field is treated as a key
+into the map or list, and the corresponding value is returned.</li>
+<li>If the data is an object, the field is treated as a property or sub-property
+defined with getter methods. For example, if the object has a method called
+getMyValue(), then field 'MyValue' will retrieve the result of this method call.
+If getMyValue() returns an object which contains a method getMySubValue(),
+then field 'MyValue.MySubValue' will return that method call result.</li>
+</ul>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\Util<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/TDataFieldAccessor.php"><abbr title="framework/Util/TDataFieldAccessor.php">TDataFieldAccessor.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getDataFieldValue" id="getDataFieldValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataFieldValue"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDataFieldAccessor.html#method_getDataFieldValue">getDataFieldValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$field</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Evaluates the data value at the specified field.
+                    <ul>
+<li>If the data is an array, then the field is treated as an array index
+and the corresponding element value is returned; the field name can also include
+dots to access subarrays. For example a field named 'MyField.MySubField' will
+first try to access $data['MyField.MySubField'], then try $data['MyField']['MySubField'].</li>
+<li>If the data is a TMap or TList object, then the field is treated as a key
+into the map or list, and the corresponding value is returned.</li>
+<li>If the data is an object, the field is treated as a property or sub-property
+defined with getter methods. For example, if the object has a method called
+getMyValue(), then field 'MyValue' will retrieve the result of this method call.
+If getMyValue() returns an object which contains a method getMySubValue(),
+then field 'MyValue.MySubValue' will return that method call result.</li>
+</ul>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Util-TDataFieldAccessor.html#method_getDataFieldValue">getDataFieldValue</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TLogger &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,405 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="classes/Prado-Util-TLogger.html">TLogger</a>
+    </h1>
+
+    <div class="description">
+        TLogger class.
+        <p>TLogger records log messages in memory and implements the methods to
+retrieve the messages with filter conditions, including log levels,
+log categories, and by control.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Util-TLogger.html">\Prado\Util\TLogger</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Util<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/TLogger.php"><abbr title="framework/Util/TLogger.php">TLogger.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="deleteLogs" id="deleteLogs" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_deleteLogs"></a>
+                <code>
+                    <a href="classes/Prado-Util-TLogger.html#method_deleteLogs">deleteLogs</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$levels</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;&nbsp;</span><var>$categories</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;&nbsp;</span><var>$controls</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$timestamp</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Deletes log messages from the queue.
+                    <p>Messages may be filtered by log levels and/or categories and/or control client ids and/or timestamp.
+A level filter is specified by an integer, whose bits indicate the levels interested.
+For example, (TLogger::INFO | TLogger::WARNING) specifies INFO and WARNING levels.
+A category filter is specified by an array of categories to filter.
+A message whose category name starts with any filtering category
+will be deleted. For example, a category filter array('Prado\Web','Prado\IO')
+will delete messages under categories such as 'Prado\Web', 'Prado\IO',
+'Prado\Web\UI', 'Prado\Web\UI\WebControls', etc.
+A control client id filter is specified by an array of control client id
+A message whose control client id starts with any filtering naming panels
+will be deleted. For example, a category filter array('ctl0_body_header',
+'ctl0_body_content_sidebar')
+will delete messages under categories such as 'ctl0_body_header', 'ctl0_body_content_sidebar',
+'ctl0_body_header_title', 'ctl0_body_content_sidebar_savebutton', etc.
+A timestamp filter is specified as an interger or float number.
+A message whose registered timestamp is less or equal the filter value will be returned.
+Level filter, category filter, control filter and timestamp filter are combinational, i.e., only messages
+satisfying all filter conditions will they be returned.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLogs" id="getLogs" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLogs"></a>
+                <code>
+                    <a href="classes/Prado-Util-TLogger.html#method_getLogs">getLogs</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$levels</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;&nbsp;</span><var>$categories</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;&nbsp;</span><var>$controls</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$timestamp</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Retrieves log messages.
+                    <p>Messages may be filtered by log levels and/or categories and/or control client ids and/or timestamp.
+A level filter is specified by an integer, whose bits indicate the levels interested.
+For example, (TLogger::INFO | TLogger::WARNING) specifies INFO and WARNING levels.
+A category filter is specified by an array of categories to filter.
+A message whose category name starts with any filtering category
+will be returned. For example, a category filter array('Prado\Web','Prado\IO')
+will return messages under categories such as 'Prado\Web', 'Prado\IO',
+'Prado\Web\UI', 'Prado\Web\UI\WebControls', etc.
+A control client id filter is specified by an array of control client id
+A message whose control client id starts with any filtering naming panels
+will be returned. For example, a category filter array('ctl0_body_header',
+'ctl0_body_content_sidebar')
+will return messages under categories such as 'ctl0_body_header', 'ctl0_body_content_sidebar',
+'ctl0_body_header_title', 'ctl0_body_content_sidebar_savebutton', etc.
+A timestamp filter is specified as an interger or float number.
+A message whose registered timestamp is less or equal the filter value will be returned.
+Level filter, category filter, control filter and timestamp filter are combinational, i.e., only messages
+satisfying all filter conditions will they be returned.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="log" id="log" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_log"></a>
+                <code>
+                    <a href="classes/Prado-Util-TLogger.html#method_log">log</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$message</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$level</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$category</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;Uncategorized&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string|<a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$ctl</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Logs a message.
+                    <p>Messages logged by this method may be retrieved via <a href="getLogs"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="filterByCategories" id="filterByCategories" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_filterByCategories"></a>
+                <code>
+                    <a href="classes/Prado-Util-TLogger.html#method_filterByCategories">filterByCategories</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Filter function used by {@link getLogs}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="filterByControl" id="filterByControl" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_filterByControl"></a>
+                <code>
+                    <a href="classes/Prado-Util-TLogger.html#method_filterByControl">filterByControl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Filter function used by {@link getLogs}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="filterByLevels" id="filterByLevels" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_filterByLevels"></a>
+                <code>
+                    <a href="classes/Prado-Util-TLogger.html#method_filterByLevels">filterByLevels</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Filter function used by {@link getLogs}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="filterByTimeStamp" id="filterByTimeStamp" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_filterByTimeStamp"></a>
+                <code>
+                    <a href="classes/Prado-Util-TLogger.html#method_filterByTimeStamp">filterByTimeStamp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Filter function used by {@link getLogs}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Util-TLogger.html#method_deleteLogs">deleteLogs</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Util-TLogger.html#method_getLogs">getLogs</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Util-TLogger.html#method_log">log</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Util-TLogger.html#method_filterByCategories">filterByCategories</a>,                             <a href="classes/Prado-Util-TLogger.html#method_filterByControl">filterByControl</a>,                             <a href="classes/Prado-Util-TLogger.html#method_filterByLevels">filterByLevels</a>,                             <a href="classes/Prado-Util-TLogger.html#method_filterByTimeStamp">filterByTimeStamp</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="ALERT" id="ALERT" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_ALERT"><b>ALERT</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0x20</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DEBUG" id="DEBUG" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DEBUG"><b>DEBUG</b></a>
+            </code>
+
+            <div class="description short">
+                Log levels.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0x1</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="ERROR" id="ERROR" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_ERROR"><b>ERROR</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0x10</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="FATAL" id="FATAL" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_FATAL"><b>FATAL</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0x40</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="INFO" id="INFO" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_INFO"><b>INFO</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0x2</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="NOTICE" id="NOTICE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_NOTICE"><b>NOTICE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0x4</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="WARNING" id="WARNING" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_WARNING"><b>WARNING</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0x8</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-Util-TLogger.html#constant_ALERT"><b>\Prado\Util\TLogger::ALERT</b></a>,                                     <a href="classes/Prado-Util-TLogger.html#constant_DEBUG"><b>\Prado\Util\TLogger::DEBUG</b></a>,                                     <a href="classes/Prado-Util-TLogger.html#constant_ERROR"><b>\Prado\Util\TLogger::ERROR</b></a>,                                     <a href="classes/Prado-Util-TLogger.html#constant_FATAL"><b>\Prado\Util\TLogger::FATAL</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Util-TLogger.html#constant_INFO"><b>\Prado\Util\TLogger::INFO</b></a>,                                     <a href="classes/Prado-Util-TLogger.html#constant_NOTICE"><b>\Prado\Util\TLogger::NOTICE</b></a>,                                     <a href="classes/Prado-Util-TLogger.html#constant_WARNING"><b>\Prado\Util\TLogger::WARNING</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

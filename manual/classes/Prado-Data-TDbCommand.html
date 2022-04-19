@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDbCommand &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,401 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="classes/Prado-Data-TDbCommand.html">TDbCommand</a>
+    </h1>
+
+    <div class="description">
+        TDbCommand class.
+        <p>TDbCommand represents an SQL statement to execute against a database.
+It is usually created by calling <a href="TDbConnection::createCommand"></a>.
+The SQL statement to be executed may be set via <a href="setText">Text</a>.</p>
+<p>To execute a non-query SQL (such as insert, delete, update), call
+<a href="execute"></a>. To execute an SQL statement that returns result data set
+(such as select), use <a href="query"></a> or its convenient versions <a href="queryRow"></a>
+and <a href="queryScalar"></a>.</p>
+<p>If an SQL statement returns results (such as a SELECT SQL), the results
+can be accessed via the returned <a href="TDbDataReader"></a>.</p>
+<p>TDbCommand supports SQL statment preparation and parameter binding.
+Call <a href="bindParameter"></a> to bind a PHP variable to a parameter in SQL.
+Call <a href="bindValue"></a> to bind a value to an SQL parameter.
+When binding a parameter, the SQL statement is automatically prepared.
+You may also call <a href="prepare"></a> to explicitly prepare an SQL statement.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-TDbCommand.html">\Prado\Data\TDbCommand</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Data/TDbCommand.php"><abbr title="framework/Data/TDbCommand.php">TDbCommand.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a>&nbsp;</span><var>$connection</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$text</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="__sleep" id="__sleep" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___sleep"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method___sleep">__sleep</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set the statement to null when serializing.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="bindParameter" id="bindParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_bindParameter"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_bindParameter">bindParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$dataType</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$length</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Binds a parameter to the SQL statement to be executed.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="bindValue" id="bindValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_bindValue"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_bindValue">bindValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$dataType</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Binds a value to a parameter.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="cancel" id="cancel" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_cancel"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_cancel">cancel</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Cancels the execution of the SQL statement.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="execute" id="execute" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_execute"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_execute">execute</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Executes the SQL statement.
+                    <p>This method is meant only for executing non-query SQL statement.
+No result set will be returned.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getConnection" id="getConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getConnection"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_getConnection">getConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDebugStatementText" id="getDebugStatementText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDebugStatementText"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_getDebugStatementText">getDebugStatementText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPdoStatement" id="getPdoStatement" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPdoStatement"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_getPdoStatement">getPdoStatement</a><span>(</span><span>)</span><span> : </span><span><abbr title="\PDOStatement">PDOStatement</abbr></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getText" id="getText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getText"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_getText">getText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="prepare" id="prepare" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_prepare"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_prepare">prepare</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Prepares the SQL statement to be executed.
+                    <p>For complex SQL statement that is to be executed multiple times,
+this may improve performance.
+For SQL statement with binding parameters, this method is invoked
+automatically.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="query" id="query" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_query"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_query">query</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbDataReader.html"><abbr title="\Prado\Data\TDbDataReader">TDbDataReader</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Executes the SQL statement and returns query result.
+                    <p>This method is for executing an SQL query that returns result set.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryColumn" id="queryColumn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryColumn"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_queryColumn">queryColumn</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Executes the SQL statement and returns the first column of the result.
+                    <p>This is a convenient method of <a href="query"></a> when only the first column of data is needed.
+Note, the column returned will contain the first element in each row of result.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryRow" id="queryRow" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryRow"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_queryRow">queryRow</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$fetchAssociative</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Executes the SQL statement and returns the first row of the result.
+                    <p>This is a convenient method of <a href="query"></a> when only the first row of data is needed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="queryScalar" id="queryScalar" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_queryScalar"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_queryScalar">queryScalar</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Executes the SQL statement and returns the value of the first column in the first row of data.
+                    <p>This is a convenient method of <a href="query"></a> when only a single scalar
+value is needed (e.g. obtaining the count of the records).</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setText" id="setText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setText"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbCommand.html#method_setText">setText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Specifies the SQL statement to be executed.
+                    <p>Any previous execution will be terminated or cancel.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_bindParameter">bindParameter</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_bindValue">bindValue</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_cancel">cancel</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_execute">execute</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_getConnection">getConnection</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_getDebugStatementText">getDebugStatementText</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_getPdoStatement">getPdoStatement</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_getText">getText</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_prepare">prepare</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_query">query</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_queryColumn">queryColumn</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_queryRow">queryRow</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_queryScalar">queryScalar</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Data-TDbCommand.html#method_setText">setText</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDbDataReader &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,417 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="classes/Prado-Data-TDbDataReader.html">TDbDataReader</a>
+    </h1>
+
+    <div class="description">
+        TDbDataReader class.
+        <p>TDbDataReader represents a forward-only stream of rows from a query result set.</p>
+<p>To read the current row of data, call <a href="read"></a>. The method <a href="readAll"></a>
+returns all the rows in a single array.</p>
+<p>One can also retrieve the rows of data in TDbDataReader by using foreach:
+<code class="prettyprint">
+foreach($reader as $row)
+// $row represents a row of data
+</code>
+Since TDbDataReader is a forward-only stream, you can only traverse it once.</p>
+<p>It is possible to use a specific mode of data fetching by setting
+<a href="setFetchMode">FetchMode</a>. See <a href="http://www.php.net/manual/en/function.PDOStatement-setFetchMode.php"></a>
+for more details.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-TDbDataReader.html">\Prado\Data\TDbDataReader</a>
+                    implements
+                            <a href="\Iterator">\Iterator</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Data/TDbDataReader.php"><abbr title="framework/Data/TDbDataReader.php">TDbDataReader.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-TDbCommand.html"><abbr title="\Prado\Data\TDbCommand">TDbCommand</abbr></a>&nbsp;</span><var>$command</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="bindColumn" id="bindColumn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_bindColumn"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_bindColumn">bindColumn</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$column</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|int&nbsp;</span><var>$dataType</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Binds a column to a PHP variable.
+                    <p>When rows of data are being fetched, the corresponding column value
+will be set in the variable. Note, the fetch mode must include PDO::FETCH_BOUND.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="close" id="close" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_close"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_close">close</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Closes the reader.
+                    <p>Any further data reading will result in an exception.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="current" id="current" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_current"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_current">current</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the current row.
+                    <p>This method is required by the interface Iterator.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getColumnCount" id="getColumnCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getColumnCount"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_getColumnCount">getColumnCount</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIsClosed" id="getIsClosed" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIsClosed"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_getIsClosed">getIsClosed</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRowCount" id="getRowCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRowCount"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_getRowCount">getRowCount</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="key" id="key" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_key"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_key">key</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Returns the index of the current row.
+                    <p>This method is required by the interface Iterator.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="next" id="next" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_next"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_next">next</a><span>(</span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Moves the internal pointer to the next row.
+                    <p>This method is required by the interface Iterator.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="nextResult" id="nextResult" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_nextResult"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_nextResult">nextResult</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Advances the reader to the next result when reading the results of a batch of statements.
+                    <p>This method is only useful when there are multiple result sets
+returned by the query. Not all DBMS support this feature.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="read" id="read" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_read"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_read">read</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;|false</span>                </code>
+
+                <div class="description short">
+                    Advances the reader to the next row in a result set.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="readAll" id="readAll" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_readAll"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_readAll">readAll</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Reads the whole result set into an array.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="readColumn" id="readColumn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_readColumn"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_readColumn">readColumn</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$columnIndex</var></span><span>)</span><span> : </span><span>false|mixed</span>                </code>
+
+                <div class="description short">
+                    Returns a single column from the next row of a result set.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="readObject" id="readObject" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_readObject"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_readObject">readObject</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$className</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$fields</var></span><span>)</span><span> : </span><span>false|mixed</span>                </code>
+
+                <div class="description short">
+                    Returns a single column from the next row of a result set.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="rewind" id="rewind" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_rewind"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_rewind">rewind</a><span>(</span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Resets the iterator to the initial state.
+                    <p>This method is required by the interface Iterator.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFetchMode" id="setFetchMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFetchMode"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_setFetchMode">setFetchMode</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$mode</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="valid" id="valid" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_valid"></a>
+                <code>
+                    <a href="classes/Prado-Data-TDbDataReader.html#method_valid">valid</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Returns whether there is a row of data at current position.
+                    <p>This method is required by the interface Iterator.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_bindColumn">bindColumn</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_close">close</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_current">current</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_getColumnCount">getColumnCount</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_getIsClosed">getIsClosed</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_getRowCount">getRowCount</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_key">key</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_next">next</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_nextResult">nextResult</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_read">read</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_readAll">readAll</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_readColumn">readColumn</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_readObject">readObject</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_rewind">rewind</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_setFetchMode">setFetchMode</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Data-TDbDataReader.html#method_valid">valid</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

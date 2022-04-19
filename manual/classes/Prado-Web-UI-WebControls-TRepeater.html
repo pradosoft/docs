@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TRepeater &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1098 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-TRepeater.html">TRepeater</a>
+    </h1>
+
+    <div class="description">
+        TRepeater class.
+        <p>TRepeater displays its content repeatedly based on the data fetched from
+<a href="setDataSource">DataSource</a>.
+The repeated contents in TRepeater are called items, which are controls and
+can be accessed through <a href="getItems">Items</a>. When <a href="dataBind()"></a> is invoked,
+TRepeater creates an item for each row of data and binds the data row to the item.
+Optionally, a repeater can have a header, a footer and/or separators between items.</p>
+<p>The layout of the repeated contents are specified by inline templates.
+Repeater items, header, footer, etc. are being instantiated with the corresponding
+templates when data is being bound to the repeater.</p>
+<p>Since v3.1.0, the layout can also be specified by renderers. A renderer is a control class
+that can be instantiated as repeater items, header, etc. A renderer can thus be viewed
+as an external template (in fact, it can also be non-templated controls).</p>
+<p>A renderer can be any control class.</p>
+<ul>
+<li>If the class implements <a href="%5CPrado%5CIDataRenderer"></a>, the <b>Data</b>
+property will be set as the data row during databinding. Many PRADO controls
+implement this interface, such as <a href="TLabel"></a>, <a href="TTextBox"></a>, etc.</li>
+<li>If the class implements <a href="IItemDataRenderer"></a>, the <b>ItemIndex</b> property will be set
+as the zero-based index of the item in the repeater item collection, and
+the <b>ItemType</b> property as the item's type (such as TListItemType::Item).
+<a href="TRepeaterItemRenderer"></a> may be used as the convenient base class which
+already implements <a href="IDataItemRenderer"></a>.</li>
+</ul>
+<p>The following properties are used to specify different types of template and renderer
+for a repeater:</p>
+<ul>
+<li>
+<a href="setItemTemplate">ItemTemplate</a>, <a href="setItemRenderer">ItemRenderer</a>:
+for each repeated row of data</li>
+<li>
+<a href="setAlternatingItemTemplate">AlternatingItemTemplate</a>, <a href="setAlternatingItemRenderer">AlternatingItemRenderer</a>:
+for each alternating row of data. If not set, <a href="setItemTemplate">ItemTemplate</a> or <a href="setItemRenderer">ItemRenderer</a>
+will be used instead.</li>
+<li>
+<a href="setHeaderTemplate">HeaderTemplate</a>, <a href="setHeaderRenderer">HeaderRenderer</a>:
+for the repeater header.</li>
+<li>
+<a href="setFooterTemplate">FooterTemplate</a>, <a href="setFooterRenderer">FooterRenderer</a>:
+for the repeater footer.</li>
+<li>
+<a href="setSeparatorTemplate">SeparatorTemplate</a>, <a href="setSeparatorRenderer">SeparatorRenderer</a>:
+for content to be displayed between items.</li>
+<li>
+<a href="setEmptyTemplate">EmptyTemplate</a>, <a href="setEmptyRenderer">EmptyRenderer</a>:
+used when data bound to the repeater is empty.</li>
+</ul>
+<p>If a content type is defined with both a template and a renderer, the latter takes precedence.</p>
+<p>When <a href="dataBind()"></a> is being called, TRepeater undergoes the following lifecycles for each row of data:</p>
+<ul>
+<li>create item based on templates or renderers</li>
+<li>set the row of data to the item</li>
+<li>raise <a href="onItemCreated">OnItemCreated</a>:</li>
+<li>add the item as a child control</li>
+<li>call dataBind() of the item</li>
+<li>raise <a href="onItemDataBound">OnItemDataBound</a>:</li>
+</ul>
+<p>TRepeater raises an <a href="onItemCommand">OnItemCommand</a> whenever a button control
+within some repeater item raises a <b>OnCommand</b> event. Therefore,
+you can handle all sorts of <b>OnCommand</b> event in a central place by
+writing an event handler for <a href="onItemCommand">OnItemCommand</a>.</p>
+<p>When a page containing a repeater is post back, the repeater will restore automatically
+all its contents, including items, header, footer and separators.
+However, the data row associated with each item will not be recovered and become null.
+To access the data, use one of the following ways:</p>
+<ul>
+<li>Use <a href="getDataKeys">DataKeys</a> to obtain the data key associated with
+the specified repeater item and use the key to fetch the corresponding data
+from some persistent storage such as DB.</li>
+<li>Save the whole dataset in viewstate, which will restore the dataset automatically upon postback.
+Be aware though, if the size of your dataset is big, your page size will become big. Some
+complex data may also have serializing problem if saved in viewstate.</li>
+</ul>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-TRepeater.html">\Prado\Web\UI\WebControls\TRepeater</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-INamingContainer.html">\Prado\Web\UI\INamingContainer</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html">\Prado\Web\UI\WebControls\TDataBoundControl</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TWebControl.html">\Prado\Web\UI\WebControls\TWebControl</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-INamingContainer.html">\Prado\Web\UI\INamingContainer</a>                        </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TControl.html">\Prado\Web\UI\TControl</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-INamingContainer.html">\Prado\Web\UI\INamingContainer</a>                        </dd>
+                <dd style="padding-left:120px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:150px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/TRepeater.php"><abbr title="framework/Web/UI/WebControls/TRepeater.php">TRepeater.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="bubbleEvent" id="bubbleEvent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_bubbleEvent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_bubbleEvent">bubbleEvent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-TEventParameter.html"><abbr title="\Prado\TEventParameter">TEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This method overrides parent&#039;s implementation to handle
+{@link onItemCommand OnItemCommand} event which is bubbled from
+repeater items and their child controls.
+                    <p>This method should only be used by control developers.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAlternatingItemRenderer" id="getAlternatingItemRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAlternatingItemRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getAlternatingItemRenderer">getAlternatingItemRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAlternatingItemTemplate" id="getAlternatingItemTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAlternatingItemTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getAlternatingItemTemplate">getAlternatingItemTemplate</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataKeyField" id="getDataKeyField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataKeyField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getDataKeyField">getDataKeyField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataKeys" id="getDataKeys" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataKeys"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getDataKeys">getDataKeys</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TList.html"><abbr title="\Prado\Collections\TList">TList</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEmptyRenderer" id="getEmptyRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEmptyRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getEmptyRenderer">getEmptyRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEmptyTemplate" id="getEmptyTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEmptyTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getEmptyTemplate">getEmptyTemplate</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFooter" id="getFooter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFooter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getFooter">getFooter</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFooterRenderer" id="getFooterRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFooterRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getFooterRenderer">getFooterRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFooterTemplate" id="getFooterTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFooterTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getFooterTemplate">getFooterTemplate</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeader" id="getHeader" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeader"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getHeader">getHeader</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeaderRenderer" id="getHeaderRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeaderRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getHeaderRenderer">getHeaderRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeaderTemplate" id="getHeaderTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeaderTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getHeaderTemplate">getHeaderTemplate</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getItemRenderer" id="getItemRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getItemRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getItemRenderer">getItemRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getItems" id="getItems" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getItems"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getItems">getItems</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TRepeaterItemCollection.html"><abbr title="\Prado\Web\UI\WebControls\TRepeaterItemCollection">TRepeaterItemCollection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getItemTemplate" id="getItemTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getItemTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getItemTemplate">getItemTemplate</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSeparatorRenderer" id="getSeparatorRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSeparatorRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getSeparatorRenderer">getSeparatorRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSeparatorTemplate" id="getSeparatorTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSeparatorTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getSeparatorTemplate">getSeparatorTemplate</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadState" id="loadState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_loadState">loadState</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads item count information from viewstate.
+                    <p>This method is invoked right after control state is loaded.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onItemCommand" id="onItemCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onItemCommand"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_onItemCommand">onItemCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TRepeaterCommandEventParameter.html"><abbr title="\Prado\Web\UI\WebControls\TRepeaterCommandEventParameter">TRepeaterCommandEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Raises &lt;b&gt;OnItemCommand&lt;/b&gt; event.
+                    <p>This method is invoked after a button control in
+a template raises <b>OnCommand</b> event.
+The repeater control responsible for the event
+can be determined from the event parameter.
+The event parameter also contains the information about
+the initial sender of the <b>OnCommand</b> event, command name
+and command parameter.
+You may override this method to provide customized event handling.
+Be sure to call parent's implementation so that
+event handlers have chance to respond to the event.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onItemCreated" id="onItemCreated" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onItemCreated"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_onItemCreated">onItemCreated</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TRepeaterItemEventParameter.html"><abbr title="\Prado\Web\UI\WebControls\TRepeaterItemEventParameter">TRepeaterItemEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Raises &lt;b&gt;OnItemCreated&lt;/b&gt; event.
+                    <p>This method is invoked after a repeater item is created and instantiated with
+template, but before added to the page hierarchy.
+The repeater item control responsible for the event
+can be determined from the event parameter.
+If you override this method, be sure to call parent's implementation
+so that event handlers have chance to respond to the event.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onItemDataBound" id="onItemDataBound" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onItemDataBound"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_onItemDataBound">onItemDataBound</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TRepeaterItemEventParameter.html"><abbr title="\Prado\Web\UI\WebControls\TRepeaterItemEventParameter">TRepeaterItemEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Raises &lt;b&gt;OnItemDataBound&lt;/b&gt; event.
+                    <p>This method is invoked right after an item is data bound.
+The repeater item control responsible for the event
+can be determined from the event parameter.
+If you override this method, be sure to call parent's implementation
+so that event handlers have chance to respond to the event.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="render" id="render" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_render"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_render">render</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the repeater.
+                    <p>This method overrides the parent implementation by rendering the body
+content as the whole presentation of the repeater. Outer tag is not rendered.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="reset" id="reset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_reset"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_reset">reset</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears up all items in the repeater.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="saveState" id="saveState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_saveState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_saveState">saveState</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Saves item count in viewstate.
+                    <p>This method is invoked right before control state is to be saved.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAlternatingItemRenderer" id="setAlternatingItemRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAlternatingItemRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setAlternatingItemRenderer">setAlternatingItemRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the alternative item renderer class.
+                    <p>If not empty, the class will be used to instantiate as alternative repeater items.
+This property takes precedence over <a href="getAlternatingItemTemplate">AlternatingItemTemplate</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAlternatingItemTemplate" id="setAlternatingItemTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAlternatingItemTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setAlternatingItemTemplate">setAlternatingItemTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataKeyField" id="setDataKeyField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataKeyField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setDataKeyField">setDataKeyField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEmptyRenderer" id="setEmptyRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEmptyRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setEmptyRenderer">setEmptyRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the repeater empty renderer class.
+                    <p>The empty renderer is created as the child of the repeater
+if data bound to the repeater is empty.
+This property takes precedence over <a href="getEmptyTemplate">EmptyTemplate</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEmptyTemplate" id="setEmptyTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEmptyTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setEmptyTemplate">setEmptyTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFooterRenderer" id="setFooterRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFooterRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setFooterRenderer">setFooterRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the repeater footer renderer class.
+                    <p>If not empty, the class will be used to instantiate as repeater footer item.
+This property takes precedence over <a href="getFooterTemplate">FooterTemplate</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFooterTemplate" id="setFooterTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFooterTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setFooterTemplate">setFooterTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setHeaderRenderer" id="setHeaderRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setHeaderRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setHeaderRenderer">setHeaderRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the repeater header renderer class.
+                    <p>If not empty, the class will be used to instantiate as repeater header item.
+This property takes precedence over <a href="getHeaderTemplate">HeaderTemplate</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setHeaderTemplate" id="setHeaderTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setHeaderTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setHeaderTemplate">setHeaderTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setItemRenderer" id="setItemRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setItemRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setItemRenderer">setItemRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the item renderer class.
+                    <p>If not empty, the class will be used to instantiate as repeater items.
+This property takes precedence over <a href="getItemTemplate">ItemTemplate</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setItemTemplate" id="setItemTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setItemTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setItemTemplate">setItemTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSeparatorRenderer" id="setSeparatorRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSeparatorRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setSeparatorRenderer">setSeparatorRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the repeater item separator renderer class.
+                    <p>If not empty, the class will be used to instantiate as repeater item separators.
+This property takes precedence over <a href="getSeparatorTemplate">SeparatorTemplate</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSeparatorTemplate" id="setSeparatorTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSeparatorTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setSeparatorTemplate">setSeparatorTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-ITemplate.html"><abbr title="\Prado\Web\UI\ITemplate">ITemplate</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createEmptyContent" id="createEmptyContent" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createEmptyContent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createEmptyContent">createEmptyContent</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Creates empty repeater content.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createItem" id="createItem" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createItem"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createItem">createItem</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$itemIndex</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TListItemType.html"><abbr title="\Prado\Web\UI\WebControls\TListItemType">TListItemType</abbr></a>&nbsp;</span><var>$itemType</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a repeater item instance based on the item type and index.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataFieldValue" id="getDataFieldValue" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataFieldValue"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getDataFieldValue">getDataFieldValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$field</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the value of the data at the specified field.
+                    <p>If data is an array, TMap or TList, the value will be returned at the index
+of the specified field. If the data is a component with a property named
+as the field name, the property value will be returned.
+Otherwise, an exception will be raised.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="performDataBinding" id="performDataBinding" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_performDataBinding"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_performDataBinding">performDataBinding</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Traversable">Traversable</abbr>&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Performs databinding to populate repeater items from data source.
+                    <p>This method is invoked by dataBind().
+You may override this function to provide your own way of data population.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="restoreItemsFromViewState" id="restoreItemsFromViewState" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_restoreItemsFromViewState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_restoreItemsFromViewState">restoreItemsFromViewState</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Creates repeater items based on viewstate information.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createItemInternal" id="createItemInternal" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createItemInternal"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createItemInternal">createItemInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$itemIndex</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TListItemType.html"><abbr title="\Prado\Web\UI\WebControls\TListItemType">TListItemType</abbr></a>&nbsp;</span><var>$itemType</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a repeater item.
+                    <p>This method invokes <a href="createItem"></a> to create a new repeater item.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createItemWithDataInternal" id="createItemWithDataInternal" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createItemWithDataInternal"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createItemWithDataInternal">createItemWithDataInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$itemIndex</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TListItemType.html"><abbr title="\Prado\Web\UI\WebControls\TListItemType">TListItemType</abbr></a>&nbsp;</span><var>$itemType</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$dataItem</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a repeater item and performs databinding.
+                    <p>This method invokes <a href="createItem"></a> to create a new repeater item.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_addedControl">addedControl</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_applyStyleSheetSkin">applyStyleSheetSkin</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoBindProperty">autoBindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_bindProperty">bindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEvent">broadcastEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_bubbleEvent">bubbleEvent</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNamingContainer">clearNamingContainer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_clearStyle">clearStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearViewState">clearViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_convertUniqueIdToClientId">convertUniqueIdToClientId</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_copyBaseAttributes">copyBaseAttributes</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createChildControls">createChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBind">dataBind</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_dataSourceViewChanged">dataSourceViewChanged</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_ensureChildControls">ensureChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControl">findControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByID">findControlsByID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByType">findControlsByType</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_focus">focus</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getAccessKey">getAccessKey</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAdapter">getAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAllowChildControls">getAllowChildControls</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getAllowCustomPaging">getAllowCustomPaging</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getAllowPaging">getAllowPaging</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getAlternatingItemRenderer">getAlternatingItemRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getAlternatingItemTemplate">getAlternatingItemTemplate</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttribute">getAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttributes">getAttributes</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBackColor">getBackColor</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderColor">getBorderColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderStyle">getBorderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderWidth">getBorderWidth</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getClientID">getClientID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControls">getControls</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getCssClass">getCssClass</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getCurrentPageIndex">getCurrentPageIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getCustomData">getCustomData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getDataKeyField">getDataKeyField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getDataKeys">getDataKeys</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getDataMember">getDataMember</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getDataSource">getDataSource</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getDataSourceID">getDataSourceID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getDecorator">getDecorator</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getDisplay">getDisplay</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getEmptyRenderer">getEmptyRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getEmptyTemplate">getEmptyTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnabled">getEnabled</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableTheming">getEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableViewState">getEnableViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getEnsureId">getEnsureId</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getFont">getFont</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getFooter">getFooter</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getFooterRenderer">getFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getFooterTemplate">getFooterTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getForeColor">getForeColor</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAdapter">getHasAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAttributes">getHasAttributes</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasChildInitialized">getHasChildInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasControls">getHasControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasInitialized">getHasInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoaded">getHasLoaded</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoadedPostData">getHasLoadedPostData</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasPreRendered">getHasPreRendered</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getHasStyle">getHasStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getHeader">getHeader</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getHeaderRenderer">getHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getHeaderTemplate">getHeaderTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getHeight">getHeight</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getIsSkinApplied">getIsSkinApplied</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getItemRenderer">getItemRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getItems">getItems</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getItemTemplate">getItemTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getNamingContainer">getNamingContainer</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPage">getPage</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getPageCount">getPageCount</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getPageSize">getPageSize</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getParent">getParent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPluginModule">getPluginModule</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getRegisteredObject">getRegisteredObject</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getSelectParameters">getSelectParameters</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getSeparatorRenderer">getSeparatorRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getSeparatorTemplate">getSeparatorTemplate</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSkinID">getSkinID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSourceTemplateControl">getSourceTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getStyle">getStyle</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getTabIndex">getTabIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getTemplateControl">getTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getToolTip">getToolTip</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getUniqueID">getUniqueID</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getViewState">getViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getVirtualItemCount">getVirtualItemCount</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getVisible">getVisible</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getWidth">getWidth</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_hasAttribute">hasAttribute</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isObjectRegistered">isObjectRegistered</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_loadState">loadState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onDataBinding">onDataBinding</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_onDataBound">onDataBound</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_onDataSourceChanged">onDataSourceChanged</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onInit">onInit</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_onItemCommand">onItemCommand</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_onItemCreated">onItemCreated</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_onItemDataBound">onItemDataBound</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onLoad">onLoad</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onPreRender">onPreRender</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onUnload">onUnload</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_pagePreLoad">pagePreLoad</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_registerObject">registerObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removeAttribute">removeAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removedControl">removedControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_render">render</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderBeginTag">renderBeginTag</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderChildren">renderChildren</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderContents">renderContents</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderControl">renderControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderEndTag">renderEndTag</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_reset">reset</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setAccessKey">setAccessKey</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAdapter">setAdapter</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setAllowCustomPaging">setAllowCustomPaging</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setAllowPaging">setAllowPaging</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setAlternatingItemRenderer">setAlternatingItemRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setAlternatingItemTemplate">setAlternatingItemTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAttribute">setAttribute</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBackColor">setBackColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderColor">setBorderColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderStyle">setBorderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderWidth">setBorderWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setCssClass">setCssClass</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setCurrentPageIndex">setCurrentPageIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setCustomData">setCustomData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setDataKeyField">setDataKeyField</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setDataMember">setDataMember</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setDataSource">setDataSource</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setDataSourceID">setDataSourceID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setDisplay">setDisplay</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setEmptyRenderer">setEmptyRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setEmptyTemplate">setEmptyTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnabled">setEnabled</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableTheming">setEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableViewState">setEnableViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setEnsureId">setEnsureId</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setFooterRenderer">setFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setFooterTemplate">setFooterTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setForeColor">setForeColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setHeaderRenderer">setHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setHeaderTemplate">setHeaderTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setHeight">setHeight</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setItemRenderer">setItemRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setItemTemplate">setItemTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setPage">setPage</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setPageSize">setPageSize</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setSeparatorRenderer">setSeparatorRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_setSeparatorTemplate">setSeparatorTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setSkinID">setSkinID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setStyle">setStyle</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setTabIndex">setTabIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setTemplateControl">setTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setToolTip">setToolTip</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setViewState">setViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setVirtualItemCount">setVirtualItemCount</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setVisible">setVisible</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setWidth">setWidth</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_trackViewState">trackViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unbindProperty">unbindProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unregisterObject">unregisterObject</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_addAttributesToRender">addAttributesToRender</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoDataBindProperties">autoDataBindProperties</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearChildState">clearChildState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearControlState">clearControlState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createControlCollection">createControlCollection</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createEmptyContent">createEmptyContent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createItem">createItem</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_createPagedDataSource">createPagedDataSource</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_createStyle">createStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindChildren">dataBindChildren</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindProperties">dataBindProperties</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_determineDataSource">determineDataSource</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_ensureDataBound">ensureDataBound</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getChildControlsCreated">getChildControlsCreated</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlStage">getControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlState">getControlState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_getDataFieldValue">getDataFieldValue</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getDataSourceView">getDataSourceView</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getInitialized">getInitialized</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getIsDataBound">getIsDataBound</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getRequiresDataBinding">getRequiresDataBinding</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getTagName">getTagName</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_getUsingDataSourceID">getUsingDataSourceID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_initRecursive">initRecursive</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isDescendentOf">isDescendentOf</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadRecursive">loadRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadStateRecursive">loadStateRecursive</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_performDataBinding">performDataBinding</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_preRenderRecursive">preRenderRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_raiseBubbleEvent">raiseBubbleEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_restoreItemsFromViewState">restoreItemsFromViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_saveStateRecursive">saveStateRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setChildControlsCreated">setChildControlsCreated</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlStage">setControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlState">setControlState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setInitialized">setInitialized</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setIsDataBound">setIsDataBound</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_setRequiresDataBinding">setRequiresDataBinding</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_traverseChildControls">traverseChildControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unloadRecursive">unloadRecursive</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_validateDataSource">validateDataSource</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEventInternal">broadcastEventInternal</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearCachedUniqueID">clearCachedUniqueID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNameTable">clearNameTable</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createItemInternal">createItemInternal</a>,                             <a href="classes/Prado-Web-UI-WebControls-TRepeater.html#method_createItemWithDataInternal">createItemWithDataInternal</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_fillNameTable">fillNameTable</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_generateAutomaticID">generateAutomaticID</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_AUTOMATIC_ID_PREFIX"><b>\Prado\Web\UI\TControl::AUTOMATIC_ID_PREFIX</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CLIENT_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::CLIENT_ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CHILD_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_CHILD_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CONSTRUCTED"><b>\Prado\Web\UI\TControl::CS_CONSTRUCTED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_LOADED"><b>\Prado\Web\UI\TControl::CS_LOADED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_PRERENDERED"><b>\Prado\Web\UI\TControl::CS_PRERENDERED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_STATE_LOADED"><b>\Prado\Web\UI\TControl::CS_STATE_LOADED</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_FORMAT"><b>\Prado\Web\UI\TControl::ID_FORMAT</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CHILD_CREATED"><b>\Prado\Web\UI\TControl::IS_CHILD_CREATED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CREATING_CHILD"><b>\Prado\Web\UI\TControl::IS_CREATING_CHILD</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_THEMING"><b>\Prado\Web\UI\TControl::IS_DISABLE_THEMING</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_VIEWSTATE"><b>\Prado\Web\UI\TControl::IS_DISABLE_VIEWSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_ID_SET"><b>\Prado\Web\UI\TControl::IS_ID_SET</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_SKIN_APPLIED"><b>\Prado\Web\UI\TControl::IS_SKIN_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_STYLESHEET_APPLIED"><b>\Prado\Web\UI\TControl::IS_STYLESHEET_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_ADAPTER"><b>\Prado\Web\UI\TControl::RF_ADAPTER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_AUTO_BINDINGS"><b>\Prado\Web\UI\TControl::RF_AUTO_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CHILD_STATE"><b>\Prado\Web\UI\TControl::RF_CHILD_STATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLS"><b>\Prado\Web\UI\TControl::RF_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLSTATE"><b>\Prado\Web\UI\TControl::RF_CONTROLSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_DATA_BINDINGS"><b>\Prado\Web\UI\TControl::RF_DATA_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_EVENTS"><b>\Prado\Web\UI\TControl::RF_EVENTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS_ID"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS_ID</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_OBJECTS"><b>\Prado\Web\UI\TControl::RF_NAMED_OBJECTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_SKIN_ID"><b>\Prado\Web\UI\TControl::RF_SKIN_ID</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

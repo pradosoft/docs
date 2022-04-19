@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TPriorityMap &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,628 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-collections.html">Collections</a>\<a href="classes/Prado-Collections-TPriorityMap.html">TPriorityMap</a>
+    </h1>
+
+    <div class="description">
+        TPriorityMap class
+        <p>TPriorityMap implements a collection that takes key-value pairs with
+a priority to allow key-value pairs to be ordered.  This ordering is
+important when flattening the map. When flattening the map, if some
+key-value pairs are required to be before or after others, use this
+class to keep order to your map.</p>
+<p>You can access, add or remove an item with a key by using
+<a href="itemAt"></a>, <a href="add"></a>, and <a href="remove"></a>.  These functions
+can optionally take a priority parameter to allow access to specific
+priorities.  TPriorityMap is functionally backward compatible
+with <a href="TMap"></a>.</p>
+<p>To get the number of the items in the map, use <a href="getCount"></a>.
+TPriorityMap can also be used like a regular array as follows,
+<code class="prettyprint">
+$map[$key]=$value; // add a key-value pair
+unset($map[$key]); // remove the value with the specified key
+if(isset($map[$key])) // if the map contains the key
+foreach($map as $key=&gt;$value) // traverse the items in the map
+$n=count($map);  // returns the number of items in the map
+</code>
+Using standard array access method like these will always use
+the default priority.</p>
+<p>An item that doesn't specify a priority will receive the default
+priority.  The default priority is set during the instantiation
+of a new TPriorityMap. If no custom default priority is specified,
+the standard default priority of 10 is used.</p>
+<p>Priorities with significant digits below precision will be rounded.</p>
+<p>A priority may also be a numeric with decimals.  This is set
+during the instantiation of a new TPriorityMap.
+The default is 8 decimal places for a priority.  If a negative number
+is used, rounding occurs into the integer space rather than in
+the decimal space.  See <a href="round"></a>.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Collections-TPriorityMap.html">\Prado\Collections\TPriorityMap</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Collections-TMap.html">\Prado\Collections\TMap</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Collections<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.2a<br/>
+                    <b>Located at:</b> <a href="framework/Collections/TPriorityMap.php"><abbr title="framework/Collections/TPriorityMap.php">TPriorityMap.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;|<a href="classes/Prado-Collections-TPriorityMap.html"><abbr title="\Prado\Collections\TPriorityMap">TPriorityMap</abbr></a>|<abbr title="\Traversable">Traversable</abbr>&nbsp;</span><var>$data</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$readOnly</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">numeric-string|int|float&nbsp;</span><var>$defaultPriority</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$precision</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">8</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    <p>Initializes the array with an array or an iterable object.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="add" id="add" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_add"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_add">add</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|numeric-string|int|float&nbsp;</span><var>$priority</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    Adds an item into the map.  A third parameter may be used to set the priority
+of the item within the map.  Priority is primarily used during when flattening
+the map into an array where order may be and important factor of the key-value
+pairs within the array.
+                    <p>Note, if the specified key already exists, the old value will be overwritten.
+No duplicate keys are allowed regardless of priority.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clear" id="clear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clear"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_clear">clear</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes all items in the map.  {@link remove} is called on all items.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="contains" id="contains" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_contains"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_contains">contains</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="copyFrom" id="copyFrom" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_copyFrom"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_copyFrom">copyFrom</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|<a href="classes/Prado-Collections-TPriorityMap.html"><abbr title="\Prado\Collections\TPriorityMap">TPriorityMap</abbr></a>|<abbr title="\Traversable">Traversable</abbr>&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Copies iterable data into the map.
+                    <p>Note, existing data in the map will be cleared first.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCount" id="getCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCount"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_getCount">getCount</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDefaultPriority" id="getDefaultPriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDefaultPriority"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_getDefaultPriority">getDefaultPriority</a><span>(</span><span>)</span><span> : </span><span>numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIterator" id="getIterator" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIterator"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_getIterator">getIterator</a><span>(</span><span>)</span><span> : </span><span><abbr title="\Iterator">Iterator</abbr></span>                </code>
+
+                <div class="description short">
+                    Returns an iterator for traversing the items in the map.
+                    <p>This method is required by the interface \IteratorAggregate.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getKeys" id="getKeys" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getKeys"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_getKeys">getKeys</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns the keys within the map ordered through the priority of each key-value pair
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPrecision" id="getPrecision" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPrecision"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_getPrecision">getPrecision</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPriorities" id="getPriorities" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPriorities"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_getPriorities">getPriorities</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    This returns a list of the priorities within this map, ordered lowest to highest.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPriorityCount" id="getPriorityCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPriorityCount"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_getPriorityCount">getPriorityCount</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|numeric-string|int|float&nbsp;</span><var>$priority</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>false|int</span>                </code>
+
+                <div class="description short">
+                    Gets the number of items at a priority within the map.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="itemAt" id="itemAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_itemAt"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_itemAt">itemAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$priority</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the item with the specified key.  If a priority is specified, only items
+within that specific priority will be selected
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="itemsAtPriority" id="itemsAtPriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_itemsAtPriority"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_itemsAtPriority">itemsAtPriority</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|numeric-string|int|float&nbsp;</span><var>$priority</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Gets all the items at a specific priority.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="mergeWith" id="mergeWith" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_mergeWith"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_mergeWith">mergeWith</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|<a href="classes/Prado-Collections-TPriorityMap.html"><abbr title="\Prado\Collections\TPriorityMap">TPriorityMap</abbr></a>|<abbr title="\Traversable">Traversable</abbr>&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Merges iterable data into the map.
+                    <p>Existing data in the map will be kept and overwritten if the keys are the same.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="priorityAt" id="priorityAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_priorityAt"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_priorityAt">priorityAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>false|numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    Retutrns the priority of an item at a particular flattened index.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="priorityOf" id="priorityOf" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_priorityOf"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_priorityOf">priorityOf</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>false|numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    Returns the priority of a particular item within the map.  This searches the map for the item.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="remove" id="remove" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_remove"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_remove">remove</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|false|numeric-string|int|float&nbsp;</span><var>$priority</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes an item from the map by its key. If no priority, or false, is specified
+then priority is irrelevant. If null is used as a parameter for priority, then
+the priority will be the default priority.  If a priority is specified, or
+the default priority is specified, only key-value pairs in that priority
+will be affected.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPriorityAt" id="setPriorityAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPriorityAt"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_setPriorityAt">setPriorityAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|numeric-string|int|float&nbsp;</span><var>$priority</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    This changes an item&#039;s priority.  Specify the item and the new priority.
+                    <p>This method is exactly the same as <a href="offsetGet"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toArray" id="toArray" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toArray"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_toArray">toArray</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    When the map is flattened into an array, the priorities are taken into
+account and elements of the map are ordered in the array according to
+their priority.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toArrayAbovePriority" id="toArrayAbovePriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toArrayAbovePriority"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_toArrayAbovePriority">toArrayAbovePriority</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">numeric-string|int|float&nbsp;</span><var>$priority</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$inclusive</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Combines the map elements which have a priority above the parameter value
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toArrayBelowPriority" id="toArrayBelowPriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toArrayBelowPriority"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_toArrayBelowPriority">toArrayBelowPriority</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">numeric-string|int|float&nbsp;</span><var>$priority</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$inclusive</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Combines the map elements which have a priority below the parameter value
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="flattenPriorities" id="flattenPriorities" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flattenPriorities"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_flattenPriorities">flattenPriorities</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    This flattens the priority map into a flat array [0,...,n-1]
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDefaultPriority" id="setDefaultPriority" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDefaultPriority"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_setDefaultPriority">setDefaultPriority</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">numeric-string|int|float&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This must be called internally or when instantiated.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPrecision" id="setPrecision" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPrecision"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_setPrecision">setPrecision</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This must be called internally or when instantiated.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="sortPriorities" id="sortPriorities" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_sortPriorities"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TPriorityMap.html#method_sortPriorities">sortPriorities</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Orders the priority list internally.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_add">add</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_clear">clear</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_contains">contains</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_copyFrom">copyFrom</a>,                             <a href="classes/Prado-Collections-TMap.html#method_count">count</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_dyAddItem">dyAddItem</a>,                             <a href="classes/Prado-Collections-TMap.html#method_dyAddItem">dyAddItem</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-Collections-TMap.html#method_dyNoItem">dyNoItem</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_dyNoItem">dyNoItem</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-Collections-TMap.html#method_dyRemoveItem">dyRemoveItem</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_dyRemoveItem">dyRemoveItem</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_getCount">getCount</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_getDefaultPriority">getDefaultPriority</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_getIterator">getIterator</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_getKeys">getKeys</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_getPrecision">getPrecision</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_getPriorities">getPriorities</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_getPriorityCount">getPriorityCount</a>,                             <a href="classes/Prado-Collections-TMap.html#method_getReadOnly">getReadOnly</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_itemAt">itemAt</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_itemsAtPriority">itemsAtPriority</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_mergeWith">mergeWith</a>,                             <a href="classes/Prado-Collections-TMap.html#method_offsetExists">offsetExists</a>,                             <a href="classes/Prado-Collections-TMap.html#method_offsetGet">offsetGet</a>,                             <a href="classes/Prado-Collections-TMap.html#method_offsetSet">offsetSet</a>,                             <a href="classes/Prado-Collections-TMap.html#method_offsetUnset">offsetUnset</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_priorityAt">priorityAt</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_priorityOf">priorityOf</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_remove">remove</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_setPriorityAt">setPriorityAt</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_toArray">toArray</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_toArrayAbovePriority">toArrayAbovePriority</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_toArrayBelowPriority">toArrayBelowPriority</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_flattenPriorities">flattenPriorities</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_setDefaultPriority">setDefaultPriority</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_setPrecision">setPrecision</a>,                             <a href="classes/Prado-Collections-TMap.html#method_setReadOnly">setReadOnly</a>,                             <a href="classes/Prado-Collections-TPriorityMap.html#method_sortPriorities">sortPriorities</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

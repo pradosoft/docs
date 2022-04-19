@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TUrlMapping &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,429 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="classes/Prado-Web-TUrlMapping.html">TUrlMapping</a>
+    </h1>
+
+    <div class="description">
+        TUrlMapping Class
+        <p>The TUrlMapping module allows PRADO to construct and recognize URLs
+based on specific patterns.</p>
+<p>TUrlMapping consists of a list of URL patterns which are used to match
+against the currently requested URL. The first matching pattern will then
+be used to decompose the URL into request parameters (accessible through
+<code class="prettyprint">$this-&gt;Request['paramname']</code>).</p>
+<p>The patterns can also be used to construct customized URLs. In this case,
+the parameters in an applied pattern will be replaced with the corresponding
+GET variable values.</p>
+<p>Since it is derived from <a href="TUrlManager"></a>, it should be configured globally
+in the application configuration like the following,
+<code class="prettyprint">
+&lt;module id=&quot;request&quot; class=&quot;THttpRequest&quot; UrlManager=&quot;friendly-url&quot; /&gt;
+&lt;module id=&quot;friendly-url&quot; class=&quot;Prado\Web.TUrlMapping&quot; EnableCustomUrl=&quot;true&quot;&gt;
+&lt;url ServiceParameter=&quot;Posts.ViewPost&quot; pattern=&quot;post/{id}/&quot; parameters.id=&quot;\d+&quot; /&gt;
+&lt;url ServiceParameter=&quot;Posts.ListPost&quot; pattern=&quot;archive/{time}/&quot; parameters.time=&quot;\d{6}&quot; /&gt;
+&lt;url ServiceParameter=&quot;Posts.ListPost&quot; pattern=&quot;category/{cat}/&quot; parameters.cat=&quot;\d+&quot; /&gt;
+</module>
+</code></p>
+<p>In the above, each <tt>&lt;url&gt;</tt> element specifies a URL pattern represented
+as a <a href="TUrlMappingPattern"></a> internally. You may create your own pattern classes
+by extending <a href="TUrlMappingPattern"></a> and specifying the <tt>&lt;class&gt;</tt> attribute
+in the element.</p>
+<p>The patterns can be also be specified in an external file using the <a href="setConfigFile">ConfigFile</a> property.</p>
+<p>The URL mapping are evaluated in order, only the first mapping that matches
+the URL will be used. Cascaded mapping can be achieved by placing the URL mappings
+in particular order. For example, placing the most specific mappings first.</p>
+<p>Only the PATH_INFO part of the URL is used to match the available patterns. The matching
+is strict in the sense that the whole pattern must match the whole PATH_INFO of the URL.</p>
+<p>From PRADO v3.1.1, TUrlMapping also provides support for constructing URLs according to
+the specified pattern. You may enable this functionality by setting <a href="setEnableCustomUrl">EnableCustomUrl</a> to true.
+When you call THttpRequest::constructUrl() (or via TPageService::constructUrl()),
+TUrlMapping will examine the available URL mapping patterns using their <a href="TUrlMappingPattern::getServiceParameter">ServiceParameter</a>
+and <a href="TUrlMappingPattern::getPattern">Pattern</a> properties. A pattern is applied if its
+<a href="TUrlMappingPattern::getServiceParameter">ServiceParameter</a> matches the service parameter passed
+to constructUrl() and every parameter in the <a href="getPattern">Pattern</a> is found
+in the GET variables.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-TUrlMapping.html">\Prado\Web\TUrlMapping</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-TUrlManager.html">\Prado\Web\TUrlManager</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:120px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0.5<br/>
+                    <b>Located at:</b> <a href="framework/Web/TUrlMapping.php"><abbr title="framework/Web/TUrlMapping.php">TUrlMapping.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="constructUrl" id="constructUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_constructUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_constructUrl">constructUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$serviceID</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$serviceParam</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$getItems</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$encodeAmpersand</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$encodeGetItems</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Constructs a URL that can be recognized by PRADO.
+                    <p>This method provides the actual implementation used by <a href="THttpRequest::constructUrl"></a>.
+Override this method if you want to provide your own way of URL formatting.
+If you do so, you may also need to override <a href="parseUrl"></a> so that the URL can be properly parsed.</p>
+<p>The URL is constructed as the following format:
+/entryscript.php?serviceID=serviceParameter&amp;get1=value1&amp;...
+If <a href="THttpRequest::setUrlFormat">THttpRequest.UrlFormat</a> is 'Path',
+the following format is used instead:
+/entryscript.php/serviceID/serviceParameter/get1,value1/get2,value2...
+If <a href="THttpRequest::setUrlFormat">THttpRequest.UrlFormat</a> is 'HiddenPath',
+the following format is used instead:
+/serviceID/serviceParameter/get1,value1/get2,value2...</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getConfigFile" id="getConfigFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getConfigFile"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_getConfigFile">getConfigFile</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDefaultMappingClass" id="getDefaultMappingClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDefaultMappingClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_getDefaultMappingClass">getDefaultMappingClass</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEnableCustomUrl" id="getEnableCustomUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEnableCustomUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_getEnableCustomUrl">getEnableCustomUrl</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Returns a value indicating whether to enable custom constructUrl.
+                    <p>If true, constructUrl() will make use of the URL mapping rules to
+construct valid URLs.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getMatchingPattern" id="getMatchingPattern" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getMatchingPattern"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_getMatchingPattern">getMatchingPattern</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-TUrlMappingPattern.html"><abbr title="\Prado\Web\TUrlMappingPattern">TUrlMappingPattern</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUrlPrefix" id="getUrlPrefix" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUrlPrefix"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_getUrlPrefix">getUrlPrefix</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes this module.
+                    <p>This method is required by the IModule interface.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parseUrl" id="parseUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parseUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_parseUrl">parseUrl</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Parses the request URL and returns an array of input parameters.
+                    <p>This method overrides the parent implementation.
+The input parameters do not include GET and POST variables.
+This method uses the request URL path to find the first matching pattern. If found
+the matched pattern parameters are used to return as the input parameters.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setConfigFile" id="setConfigFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setConfigFile"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_setConfigFile">setConfigFile</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDefaultMappingClass" id="setDefaultMappingClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDefaultMappingClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_setDefaultMappingClass">setDefaultMappingClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the default class of URL mapping patterns.
+                    <p>When a URL matching pattern does not specify &quot;class&quot; attribute, it will default to the class
+specified by this property. You may use either a class name or a namespace format of class (if the class needs to be included first.)</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEnableCustomUrl" id="setEnableCustomUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEnableCustomUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_setEnableCustomUrl">setEnableCustomUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets a value indicating whether to enable custom constructUrl.
+                    <p>If true, constructUrl() will make use of the URL mapping rules to
+construct valid URLs.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUrlPrefix" id="setUrlPrefix" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUrlPrefix"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_setUrlPrefix">setUrlPrefix</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadConfigFile" id="loadConfigFile" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadConfigFile"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_loadConfigFile">loadConfigFile</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initialize the module from configuration file.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadUrlMappings" id="loadUrlMappings" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadUrlMappings"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_loadUrlMappings">loadUrlMappings</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Load and configure each url mapping pattern.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="buildUrlMapping" id="buildUrlMapping" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_buildUrlMapping"></a>
+                <code>
+                    <a href="classes/Prado-Web-TUrlMapping.html#method_buildUrlMapping">buildUrlMapping</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$class</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$properties</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$url</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_constructUrl">constructUrl</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_getConfigFile">getConfigFile</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_getDefaultMappingClass">getDefaultMappingClass</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_getEnableCustomUrl">getEnableCustomUrl</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_getMatchingPattern">getMatchingPattern</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_getUrlPrefix">getUrlPrefix</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_parseUrl">parseUrl</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_setConfigFile">setConfigFile</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_setDefaultMappingClass">setDefaultMappingClass</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_setEnableCustomUrl">setEnableCustomUrl</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_setUrlPrefix">setUrlPrefix</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_loadConfigFile">loadConfigFile</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_loadUrlMappings">loadUrlMappings</a>,                             <a href="classes/Prado-Web-TUrlMapping.html#method_buildUrlMapping">buildUrlMapping</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

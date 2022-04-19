@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDbCronModule &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1044 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="namespaces/prado-util-cron.html">Cron</a>\<a href="classes/Prado-Util-Cron-TDbCronModule.html">TDbCronModule</a>
+    </h1>
+
+    <div class="description">
+        TDbCronModule class.
+        <p>TDbCronModule does everything that TCronModule does but stores the tasks and
+persistent data in its own database table.</p>
+<p>The TDbCronModule allows for adding, updating, and removing tasks from the
+application and shell.  It can log executing tasks to the table as well.</p>
+<p>There are log maintenance methods and <a href="TDbCronCleanLogTask"></a> for cleaning
+the cron logs.</p>
+<p>Runtime Tasks can be added for execution onEndRequest.  Singleton tasks can
+be added to TDbCronModule, and scheduled to execute during Runtime at
+onEndRequest.  Then if it does not execute onEndRequest, then the next
+shell cron will execute the task.  This could occur if the user presses stop
+before the page completes.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Util-Cron-TDbCronModule.html">\Prado\Util\Cron\TDbCronModule</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Util-Cron-TCronModule.html">\Prado\Util\Cron\TCronModule</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>                        </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:120px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Util\Cron<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.2.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/Cron/TDbCronModule.php"><abbr title="framework/Util/Cron/TDbCronModule.php">TDbCronModule.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method___construct">__construct</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    constructs the instances, sets the _shellClass.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addRuntimeTask" id="addRuntimeTask" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addRuntimeTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_addRuntimeTask">addRuntimeTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$task</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds a task to being run time.  If this is the first runtime task this
+method adds {@link executeRuntimeTasks} to TApplication::onEndRequest.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addTask" id="addTask" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_addTask">addTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$task</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$runtime</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Adds a task to the database.  Validates the name and cannot add a task with an existing name.
+                    <p>This updates the table row data as well.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearCronLog" id="clearCronLog" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearCronLog"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_clearCronLog">clearCronLog</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$seconds</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    deletes the cron log items before time minus $seconds.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clearRuntimeTasks" id="clearRuntimeTasks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clearRuntimeTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_clearRuntimeTasks">clearRuntimeTasks</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears all tasks from being run time, and removes the handler from onEndRequest.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="executeRuntimeTasks" id="executeRuntimeTasks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_executeRuntimeTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_executeRuntimeTasks">executeRuntimeTasks</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-TApplication.html"><abbr title="\Prado\TApplication">TApplication</abbr></a>&nbsp;</span><var>$sender</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$param</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    This executes the Run Time Tasks, this method is automatically added
+to TApplication::onEndRequest when there are RuntimeTasks via {@link addRuntimeTask}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fxGetCronTaskInfos" id="fxGetCronTaskInfos" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fxGetCronTaskInfos"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_fxGetCronTaskInfos">fxGetCronTaskInfos</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TDbCronModule.html"><abbr title="\Prado\Util\Cron\TDbCronModule">TDbCronModule</abbr></a>&nbsp;</span><var>$cron</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">null&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    the global event handling requests for cron task info
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoCreateCronTable" id="getAutoCreateCronTable" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoCreateCronTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getAutoCreateCronTable">getAutoCreateCronTable</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getConnectionID" id="getConnectionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getConnectionID"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getConnectionID">getConnectionID</a><span>(</span><span>)</span><span> : </span><span>null|string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCronLog" id="getCronLog" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCronLog"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getCronLog">getCronLog</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$pageSize</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|bool&nbsp;</span><var>$sortingDesc</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Gets the cron log table of specific named or all tasks.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCronLogCount" id="getCronLogCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCronLogCount"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getCronLogCount">getCronLogCount</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$name</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLogCronTasks" id="getLogCronTasks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLogCronTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getLogCronTasks">getLogCronTasks</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPermissions" id="getPermissions" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPermissions"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getPermissions">getPermissions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-Permissions-TPermissionsManager.html"><abbr title="\Prado\Security\Permissions\TPermissionsManager">TPermissionsManager</abbr></a>&nbsp;</span><var>$manager</var></span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Security-Permissions-TPermissionEvent.html"><abbr title="\Prado\Security\Permissions\TPermissionEvent">TPermissionEvent</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRuntimeTasks" id="getRuntimeTasks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRuntimeTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getRuntimeTasks">getRuntimeTasks</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Gets the runtime tasks.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTableName" id="getTableName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTableName"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getTableName">getTableName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTask" id="getTask" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getTask">getTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$taskName</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$checkExisting</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$asObject</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a></span>                </code>
+
+                <div class="description short">
+                    This lazy loads the tasks.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTasks" id="getTasks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getTasks">getTasks</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    This lazy loads the tasks from configuration array to instance.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|<a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the module. Keeps track of the configured tasks different than db tasks.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removeCronLogItem" id="removeCronLogItem" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removeCronLogItem"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeCronLogItem">removeCronLogItem</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$taskUID</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Deletes one cron log item from the database
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removeRuntimeTask" id="removeRuntimeTask" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removeRuntimeTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeRuntimeTask">removeRuntimeTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$untask</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes a task from being run time.  If there are no runtime tasks left
+then it removes {@link executeRuntimeTasks} from TApplication::onEndRequest.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removeTask" id="removeTask" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removeTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeTask">removeTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$untask</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Removes a task from the database table.
+                    <p>This also removes the task from the current tasks, the taskRow, and runtime Tasks.</p>
+<p>This cannot remove tasks that are current configuration tasks.  Only tasks
+that exist can be removed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoCreateCronTable" id="setAutoCreateCronTable" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoCreateCronTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setAutoCreateCronTable">setAutoCreateCronTable</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setConnectionID" id="setConnectionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setConnectionID"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setConnectionID">setConnectionID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the ID of a TDataSourceConfig module.
+                    <p>The datasource module will be used to establish the DB connection for this cron module.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setLogCronTasks" id="setLogCronTasks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setLogCronTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setLogCronTasks">setLogCronTasks</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$log</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTableName" id="setTableName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTableName"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setTableName">setTableName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$table</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="taskExists" id="taskExists" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_taskExists"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_taskExists">taskExists</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    taskExists checks for a task or task name in the database
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateTask" id="updateTask" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_updateTask">updateTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$task</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Updates a task from its unique name.  If the Task is not in the DB it returns false
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="validateTask" id="validateTask" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_validateTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_validateTask">validateTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$properties</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This checks for &quot;name&quot;.  The name cannot by &#039;*&#039; or have spaces, `, &#039;, &quot;, &lt;, or &gt;t characters.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addTaskInternal" id="addTaskInternal" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addTaskInternal"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_addTaskInternal">addTaskInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$task</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$runtime</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Adds a task to the database.  Validates the name and cannot add a task with an existing name.
+                    <p>This updates the table row data as well.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createDbConnection" id="createDbConnection" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_createDbConnection">createDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates the DB connection. If no ConnectionId is provided, then this
+creates a sqlite database in runtime named &#039;cron.jobs&#039;.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createDbTable" id="createDbTable" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createDbTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_createDbTable">createDbTable</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    creates the module table
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureTable" id="ensureTable" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_ensureTable">ensureTable</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    checks for the table, and if not there and autoCreate, then creates the table else throw error.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureTasks" id="ensureTasks" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_ensureTasks">ensureTasks</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$initConfigTasks</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    reads in all the tasks from the db, instances them if they are active db tasks.
+                    <p>otherwise the rows are kept for persistent data.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="filterStaleTasks" id="filterStaleTasks" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_filterStaleTasks"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_filterStaleTasks">filterStaleTasks</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    this removes any stale database rows from changing configTasks
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="logCronTask" id="logCronTask" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_logCronTask"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_logCronTask">logCronTask</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$task</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$username</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    logCronTask adds a task log to the table.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removeTaskInternal" id="removeTaskInternal" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removeTaskInternal"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeTaskInternal">removeTaskInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>|string&nbsp;</span><var>$untask</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Removes a task from the database table.
+                    <p>This also removes the task from the current tasks, the taskRow, and runtime Tasks.</p>
+<p>This cannot remove tasks that are current configuration tasks.  Only tasks
+that exist can be removed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPersistentData" id="setPersistentData" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPersistentData"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setPersistentData">setPersistentData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$task</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    when instancing and then loading the tasks, this sets the persisting data of the task
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateTaskInfo" id="updateTaskInfo" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateTaskInfo"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_updateTaskInfo">updateTaskInfo</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$task</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This updates the LastExecTime and ProcessCount in the database
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateTaskInternal" id="updateTaskInternal" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateTaskInternal"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_updateTaskInternal">updateTaskInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Util-Cron-TCronTask.html"><abbr title="\Prado\Util\Cron\TCronTask">TCronTask</abbr></a>&nbsp;</span><var>$task</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Updates a task from its unique name.  If the Task is not in the DB it returns false
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_addRuntimeTask">addRuntimeTask</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_addTask">addTask</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_clearCronLog">clearCronLog</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_clearRuntimeTasks">clearRuntimeTasks</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_dyAddTask">dyAddTask</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_dyClearCronLog">dyClearCronLog</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_dyGetCronLog">dyGetCronLog</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_dyGetCronLogCount">dyGetCronLogCount</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_dyLogCron">dyLogCron</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_dyLogCronTask">dyLogCronTask</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_dyRegisterShellAction">dyRegisterShellAction</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_dyRemoveCronLogItem">dyRemoveCronLogItem</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_dyRemoveTask">dyRemoveTask</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_dyUpdateTask">dyUpdateTask</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_dyUpdateTaskInfo">dyUpdateTaskInfo</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_executeRuntimeTasks">executeRuntimeTasks</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_fxGetCronTaskInfos">fxGetCronTaskInfos</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getAdditionalCronTasks">getAdditionalCronTasks</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getAutoCreateCronTable">getAutoCreateCronTable</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getConnectionID">getConnectionID</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getCronLog">getCronLog</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getCronLogCount">getCronLogCount</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getDefaultUserName">getDefaultUserName</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getEnableRequestCron">getEnableRequestCron</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getLastCronTime">getLastCronTime</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getLogCronTasks">getLogCronTasks</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getOutputWriter">getOutputWriter</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getPendingTasks">getPendingTasks</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getPermissions">getPermissions</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getRawTasks">getRawTasks</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getRequestCronProbability">getRequestCronProbability</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getRuntimeTasks">getRuntimeTasks</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getTableName">getTableName</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getTask">getTask</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getTaskInfos">getTaskInfos</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_getTasks">getTasks</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getTasksByType">getTasksByType</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_getUserManager">getUserManager</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_init">init</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_instanceTask">instanceTask</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_processPendingTasks">processPendingTasks</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_registerShellAction">registerShellAction</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeCronLogItem">removeCronLogItem</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeRuntimeTask">removeRuntimeTask</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeTask">removeTask</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_runTask">runTask</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_setAdditionalCronTasks">setAdditionalCronTasks</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setAutoCreateCronTable">setAutoCreateCronTable</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setConnectionID">setConnectionID</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_setDefaultUserName">setDefaultUserName</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_setEnableRequestCron">setEnableRequestCron</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_setLastCronTime">setLastCronTime</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setLogCronTasks">setLogCronTasks</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_setRequestCronProbability">setRequestCronProbability</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setTableName">setTableName</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_setUserManager">setUserManager</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_taskExists">taskExists</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_updateTask">updateTask</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_validateTask">validateTask</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_addTaskInternal">addTaskInternal</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_createDbConnection">createDbConnection</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_createDbTable">createDbTable</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_ensureTable">ensureTable</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_ensureTasks">ensureTasks</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_filterStaleTasks">filterStaleTasks</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_logCron">logCron</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_logCronTask">logCronTask</a>,                             <a href="classes/Prado-Util-Cron-TCronModule.html#method_readConfiguration">readConfiguration</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_removeTaskInternal">removeTaskInternal</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_setPersistentData">setPersistentData</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_updateTaskInfo">updateTaskInfo</a>,                             <a href="classes/Prado-Util-Cron-TDbCronModule.html#method_updateTaskInternal">updateTaskInternal</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="NAME_VALIDATOR_REGEX" id="NAME_VALIDATOR_REGEX" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_NAME_VALIDATOR_REGEX"><b>NAME_VALIDATOR_REGEX</b></a>
+            </code>
+
+            <div class="description short">
+                Name Regular Expression, no spaces, single or double quotes, less than or greater than, no percent, and cannot start with star
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;/^[^\\s`\&#039;\\&quot;\\*&lt;&gt;%][^\\s`\&#039;\\&quot;&lt;&gt;%]*$/i&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_CRON_ADD_TASK" id="PERM_CRON_ADD_TASK" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_CRON_ADD_TASK"><b>PERM_CRON_ADD_TASK</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;cron_add_task&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_CRON_LOG_DELETE" id="PERM_CRON_LOG_DELETE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_CRON_LOG_DELETE"><b>PERM_CRON_LOG_DELETE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;cron_log_delete&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_CRON_LOG_READ" id="PERM_CRON_LOG_READ" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_CRON_LOG_READ"><b>PERM_CRON_LOG_READ</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;cron_log_read&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_CRON_REMOVE_TASK" id="PERM_CRON_REMOVE_TASK" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_CRON_REMOVE_TASK"><b>PERM_CRON_REMOVE_TASK</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;cron_remove_task&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_CRON_UPDATE_TASK" id="PERM_CRON_UPDATE_TASK" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_CRON_UPDATE_TASK"><b>PERM_CRON_UPDATE_TASK</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;cron_update_task&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_DEFAULT_CRON_USER"><b>\Prado\Util\Cron\TCronModule::DEFAULT_CRON_USER</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_LAST_CRON_TIME"><b>\Prado\Util\Cron\TCronModule::LAST_CRON_TIME</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_METHOD_SEPARATOR"><b>\Prado\Util\Cron\TCronModule::METHOD_SEPARATOR</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_NAME_KEY"><b>\Prado\Util\Cron\TCronModule::NAME_KEY</b></a>,                                     <a href="classes/Prado-Util-Cron-TDbCronModule.html#constant_NAME_VALIDATOR_REGEX"><b>\Prado\Util\Cron\TDbCronModule::NAME_VALIDATOR_REGEX</b></a>,                                     <a href="classes/Prado-Util-Cron-TDbCronModule.html#constant_PERM_CRON_ADD_TASK"><b>\Prado\Util\Cron\TDbCronModule::PERM_CRON_ADD_TASK</b></a>,                                     <a href="classes/Prado-Util-Cron-TDbCronModule.html#constant_PERM_CRON_LOG_DELETE"><b>\Prado\Util\Cron\TDbCronModule::PERM_CRON_LOG_DELETE</b></a>,                                     <a href="classes/Prado-Util-Cron-TDbCronModule.html#constant_PERM_CRON_LOG_READ"><b>\Prado\Util\Cron\TDbCronModule::PERM_CRON_LOG_READ</b></a>,                                     <a href="classes/Prado-Util-Cron-TDbCronModule.html#constant_PERM_CRON_REMOVE_TASK"><b>\Prado\Util\Cron\TDbCronModule::PERM_CRON_REMOVE_TASK</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_PERM_CRON_SHELL"><b>\Prado\Util\Cron\TCronModule::PERM_CRON_SHELL</b></a>,                                     <a href="classes/Prado-Util-Cron-TDbCronModule.html#constant_PERM_CRON_UPDATE_TASK"><b>\Prado\Util\Cron\TDbCronModule::PERM_CRON_UPDATE_TASK</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_SCHEDULE_KEY"><b>\Prado\Util\Cron\TCronModule::SCHEDULE_KEY</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_SHELL_LOG_BEHAVIOR"><b>\Prado\Util\Cron\TCronModule::SHELL_LOG_BEHAVIOR</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_TASK_KEY"><b>\Prado\Util\Cron\TCronModule::TASK_KEY</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_TASKS_INFO"><b>\Prado\Util\Cron\TCronModule::TASKS_INFO</b></a>,                                     <a href="classes/Prado-Util-Cron-TCronModule.html#constant_USERNAME_KEY"><b>\Prado\Util\Cron\TCronModule::USERNAME_KEY</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

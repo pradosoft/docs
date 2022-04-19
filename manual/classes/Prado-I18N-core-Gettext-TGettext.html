@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TGettext &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,232 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-i18n.html">I18N</a>\<a href="namespaces/prado-i18n-core.html">core</a>\<a href="namespaces/prado-i18n-core-gettext.html">Gettext</a>\<a href="classes/Prado-I18N-core-Gettext-TGettext.html">TGettext</a>
+    </h1>
+
+    <div class="description">
+        File_Gettext
+        <p>GNU gettext file reader and writer.</p>
+<p>#################################################################</p>
+<h1>All protected members of this class are public in its childs.</h1>
+<p>#################################################################</p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\I18N\core\Gettext<br/>
+                <b>Author:</b> <br/>
+                        <b>Located at:</b> <a href="framework/I18N/core/Gettext/TGettext.php"><abbr title="framework/I18N/core/Gettext/TGettext.php">TGettext.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="factory" id="factory" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_factory"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_factory">factory</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$format</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$file</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>object</span>                </code>
+
+                <div class="description short">
+                    Factory
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fromArray" id="fromArray" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fromArray"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_fromArray">fromArray</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$array</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    fromArray
+                    <p>Assigns meta info and strings from an array of a structure like that:
+<code class="prettyprint">
+array(
+'meta' =&gt; array(
+'Content-Type'      =&gt; 'text/plain; charset=iso-8859-1',
+'Last-Translator'   =&gt; 'Michael Wallner <a href="mailto:mike@iworks.at">mike@iworks.at</a>',
+'PO-Revision-Date'  =&gt; date('Y-m-d H:iO'),
+'Language-Team'     =&gt; 'German <a href="mailto:mail@example.com">mail@example.com</a>',
+),
+'strings' =&gt; array(
+'All rights reserved'   =&gt; 'Alle Rechte vorbehalten',
+'Welcome'               =&gt; 'Willkommen',
+// ...
+)
+)
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="meta2array" id="meta2array" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_meta2array"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_meta2array">meta2array</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$meta</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    meta2array
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="poFile2moFile" id="poFile2moFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_poFile2moFile"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_poFile2moFile">poFile2moFile</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$pofile</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$mofile</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    poFile2moFile
+                    <p>That's a simple fake of the 'msgfmt' console command.  It reads the
+contents of a GNU PO file and saves them to a GNU MO file.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="prepare" id="prepare" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_prepare"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_prepare">prepare</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$string</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$reverse</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    prepare
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toArray" id="toArray" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toArray"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_toArray">toArray</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    toArray
+                    <p>Returns meta info and strings as an array of a structure like that:
+<code class="prettyprint">
+array(
+'meta' =&gt; array(
+'Content-Type'      =&gt; 'text/plain; charset=iso-8859-1',
+'Last-Translator'   =&gt; 'Michael Wallner <a href="mailto:mike@iworks.at">mike@iworks.at</a>',
+'PO-Revision-Date'  =&gt; '2004-07-21 17:03+0200',
+'Language-Team'     =&gt; 'German <a href="mailto:mail@example.com">mail@example.com</a>',
+),
+'strings' =&gt; array(
+'All rights reserved'   =&gt; 'Alle Rechte vorbehalten',
+'Welcome'               =&gt; 'Willkommen',
+// ...
+)
+)
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toMO" id="toMO" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toMO"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_toMO">toMO</a><span>(</span><span>)</span><span> : </span><span>object</span>                </code>
+
+                <div class="description short">
+                    toMO
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toPO" id="toPO" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toPO"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_toPO">toPO</a><span>(</span><span>)</span><span> : </span><span>object</span>                </code>
+
+                <div class="description short">
+                    toPO
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_factory">factory</a>,                             <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_fromArray">fromArray</a>,                             <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_meta2array">meta2array</a>,                             <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_poFile2moFile">poFile2moFile</a>,                             <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_prepare">prepare</a>,                             <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_toArray">toArray</a>,                             <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_toMO">toMO</a>,                             <a href="classes/Prado-I18N-core-Gettext-TGettext.html#method_toPO">toPO</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TPropertyValue &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,234 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="classes/Prado-TPropertyValue.html">TPropertyValue</a>
+    </h1>
+
+    <div class="description">
+        TPropertyValue class
+        <p>TPropertyValue is a utility class that provides static methods
+to convert component property values to specific types.</p>
+<p>TPropertyValue is commonly used in component setter methods to ensure
+the new property value is of specific type.
+For example, a boolean-typed property setter method would be as follows,
+<code class="prettyprint">
+function setPropertyName($value) {
+$value=TPropertyValue::ensureBoolean($value);
+// $value is now of boolean type
+}
+</code></p>
+<p>Properties can be of the following types with specific type conversion rules:</p>
+<ul>
+<li>string: a boolean value will be converted to 'true' or 'false'.</li>
+<li>boolean: string 'true' (case-insensitive) will be converted to true,
+string 'false' (case-insensitive) will be converted to false.</li>
+<li>integer</li>
+<li>float</li>
+<li>array: string starting with '(' and ending with ')' will be considered as
+as an array expression and will be evaluated. Otherwise, an array
+with the value to be ensured is returned.</li>
+<li>object</li>
+<li>enum: enumerable type, represented by an array of strings.</li>
+</ul>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/TPropertyValue.php"><abbr title="framework/TPropertyValue.php">TPropertyValue.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="ensureArray" id="ensureArray" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureArray"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureArray">ensureArray</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Converts a value to array type. If the value is a string and it is
+in the form (a,b,c) then an array consisting of each of the elements
+will be returned. If the value is a string and it is not in this form
+then an array consisting of just the string will be returned. If the value
+is not a string then
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureBoolean" id="ensureBoolean" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureBoolean"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureBoolean">ensureBoolean</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Converts a value to boolean type.
+                    <p>Note, string 'true' (case-insensitive) will be converted to true,
+string 'false' (case-insensitive) will be converted to false.
+If a string represents a non-zero number, it will be treated as true.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureEnum" id="ensureEnum" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureEnum"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureEnum">ensureEnum</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$enums</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Converts a value to enum type.
+                    <p>This method checks if the value is of the specified enumerable type.
+A value is a valid enumerable value if it is equal to the name of a constant
+in the specified enumerable type (class).
+For more details about enumerable, see <a href="TEnumerable"></a>.</p>
+<p>For backward compatibility, this method also supports sanity
+check of a string value to see if it is among the given list of strings.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureFloat" id="ensureFloat" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureFloat"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureFloat">ensureFloat</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>float</span>                </code>
+
+                <div class="description short">
+                    Converts a value to float type.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureInteger" id="ensureInteger" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureInteger"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureInteger">ensureInteger</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Converts a value to integer type.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureNullIfEmpty" id="ensureNullIfEmpty" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureNullIfEmpty"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureNullIfEmpty">ensureNullIfEmpty</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Converts the value to &#039;null&#039; if the given value is empty
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureObject" id="ensureObject" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureObject"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureObject">ensureObject</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>object</span>                </code>
+
+                <div class="description short">
+                    Converts a value to object type.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureString" id="ensureString" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureString"></a>
+                <code>
+                    <a href="classes/Prado-TPropertyValue.html#method_ensureString">ensureString</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Converts a value to string type.
+                    <p>Note, a boolean value will be converted to 'true' if it is true
+and 'false' if it is false.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TPropertyValue.html#method_ensureArray">ensureArray</a>,                             <a href="classes/Prado-TPropertyValue.html#method_ensureBoolean">ensureBoolean</a>,                             <a href="classes/Prado-TPropertyValue.html#method_ensureEnum">ensureEnum</a>,                             <a href="classes/Prado-TPropertyValue.html#method_ensureFloat">ensureFloat</a>,                             <a href="classes/Prado-TPropertyValue.html#method_ensureInteger">ensureInteger</a>,                             <a href="classes/Prado-TPropertyValue.html#method_ensureNullIfEmpty">ensureNullIfEmpty</a>,                             <a href="classes/Prado-TPropertyValue.html#method_ensureObject">ensureObject</a>,                             <a href="classes/Prado-TPropertyValue.html#method_ensureString">ensureString</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

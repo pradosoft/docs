@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TSqlMapCacheModel &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,345 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-sqlmap.html">SqlMap</a>\<a href="namespaces/prado-data-sqlmap-configuration.html">Configuration</a>\<a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html">TSqlMapCacheModel</a>
+    </h1>
+
+    <div class="description">
+        TSqlMapCacheModel corresponds to the &lt;cacheModel&gt; sql mapping configuration tag.
+        <p>The results from a query Mapped Statement can be cached simply by specifying
+the <a href="CacheModel">TSqlMapStatement::setCacheModel()</a> property in <statement> tag.
+A cache model is a configured cache that is defined within the sql map
+configuration file. Cache models are configured using the &lt;cacheModel&gt; element.</p>
+<p>The cache model uses a pluggable framework for supporting different types of
+caches. The choice of cache is specified by the <a href="Implementation">setImplementation()</a>
+property. The class name specified must be one of <a href="TSqlMapCacheTypes"></a>.</p>
+<p>The cache implementations, LRU and FIFO cache below do not persist across
+requests. That is, once the request is complete, all cache data is lost.
+These caches are useful queries that results in the same repeated data during
+the current request.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html">\Prado\Data\SqlMap\Configuration\TSqlMapCacheModel</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\SqlMap\Configuration<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/SqlMap/Configuration/TSqlMapCacheModel.php"><abbr title="framework/Data/SqlMap/Configuration/TSqlMapCacheModel.php">TSqlMapCacheModel.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="flush" id="flush" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flush"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_flush">flush</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears the cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="get" id="get" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_get"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_get">get</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheKey.html"><abbr title="\Prado\Data\SqlMap\Configuration\TSqlMapCacheKey">TSqlMapCacheKey</abbr></a>&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFlushInterval" id="getFlushInterval" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFlushInterval"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getFlushInterval">getFlushInterval</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHitRatio" id="getHitRatio" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHitRatio"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getHitRatio">getHitRatio</a><span>(</span><span>)</span><span> : </span><span>float</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getID" id="getID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getID"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getID">getID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getImplementation" id="getImplementation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getImplementation"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getImplementation">getImplementation</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getImplementationClass" id="getImplementationClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getImplementationClass"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getImplementationClass">getImplementationClass</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initialize" id="initialize" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initialize"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_initialize">initialize</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html"><abbr title="\Prado\Data\SqlMap\DataMapper\TSqlMapCache">TSqlMapCache</abbr></a>&nbsp;</span><var>$cache</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initialize the cache implementation, sets the actual cache contain if supplied.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerCacheType" id="registerCacheType" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerCacheType"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_registerCacheType">registerCacheType</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$type</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$className</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerTriggerStatement" id="registerTriggerStatement" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerTriggerStatement"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_registerTriggerStatement">registerTriggerStatement</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-SqlMap-Statements-TMappedStatement.html"><abbr title="\Prado\Data\SqlMap\Statements\TMappedStatement">TMappedStatement</abbr></a>&nbsp;</span><var>$mappedStatement</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Register a mapped statement that will trigger a cache flush.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="set" id="set" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_set"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_set">set</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheKey.html"><abbr title="\Prado\Data\SqlMap\Configuration\TSqlMapCacheKey">TSqlMapCacheKey</abbr></a>&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFlushInterval" id="setFlushInterval" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFlushInterval"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_setFlushInterval">setFlushInterval</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setID" id="setID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setID"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_setID">setID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setImplementation" id="setImplementation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setImplementation"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_setImplementation">setImplementation</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_flush">flush</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_get">get</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getFlushInterval">getFlushInterval</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getHitRatio">getHitRatio</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getID">getID</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getImplementation">getImplementation</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_getImplementationClass">getImplementationClass</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_initialize">initialize</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_registerCacheType">registerCacheType</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_registerTriggerStatement">registerTriggerStatement</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_set">set</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_setFlushInterval">setFlushInterval</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_setID">setID</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html#method_setImplementation">setImplementation</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

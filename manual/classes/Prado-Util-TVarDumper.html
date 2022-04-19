@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TVarDumper &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,85 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="classes/Prado-Util-TVarDumper.html">TVarDumper</a>
+    </h1>
+
+    <div class="description">
+        TVarDumper class.
+        <p>TVarDumper is intended to replace the buggy PHP function var_dump and print_r.
+It can correctly identify the recursively referenced objects in a complex
+object structure. It also has a recursive depth control to avoid indefinite
+recursive display of some peculiar variables.</p>
+<p>TVarDumper can be used as follows,
+<code class="prettyprint">
+echo TVarDumper::dump($var);
+</code></p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\Util<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/TVarDumper.php"><abbr title="framework/Util/TVarDumper.php">TVarDumper.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="dump" id="dump" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_dump"></a>
+                <code>
+                    <a href="classes/Prado-Util-TVarDumper.html#method_dump">dump</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$var</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$depth</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$highlight</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Converts a variable into a string representation.
+                    <p>This method achieves the similar functionality as var_dump and print_r
+but is more robust when handling complex objects such as PRADO controls.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="dumpInternal" id="dumpInternal" n:class="">
+        <td class="attributes"><code>
+            private
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_dumpInternal"></a>
+                <code>
+                    <a href="classes/Prado-Util-TVarDumper.html#method_dumpInternal">dumpInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$var</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$level</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Util-TVarDumper.html#method_dump">dump</a>,                             <a href="classes/Prado-Util-TVarDumper.html#method_dumpInternal">dumpInternal</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

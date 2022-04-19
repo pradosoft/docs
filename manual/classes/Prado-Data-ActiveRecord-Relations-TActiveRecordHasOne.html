@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TActiveRecordHasOne &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,183 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-activerecord.html">ActiveRecord</a>\<a href="namespaces/prado-data-activerecord-relations.html">Relations</a>\<a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html">TActiveRecordHasOne</a>
+    </h1>
+
+    <div class="description">
+        TActiveRecordHasOne models the object relationship that a record (the source object)
+property is an instance of foreign record object having a foreign key
+related to the source object. The HAS_ONE relation is very similar to the
+HAS_MANY relationship (in fact, it is equivalent in the entities relationship point of view).
+        <p>The difference of HAS_ONE from HAS_MANY is that the foreign object is singular.
+That is, HAS_MANY will return a collection of records while HAS_ONE returns the
+corresponding record.</p>
+<p>Consider the <b>entity</b> relationship between a Car and a Engine.
+<code class="prettyprint">
++-----+            +--------+
+| Car | 1 &lt;----- 1 | Engine |
++-----+            +--------+
+</code>
+Where each engine belongs to only one car, that is, the Engine entity has
+a foreign key to the Car's primary key. We may model
+Engine-Car <b>object</b> relationship as active record as follows.
+<code class="prettyprint">
+class CarRecord extends TActiveRecord
+{
+const TABLE='car';
+public $car_id; //primary key
+public $colour;</p>
+<pre class="prettyprint"><code class="prettyprint">public $engine; //engine foreign object
+
+public static $RELATIONS=array
+(
+    'engine' =&gt; array(self::HAS_ONE, 'EngineRecord')
+);
+</code></pre>
+<p>public static function finder($className=<strong>CLASS</strong>)
+{
+return parent::finder($className);
+}
+}
+class EngineRecord extends TActiveRecord
+{
+const TABLE='engine';
+public $engine_id;
+public $capacity;
+public $car_id; //foreign key to cars</p>
+<p>public static function finder($className=<strong>CLASS</strong>)
+{
+return parent::finder($className);
+}
+}
+</code>
+The static <tt>$RELATIONS</tt> property of CarRecord defines that the
+property <tt>$engine</tt> that will reference an <tt>EngineRecord</tt> instance.</p>
+<p>The car record with engine property list may be fetched as follows.
+<code class="prettyprint">
+$cars = CarRecord::finder()-&gt;with_engine()-&gt;findAll();
+</code>
+The method <tt>with_xxx()</tt> (where <tt>xxx</tt> is the relationship property
+name, in this case, <tt>engine</tt>) fetchs the corresponding EngineRecords using
+a second query (not by using a join). The <tt>with_xxx()</tt> accepts the same
+arguments as other finder methods of TActiveRecord, e.g. <tt>with_engine('capacity &lt; ?', 3.8)</tt>.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html">\Prado\Data\ActiveRecord\Relations\TActiveRecordHasOne</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html">\Prado\Data\ActiveRecord\Relations\TActiveRecordRelation</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\ActiveRecord\Relations<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/ActiveRecord/Relations/TActiveRecordHasOne.php"><abbr title="framework/Data/ActiveRecord/Relations/TActiveRecordHasOne.php">TActiveRecordHasOne.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getRelationForeignKeys" id="getRelationForeignKeys" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRelationForeignKeys"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_getRelationForeignKeys">getRelationForeignKeys</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateAssociatedRecords" id="updateAssociatedRecords" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateAssociatedRecords"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_updateAssociatedRecords">updateAssociatedRecords</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Updates the associated foreign objects.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="collectForeignObjects" id="collectForeignObjects" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_collectForeignObjects"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_collectForeignObjects">collectForeignObjects</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$results</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Get the foreign key index values from the results and make calls to the
+database to find the corresponding foreign objects.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setObjectProperty" id="setObjectProperty" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setObjectProperty"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_setObjectProperty">setObjectProperty</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-ActiveRecord-TActiveRecord.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecord">TActiveRecord</abbr></a>&nbsp;</span><var>$source</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$properties</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$collections</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the foreign objects to the given property on the source object.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___call">__call</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___construct">__construct</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_fetchResultsInto">fetchResultsInto</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_getRelationForeignKeys">getRelationForeignKeys</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_updateAssociatedRecords">updateAssociatedRecords</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_collectForeignObjects">collectForeignObjects</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignKeys">findForeignKeys</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignObjects">findForeignObjects</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getContext">getContext</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getCriteria">getCriteria</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getIndexValues">getIndexValues</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getObjectHash">getObjectHash</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getSourceRecord">getSourceRecord</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_populateResult">populateResult</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasOne.html#method_setObjectProperty">setObjectProperty</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_setResultCollection">setResultCollection</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getFkFields">getFkFields</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

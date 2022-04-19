@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TErrorHandler &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,555 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-exceptions.html">Exceptions</a>\<a href="classes/Prado-Exceptions-TErrorHandler.html">TErrorHandler</a>
+    </h1>
+
+    <div class="description">
+        TErrorHandler class
+        <p>TErrorHandler handles all PHP user errors and exceptions generated during
+servicing user requests. It displays these errors using different templates
+and if possible, using languages preferred by the client user.
+Note, PHP parsing errors cannot be caught and handled by TErrorHandler.</p>
+<p>The templates used to format the error output are stored under Prado\Exceptions.
+You may choose to use your own templates, should you not like the templates
+provided by Prado. Simply set <a href="setErrorTemplatePath">ErrorTemplatePath</a>
+to the path (in namespace format) storing your own templates.</p>
+<p>There are two sets of templates, one for errors to be displayed to client users
+(called external errors), one for errors to be displayed to system developers
+(called internal errors). The template file name for the former is
+<b>error[StatusCode][-LanguageCode].html</b>, and for the latter it is
+<b>exception[-LanguageCode].html</b>, where StatusCode refers to response status
+code (e.g. 404, 500) specified when <a href="THttpException"></a> is thrown,
+and LanguageCode is the client user preferred language code (e.g. en, zh, de).
+The templates <b>error.html</b> and <b>exception.html</b> are default ones
+that are used if no other appropriate templates are available.
+Note, these templates are not Prado control templates. They are simply
+html files with keywords (e.g. %%ErrorMessage%%, %%Version%%)
+to be replaced with the corresponding information.</p>
+<p>By default, TErrorHandler is registered with <a href="TApplication"></a> as the
+error handler module. It can be accessed via <a href="TApplication::getErrorHandler()"></a>.
+You seldom need to deal with the error handler directly. It is mainly used
+by the application object to handle errors.</p>
+<p>TErrorHandler may be configured in application configuration file as follows
+&lt;module id=&quot;error&quot; class=&quot;TErrorHandler&quot; ErrorTemplatePath=&quot;Prado\Exceptions&quot; /&gt;</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Exceptions-TErrorHandler.html">\Prado\Exceptions\TErrorHandler</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Exceptions<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Exceptions/TErrorHandler.php"><abbr title="framework/Exceptions/TErrorHandler.php">TErrorHandler.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getErrorTemplatePath" id="getErrorTemplatePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getErrorTemplatePath"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getErrorTemplatePath">getErrorTemplatePath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="handleError" id="handleError" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_handleError"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_handleError">handleError</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Handles PHP user errors and exceptions.
+                    <p>This is the event handler responding to the <b>Error</b> event
+raised in <a href="TApplication"></a>.
+The method mainly uses appropriate template to display the error/exception.
+It terminates the application immediately after the error is displayed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the module.
+                    <p>This method is required by IModule and is invoked by application.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setErrorTemplatePath" id="setErrorTemplatePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setErrorTemplatePath"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_setErrorTemplatePath">setErrorTemplatePath</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the path storing all error and exception template files.
+                    <p>The path must be in namespace format, such as Prado\Exceptions (which is the default).</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="displayException" id="displayException" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_displayException"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_displayException">displayException</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Displays exception information.
+                    <p>Exceptions are displayed with rich context information, including
+the call stack and the context source code.
+This method is only invoked when application is in <b>Debug</b> mode.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getErrorTemplate" id="getErrorTemplate" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getErrorTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getErrorTemplate">getErrorTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$statusCode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Retrieves the template used for displaying external exceptions.
+                    <p>External exceptions are those displayed to end-users. They do not contain
+error source code. Therefore, you might want to override this method
+to provide your own error template for displaying certain external exceptions.
+The following tokens in the template will be replaced with corresponding content:
+%%StatusCode%% : the status code of the exception
+%%ErrorMessage%% : the error message (HTML encoded).
+%%ServerAdmin%% : the server admin information (retrieved from Web server configuration)
+%%Version%% : the version information of the Web server.
+%%Time%% : the time the exception occurs at</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getExceptionTemplate" id="getExceptionTemplate" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getExceptionTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getExceptionTemplate">getExceptionTemplate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Retrieves the template used for displaying internal exceptions.
+                    <p>Internal exceptions will be displayed with source code causing the exception.
+This occurs when the application is in debug mode.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="handleExternalError" id="handleExternalError" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_handleExternalError"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_handleExternalError">handleExternalError</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$statusCode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Displays error to the client user.
+                    <p>THttpException and errors happened when the application is in <b>Debug</b>
+mode will be displayed to the client user.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="handleRecursiveError" id="handleRecursiveError" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_handleRecursiveError"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_handleRecursiveError">handleRecursiveError</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Handles error occurs during error handling (called recursive error).
+                    <p>THttpException and errors happened when the application is in <b>Debug</b>
+mode will be displayed to the client user.
+Error is displayed without using existing template to prevent further errors.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hidePrivatePathParts" id="hidePrivatePathParts" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hidePrivatePathParts"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_hidePrivatePathParts">hidePrivatePathParts</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hideSecurityRelated" id="hideSecurityRelated" n:class="">
+        <td class="attributes"><code>
+            protected
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hideSecurityRelated"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_hideSecurityRelated">hideSecurityRelated</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|<abbr title="\Exception">Exception</abbr>&nbsp;</span><var>$exception</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addLink" id="addLink" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addLink"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_addLink">addLink</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$message</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getErrorClassNameSpace" id="getErrorClassNameSpace" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getErrorClassNameSpace"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getErrorClassNameSpace">getErrorClassNameSpace</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$message</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getExactTrace" id="getExactTrace" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getExactTrace"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getExactTrace">getExactTrace</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getExactTraceAsString" id="getExactTraceAsString" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getExactTraceAsString"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getExactTraceAsString">getExactTraceAsString</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPropertyAccessTrace" id="getPropertyAccessTrace" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPropertyAccessTrace"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getPropertyAccessTrace">getPropertyAccessTrace</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$trace</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$pattern</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSourceCode" id="getSourceCode" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSourceCode"></a>
+                <code>
+                    <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getSourceCode">getSourceCode</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$lines</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$errorLine</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getErrorTemplatePath">getErrorTemplatePath</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_handleError">handleError</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_setErrorTemplatePath">setErrorTemplatePath</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_displayException">displayException</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getErrorTemplate">getErrorTemplate</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getExceptionTemplate">getExceptionTemplate</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_handleExternalError">handleExternalError</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_handleRecursiveError">handleRecursiveError</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_hidePrivatePathParts">hidePrivatePathParts</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_hideSecurityRelated">hideSecurityRelated</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_addLink">addLink</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getErrorClassNameSpace">getErrorClassNameSpace</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getExactTrace">getExactTrace</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getExactTraceAsString">getExactTraceAsString</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getPropertyAccessTrace">getPropertyAccessTrace</a>,                             <a href="classes/Prado-Exceptions-TErrorHandler.html#method_getSourceCode">getSourceCode</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="ERROR_FILE_NAME" id="ERROR_FILE_NAME" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_ERROR_FILE_NAME"><b>ERROR_FILE_NAME</b></a>
+            </code>
+
+            <div class="description short">
+                error template file basename
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;error&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="EXCEPTION_FILE_NAME" id="EXCEPTION_FILE_NAME" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_EXCEPTION_FILE_NAME"><b>EXCEPTION_FILE_NAME</b></a>
+            </code>
+
+            <div class="description short">
+                exception template file basename
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;exception&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="FATAL_ERROR_TRACE_DROP_LINES" id="FATAL_ERROR_TRACE_DROP_LINES" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_FATAL_ERROR_TRACE_DROP_LINES"><b>FATAL_ERROR_TRACE_DROP_LINES</b></a>
+            </code>
+
+            <div class="description short">
+                number of prado internal function calls to be dropped from stack traces on fatal errors
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>5</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="SOURCE_LINES" id="SOURCE_LINES" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_SOURCE_LINES"><b>SOURCE_LINES</b></a>
+            </code>
+
+            <div class="description short">
+                number of lines before and after the error line to be displayed in case of an exception
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>12</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Exceptions-TErrorHandler.html#constant_ERROR_FILE_NAME"><b>\Prado\Exceptions\TErrorHandler::ERROR_FILE_NAME</b></a>,                                     <a href="classes/Prado-Exceptions-TErrorHandler.html#constant_EXCEPTION_FILE_NAME"><b>\Prado\Exceptions\TErrorHandler::EXCEPTION_FILE_NAME</b></a>,                                     <a href="classes/Prado-Exceptions-TErrorHandler.html#constant_FATAL_ERROR_TRACE_DROP_LINES"><b>\Prado\Exceptions\TErrorHandler::FATAL_ERROR_TRACE_DROP_LINES</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Exceptions-TErrorHandler.html#constant_SOURCE_LINES"><b>\Prado\Exceptions\TErrorHandler::SOURCE_LINES</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

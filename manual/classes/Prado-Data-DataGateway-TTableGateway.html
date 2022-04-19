@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TTableGateway &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,677 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-datagateway.html">DataGateway</a>\<a href="classes/Prado-Data-DataGateway-TTableGateway.html">TTableGateway</a>
+    </h1>
+
+    <div class="description">
+        TTableGateway class provides several find methods to get data from the database
+and update, insert, and delete methods.
+        <p>Each method maps the input parameters into a SQL call and executes the SQL
+against a database connection. The TTableGateway is stateless
+(with respect to the data and data objects), as its role is to push data back and forth.</p>
+<p>Example usage:
+<code class="prettyprint">
+//create a connection
+$dsn = 'pgsql:host=localhost;dbname=test';
+$conn = new TDbConnection($dsn, 'dbuser','dbpass');</p>
+<p>//create a table gateway for table/view named 'address'
+$table = new TTableGateway('address', $conn);</p>
+<p>//insert a new row, returns last insert id (if applicable)
+$id = $table-&gt;insert(array('name'=&gt;'wei', 'phone'=&gt;'111111'));</p>
+<p>$record1 = $table-&gt;findByPk($id); //find inserted record</p>
+<p>//finds all records, returns an iterator
+$records = $table-&gt;findAll();
+print_r($records-&gt;readAll());</p>
+<p>//update the row
+$table-&gt;updateByPk($record1, $id);
+</code></p>
+<p>All methods that may return more than one row of data will return an
+TDbDataReader iterator.</p>
+<p>The OnCreateCommand event is raised when a command is prepared and parameter
+binding is completed. The parameter object is a TDataGatewayEventParameter of which the
+<a href="TDataGatewayEventParameter::getCommand">Command</a> property can be
+inspected to obtain the sql query to be executed.</p>
+<p>The OnExecuteCommand	event is raised when a command is executed and the result
+from the database was returned. The parameter object is a
+TDataGatewayResultEventParameter of which the
+<a href="TDataGatewayEventParameter::getResult">Result</a> property contains
+the data return from the database. The data returned can be changed
+by setting the <a href="TDataGatewayEventParameter::setResult">Result</a> property.</p>
+<code class="prettyprint">
+$table->OnCreateCommand[] = 'log_it'; //any valid PHP callback statement
+$table->OnExecuteCommand[] = array($obj, 'method_name'); // calls 'method_name' on $obj
+<p>function log_it($sender, $param)
+{
+var_dump($param); //TDataGatewayEventParameter object.
+}
+</code></p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-DataGateway-TTableGateway.html">\Prado\Data\DataGateway\TTableGateway</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\DataGateway<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/DataGateway/TTableGateway.php"><abbr title="framework/Data/DataGateway/TTableGateway.php">TTableGateway.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__call" id="__call" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___call"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method___call">__call</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$method</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$args</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Dynamic find method using parts of method name as search criteria.
+                    <p>Method name starting with &quot;findBy&quot; only returns 1 record.
+Method name starting with &quot;findAllBy&quot; returns 0 or more records.
+Method name starting with &quot;deleteBy&quot; deletes records by the trail criteria.
+The condition is taken as part of the method name after &quot;findBy&quot;, &quot;findAllBy&quot;
+or &quot;deleteBy&quot;.</p>
+<p>The following are equivalent:
+<code class="prettyprint">
+$table-&gt;findByName($name)
+$table-&gt;find('Name = ?', $name);
+</code>
+<code class="prettyprint">
+$table-&gt;findByUsernameAndPassword($name,$pass); // OR may be used
+$table-&gt;findBy_Username_And_Password($name,$pass); // <em>OR</em> may be used
+$table-&gt;find('Username = ? AND Password = ?', $name, $pass);
+</code>
+<code class="prettyprint">
+$table-&gt;findAllByAge($age);
+$table-&gt;findAll('Age = ?', $age);
+</code>
+<code class="prettyprint">
+$table-&gt;deleteAll('Name = ?', $name);
+$table-&gt;deleteByName($name);
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a>&nbsp;</span><var>$table</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a>&nbsp;</span><var>$connection</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Creates a new generic table gateway for a given table or view name
+and a database connection.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="count" id="count" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_count"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_count">count</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Data-DataGateway-TSqlCriteria.html"><abbr title="\Prado\Data\DataGateway\TSqlCriteria">TSqlCriteria</abbr></a>&nbsp;</span><var>$criteria</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Find the number of records.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="deleteAll" id="deleteAll" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_deleteAll"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_deleteAll">deleteAll</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$criteria</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Delete records from the table with condition given by $where and
+binding values specified by $parameter argument.
+                    <p>This method uses additional arguments as $parameters. E.g.
+<code class="prettyprint">
+$table-&gt;delete('age &gt; ? AND location = ?', $age, $location);
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="deleteAllByPks" id="deleteAllByPks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_deleteAllByPks"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_deleteAllByPks">deleteAllByPks</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$keys</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias for deleteByPk()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="deleteByPk" id="deleteByPk" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_deleteByPk"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_deleteByPk">deleteByPk</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$keys</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Delete records by primary key. Usage:
+                    <code class="prettyprint">
+$table->deleteByPk($primaryKey); //delete 1 record
+$table->deleteByPk($key1,$key2,...); //delete multiple records
+$table->deleteByPk(array($key1,$key2,...)); //delete multiple records
+</code>
+<p>For composite primary keys (determined from the table definitions):
+<code class="prettyprint">
+$table-&gt;deleteByPk(array($key1,$key2)); //delete 1 record</p>
+<p>//delete multiple records
+$table-&gt;deleteByPk(array($key1,$key2), array($key3,$key4),...);</p>
+<p>//delete multiple records
+$table-&gt;deleteByPk(array( array($key1,$key2), array($key3,$key4), .. ));
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="find" id="find" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_find"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_find">find</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Data-DataGateway-TSqlCriteria.html"><abbr title="\Prado\Data\DataGateway\TSqlCriteria">TSqlCriteria</abbr></a>&nbsp;</span><var>$criteria</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Find one single record that matches the criteria.
+                    <p>Usage:
+<code class="prettyprint">
+$table-&gt;find('username = :name AND password = :pass',
+array(':name'=&gt;$name, ':pass'=&gt;$pass));
+$table-&gt;find('username = ? AND password = ?', array($name, $pass));
+$table-&gt;find('username = ? AND password = ?', $name, $pass);
+//$criteria is of TSqlCriteria
+$table-&gt;find($criteria); //the 2nd parameter for find() is ignored.
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="findAll" id="findAll" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_findAll"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findAll">findAll</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Data-DataGateway-TSqlCriteria.html"><abbr title="\Prado\Data\DataGateway\TSqlCriteria">TSqlCriteria</abbr></a>&nbsp;</span><var>$criteria</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbDataReader.html"><abbr title="\Prado\Data\TDbDataReader">TDbDataReader</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Accepts same parameters as find(), but returns TDbDataReader instead.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="findAllByPks" id="findAllByPks" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_findAllByPks"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findAllByPks">findAllByPks</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$keys</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbDataReader.html"><abbr title="\Prado\Data\TDbDataReader">TDbDataReader</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Similar to findByPk(), but returns TDbDataReader instead.
+                    <p>For scalar primary keys:
+<code class="prettyprint">
+$table-&gt;findAllByPk($key1, $key2, ...);
+$table-&gt;findAllByPk(array($key1, $key2, ...));
+</code></p>
+<p>For composite keys:
+<code class="prettyprint">
+$table-&gt;findAllByPk(array($key1, $key2), array($key3, $key4), ...);
+$table-&gt;findAllByPk(array(array($key1, $key2), array($key3, $key4), ...));
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="findAllBySql" id="findAllBySql" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_findAllBySql"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findAllBySql">findAllBySql</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$sql</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbDataReader.html"><abbr title="\Prado\Data\TDbDataReader">TDbDataReader</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Execute arbituary sql command with binding parameters.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="findByPk" id="findByPk" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_findByPk"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findByPk">findByPk</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$keys</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Find one record using only the primary key or composite primary keys. Usage:
+                    <code class="prettyprint">
+$table->findByPk($primaryKey);
+$table->findByPk($key1, $key2, ...);
+$table->findByPk(array($key1,$key2,...));
+</code>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="findBySql" id="findBySql" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_findBySql"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findBySql">findBySql</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$sql</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Execute arbituary sql command with binding parameters.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLastInsertId" id="getLastInsertId" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLastInsertId"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getLastInsertId">getLastInsertId</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTableInfo" id="getTableInfo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTableInfo"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getTableInfo">getTableInfo</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTableName" id="getTableName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTableName"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getTableName">getTableName</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="insert" id="insert" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_insert"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_insert">insert</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Inserts a new record into the table. Each array key must
+correspond to a column name in the table unless a null value is permitted.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onCreateCommand" id="onCreateCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onCreateCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_onCreateCommand">onCreateCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-DataGateway-TDataGatewayCommand.html"><abbr title="\Prado\Data\DataGateway\TDataGatewayCommand">TDataGatewayCommand</abbr></a>&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-DataGateway-TDataGatewayEventParameter.html"><abbr title="\Prado\Data\DataGateway\TDataGatewayEventParameter">TDataGatewayEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Raised when a command is prepared and parameter binding is completed.
+                    <p>The parameter object is TDataGatewayEventParameter of which the
+<a href="TDataGatewayEventParameter::getCommand">Command</a> property can be
+inspected to obtain the sql query to be executed.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onExecuteCommand" id="onExecuteCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onExecuteCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_onExecuteCommand">onExecuteCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-DataGateway-TDataGatewayCommand.html"><abbr title="\Prado\Data\DataGateway\TDataGatewayCommand">TDataGatewayCommand</abbr></a>&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-DataGateway-TDataGatewayResultEventParameter.html"><abbr title="\Prado\Data\DataGateway\TDataGatewayResultEventParameter">TDataGatewayResultEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Raised when a command is executed and the result from the database was returned.
+                    <p>The parameter object is TDataGatewayResultEventParameter of which the
+<a href="TDataGatewayEventParameter::getResult">Result</a> property contains
+the data return from the database. The data returned can be changed
+by setting the <a href="TDataGatewayEventParameter::setResult">Result</a> property.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="update" id="update" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_update"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_update">update</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$criteria</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Updates the table with new name-value pair $data. Each array key must
+correspond to a column name in the table. The update condition is
+specified by the $where argument and additional binding values can be
+specified using the $parameter argument.
+                    <p>This method uses additional arguments as $parameters. E.g.
+<code class="prettyprint">
+$gateway-&gt;update($data, 'age &gt; ? AND location = ?', $age, $location);
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCommand" id="getCommand" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getCommand">getCommand</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-DataGateway-TDataGatewayCommand.html"><abbr title="\Prado\Data\DataGateway\TDataGatewayCommand">TDataGatewayCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCriteria" id="getCriteria" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCriteria"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getCriteria">getCriteria</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|<a href="classes/Prado-Data-DataGateway-TSqlCriteria.html"><abbr title="\Prado\Data\DataGateway\TSqlCriteria">TSqlCriteria</abbr></a>&nbsp;</span><var>$criteria</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$parameters</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$args</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-DataGateway-TSqlCriteria.html"><abbr title="\Prado\Data\DataGateway\TSqlCriteria">TSqlCriteria</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Create a new TSqlCriteria object from a string $criteria. The $args
+are additional parameters and are used in place of the $parameters
+if $parameters is not an array and $args is an arrary.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initCommandBuilder" id="initCommandBuilder" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initCommandBuilder"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_initCommandBuilder">initCommandBuilder</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-Common-TDbCommandBuilder.html"><abbr title="\Prado\Data\Common\TDbCommandBuilder">TDbCommandBuilder</abbr></a>&nbsp;</span><var>$builder</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTableInfo" id="setTableInfo" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTableInfo"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_setTableInfo">setTableInfo</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a>&nbsp;</span><var>$tableInfo</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTableName" id="setTableName" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTableName"></a>
+                <code>
+                    <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_setTableName">setTableName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$tableName</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets up the command builder for the given table.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method___call">__call</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_count">count</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_deleteAll">deleteAll</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_deleteAllByPks">deleteAllByPks</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_deleteByPk">deleteByPk</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_find">find</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findAll">findAll</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findAllByPks">findAllByPks</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findAllBySql">findAllBySql</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findByPk">findByPk</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_findBySql">findBySql</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getLastInsertId">getLastInsertId</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getTableInfo">getTableInfo</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getTableName">getTableName</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_insert">insert</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_onCreateCommand">onCreateCommand</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_onExecuteCommand">onExecuteCommand</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_update">update</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getCommand">getCommand</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_getCriteria">getCriteria</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_initCommandBuilder">initCommandBuilder</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_setTableInfo">setTableInfo</a>,                             <a href="classes/Prado-Data-DataGateway-TTableGateway.html#method_setTableName">setTableName</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

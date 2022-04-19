@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TScaffoldView &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,273 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-activerecord.html">ActiveRecord</a>\<a href="namespaces/prado-data-activerecord-scaffold.html">Scaffold</a>\<a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html">TScaffoldView</a>
+    </h1>
+
+    <div class="description">
+        TScaffoldView is a composite control consisting of TScaffoldListView
+with a TScaffoldSearch. In addition, it will display a TScaffoldEditView
+when an &quot;edit&quot; command is raised from the TScaffoldListView (when the
+edit button is clicked). Futher more, the &quot;add&quot; button can be clicked
+that shows an empty data TScaffoldListView for creating new records.
+        <p>The <a href="getListView">ListView</a> property gives a TScaffoldListView for
+display the record data. The <a href="getEditView">EditView</a> is the
+TScaffoldEditView that renders the
+inputs for editing and adding records. The <a href="getSearchControl">SearchControl</a>
+is a TScaffoldSearch responsible to the search user interface.</p>
+<p>Set the <a href="setRecordClass">RecordClass</a> property to the name of
+the Active Record class to be displayed/edited/added.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html">\Prado\Data\ActiveRecord\Scaffold\TScaffoldView</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html">\Prado\Data\ActiveRecord\Scaffold\TScaffoldBase</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TTemplateControl.html">\Prado\Web\UI\TTemplateControl</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TCompositeControl.html">\Prado\Web\UI\TCompositeControl</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:120px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TControl.html">\Prado\Web\UI\TControl</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:150px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:180px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\ActiveRecord\Scaffold<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Data/ActiveRecord/Scaffold/TScaffoldView.php"><abbr title="framework/Data/ActiveRecord/Scaffold/TScaffoldView.php">TScaffoldView.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="bubbleEvent" id="bubbleEvent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_bubbleEvent"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_bubbleEvent">bubbleEvent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Handle the &quot;edit&quot; and &quot;new&quot; commands by displaying the edit view.
+                    <p>Default command shows the list view.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAddButton" id="getAddButton" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAddButton"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getAddButton">getAddButton</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TButton.html"><abbr title="\Prado\Web\UI\WebControls\TButton">TButton</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEditView" id="getEditView" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEditView"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getEditView">getEditView</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldEditView.html"><abbr title="\Prado\Data\ActiveRecord\Scaffold\TScaffoldEditView">TScaffoldEditView</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getListView" id="getListView" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getListView"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getListView">getListView</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldListView.html"><abbr title="\Prado\Data\ActiveRecord\Scaffold\TScaffoldListView">TScaffoldListView</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSearchControl" id="getSearchControl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSearchControl"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getSearchControl">getSearchControl</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldSearch.html"><abbr title="\Prado\Data\ActiveRecord\Scaffold\TScaffoldSearch">TScaffoldSearch</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onPreRender" id="onPreRender" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onPreRender"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_onPreRender">onPreRender</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Copy basic record details to the list/edit/search controls.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="showAddView" id="showAddView" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_showAddView"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_showAddView">showAddView</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Shows the add record view.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="showEditView" id="showEditView" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_showEditView"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_showEditView">showEditView</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Shows the edit record view.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="showListView" id="showListView" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_showListView"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_showListView">showListView</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Shows the view for listing the records.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_addedControl">addedControl</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_applyStyleSheetSkin">applyStyleSheetSkin</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoBindProperty">autoBindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_bindProperty">bindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEvent">broadcastEvent</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_bubbleEvent">bubbleEvent</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNamingContainer">clearNamingContainer</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearViewState">clearViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_convertUniqueIdToClientId">convertUniqueIdToClientId</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createChildControls">createChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBind">dataBind</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_ensureChildControls">ensureChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControl">findControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByID">findControlsByID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByType">findControlsByType</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_focus">focus</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAdapter">getAdapter</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getAddButton">getAddButton</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAllowChildControls">getAllowChildControls</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttribute">getAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttributes">getAttributes</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getClientID">getClientID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControls">getControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getCustomData">getCustomData</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getDefaultStyle">getDefaultStyle</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getEditView">getEditView</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnabled">getEnabled</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getEnableDefaultStyle">getEnableDefaultStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableTheming">getEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableViewState">getEnableViewState</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAdapter">getHasAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAttributes">getHasAttributes</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasChildInitialized">getHasChildInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasControls">getHasControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasInitialized">getHasInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoaded">getHasLoaded</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoadedPostData">getHasLoadedPostData</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasPreRendered">getHasPreRendered</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getIsSkinApplied">getIsSkinApplied</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_getIsSourceTemplateControl">getIsSourceTemplateControl</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getListView">getListView</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_getMaster">getMaster</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_getMasterClass">getMasterClass</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getNamingContainer">getNamingContainer</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPage">getPage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getParent">getParent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPluginModule">getPluginModule</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getRecordClass">getRecordClass</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getRegisteredObject">getRegisteredObject</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_getSearchControl">getSearchControl</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSkinID">getSkinID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSourceTemplateControl">getSourceTemplateControl</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_getTemplate">getTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getTemplateControl">getTemplateControl</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_getTemplateDirectory">getTemplateDirectory</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getUniqueID">getUniqueID</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getViewState">getViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getVisible">getVisible</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_hasAttribute">hasAttribute</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_injectContent">injectContent</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isObjectRegistered">isObjectRegistered</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadState">loadState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onDataBinding">onDataBinding</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onInit">onInit</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onLoad">onLoad</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_onPreRender">onPreRender</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onUnload">onUnload</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_registerContent">registerContent</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_registerContentPlaceHolder">registerContentPlaceHolder</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_registerObject">registerObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removeAttribute">removeAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removedControl">removedControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_render">render</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderChildren">renderChildren</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderControl">renderControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAdapter">setAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAttribute">setAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setCustomData">setCustomData</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_setDefaultStyle">setDefaultStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnabled">setEnabled</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_setEnableDefaultStyle">setEnableDefaultStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableTheming">setEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableViewState">setEnableViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_setMasterClass">setMasterClass</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setPage">setPage</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_setRecordClass">setRecordClass</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setSkinID">setSkinID</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_setTemplate">setTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setTemplateControl">setTemplateControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setViewState">setViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setVisible">setVisible</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_trackViewState">trackViewState</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_tryToUpdateAR">tryToUpdateAR</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_tryToUpdateView">tryToUpdateView</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unbindProperty">unbindProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unregisterObject">unregisterObject</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoDataBindProperties">autoDataBindProperties</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearChildState">clearChildState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearControlState">clearControlState</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_clearRecordObject">clearRecordObject</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_copyFrom">copyFrom</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createControlCollection">createControlCollection</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindChildren">dataBindChildren</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindProperties">dataBindProperties</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getChildControlsCreated">getChildControlsCreated</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlStage">getControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlState">getControlState</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getRecordFinder">getRecordFinder</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getRecordObject">getRecordObject</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getRecordPkValues">getRecordPkValues</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getRecordPropertyValues">getRecordPropertyValues</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_getTableInfo">getTableInfo</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_initRecursive">initRecursive</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isDescendentOf">isDescendentOf</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadRecursive">loadRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadStateRecursive">loadStateRecursive</a>,                             <a href="classes/Prado-Web-UI-TTemplateControl.html#method_loadTemplate">loadTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_preRenderRecursive">preRenderRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_raiseBubbleEvent">raiseBubbleEvent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_saveStateRecursive">saveStateRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setChildControlsCreated">setChildControlsCreated</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlStage">setControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlState">setControlState</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldBase.html#method_setRecordObject">setRecordObject</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_showAddView">showAddView</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_showEditView">showEditView</a>,                             <a href="classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldView.html#method_showListView">showListView</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_traverseChildControls">traverseChildControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unloadRecursive">unloadRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEventInternal">broadcastEventInternal</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearCachedUniqueID">clearCachedUniqueID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNameTable">clearNameTable</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_fillNameTable">fillNameTable</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_generateAutomaticID">generateAutomaticID</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_AUTOMATIC_ID_PREFIX"><b>\Prado\Web\UI\TControl::AUTOMATIC_ID_PREFIX</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CLIENT_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::CLIENT_ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CHILD_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_CHILD_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CONSTRUCTED"><b>\Prado\Web\UI\TControl::CS_CONSTRUCTED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_LOADED"><b>\Prado\Web\UI\TControl::CS_LOADED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_PRERENDERED"><b>\Prado\Web\UI\TControl::CS_PRERENDERED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_STATE_LOADED"><b>\Prado\Web\UI\TControl::CS_STATE_LOADED</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplateControl.html#constant_EXT_TEMPLATE"><b>\Prado\Web\UI\TTemplateControl::EXT_TEMPLATE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_FORMAT"><b>\Prado\Web\UI\TControl::ID_FORMAT</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CHILD_CREATED"><b>\Prado\Web\UI\TControl::IS_CHILD_CREATED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CREATING_CHILD"><b>\Prado\Web\UI\TControl::IS_CREATING_CHILD</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_THEMING"><b>\Prado\Web\UI\TControl::IS_DISABLE_THEMING</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_VIEWSTATE"><b>\Prado\Web\UI\TControl::IS_DISABLE_VIEWSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_ID_SET"><b>\Prado\Web\UI\TControl::IS_ID_SET</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_SKIN_APPLIED"><b>\Prado\Web\UI\TControl::IS_SKIN_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_STYLESHEET_APPLIED"><b>\Prado\Web\UI\TControl::IS_STYLESHEET_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_ADAPTER"><b>\Prado\Web\UI\TControl::RF_ADAPTER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_AUTO_BINDINGS"><b>\Prado\Web\UI\TControl::RF_AUTO_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CHILD_STATE"><b>\Prado\Web\UI\TControl::RF_CHILD_STATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLS"><b>\Prado\Web\UI\TControl::RF_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLSTATE"><b>\Prado\Web\UI\TControl::RF_CONTROLSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_DATA_BINDINGS"><b>\Prado\Web\UI\TControl::RF_DATA_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_EVENTS"><b>\Prado\Web\UI\TControl::RF_EVENTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS_ID"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS_ID</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_OBJECTS"><b>\Prado\Web\UI\TControl::RF_NAMED_OBJECTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_SKIN_ID"><b>\Prado\Web\UI\TControl::RF_SKIN_ID</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

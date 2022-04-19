@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    ChoiceFormat &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,178 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-i18n.html">I18N</a>\<a href="namespaces/prado-i18n-core.html">core</a>\<a href="classes/Prado-I18N-core-ChoiceFormat.html">ChoiceFormat</a>
+    </h1>
+
+    <div class="description">
+        ChoiceFormat class.
+        <p>ChoiceFormat converts between ranges of numeric values and string
+names for those ranges.</p>
+<p>A ChoiceFormat splits the real number line -Inf to +Inf into two or
+more contiguous ranges. Each range is mapped to a string.
+ChoiceFormat is generally used in a MessageFormat for displaying
+grammatically correct plurals such as &quot;There are 2 files.&quot;</p>
+<code class="prettyprint">
+$string = '[0] are no files |[1] is one file |(1,Inf] are {number} files';
+<p>$formatter = new MessageFormat(...); //init for a source
+$translated = $formatter-&gt;format($string);</p>
+<p>$choice = new ChoiceFormat();
+echo $choice-&gt;format($translated, 0); //shows &quot;are no files&quot;
+</code></p>
+<p>The message/string choices are separated by the pipe &quot;|&quot; followed
+by a set notation of the form</p>
+<h1><tt>[1,2]</tt> -- accepts values between 1 and 2, inclusive.</h1>
+<h1><tt>(1,2)</tt> -- accepts values between 1 and 2, excluding 1 and 2.</h1>
+<h1><tt>{1,2,3,4}</tt> -- only values defined in the set are accepted.</h1>
+<h1><tt>[-Inf,0)</tt> -- accepts value greater or equal to negative infinity</h1>
+<pre class="prettyprint"><code class="prettyprint">                  and strictly less than 0
+</code></pre>
+<p>Any non-empty combinations of the delimiters of square and round brackets
+are acceptable.</p>
+<p>Since version 3.1.2 the following set notation is also possible.</p>
+<h1><tt>{n: n % 10 &gt; 1 &amp;&amp; n % 10 &lt; 5}</tt> --  matches numbers like 2, 3, 4, 22, 23, 24</h1>
+<p>Where set is defined by the expression after <tt>n:</tt>. In particular, the expression
+accepts the following mathematical/logical operators to form a set of logical conditions
+on the value given by <tt>n</tt>:</p>
+<h1><tt>&lt;</tt> -- less than.</h1>
+<h1><tt>&lt;=</tt> -- less than equals.</h1>
+<h1><tt>&gt;</tt> -- greater than.</h1>
+<h1><tt>&amp;gt=</tt> -- greater than equals.</h1>
+<h1><tt>==</tt> -- of equal value.</h1>
+<h1><tt>%</tt> -- modulo, e.g., 1 % 10 equals 1, 11 % 10 equals 1.</h1>
+<h1><tt>-</tt> -- minus, negative.</h1>
+<h1><tt>+</tt> -- addition.</h1>
+<h1><tt>&amp;</tt> -- conditional AND.</h1>
+<h1><tt>&amp;&amp;</tt> -- condition AND with short circuit.</h1>
+<h1><tt>|</tt> -- conditional OR.</h1>
+<h1><tt>||</tt> -- conditional OR with short circuit.</h1>
+<h1><tt>!</tt> -- negation.</h1>
+<p>Additional round brackets can also be used to perform grouping.</p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\I18N\core<br/>
+                <b>Author:</b> <br/>
+                        <b>Located at:</b> <a href="framework/I18N/core/ChoiceFormat.php"><abbr title="framework/I18N/core/ChoiceFormat.php">ChoiceFormat.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-ChoiceFormat.html#method___construct">__construct</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="format" id="format" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_format"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_format">format</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$string</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><var>$number</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    For the choice string, and a number, find and return the
+string that satisfied the set within the choices.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isValid" id="isValid" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isValid"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_isValid">isValid</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><var>$number</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$set</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Determine if the given number belongs to a given set
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parse" id="parse" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parse"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_parse">parse</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$string</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Parse a choice string and get a list of sets and a list of strings
+corresponding to the sets.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isValidSetNotation" id="isValidSetNotation" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isValidSetNotation"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_isValidSetNotation">isValidSetNotation</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$number</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$set</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-I18N-core-ChoiceFormat.html#method___construct">__construct</a>,                             <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_format">format</a>,                             <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_isValid">isValid</a>,                             <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_parse">parse</a>,                             <a href="classes/Prado-I18N-core-ChoiceFormat.html#method_isValidSetNotation">isValidSetNotation</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

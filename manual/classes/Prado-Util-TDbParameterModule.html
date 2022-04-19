@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDbParameterModule &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,948 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="classes/Prado-Util-TDbParameterModule.html">TDbParameterModule</a>
+    </h1>
+
+    <div class="description">
+        TDbParameterModule class
+        <p>This loads application parameters from a database.  It adds the
+<a href="TMapLazyLoadBehavior"></a> to Application Parameters when the
+<a href="setAutoLoadField"></a> is set.  The key and name fields, table,
+autoload field, and autoload values (both true and false values)
+are parameterized.  Set them to your application specific values.</p>
+<p>The following will load the options from a WordPress Database:
+<code class="prettyprint">
+&lt;module id=&quot;dbparams&quot; class=&quot;Prado\Util\TDbParameterModule&quot;
+ConnectionID=&quot;DB&quot; KeyField=&quot;option_name&quot; ValueField=&quot;option_value&quot; TableName=&quot;wp_options&quot; Serializer=&quot;php&quot;
+autoLoadField=&quot;autoload&quot; autoLoadValue=&quot;'yes'&quot; autoLoadValueFalse=&quot;'no'&quot;/&gt;
+</code></p>
+<p>This allows for setting and removal of application parameters
+into and from the database through <a href="set"></a> and
+<a href="remove"></a>, respectively. Arrays and Objects are
+serialized.  The specific serializer can be chose to be 'php',
+'json', or provide your own function or callable.  Default to 'php'.</p>
+<p>setting <a href="setSerializer"></a> to your own function that has the
+following format:
+<code class="prettyprint">
+function mySerializerFunction($data, $encode) {...}
+</code>
+If $encode is true, then encode, otherwise decode, to text.</p>
+<p>When <a href="getCaptureParameterChanges"></a> is true, the default,
+then this will route any changes to the Application Parameters
+after TPageService::onPreRunPage back to the TDbParameterModule
+and be saved to the database.  This captures any changes when
+done by the page or user.  These changes are restored when
+this module is loaded again.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Util-TDbParameterModule.html">\Prado\Util\TDbParameterModule</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>,                             <a href="classes/Prado-Security-Permissions-IPermissions.html">\Prado\Security\Permissions\IPermissions</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>,                             <a href="classes/Prado-Security-Permissions-IPermissions.html">\Prado\Security\Permissions\IPermissions</a>                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Util<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.2.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/TDbParameterModule.php"><abbr title="framework/Util/TDbParameterModule.php">TDbParameterModule.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="attachParameterStorage" id="attachParameterStorage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_attachParameterStorage"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_attachParameterStorage">attachParameterStorage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This attaches the TMapRouteBehavior on the Parameters.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="attachTPageServiceHandler" id="attachTPageServiceHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_attachTPageServiceHandler"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_attachTPageServiceHandler">attachTPageServiceHandler</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    TApplication::onBeginRequest Handler that adds {@link attachTPageBehaviors} to
+TPageService::onPreRunPage. In turn, this attaches {@link attachTPageBehaviors}
+to TPageService to then adds the page behaviors.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="exists" id="exists" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_exists"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_exists">exists</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    exists checks for a parameter in the database
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="get" id="get" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_get"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_get">get</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$checkParameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$setParameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Gets a specific parameter parameters into application.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoCreateParamTable" id="getAutoCreateParamTable" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoCreateParamTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoCreateParamTable">getAutoCreateParamTable</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoLoadField" id="getAutoLoadField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoLoadField"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoLoadField">getAutoLoadField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoLoadValue" id="getAutoLoadValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoLoadValue"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoLoadValue">getAutoLoadValue</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoLoadValueFalse" id="getAutoLoadValueFalse" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoLoadValueFalse"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoLoadValueFalse">getAutoLoadValueFalse</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCaptureParameterChanges" id="getCaptureParameterChanges" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCaptureParameterChanges"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getCaptureParameterChanges">getCaptureParameterChanges</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getConnectionID" id="getConnectionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getConnectionID"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getConnectionID">getConnectionID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFromBehavior" id="getFromBehavior" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFromBehavior"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getFromBehavior">getFromBehavior</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads parameters into application.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getKeyField" id="getKeyField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getKeyField"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getKeyField">getKeyField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPermissions" id="getPermissions" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPermissions"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getPermissions">getPermissions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-Permissions-TPermissionsManager.html"><abbr title="\Prado\Security\Permissions\TPermissionsManager">TPermissionsManager</abbr></a>&nbsp;</span><var>$manager</var></span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Security-Permissions-TPermissionEvent.html"><abbr title="\Prado\Security\Permissions\TPermissionEvent">TPermissionEvent</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSerializer" id="getSerializer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSerializer"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getSerializer">getSerializer</a><span>(</span><span>)</span><span> : </span><span>null|callable|string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTableName" id="getTableName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTableName"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getTableName">getTableName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getValueField" id="getValueField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getValueField"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_getValueField">getValueField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the module by loading parameters.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerShellAction" id="registerShellAction" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerShellAction"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_registerShellAction">registerShellAction</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="remove" id="remove" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_remove"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_remove">remove</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    remove removes a parameter from the database
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="set" id="set" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_set"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_set">set</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$autoLoad</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$setParameter</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets a parameter in the database and the Application Parameter.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoCreateParamTable" id="setAutoCreateParamTable" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoCreateParamTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoCreateParamTable">setAutoCreateParamTable</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoLoadField" id="setAutoLoadField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoLoadField"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoLoadField">setAutoLoadField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoLoadValue" id="setAutoLoadValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoLoadValue"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoLoadValue">setAutoLoadValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoLoadValueFalse" id="setAutoLoadValueFalse" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoLoadValueFalse"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoLoadValueFalse">setAutoLoadValueFalse</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCaptureParameterChanges" id="setCaptureParameterChanges" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCaptureParameterChanges"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setCaptureParameterChanges">setCaptureParameterChanges</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setConnectionID" id="setConnectionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setConnectionID"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setConnectionID">setConnectionID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the ID of a TDataSourceConfig module.
+                    <p>The datasource module will be used to establish the DB connection
+that will be used by the user manager.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFromBehavior" id="setFromBehavior" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFromBehavior"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setFromBehavior">setFromBehavior</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets a parameter in the database and the Application Parameter.
+                    <p>from changes to the Parameter through a TMapRouteBehavior.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setKeyField" id="setKeyField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setKeyField"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setKeyField">setKeyField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSerializer" id="setSerializer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSerializer"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setSerializer">setSerializer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable|string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Serializer sets the type of serialization of objects and arrays in parameters
+to and from the database.  &#039;php&#039; uses serialze and unserialize. &#039;json&#039; uses
+json_encode and json_decade. or you can provide your own callable to serialized
+and unserialize objects and arrays.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTableName" id="setTableName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTableName"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setTableName">setTableName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setValueField" id="setValueField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setValueField"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_setValueField">setValueField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createDbConnection" id="createDbConnection" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_createDbConnection">createDbConnection</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$connectionID</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates the DB connection.  If no ConnectionID is set, this creates a
+sqlite3 database in the RuntimePath &quot;sqlite3.params&quot;.  If the
+{@link getAutoLoadField} is not set, the default, then the autoLoadField
+is set to &quot;autoload&quot; to enable the feature by default.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createDbTable" id="createDbTable" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createDbTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_createDbTable">createDbTable</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Creates the DB table for storing log messages.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="ensureTable" id="ensureTable" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_ensureTable"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_ensureTable">ensureTable</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    checks for the table, and if not there and autoCreate, then creates the table else throw error.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadDbParameters" id="loadDbParameters" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadDbParameters"></a>
+                <code>
+                    <a href="classes/Prado-Util-TDbParameterModule.html#method_loadDbParameters">loadDbParameters</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads parameters from the database into the application.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_attachParameterStorage">attachParameterStorage</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_attachTPageServiceHandler">attachTPageServiceHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_dyRegisterShellAction">dyRegisterShellAction</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_exists">exists</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_get">get</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoCreateParamTable">getAutoCreateParamTable</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoLoadField">getAutoLoadField</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoLoadValue">getAutoLoadValue</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getAutoLoadValueFalse">getAutoLoadValueFalse</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getCaptureParameterChanges">getCaptureParameterChanges</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getConnectionID">getConnectionID</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getFromBehavior">getFromBehavior</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getKeyField">getKeyField</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getPermissions">getPermissions</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getSerializer">getSerializer</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getTableName">getTableName</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_getValueField">getValueField</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_registerShellAction">registerShellAction</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_remove">remove</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_set">set</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoCreateParamTable">setAutoCreateParamTable</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoLoadField">setAutoLoadField</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoLoadValue">setAutoLoadValue</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setAutoLoadValueFalse">setAutoLoadValueFalse</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setCaptureParameterChanges">setCaptureParameterChanges</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setConnectionID">setConnectionID</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setFromBehavior">setFromBehavior</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setKeyField">setKeyField</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setSerializer">setSerializer</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setTableName">setTableName</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_setValueField">setValueField</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_createDbConnection">createDbConnection</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_createDbTable">createDbTable</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_ensureTable">ensureTable</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Util-TDbParameterModule.html#method_loadDbParameters">loadDbParameters</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="APP_PARAMETER_LAZY_BEHAVIOR" id="APP_PARAMETER_LAZY_BEHAVIOR" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_APP_PARAMETER_LAZY_BEHAVIOR"><b>APP_PARAMETER_LAZY_BEHAVIOR</b></a>
+            </code>
+
+            <div class="description short">
+                The name of the Application Parameter Lazy Load Behavior
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;lazyTDbParameter&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="APP_PARAMETER_SET_BEHAVIOR" id="APP_PARAMETER_SET_BEHAVIOR" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_APP_PARAMETER_SET_BEHAVIOR"><b>APP_PARAMETER_SET_BEHAVIOR</b></a>
+            </code>
+
+            <div class="description short">
+                The name of the Application Parameter Lazy Load Behavior
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;setTDbParameter&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_PARAM_SHELL" id="PERM_PARAM_SHELL" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_PARAM_SHELL"><b>PERM_PARAM_SHELL</b></a>
+            </code>
+
+            <div class="description short">
+                The permission for the cron shell
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;param_shell&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="SERIALIZE_JSON" id="SERIALIZE_JSON" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_SERIALIZE_JSON"><b>SERIALIZE_JSON</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;json&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="SERIALIZE_PHP" id="SERIALIZE_PHP" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_SERIALIZE_PHP"><b>SERIALIZE_PHP</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;php&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Util-TDbParameterModule.html#constant_APP_PARAMETER_LAZY_BEHAVIOR"><b>\Prado\Util\TDbParameterModule::APP_PARAMETER_LAZY_BEHAVIOR</b></a>,                                     <a href="classes/Prado-Util-TDbParameterModule.html#constant_APP_PARAMETER_SET_BEHAVIOR"><b>\Prado\Util\TDbParameterModule::APP_PARAMETER_SET_BEHAVIOR</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Util-TDbParameterModule.html#constant_PERM_PARAM_SHELL"><b>\Prado\Util\TDbParameterModule::PERM_PARAM_SHELL</b></a>,                                     <a href="classes/Prado-Util-TDbParameterModule.html#constant_SERIALIZE_JSON"><b>\Prado\Util\TDbParameterModule::SERIALIZE_JSON</b></a>,                                     <a href="classes/Prado-Util-TDbParameterModule.html#constant_SERIALIZE_PHP"><b>\Prado\Util\TDbParameterModule::SERIALIZE_PHP</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

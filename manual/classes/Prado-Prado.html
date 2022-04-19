@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    Prado &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,682 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="classes/Prado-Prado.html">Prado</a>
+    </h1>
+
+    <div class="description">
+        Prado class.
+        <p>Prado implements a few fundamental static methods.</p>
+<p>To use the static methods, Use Prado as the class name rather than Prado.
+Prado is meant to serve as the base class of Prado. The latter might be
+rewritten for customization.</p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Prado.php"><abbr title="framework/Prado.php">Prado.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="autoload" id="autoload" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_autoload"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_autoload">autoload</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$className</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Class autoload loader.
+                    <p>This method is provided to be registered within an spl_autoload_register() method.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createComponent" id="createComponent" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createComponent"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_createComponent">createComponent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">class-string<\Prado\T>&nbsp;</span><var>$requestedType</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><var>$params</var></span><span>)</span><span> : </span><span><abbr title="\Prado\T">T</abbr></span>                </code>
+
+                <div class="description short">
+                    Creates a component with the specified type.
+                    <p>A component type can be either the component class name
+or a namespace referring to the path of the component class file.
+For example, 'TButton', '\Prado\Web\UI\WebControls\TButton' are both
+valid component type.
+This method can also pass parameters to component constructors.
+All parameters passed to this method except the first one (the component type)
+will be supplied as component constructor parameters.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="exceptionHandler" id="exceptionHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_exceptionHandler"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_exceptionHandler">exceptionHandler</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Throwable">Throwable</abbr>&nbsp;</span><var>$exception</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Default exception handler.
+                    <p>This method should be registered as default exception handler using
+<a href="set_exception_handler"></a>. The method tries to use the errorhandler
+module of the Prado application to handle the exception.
+If the application or the module does not exist, it simply echoes the
+exception.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fatalError" id="fatalError" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fatalError"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_fatalError">fatalError</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$msg</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Fatal error handler.
+                    <p>This method displays an error message together with the current call stack.
+The application will exit after calling this method.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getApplication" id="getApplication" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getApplication"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getApplication">getApplication</a><span>(</span><span>)</span><span> : </span><span>null|<a href="classes/Prado-TApplication.html"><abbr title="\Prado\TApplication">TApplication</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDefaultPermissions" id="getDefaultPermissions" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDefaultPermissions"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getDefaultPermissions">getDefaultPermissions</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFrameworkPath" id="getFrameworkPath" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFrameworkPath"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getFrameworkPath">getFrameworkPath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLogger" id="getLogger" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLogger"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getLogger">getLogger</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Util-TLogger.html"><abbr title="\Prado\Util\TLogger">TLogger</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPathOfAlias" id="getPathOfAlias" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPathOfAlias"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getPathOfAlias">getPathOfAlias</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$alias</var></span><span>)</span><span> : </span><span>null|string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPathOfNamespace" id="getPathOfNamespace" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPathOfNamespace"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getPathOfNamespace">getPathOfNamespace</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$namespace</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$ext</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>null|string</span>                </code>
+
+                <div class="description short">
+                    Translates a namespace into a file path.
+                    <p>The first segment of the namespace is considered as a path alias
+which is replaced with the actual path. The rest segments are
+subdirectory names appended to the aliased path.
+If the namespace ends with an asterisk '*', it represents a directory;
+Otherwise it represents a file whose extension name is specified by the second parameter (defaults to empty).
+Note, this method does not ensure the existence of the resulting file path.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPreferredLanguage" id="getPreferredLanguage" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPreferredLanguage"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getPreferredLanguage">getPreferredLanguage</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Returns the most preferred language by the client user.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUserLanguages" id="getUserLanguages" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUserLanguages"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getUserLanguages">getUserLanguages</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, string&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns a list of user preferred languages.
+                    <p>The languages are returned as an array. Each array element
+represents a single language preference. The languages are ordered
+according to user preferences. The first language is the most preferred.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getVersion" id="getVersion" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getVersion"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getVersion">getVersion</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_init">init</a><span>(</span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Initializes the Prado static class
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initAutoloader" id="initAutoloader" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initAutoloader"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_initAutoloader">initAutoloader</a><span>(</span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Loads the static classmap and registers the autoload function.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initErrorHandlers" id="initErrorHandlers" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initErrorHandlers"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_initErrorHandlers">initErrorHandlers</a><span>(</span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Initializes error handlers.
+                    <p>This method set error and exception handlers to be functions
+defined in this class.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="localize" id="localize" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_localize"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_localize">localize</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$text</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string, string&gt;&nbsp;</span><var>$parameters</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$charset</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Localize a text to the locale/culture specified in the globalization handler.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="log" id="log" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_log"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_log">log</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$msg</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$level</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">TLogger::INFO</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$category</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;Uncategorized&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>|string&nbsp;</span><var>$ctl</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Logs a message.
+                    <p>Messages logged by this method may be retrieved via <a href="TLogger::getLogs"></a>
+and may be recorded in different media, such as file, email, database, using
+<a href="TLogRouter"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="phpErrorHandler" id="phpErrorHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_phpErrorHandler"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_phpErrorHandler">phpErrorHandler</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$errno</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$errstr</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$errfile</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$errline</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    PHP error handler.
+                    <p>This method should be registered as PHP error handler using
+<a href="set_error_handler"></a>. The method throws an exception that
+contains the error information.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="phpFatalErrorHandler" id="phpFatalErrorHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_phpFatalErrorHandler"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_phpFatalErrorHandler">phpFatalErrorHandler</a><span>(</span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    PHP shutdown function used to catch fatal errors.
+                    <p>This method should be registered as PHP error handler using
+<a href="register_shutdown_function"></a>. The method throws an exception that
+contains the error information.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="poweredByPrado" id="poweredByPrado" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_poweredByPrado"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_poweredByPrado">poweredByPrado</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$logoType</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setApplication" id="setApplication" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setApplication"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_setApplication">setApplication</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-TApplication.html"><abbr title="\Prado\TApplication">TApplication</abbr></a>&nbsp;</span><var>$application</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Stores the application instance in the class static member.
+                    <p>This method helps implement a singleton pattern for TApplication.
+Repeated invocation of this method or the application constructor
+will cause the throw of an exception.
+This method should only be used by framework developers.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPathOfAlias" id="setPathOfAlias" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPathOfAlias"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_setPathOfAlias">setPathOfAlias</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$alias</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$path</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="trace" id="trace" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_trace"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_trace">trace</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$msg</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$category</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;Uncategorized&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>|string&nbsp;</span><var>$ctl</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Writes a log message.
+                    <p>This method wraps <a href="log()"></a> by checking the application mode.
+When the application is in Debug mode, debug backtrace information is appended
+to the message and the message is logged at DEBUG level.
+When the application is in Performance mode, this method does nothing.
+Otherwise, the message is logged at INFO level.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="using" id="using" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_using"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_using">using</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$namespace</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Uses a namespace.
+                    <p>A namespace ending with an asterisk '*' refers to a directory, otherwise it represents a PHP file.
+If the namespace corresponds to a directory, the directory will be appended
+to the include path. If the namespace corresponds to a file, it will be included (include_once).</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="varDump" id="varDump" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_varDump"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_varDump">varDump</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$var</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$depth</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">10</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$highlight</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Converts a variable into a string representation.
+                    <p>This method achieves the similar functionality as var_dump and print_r
+but is more robust when handling complex objects such as PRADO controls.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPathAliases" id="getPathAliases" n:class="">
+        <td class="attributes"><code>
+            protected
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPathAliases"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_getPathAliases">getPathAliases</a><span>(</span><span>)</span><span> : </span><span>array&lt;string, string&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="prado3NamespaceToPhpNamespace" id="prado3NamespaceToPhpNamespace" n:class="">
+        <td class="attributes"><code>
+            protected
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_prado3NamespaceToPhpNamespace"></a>
+                <code>
+                    <a href="classes/Prado-Prado.html#method_prado3NamespaceToPhpNamespace">prado3NamespaceToPhpNamespace</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$type</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Convert old Prado namespaces to PHP namespaces
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Prado.html#method_autoload">autoload</a>,                             <a href="classes/Prado-Prado.html#method_createComponent">createComponent</a>,                             <a href="classes/Prado-Prado.html#method_exceptionHandler">exceptionHandler</a>,                             <a href="classes/Prado-Prado.html#method_fatalError">fatalError</a>,                             <a href="classes/Prado-Prado.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Prado.html#method_getDefaultPermissions">getDefaultPermissions</a>,                             <a href="classes/Prado-Prado.html#method_getFrameworkPath">getFrameworkPath</a>,                             <a href="classes/Prado-Prado.html#method_getLogger">getLogger</a>,                             <a href="classes/Prado-Prado.html#method_getPathOfAlias">getPathOfAlias</a>,                             <a href="classes/Prado-Prado.html#method_getPathOfNamespace">getPathOfNamespace</a>,                             <a href="classes/Prado-Prado.html#method_getPreferredLanguage">getPreferredLanguage</a>,                             <a href="classes/Prado-Prado.html#method_getUserLanguages">getUserLanguages</a>,                             <a href="classes/Prado-Prado.html#method_getVersion">getVersion</a>,                             <a href="classes/Prado-Prado.html#method_init">init</a>,                             <a href="classes/Prado-Prado.html#method_initAutoloader">initAutoloader</a>,                             <a href="classes/Prado-Prado.html#method_initErrorHandlers">initErrorHandlers</a>,                             <a href="classes/Prado-Prado.html#method_localize">localize</a>,                             <a href="classes/Prado-Prado.html#method_log">log</a>,                             <a href="classes/Prado-Prado.html#method_phpErrorHandler">phpErrorHandler</a>,                             <a href="classes/Prado-Prado.html#method_phpFatalErrorHandler">phpFatalErrorHandler</a>,                             <a href="classes/Prado-Prado.html#method_poweredByPrado">poweredByPrado</a>,                             <a href="classes/Prado-Prado.html#method_setApplication">setApplication</a>,                             <a href="classes/Prado-Prado.html#method_setPathOfAlias">setPathOfAlias</a>,                             <a href="classes/Prado-Prado.html#method_trace">trace</a>,                             <a href="classes/Prado-Prado.html#method_using">using</a>,                             <a href="classes/Prado-Prado.html#method_varDump">varDump</a>,                             <a href="classes/Prado-Prado.html#method_getPathAliases">getPathAliases</a>,                             <a href="classes/Prado-Prado.html#method_prado3NamespaceToPhpNamespace">prado3NamespaceToPhpNamespace</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="CLASS_FILE_EXT" id="CLASS_FILE_EXT" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CLASS_FILE_EXT"><b>CLASS_FILE_EXT</b></a>
+            </code>
+
+            <div class="description short">
+                File extension for Prado class files.
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;.php&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-Prado.html#constant_CLASS_FILE_EXT"><b>\Prado\Prado::CLASS_FILE_EXT</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

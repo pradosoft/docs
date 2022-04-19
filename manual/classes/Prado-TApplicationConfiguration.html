@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TApplicationConfiguration &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,596 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="classes/Prado-TApplicationConfiguration.html">TApplicationConfiguration</a>
+    </h1>
+
+    <div class="description">
+        TApplicationConfiguration class.
+        <p>This class is used internally by TApplication to parse and represent application configuration.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-TApplicationConfiguration.html">\Prado\TApplicationConfiguration</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado<br/>
+                <b>Author:</b> <br/>
+            <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/TApplicationConfiguration.php"><abbr title="framework/TApplicationConfiguration.php">TApplicationConfiguration.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getAliases" id="getAliases" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAliases"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getAliases">getAliases</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns list of path alias definitions.
+                    <p>The definitions are aggregated (top-down) from configuration files along the path
+to the specified page. Each array element represents a single alias definition,
+with the key being the alias name and the value the absolute path.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getComposerExtensionClass" id="getComposerExtensionClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getComposerExtensionClass"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getComposerExtensionClass">getComposerExtensionClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span>)</span><span> : </span><span>null|string</span>                </code>
+
+                <div class="description short">
+                    Given a module id as a composer package name, returns the extension bootstrap
+{@link TModule} class.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getExternalConfigurations" id="getExternalConfigurations" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getExternalConfigurations"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getExternalConfigurations">getExternalConfigurations</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIsEmpty" id="getIsEmpty" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIsEmpty"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getIsEmpty">getIsEmpty</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getModules" id="getModules" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getModules"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getModules">getModules</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns list of module configurations.
+                    <p>The module configurations are aggregated (top-down) from configuration files
+along the path to the specified page. Each array element represents
+a single module configuration, with the key being the module ID and
+the value the module configuration. Each module configuration is
+stored in terms of an array with the following content
+([0]=&gt;module type, [1]=&gt;module properties, [2]=&gt;complete module configuration)
+The module properties are an array of property values indexed by property names.
+The complete module configuration is a TXmlElement object representing
+the raw module configuration which may contain contents enclosed within
+module tags.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getParameters" id="getParameters" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getParameters"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getParameters">getParameters</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns list of parameter definitions.
+                    <p>The parameter definitions are aggregated (top-down) from configuration files
+along the path to the specified page. Each array element represents
+a single parameter definition, with the key being the parameter ID and
+the value the parameter definition. A parameter definition can be either
+a string representing a string-typed parameter, or an array.
+The latter defines a component-typed parameter whose format is as follows,
+([0]=&gt;component type, [1]=&gt;component properties)
+The component properties are an array of property values indexed by property names.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getProperties" id="getProperties" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getProperties"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getProperties">getProperties</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns list of page initial property values.
+                    <p>Each array element represents a single property with the key
+being the property name and the value the initial property value.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getServices" id="getServices" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getServices"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getServices">getServices</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUsings" id="getUsings" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUsings"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getUsings">getUsings</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns list of namespaces to be used.
+                    <p>The namespaces are aggregated (top-down) from configuration files along the path
+to the specified page. Each array element represents a single namespace usage,
+with the value being the namespace to be used.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadFromFile" id="loadFromFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadFromFile"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadFromFile">loadFromFile</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$fname</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Parses the application configuration file.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadFromPhp" id="loadFromPhp" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadFromPhp"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadFromPhp">loadFromPhp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$config</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Parses the application configuration given in terms of a PHP array.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadFromXml" id="loadFromXml" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadFromXml"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadFromXml">loadFromXml</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$dom</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Parses the application configuration given in terms of a TXmlElement.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getComposerExtensionBootStraps" id="getComposerExtensionBootStraps" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getComposerExtensionBootStraps"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_getComposerExtensionBootStraps">getComposerExtensionBootStraps</a><span>(</span><span>)</span><span> : </span><span>array&lt;string, string&gt;</span>                </code>
+
+                <div class="description short">
+                    Reads the Composer static RegisteredLoaders for their Vendor Directory. Reads the Vendor
+Directory composer file &#039;installed.json&#039; (accumulated extensions composer.json) for the project.
+                    <p>The ['extra']['bootstrap'] field is read for each extension, if it's there.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadExternalPhp" id="loadExternalPhp" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadExternalPhp"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadExternalPhp">loadExternalPhp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$includeNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the external PHP array.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadExternalXml" id="loadExternalXml" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadExternalXml"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadExternalXml">loadExternalXml</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$includeNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the external XML configurations.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadModulesPhp" id="loadModulesPhp" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadModulesPhp"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadModulesPhp">loadModulesPhp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$modulesNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the modules PHP array.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadModulesXml" id="loadModulesXml" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadModulesXml"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadModulesXml">loadModulesXml</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$modulesNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the modules XML node.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadParametersPhp" id="loadParametersPhp" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadParametersPhp"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadParametersPhp">loadParametersPhp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$parametersNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the parameters PHP array.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadParametersXml" id="loadParametersXml" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadParametersXml"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadParametersXml">loadParametersXml</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$parametersNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the parameters XML node.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadPathsPhp" id="loadPathsPhp" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadPathsPhp"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadPathsPhp">loadPathsPhp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$pathsNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the paths PHP array
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadPathsXml" id="loadPathsXml" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadPathsXml"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadPathsXml">loadPathsXml</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$pathsNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the paths XML node.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadServicesPhp" id="loadServicesPhp" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadServicesPhp"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadServicesPhp">loadServicesPhp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$servicesNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the services PHP array.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadServicesXml" id="loadServicesXml" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadServicesXml"></a>
+                <code>
+                    <a href="classes/Prado-TApplicationConfiguration.html#method_loadServicesXml">loadServicesXml</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$servicesNode</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$configPath</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the services XML node.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getAliases">getAliases</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getComposerExtensionClass">getComposerExtensionClass</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getExternalConfigurations">getExternalConfigurations</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getIsEmpty">getIsEmpty</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getModules">getModules</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getParameters">getParameters</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getProperties">getProperties</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getServices">getServices</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getUsings">getUsings</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadFromFile">loadFromFile</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadFromPhp">loadFromPhp</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadFromXml">loadFromXml</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_getComposerExtensionBootStraps">getComposerExtensionBootStraps</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadExternalPhp">loadExternalPhp</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadExternalXml">loadExternalXml</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadModulesPhp">loadModulesPhp</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadModulesXml">loadModulesXml</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadParametersPhp">loadParametersPhp</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadParametersXml">loadParametersXml</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadPathsPhp">loadPathsPhp</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadPathsXml">loadPathsXml</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadServicesPhp">loadServicesPhp</a>,                             <a href="classes/Prado-TApplicationConfiguration.html#method_loadServicesXml">loadServicesXml</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="COMPOSER_EXTRA_CLASS" id="COMPOSER_EXTRA_CLASS" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_COMPOSER_EXTRA_CLASS"><b>COMPOSER_EXTRA_CLASS</b></a>
+            </code>
+
+            <div class="description short">
+                Name of the Extra field to look for Prado Extension Class
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;bootstrap&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="COMPOSER_INSTALLED_CACHE" id="COMPOSER_INSTALLED_CACHE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_COMPOSER_INSTALLED_CACHE"><b>COMPOSER_INSTALLED_CACHE</b></a>
+            </code>
+
+            <div class="description short">
+                The cache name for installed Prado composer packages
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;prado:composer:installedcache&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationConfiguration.html#constant_COMPOSER_EXTRA_CLASS"><b>\Prado\TApplicationConfiguration::COMPOSER_EXTRA_CLASS</b></a>,                                     <a href="classes/Prado-TApplicationConfiguration.html#constant_COMPOSER_INSTALLED_CACHE"><b>\Prado\TApplicationConfiguration::COMPOSER_INSTALLED_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TImageButton &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,706 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-TImageButton.html">TImageButton</a>
+    </h1>
+
+    <div class="description">
+        TImageButton class
+        <p>TImageButton creates an image button on the page. It is used to submit data to a page.
+You can create either a <b>submit</b> button or a <b>command</b> button.</p>
+<p>A <b>command</b> button has a command name (specified by
+the <a href="setCommandName">CommandName</a> property) and and a command parameter
+(specified by <a href="setCommandParameter">CommandParameter</a> property)
+associated with the button. This allows you to create multiple TLinkButton
+components on a Web page and programmatically determine which one is clicked
+with what parameter. You can provide an event handler for
+<a href="onCommand">OnCommand</a> event to programmatically control the actions performed
+when the command button is clicked. In the event handler, you can determine
+the <a href="setCommandName">CommandName</a> property value and
+the <a href="setCommandParameter">CommandParameter</a> property value
+through the <a href="TCommandParameter::getName">Name</a> and
+<a href="TCommandParameter::getParameter">Parameter</a> properties of the event
+parameter which is of type <a href="%5CPrado%5CWeb%5CUI%5CTCommandEventParameter"></a>.</p>
+<p>A <b>submit</b> button does not have a command name associated with the button
+and clicking on it simply posts the Web page back to the server.
+By default, a TImageButton control is a submit button.
+You can provide an event handler for the <a href="onClick">OnClick</a> event
+to programmatically control the actions performed when the submit button is clicked.
+The coordinates of the clicking point can be obtained from the <a href="onClick">OnClick</a>
+event parameter, which is of type <a href="TImageClickEventParameter"></a>.</p>
+<p>Clicking on button can trigger form validation, if
+<a href="setCausesValidation">CausesValidation</a> is true.
+And the validation may be restricted within a certain group of validator
+controls by setting <a href="setValidationGroup">ValidationGroup</a> property.
+If validation is successful, the data will be post back to the same page.</p>
+<p>TImageButton displays the <a href="setText">Text</a> property as the hint text to the displayed image.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-TImageButton.html">\Prado\Web\UI\WebControls\TImageButton</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-IPostBackDataHandler.html">\Prado\Web\UI\IPostBackDataHandler</a>,                             <a href="classes/Prado-Web-UI-IPostBackEventHandler.html">\Prado\Web\UI\IPostBackEventHandler</a>,                             <a href="classes/Prado-Web-UI-IButtonControl.html">\Prado\Web\UI\IButtonControl</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TImage.html">\Prado\Web\UI\WebControls\TImage</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-IPostBackDataHandler.html">\Prado\Web\UI\IPostBackDataHandler</a>,                             <a href="classes/Prado-Web-UI-IPostBackEventHandler.html">\Prado\Web\UI\IPostBackEventHandler</a>,                             <a href="classes/Prado-Web-UI-IButtonControl.html">\Prado\Web\UI\IButtonControl</a>                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TWebControl.html">\Prado\Web\UI\WebControls\TWebControl</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-IPostBackDataHandler.html">\Prado\Web\UI\IPostBackDataHandler</a>,                             <a href="classes/Prado-Web-UI-IPostBackEventHandler.html">\Prado\Web\UI\IPostBackEventHandler</a>,                             <a href="classes/Prado-Web-UI-IButtonControl.html">\Prado\Web\UI\IButtonControl</a>                        </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TControl.html">\Prado\Web\UI\TControl</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-IPostBackDataHandler.html">\Prado\Web\UI\IPostBackDataHandler</a>,                             <a href="classes/Prado-Web-UI-IPostBackEventHandler.html">\Prado\Web\UI\IPostBackEventHandler</a>,                             <a href="classes/Prado-Web-UI-IButtonControl.html">\Prado\Web\UI\IButtonControl</a>                        </dd>
+                <dd style="padding-left:120px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:150px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/TImageButton.php"><abbr title="framework/Web/UI/WebControls/TImageButton.php">TImageButton.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getCausesValidation" id="getCausesValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCausesValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getCausesValidation">getCausesValidation</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCommandName" id="getCommandName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCommandName"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getCommandName">getCommandName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCommandParameter" id="getCommandParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCommandParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getCommandParameter">getCommandParameter</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataChanged" id="getDataChanged" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataChanged"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getDataChanged">getDataChanged</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Returns a value indicating whether postback has caused the control data change.
+                    <p>This method is required by the \Prado\Web\UI\IPostBackDataHandler interface.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEnableClientScript" id="getEnableClientScript" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEnableClientScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getEnableClientScript">getEnableClientScript</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIsDefaultButton" id="getIsDefaultButton" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIsDefaultButton"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getIsDefaultButton">getIsDefaultButton</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getText" id="getText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getText">getText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getValidationGroup" id="getValidationGroup" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getValidationGroup"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getValidationGroup">getValidationGroup</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadPostData" id="loadPostData" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadPostData"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_loadPostData">loadPostData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$values</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This method checks if the TImageButton is clicked and loads the coordinates of the clicking position.
+                    <p>This method is primarly used by framework developers.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onClick" id="onClick" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onClick"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_onClick">onClick</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TImageClickEventParameter.html"><abbr title="\Prado\Web\UI\WebControls\TImageClickEventParameter">TImageClickEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method is invoked when the button is clicked.
+                    <p>The method raises 'OnClick' event to fire up the event handlers.
+If you override this method, be sure to call the parent implementation
+so that the event handler can be invoked.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onCommand" id="onCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onCommand"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_onCommand">onCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TCommandEventParameter.html"><abbr title="\Prado\Web\UI\TCommandEventParameter">TCommandEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method is invoked when the button is clicked.
+                    <p>The method raises 'OnCommand' event to fire up the event handlers.
+If you override this method, be sure to call the parent implementation
+so that the event handlers can be invoked.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onPreRender" id="onPreRender" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onPreRender"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_onPreRender">onPreRender</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Registers the image button to receive postback data during postback.
+                    <p>This is necessary because an image button, when postback, does not have
+direct mapping between post data and the image button name.
+This method overrides the parent implementation and is invoked before render.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="raisePostBackEvent" id="raisePostBackEvent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_raisePostBackEvent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_raisePostBackEvent">raisePostBackEvent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-TEventParameter.html"><abbr title="\Prado\TEventParameter">TEventParameter</abbr></a>&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Raises the postback event.
+                    <p>This method is required by <a href="IPostBackEventHandler"></a> interface.
+If <a href="getCausesValidation">CausesValidation</a> is true, it will
+invoke the page's <a href="TPage::validate">validate</a> method first.
+It will raise <a href="onClick">OnClick</a> and <a href="onCommand">OnCommand</a> events.
+This method is mainly used by framework and control developers.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="raisePostDataChangedEvent" id="raisePostDataChangedEvent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_raisePostDataChangedEvent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_raisePostDataChangedEvent">raisePostDataChangedEvent</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    A dummy implementation for the \Prado\Web\UI\IPostBackDataHandler interface.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderContents" id="renderContents" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderContents"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_renderContents">renderContents</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the body content enclosed between the control tag.
+                    <p>This overrides the parent implementation with nothing to be rendered.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCausesValidation" id="setCausesValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCausesValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setCausesValidation">setCausesValidation</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCommandName" id="setCommandName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCommandName"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setCommandName">setCommandName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCommandParameter" id="setCommandParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCommandParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setCommandParameter">setCommandParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEnableClientScript" id="setEnableClientScript" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEnableClientScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setEnableClientScript">setEnableClientScript</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setIsDefaultButton" id="setIsDefaultButton" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setIsDefaultButton"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setIsDefaultButton">setIsDefaultButton</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setText" id="setText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setText">setText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setValidationGroup" id="setValidationGroup" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setValidationGroup"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setValidationGroup">setValidationGroup</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addAttributesToRender" id="addAttributesToRender" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addAttributesToRender"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_addAttributesToRender">addAttributesToRender</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds attribute name-value pairs to renderer.
+                    <p>This overrides the parent implementation with additional button specific attributes.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="canCauseValidation" id="canCauseValidation" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_canCauseValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_canCauseValidation">canCauseValidation</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getClientClassName" id="getClientClassName" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getClientClassName"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getClientClassName">getClientClassName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Gets the name of the javascript class responsible for performing postback for this control.
+                    <p>This method overrides the parent implementation.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPostBackOptions" id="getPostBackOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPostBackOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getPostBackOptions">getPostBackOptions</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns postback specifications for the button.
+                    <p>This method is used by framework and control developers.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTagName" id="getTagName" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTagName"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getTagName">getTagName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Returns the tag name used for this control.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="needPostBackScript" id="needPostBackScript" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_needPostBackScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_needPostBackScript">needPostBackScript</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderClientControlScript" id="renderClientControlScript" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderClientControlScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_renderClientControlScript">renderClientControlScript</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the client-script code.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_addedControl">addedControl</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_applyStyleSheetSkin">applyStyleSheetSkin</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoBindProperty">autoBindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_bindProperty">bindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEvent">broadcastEvent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_bubbleEvent">bubbleEvent</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNamingContainer">clearNamingContainer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_clearStyle">clearStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearViewState">clearViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_convertUniqueIdToClientId">convertUniqueIdToClientId</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_copyBaseAttributes">copyBaseAttributes</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createChildControls">createChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBind">dataBind</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_ensureChildControls">ensureChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControl">findControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByID">findControlsByID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByType">findControlsByType</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_focus">focus</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getAccessKey">getAccessKey</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAdapter">getAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAllowChildControls">getAllowChildControls</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_getAlternateText">getAlternateText</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttribute">getAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttributes">getAttributes</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBackColor">getBackColor</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderColor">getBorderColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderStyle">getBorderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderWidth">getBorderWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getCausesValidation">getCausesValidation</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getClientID">getClientID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getCommandName">getCommandName</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getCommandParameter">getCommandParameter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControls">getControls</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getCssClass">getCssClass</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getCustomData">getCustomData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_getData">getData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getDataChanged">getDataChanged</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getDecorator">getDecorator</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_getDescriptionUrl">getDescriptionUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getDisplay">getDisplay</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getEnableClientScript">getEnableClientScript</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnabled">getEnabled</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableTheming">getEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableViewState">getEnableViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getEnsureId">getEnsureId</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getFont">getFont</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getForeColor">getForeColor</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAdapter">getHasAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAttributes">getHasAttributes</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasChildInitialized">getHasChildInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasControls">getHasControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasInitialized">getHasInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoaded">getHasLoaded</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoadedPostData">getHasLoadedPostData</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasPreRendered">getHasPreRendered</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getHasStyle">getHasStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getHeight">getHeight</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_getImageAlign">getImageAlign</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_getImageUrl">getImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getIsDefaultButton">getIsDefaultButton</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getIsSkinApplied">getIsSkinApplied</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getNamingContainer">getNamingContainer</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPage">getPage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getParent">getParent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPluginModule">getPluginModule</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getRegisteredObject">getRegisteredObject</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSkinID">getSkinID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSourceTemplateControl">getSourceTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getStyle">getStyle</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getTabIndex">getTabIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getTemplateControl">getTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getText">getText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getToolTip">getToolTip</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getUniqueID">getUniqueID</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getValidationGroup">getValidationGroup</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getViewState">getViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getVisible">getVisible</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getWidth">getWidth</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_hasAttribute">hasAttribute</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isObjectRegistered">isObjectRegistered</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_loadPostData">loadPostData</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadState">loadState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_onClick">onClick</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_onCommand">onCommand</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onDataBinding">onDataBinding</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onInit">onInit</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onLoad">onLoad</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_onPreRender">onPreRender</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onUnload">onUnload</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_raisePostBackEvent">raisePostBackEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_raisePostDataChangedEvent">raisePostDataChangedEvent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_registerObject">registerObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removeAttribute">removeAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removedControl">removedControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_render">render</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderBeginTag">renderBeginTag</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderChildren">renderChildren</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_renderContents">renderContents</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderControl">renderControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderEndTag">renderEndTag</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setAccessKey">setAccessKey</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAdapter">setAdapter</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_setAlternateText">setAlternateText</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAttribute">setAttribute</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBackColor">setBackColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderColor">setBorderColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderStyle">setBorderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderWidth">setBorderWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setCausesValidation">setCausesValidation</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setCommandName">setCommandName</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setCommandParameter">setCommandParameter</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setCssClass">setCssClass</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setCustomData">setCustomData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_setData">setData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_setDescriptionUrl">setDescriptionUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setDisplay">setDisplay</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setEnableClientScript">setEnableClientScript</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnabled">setEnabled</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableTheming">setEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableViewState">setEnableViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setEnsureId">setEnsureId</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setForeColor">setForeColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setHeight">setHeight</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_setImageAlign">setImageAlign</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImage.html#method_setImageUrl">setImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setIsDefaultButton">setIsDefaultButton</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setPage">setPage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setSkinID">setSkinID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setStyle">setStyle</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setTabIndex">setTabIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setTemplateControl">setTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setText">setText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setToolTip">setToolTip</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_setValidationGroup">setValidationGroup</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setViewState">setViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setVisible">setVisible</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setWidth">setWidth</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_trackViewState">trackViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unbindProperty">unbindProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unregisterObject">unregisterObject</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_addAttributesToRender">addAttributesToRender</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoDataBindProperties">autoDataBindProperties</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_canCauseValidation">canCauseValidation</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearChildState">clearChildState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearControlState">clearControlState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createControlCollection">createControlCollection</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_createStyle">createStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindChildren">dataBindChildren</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindProperties">dataBindProperties</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getChildControlsCreated">getChildControlsCreated</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getClientClassName">getClientClassName</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlStage">getControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlState">getControlState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getPostBackOptions">getPostBackOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_getTagName">getTagName</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_initRecursive">initRecursive</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isDescendentOf">isDescendentOf</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadRecursive">loadRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadStateRecursive">loadStateRecursive</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_needPostBackScript">needPostBackScript</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_preRenderRecursive">preRenderRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_raiseBubbleEvent">raiseBubbleEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TImageButton.html#method_renderClientControlScript">renderClientControlScript</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_saveStateRecursive">saveStateRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setChildControlsCreated">setChildControlsCreated</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlStage">setControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlState">setControlState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_traverseChildControls">traverseChildControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unloadRecursive">unloadRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEventInternal">broadcastEventInternal</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearCachedUniqueID">clearCachedUniqueID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNameTable">clearNameTable</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_fillNameTable">fillNameTable</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_generateAutomaticID">generateAutomaticID</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_AUTOMATIC_ID_PREFIX"><b>\Prado\Web\UI\TControl::AUTOMATIC_ID_PREFIX</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CLIENT_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::CLIENT_ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CHILD_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_CHILD_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CONSTRUCTED"><b>\Prado\Web\UI\TControl::CS_CONSTRUCTED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_LOADED"><b>\Prado\Web\UI\TControl::CS_LOADED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_PRERENDERED"><b>\Prado\Web\UI\TControl::CS_PRERENDERED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_STATE_LOADED"><b>\Prado\Web\UI\TControl::CS_STATE_LOADED</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_FORMAT"><b>\Prado\Web\UI\TControl::ID_FORMAT</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CHILD_CREATED"><b>\Prado\Web\UI\TControl::IS_CHILD_CREATED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CREATING_CHILD"><b>\Prado\Web\UI\TControl::IS_CREATING_CHILD</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_THEMING"><b>\Prado\Web\UI\TControl::IS_DISABLE_THEMING</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_VIEWSTATE"><b>\Prado\Web\UI\TControl::IS_DISABLE_VIEWSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_ID_SET"><b>\Prado\Web\UI\TControl::IS_ID_SET</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_SKIN_APPLIED"><b>\Prado\Web\UI\TControl::IS_SKIN_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_STYLESHEET_APPLIED"><b>\Prado\Web\UI\TControl::IS_STYLESHEET_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_ADAPTER"><b>\Prado\Web\UI\TControl::RF_ADAPTER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_AUTO_BINDINGS"><b>\Prado\Web\UI\TControl::RF_AUTO_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CHILD_STATE"><b>\Prado\Web\UI\TControl::RF_CHILD_STATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLS"><b>\Prado\Web\UI\TControl::RF_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLSTATE"><b>\Prado\Web\UI\TControl::RF_CONTROLSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_DATA_BINDINGS"><b>\Prado\Web\UI\TControl::RF_DATA_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_EVENTS"><b>\Prado\Web\UI\TControl::RF_EVENTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS_ID"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS_ID</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_OBJECTS"><b>\Prado\Web\UI\TControl::RF_NAMED_OBJECTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_SKIN_ID"><b>\Prado\Web\UI\TControl::RF_SKIN_ID</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

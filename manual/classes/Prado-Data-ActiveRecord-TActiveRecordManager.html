@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TActiveRecordManager &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,311 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-activerecord.html">ActiveRecord</a>\<a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html">TActiveRecordManager</a>
+    </h1>
+
+    <div class="description">
+        TActiveRecordManager provides the default DB connection,
+default active record gateway, and table meta data inspector.
+        <p>The default connection can be set as follows:
+<code class="prettyprint">
+TActiveRecordManager::getInstance()-&gt;setDbConnection($conn);
+</code>
+All new active record created after setting the
+<a href="DbConnection">setDbConnection()</a> will use that connection unless
+the custom ActiveRecord class overrides the ActiveRecord::getDbConnection().</p>
+<p>Set the <a href="setCache">Cache</a> property to an ICache object to allow
+the active record gateway to cache the table meta data information.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html">\Prado\Data\ActiveRecord\TActiveRecordManager</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\ActiveRecord<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/ActiveRecord/TActiveRecordManager.php"><abbr title="framework/Data/ActiveRecord/TActiveRecordManager.php">TActiveRecordManager.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getCache" id="getCache" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCache"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getCache">getCache</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Caching-ICache.html"><abbr title="\Prado\Caching\ICache">ICache</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getGatewayClass" id="getGatewayClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getGatewayClass"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getGatewayClass">getGatewayClass</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getInstance" id="getInstance" n:class="">
+        <td class="attributes"><code>
+            public
+                                    static                        </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getInstance"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getInstance">getInstance</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$self</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecordManager">TActiveRecordManager</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getInvalidFinderResult" id="getInvalidFinderResult" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getInvalidFinderResult"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getInvalidFinderResult">getInvalidFinderResult</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-TActiveRecordInvalidFinderResult.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult">TActiveRecordInvalidFinderResult</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRecordGateway" id="getRecordGateway" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRecordGateway"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getRecordGateway">getRecordGateway</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-TActiveRecordGateway.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecordGateway">TActiveRecordGateway</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCache" id="setCache" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCache"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setCache">setCache</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Caching-ICache.html"><abbr title="\Prado\Caching\ICache">ICache</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDbConnection" id="setDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setDbConnection">setDbConnection</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a>&nbsp;</span><var>$conn</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setGatewayClass" id="setGatewayClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setGatewayClass"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setGatewayClass">setGatewayClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set implementation class of ActiveRecordGateway
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setInvalidFinderResult" id="setInvalidFinderResult" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setInvalidFinderResult"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setInvalidFinderResult">setInvalidFinderResult</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-ActiveRecord-TActiveRecordInvalidFinderResult.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecordInvalidFinderResult">TActiveRecordInvalidFinderResult</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Define the way an active record finder react if an invalid magic-finder invoked
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createRecordGateway" id="createRecordGateway" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createRecordGateway"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_createRecordGateway">createRecordGateway</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-TActiveRecordGateway.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecordGateway">TActiveRecordGateway</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getCache">getCache</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getGatewayClass">getGatewayClass</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getInstance">getInstance</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getInvalidFinderResult">getInvalidFinderResult</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_getRecordGateway">getRecordGateway</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setCache">setCache</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setDbConnection">setDbConnection</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setGatewayClass">setGatewayClass</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_setInvalidFinderResult">setInvalidFinderResult</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#method_createRecordGateway">createRecordGateway</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="DEFAULT_GATEWAY_CLASS" id="DEFAULT_GATEWAY_CLASS" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DEFAULT_GATEWAY_CLASS"><b>DEFAULT_GATEWAY_CLASS</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;\\Prado\\Data\\ActiveRecord\\TActiveRecordGateway&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#constant_DEFAULT_GATEWAY_CLASS"><b>\Prado\Data\ActiveRecord\TActiveRecordManager::DEFAULT_GATEWAY_CLASS</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

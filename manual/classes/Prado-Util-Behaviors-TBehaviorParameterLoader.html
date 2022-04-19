@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TBehaviorParameterLoader &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,411 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="namespaces/prado-util-behaviors.html">Behaviors</a>\<a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html">TBehaviorParameterLoader</a>
+    </h1>
+
+    <div class="description">
+        TBehaviorParameterLoader class.
+        <p>TBehaviorParameterLoader implements attaching Behaviors from Parameters
+before any work has been done.  Here is an example of how to attach a behavior
+via parameter within an application.xml:
+<code class="prettyprint">
+<application id="prado-app">
+<parameters>
+&lt;parameter id=&quot;pagethemebehaviorloader&quot; class=&quot;Prado\Util\Behaviors\TBehaviorParameterLoader&quot; BehaviorName=&quot;testBehavior&quot; BehaviorClass=&quot;Prado\Util\Behaviors\TParameterizeBehavior&quot; Priority=&quot;10&quot; AttachToClass=&quot;Prado\Web\UI\TPage&quot; Parameter=&quot;ThemeName&quot; Property=&quot;Theme&quot; DefaultValue=&quot;America/Los Angeles&quot; /&gt;
+<parameters>
+...
+</code></p>
+<p>TBehaviorParameterLoader can be used in parameters to load behaviors through the
+application configuration parameters, <a href="TParameterModule"></a>, as well in each
+folder through the config.xml/php files.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html">\Prado\Util\Behaviors\TBehaviorParameterLoader</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Util\Behaviors<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.2.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/Behaviors/TBehaviorParameterLoader.php"><abbr title="framework/Util/Behaviors/TBehaviorParameterLoader.php">TBehaviorParameterLoader.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__set" id="__set" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___set"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method___set">__set</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    magic method for storing the properties for the behavior. If there is no
+set Property then it stores the property to set on the behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="attachModuleBehaviors" id="attachModuleBehaviors" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_attachModuleBehaviors"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_attachModuleBehaviors">attachModuleBehaviors</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a>&nbsp;</span><var>$page</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method attaches page behaviors to the TPage handling the TPageService::OnPreInitPage event.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="attachTPageBehaviors" id="attachTPageBehaviors" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_attachTPageBehaviors"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_attachTPageBehaviors">attachTPageBehaviors</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a>&nbsp;</span><var>$page</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method attaches page behaviors to the TPage handling the TPageService::OnPreInitPage event.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="attachTPageServiceHandler" id="attachTPageServiceHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_attachTPageServiceHandler"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_attachTPageServiceHandler">attachTPageServiceHandler</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    TApplication::onBeginRequest Handler that adds {@link attachTPageBehaviors} to
+TPageService::onPreRunPage. In turn, this attaches {@link attachTPageBehaviors}
+to TPageService to then adds the page behaviors.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="dyInit" id="dyInit" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_dyInit"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_dyInit">dyInit</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Install the behavior via dynamic event dyInit, called after a parameter
+class is loaded in TParameterModule or TApplication configurations.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAttachTo" id="getAttachTo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAttachTo"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getAttachTo">getAttachTo</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    gets the AttachTo value.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAttachToClass" id="getAttachToClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAttachToClass"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getAttachToClass">getAttachToClass</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    gets the AttachToClass value.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getBehaviorClass" id="getBehaviorClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getBehaviorClass"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getBehaviorClass">getBehaviorClass</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    gets the class of the attaching behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getBehaviorName" id="getBehaviorName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getBehaviorName"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getBehaviorName">getBehaviorName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    gets the name of the attaching behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPriority" id="getPriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPriority"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getPriority">getPriority</a><span>(</span><span>)</span><span> : </span><span>numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    gets the priority of the attaching behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getProperties" id="getProperties" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getProperties"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getProperties">getProperties</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    gets the Additional Properties of the behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="reset" id="reset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_reset"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_reset">reset</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This resets the module and page behavior cache data.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAttachTo" id="setAttachTo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAttachTo"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setAttachTo">setAttachTo</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$attachto</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the AttachTo property.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAttachToClass" id="setAttachToClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAttachToClass"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setAttachToClass">setAttachToClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$attachto</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the AttachToClass property.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setBehaviorClass" id="setBehaviorClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setBehaviorClass"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setBehaviorClass">setBehaviorClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$className</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    sets the class of the attaching behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setBehaviorName" id="setBehaviorName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setBehaviorName"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setBehaviorName">setBehaviorName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    sets the name of the attaching behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPriority" id="setPriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPriority"></a>
+                <code>
+                    <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setPriority">setPriority</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">numeric-string|int|float&nbsp;</span><var>$priority</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    sets the priority of the attaching behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_attachModuleBehaviors">attachModuleBehaviors</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_attachTPageBehaviors">attachTPageBehaviors</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_attachTPageServiceHandler">attachTPageServiceHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getAttachTo">getAttachTo</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getAttachToClass">getAttachToClass</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getBehaviorClass">getBehaviorClass</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getBehaviorName">getBehaviorName</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getPriority">getPriority</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getProperties">getProperties</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_reset">reset</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setAttachTo">setAttachTo</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setAttachToClass">setAttachToClass</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setBehaviorClass">setBehaviorClass</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setBehaviorName">setBehaviorName</a>,                             <a href="classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setPriority">setPriority</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

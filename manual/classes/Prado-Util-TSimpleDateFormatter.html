@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TSimpleDateFormatter &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,416 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="classes/Prado-Util-TSimpleDateFormatter.html">TSimpleDateFormatter</a>
+    </h1>
+
+    <div class="description">
+        TSimpleDateFormatter class.
+        <h2>Formats and parses dates using the SimpleDateFormat pattern.
+This pattern is compatible with the I18N and java's SimpleDateFormatter.
+<code class="prettyprint">
+Pattern |      Description</h2>
+<h2>d       | Day of month 1 to 31, no padding
+dd      | Day of monath 01 to 31, zero leading
+M       | Month digit 1 to 12, no padding
+MM      | Month digit 01 to 12, zero leading
+yy      | 2 year digit, e.g., 96, 05
+yyyy    | 4 year digit, e.g., 2005</h2>
+</code>
+<p>Usage example, to format a date
+<code class="prettyprint">
+$formatter = new TSimpleDateFormatter(&quot;dd/MM/yyyy&quot;);
+echo $formatter-&gt;format(time());
+</code></p>
+<p>To parse the date string into a date timestamp.
+<code class="prettyprint">
+$formatter = new TSimpleDateFormatter(&quot;d-M-yyyy&quot;);
+echo $formatter-&gt;parse(&quot;24-6-2005&quot;);
+</code></p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\Util<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/TSimpleDateFormatter.php"><abbr title="framework/Util/TSimpleDateFormatter.php">TSimpleDateFormatter.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$pattern</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$charset</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;UTF-8&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor, create a new date time formatter.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="format" id="format" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_format"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_format">format</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Format the date according to the pattern.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCharset" id="getCharset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCharset"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getCharset">getCharset</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDayMonthYearOrdering" id="getDayMonthYearOrdering" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDayMonthYearOrdering"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getDayMonthYearOrdering">getDayMonthYearOrdering</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDayPattern" id="getDayPattern" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDayPattern"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getDayPattern">getDayPattern</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getMonthPattern" id="getMonthPattern" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getMonthPattern"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getMonthPattern">getMonthPattern</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPattern" id="getPattern" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPattern"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getPattern">getPattern</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getYearPattern" id="getYearPattern" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getYearPattern"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getYearPattern">getYearPattern</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isValidDate" id="isValidDate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isValidDate"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_isValidDate">isValidDate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parse" id="parse" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parse"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_parse">parse</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$defaultToCurrentTime</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Parse the string according to the pattern.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCharset" id="setCharset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCharset"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_setCharset">setCharset</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$charset</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPattern" id="setPattern" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPattern"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_setPattern">setPattern</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$pattern</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="charAt" id="charAt" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_charAt"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_charAt">charAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$string</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$pos</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Get the char at a position.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="charEqual" id="charEqual" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_charEqual"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_charEqual">charEqual</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$string</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$pos</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$char</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns true if char at position equals a particular char.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDate" id="getDate" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDate"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getDate">getDate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span><abbr title="\DateTime">DateTime</abbr></span>                </code>
+
+                <div class="description short">
+                    Gets the time stamp from string or integer.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getInteger" id="getInteger" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getInteger"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getInteger">getInteger</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$str</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$i</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$minlength</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$maxlength</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Gets integer from part of a string, allows integers of any length.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="length" id="length" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_length"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_length">length</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$string</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Calculate the length of a string, may be consider iconv_strlen?
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="substring" id="substring" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_substring"></a>
+                <code>
+                    <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_substring">substring</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$string</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$start</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$length</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Gets a portion of a string, uses iconv_substr.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Util-TSimpleDateFormatter.html#method___construct">__construct</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_format">format</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getCharset">getCharset</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getDayMonthYearOrdering">getDayMonthYearOrdering</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getDayPattern">getDayPattern</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getMonthPattern">getMonthPattern</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getPattern">getPattern</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getYearPattern">getYearPattern</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_isValidDate">isValidDate</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_parse">parse</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_setCharset">setCharset</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_setPattern">setPattern</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_charAt">charAt</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_charEqual">charEqual</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getDate">getDate</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_getInteger">getInteger</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_length">length</a>,                             <a href="classes/Prado-Util-TSimpleDateFormatter.html#method_substring">substring</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

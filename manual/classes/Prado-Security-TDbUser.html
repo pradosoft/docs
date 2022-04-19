@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDbUser &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,191 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-security.html">Security</a>\<a href="classes/Prado-Security-TDbUser.html">TDbUser</a>
+    </h1>
+
+    <div class="description">
+        TDbUser class
+        <p>TDbUser is the base user class for using together with <a href="TDbUserManager"></a>.
+Two methods are declared and must be implemented in the descendant classes:</p>
+<ul>
+<li>
+<a href="validateUser()"></a>: validates if username and password are correct entries.</li>
+<li>
+<a href="createUser()"></a>: creates a new user instance given the username</li>
+</ul>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Security-TDbUser.html">\Prado\Security\TDbUser</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Security-TUser.html">\Prado\Security\TUser</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Security<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1.0<br/>
+                    <b>Located at:</b> <a href="framework/Security/TDbUser.php"><abbr title="framework/Security/TDbUser.php">TDbUser.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="createUser" id="createUser" n:class="">
+        <td class="attributes"><code>
+            public
+                        abstract                                    </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createUser"></a>
+                <code>
+                    <a href="classes/Prado-Security-TDbUser.html#method_createUser">createUser</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$username</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Security-TDbUser.html"><abbr title="\Prado\Security\TDbUser">TDbUser</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a new user instance given the username.
+                    <p>This method usually needs to retrieve necessary user information
+(e.g. role, name, rank, etc.) from the user database according to
+the specified username. The newly created user instance should be
+initialized with these information.</p>
+<p>If the username is invalid (not found in the user database), null
+should be returned.</p>
+<p>You may use <a href="getDbConnection">DbConnection</a> to deal with database.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createUserFromCookie" id="createUserFromCookie" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createUserFromCookie"></a>
+                <code>
+                    <a href="classes/Prado-Security-TDbUser.html#method_createUserFromCookie">createUserFromCookie</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-THttpCookie.html"><abbr title="\Prado\Web\THttpCookie">THttpCookie</abbr></a>&nbsp;</span><var>$cookie</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Security-TDbUser.html"><abbr title="\Prado\Security\TDbUser">TDbUser</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates a new user instance given the cookie containing auth data.
+                    <p>This method is invoked when <a href="TAuthManager::setAllowAutoLogin">AllowAutoLogin</a> is set true.
+The default implementation simply returns null, meaning no user instance can be created
+from the given cookie.</p>
+<p>If you want to support automatic login (remember login), you should override this method.
+Typically, you obtain the username and a unique token from the cookie's value.
+You then verify the token is valid and use the username to create a user instance.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Security-TDbUser.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Returns a database connection that may be used to retrieve data from database.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="saveUserToCookie" id="saveUserToCookie" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_saveUserToCookie"></a>
+                <code>
+                    <a href="classes/Prado-Security-TDbUser.html#method_saveUserToCookie">saveUserToCookie</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-THttpCookie.html"><abbr title="\Prado\Web\THttpCookie">THttpCookie</abbr></a>&nbsp;</span><var>$cookie</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Saves necessary auth data into a cookie.
+                    <p>This method is invoked when <a href="TAuthManager::setAllowAutoLogin">AllowAutoLogin</a> is set true.
+The default implementation does nothing, meaning auth data is not stored in the cookie
+(and thus automatic login is not supported.)</p>
+<p>If you want to support automatic login (remember login), you should override this method.
+Typically, you generate a unique token according to the current login information
+and save it together with the username in the cookie's value.
+You should avoid revealing the password in the generated token.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="validateUser" id="validateUser" n:class="">
+        <td class="attributes"><code>
+            public
+                        abstract                                    </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_validateUser"></a>
+                <code>
+                    <a href="classes/Prado-Security-TDbUser.html#method_validateUser">validateUser</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$username</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$password</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Validates if username and password are correct entries.
+                    <p>Usually, this is accomplished by checking if the user database
+contains this (username, password) pair.
+You may use <a href="getDbConnection">DbConnection</a> to deal with database.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Security-TDbUser.html#method_createUser">createUser</a>,                             <a href="classes/Prado-Security-TDbUser.html#method_createUserFromCookie">createUserFromCookie</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-Security-TUser.html#method_dyDefaultRoles">dyDefaultRoles</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-Security-TUser.html#method_dyIsInRole">dyIsInRole</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Security-TDbUser.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Security-TUser.html#method_getIsGuest">getIsGuest</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Security-TUser.html#method_getManager">getManager</a>,                             <a href="classes/Prado-Security-TUser.html#method_getName">getName</a>,                             <a href="classes/Prado-Security-TUser.html#method_getRoles">getRoles</a>,                             <a href="classes/Prado-Security-TUser.html#method_getStateChanged">getStateChanged</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Security-TUser.html#method_isInRole">isInRole</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Security-TUser.html#method_loadFromString">loadFromString</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Security-TUser.html#method_saveToString">saveToString</a>,                             <a href="classes/Prado-Security-TDbUser.html#method_saveUserToCookie">saveUserToCookie</a>,                             <a href="classes/Prado-Security-TUser.html#method_setIsGuest">setIsGuest</a>,                             <a href="classes/Prado-Security-TUser.html#method_setName">setName</a>,                             <a href="classes/Prado-Security-TUser.html#method_setRoles">setRoles</a>,                             <a href="classes/Prado-Security-TUser.html#method_setStateChanged">setStateChanged</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Security-TDbUser.html#method_validateUser">validateUser</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Security-TUser.html#method_getState">getState</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Security-TUser.html#method_setState">setState</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

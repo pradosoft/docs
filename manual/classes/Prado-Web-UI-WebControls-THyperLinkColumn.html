@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    THyperLinkColumn &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,528 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html">THyperLinkColumn</a>
+    </h1>
+
+    <div class="description">
+        THyperLinkColumn class
+        <p>THyperLinkColumn contains a hyperlink for each item in the column.
+You can set the text and the url of the hyperlink by <a href="setText">Text</a>
+and <a href="setNavigateUrl">NavigateUrl</a> properties, respectively.
+You can also bind the text and url to specific data field in datasource
+by setting <a href="setDataTextField">DataTextField</a> and
+<a href="setDataNavigateUrlField">DataNavigateUrlField</a>.
+Both can be formatted before rendering according to the
+<a href="setDataTextFormatString">DataTextFormatString</a> and
+and <a href="setDataNavigateUrlFormatString">DataNavigateUrlFormatString</a>
+properties, respectively. If both <a href="setText">Text</a> and <a href="setDataTextField">DataTextField</a>
+are present, the latter takes precedence.
+The same rule applies to <a href="setNavigateUrl">NavigateUrl</a> and
+<a href="setDataNavigateUrlField">DataNavigateUrlField</a> properties.</p>
+<p>The hyperlinks in the column can be accessed by one of the following two methods:
+<code class="prettyprint">
+$datagridItem-&gt;HyperLinkColumnID-&gt;HyperLink
+$datagridItem-&gt;HyperLinkColumnID-&gt;Controls[0]
+</code>
+The second method is possible because the hyperlink control created within the
+datagrid cell is the first child.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html">\Prado\Web\UI\WebControls\THyperLinkColumn</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html">\Prado\Web\UI\WebControls\TDataGridColumn</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/THyperLinkColumn.php"><abbr title="framework/Web/UI/WebControls/THyperLinkColumn.php">THyperLinkColumn.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="dataBindColumn" id="dataBindColumn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_dataBindColumn"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_dataBindColumn">dataBindColumn</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Databinds a cell in the column.
+                    <p>This method is invoked when datagrid performs databinding.
+It populates the content of the cell with the relevant data from data source.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataNavigateUrlField" id="getDataNavigateUrlField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataNavigateUrlField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataNavigateUrlField">getDataNavigateUrlField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataNavigateUrlFormatString" id="getDataNavigateUrlFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataNavigateUrlFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataNavigateUrlFormatString">getDataNavigateUrlFormatString</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataTextField" id="getDataTextField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataTextField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataTextField">getDataTextField</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataTextFormatString" id="getDataTextFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataTextFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataTextFormatString">getDataTextFormatString</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getImageHeight" id="getImageHeight" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getImageHeight"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getImageHeight">getImageHeight</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getImageUrl" id="getImageUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getImageUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getImageUrl">getImageUrl</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getImageWidth" id="getImageWidth" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getImageWidth"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getImageWidth">getImageWidth</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getNavigateUrl" id="getNavigateUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getNavigateUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getNavigateUrl">getNavigateUrl</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTarget" id="getTarget" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTarget"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getTarget">getTarget</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getText" id="getText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getText">getText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initializeCell" id="initializeCell" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initializeCell"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_initializeCell">initializeCell</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TTableCell.html"><abbr title="\Prado\Web\UI\WebControls\TTableCell">TTableCell</abbr></a>&nbsp;</span><var>$cell</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$columnIndex</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$itemType</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the specified cell to its initial values.
+                    <p>This method overrides the parent implementation.
+It creates a hyperlink within the cell.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataNavigateUrlField" id="setDataNavigateUrlField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataNavigateUrlField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataNavigateUrlField">setDataNavigateUrlField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataNavigateUrlFormatString" id="setDataNavigateUrlFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataNavigateUrlFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataNavigateUrlFormatString">setDataNavigateUrlFormatString</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataTextField" id="setDataTextField" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataTextField"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataTextField">setDataTextField</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDataTextFormatString" id="setDataTextFormatString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDataTextFormatString"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataTextFormatString">setDataTextFormatString</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setImageHeight" id="setImageHeight" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setImageHeight"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setImageHeight">setImageHeight</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setImageUrl" id="setImageUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setImageUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setImageUrl">setImageUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setImageWidth" id="setImageWidth" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setImageWidth"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setImageWidth">setImageWidth</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setNavigateUrl" id="setNavigateUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setNavigateUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setNavigateUrl">setNavigateUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the URL to link to when the hyperlink is clicked.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTarget" id="setTarget" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTarget"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setTarget">setTarget</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the target window or frame to display the Web page content linked to when the hyperlink is clicked.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setText" id="setText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setText">setText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the text caption of the hyperlink.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_dataBindColumn">dataBindColumn</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getAllowSorting">getAllowSorting</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataNavigateUrlField">getDataNavigateUrlField</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataNavigateUrlFormatString">getDataNavigateUrlFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataTextField">getDataTextField</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getDataTextFormatString">getDataTextFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getEnableCellGrouping">getEnableCellGrouping</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterRenderer">getFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterStyle">getFooterStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterText">getFooterText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderImageUrl">getHeaderImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderRenderer">getHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderStyle">getHeaderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderText">getHeaderText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getImageHeight">getImageHeight</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getImageUrl">getImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getImageWidth">getImageWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getItemStyle">getItemStyle</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getNavigateUrl">getNavigateUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getOwner">getOwner</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getSortExpression">getSortExpression</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getTarget">getTarget</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_getText">getText</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getVisible">getVisible</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initialize">initialize</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_initializeCell">initializeCell</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_loadState">loadState</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataNavigateUrlField">setDataNavigateUrlField</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataNavigateUrlFormatString">setDataNavigateUrlFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataTextField">setDataTextField</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setDataTextFormatString">setDataTextFormatString</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setEnableCellGrouping">setEnableCellGrouping</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterRenderer">setFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterText">setFooterText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderImageUrl">setHeaderImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderRenderer">setHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderText">setHeaderText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setImageHeight">setImageHeight</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setImageUrl">setImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setImageWidth">setImageWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setNavigateUrl">setNavigateUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setOwner">setOwner</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setSortExpression">setSortExpression</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setTarget">setTarget</a>,                             <a href="classes/Prado-Web-UI-WebControls-THyperLinkColumn.html#method_setText">setText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setVisible">setVisible</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_formatDataValue">formatDataValue</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getDataFieldValue">getDataFieldValue</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getViewState">getViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeCellRendererControl">initializeCellRendererControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeFooterCell">initializeFooterCell</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeHeaderCell">initializeHeaderCell</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setViewState">setViewState</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

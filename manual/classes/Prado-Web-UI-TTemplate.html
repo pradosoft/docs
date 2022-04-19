@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TTemplate &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,762 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="classes/Prado-Web-UI-TTemplate.html">TTemplate</a>
+    </h1>
+
+    <div class="description">
+        TTemplate implements PRADO template parsing logic.
+        <p>A TTemplate object represents a parsed PRADO control template.
+It can instantiate the template as child controls of a specified control.
+The template format is like HTML, with the following special tags introduced,</p>
+<ul>
+<li>component tags: a component tag represents the configuration of a component.
+The tag name is in the format of com:ComponentType, where ComponentType is the component
+class name. Component tags must be well-formed. Attributes of the component tag
+are treated as either property initial values, event handler attachment, or regular
+tag attributes.</li>
+<li>property tags: property tags are used to set large block of attribute values.
+The property tag name is in the format of <a href="prop:AttributeName">prop:AttributeName</a> where AttributeName
+can be a property name, an event name or a regular tag attribute name.</li>
+<li>group subproperty tags: subproperties of a common property can be configured using
+&lt;prop:MainProperty SubProperty1=&quot;Value1&quot; SubProperty2=&quot;Value2&quot; .../&gt;</li>
+<li>directive: directive specifies the property values for the template owner.
+It is in the format of &lt;%@ property name-value pairs %&gt;;</li>
+<li>expressions: They are in the format of &lt;%= PHP expression %&gt; and &lt;%% PHP statements %&gt;</li>
+<li>comments: There are two kinds of comments, regular HTML comments and special template comments.
+The former is in the format of <!-- comments -->, which will be treated as text strings.
+The latter is in the format of &lt;!-- comments --!&gt;, which will be stripped out.</li>
+</ul>
+<p>Tags other than the above are not required to be well-formed.</p>
+<p>A TTemplate object represents a parsed PRADO template. To instantiate the template
+for a particular control, call <a href="instantiateIn($control)"></a>, which
+will create and intialize all components specified in the template and
+set their parent as $control.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-TTemplate.html">\Prado\Web\UI\TTemplate</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-ITemplate.html">\Prado\Web\UI\ITemplate</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/TTemplate.php"><abbr title="framework/Web/UI/TTemplate.php">TTemplate.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$template</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$contextPath</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$tplFile</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$startingLine</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$sourceTemplate</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    <p>The template will be parsed after construction.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAttributeValidation" id="getAttributeValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAttributeValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getAttributeValidation">getAttributeValidation</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getContextPath" id="getContextPath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getContextPath"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getContextPath">getContextPath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDirective" id="getDirective" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDirective"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getDirective">getDirective</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHashCode" id="getHashCode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHashCode"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getHashCode">getHashCode</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIncludedFiles" id="getIncludedFiles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIncludedFiles"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getIncludedFiles">getIncludedFiles</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIsSourceTemplate" id="getIsSourceTemplate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIsSourceTemplate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getIsSourceTemplate">getIsSourceTemplate</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getItems" id="getItems" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getItems"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getItems">getItems</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTemplateFile" id="getTemplateFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTemplateFile"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_getTemplateFile">getTemplateFile</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="instantiateIn" id="instantiateIn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_instantiateIn"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_instantiateIn">instantiateIn</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$tplControl</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|<a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$parentControl</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Instantiates the template.
+                    <p>Content in the template will be instantiated as components and text strings
+and passed to the specified parent control.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAttributeValidation" id="setAttributeValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAttributeValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_setAttributeValidation">setAttributeValidation</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="configureComponent" id="configureComponent" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_configureComponent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_configureComponent">configureComponent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-TComponent.html"><abbr title="\Prado\TComponent">TComponent</abbr></a>&nbsp;</span><var>$component</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Configures a property of a non-control component.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="configureControl" id="configureControl" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_configureControl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_configureControl">configureControl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Configures a property/event of a control.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="configureEvent" id="configureEvent" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_configureEvent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_configureEvent">configureEvent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$contextControl</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Configures an event for a control.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="configureProperty" id="configureProperty" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_configureProperty"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_configureProperty">configureProperty</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$component</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Configures a simple property for a component.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="configureSubProperty" id="configureSubProperty" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_configureSubProperty"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_configureSubProperty">configureSubProperty</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$component</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Configures a subproperty for a component.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="handleException" id="handleException" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_handleException"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_handleException">handleException</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Exception">Exception</abbr>&nbsp;</span><var>$e</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$line</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$input</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Handles template parsing exception.
+                    <p>This method rethrows the exception caught during template parsing.
+It adjusts the error location by giving out correct error line number and source file.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isClassBehaviorMethod" id="isClassBehaviorMethod" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isClassBehaviorMethod"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_isClassBehaviorMethod">isClassBehaviorMethod</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\ReflectionClass">ReflectionClass</abbr>&nbsp;</span><var>$class</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$method</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Checks if the given method belongs to a previously attached class behavior.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parse" id="parse" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parse"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_parse">parse</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$input</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Parses a template string.
+                    <p>This template parser recognizes five types of data:
+regular string, well-formed component tags, well-formed property tags, directives, and expressions.</p>
+<p>The parsing result is returned as an array. Each array element can be of three types:</p>
+<ul>
+<li>a string, 0: container index; 1: string content;</li>
+<li>a component tag, 0: container index; 1: component type; 2: attributes (name=&gt;value pairs)
+If a directive is found in the template, it will be parsed and can be
+retrieved via <a href="getDirective"></a>, which returns an array consisting of
+name-value pairs in the directive.</li>
+</ul>
+<p>Note, attribute names are treated as case-insensitive and will be turned into lower cases.
+Component and directive types are case-sensitive.
+Container index is the index to the array element that stores the container object.
+If an object has no container, its container index is -1.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parseAttribute" id="parseAttribute" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parseAttribute"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_parseAttribute">parseAttribute</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Parses a single attribute.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parseAttributes" id="parseAttributes" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parseAttributes"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_parseAttributes">parseAttributes</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$str</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Parses the attributes of a tag from a string.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="parseTemplateProperty" id="parseTemplateProperty" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_parseTemplateProperty"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_parseTemplateProperty">parseTemplateProperty</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$content</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="preprocess" id="preprocess" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_preprocess"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_preprocess">preprocess</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$input</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Preprocesses the template string by including external templates
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="validateAttributes" id="validateAttributes" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_validateAttributes"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TTemplate.html#method_validateAttributes">validateAttributes</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$type</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$attributes</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getAttributeValidation">getAttributeValidation</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getContextPath">getContextPath</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getDirective">getDirective</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getHashCode">getHashCode</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getIncludedFiles">getIncludedFiles</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getIsSourceTemplate">getIsSourceTemplate</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getItems">getItems</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_getTemplateFile">getTemplateFile</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_instantiateIn">instantiateIn</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_setAttributeValidation">setAttributeValidation</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_configureComponent">configureComponent</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_configureControl">configureControl</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_configureEvent">configureEvent</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_configureProperty">configureProperty</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_configureSubProperty">configureSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_handleException">handleException</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_isClassBehaviorMethod">isClassBehaviorMethod</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_parse">parse</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_parseAttribute">parseAttribute</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_parseAttributes">parseAttributes</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_parseTemplateProperty">parseTemplateProperty</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_preprocess">preprocess</a>,                             <a href="classes/Prado-Web-UI-TTemplate.html#method_validateAttributes">validateAttributes</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="CONFIG_ASSET" id="CONFIG_ASSET" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_ASSET"><b>CONFIG_ASSET</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>2</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONFIG_DATABIND" id="CONFIG_DATABIND" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_DATABIND"><b>CONFIG_DATABIND</b></a>
+            </code>
+
+            <div class="description short">
+                Different configurations of component property/event/attribute
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONFIG_EXPRESSION" id="CONFIG_EXPRESSION" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_EXPRESSION"><b>CONFIG_EXPRESSION</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>1</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONFIG_LOCALIZATION" id="CONFIG_LOCALIZATION" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_LOCALIZATION"><b>CONFIG_LOCALIZATION</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>4</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONFIG_PARAMETER" id="CONFIG_PARAMETER" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_PARAMETER"><b>CONFIG_PARAMETER</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>3</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="CONFIG_TEMPLATE" id="CONFIG_TEMPLATE" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_CONFIG_TEMPLATE"><b>CONFIG_TEMPLATE</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>5</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="REGEX_RULES" id="REGEX_RULES" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_REGEX_RULES"><b>REGEX_RULES</b></a>
+            </code>
+
+            <div class="description short">
+                &#039;&lt;!--.*?--!&gt;&#039; - template comments
+ &#039;&lt;!--.*?--&gt;&#039;  - HTML comments
+&#039;&lt;\/?com:([\w\.\\\]+)((?:\s*[\w\.]+\s*=\s*\&#039;.*?\&#039;|\s*[\w\.]+\s*=\s*&quot;.*?&quot;|\s*[\w\.]+\s*=\s*&lt;%.*?%&gt;)*)\s*\/?&gt;&#039; - component tags
+&#039;&lt;\/?prop:([\w\.\-]+)\s*&gt;&#039;  - property tags
+&#039;&lt;%@\s*((?:\s*[\w\.]+\s*=\s*\&#039;.*?\&#039;|\s*[\w\.]+\s*=\s*&quot;.*?&quot;)*)\s*%&gt;&#039;  - directives
+&#039;&lt;%[%#~\/\\$=\\[](.*?)%&gt;&#039;  - expressions
+ &#039;&lt;prop:([\w\.\-]+)((?:\s*[\w\.\-]+=\&#039;.*?\&#039;|\s*[\w\.\-]+=&quot;.*?&quot;|\s*[\w\.\-]+=&lt;%.*?%&gt;)*)\s*\/&gt;&#039; - group subproperty tags
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;/&lt;!--.*?--!&gt;|&lt;!---.*?---&gt;|&lt;\\/?com:([\\w\\.\\\\]+)((?:\\s*[\\w\\.]+\\s*=\\s*\&#039;.*?\&#039;|\\s*[\\w\\.]+\\s*=\\s*&quot;.*?&quot;|\\s*[\\w\\.]+\\s*=\\s*&lt;%.*?%&gt;)*)\\s*\\/?&gt;|&lt;\\/?prop:([\\w\\.\\-]+)\\s*&gt;|&lt;%@\\s*((?:\\s*[\\w\\.]+\\s*=\\s*\&#039;.*?\&#039;|\\s*[\\w\\.]+\\s*=\\s*&quot;.*?&quot;)*)\\s*%&gt;|&lt;%[%#~\\/\\$=\\[](.*?)%&gt;|&lt;prop:([\\w\\.\\-]+)((?:\\s*[\\w\\.\\-]+\\s*=\\s*\&#039;.*?\&#039;|\\s*[\\w\\.\\-]+\\s*=\\s*&quot;.*?&quot;|\\s*[\\w\\.\\-]+\\s*=\\s*&lt;%.*?%&gt;)*)\\s*\\/&gt;/msS&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplate.html#constant_CONFIG_ASSET"><b>\Prado\Web\UI\TTemplate::CONFIG_ASSET</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplate.html#constant_CONFIG_DATABIND"><b>\Prado\Web\UI\TTemplate::CONFIG_DATABIND</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplate.html#constant_CONFIG_EXPRESSION"><b>\Prado\Web\UI\TTemplate::CONFIG_EXPRESSION</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplate.html#constant_CONFIG_LOCALIZATION"><b>\Prado\Web\UI\TTemplate::CONFIG_LOCALIZATION</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplate.html#constant_CONFIG_PARAMETER"><b>\Prado\Web\UI\TTemplate::CONFIG_PARAMETER</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplate.html#constant_CONFIG_TEMPLATE"><b>\Prado\Web\UI\TTemplate::CONFIG_TEMPLATE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Web-UI-TTemplate.html#constant_REGEX_RULES"><b>\Prado\Web\UI\TTemplate::REGEX_RULES</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

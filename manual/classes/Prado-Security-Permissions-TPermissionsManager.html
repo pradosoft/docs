@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TPermissionsManager &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1087 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-security.html">Security</a>\<a href="namespaces/prado-security-permissions.html">Permissions</a>\<a href="classes/Prado-Security-Permissions-TPermissionsManager.html">TPermissionsManager</a>
+    </h1>
+
+    <div class="description">
+        TPermissionsManager class.
+        <p>TPermissionsManager handles Permissions authorization and  Roll Based
+Access Control (RBAC).  Each registered Permission is given a set of
+<a href="%5CPrado%5CSecurity%5CTAuthorizationRule"></a>s.  The RBAC is based on roles
+having children roles and permissions, with permissions being thought of
+as special roles themselves.</p>
+<p>TPermissionsManager attaches <a href="TPermissionsBehavior"></a> to all classes
+that implement <a href="IPermissions"></a>.  This is the main mechanism
+by which application permissions are registered.</p>
+<p>The role hierarchy and permission rules are unique to each application.  The
+permissions configuration is defined in the TPermissionsManager application
+configuration or in a separate <a href="PermissionsFile"></a>. <a href="TPermissionsConfigurationBehavior"></a>
+enables a page configuration to have Permission Configurations as well.
+A <a href="TDbParameterModule"></a> can be specified for loading dynamic roles and
+permissions.</p>
+<p>Module XML configurations (and similarly PermissionFile) follows the format, eg:
+<code class="prettyprint">
+&lt;module id=&quot;permissions&quot; class=&quot;Prado\Security\Permissions\TPermissionsManager&quot; DefaultRoles=&quot;Default&quot; SuperRoles=&quot;Administrator&quot;&gt;
+<role name="Developer" children="all, param_shell_permission, cron" />
+<role name="Manager" children="editor, change_user_role_permission, cron_shell" />
+<role name="cron_shell" children="cron_add_task, cron_update_task, cron_remove_task" />
+<role name="cron" children="cron_shell, cron_manage_log, cron_add_task, cron_update_task, cron_remove_task" />
+<role name="Default" children="register_user, blog_read_posts, blog_comment">
+&lt;permissionrule name=&quot;param_shell_permission&quot; action=&quot;deny&quot; users=&quot;<em>&quot; roles=&quot;&quot; verb=&quot;</em>&quot; IPs=&quot;&quot; /&gt;
+&lt;permissionrule name=&quot;cron_shell&quot; action=&quot;allow&quot; users=&quot;<em>&quot; roles=&quot;Developer,cron_shell,cron_manage_log&quot; verb=&quot;</em>&quot; IPs=&quot;&quot; /&gt;
+<permissionrule name="register_user" action="allow" users="?" />
+<permissionrule name="register_user" action="allow" roles="Manager" />
+<permissionrule name="change_profile" action="deny" users="?" priority="0" />
+&lt;permissionrule name=&quot;blog_update_posts&quot; class=&quot;Prado\Security\Permissions\TUserOwnerRule&quot; Priority=&quot;5&quot; /&gt;
+&lt;permissionrule name=&quot;cron&quot; action=&quot;allow&quot; users=&quot;admin, user1, user2&quot; roles=&quot;<em>&quot; verb=&quot;</em>&quot; IPs=&quot;<em>&quot;  /&gt;
+&lt;permissionrule name=&quot;blog_</em>&quot; action=&quot;allow&quot; users=&quot;admin, user1, user2&quot; roles=&quot;<em>&quot; verb=&quot;</em>&quot; IPs=&quot;*&quot;  /&gt;
+<permissionrule name="*" action="deny" priority="1000" />
+</module>
+</code></p>
+<p>and in PHP the same file would follow the following format, eg:
+'modules' =&gt; [
+'permissions' =&gt;[class =&gt; 'Prado\Security\Permissions\TPermissionsManager',
+'properties' =&gt; ['DefaultRoles' =&gt; 'Default', 'SuperRoles' =&gt; &quot;Administrator&quot;],
+'roles' =&gt; [
+'Developer' =&gt; ['all', 'param_shell_permission', 'cron'],
+'Manager' =&gt; ['editor', 'change_user_role_permission', 'cron_shell'],
+'cron_shell' =&gt; ['cron_add_task', 'cron_update_task', 'cron_remove_task'],
+'cron' =&gt; ['cron_shell', 'cron_manage_log', 'cron_add_task', 'cron_update_task', 'cron_remove_task'],
+'Default' =&gt; ['register_user', 'blog_read_posts', 'blog_comment'],
+],
+'permissionRules' =&gt; [
+[name =&gt; 'param_shell_permission', 'action' =&gt; 'deny', 'users' =&gt; '<em>', roles =&gt; '</em>', 'verb' =&gt; '<em>', 'IPs' =&gt;''],
+[name =&gt; 'cron_shell', 'action' =&gt; 'allow', 'users' =&gt; 'Developer,cron_shell,cron_manage_log', roles =&gt; 'cron_shell', 'verb' =&gt; '</em>', 'IPs' =&gt;''],
+[name =&gt; 'register_user', 'action' =&gt; 'allow', 'users' =&gt; '?'],
+[name =&gt; 'register_user', 'action' =&gt; 'allow', 'roles' =&gt; 'Manager'],
+[name =&gt; 'change_profile', 'action' =&gt; 'deny', 'users' =&gt; '?', 'priority' =&gt; '0'],
+[name =&gt; 'blog_update_posts', 'class' =&gt; 'Prado\Security\Permissions\TUserOwnerRule', 'priority' =&gt; '5'],
+[name =&gt; 'cron', 'action' =&gt; 'allow', 'users' =&gt; 'admin, user1, user2'],
+[name =&gt; 'blog_<em>', 'action' =&gt; 'allow', 'users' =&gt; 'admin, user1, user2'],
+[name =&gt; '</em>', 'action' =&gt; 'deny', 'priority' =&gt; 1000]
+</module></p>
+<p>In this example, &quot;cron&quot; is not a permission, but when used as a permission,
+all children roles/permissions will receive the rule.  Permissions with children,
+such as 'cron_shell' (above), will give all its children the rule as
+well.</p>
+<p>A special role &quot;All&quot; is automatically created to contain all the permissions.
+Specifying &quot;all&quot; as a child, is the same as specifying a role as a super role
+via <a href="setSuperRoles"></a>.</p>
+<p>All users get the roles specified by <a href="getDefaultRoles"></a>.  This changes
+the default Prado behavior for guest users having no roles.</p>
+<p>Intermediate roles, that are not defined in the user system, may be defined in
+the hierarchy, in the above example the &quot;cron&quot; role is not defined by the system,
+but is defined in the role hierarchy.</p>
+<p>Permission Rules can have multiple rules. they are
+ordered by natural specified configuration order unless the rule property
+<a href="TAuthorizationRule::setPriority"></a> is set.</p>
+<p>Permissions authorization rules may use the '<em>' or 'perm_</em>' to add the rules to all
+matching permission names.  Anything before the * is matched as a permission.
+This does not traverse the hierarchy roles matching the name, just the permissions
+are matched for the TAuthorizationRule.</p>
+<p>A permission name  must list itself as a role in TAuthorizationRule for the user to be
+validated for that permission name for authorization.  This is handled automatically
+by TPermissionManager with the <a href="getAutoAllowWithPermission"></a> property.
+By default getAutoAllowWithPermission is true, and allows any user with
+that permission in their hierarchy to allow access to the functionality.
+This rule priority can be set with <a href="getAutoRulePriority"></a>,
+where the default is 5, and -thus- before user defined rules.</p>
+<p>The second automatic rules includes Modules have their own preset rules that can
+be automatically added via <a href="getAutoPresetRules"></a>.  By default this
+is true. These rules typically allow owners of the data to be permitted without having
+a permission-role.  Preset roles can define their own priorities but those
+without set priorities receive the priority from <a href="getAutoRulePriority"></a>.</p>
+<p>The third, and last, auto-Rule is the final <a href="getAutoDenyAll">DenyAll</a>
+rule. This is the last rule that denies all by default.  The AutoDenyAll
+gets its rule priority from <a href="getAutoDenyAllPriority"></a>.  By default,
+deny all to all permissions is enabled and thus blocking all permissions.</p>
+<p>Recursive hierarchy is gracefully handled, in case of any loop structures.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Security-Permissions-TPermissionsManager.html">\Prado\Security\Permissions\TPermissionsManager</a>
+                    implements
+                            <a href="classes/Prado-Security-Permissions-IPermissions.html">\Prado\Security\Permissions\IPermissions</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                            <a href="classes/Prado-Security-Permissions-IPermissions.html">\Prado\Security\Permissions\IPermissions</a>                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Security\Permissions<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.2.0<br/>
+                    <b>Located at:</b> <a href="framework/Security/Permissions/TPermissionsManager.php"><abbr title="framework/Security/Permissions/TPermissionsManager.php">TPermissionsManager.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__destruct" id="__destruct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___destruct"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method___destruct">__destruct</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    detaches the automatic class behaviors
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addPermissionRule" id="addPermissionRule" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addPermissionRule"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_addPermissionRule">addPermissionRule</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$permission</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-TAuthorizationRule.html"><abbr title="\Prado\Security\TAuthorizationRule">TAuthorizationRule</abbr></a>&nbsp;</span><var>$rule</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This method adds permission rules with in the runtime context.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addRoleChildren" id="addRoleChildren" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addRoleChildren"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_addRoleChildren">addRoleChildren</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$role</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|array&lt;string|int, string&gt;&nbsp;</span><var>$children</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This adds children to a role within the runtime context.  The children
+can be a single comma separated string.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoAllowWithPermission" id="getAutoAllowWithPermission" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoAllowWithPermission"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoAllowWithPermission">getAutoAllowWithPermission</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoDenyAll" id="getAutoDenyAll" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoDenyAll"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoDenyAll">getAutoDenyAll</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoDenyAllPriority" id="getAutoDenyAllPriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoDenyAllPriority"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoDenyAllPriority">getAutoDenyAllPriority</a><span>(</span><span>)</span><span> : </span><span>numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoPresetRules" id="getAutoPresetRules" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoPresetRules"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoPresetRules">getAutoPresetRules</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoRulePriority" id="getAutoRulePriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoRulePriority"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoRulePriority">getAutoRulePriority</a><span>(</span><span>)</span><span> : </span><span>numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConfigPermissionRules" id="getDbConfigPermissionRules" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConfigPermissionRules"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDbConfigPermissionRules">getDbConfigPermissionRules</a><span>(</span><span>)</span><span> : </span><span>array&lt;string, array&lt;string|int, <a href="classes/Prado-Security-TAuthorizationRule.html"><abbr title="\Prado\Security\TAuthorizationRule">TAuthorizationRule</abbr></a>&gt;&gt;</span>                </code>
+
+                <div class="description short">
+                    Get the permission rules that are runtime from the database
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConfigRoles" id="getDbConfigRoles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConfigRoles"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDbConfigRoles">getDbConfigRoles</a><span>(</span><span>)</span><span> : </span><span>array&lt;string, array&lt;string|int, string&gt;&gt;</span>                </code>
+
+                <div class="description short">
+                    Get the roles that are runtime from the database
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbParameter" id="getDbParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbParameter"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDbParameter">getDbParameter</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Util-TDbParameterModule.html"><abbr title="\Prado\Util\TDbParameterModule">TDbParameterModule</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDefaultRoles" id="getDefaultRoles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDefaultRoles"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDefaultRoles">getDefaultRoles</a><span>(</span><span>)</span><span> : </span><span>null|array&lt;string|int, string&gt;</span>                </code>
+
+                <div class="description short">
+                    Gets the default roles of all users.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHierarchyRoleChildren" id="getHierarchyRoleChildren" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHierarchyRoleChildren"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getHierarchyRoleChildren">getHierarchyRoleChildren</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$role</var></span><span>)</span><span> : </span><span>null|array&lt;string|int, string&gt;</span>                </code>
+
+                <div class="description short">
+                    Gets the children for a specific role in the hierarchy.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHierarchyRoles" id="getHierarchyRoles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHierarchyRoles"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getHierarchyRoles">getHierarchyRoles</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, string&gt;</span>                </code>
+
+                <div class="description short">
+                    Gets all the roles in the hierarchy, though may not be valid roles in the application.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLoadParameter" id="getLoadParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLoadParameter"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getLoadParameter">getLoadParameter</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPermissionDescription" id="getPermissionDescription" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPermissionDescription"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissionDescription">getPermissionDescription</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$permissionName</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    gets the short description of the permission
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPermissionFile" id="getPermissionFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPermissionFile"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissionFile">getPermissionFile</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPermissionRules" id="getPermissionRules" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPermissionRules"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissionRules">getPermissionRules</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$permission</var></span><span>)</span><span> : </span><span>null|array&lt;string, <a href="classes/Prado-Security-TAuthorizationRuleCollection.html"><abbr title="\Prado\Security\TAuthorizationRuleCollection">TAuthorizationRuleCollection</abbr></a>&gt;|<a href="classes/Prado-Security-TAuthorizationRuleCollection.html"><abbr title="\Prado\Security\TAuthorizationRuleCollection">TAuthorizationRuleCollection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPermissions" id="getPermissions" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPermissions"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissions">getPermissions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-Permissions-TPermissionsManager.html"><abbr title="\Prado\Security\Permissions\TPermissionsManager">TPermissionsManager</abbr></a>&nbsp;</span><var>$manager</var></span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Security-Permissions-TPermissionEvent.html"><abbr title="\Prado\Security\Permissions\TPermissionEvent">TPermissionEvent</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSuperRoles" id="getSuperRoles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSuperRoles"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getSuperRoles">getSuperRoles</a><span>(</span><span>)</span><span> : </span><span>null|array&lt;string|int, string&gt;</span>                </code>
+
+                <div class="description short">
+                    All super roles will get &quot;all&quot; roles and thus all permissions on module init.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|<a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the module.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isInHierarchy" id="isInHierarchy" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isInHierarchy"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_isInHierarchy">isInHierarchy</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, string&gt;&nbsp;</span><var>$roles</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$permission</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string, bool&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$checked</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    checks if the $permission is in the $roles hierarchy.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadPermissionsData" id="loadPermissionsData" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadPermissionsData"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_loadPermissionsData">loadPermissionsData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|<a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads the roles, children, and permission rules.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerPermission" id="registerPermission" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerPermission"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_registerPermission">registerPermission</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$permissionName</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$description</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, <a href="classes/Prado-Security-TAuthorizationRule.html"><abbr title="\Prado\Security\TAuthorizationRule">TAuthorizationRule</abbr></a>&gt;&nbsp;</span><var>$rules</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Registers a permission name with description and preset rules.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerShellAction" id="registerShellAction" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerShellAction"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_registerShellAction">registerShellAction</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removePermissionRule" id="removePermissionRule" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removePermissionRule"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_removePermissionRule">removePermissionRule</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$permission</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-TAuthorizationRule.html"><abbr title="\Prado\Security\TAuthorizationRule">TAuthorizationRule</abbr></a>&nbsp;</span><var>$rule</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This method removes permission rules with in the runtime context.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removeRoleChildren" id="removeRoleChildren" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removeRoleChildren"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_removeRoleChildren">removeRoleChildren</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$role</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|array&lt;string|int, string&gt;&nbsp;</span><var>$children</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This removes children from a role within the runtime context.  The children
+can be a single comma separated string.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoAllowWithPermission" id="setAutoAllowWithPermission" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoAllowWithPermission"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoAllowWithPermission">setAutoAllowWithPermission</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$enable</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoDenyAll" id="setAutoDenyAll" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoDenyAll"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoDenyAll">setAutoDenyAll</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$enable</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoDenyAllPriority" id="setAutoDenyAllPriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoDenyAllPriority"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoDenyAllPriority">setAutoDenyAllPriority</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">numeric-string|int|float&nbsp;</span><var>$priority</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoPresetRules" id="setAutoPresetRules" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoPresetRules"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoPresetRules">setAutoPresetRules</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$enable</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoRulePriority" id="setAutoRulePriority" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoRulePriority"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoRulePriority">setAutoRulePriority</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">numeric-string|int|float&nbsp;</span><var>$priority</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDbParameter" id="setDbParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDbParameter"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setDbParameter">setDbParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-IUserManager.html"><abbr title="\Prado\Security\IUserManager">IUserManager</abbr></a>|string&nbsp;</span><var>$provider</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDefaultRoles" id="setDefaultRoles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDefaultRoles"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setDefaultRoles">setDefaultRoles</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|array&lt;string|int, string&gt;&nbsp;</span><var>$roles</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setLoadParameter" id="setLoadParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setLoadParameter"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setLoadParameter">setLoadParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPermissionFile" id="setPermissionFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPermissionFile"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setPermissionFile">setPermissionFile</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSuperRoles" id="setSuperRoles" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSuperRoles"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setSuperRoles">setSuperRoles</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string|array&lt;string|int, string&gt;&nbsp;</span><var>$roles</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    sets the super roles to get all permissions.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addPermissionRuleInternal" id="addPermissionRuleInternal" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addPermissionRuleInternal"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_addPermissionRuleInternal">addPermissionRuleInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-TAuthorizationRule.html"><abbr title="\Prado\Security\TAuthorizationRule">TAuthorizationRule</abbr></a>|array&lt;string|int, <a href="classes/Prado-Security-TAuthorizationRule.html"><abbr title="\Prado\Security\TAuthorizationRule">TAuthorizationRule</abbr></a>&gt;&nbsp;</span><var>$rule</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds a permission rule to a permission name. Names can contain the &#039;*&#039; character
+and every permission with a matching name before the &#039;*&#039; will get the rule
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removePermissionRuleInternal" id="removePermissionRuleInternal" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removePermissionRuleInternal"></a>
+                <code>
+                    <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_removePermissionRuleInternal">removePermissionRuleInternal</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Security-TAuthorizationRule.html"><abbr title="\Prado\Security\TAuthorizationRule">TAuthorizationRule</abbr></a>&nbsp;</span><var>$rule</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes a permission rule from a permission name.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_addPermissionRule">addPermissionRule</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_addRoleChildren">addRoleChildren</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_dyAddPermissionRule">dyAddPermissionRule</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_dyAddRoleChildren">dyAddRoleChildren</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_dyRegisterShellAction">dyRegisterShellAction</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_dyRemovePermissionRule">dyRemovePermissionRule</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_dyRemoveRoleChildren">dyRemoveRoleChildren</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoAllowWithPermission">getAutoAllowWithPermission</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoDenyAll">getAutoDenyAll</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoDenyAllPriority">getAutoDenyAllPriority</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoPresetRules">getAutoPresetRules</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getAutoRulePriority">getAutoRulePriority</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDbConfigPermissionRules">getDbConfigPermissionRules</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDbConfigRoles">getDbConfigRoles</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDbParameter">getDbParameter</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getDefaultRoles">getDefaultRoles</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getHierarchyRoleChildren">getHierarchyRoleChildren</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getHierarchyRoles">getHierarchyRoles</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getLoadParameter">getLoadParameter</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissionDescription">getPermissionDescription</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissionFile">getPermissionFile</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissionRules">getPermissionRules</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getPermissions">getPermissions</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_getSuperRoles">getSuperRoles</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_isInHierarchy">isInHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_loadPermissionsData">loadPermissionsData</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_registerPermission">registerPermission</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_registerShellAction">registerShellAction</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_removePermissionRule">removePermissionRule</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_removeRoleChildren">removeRoleChildren</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoAllowWithPermission">setAutoAllowWithPermission</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoDenyAll">setAutoDenyAll</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoDenyAllPriority">setAutoDenyAllPriority</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoPresetRules">setAutoPresetRules</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setAutoRulePriority">setAutoRulePriority</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setDbParameter">setDbParameter</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setDefaultRoles">setDefaultRoles</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setLoadParameter">setLoadParameter</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setPermissionFile">setPermissionFile</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_setSuperRoles">setSuperRoles</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_addPermissionRuleInternal">addPermissionRuleInternal</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#method_removePermissionRuleInternal">removePermissionRuleInternal</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="PERM_PERMISSIONS_MANAGE_ROLES" id="PERM_PERMISSIONS_MANAGE_ROLES" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_PERMISSIONS_MANAGE_ROLES"><b>PERM_PERMISSIONS_MANAGE_ROLES</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;permissions_manage_roles&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_PERMISSIONS_MANAGE_RULES" id="PERM_PERMISSIONS_MANAGE_RULES" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_PERMISSIONS_MANAGE_RULES"><b>PERM_PERMISSIONS_MANAGE_RULES</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;permissions_manage_rules&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERM_PERMISSIONS_SHELL" id="PERM_PERMISSIONS_SHELL" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERM_PERMISSIONS_SHELL"><b>PERM_PERMISSIONS_SHELL</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;permissions_shell&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERMISSIONS_BEHAVIOR" id="PERMISSIONS_BEHAVIOR" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERMISSIONS_BEHAVIOR"><b>PERMISSIONS_BEHAVIOR</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;permissions&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="PERMISSIONS_CONFIG_BEHAVIOR" id="PERMISSIONS_CONFIG_BEHAVIOR" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_PERMISSIONS_CONFIG_BEHAVIOR"><b>PERMISSIONS_CONFIG_BEHAVIOR</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;permissionsConfig&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="USER_PERMISSIONS_BEHAVIOR" id="USER_PERMISSIONS_BEHAVIOR" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_USER_PERMISSIONS_BEHAVIOR"><b>USER_PERMISSIONS_BEHAVIOR</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;usercan&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#constant_PERM_PERMISSIONS_MANAGE_ROLES"><b>\Prado\Security\Permissions\TPermissionsManager::PERM_PERMISSIONS_MANAGE_ROLES</b></a>,                                     <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#constant_PERM_PERMISSIONS_MANAGE_RULES"><b>\Prado\Security\Permissions\TPermissionsManager::PERM_PERMISSIONS_MANAGE_RULES</b></a>,                                     <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#constant_PERM_PERMISSIONS_SHELL"><b>\Prado\Security\Permissions\TPermissionsManager::PERM_PERMISSIONS_SHELL</b></a>,                                     <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#constant_PERMISSIONS_BEHAVIOR"><b>\Prado\Security\Permissions\TPermissionsManager::PERMISSIONS_BEHAVIOR</b></a>,                                     <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#constant_PERMISSIONS_CONFIG_BEHAVIOR"><b>\Prado\Security\Permissions\TPermissionsManager::PERMISSIONS_CONFIG_BEHAVIOR</b></a>,                                     <a href="classes/Prado-Security-Permissions-TPermissionsManager.html#constant_USER_PERMISSIONS_BEHAVIOR"><b>\Prado\Security\Permissions\TPermissionsManager::USER_PERMISSIONS_BEHAVIOR</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TCallbackClientScript &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1315 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-activecontrols.html">ActiveControls</a>\<a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html">TCallbackClientScript</a>
+    </h1>
+
+    <div class="description">
+        TCallbackClientScript class.
+        <p>The TCallbackClientScript class provides corresponding methods that can be
+executed on the client-side (i.e. the browser client that is viewing
+the page) during a callback response.</p>
+<p>The available methods includes setting/clicking input elements, changing Css
+styles, hiding/showing elements, and adding visual effects to elements on the
+page. The client-side methods can be access through the CallbackClient
+property available in TPage.</p>
+<p>For example, to hide &quot;$myTextBox&quot; element during callback response, do
+<code class="prettyprint">
+$this-&gt;getPage()-&gt;getCallbackClient()-&gt;hide($myTextBox);
+</code></p>
+<p>To call a specific jQuery method on an element, use the <a href="jQuery"></a> method:
+<code class="prettyprint">
+// simple example: focus a textbox
+$this-&gt;getCallbackClient()-&gt;jQuery($myTextBox, 'focus');</p>
+<p>// complex example: resize a textbox using an animation
+$this-&gt;getCallbackClient()-&gt;jQuery($myTextBox, 'animate', array(
+array(	'width' =&gt; '+=100',
+'height' =&gt; '+=50'
+),
+array('duration' =&gt; 1000)
+));
+</code></p>
+<p>To call a jQueryUI effect on an element, use the <a href="juiEffect"></a> method:
+<code class="prettyprint">
+// simple example: focus a textbox
+$this-&gt;getCallbackClient()-&gt;juiEffect($myTextBox, 'highlight');
+</code></p>
+<p>In order to use the jQueryUI effects, the jqueryui script must be registered:
+<code class="prettyprint">
+$this-&gt;getPage()-&gt;getClientScript()-&gt;registerPradoScript('jqueryui');
+</code></p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html">\Prado\Web\UI\ActiveControls\TCallbackClientScript</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\ActiveControls<br/>
+                <b>Author:</b> <br/>
+            <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/ActiveControls/TCallbackClientScript.php"><abbr title="framework/Web/UI/ActiveControls/TCallbackClientScript.php">TCallbackClientScript.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method___construct">__construct</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addCssClass" id="addCssClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addCssClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_addCssClass">addCssClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$cssClass</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Add a Css class name to the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="appear" id="appear" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_appear"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_appear">appear</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of fadeIn()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="appendContent" id="appendContent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_appendContent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_appendContent">appendContent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$content</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Append a HTML fragement to the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="appendScriptBlock" id="appendScriptBlock" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_appendScriptBlock"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_appendScriptBlock">appendScriptBlock</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$content</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Appends a block of inline javascript enclosed in a boundary.
+                    <p>Similar to to evaluateScript(), but functions declared in the
+inline block will be available to page elements.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="blind" id="blind" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_blind"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_blind">blind</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Blind.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="blindDown" id="blindDown" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_blindDown"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_blindDown">blindDown</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of blind(), presets the direction to &#039;down&#039;
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="blindUp" id="blindUp" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_blindUp"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_blindUp">blindUp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of blind(), presets the direction to &#039;up&#039;
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="callClientFunction" id="callClientFunction" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_callClientFunction"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_callClientFunction">callClientFunction</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$function</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$params</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Executes a client-side statement.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="check" id="check" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_check"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_check">check</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$checkbox</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$checked</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Client script to check or uncheck a checkbox or radio button.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="click" id="click" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_click"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_click">click</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Client script to click on an element. &lt;b&gt;This client-side function is unpredictable.&lt;/b&gt;
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="drop" id="drop" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_drop"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_drop">drop</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Drop out.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="dropOut" id="dropOut" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_dropOut"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_dropOut">dropOut</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of drop()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="evaluateScript" id="evaluateScript" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_evaluateScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_evaluateScript">evaluateScript</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>|string&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Evaluate a block of javascript enclosed in a boundary.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fade" id="fade" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fade"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fade">fade</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of fadeOut()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fadeIn" id="fadeIn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fadeIn"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fadeIn">fadeIn</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Gradually make the element appear.
+                    <p>This effect doesn't need jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fadeOut" id="fadeOut" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fadeOut"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fadeOut">fadeOut</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Gradually fade the element.
+                    <p>This effect doesn't need jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fadeTo" id="fadeTo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fadeTo"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fadeTo">fadeTo</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$duration</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">500</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set the opacity on a html element or control.
+                    <p>This effect doesn't need jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="focus" id="focus" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_focus"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_focus">focus</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Focus on a particular element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fold" id="fold" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fold"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fold">fold</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Fold.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getClientFunctionsToExecute" id="getClientFunctionsToExecute" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getClientFunctionsToExecute"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getClientFunctionsToExecute">getClientFunctionsToExecute</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="grow" id="grow" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_grow"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_grow">grow</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of size()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hide" id="hide" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hide"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_hide">hide</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Hides an element by changing its CSS display style to &quot;none&quot;.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="highlight" id="highlight" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_highlight"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_highlight">highlight</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: High light the element for about 2 seconds.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="insertContentAfter" id="insertContentAfter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_insertContentAfter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_insertContentAfter">insertContentAfter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$content</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Insert a HTML fragement after the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="insertContentBefore" id="insertContentBefore" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_insertContentBefore"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_insertContentBefore">insertContentBefore</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$content</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Insert a HTML fragement in before the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="jQuery" id="jQuery" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_jQuery"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_jQuery">jQuery</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$method</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$params</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Executes a jQuery client-side method over an element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="juiEffect" id="juiEffect" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_juiEffect"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_juiEffect">juiEffect</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$effect</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Add a jQuery-ui effect the element.
+                    <p>This method needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="prependContent" id="prependContent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_prependContent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_prependContent">prependContent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$content</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Prepend a HTML fragement to the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="puff" id="puff" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_puff"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_puff">puff</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Gradually grow and fade the element.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="pulsate" id="pulsate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_pulsate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_pulsate">pulsate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Pulsate.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="raiseClientEvent" id="raiseClientEvent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_raiseClientEvent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_raiseClientEvent">raiseClientEvent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$eventName</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Raise the client side event (given by $eventName) on a particular element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="remove" id="remove" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_remove"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_remove">remove</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes an element from the HTML page.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removeCssClass" id="removeCssClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removeCssClass"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_removeCssClass">removeCssClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$cssClass</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Remove a Css class name from the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="replaceContent" id="replaceContent" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_replaceContent"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_replaceContent">replaceContent</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$content</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$self</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Replace the content of an element with new content contained in writer.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="scale" id="scale" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_scale"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_scale">scale</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Scale the element.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="scrollTo" id="scrollTo" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_scrollTo"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_scrollTo">scrollTo</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Scroll the top of the browser viewing area to the location of the
+element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="select" id="select" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_select"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_select">select</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TListControl.html"><abbr title="\Prado\Web\UI\WebControls\TListControl">TListControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$method</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;Value&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|int|string&nbsp;</span><var>$value</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$type</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Client script to select/clear/check a drop down list, check box list,
+or radio button list.
+                    <p>The second parameter determines the selection method. Valid methods are</p>
+<ul>
+<li>
+<b>Value</b>, select or check by value</li>
+<li>
+<b>Values</b>, select or check by a list of values</li>
+<li>
+<b>Index</b>, select or check by index (zero based index)</li>
+<li>
+<b>Indices</b>, select or check by a list of index (zero based index)</li>
+<li>
+<b>Clear</b>, clears or selections or checks in the list</li>
+<li>
+<b>All</b>, select all</li>
+<li>
+<b>Invert</b>, invert the selection.</li>
+</ul>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAttribute" id="setAttribute" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAttribute"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setAttribute">setAttribute</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the attribute of a particular control.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setListItems" id="setListItems" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setListItems"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setListItems">setListItems</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|<a href="classes/Prado-Web-UI-WebControls-TListControl.html"><abbr title="\Prado\Web\UI\WebControls\TListControl">TListControl</abbr></a>&nbsp;</span><var>$items</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the options of a select input element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOpacity" id="setOpacity" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOpacity"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setOpacity">setOpacity</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of fadeTo()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setStyle" id="setStyle" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setStyle">setStyle</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$styles</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the style of element. The style must be a key-value array where the
+key is the style property and the value is the style value.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setValue" id="setValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setValue"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setValue">setValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$input</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$text</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Client script to set the value of a particular input element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="shake" id="shake" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_shake"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_shake">shake</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Shake the element.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="show" id="show" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_show"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_show">show</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Shows an element by changing its CSS display style as empty.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="shrink" id="shrink" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_shrink"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_shrink">shrink</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of scale()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="size" id="size" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_size"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_size">size</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Gradually make an element grow to a predetermined size.
+                    <p>This effect needs jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="slideDown" id="slideDown" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_slideDown"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_slideDown">slideDown</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Slide down.
+                    <p>This effect doesn't need jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="slideUp" id="slideUp" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_slideUp"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_slideUp">slideUp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Visual Effect: Slide up.
+                    <p>This effect doesn't need jQueryUI.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="squish" id="squish" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_squish"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_squish">squish</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of scale()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="switchOff" id="switchOff" n:class="deprecated">
+        <td class="attributes"><code>
+            public
+            deprecated                                                </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_switchOff"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_switchOff">switchOff</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Alias of scale()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toggle" id="toggle" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toggle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_toggle">toggle</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|string&nbsp;</span><var>$effect</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Toggles the visibility of the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="update" id="update" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_update"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_update">update</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$content</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Update the element&#039;s innerHTML with new content.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="visualEffect" id="visualEffect" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_visualEffect"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_visualEffect">visualEffect</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$type</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Add a visual effect the element.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="replace" id="replace" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_replace"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_replace">replace</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$element</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$content</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$self</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Replace the content of an element with new content. The new content can
+be a string or a TControl component. If the &lt;tt&gt;content&lt;/tt&gt; parameter is
+a TControl component, its rendered method will be called and its contents
+will be used for replacement.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRenderedContentBoundary" id="getRenderedContentBoundary" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRenderedContentBoundary"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getRenderedContentBoundary">getRenderedContentBoundary</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Renders the control and return the content boundary from
+TCallbackResponseWriter. This method should only be used by framework
+component developers. The render() method is defered to be called in the
+TActivePageAdapter class.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getResponseContentBoundary" id="getResponseContentBoundary" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getResponseContentBoundary"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getResponseContentBoundary">getResponseContentBoundary</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$html</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSelectionControlIsListType" id="getSelectionControlIsListType" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSelectionControlIsListType"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getSelectionControlIsListType">getSelectionControlIsListType</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$control</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSelectionControlType" id="getSelectionControlType" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSelectionControlType"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getSelectionControlType">getSelectionControlType</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$control</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_addCssClass">addCssClass</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_appear">appear</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_appendContent">appendContent</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_appendScriptBlock">appendScriptBlock</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_blind">blind</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_blindDown">blindDown</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_blindUp">blindUp</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_callClientFunction">callClientFunction</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_check">check</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_click">click</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_drop">drop</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_dropOut">dropOut</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_evaluateScript">evaluateScript</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fade">fade</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fadeIn">fadeIn</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fadeOut">fadeOut</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fadeTo">fadeTo</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_focus">focus</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_fold">fold</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getClientFunctionsToExecute">getClientFunctionsToExecute</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_grow">grow</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_hide">hide</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_highlight">highlight</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_insertContentAfter">insertContentAfter</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_insertContentBefore">insertContentBefore</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_jQuery">jQuery</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_juiEffect">juiEffect</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_prependContent">prependContent</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_puff">puff</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_pulsate">pulsate</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_raiseClientEvent">raiseClientEvent</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_remove">remove</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_removeCssClass">removeCssClass</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_replaceContent">replaceContent</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_scale">scale</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_scrollTo">scrollTo</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_select">select</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setAttribute">setAttribute</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setListItems">setListItems</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setOpacity">setOpacity</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setStyle">setStyle</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_setValue">setValue</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_shake">shake</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_show">show</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_shrink">shrink</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_size">size</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_slideDown">slideDown</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_slideUp">slideUp</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_squish">squish</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_switchOff">switchOff</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_toggle">toggle</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_update">update</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_visualEffect">visualEffect</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_replace">replace</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getRenderedContentBoundary">getRenderedContentBoundary</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getResponseContentBoundary">getResponseContentBoundary</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getSelectionControlIsListType">getSelectionControlIsListType</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html#method_getSelectionControlType">getSelectionControlType</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

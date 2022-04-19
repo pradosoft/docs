@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDatePicker &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1388 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-TDatePicker.html">TDatePicker</a>
+    </h1>
+
+    <div class="description">
+        TDatePicker class.
+        <p>TDatePicker displays a text box for date input purpose.
+When the text box receives focus, a calendar will pop up and users can
+pick up from it a date that will be automatically entered into the text box.
+The format of the date string displayed in the text box is determined by
+the <b>DateFormat</b> property. Valid formats are the combination of the
+following tokens,</p>
+<code class="prettyprint">
+ Character Format Pattern (en-US)
+ -----------------------------------------
+ d          day digit
+ dd         padded day digit e.g. 01, 02
+ M          month digit
+ MM         padded month digit
+ MMMM       localized month name, e.g. March, April
+ yy         2 digit year
+ yyyy       4 digit year
+ -----------------------------------------
+</code>
+<p>TDatePicker has four <b>Mode</b> to show the date picker popup.</p>
+<h1><b>Basic</b> -- Only shows a text input, focusing on the input shows the</h1>
+<pre class="prettyprint"><code class="prettyprint">               date picker. This way you can access the popup using only
+               the keyboard. Note that because of this, TAB-bing through
+               this control will automatically select the current date if
+               no previous date was selected. If you close the popup (eg.
+               pressing the ESC key) you'll need to un-focus and re-focus
+               the control again for the popup to reappear.
+</code></pre>
+<h1><b>Clickable</b> -- Only shows a text input, clicking on the input shows the</h1>
+<pre class="prettyprint"><code class="prettyprint">               date picker. This mode solves the two small problems of the
+               Basic mode. It was first introduced in Prado 3.2.
+</code></pre>
+<h1><b>Button</b> -- Shows a button next to the text input, clicking on the</h1>
+<pre class="prettyprint"><code class="prettyprint">                button shows the date, button text can be by the
+                &lt;b&gt;ButtonText&lt;/b&gt; property
+</code></pre>
+<h1><b>ImageButton</b> -- Shows an image next to the text input, clicking on</h1>
+<pre class="prettyprint"><code class="prettyprint">                     the image shows the date picker, image source can be
+                     change through the &lt;b&gt;ButtonImageUrl&lt;/b&gt; property.
+</code></pre>
+<p>The <b>CssClass</b> property can be used to override the css class name
+for the date picker panel. <b>CalendarStyle</b> property sets the packages
+styles available. E.g. <b>default</b>.</p>
+<p>The <b>InputMode</b> property can be set to &quot;TextBox&quot; or &quot;DropDownList&quot; with
+default as &quot;TextBox&quot;.
+In <b>DropDownList</b> mode, in addition to the popup date picker, three
+drop down list (day, month and year) are presented to select the date .</p>
+<p>The <b>PositionMode</b> property can be set to &quot;Top&quot; or &quot;Bottom&quot; with default
+as &quot;Bottom&quot;. It specifies the position of the calendar popup, relative to the
+input field.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html">\Prado\Web\UI\WebControls\TDatePicker</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TTextBox.html">\Prado\Web\UI\WebControls\TTextBox</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-WebControls-TWebControl.html">\Prado\Web\UI\WebControls\TWebControl</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-TControl.html">\Prado\Web\UI\TControl</a>
+                    implements
+                        </dd>
+                <dd style="padding-left:120px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:150px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+            <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/TDatePicker.php"><abbr title="framework/Web/UI/WebControls/TDatePicker.php">TDatePicker.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getButtonImageUrl" id="getButtonImageUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getButtonImageUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getButtonImageUrl">getButtonImageUrl</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getButtonText" id="getButtonText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getButtonText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getButtonText">getButtonText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCalendarStyle" id="getCalendarStyle" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCalendarStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCalendarStyle">getCalendarStyle</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getClientSide" id="getClientSide" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getClientSide"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getClientSide">getClientSide</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TDatePickerClientScript.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerClientScript">TDatePickerClientScript</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Gets the TDatePickerClientScript to set the TDatePicker event handlers.
+                    <p>The date picker on the client-side supports the following events.</p>
+<h1><tt>OnDateChanged</tt> -- raised when the date is changed.</h1>
+<p>You can attach custom javascript code to each of these events</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCulture" id="getCulture" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCulture"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCulture">getCulture</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Gets the current culture.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getData" id="getData" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getData"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getData">getData</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Returns the timestamp selected by the user.
+                    <p>This method is required by <a href="%5CPrado%5CIDataRenderer"></a>.
+It is the same as <a href="getTimeStamp()"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDate" id="getDate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDate">getDate</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDateFormat" id="getDateFormat" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDateFormat"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDateFormat">getDateFormat</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFirstDayOfWeek" id="getFirstDayOfWeek" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFirstDayOfWeek"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getFirstDayOfWeek">getFirstDayOfWeek</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFromYear" id="getFromYear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFromYear"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getFromYear">getFromYear</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getInputMode" id="getInputMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getInputMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getInputMode">getInputMode</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TDatePickerInputMode.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerInputMode">TDatePickerInputMode</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getMode" id="getMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getMode">getMode</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TDatePickerMode.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerMode">TDatePickerMode</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPositionMode" id="getPositionMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPositionMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getPositionMode">getPositionMode</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TDatePickerPositionMode.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerPositionMode">TDatePickerPositionMode</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getShowCalendar" id="getShowCalendar" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getShowCalendar"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getShowCalendar">getShowCalendar</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTimeStamp" id="getTimeStamp" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTimeStamp"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getTimeStamp">getTimeStamp</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUpToYear" id="getUpToYear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUpToYear"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getUpToYear">getUpToYear</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getValidationPropertyValue" id="getValidationPropertyValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getValidationPropertyValue"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getValidationPropertyValue">getValidationPropertyValue</a><span>(</span><span>)</span><span> : </span><span>int|string</span>                </code>
+
+                <div class="description short">
+                    Returns the value to be validated.
+                    <p>This method is required by \Prado\Web\UI\IValidatable interface.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadPostData" id="loadPostData" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadPostData"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_loadPostData">loadPostData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$values</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Loads user input data. Override parent implementation, when InputMode
+is DropDownList call getDateFromPostData to get date data.
+                    <p>This method is primarly used by framework developers.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="onPreRender" id="onPreRender" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_onPreRender"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_onPreRender">onPreRender</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Publish the date picker Css asset files.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="render" id="render" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_render"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_render">render</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders body content.
+                    <p>This method overrides parent implementation by adding
+additional date picker button if Mode is Button or ImageButton.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoPostBack" id="setAutoPostBack" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoPostBack"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setAutoPostBack">setAutoPostBack</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    AutoPostBack is not supported.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setButtonImageUrl" id="setButtonImageUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setButtonImageUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setButtonImageUrl">setButtonImageUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setButtonText" id="setButtonText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setButtonText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setButtonText">setButtonText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCalendarStyle" id="setCalendarStyle" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCalendarStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setCalendarStyle">setCalendarStyle</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCulture" id="setCulture" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCulture"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setCulture">setCulture</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the culture/language for the date picker.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setData" id="setData" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setData"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setData">setData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the timestamp represented by this control.
+                    <p>This method is required by <a href="%5CPrado%5CIDataRenderer"></a>.
+It is the same as <a href="setTimeStamp()"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDate" id="setDate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDate"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setDate">setDate</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setDateFormat" id="setDateFormat" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setDateFormat"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setDateFormat">setDateFormat</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the format of the date string.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFirstDayOfWeek" id="setFirstDayOfWeek" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFirstDayOfWeek"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setFirstDayOfWeek">setFirstDayOfWeek</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set the first day of week, with 0 as Sunday, 1 as Monday, etc.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFromYear" id="setFromYear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFromYear"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setFromYear">setFromYear</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setInputMode" id="setInputMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setInputMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setInputMode">setInputMode</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TDatePickerInputMode.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerInputMode">TDatePickerInputMode</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setMode" id="setMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setMode">setMode</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TDatePickerMode.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerMode">TDatePickerMode</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPositionMode" id="setPositionMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPositionMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setPositionMode">setPositionMode</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TDatePickerPositionMode.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerPositionMode">TDatePickerPositionMode</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setShowCalendar" id="setShowCalendar" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setShowCalendar"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setShowCalendar">setShowCalendar</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets whether to pop up the calendar window when the control receives focus
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTimeStamp" id="setTimeStamp" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTimeStamp"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setTimeStamp">setTimeStamp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">float&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the date for the date picker using timestamp.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUpToYear" id="setUpToYear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUpToYear"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setUpToYear">setUpToYear</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addAttributesToRender" id="addAttributesToRender" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addAttributesToRender"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_addAttributesToRender">addAttributesToRender</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Add the client id to the input textbox, and register the client scripts.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createClientScript" id="createClientScript" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createClientScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_createClientScript">createClientScript</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TDatePickerClientScript.html"><abbr title="\Prado\Web\UI\WebControls\TDatePickerClientScript">TDatePickerClientScript</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAssetUrl" id="getAssetUrl" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAssetUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getAssetUrl">getAssetUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$file</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCulturalOptions" id="getCulturalOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCulturalOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCulturalOptions">getCulturalOptions</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Get javascript localization options, e.g. month and weekday names.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCurrentCulture" id="getCurrentCulture" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCurrentCulture"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCurrentCulture">getCurrentCulture</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDateFromPostData" id="getDateFromPostData" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDateFromPostData"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDateFromPostData">getDateFromPostData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$values</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Loads date from drop down list data.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDatePickerButtonID" id="getDatePickerButtonID" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDatePickerButtonID"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDatePickerButtonID">getDatePickerButtonID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Gets the ID for the date picker trigger button.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDatePickerOptions" id="getDatePickerOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDatePickerOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDatePickerOptions">getDatePickerOptions</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Get javascript date picker options.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDropDownDayOptions" id="getDropDownDayOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDropDownDayOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDropDownDayOptions">getDropDownDayOptions</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLocalizedCalendarInfo" id="getLocalizedCalendarInfo" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLocalizedCalendarInfo"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getLocalizedCalendarInfo">getLocalizedCalendarInfo</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-I18N-core-CultureInfo.html"><abbr title="\Prado\I18N\core\CultureInfo">CultureInfo</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLocalizedMonthNames" id="getLocalizedMonthNames" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLocalizedMonthNames"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getLocalizedMonthNames">getLocalizedMonthNames</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-I18N-core-CultureInfo.html"><abbr title="\Prado\I18N\core\CultureInfo">CultureInfo</abbr></a>&nbsp;</span><var>$info</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns the localized month names that depends on the month format pattern.
+                    <p>&quot;MMMM&quot; will return the month names, &quot;MM&quot; or &quot;MMM&quot; return abbr. month names
+and &quot;M&quot; return month digits.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTimeStampFromText" id="getTimeStampFromText" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTimeStampFromText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getTimeStampFromText">getTimeStampFromText</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Gets the date from the text input using TSimpleDateFormatter
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hasDayPattern" id="hasDayPattern" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hasDayPattern"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_hasDayPattern">hasDayPattern</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="publishCalendarStyle" id="publishCalendarStyle" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_publishCalendarStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_publishCalendarStyle">publishCalendarStyle</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Publish the calendar style Css asset file.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerCalendarClientScriptPre" id="registerCalendarClientScriptPre" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerCalendarClientScriptPre"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_registerCalendarClientScriptPre">registerCalendarClientScriptPre</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Registers the javascript code to initialize the date picker.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderButtonDatePicker" id="renderButtonDatePicker" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderButtonDatePicker"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderButtonDatePicker">renderButtonDatePicker</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds an additional button such that when clicked it shows the date picker.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderCalendarDayOptions" id="renderCalendarDayOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderCalendarDayOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarDayOptions">renderCalendarDayOptions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$selected</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the day drop down list options.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderCalendarMonthOptions" id="renderCalendarMonthOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderCalendarMonthOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarMonthOptions">renderCalendarMonthOptions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$selected</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the month drop down list options.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderCalendarSelections" id="renderCalendarSelections" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderCalendarSelections"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarSelections">renderCalendarSelections</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\DateTime">DateTime</abbr>&nbsp;</span><var>$date</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the calendar drop down list depending on the DateFormat pattern.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderCalendarYearOptions" id="renderCalendarYearOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderCalendarYearOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarYearOptions">renderCalendarYearOptions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$selected</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the year drop down list options.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderClientControlScript" id="renderClientControlScript" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderClientControlScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderClientControlScript">renderClientControlScript</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the javascript for textbox.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderDatePickerButtons" id="renderDatePickerButtons" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderDatePickerButtons"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderDatePickerButtons">renderDatePickerButtons</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the date picker popup buttons.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderDropDownListCalendar" id="renderDropDownListCalendar" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderDropDownListCalendar"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderDropDownListCalendar">renderDropDownListCalendar</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders the drop down list date picker.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderImageButtonDatePicker" id="renderImageButtonDatePicker" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderImageButtonDatePicker"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderImageButtonDatePicker">renderImageButtonDatePicker</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds an additional image button such that when clicked it shows the date picker.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="renderDropDownListOptions" id="renderDropDownListOptions" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_renderDropDownListOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderDropDownListOptions">renderDropDownListOptions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-THtmlWriter.html"><abbr title="\Prado\Web\UI\THtmlWriter">THtmlWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$selected</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Renders a drop down lists.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_addedControl">addedControl</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_applyStyleSheetSkin">applyStyleSheetSkin</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoBindProperty">autoBindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_bindProperty">bindProperty</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEvent">broadcastEvent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_bubbleEvent">bubbleEvent</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNamingContainer">clearNamingContainer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_clearStyle">clearStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearViewState">clearViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_convertUniqueIdToClientId">convertUniqueIdToClientId</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_copyBaseAttributes">copyBaseAttributes</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createChildControls">createChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBind">dataBind</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_ensureChildControls">ensureChildControls</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControl">findControl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByID">findControlsByID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_findControlsByType">findControlsByType</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_focus">focus</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getAccessKey">getAccessKey</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAdapter">getAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAllowChildControls">getAllowChildControls</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttribute">getAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getAttributes">getAttributes</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getAutoCompleteType">getAutoCompleteType</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getAutoPostBack">getAutoPostBack</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getAutoTrim">getAutoTrim</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBackColor">getBackColor</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderColor">getBorderColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderStyle">getBorderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getBorderWidth">getBorderWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getButtonImageUrl">getButtonImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getButtonText">getButtonText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCalendarStyle">getCalendarStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getCausesValidation">getCausesValidation</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getClientID">getClientID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getClientSide">getClientSide</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getColumns">getColumns</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getConfig">getConfig</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControls">getControls</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getCssClass">getCssClass</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCulture">getCulture</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getCustomData">getCustomData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getData">getData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getDataChanged">getDataChanged</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDate">getDate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDateFormat">getDateFormat</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getDecorator">getDecorator</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getDisplay">getDisplay</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getEnableClientScript">getEnableClientScript</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnabled">getEnabled</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableTheming">getEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getEnableViewState">getEnableViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getEnsureId">getEnsureId</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getFirstDayOfWeek">getFirstDayOfWeek</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getFont">getFont</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getForeColor">getForeColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getFromYear">getFromYear</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAdapter">getHasAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasAttributes">getHasAttributes</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasChildInitialized">getHasChildInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasControls">getHasControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasInitialized">getHasInitialized</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoaded">getHasLoaded</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasLoadedPostData">getHasLoadedPostData</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getHasPreRendered">getHasPreRendered</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getHasStyle">getHasStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getHeight">getHeight</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getInputMode">getInputMode</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getIsSkinApplied">getIsSkinApplied</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getIsValid">getIsValid</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getMaxLength">getMaxLength</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getMode">getMode</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getNamingContainer">getNamingContainer</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPage">getPage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getParent">getParent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getPersistPassword">getPersistPassword</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getPluginModule">getPluginModule</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getPositionMode">getPositionMode</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getReadOnly">getReadOnly</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getRegisteredObject">getRegisteredObject</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getRows">getRows</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getSafeText">getSafeText</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getShowCalendar">getShowCalendar</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSkinID">getSkinID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getSourceTemplateControl">getSourceTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getStyle">getStyle</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getTabIndex">getTabIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getTemplateControl">getTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getText">getText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getTextMode">getTextMode</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getTimeStamp">getTimeStamp</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getToolTip">getToolTip</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getUniqueID">getUniqueID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getUpToYear">getUpToYear</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getValidationGroup">getValidationGroup</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getValidationPropertyValue">getValidationPropertyValue</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getViewState">getViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getVisible">getVisible</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getWidth">getWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getWrap">getWrap</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_hasAttribute">hasAttribute</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isObjectRegistered">isObjectRegistered</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_loadPostData">loadPostData</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadState">loadState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onDataBinding">onDataBinding</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onInit">onInit</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onLoad">onLoad</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_onPreRender">onPreRender</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_onTextChanged">onTextChanged</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_onUnload">onUnload</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_raisePostDataChangedEvent">raisePostDataChangedEvent</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_registerObject">registerObject</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removeAttribute">removeAttribute</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_removedControl">removedControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_render">render</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderBeginTag">renderBeginTag</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderChildren">renderChildren</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderContents">renderContents</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_renderControl">renderControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_renderEndTag">renderEndTag</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setAccessKey">setAccessKey</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAdapter">setAdapter</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setAttribute">setAttribute</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setAutoCompleteType">setAutoCompleteType</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setAutoPostBack">setAutoPostBack</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setAutoTrim">setAutoTrim</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBackColor">setBackColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderColor">setBorderColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderStyle">setBorderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setBorderWidth">setBorderWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setButtonImageUrl">setButtonImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setButtonText">setButtonText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setCalendarStyle">setCalendarStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setCausesValidation">setCausesValidation</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setColumns">setColumns</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setConfig">setConfig</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setCssClass">setCssClass</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setCulture">setCulture</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setCustomData">setCustomData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setData">setData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setDate">setDate</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setDateFormat">setDateFormat</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setDisplay">setDisplay</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setEnableClientScript">setEnableClientScript</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnabled">setEnabled</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableTheming">setEnableTheming</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setEnableViewState">setEnableViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setEnsureId">setEnsureId</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setFirstDayOfWeek">setFirstDayOfWeek</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setForeColor">setForeColor</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setFromYear">setFromYear</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setHeight">setHeight</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setInputMode">setInputMode</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setIsValid">setIsValid</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setMaxLength">setMaxLength</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setMode">setMode</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setPage">setPage</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setPersistPassword">setPersistPassword</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setPositionMode">setPositionMode</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setReadOnly">setReadOnly</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setRows">setRows</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setShowCalendar">setShowCalendar</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setSkinID">setSkinID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setStyle">setStyle</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setTabIndex">setTabIndex</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setTemplateControl">setTemplateControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setText">setText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setTextMode">setTextMode</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setTimeStamp">setTimeStamp</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setToolTip">setToolTip</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_setUpToYear">setUpToYear</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setValidationGroup">setValidationGroup</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setViewState">setViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setVisible">setVisible</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_setWidth">setWidth</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_setWrap">setWrap</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_trackViewState">trackViewState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unbindProperty">unbindProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unregisterObject">unregisterObject</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_addAttributesToRender">addAttributesToRender</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_autoDataBindProperties">autoDataBindProperties</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearChildState">clearChildState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearControlState">clearControlState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_createClientScript">createClientScript</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_createControlCollection">createControlCollection</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_createStyle">createStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindChildren">dataBindChildren</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_dataBindProperties">dataBindProperties</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getAssetUrl">getAssetUrl</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getChildControlsCreated">getChildControlsCreated</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getClientClassName">getClientClassName</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlStage">getControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_getControlState">getControlState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCulturalOptions">getCulturalOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getCurrentCulture">getCurrentCulture</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDateFromPostData">getDateFromPostData</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDatePickerButtonID">getDatePickerButtonID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDatePickerOptions">getDatePickerOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getDropDownDayOptions">getDropDownDayOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getLocalizedCalendarInfo">getLocalizedCalendarInfo</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getLocalizedMonthNames">getLocalizedMonthNames</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getPostBackOptions">getPostBackOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#method_getSafeTextParser">getSafeTextParser</a>,                             <a href="classes/Prado-Web-UI-WebControls-TWebControl.html#method_getTagName">getTagName</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_getTimeStampFromText">getTimeStampFromText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_hasDayPattern">hasDayPattern</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_initRecursive">initRecursive</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_isDescendentOf">isDescendentOf</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadRecursive">loadRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_loadStateRecursive">loadStateRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_preRenderRecursive">preRenderRecursive</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_publishCalendarStyle">publishCalendarStyle</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_raiseBubbleEvent">raiseBubbleEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_registerCalendarClientScriptPre">registerCalendarClientScriptPre</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderButtonDatePicker">renderButtonDatePicker</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarDayOptions">renderCalendarDayOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarMonthOptions">renderCalendarMonthOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarSelections">renderCalendarSelections</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderCalendarYearOptions">renderCalendarYearOptions</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderClientControlScript">renderClientControlScript</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderDatePickerButtons">renderDatePickerButtons</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderDropDownListCalendar">renderDropDownListCalendar</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderImageButtonDatePicker">renderImageButtonDatePicker</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_saveStateRecursive">saveStateRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setChildControlsCreated">setChildControlsCreated</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlStage">setControlStage</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_setControlState">setControlState</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_traverseChildControls">traverseChildControls</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_unloadRecursive">unloadRecursive</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_broadcastEventInternal">broadcastEventInternal</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearCachedUniqueID">clearCachedUniqueID</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_clearNameTable">clearNameTable</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_fillNameTable">fillNameTable</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>,                             <a href="classes/Prado-Web-UI-TControl.html#method_generateAutomaticID">generateAutomaticID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#method_renderDropDownListOptions">renderDropDownListOptions</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="SCRIPT_PATH" id="SCRIPT_PATH" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_SCRIPT_PATH"><b>SCRIPT_PATH</b></a>
+            </code>
+
+            <div class="description short">
+                Script path relative to the TClientScriptManager::SCRIPT_PATH
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;datepicker&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_AUTOMATIC_ID_PREFIX"><b>\Prado\Web\UI\TControl::AUTOMATIC_ID_PREFIX</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CLIENT_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::CLIENT_ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CHILD_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_CHILD_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_CONSTRUCTED"><b>\Prado\Web\UI\TControl::CS_CONSTRUCTED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_INITIALIZED"><b>\Prado\Web\UI\TControl::CS_INITIALIZED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_LOADED"><b>\Prado\Web\UI\TControl::CS_LOADED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_PRERENDERED"><b>\Prado\Web\UI\TControl::CS_PRERENDERED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_CS_STATE_LOADED"><b>\Prado\Web\UI\TControl::CS_STATE_LOADED</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#constant_DEFAULT_COLUMNS"><b>\Prado\Web\UI\WebControls\TTextBox::DEFAULT_COLUMNS</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TTextBox.html#constant_DEFAULT_ROWS"><b>\Prado\Web\UI\WebControls\TTextBox::DEFAULT_ROWS</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_FORMAT"><b>\Prado\Web\UI\TControl::ID_FORMAT</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_ID_SEPARATOR"><b>\Prado\Web\UI\TControl::ID_SEPARATOR</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CHILD_CREATED"><b>\Prado\Web\UI\TControl::IS_CHILD_CREATED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_CREATING_CHILD"><b>\Prado\Web\UI\TControl::IS_CREATING_CHILD</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_THEMING"><b>\Prado\Web\UI\TControl::IS_DISABLE_THEMING</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_DISABLE_VIEWSTATE"><b>\Prado\Web\UI\TControl::IS_DISABLE_VIEWSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_ID_SET"><b>\Prado\Web\UI\TControl::IS_ID_SET</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_SKIN_APPLIED"><b>\Prado\Web\UI\TControl::IS_SKIN_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_IS_STYLESHEET_APPLIED"><b>\Prado\Web\UI\TControl::IS_STYLESHEET_APPLIED</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_ADAPTER"><b>\Prado\Web\UI\TControl::RF_ADAPTER</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_AUTO_BINDINGS"><b>\Prado\Web\UI\TControl::RF_AUTO_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CHILD_STATE"><b>\Prado\Web\UI\TControl::RF_CHILD_STATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLS"><b>\Prado\Web\UI\TControl::RF_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_CONTROLSTATE"><b>\Prado\Web\UI\TControl::RF_CONTROLSTATE</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_DATA_BINDINGS"><b>\Prado\Web\UI\TControl::RF_DATA_BINDINGS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_EVENTS"><b>\Prado\Web\UI\TControl::RF_EVENTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_CONTROLS_ID"><b>\Prado\Web\UI\TControl::RF_NAMED_CONTROLS_ID</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_NAMED_OBJECTS"><b>\Prado\Web\UI\TControl::RF_NAMED_OBJECTS</b></a>,                                     <a href="classes/Prado-Web-UI-TControl.html#constant_RF_SKIN_ID"><b>\Prado\Web\UI\TControl::RF_SKIN_ID</b></a>,                                     <a href="classes/Prado-Web-UI-WebControls-TDatePicker.html#constant_SCRIPT_PATH"><b>\Prado\Web\UI\WebControls\TDatePicker::SCRIPT_PATH</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

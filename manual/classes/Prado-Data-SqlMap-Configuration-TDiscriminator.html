@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDiscriminator &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,364 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-sqlmap.html">SqlMap</a>\<a href="namespaces/prado-data-sqlmap-configuration.html">Configuration</a>\<a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html">TDiscriminator</a>
+    </h1>
+
+    <div class="description">
+        The TDiscriminator corresponds to the &lt;discriminator&gt; tag within a &lt;resultMap&gt;.
+        <p>TDiscriminator allows inheritance logic in SqlMap result mappings.
+SqlMap compares the data found in the discriminator column to the different
+<submap> values using the column value's string equivalence. When the string values
+matches a particular <submap>, SqlMap will use the &lt;resultMap&gt; defined by
+<a href="resultMapping">TSubMap::setResultMapping()</a> property for loading
+the object data.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html">\Prado\Data\SqlMap\Configuration\TDiscriminator</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\SqlMap\Configuration<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/SqlMap/Configuration/TDiscriminator.php"><abbr title="framework/Data/SqlMap/Configuration/TDiscriminator.php">TDiscriminator.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="addSubMap" id="addSubMap" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addSubMap"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_addSubMap">addSubMap</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-SqlMap-Configuration-TSubMap.html"><abbr title="\Prado\Data\SqlMap\Configuration\TSubMap">TSubMap</abbr></a>&nbsp;</span><var>$subMap</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getColumn" id="getColumn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getColumn"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getColumn">getColumn</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getColumnIndex" id="getColumnIndex" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getColumnIndex"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getColumnIndex">getColumnIndex</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getMapping" id="getMapping" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getMapping"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getMapping">getMapping</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-SqlMap-Configuration-TResultProperty.html"><abbr title="\Prado\Data\SqlMap\Configuration\TResultProperty">TResultProperty</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getNullValue" id="getNullValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getNullValue"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getNullValue">getNullValue</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSubMap" id="getSubMap" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSubMap"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getSubMap">getSubMap</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>null|<a href="classes/Prado-Data-SqlMap-Configuration-TResultMap.html"><abbr title="\Prado\Data\SqlMap\Configuration\TResultMap">TResultMap</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getType" id="getType" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getType"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getType">getType</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTypeHandler" id="getTypeHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTypeHandler"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getTypeHandler">getTypeHandler</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initialize" id="initialize" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initialize"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_initialize">initialize</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-SqlMap-TSqlMapManager.html"><abbr title="\Prado\Data\SqlMap\TSqlMapManager">TSqlMapManager</abbr></a>&nbsp;</span><var>$manager</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set the result maps for particular sub-mapping values.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initMapping" id="initMapping" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initMapping"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_initMapping">initMapping</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$resultMap</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Copies the discriminator properties to a new TResultProperty.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setColumn" id="setColumn" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setColumn"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setColumn">setColumn</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setColumnIndex" id="setColumnIndex" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setColumnIndex"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setColumnIndex">setColumnIndex</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    The columnIndex attribute value is the index of the column in the
+ResultSet from which the value will be used to populate the object property.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setNullValue" id="setNullValue" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setNullValue"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setNullValue">setNullValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setType" id="setType" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setType"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setType">setType</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    The type attribute is used to explicitly specify the property type of the
+parameter to be set. If the attribute type is not set and the framework
+cannot otherwise determine the type, the type is assumed from the default
+value of the property.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTypeHandler" id="setTypeHandler" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTypeHandler"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setTypeHandler">setTypeHandler</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_addSubMap">addSubMap</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getColumn">getColumn</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getColumnIndex">getColumnIndex</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getMapping">getMapping</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getNullValue">getNullValue</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getSubMap">getSubMap</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getType">getType</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_getTypeHandler">getTypeHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_initialize">initialize</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_initMapping">initMapping</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setColumn">setColumn</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setColumnIndex">setColumnIndex</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setNullValue">setNullValue</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setType">setType</a>,                             <a href="classes/Prado-Data-SqlMap-Configuration-TDiscriminator.html#method_setTypeHandler">setTypeHandler</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

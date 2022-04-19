@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TCallbackPageStateTracker &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,323 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-activecontrols.html">ActiveControls</a>\<a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html">TCallbackPageStateTracker</a>
+    </h1>
+
+    <div class="description">
+        TCallbackPageStateTracker class.
+        <p>Tracking changes to the page state during callback.</p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\Web\UI\ActiveControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/ActiveControls/TCallbackPageStateTracker.php"><abbr title="framework/Web/UI/ActiveControls/TCallbackPageStateTracker.php">TCallbackPageStateTracker.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TControl.html"><abbr title="\Prado\Web\UI\TControl">TControl</abbr></a>&nbsp;</span><var>$control</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor. Add a set of default states to track.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="respondToChanges" id="respondToChanges" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_respondToChanges"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_respondToChanges">respondToChanges</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    For each of the changes call the corresponding change handlers.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="trackChanges" id="trackChanges" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_trackChanges"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_trackChanges">trackChanges</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Start tracking view state changes. The clone function on objects are called
+for those viewstate having an object as value.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addStatesToTrack" id="addStatesToTrack" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addStatesToTrack"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_addStatesToTrack">addStatesToTrack</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Add a list of view states to track. Each state is added
+to the StatesToTrack property with the view state name as key.
+                    <p>The value should be an array with two enteries. The first entery
+is the name of the class that will calculate the state differences.
+The second entry is a php function/method callback that handles
+the changes in the viewstate.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="client" id="client" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_client"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_client">client</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientScript.html"><abbr title="\Prado\Web\UI\ActiveControls\TCallbackClientScript">TCallbackClientScript</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getChanges" id="getChanges" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getChanges"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_getChanges">getChanges</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getStatesToTrack" id="getStatesToTrack" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getStatesToTrack"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_getStatesToTrack">getStatesToTrack</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Collections-TMap.html"><abbr title="\Prado\Collections\TMap">TMap</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateAccessKey" id="updateAccessKey" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateAccessKey"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateAccessKey">updateAccessKey</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Updates the modifier access key
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateAttributes" id="updateAttributes" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateAttributes"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateAttributes">updateAttributes</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$attributes</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Updates/adds a list of attributes on the control.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateEnabled" id="updateEnabled" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateEnabled"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateEnabled">updateEnabled</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$enable</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Enables or Disables the control on the client-side.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateStyle" id="updateStyle" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateStyle">updateStyle</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$style</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Updates the CSS style on the control on the client-side.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateTabIndex" id="updateTabIndex" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateTabIndex"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateTabIndex">updateTabIndex</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Updates the tab index.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateToolTip" id="updateToolTip" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateToolTip"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateToolTip">updateToolTip</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Updates the tooltip.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateVisible" id="updateVisible" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateVisible"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateVisible">updateVisible</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$visible</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Hides or shows the control on the client-side. The control must be
+already rendered on the client-side.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method___construct">__construct</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_respondToChanges">respondToChanges</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_trackChanges">trackChanges</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_addStatesToTrack">addStatesToTrack</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_client">client</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_getChanges">getChanges</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_getStatesToTrack">getStatesToTrack</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateAccessKey">updateAccessKey</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateAttributes">updateAttributes</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateEnabled">updateEnabled</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateStyle">updateStyle</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateTabIndex">updateTabIndex</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateToolTip">updateToolTip</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TCallbackPageStateTracker.html#method_updateVisible">updateVisible</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

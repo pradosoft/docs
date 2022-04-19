@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TActiveRecordHasManyAssociation &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,485 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-activerecord.html">ActiveRecord</a>\<a href="namespaces/prado-data-activerecord-relations.html">Relations</a>\<a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html">TActiveRecordHasManyAssociation</a>
+    </h1>
+
+    <div class="description">
+        Implements the M-N (many to many) relationship via association table.
+        <p>Consider the <b>entity</b> relationship between Articles and Categories
+via the association table <tt>Article_Category</tt>.
+<code class="prettyprint">
++---------+            +------------------+            +----------+
+| Article | * -----&gt; * | Article_Category | * &lt;----- * | Category |
++---------+            +------------------+            +----------+
+</code>
+Where one article may have 0 or more categories and each category may have 0
+or more articles. We may model Article-Category <b>object</b> relationship
+as active record as follows.
+<code class="prettyprint">
+class ArticleRecord
+{
+const TABLE='Article';
+public $article_id;</p>
+<pre class="prettyprint"><code class="prettyprint">public $Categories=array(); //foreign object collection.
+
+public static $RELATIONS = array
+(
+    'Categories' =&gt; array(self::MANY_TO_MANY, 'CategoryRecord', 'Article_Category')
+);
+
+public static function finder($className=__CLASS__)
+{
+    return parent::finder($className);
+}
+</code></pre>
+<p>}
+class CategoryRecord
+{
+const TABLE='Category';
+public $category_id;</p>
+<pre class="prettyprint"><code class="prettyprint">public $Articles=array();
+
+public static $RELATIONS = array
+(
+    'Articles' =&gt; array(self::MANY_TO_MANY, 'ArticleRecord', 'Article_Category')
+);
+
+public static function finder($className=__CLASS__)
+{
+    return parent::finder($className);
+}
+</code></pre>
+<p>}
+</code></p>
+<p>The static <tt>$RELATIONS</tt> property of ArticleRecord defines that the
+property <tt>$Categories</tt> has many <tt>CategoryRecord</tt>s. Similar, the
+static <tt>$RELATIONS</tt> property of CategoryRecord defines many ArticleRecords.</p>
+<p>The articles with categories list may be fetched as follows.
+<code class="prettyprint">
+$articles = TeamRecord::finder()-&gt;withCategories()-&gt;findAll();
+</code>
+The method <tt>with_xxx()</tt> (where <tt>xxx</tt> is the relationship property
+name, in this case, <tt>Categories</tt>) fetchs the corresponding CategoryRecords using
+a second query (not by using a join). The <tt>with_xxx()</tt> accepts the same
+arguments as other finder methods of TActiveRecord.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html">\Prado\Data\ActiveRecord\Relations\TActiveRecordHasManyAssociation</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html">\Prado\Data\ActiveRecord\Relations\TActiveRecordRelation</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Data\ActiveRecord\Relations<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/ActiveRecord/Relations/TActiveRecordHasManyAssociation.php"><abbr title="framework/Data/ActiveRecord/Relations/TActiveRecordHasManyAssociation.php">TActiveRecordHasManyAssociation.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="createCommand" id="createCommand" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createCommand"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_createCommand">createCommand</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-DataGateway-TSqlCriteria.html"><abbr title="\Prado\Data\DataGateway\TSqlCriteria">TSqlCriteria</abbr></a>&nbsp;</span><var>$criteria</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$foreignKeys</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$indexValues</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$sourceKeys</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRelationForeignKeys" id="getRelationForeignKeys" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRelationForeignKeys"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getRelationForeignKeys">getRelationForeignKeys</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateAssociatedRecords" id="updateAssociatedRecords" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateAssociatedRecords"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_updateAssociatedRecords">updateAssociatedRecords</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Updates the associated foreign objects.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="collectForeignObjects" id="collectForeignObjects" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_collectForeignObjects"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_collectForeignObjects">collectForeignObjects</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$results</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Get the foreign key index values from the results and make calls to the
+database to find the corresponding foreign objects using association table.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createFkObject" id="createFkObject" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createFkObject"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_createFkObject">createFkObject</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$type</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$row</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$foreignKeys</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-TActiveRecord.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecord">TActiveRecord</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fetchForeignObjects" id="fetchForeignObjects" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fetchForeignObjects"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_fetchForeignObjects">fetchForeignObjects</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$results</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$foreignKeys</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$indexValues</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$sourceKeys</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Fetches the foreign objects using TActiveRecord::findAllByIndex()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAssociationJoin" id="getAssociationJoin" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAssociationJoin"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getAssociationJoin">getAssociationJoin</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$foreignKeys</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$indexValues</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$sourceKeys</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    SQL inner join for M-N relationship via association table.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAssociationTable" id="getAssociationTable" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAssociationTable"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getAssociationTable">getAssociationTable</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAssociationTableCommandBuilder" id="getAssociationTableCommandBuilder" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAssociationTableCommandBuilder"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getAssociationTableCommandBuilder">getAssociationTableCommandBuilder</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-Common-TDbCommandBuilder.html"><abbr title="\Prado\Data\Common\TDbCommandBuilder">TDbCommandBuilder</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCommandBuilder" id="getCommandBuilder" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCommandBuilder"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getCommandBuilder">getCommandBuilder</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-DataGateway-TDataGatewayCommand.html"><abbr title="\Prado\Data\DataGateway\TDataGatewayCommand">TDataGatewayCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getForeignCommandBuilder" id="getForeignCommandBuilder" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getForeignCommandBuilder"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getForeignCommandBuilder">getForeignCommandBuilder</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-DataGateway-TDataGatewayCommand.html"><abbr title="\Prado\Data\DataGateway\TDataGatewayCommand">TDataGatewayCommand</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getForeignTable" id="getForeignTable" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getForeignTable"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getForeignTable">getForeignTable</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSourceColumns" id="getSourceColumns" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSourceColumns"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getSourceColumns">getSourceColumns</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$sourceKeys</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSourceTable" id="getSourceTable" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSourceTable"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getSourceTable">getSourceTable</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-Common-TDbTableInfo.html"><abbr title="\Prado\Data\Common\TDbTableInfo">TDbTableInfo</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addAssociationData" id="addAssociationData" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addAssociationData"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_addAssociationData">addAssociationData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$builder</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getForeignObjectValues" id="getForeignObjectValues" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getForeignObjectValues"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getForeignObjectValues">getForeignObjectValues</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$foreignKeys</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$fkObject</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSourceRecordValues" id="getSourceRecordValues" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSourceRecordValues"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getSourceRecordValues">getSourceRecordValues</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$obj</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="hasAssociationData" id="hasAssociationData" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_hasAssociationData"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_hasAssociationData">hasAssociationData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$builder</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateAssociationTable" id="updateAssociationTable" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateAssociationTable"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_updateAssociationTable">updateAssociationTable</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$obj</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$fkObjects</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$builder</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___call">__call</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___construct">__construct</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_createCommand">createCommand</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_fetchResultsInto">fetchResultsInto</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getRelationForeignKeys">getRelationForeignKeys</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_updateAssociatedRecords">updateAssociatedRecords</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_collectForeignObjects">collectForeignObjects</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_createFkObject">createFkObject</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_fetchForeignObjects">fetchForeignObjects</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignKeys">findForeignKeys</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignObjects">findForeignObjects</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getAssociationJoin">getAssociationJoin</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getAssociationTable">getAssociationTable</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getAssociationTableCommandBuilder">getAssociationTableCommandBuilder</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getCommandBuilder">getCommandBuilder</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getContext">getContext</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getCriteria">getCriteria</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getForeignCommandBuilder">getForeignCommandBuilder</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getForeignTable">getForeignTable</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getIndexValues">getIndexValues</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getObjectHash">getObjectHash</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getSourceColumns">getSourceColumns</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getSourceRecord">getSourceRecord</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getSourceTable">getSourceTable</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_populateResult">populateResult</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_setObjectProperty">setObjectProperty</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_setResultCollection">setResultCollection</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_addAssociationData">addAssociationData</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getFkFields">getFkFields</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getForeignObjectValues">getForeignObjectValues</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_getSourceRecordValues">getSourceRecordValues</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_hasAssociationData">hasAssociationData</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordHasManyAssociation.html#method_updateAssociationTable">updateAssociationTable</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

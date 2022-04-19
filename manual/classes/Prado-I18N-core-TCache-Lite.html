@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TCache_Lite &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,324 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-i18n.html">I18N</a>\<a href="namespaces/prado-i18n-core.html">core</a>\<a href="classes/Prado-I18N-core-TCache-Lite.html">TCache_Lite</a>
+    </h1>
+
+    <div class="description">
+        Fast, light and safe Cache Class
+        <p>TCache_Lite is a fast, light and safe cache system. It's optimized
+for file containers. It is fast and safe (because it uses file
+locking and/or anti-corruption tests).</p>
+<p>There are some examples in the 'docs/examples' file
+Technical choices are described in the 'docs/technical' file</p>
+<p>A tutorial is available in english at this url :
+http://www.pearfr.org/index.php/en/article/cache_lite
+(big thanks to Pierre-Alain Joye for the translation)</p>
+<p>The same tutorial is also available in french at this url :
+http://www.pearfr.org/index.php/fr/article/cache_lite</p>
+<p>Memory Caching is from an original idea of
+Mike BENOIT <a href="mailto:ipso@snappymail.ca">ipso@snappymail.ca</a></p>
+
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\I18N\core<br/>
+                <b>Author:</b> <br/>
+                        <b>Located at:</b> <a href="framework/I18N/core/TCache_Lite.php"><abbr title="framework/I18N/core/TCache_Lite.php">TCache_Lite.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">[null]</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor
+                    <p>$options is an assoc. Available options are :
+$options = array(
+'cacheDir' =&gt; directory where to put the cache files (string),
+'caching' =&gt; enable / disable caching (boolean),
+'lifeTime' =&gt; cache lifetime in seconds (int),
+'fileLocking' =&gt; enable / disable fileLocking (boolean),
+'writeControl' =&gt; enable / disable write control (boolean),
+'readControl' =&gt; enable / disable read control (boolean),
+'readControlType' =&gt; type of read control 'crc32', 'md5', 'strlen',
+'memoryCaching' =&gt; enable / disable memory caching (boolean),
+'onlyMemoryCaching' =&gt; enable / disable only memory caching (boolean),
+'memoryCachingLimit' =&gt; max nbr of records in memory caching (int),
+'fileNameProtection' =&gt; enable / disable file name protection (boolean),
+'automaticSerialization' =&gt; enable / disable serialization (boolean)
+);</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_setFileName" id="_setFileName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__setFileName"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method__setFileName">_setFileName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$id</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$group</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Make a file name (with path)
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clean" id="clean" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clean"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method_clean">clean</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">false|string&nbsp;</span><var>$group</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Clean the cache
+                    <p>if no group is specified all cache files will be destroyed
+else only cache files of the specified group will be destroyed</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="get" id="get" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_get"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method_get">get</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$id</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$group</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;default&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$doNotTestCacheValidity</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Test if a cache is available and (if yes) return it
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCacheFile" id="getCacheFile" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCacheFile"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method_getCacheFile">getCacheFile</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="remove" id="remove" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_remove"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method_remove">remove</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$id</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$group</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;default&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Remove a cache file
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="save" id="save" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_save"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method_save">save</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$id</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$group</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;default&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Save some data in a cache file
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setLifeTime" id="setLifeTime" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setLifeTime"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method_setLifeTime">setLifeTime</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$newLifeTime</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Set a new life time
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_hash" id="_hash" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__hash"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method__hash">_hash</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$controlType</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Make a control key with the string containing datas
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_memoryCacheAdd" id="_memoryCacheAdd" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__memoryCacheAdd"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method__memoryCacheAdd">_memoryCacheAdd</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$id</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_read" id="_read" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__read"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method__read">_read</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Read the cache file and return the content
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_write" id="_write" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__write"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method__write">_write</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Write the given data in the cache file
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_writeAndControl" id="_writeAndControl" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__writeAndControl"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-TCache-Lite.html#method__writeAndControl">_writeAndControl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Write the given data in the cache file and control it just after to avoid
+corrupted cache entries
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-I18N-core-TCache-Lite.html#method___construct">__construct</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method__setFileName">_setFileName</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method_clean">clean</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method_get">get</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method_getCacheFile">getCacheFile</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method_remove">remove</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method_save">save</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method_setLifeTime">setLifeTime</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method__hash">_hash</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method__memoryCacheAdd">_memoryCacheAdd</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method__read">_read</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method__write">_write</a>,                             <a href="classes/Prado-I18N-core-TCache-Lite.html#method__writeAndControl">_writeAndControl</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

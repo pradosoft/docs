@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    THttpSession &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,1056 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="classes/Prado-Web-THttpSession.html">THttpSession</a>
+    </h1>
+
+    <div class="description">
+        THttpSession class
+        <p>THttpSession provides session-level data management and the related configurations.
+To start the session, call <a href="open"></a>; to complete and send out session data, call <a href="close"></a>;
+to destroy the session, call <a href="destroy"></a>. If AutoStart is true, then the session
+will be started once the session module is loaded and initialized.</p>
+<p>To access data stored in session, use THttpSession like an associative array. For example,
+<code class="prettyprint">
+$session=new THttpSession;
+$session-&gt;open();
+$value1=$session['name1'];  // get session variable 'name1'
+$value2=$session['name2'];  // get session variable 'name2'
+foreach($session as $name=&gt;$value) // traverse all session variables
+$session['name3']=$value3;  // set session variable 'name3'
+</code></p>
+<p>The following configurations are available for session:
+<a href="setAutoStart">AutoStart</a>, <a href="setCookieMode">CookieMode</a>,
+<a href="setSavePath">SavePath</a>,
+<a href="setUseCustomStorage">UseCustomStorage</a>, <a href="setGCProbability">GCProbability</a>,
+<a href="setTimeout">Timeout</a>.
+See the corresponding setter and getter documentation for more information.
+Note, these properties must be set before the session is started.</p>
+<p>THttpSession can be inherited with customized session storage method.
+Override <a href="_open"></a>, <a href="_close"></a>, <a href="_read"></a>, <a href="_write"></a>, <a href="_destroy"></a> and <a href="_gc"></a>
+and set <a href="setUseCustomStorage">UseCustomStorage</a> to true.
+Then, the session data will be stored using the above methods.</p>
+<p>By default, THttpSession is registered with <a href="TApplication"></a> as the
+request module. It can be accessed via <a href="TApplication::getSession()"></a>.</p>
+<p>THttpSession may be configured in application configuration file as follows,
+<code class="prettyprint">
+&lt;module id=&quot;session&quot; class=&quot;THttpSession&quot; SessionName=&quot;SSID&quot; SavePath=&quot;/tmp&quot;
+CookieMode=&quot;Allow&quot; UseCustomStorage=&quot;false&quot; AutoStart=&quot;true&quot; GCProbability=&quot;1&quot;
+UseTransparentSessionID=&quot;true&quot; TimeOut=&quot;3600&quot; /&gt;
+</code>
+where <a href="getSessionName">SessionName</a>, <a href="getSavePath">SavePath</a>,
+<a href="getCookieMode">CookieMode</a>, <a href="getUseCustomStorage">UseCustomStorage</a>, <a href="getAutoStart">AutoStart</a>, <a href="getGCProbability">GCProbability</a>, <a href="getUseTransparentSessionID">UseTransparentSessionID</a>
+and <a href="getTimeout">TimeOut</a> are configurable properties of THttpSession.</p>
+<p>To avoid the possibility of identity theft through some variants of XSS attacks,
+THttpSessionshould always be configured to enforce HttpOnly setting on session cookie.
+The HttpOnly setting is disabled by default. To enable it, configure the THttpSession
+module as follows,
+<code class="prettyprint">
+&lt;module id=&quot;session&quot; class=&quot;THttpSession&quot; Cookie.HttpOnly=&quot;true&quot; &gt;
+</code></p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-THttpSession.html">\Prado\Web\THttpSession</a>
+                    implements
+                            <a href="\IteratorAggregate">\IteratorAggregate</a>,                             <a href="\ArrayAccess">\ArrayAccess</a>,                             <a href="\Countable">\Countable</a>,                             <a href="classes/Prado-IModule.html">\Prado\IModule</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/THttpSession.php"><abbr title="framework/Web/THttpSession.php">THttpSession.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="_close" id="_close" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__close"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method__close">_close</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Session close handler.
+                    <p>This method should be overridden if <a href="setUseCustomStorage">UseCustomStorage</a> is set true.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_destroy" id="_destroy" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__destroy"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method__destroy">_destroy</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$id</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Session destroy handler.
+                    <p>This method should be overridden if <a href="setUseCustomStorage">UseCustomStorage</a> is set true.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_gc" id="_gc" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__gc"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method__gc">_gc</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$maxLifetime</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Session GC (garbage collection) handler.
+                    <p>This method should be overridden if <a href="setUseCustomStorage">UseCustomStorage</a> is set true.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_open" id="_open" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__open"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method__open">_open</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$savePath</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$sessionName</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Session open handler.
+                    <p>This method should be overridden if <a href="setUseCustomStorage">UseCustomStorage</a> is set true.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_read" id="_read" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__read"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method__read">_read</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$id</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Session read handler.
+                    <p>This method should be overridden if <a href="setUseCustomStorage">UseCustomStorage</a> is set true.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="_write" id="_write" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method__write"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method__write">_write</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$id</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Session write handler.
+                    <p>This method should be overridden if <a href="setUseCustomStorage">UseCustomStorage</a> is set true.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="add" id="add" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_add"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_add">add</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Adds a session variable.
+                    <p>Note, if the specified name already exists, the old value will be removed first.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clear" id="clear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clear"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_clear">clear</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes all session variables
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="close" id="close" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_close"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_close">close</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Ends the current session and store session data.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="contains" id="contains" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_contains"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_contains">contains</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="count" id="count" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_count"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_count">count</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Returns the number of items in the session.
+                    <p>This method is required by \Countable interface.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="destroy" id="destroy" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_destroy"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_destroy">destroy</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Destroys all data registered to a session.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoStart" id="getAutoStart" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoStart"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getAutoStart">getAutoStart</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCookie" id="getCookie" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCookie"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getCookie">getCookie</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-THttpCookie.html"><abbr title="\Prado\Web\THttpCookie">THttpCookie</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCookieMode" id="getCookieMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCookieMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getCookieMode">getCookieMode</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-THttpSessionCookieMode.html"><abbr title="\Prado\Web\THttpSessionCookieMode">THttpSessionCookieMode</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCount" id="getCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCount"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getCount">getCount</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getGCProbability" id="getGCProbability" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getGCProbability"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getGCProbability">getGCProbability</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getID" id="getID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getID">getID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIsStarted" id="getIsStarted" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIsStarted"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getIsStarted">getIsStarted</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIterator" id="getIterator" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIterator"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getIterator">getIterator</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-TSessionIterator.html"><abbr title="\Prado\Web\TSessionIterator">TSessionIterator</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Returns an iterator for traversing the session variables.
+                    <p>This method is required by the interface \IteratorAggregate.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getKeys" id="getKeys" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getKeys"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getKeys">getKeys</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSavePath" id="getSavePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSavePath"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getSavePath">getSavePath</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSessionID" id="getSessionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSessionID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getSessionID">getSessionID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSessionName" id="getSessionName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSessionName"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getSessionName">getSessionName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getTimeout" id="getTimeout" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getTimeout"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getTimeout">getTimeout</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUseCustomStorage" id="getUseCustomStorage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUseCustomStorage"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getUseCustomStorage">getUseCustomStorage</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUseTransparentSessionID" id="getUseTransparentSessionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUseTransparentSessionID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_getUseTransparentSessionID">getUseTransparentSessionID</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the module.
+                    <p>This method is required by IModule.
+If AutoStart is true, the session will be started.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="itemAt" id="itemAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_itemAt"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_itemAt">itemAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the session variable value with the session variable name.
+                    <p>This method is exactly the same as <a href="offsetGet"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetExists" id="offsetExists" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetExists"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_offsetExists">offsetExists</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    This method is required by the interface \ArrayAccess.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetGet" id="offsetGet" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetGet"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_offsetGet">offsetGet</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This method is required by the interface \ArrayAccess.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetSet" id="offsetSet" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetSet"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_offsetSet">offsetSet</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    This method is required by the interface \ArrayAccess.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetUnset" id="offsetUnset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetUnset"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_offsetUnset">offsetUnset</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    This method is required by the interface \ArrayAccess.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="open" id="open" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_open"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_open">open</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Starts the session if it has not started yet.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="regenerate" id="regenerate" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_regenerate"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_regenerate">regenerate</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$deleteOld</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Update the current session id with a newly generated one
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="remove" id="remove" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_remove"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_remove">remove</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes a session variable.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoStart" id="setAutoStart" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoStart"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setAutoStart">setAutoStart</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCookieMode" id="setCookieMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCookieMode"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setCookieMode">setCookieMode</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-THttpSessionCookieMode.html"><abbr title="\Prado\Web\THttpSessionCookieMode">THttpSessionCookieMode</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setGCProbability" id="setGCProbability" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setGCProbability"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setGCProbability">setGCProbability</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setID" id="setID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setID">setID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSavePath" id="setSavePath" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSavePath"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setSavePath">setSavePath</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSessionID" id="setSessionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSessionID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setSessionID">setSessionID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSessionName" id="setSessionName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSessionName"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setSessionName">setSessionName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setTimeout" id="setTimeout" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setTimeout"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setTimeout">setTimeout</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUseCustomStorage" id="setUseCustomStorage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUseCustomStorage"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setUseCustomStorage">setUseCustomStorage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUseTransparentSessionID" id="setUseTransparentSessionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUseTransparentSessionID"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_setUseTransparentSessionID">setUseTransparentSessionID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Ensure that {@link setCookieMode CookieMode} is not set to &quot;None&quot; before enabling
+the use of transparent session ids. Refer to the main documentation of the class
+THttpSession class for a configuration example.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toArray" id="toArray" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toArray"></a>
+                <code>
+                    <a href="classes/Prado-Web-THttpSession.html#method_toArray">toArray</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Web-THttpSession.html#method__close">_close</a>,                             <a href="classes/Prado-Web-THttpSession.html#method__destroy">_destroy</a>,                             <a href="classes/Prado-Web-THttpSession.html#method__gc">_gc</a>,                             <a href="classes/Prado-Web-THttpSession.html#method__open">_open</a>,                             <a href="classes/Prado-Web-THttpSession.html#method__read">_read</a>,                             <a href="classes/Prado-Web-THttpSession.html#method__write">_write</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_add">add</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_clear">clear</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_close">close</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_contains">contains</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_count">count</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_destroy">destroy</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getAutoStart">getAutoStart</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getCookie">getCookie</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getCookieMode">getCookieMode</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getCount">getCount</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getGCProbability">getGCProbability</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getIsStarted">getIsStarted</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getIterator">getIterator</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getKeys">getKeys</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getSavePath">getSavePath</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getSessionID">getSessionID</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getSessionName">getSessionName</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getTimeout">getTimeout</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getUseCustomStorage">getUseCustomStorage</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_getUseTransparentSessionID">getUseTransparentSessionID</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_itemAt">itemAt</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_offsetExists">offsetExists</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_offsetGet">offsetGet</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_offsetSet">offsetSet</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_offsetUnset">offsetUnset</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_open">open</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_regenerate">regenerate</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_remove">remove</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setAutoStart">setAutoStart</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setCookieMode">setCookieMode</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setGCProbability">setGCProbability</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setSavePath">setSavePath</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setSessionID">setSessionID</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setSessionName">setSessionName</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setTimeout">setTimeout</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setUseCustomStorage">setUseCustomStorage</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_setUseTransparentSessionID">setUseTransparentSessionID</a>,                             <a href="classes/Prado-Web-THttpSession.html#method_toArray">toArray</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

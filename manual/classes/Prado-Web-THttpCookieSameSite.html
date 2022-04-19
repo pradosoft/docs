@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    THttpCookieSameSite &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,142 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="classes/Prado-Web-THttpCookieSameSite.html">THttpCookieSameSite</a>
+    </h1>
+
+    <div class="description">
+        THttpCookieSameSite class.
+        <p>THttpCookieSameSite defines the enumerable type for the possible values of the
+SameSite property of <a href="THttpCookie"></a>.</p>
+<p>SameSite is a cookie attribute (similar to HTTPOnly, Secure etc.) which aims to
+mitigate CSRF attacks. It prevents the browser from sending the cookie along on
+cross-site requests.</p>
+<p>The following enumerable values are defined:</p>
+<ul>
+<li>Lax: Cookies are allowed to be sent with top-level navigations and will be sent along with GET request initiated by third party website (but not with POST, PUT, PATCH requests).</li>
+<li>Strict: Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites.</li>
+<li>None: Cookies will be sent in all contexts, i.e sending cross-origin is allowed</li>
+</ul>
+<p>Please note that this feature requires PHP 7.3.0</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-THttpCookieSameSite.html">\Prado\Web\THttpCookieSameSite</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TEnumerable.html">\Prado\TEnumerable</a>
+                    implements
+                        </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.1.2<br/>
+                    <b>Located at:</b> <a href="framework/Web/THttpCookieSameSite.php"><abbr title="framework/Web/THttpCookieSameSite.php">THttpCookieSameSite.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TEnumerable.html#method___construct">__construct</a>,                             <a href="classes/Prado-TEnumerable.html#method_current">current</a>,                             <a href="classes/Prado-TEnumerable.html#method_key">key</a>,                             <a href="classes/Prado-TEnumerable.html#method_next">next</a>,                             <a href="classes/Prado-TEnumerable.html#method_rewind">rewind</a>,                             <a href="classes/Prado-TEnumerable.html#method_valid">valid</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="Lax" id="Lax" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Lax"><b>Lax</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Lax&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="None" id="None" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_None"><b>None</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;None&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="Strict" id="Strict" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_Strict"><b>Strict</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>&#039;Strict&#039;</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-Web-THttpCookieSameSite.html#constant_Lax"><b>\Prado\Web\THttpCookieSameSite::Lax</b></a>,                                     <a href="classes/Prado-Web-THttpCookieSameSite.html#constant_None"><b>\Prado\Web\THttpCookieSameSite::None</b></a>,                                     <a href="classes/Prado-Web-THttpCookieSameSite.html#constant_Strict"><b>\Prado\Web\THttpCookieSameSite::Strict</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

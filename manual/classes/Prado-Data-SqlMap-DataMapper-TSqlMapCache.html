@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TSqlMapCache &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,157 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-sqlmap.html">SqlMap</a>\<a href="namespaces/prado-data-sqlmap-datamapper.html">DataMapper</a>\<a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html">TSqlMapCache</a>
+    </h1>
+
+    <div class="description">
+        Allow different implementation of caching strategy. See &lt;tt&gt;TSqlMapFifoCache&lt;/tt&gt;
+for a first-in-first-out implementation. See &lt;tt&gt;TSqlMapLruCache&lt;/tt&gt; for
+a least-recently-used cache implementation.
+        
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\Data\SqlMap\DataMapper<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/SqlMap/DataMapper/TSqlMapCache.php"><abbr title="framework/Data/SqlMap/DataMapper/TSqlMapCache.php">TSqlMapCache.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-SqlMap-Configuration-TSqlMapCacheModel.html"><abbr title="\Prado\Data\SqlMap\Configuration\TSqlMapCacheModel">TSqlMapCacheModel</abbr></a>&nbsp;</span><var>$cacheModel</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Create a new cache with limited cache size.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="add" id="add" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_add"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_add">add</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$id</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$expire</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">0</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$dependency</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Stores a value identified by a key into cache if the cache does not contain this key.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="delete" id="delete" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_delete"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_delete">delete</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>object</span>                </code>
+
+                <div class="description short">
+                    Deletes a value with the specified key from cache
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="flush" id="flush" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flush"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_flush">flush</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Clears the cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCacheSize" id="getCacheSize" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCacheSize"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_getCacheSize">getCacheSize</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCacheSize" id="setCacheSize" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCacheSize"></a>
+                <code>
+                    <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_setCacheSize">setCacheSize</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Maximum number of items to cache. Default size is 100.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method___construct">__construct</a>,                             <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_add">add</a>,                             <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_delete">delete</a>,                             <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_flush">flush</a>,                             <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_getCacheSize">getCacheSize</a>,                             <a href="classes/Prado-Data-SqlMap-DataMapper-TSqlMapCache.html#method_setCacheSize">setCacheSize</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

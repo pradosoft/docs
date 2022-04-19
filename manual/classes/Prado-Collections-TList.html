@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TList &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,544 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-collections.html">Collections</a>\<a href="classes/Prado-Collections-TList.html">TList</a>
+    </h1>
+
+    <div class="description">
+        TList class
+        <p>TList implements an integer-indexed collection class.</p>
+<p>You can access, append, insert, remove an item by using
+<a href="itemAt"></a>, <a href="add"></a>, <a href="insertAt"></a>, <a href="remove"></a>, and <a href="removeAt"></a>.
+To get the number of the items in the list, use <a href="getCount"></a>.
+TList can also be used like a regular array as follows,
+<code class="prettyprint">
+$list[]=$item;  // append at the end
+$list[$index]=$item; // $index must be between 0 and $list-&gt;Count
+unset($list[$index]); // remove the item at $index
+if(isset($list[$index])) // if the list has an item at $index
+foreach($list as $index=&gt;$item) // traverse each item in the list
+$n=count($list); // returns the number of items in the list
+</code></p>
+<p>To extend TList by doing additional operations with each addition or removal
+operation, override <a href="insertAt()"></a>, and <a href="removeAt()"></a>.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Collections-TList.html">\Prado\Collections\TList</a>
+                    implements
+                            <a href="\IteratorAggregate">\IteratorAggregate</a>,                             <a href="\ArrayAccess">\ArrayAccess</a>,                             <a href="\Countable">\Countable</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Collections<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Collections/TList.php"><abbr title="framework/Collections/TList.php">TList.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;|<abbr title="\Iterator">Iterator</abbr>&nbsp;</span><var>$data</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$readOnly</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    <p>Initializes the list with an array or an iterable object.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="add" id="add" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_add"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_add">add</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Appends an item at the end of the list.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="clear" id="clear" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_clear"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_clear">clear</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes all items in the list.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="contains" id="contains" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_contains"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_contains">contains</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="copyFrom" id="copyFrom" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_copyFrom"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_copyFrom">copyFrom</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Copies iterable data into the list.
+                    <p>Note, existing data in the list will be cleared first.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="count" id="count" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_count"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_count">count</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Returns the number of items in the list.
+                    <p>This method is required by \Countable interface.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCount" id="getCount" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCount"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_getCount">getCount</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIterator" id="getIterator" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIterator"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_getIterator">getIterator</a><span>(</span><span>)</span><span> : </span><span><abbr title="\Iterator">Iterator</abbr></span>                </code>
+
+                <div class="description short">
+                    Returns an iterator for traversing the items in the list.
+                    <p>This method is required by the interface \IteratorAggregate.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getReadOnly" id="getReadOnly" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getReadOnly"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_getReadOnly">getReadOnly</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="indexOf" id="indexOf" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_indexOf"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_indexOf">indexOf</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="insertAfter" id="insertAfter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_insertAfter"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_insertAfter">insertAfter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$baseitem</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Finds the base item.  If found, the item is inserted after it.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="insertAt" id="insertAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_insertAt"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_insertAt">insertAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$index</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Inserts an item at the specified position.
+                    <p>Original item at the position and the next items
+will be moved one step towards the end.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="insertBefore" id="insertBefore" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_insertBefore"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_insertBefore">insertBefore</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$baseitem</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Finds the base item.  If found, the item is inserted before it.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="itemAt" id="itemAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_itemAt"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_itemAt">itemAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$index</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the item at the specified offset.
+                    <p>This method is exactly the same as <a href="offsetGet"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="mergeWith" id="mergeWith" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_mergeWith"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_mergeWith">mergeWith</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Merges iterable data into the map.
+                    <p>New data will be appended to the end of the existing data.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetExists" id="offsetExists" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetExists"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_offsetExists">offsetExists</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Returns whether there is an item at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetGet" id="offsetGet" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetGet"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_offsetGet">offsetGet</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the item at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetSet" id="offsetSet" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetSet"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_offsetSet">offsetSet</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Sets the item at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="offsetUnset" id="offsetUnset" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_offsetUnset"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_offsetUnset">offsetUnset</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$offset</var></span><span>)</span><span> : </span><span>void</span>                </code>
+
+                <div class="description short">
+                    Unsets the item at the specified offset.
+                    <p>This method is required by the interface \ArrayAccess.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="remove" id="remove" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_remove"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_remove">remove</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$item</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Removes an item from the list.
+                    <p>The list will first search for the item.
+The first item found will be removed from the list.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="removeAt" id="removeAt" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_removeAt"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_removeAt">removeAt</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$index</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Removes an item at the specified position.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="toArray" id="toArray" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_toArray"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_toArray">toArray</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setReadOnly" id="setReadOnly" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setReadOnly"></a>
+                <code>
+                    <a href="classes/Prado-Collections-TList.html#method_setReadOnly">setReadOnly</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-Collections-TList.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Collections-TList.html#method_add">add</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-Collections-TList.html#method_clear">clear</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-Collections-TList.html#method_contains">contains</a>,                             <a href="classes/Prado-Collections-TList.html#method_copyFrom">copyFrom</a>,                             <a href="classes/Prado-Collections-TList.html#method_count">count</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Collections-TList.html#method_getCount">getCount</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Collections-TList.html#method_getIterator">getIterator</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Collections-TList.html#method_getReadOnly">getReadOnly</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Collections-TList.html#method_indexOf">indexOf</a>,                             <a href="classes/Prado-Collections-TList.html#method_insertAfter">insertAfter</a>,                             <a href="classes/Prado-Collections-TList.html#method_insertAt">insertAt</a>,                             <a href="classes/Prado-Collections-TList.html#method_insertBefore">insertBefore</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-Collections-TList.html#method_itemAt">itemAt</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Collections-TList.html#method_mergeWith">mergeWith</a>,                             <a href="classes/Prado-Collections-TList.html#method_offsetExists">offsetExists</a>,                             <a href="classes/Prado-Collections-TList.html#method_offsetGet">offsetGet</a>,                             <a href="classes/Prado-Collections-TList.html#method_offsetSet">offsetSet</a>,                             <a href="classes/Prado-Collections-TList.html#method_offsetUnset">offsetUnset</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Collections-TList.html#method_remove">remove</a>,                             <a href="classes/Prado-Collections-TList.html#method_removeAt">removeAt</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Collections-TList.html#method_toArray">toArray</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Collections-TList.html#method_setReadOnly">setReadOnly</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

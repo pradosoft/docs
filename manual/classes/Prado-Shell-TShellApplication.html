@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TShellApplication &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,396 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-shell.html">Shell</a>\<a href="classes/Prado-Shell-TShellApplication.html">TShellApplication</a>
+    </h1>
+
+    <div class="description">
+        TShellApplication class.
+        <p>TShellApplication is the base class for developing command-line PRADO
+tools that share the same configurations as their Web application counterparts.</p>
+<p>A typical usage of TShellApplication in a command-line PHP script is as follows:
+<code class="prettyprint">
+require 'path/to/vendor/autoload.php';
+$application=new TShellApplication('path/to/application.xml');
+$application-&gt;run($_SERVER);
+// perform command-line tasks here
+</code></p>
+<p>Since the application instance has access to all configurations, including
+path aliases, modules and parameters, the command-line script has nearly the same
+accessibility to resources as the PRADO Web applications.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Shell-TShellApplication.html">\Prado\Shell\TShellApplication</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplication.html">\Prado\TApplication</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Shell<br/>
+                <b>Author:</b> <br/>
+            <b>Author:</b> <br/>
+                <b>Since:</b> 3.1.0<br/>
+                    <b>Located at:</b> <a href="framework/Shell/TShellApplication.php"><abbr title="framework/Shell/TShellApplication.php">TShellApplication.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="addShellActionClass" id="addShellActionClass" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addShellActionClass"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_addShellActionClass">addShellActionClass</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$class</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="flushOutput" id="flushOutput" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flushOutput"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_flushOutput">flushOutput</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$continueBuffering</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Flushes output to shell.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getQuietMode" id="getQuietMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getQuietMode"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_getQuietMode">getQuietMode</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getShellActions" id="getShellActions" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getShellActions"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_getShellActions">getShellActions</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Shell-TShellAction.html"><abbr title="\Prado\Shell\TShellAction">TShellAction</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getWriter" id="getWriter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getWriter"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_getWriter">getWriter</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Shell-TShellWriter.html"><abbr title="\Prado\Shell\TShellWriter">TShellWriter</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="printGreeting" id="printGreeting" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_printGreeting"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_printGreeting">printGreeting</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$outWriter</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="printHelp" id="printHelp" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_printHelp"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_printHelp">printHelp</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$outWriter</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Print command line help, default action.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="processActionArguments" id="processActionArguments" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_processActionArguments"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_processActionArguments">processActionArguments</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$args</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Shell-TShellAction.html"><abbr title="\Prado\Shell\TShellAction">TShellAction</abbr></a>&nbsp;</span><var>$action</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$method</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This processes the arguments entered into the cli
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="processArguments" id="processArguments" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_processArguments"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_processArguments">processArguments</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This processes the arguments entered into the cli.  This is processed after
+the application is initialized and modules can
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerOption" id="registerOption" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerOption"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_registerOption">registerOption</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><var>$setCallback</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This registers shell command line options and the setter callback
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerOptionAlias" id="registerOptionAlias" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerOptionAlias"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_registerOptionAlias">registerOptionAlias</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$alias</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$name</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This registers shell command line option aliases and linked variable
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="run" id="run" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_run"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_run">run</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, string&gt;&nbsp;</span><var>$args</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Runs the application.
+                    <p>This method overrides the parent implementation by initializing
+application with configurations specified when it is created.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="runService" id="runService" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_runService"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_runService">runService</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Runs the requested service.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setQuietMode" id="setQuietMode" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setQuietMode"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_setQuietMode">setQuietMode</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$quietMode</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setWriter" id="setWriter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setWriter"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_setWriter">setWriter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Shell-TShellWriter.html"><abbr title="\Prado\Shell\TShellWriter">TShellWriter</abbr></a>&nbsp;</span><var>$writer</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="detectShellLanguageCharset" id="detectShellLanguageCharset" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_detectShellLanguageCharset"></a>
+                <code>
+                    <a href="classes/Prado-Shell-TShellApplication.html#method_detectShellLanguageCharset">detectShellLanguageCharset</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    This takes the shell LANG and sets the HTTP_ACCEPT_LANGUAGE/HTTP_ACCEPT_CHARSET
+for the application to do I18N.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_addShellActionClass">addShellActionClass</a>,                             <a href="classes/Prado-TApplication.html#method_applyConfiguration">applyConfiguration</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TApplication.html#method_clearGlobalState">clearGlobalState</a>,                             <a href="classes/Prado-TApplication.html#method_completeRequest">completeRequest</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_flushOutput">flushOutput</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TApplication.html#method_getApplicationStatePersister">getApplicationStatePersister</a>,                             <a href="classes/Prado-TApplication.html#method_getAssetManager">getAssetManager</a>,                             <a href="classes/Prado-TApplication.html#method_getAuthorizationRules">getAuthorizationRules</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TApplication.html#method_getBasePath">getBasePath</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TApplication.html#method_getCache">getCache</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TApplication.html#method_getConfigurationFile">getConfigurationFile</a>,                             <a href="classes/Prado-TApplication.html#method_getConfigurationFileExt">getConfigurationFileExt</a>,                             <a href="classes/Prado-TApplication.html#method_getConfigurationFileName">getConfigurationFileName</a>,                             <a href="classes/Prado-TApplication.html#method_getConfigurationType">getConfigurationType</a>,                             <a href="classes/Prado-TApplication.html#method_getErrorHandler">getErrorHandler</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TApplication.html#method_getGlobalization">getGlobalization</a>,                             <a href="classes/Prado-TApplication.html#method_getGlobalState">getGlobalState</a>,                             <a href="classes/Prado-TApplication.html#method_getID">getID</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TApplication.html#method_getMode">getMode</a>,                             <a href="classes/Prado-TApplication.html#method_getModule">getModule</a>,                             <a href="classes/Prado-TApplication.html#method_getModules">getModules</a>,                             <a href="classes/Prado-TApplication.html#method_getModulesByType">getModulesByType</a>,                             <a href="classes/Prado-TApplication.html#method_getPageServiceID">getPageServiceID</a>,                             <a href="classes/Prado-TApplication.html#method_getParameters">getParameters</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_getQuietMode">getQuietMode</a>,                             <a href="classes/Prado-TApplication.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplication.html#method_getRequestCompleted">getRequestCompleted</a>,                             <a href="classes/Prado-TApplication.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplication.html#method_getRuntimePath">getRuntimePath</a>,                             <a href="classes/Prado-TApplication.html#method_getSecurityManager">getSecurityManager</a>,                             <a href="classes/Prado-TApplication.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplication.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_getShellActions">getShellActions</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplication.html#method_getUniqueID">getUniqueID</a>,                             <a href="classes/Prado-TApplication.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_getWriter">getWriter</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TApplication.html#method_onAuthentication">onAuthentication</a>,                             <a href="classes/Prado-TApplication.html#method_onAuthenticationComplete">onAuthenticationComplete</a>,                             <a href="classes/Prado-TApplication.html#method_onAuthorization">onAuthorization</a>,                             <a href="classes/Prado-TApplication.html#method_onAuthorizationComplete">onAuthorizationComplete</a>,                             <a href="classes/Prado-TApplication.html#method_onBeginRequest">onBeginRequest</a>,                             <a href="classes/Prado-TApplication.html#method_onEndRequest">onEndRequest</a>,                             <a href="classes/Prado-TApplication.html#method_onError">onError</a>,                             <a href="classes/Prado-TApplication.html#method_onInitComplete">onInitComplete</a>,                             <a href="classes/Prado-TApplication.html#method_onLoadState">onLoadState</a>,                             <a href="classes/Prado-TApplication.html#method_onLoadStateComplete">onLoadStateComplete</a>,                             <a href="classes/Prado-TApplication.html#method_onPreFlushOutput">onPreFlushOutput</a>,                             <a href="classes/Prado-TApplication.html#method_onPreRunService">onPreRunService</a>,                             <a href="classes/Prado-TApplication.html#method_onSaveState">onSaveState</a>,                             <a href="classes/Prado-TApplication.html#method_onSaveStateComplete">onSaveStateComplete</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_printGreeting">printGreeting</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_printHelp">printHelp</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_processActionArguments">processActionArguments</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_processArguments">processArguments</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_registerOption">registerOption</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_registerOptionAlias">registerOptionAlias</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_run">run</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_runService">runService</a>,                             <a href="classes/Prado-TApplication.html#method_setApplicationStatePersister">setApplicationStatePersister</a>,                             <a href="classes/Prado-TApplication.html#method_setAssetManager">setAssetManager</a>,                             <a href="classes/Prado-TApplication.html#method_setBasePath">setBasePath</a>,                             <a href="classes/Prado-TApplication.html#method_setCache">setCache</a>,                             <a href="classes/Prado-TApplication.html#method_setConfigurationFile">setConfigurationFile</a>,                             <a href="classes/Prado-TApplication.html#method_setConfigurationType">setConfigurationType</a>,                             <a href="classes/Prado-TApplication.html#method_setErrorHandler">setErrorHandler</a>,                             <a href="classes/Prado-TApplication.html#method_setGlobalization">setGlobalization</a>,                             <a href="classes/Prado-TApplication.html#method_setGlobalState">setGlobalState</a>,                             <a href="classes/Prado-TApplication.html#method_setID">setID</a>,                             <a href="classes/Prado-TApplication.html#method_setMode">setMode</a>,                             <a href="classes/Prado-TApplication.html#method_setModule">setModule</a>,                             <a href="classes/Prado-TApplication.html#method_setPageServiceID">setPageServiceID</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_setQuietMode">setQuietMode</a>,                             <a href="classes/Prado-TApplication.html#method_setRequest">setRequest</a>,                             <a href="classes/Prado-TApplication.html#method_setResponse">setResponse</a>,                             <a href="classes/Prado-TApplication.html#method_setRuntimePath">setRuntimePath</a>,                             <a href="classes/Prado-TApplication.html#method_setSecurityManager">setSecurityManager</a>,                             <a href="classes/Prado-TApplication.html#method_setService">setService</a>,                             <a href="classes/Prado-TApplication.html#method_setSession">setSession</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TApplication.html#method_setUser">setUser</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_setWriter">setWriter</a>,                             <a href="classes/Prado-TApplication.html#method_startService">startService</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TApplication.html#method_getApplicationConfigurationClass">getApplicationConfigurationClass</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TApplication.html#method_initApplication">initApplication</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TApplication.html#method_internalLoadModule">internalLoadModule</a>,                             <a href="classes/Prado-TApplication.html#method_loadGlobals">loadGlobals</a>,                             <a href="classes/Prado-TApplication.html#method_resolvePaths">resolvePaths</a>,                             <a href="classes/Prado-TApplication.html#method_saveGlobals">saveGlobals</a>,                             <a href="classes/Prado-Shell-TShellApplication.html#method_detectShellLanguageCharset">detectShellLanguageCharset</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplication.html#constant_CONFIG_FILE_EXT_PHP"><b>\Prado\TApplication::CONFIG_FILE_EXT_PHP</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_CONFIG_FILE_EXT_XML"><b>\Prado\TApplication::CONFIG_FILE_EXT_XML</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_CONFIG_FILE_PHP"><b>\Prado\TApplication::CONFIG_FILE_PHP</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_CONFIG_FILE_XML"><b>\Prado\TApplication::CONFIG_FILE_XML</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_CONFIG_TYPE_PHP"><b>\Prado\TApplication::CONFIG_TYPE_PHP</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_CONFIG_TYPE_XML"><b>\Prado\TApplication::CONFIG_TYPE_XML</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_CONFIGCACHE_FILE"><b>\Prado\TApplication::CONFIGCACHE_FILE</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_GLOBAL_FILE"><b>\Prado\TApplication::GLOBAL_FILE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_PAGE_SERVICE_ID"><b>\Prado\TApplication::PAGE_SERVICE_ID</b></a>,                                     <a href="classes/Prado-TApplication.html#constant_RUNTIME_PATH"><b>\Prado\TApplication::RUNTIME_PATH</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDbCache &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,721 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-caching.html">Caching</a>\<a href="classes/Prado-Caching-TDbCache.html">TDbCache</a>
+    </h1>
+
+    <div class="description">
+        TDbCache class
+        <p>TDbCache implements a cache application module by storing cached data in a database.</p>
+<p>TDbCache relies on <a href="http://www.php.net/manual/en/ref.pdo.php">PDO</a> to retrieve
+data from databases. In order to use TDbCache, you need to enable the PDO extension
+as well as the corresponding PDO DB driver. For example, to use SQLite database
+to store cached data, you need both php_pdo and php_pdo_sqlite extensions.</p>
+<p>By default, TDbCache creates and uses an SQLite database under the application
+runtime directory. You may change this default setting by specifying the following
+properties:</p>
+<ul>
+<li>
+<a href="setConnectionID">ConnectionID</a> or</li>
+<li>
+<a href="setConnectionString">ConnectionString</a>, <a href="setUsername">Username</a> and <a href="setPassword">Pasword</a>.</li>
+</ul>
+<p>The cached data is stored in a table in the specified database.
+By default, the name of the table is called 'pradocache'. If the table does not
+exist in the database, it will be automatically created with the following structure:
+<code class="prettyprint">
+CREATE TABLE pradocache (itemkey CHAR(128), value BLOB, expire INT)
+CREATE INDEX IX_itemkey ON pradocache (itemkey)
+CREATE INDEX IX_expire ON pradocache (expire)
+</code></p>
+<p>Note, some DBMS might not support BLOB type. In this case, replace 'BLOB' with a suitable
+binary data type (e.g. LONGBLOB in MySQL, BYTEA in PostgreSQL.)</p>
+<p>Important: Make sure that the indices are non-unique!</p>
+<p>If you want to change the cache table name, or if you want to create the table by yourself,
+you may set <a href="setCacheTableName">CacheTableName</a> and <a href="setAutoCreateCacheTable">AutoCreateCacheTableName</a> properties.</p>
+<p><a href="setFlushInterval">FlushInterval</a> control how often expired items will be removed from cache.
+If you prefer to remove expired items manualy e.g. via cronjob you can disable automatic deletion by setting FlushInterval to '0'.</p>
+<p>The following basic cache operations are implemented:</p>
+<ul>
+<li>
+<a href="get"></a> : retrieve the value with a key (if any) from cache</li>
+<li>
+<a href="set"></a> : store the value with a key into cache</li>
+<li>
+<a href="add"></a> : store the value only if cache does not have this key</li>
+<li>
+<a href="delete"></a> : delete the value with the specified key from cache</li>
+<li>
+<a href="flush"></a> : delete all values from cache</li>
+</ul>
+<p>Each value is associated with an expiration time. The <a href="get"></a> operation
+ensures that any expired value will not be returned. The expiration time by
+the number of seconds. A expiration time 0 represents never expire.</p>
+<p>By definition, cache does not ensure the existence of a value
+even if it never expires. Cache is not meant to be an persistent storage.</p>
+<p>Do not use the same database file for multiple applications using TDbCache.
+Also note, cache is shared by all user sessions of an application.</p>
+<p>Some usage examples of TDbCache are as follows,
+<code class="prettyprint">
+$cache=new TDbCache;  // TDbCache may also be loaded as a Prado application module
+$cache-&gt;init(null);
+$cache-&gt;add('object',$object);
+$object2=$cache-&gt;get('object');
+</code></p>
+<p>If loaded, TDbCache will register itself with <a href="TApplication"></a> as the
+cache module. It can be accessed via <a href="TApplication::getCache()"></a>.</p>
+<p>TDbCache may be configured in application configuration file as follows
+<code class="prettyprint">
+<module id="cache" class="Prado\Caching\TDbCache" />
+</code></p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Caching-TDbCache.html">\Prado\Caching\TDbCache</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Caching-TCache.html">\Prado\Caching\TCache</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>                        </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TModule.html">\Prado\TModule</a>
+                    implements
+                            <a href="classes/Prado-Util-IDbModule.html">\Prado\Util\IDbModule</a>                        </dd>
+                <dd style="padding-left:90px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:120px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Caching<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1.0<br/>
+                    <b>Located at:</b> <a href="framework/Caching/TDbCache.php"><abbr title="framework/Caching/TDbCache.php">TDbCache.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__destruct" id="__destruct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___destruct"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method___destruct">__destruct</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Destructor.
+                    <p>Disconnect the db connection.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="doFlushCacheExpired" id="doFlushCacheExpired" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_doFlushCacheExpired"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_doFlushCacheExpired">doFlushCacheExpired</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Event listener for TApplication.OnSaveState
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="doInitializeCache" id="doInitializeCache" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_doInitializeCache"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_doInitializeCache">doInitializeCache</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Event listener for TApplication.OnLoadStateComplete
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="flush" id="flush" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flush"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_flush">flush</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Deletes all values from cache.
+                    <p>Be careful of performing this operation if the cache is shared by multiple applications.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="flushCacheExpired" id="flushCacheExpired" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_flushCacheExpired"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_flushCacheExpired">flushCacheExpired</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$force</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Flush expired values from cache depending on {@link setFlushInterval FlushInterval}
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fxGetCronTaskInfos" id="fxGetCronTaskInfos" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fxGetCronTaskInfos"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_fxGetCronTaskInfos">fxGetCronTaskInfos</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">object&nbsp;</span><var>$sender</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$param</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getAutoCreateCacheTable" id="getAutoCreateCacheTable" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAutoCreateCacheTable"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getAutoCreateCacheTable">getAutoCreateCacheTable</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCacheTableName" id="getCacheTableName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCacheTableName"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getCacheTableName">getCacheTableName</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getConnectionID" id="getConnectionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getConnectionID"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getConnectionID">getConnectionID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getConnectionString" id="getConnectionString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getConnectionString"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getConnectionString">getConnectionString</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFlushInterval" id="getFlushInterval" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFlushInterval"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getFlushInterval">getFlushInterval</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPassword" id="getPassword" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPassword"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getPassword">getPassword</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getUsername" id="getUsername" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getUsername"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getUsername">getUsername</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="init" id="init" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_init"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_init">init</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Xml-TXmlElement.html"><abbr title="\Prado\Xml\TXmlElement">TXmlElement</abbr></a>&nbsp;</span><var>$config</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes this module.
+                    <p>This method is required by the IModule interface.
+attach <a href="doInitializeCache"></a> to TApplication.OnLoadStateComplete event
+attach <a href="doFlushCacheExpired"></a> to TApplication.OnSaveState event</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setAutoCreateCacheTable" id="setAutoCreateCacheTable" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setAutoCreateCacheTable"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setAutoCreateCacheTable">setAutoCreateCacheTable</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCacheTableName" id="setCacheTableName" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCacheTableName"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setCacheTableName">setCacheTableName</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the name of the DB table to store cache content.
+                    <p>Note, if <a href="setAutoCreateCacheTable">AutoCreateCacheTable</a> is false
+and you want to create the DB table manually by yourself,
+you need to make sure the DB table is of the following structure:
+<code class="prettyprint">
+CREATE TABLE pradocache (itemkey CHAR(128), value BLOB, expire INT)
+CREATE INDEX IX_itemkey ON pradocache (itemkey)
+CREATE INDEX IX_expire ON pradocache (expire)
+</code></p>
+<p>Note, some DBMS might not support BLOB type. In this case, replace 'BLOB' with a suitable
+binary data type (e.g. LONGBLOB in MySQL, BYTEA in PostgreSQL.)</p>
+<p>Important: Make sure that the indices are non-unique!</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setConnectionID" id="setConnectionID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setConnectionID"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setConnectionID">setConnectionID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the ID of a TDataSourceConfig module.
+                    <p>The datasource module will be used to establish the DB connection for this cache module.
+The database connection can also be specified via <a href="setConnectionString">ConnectionString</a>.
+When both ConnectionID and ConnectionString are specified, the former takes precedence.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setConnectionString" id="setConnectionString" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setConnectionString"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setConnectionString">setConnectionString</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFlushInterval" id="setFlushInterval" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFlushInterval"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setFlushInterval">setFlushInterval</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets interval expired items will be removed from cache
+                    <p>To disable automatic deletion of expired items,
+e.g. for external flushing via cron you can set value to '0'</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPassword" id="setPassword" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPassword"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setPassword">setPassword</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setUsername" id="setUsername" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setUsername"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setUsername">setUsername</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="addValue" id="addValue" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_addValue"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_addValue">addValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$expire</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Stores a value identified by a key into cache if the cache does not contain this key.
+                    <p>This is the implementation of the method declared in the parent class.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createDbConnection" id="createDbConnection" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_createDbConnection">createDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates the DB connection.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="deleteValue" id="deleteValue" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_deleteValue"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_deleteValue">deleteValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Deletes a value with the specified key from cache
+This is the implementation of the method declared in the parent class.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getValue" id="getValue" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getValue"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_getValue">getValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span>)</span><span> : </span><span>false|string</span>                </code>
+
+                <div class="description short">
+                    Retrieves a value from cache with a specified key.
+                    <p>This is the implementation of the method declared in the parent class.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initializeCache" id="initializeCache" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initializeCache"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_initializeCache">initializeCache</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$force</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initialize TDbCache
+                    <p>If <a href="setAutoCreateCacheTable">AutoCreateCacheTableName</a> is 'true' check existence of cache table
+and create table if does not exist.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setValue" id="setValue" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setValue"></a>
+                <code>
+                    <a href="classes/Prado-Caching-TDbCache.html#method_setValue">setValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$expire</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Stores a value identified by a key in cache.
+                    <p>This is the implementation of the method declared in the parent class.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-Caching-TCache.html#method_add">add</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Caching-TCache.html#method_delete">delete</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_doFlushCacheExpired">doFlushCacheExpired</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_doInitializeCache">doInitializeCache</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TModule.html#method_dyInit">dyInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TModule.html#method_dyPreInit">dyPreInit</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_flush">flush</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_flushCacheExpired">flushCacheExpired</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_fxGetCronTaskInfos">fxGetCronTaskInfos</a>,                             <a href="classes/Prado-Caching-TCache.html#method_get">get</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getAutoCreateCacheTable">getAutoCreateCacheTable</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getCacheTableName">getCacheTableName</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getConnectionID">getConnectionID</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getConnectionString">getConnectionString</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getFlushInterval">getFlushInterval</a>,                             <a href="classes/Prado-TModule.html#method_getID">getID</a>,                             <a href="classes/Prado-Caching-TCache.html#method_getKeyPrefix">getKeyPrefix</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getPassword">getPassword</a>,                             <a href="classes/Prado-Caching-TCache.html#method_getPrimaryCache">getPrimaryCache</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getUsername">getUsername</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_init">init</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Caching-TCache.html#method_offsetExists">offsetExists</a>,                             <a href="classes/Prado-Caching-TCache.html#method_offsetGet">offsetGet</a>,                             <a href="classes/Prado-Caching-TCache.html#method_offsetSet">offsetSet</a>,                             <a href="classes/Prado-Caching-TCache.html#method_offsetUnset">offsetUnset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Caching-TCache.html#method_set">set</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setAutoCreateCacheTable">setAutoCreateCacheTable</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setCacheTableName">setCacheTableName</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setConnectionID">setConnectionID</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setConnectionString">setConnectionString</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setFlushInterval">setFlushInterval</a>,                             <a href="classes/Prado-TModule.html#method_setID">setID</a>,                             <a href="classes/Prado-Caching-TCache.html#method_setKeyPrefix">setKeyPrefix</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setPassword">setPassword</a>,                             <a href="classes/Prado-Caching-TCache.html#method_setPrimaryCache">setPrimaryCache</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setUsername">setUsername</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_addValue">addValue</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_createDbConnection">createDbConnection</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_deleteValue">deleteValue</a>,                             <a href="classes/Prado-Caching-TCache.html#method_generateUniqueKey">generateUniqueKey</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_getValue">getValue</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_initializeCache">initializeCache</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Caching-TDbCache.html#method_setValue">setValue</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TBaseActiveCallbackControl &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,437 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-activecontrols.html">ActiveControls</a>\<a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html">TBaseActiveCallbackControl</a>
+    </h1>
+
+    <div class="description">
+        TBaseActiveCallbackControl is a common set of options and functionality for
+active controls that can perform callback requests.
+        <p>The properties of TBaseActiveCallbackControl can be accessed and changed from
+each individual active controls' <a href="getActiveControl">ActiveControl</a>
+property.</p>
+<p>The following example sets the validation group property of a TCallback component.
+<code class="prettyprint">
+&lt;com:TCallback ActiveControl.ValidationGroup=&quot;group1&quot; ... /&gt;
+</code></p>
+<p>Additional client-side options and events can be set using the
+<a href="getClientSide">ClientSide</a> property. The following example shows
+an alert box when a TCallback component response returns successfully.
+<code class="prettyprint">
+&lt;com:TCallback ActiveControl.ClientSide.OnSuccess=&quot;alert('ok!')&quot; ... /&gt;
+</code></p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html">\Prado\Web\UI\ActiveControls\TBaseActiveCallbackControl</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html">\Prado\Web\UI\ActiveControls\TBaseActiveControl</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\ActiveControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/ActiveControls/TBaseActiveCallbackControl.php"><abbr title="framework/Web/UI/ActiveControls/TBaseActiveCallbackControl.php">TBaseActiveCallbackControl.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="canCauseValidation" id="canCauseValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_canCauseValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_canCauseValidation">canCauseValidation</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCallbackOptions" id="getCallbackOptions" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCallbackOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getCallbackOptions">getCallbackOptions</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCallbackParameter" id="getCallbackParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCallbackParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getCallbackParameter">getCallbackParameter</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCausesValidation" id="getCausesValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCausesValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getCausesValidation">getCausesValidation</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getClientSide" id="getClientSide" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getClientSide"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getClientSide">getClientSide</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html"><abbr title="\Prado\Web\UI\ActiveControls\TCallbackClientSide">TCallbackClientSide</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Callback client-side options can be set by setting the properties of
+the ClientSide property. E.g. &lt;com:TCallback ActiveControl.ClientSide.OnSuccess=&quot;...&quot; /&gt;
+See {@link TCallbackClientSide} for details on the properties of ClientSide.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getJavascript" id="getJavascript" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getJavascript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getJavascript">getJavascript</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Returns the javascript callback request instance. To invoke a callback
+request for this control call the &lt;tt&gt;dispatch()&lt;/tt&gt; method on the
+request instance. Example code in javascript
+&lt;code&gt;
+  var request = &lt;%= $this-&gt;mycallback-&gt;ActiveControl-&gt;Javascript %&gt;;
+  request.setParameter(&#039;hello&#039;);
+  request.dispatch(); //make the callback request.
+                    </code>
+<p>Alternatively,
+<code class="prettyprint">
+//dispatches immediately
+Prado.Callback(&quot;&lt;%= $this-&gt;mycallback-&gt;UniqueID %&gt;&quot;,
+$this-&gt;mycallback-&gt;ActiveControl-&gt;JsCallbackOptions);
+</code></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getJsCallbackOptions" id="getJsCallbackOptions" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getJsCallbackOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getJsCallbackOptions">getJsCallbackOptions</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getValidationGroup" id="getValidationGroup" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getValidationGroup"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getValidationGroup">getValidationGroup</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="registerCallbackClientScript" id="registerCallbackClientScript" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_registerCallbackClientScript"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_registerCallbackClientScript">registerCallbackClientScript</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$class</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|array&lt;string|int, mixed&gt;&nbsp;</span><var>$options</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Registers the callback control javascript code. Client-side options are
+merged and passed to the javascript code. This method should be called by
+Active component developers wanting to register the javascript to initialize
+the active component with additional options offered by the
+{@link getClientSide ClientSide} property.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCallbackOptions" id="setCallbackOptions" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCallbackOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setCallbackOptions">setCallbackOptions</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets default callback options. Takes the ID of a TCallbackOptions
+component to duplicate the client-side
+options for this control. The {@link getClientSide ClientSide}
+subproperties takes precedence over the CallbackOptions property.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCallbackParameter" id="setCallbackParameter" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCallbackParameter"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setCallbackParameter">setCallbackParameter</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCausesValidation" id="setCausesValidation" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCausesValidation"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setCausesValidation">setCausesValidation</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setClientSide" id="setClientSide" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setClientSide"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setClientSide">setClientSide</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html"><abbr title="\Prado\Web\UI\ActiveControls\TCallbackClientSide">TCallbackClientSide</abbr></a>&nbsp;</span><var>$client</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the client side options. Can only be set when client side is null.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setValidationGroup" id="setValidationGroup" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setValidationGroup"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setValidationGroup">setValidationGroup</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createClientSide" id="createClientSide" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createClientSide"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_createClientSide">createClientSide</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-ActiveControls-TCallbackClientSide.html"><abbr title="\Prado\Web\UI\ActiveControls\TCallbackClientSide">TCallbackClientSide</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getClientSideOptions" id="getClientSideOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getClientSideOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getClientSideOptions">getClientSideOptions</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDefaultClientSideOptions" id="getDefaultClientSideOptions" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDefaultClientSideOptions"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getDefaultClientSideOptions">getDefaultClientSideOptions</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns an array of default callback client-side options. The default options
+are obtained from the client-side options of a TCallbackOptions control with
+ID specified by {@link setCallbackOptions CallbackOptions}.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_canCauseValidation">canCauseValidation</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_canUpdateClientSide">canUpdateClientSide</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getCallbackOptions">getCallbackOptions</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getCallbackParameter">getCallbackParameter</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getCausesValidation">getCausesValidation</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getClientSide">getClientSide</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_getEnableUpdate">getEnableUpdate</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getJavascript">getJavascript</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getJsCallbackOptions">getJsCallbackOptions</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getValidationGroup">getValidationGroup</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_registerCallbackClientScript">registerCallbackClientScript</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setCallbackOptions">setCallbackOptions</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setCallbackParameter">setCallbackParameter</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setCausesValidation">setCausesValidation</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setClientSide">setClientSide</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_setEnableUpdate">setEnableUpdate</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setValidationGroup">setValidationGroup</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_createClientSide">createClientSide</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getClientSideOptions">getClientSideOptions</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_getControl">getControl</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getDefaultClientSideOptions">getDefaultClientSideOptions</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_getOption">getOption</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_getOptions">getOptions</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_getPage">getPage</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html#method_setOption">setOption</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

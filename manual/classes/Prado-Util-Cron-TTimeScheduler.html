@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TTimeScheduler &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,502 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-util.html">Util</a>\<a href="namespaces/prado-util-cron.html">Cron</a>\<a href="classes/Prado-Util-Cron-TTimeScheduler.html">TTimeScheduler</a>
+    </h1>
+
+    <div class="description">
+        TTimeScheduler class.
+        <p>This class keeps track of Scheduling event times.  It
+specifies a schedule and the dates and times to trigger</p>
+<p>cron setup
+'*     *         *                *              *         *'
+(minute) (hour) (day of month) (month of year) (day of week) (year)
+(0-59) (0-23)  (1-31)    (1-12|Jan,Feb,-,Dec) (0-6|Sun-Sat) (20xx)</p>
+<p>'*' (star) is any time.
+adding '/(\d)' is every \d moments.
+Day of Month can add '(\d)W' after the day to signify closest weekday.
+Day of Month can add 'L' for last day, or 'L-2' for last day minus two.
+Day of Week can add '(\d)L' after the day of week for last day of month of that type.
+Day of Week can add &quot;#(\d)&quot; after the day to signify which week the day is from.</p>
+<p>Generally avoid 01:00:00 to 2:59:59 as they may not trigger or double
+trigger during daylight savings time changes.</p>
+<p>The Months of the Year supports English, German, Spanish, French, Italian,
+Russian, Hindi, and Arabic and their abbreviations.  The Days of the Week supports English, German,
+Spanish, French, Italian, Russian, and Hindi and their abbreviations.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Util-Cron-TTimeScheduler.html">\Prado\Util\Cron\TTimeScheduler</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Util\Cron<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 4.2.0<br/>
+                    <b>Located at:</b> <a href="framework/Util/Cron/TTimeScheduler.php"><abbr title="framework/Util/Cron/TTimeScheduler.php">TTimeScheduler.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="days_in_month" id="days_in_month" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_days_in_month"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_days_in_month">days_in_month</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$month</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$year</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns the number of days in a given month and year, taking into account leap years.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getNextTriggerTime" id="getNextTriggerTime" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getNextTriggerTime"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getNextTriggerTime">getNextTriggerTime</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">false|numeric-string|int|float|string&nbsp;</span><var>$priortime</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>numeric-string|int|float</span>                </code>
+
+                <div class="description short">
+                    This calculates the next trigger time for the schedule based on the $priortime
+If no parameter time is given, the current system time is used.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSchedule" id="getSchedule" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSchedule"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getSchedule">getSchedule</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSchedule" id="setSchedule" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSchedule"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_setSchedule">setSchedule</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$schedule</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Parses a Cron Time Tag
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDaysArray" id="getDaysArray" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDaysArray"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getDaysArray">getDaysArray</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$month</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$year</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Given which days are valid for the parsed time stamp, this generates
+an array of valid days for the given month and year.  Each day is available
+as the key to the array and the value contains true or false whether the day
+meets the cron time stamp
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHoursArray" id="getHoursArray" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHoursArray"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getHoursArray">getHoursArray</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Given which hours are valid for the parsed time stamp, this generates
+an array of valid hours.  Each hour is available as the key to the array
+and the value contains true or false whether the hour meets the cron
+time stamp
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getMinutesArray" id="getMinutesArray" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getMinutesArray"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getMinutesArray">getMinutesArray</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Given which minutes are valid for the parsed time stamp, this generates
+an array of valid minutes.  Each minute is available as the key to the array
+and the value contains true or false whether the minute meets the cron
+time stamp
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getMonthsArray" id="getMonthsArray" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getMonthsArray"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getMonthsArray">getMonthsArray</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Given which month are valid for the parsed time stamp, this generates
+an array of valid months.  Each month is available as the key to the array
+and the value contains true or false whether the month meets the cron
+time stamp
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getYearsArray" id="getYearsArray" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getYearsArray"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getYearsArray">getYearsArray</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Given which years are valid for the parsed time stamp, this generates
+an array of valid years.  Each year is available as the key to the array
+and the value contains true or false whether the year meets the cron
+time stamp.  Only the previos 2 years and next 33 years are available
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="translateDayOfWeek" id="translateDayOfWeek" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_translateDayOfWeek"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_translateDayOfWeek">translateDayOfWeek</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$v</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="translateMonthOfYear" id="translateMonthOfYear" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_translateMonthOfYear"></a>
+                <code>
+                    <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_translateMonthOfYear">translateMonthOfYear</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$v</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_days_in_month">days_in_month</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getNextTriggerTime">getNextTriggerTime</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getSchedule">getSchedule</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_setSchedule">setSchedule</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getDaysArray">getDaysArray</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getHoursArray">getHoursArray</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getMinutesArray">getMinutesArray</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getMonthsArray">getMonthsArray</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_getYearsArray">getYearsArray</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_translateDayOfWeek">translateDayOfWeek</a>,                             <a href="classes/Prado-Util-Cron-TTimeScheduler.html#method_translateMonthOfYear">translateMonthOfYear</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+                <table class="summary constants" id="constants">
+        <caption>Constants summary</caption>
+                        <tr data-order="YEAR_MAX" id="YEAR_MAX" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_YEAR_MAX"><b>YEAR_MAX</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>2099</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="YEAR_MIN" id="YEAR_MIN" n:class="">
+        <td class="attributes">
+            <code>
+                public
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_YEAR_MIN"><b>YEAR_MIN</b></a>
+            </code>
+
+            <div class="description short">
+                
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>1970</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DAY_OF_MONTH" id="DAY_OF_MONTH" n:class="">
+        <td class="attributes">
+            <code>
+                protected
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DAY_OF_MONTH"><b>DAY_OF_MONTH</b></a>
+            </code>
+
+            <div class="description short">
+                the day of month attributes of the schedule
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>2</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="DAY_OF_WEEK" id="DAY_OF_WEEK" n:class="">
+        <td class="attributes">
+            <code>
+                protected
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_DAY_OF_WEEK"><b>DAY_OF_WEEK</b></a>
+            </code>
+
+            <div class="description short">
+                the day of week attributes of the schedule
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>4</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="HOUR" id="HOUR" n:class="">
+        <td class="attributes">
+            <code>
+                protected
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_HOUR"><b>HOUR</b></a>
+            </code>
+
+            <div class="description short">
+                the hour attributes of the schedule
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>1</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="MINUTE" id="MINUTE" n:class="">
+        <td class="attributes">
+            <code>
+                protected
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_MINUTE"><b>MINUTE</b></a>
+            </code>
+
+            <div class="description short">
+                the minute attributes of the schedule
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>0</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="MONTH_OF_YEAR" id="MONTH_OF_YEAR" n:class="">
+        <td class="attributes">
+            <code>
+                protected
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_MONTH_OF_YEAR"><b>MONTH_OF_YEAR</b></a>
+            </code>
+
+            <div class="description short">
+                the month of year attributes of the schedule
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>3</code>
+            </div>
+        </td>
+    </tr>
+
+                        <tr data-order="YEAR" id="YEAR" n:class="">
+        <td class="attributes">
+            <code>
+                protected
+                                mixed
+            </code>
+        </td>
+
+        <td class="name">
+            <code>
+                <a name="constant_YEAR"><b>YEAR</b></a>
+            </code>
+
+            <div class="description short">
+                the year attributes of the schedule
+            </div>
+        </td>
+        <td class="value">
+            <div>
+                <code>5</code>
+            </div>
+        </td>
+    </tr>
+
+                </table>
+    
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_YEAR_MAX"><b>\Prado\Util\Cron\TTimeScheduler::YEAR_MAX</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_YEAR_MIN"><b>\Prado\Util\Cron\TTimeScheduler::YEAR_MIN</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_DAY_OF_MONTH"><b>\Prado\Util\Cron\TTimeScheduler::DAY_OF_MONTH</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_DAY_OF_WEEK"><b>\Prado\Util\Cron\TTimeScheduler::DAY_OF_WEEK</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_HOUR"><b>\Prado\Util\Cron\TTimeScheduler::HOUR</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_MINUTE"><b>\Prado\Util\Cron\TTimeScheduler::MINUTE</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_MONTH_OF_YEAR"><b>\Prado\Util\Cron\TTimeScheduler::MONTH_OF_YEAR</b></a>,                                     <a href="classes/Prado-Util-Cron-TTimeScheduler.html#constant_YEAR"><b>\Prado\Util\Cron\TTimeScheduler::YEAR</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

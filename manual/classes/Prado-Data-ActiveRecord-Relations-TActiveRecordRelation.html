@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TActiveRecordRelation &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,382 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-data.html">Data</a>\<a href="namespaces/prado-data-activerecord.html">ActiveRecord</a>\<a href="namespaces/prado-data-activerecord-relations.html">Relations</a>\<a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html">TActiveRecordRelation</a>
+    </h1>
+
+    <div class="description">
+        Base class for active record relationships.
+        
+    </div>
+
+    
+            <b>Namespace:</b> \Prado\Data\ActiveRecord\Relations<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1<br/>
+                    <b>Located at:</b> <a href="framework/Data/ActiveRecord/Relations/TActiveRecordRelation.php"><abbr title="framework/Data/ActiveRecord/Relations/TActiveRecordRelation.php">TActiveRecordRelation.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__call" id="__call" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___call"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___call">__call</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$method</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$args</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Dispatch the method calls to the source record finder object. When
+an instance of TActiveRecord or an array of TActiveRecord is returned
+the corresponding foreign objects are also fetched and assigned.
+                    <p>Multiple relationship calls can be chain together.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelationContext.html"><abbr title="\Prado\Data\ActiveRecord\Relations\TActiveRecordRelationContext">TActiveRecordRelationContext</abbr></a>&nbsp;</span><var>$context</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$criteria</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="fetchResultsInto" id="fetchResultsInto" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_fetchResultsInto"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_fetchResultsInto">fetchResultsInto</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$obj</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Fetch results for current relationship.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getRelationForeignKeys" id="getRelationForeignKeys" n:class="">
+        <td class="attributes"><code>
+            public
+                        abstract                                    </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getRelationForeignKeys"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getRelationForeignKeys">getRelationForeignKeys</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateAssociatedRecords" id="updateAssociatedRecords" n:class="">
+        <td class="attributes"><code>
+            public
+                        abstract                                    </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateAssociatedRecords"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_updateAssociatedRecords">updateAssociatedRecords</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Updates the associated foreign objects.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="collectForeignObjects" id="collectForeignObjects" n:class="">
+        <td class="attributes"><code>
+            protected
+                        abstract                                    </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_collectForeignObjects"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_collectForeignObjects">collectForeignObjects</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$results</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="findForeignKeys" id="findForeignKeys" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_findForeignKeys"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignKeys">findForeignKeys</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-ActiveRecord-TActiveRecord.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecord">TActiveRecord</abbr></a>&nbsp;</span><var>$from</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-ActiveRecord-TActiveRecord.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecord">TActiveRecord</abbr></a>&nbsp;</span><var>$matchesRecord</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$loose</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns foreign keys in $from with source column names as key
+and foreign column names in the corresponding $matchesRecord as value.
+                    <p>The method returns the first matching foreign key between these 2 records.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="findForeignObjects" id="findForeignObjects" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_findForeignObjects"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignObjects">findForeignObjects</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$fields</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$indexValues</var></span><span>)</span><span> : </span><span>array&lt;string|int, <a href="classes/Prado-Data-ActiveRecord-TActiveRecord.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecord">TActiveRecord</abbr></a>&gt;</span>                </code>
+
+                <div class="description short">
+                    Fetches the foreign objects using TActiveRecord::findAllByIndex()
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getContext" id="getContext" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getContext"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getContext">getContext</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelationContext.html"><abbr title="\Prado\Data\ActiveRecord\Relations\TActiveRecordRelationContext">TActiveRecordRelationContext</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCriteria" id="getCriteria" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCriteria"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getCriteria">getCriteria</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-TActiveRecordCriteria.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecordCriteria">TActiveRecordCriteria</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getIndexValues" id="getIndexValues" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getIndexValues"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getIndexValues">getIndexValues</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$keys</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$results</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Obtain the foreign key index values from the results.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getObjectHash" id="getObjectHash" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getObjectHash"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getObjectHash">getObjectHash</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$obj</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$properties</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSourceRecord" id="getSourceRecord" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSourceRecord"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getSourceRecord">getSourceRecord</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-ActiveRecord-TActiveRecord.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecord">TActiveRecord</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="populateResult" id="populateResult" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_populateResult"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_populateResult">populateResult</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$results</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$properties</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$fkObjects</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$fields</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Populate the results with the foreign objects found.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setObjectProperty" id="setObjectProperty" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setObjectProperty"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_setObjectProperty">setObjectProperty</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Data-ActiveRecord-TActiveRecord.html"><abbr title="\Prado\Data\ActiveRecord\TActiveRecord">TActiveRecord</abbr></a>&nbsp;</span><var>$source</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$properties</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$collections</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the foreign objects to the given property on the source object.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setResultCollection" id="setResultCollection" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setResultCollection"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_setResultCollection">setResultCollection</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$results</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><var>$collections</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><var>$properties</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Populates the result array with foreign objects (matched using foreign key hashed property values).
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFkFields" id="getFkFields" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFkFields"></a>
+                <code>
+                    <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getFkFields">getFkFields</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$fkeys</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Find matching foreign key fields from the 3rd element of an entry in TActiveRecord::$RELATION.
+                    <p>Assume field names consist of [\w-] character sets. Prefix to the field names ending with a dot
+are ignored.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___call">__call</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method___construct">__construct</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_fetchResultsInto">fetchResultsInto</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getRelationForeignKeys">getRelationForeignKeys</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_updateAssociatedRecords">updateAssociatedRecords</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_collectForeignObjects">collectForeignObjects</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignKeys">findForeignKeys</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_findForeignObjects">findForeignObjects</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getContext">getContext</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getCriteria">getCriteria</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getIndexValues">getIndexValues</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getObjectHash">getObjectHash</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getSourceRecord">getSourceRecord</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_populateResult">populateResult</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_setObjectProperty">setObjectProperty</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_setResultCollection">setResultCollection</a>,                             <a href="classes/Prado-Data-ActiveRecord-Relations-TActiveRecordRelation.html#method_getFkFields">getFkFields</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">

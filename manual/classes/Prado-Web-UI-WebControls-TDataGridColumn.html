@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TDataGridColumn &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,841 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="namespaces/prado-web-ui-webcontrols.html">WebControls</a>\<a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html">TDataGridColumn</a>
+    </h1>
+
+    <div class="description">
+        TDataGridColumn class
+        <p>TDataGridColumn serves as the base class for the different column types of
+the <a href="TDataGrid"></a> control.
+TDataGridColumn defines the properties and methods that are common among
+all datagrid column types. In particular, it initializes header and footer
+cells according to <a href="setHeaderText">HeaderText</a> and <a href="getHeaderStyle">HeaderStyle</a>
+<a href="setFooterText">FooterText</a> and <a href="getFooterStyle">FooterStyle</a> properties.
+If <a href="setHeaderImageUrl">HeaderImageUrl</a> is specified, the image
+will be displayed instead in the header cell.
+The <a href="getItemStyle">ItemStyle</a> is applied to cells that belong to
+non-header and -footer datagrid items.</p>
+<p>When the datagrid enables sorting, if the <a href="setSortExpression">SortExpression</a>
+is not empty, the header cell will display a button (linkbutton or imagebutton)
+that will bubble the sort command event to the datagrid.</p>
+<p>Since v3.1.0, TDataGridColumn has introduced two new properties <a href="setHeaderRenderer">HeaderRenderer</a>
+and <a href="setFooterRenderer">FooterRenderer</a> which can be used to specify
+the layout of header and footer column cells.
+A renderer refers to a control class that is to be instantiated as a control.
+For more details, see <a href="TRepeater"></a> and <a href="TDataList"></a>.</p>
+<p>Since v3.1.1, TDataGridColumn has introduced <a href="setEnableCellGrouping">EnableCellGrouping</a>.
+If a column has this property set true, consecutive cells having the same content in this
+column will be grouped into one cell.
+Note, there are some limitations to cell grouping. We determine the cell content according to
+the cell's <a href="TTableCell::getText">Text</a> property. If the text is empty and the cell has
+some child controls, we will pick up the first control who implements <a href="%5CPrado%5CIDataRenderer"></a>
+and obtain its <a href="%5CPrado%5CIDataRenderer::getData">Data</a> property.</p>
+<p>The following datagrid column types are provided by the framework currently,</p>
+<ul>
+<li>
+<a href="TBoundColumn"></a>, associated with a specific field in datasource and displays the corresponding data.</li>
+<li>
+<a href="TEditCommandColumn"></a>, displaying edit/update/cancel command buttons</li>
+<li>
+<a href="TDropDownListColumn"></a>, displaying a dropdown list when the item is in edit state</li>
+<li>
+<a href="TButtonColumn"></a>, displaying generic command buttons that may be bound to specific field in datasource.</li>
+<li>
+<a href="THyperLinkColumn"></a>, displaying a hyperlink that may be bound to specific field in datasource.</li>
+<li>
+<a href="TCheckBoxColumn"></a>, displaying a checkbox that may be bound to specific field in datasource.</li>
+<li>
+<a href="TTemplateColumn"></a>, displaying content based on templates.</li>
+</ul>
+<p>To create your own column class, simply override <a href="initializeCell()"></a> method,
+which is the major logic for managing the data and presentation of cells in the column.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html">\Prado\Web\UI\WebControls\TDataGridColumn</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TApplicationComponent.html">\Prado\TApplicationComponent</a>
+            </dd>
+                <dd style="padding-left:60px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI\WebControls<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.0<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/WebControls/TDataGridColumn.php"><abbr title="framework/Web/UI/WebControls/TDataGridColumn.php">TDataGridColumn.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getAllowSorting" id="getAllowSorting" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getAllowSorting"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getAllowSorting">getAllowSorting</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Returns a value indicating whether this column allows sorting.
+                    <p>The column allows sorting only when <a href="getSortExpression">SortExpression</a>
+is not empty and the datagrid allows sorting.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getEnableCellGrouping" id="getEnableCellGrouping" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getEnableCellGrouping"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getEnableCellGrouping">getEnableCellGrouping</a><span>(</span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFooterRenderer" id="getFooterRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFooterRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterRenderer">getFooterRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFooterStyle" id="getFooterStyle" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFooterStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterStyle">getFooterStyle</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$createStyle</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TTableItemStyle.html"><abbr title="\Prado\Web\UI\WebControls\TTableItemStyle">TTableItemStyle</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getFooterText" id="getFooterText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getFooterText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterText">getFooterText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeaderImageUrl" id="getHeaderImageUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeaderImageUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderImageUrl">getHeaderImageUrl</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeaderRenderer" id="getHeaderRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeaderRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderRenderer">getHeaderRenderer</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeaderStyle" id="getHeaderStyle" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeaderStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderStyle">getHeaderStyle</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$createStyle</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TTableItemStyle.html"><abbr title="\Prado\Web\UI\WebControls\TTableItemStyle">TTableItemStyle</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getHeaderText" id="getHeaderText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getHeaderText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderText">getHeaderText</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getID" id="getID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getID"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getID">getID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getItemStyle" id="getItemStyle" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getItemStyle"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getItemStyle">getItemStyle</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$createStyle</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TTableItemStyle.html"><abbr title="\Prado\Web\UI\WebControls\TTableItemStyle">TTableItemStyle</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getOwner" id="getOwner" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getOwner"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getOwner">getOwner</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-WebControls-TDataGrid.html"><abbr title="\Prado\Web\UI\WebControls\TDataGrid">TDataGrid</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getSortExpression" id="getSortExpression" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getSortExpression"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getSortExpression">getSortExpression</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getVisible" id="getVisible" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getVisible"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getVisible">getVisible</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$checkParents</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">true</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initialize" id="initialize" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initialize"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initialize">initialize</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the column.
+                    <p>This method is invoked by <a href="TDataGrid"></a> when the column
+is about to be used to initialize datagrid items.
+Derived classes may override this method to do additional initialization.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initializeCell" id="initializeCell" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initializeCell"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeCell">initializeCell</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TTableCell.html"><abbr title="\Prado\Web\UI\WebControls\TTableCell">TTableCell</abbr></a>&nbsp;</span><var>$cell</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$columnIndex</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$itemType</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the specified cell to its initial values.
+                    <p>The default implementation sets the content of header and footer cells.
+If sorting is enabled by the grid and sort expression is specified in the column,
+the header cell will show a link/image button. Otherwise, the header/footer cell
+will only show static text/image.
+This method can be overriden to provide customized intialization to column cells.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadState" id="loadState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_loadState">loadState</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$state</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads persistent state values.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="saveState" id="saveState" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_saveState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_saveState">saveState</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Saves persistent state values.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setEnableCellGrouping" id="setEnableCellGrouping" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setEnableCellGrouping"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setEnableCellGrouping">setEnableCellGrouping</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFooterRenderer" id="setFooterRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFooterRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterRenderer">setFooterRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the column footer cell renderer class.
+                    <p>If not empty, the class will be used to instantiate as a child control in the column footer cell.
+If the class implements <a href="%5CPrado%5CIDataRenderer"></a>, the <b>Data</b> property
+will be set as the <a href="getFooterText">FooterText</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setFooterText" id="setFooterText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setFooterText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterText">setFooterText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setHeaderImageUrl" id="setHeaderImageUrl" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setHeaderImageUrl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderImageUrl">setHeaderImageUrl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setHeaderRenderer" id="setHeaderRenderer" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setHeaderRenderer"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderRenderer">setHeaderRenderer</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the column header cell renderer class.
+                    <p>If not empty, the class will be used to instantiate as a child control in the column header cell.
+If the class implements <a href="%5CPrado%5CIDataRenderer"></a>, the <b>Data</b> property
+will be set as the <a href="getFooterText">FooterText</a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setHeaderText" id="setHeaderText" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setHeaderText"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderText">setHeaderText</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setID" id="setID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setID"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setID">setID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets the ID of the column.
+                    <p>By explicitly specifying the column ID, one can access the column
+by $templateControl-&gt;ColumnID.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setOwner" id="setOwner" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setOwner"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setOwner">setOwner</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TDataGrid.html"><abbr title="\Prado\Web\UI\WebControls\TDataGrid">TDataGrid</abbr></a>&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setSortExpression" id="setSortExpression" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setSortExpression"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setSortExpression">setSortExpression</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setVisible" id="setVisible" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setVisible"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setVisible">setVisible</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="formatDataValue" id="formatDataValue" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_formatDataValue"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_formatDataValue">formatDataValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$formatString</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    Formats the text value according to a format string.
+                    <p>If the format string is empty, the original value is converted into
+a string and returned.
+If the format string starts with '#', the string is treated as a PHP expression
+within which the token '{0}' is translated with the data value to be formated.
+Otherwise, the format string and the data value are passed
+as the first and second parameters in <a href="sprintf"></a>.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDataFieldValue" id="getDataFieldValue" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDataFieldValue"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getDataFieldValue">getDataFieldValue</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$field</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Fetches the value of the data at the specified field.
+                    <p>If the data is an array, the field is used as an array key.
+If the data is an of <a href="TMap"></a>, <a href="TList"></a> or their derived class,
+the field is used as a key value.
+If the data is a component, the field is used as the name of a property.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getViewState" id="getViewState" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getViewState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getViewState">getViewState</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$defaultValue</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Returns a viewstate value.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initializeCellRendererControl" id="initializeCellRendererControl" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initializeCellRendererControl"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeCellRendererControl">initializeCellRendererControl</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TTableCell.html"><abbr title="\Prado\Web\UI\WebControls\TTableCell">TTableCell</abbr></a>&nbsp;</span><var>$cell</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$classPath</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes a cell creating a renderer control.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initializeFooterCell" id="initializeFooterCell" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initializeFooterCell"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeFooterCell">initializeFooterCell</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TTableCell.html"><abbr title="\Prado\Web\UI\WebControls\TTableCell">TTableCell</abbr></a>&nbsp;</span><var>$cell</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$columnIndex</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the footer cell.
+                    <p>This method attempts to use <a href="getFooterRenderer">FooterRenderer</a> to
+instantiate the footer cell. If that is not available, it will populate
+the cell with a text string specified by <a href="getFooterImageUrl">FooterImageUrl</a></p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="initializeHeaderCell" id="initializeHeaderCell" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_initializeHeaderCell"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeHeaderCell">initializeHeaderCell</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-WebControls-TTableCell.html"><abbr title="\Prado\Web\UI\WebControls\TTableCell">TTableCell</abbr></a>&nbsp;</span><var>$cell</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$columnIndex</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Initializes the header cell.
+                    <p>This method attempts to use <a href="getHeaderRenderer">HeaderRenderer</a> to
+instantiate the header cell. If that is not available, it will populate
+the cell with an image or a text string, depending on <a href="getHeaderImageUrl">HeaderImageUrl</a>
+and <a href="getHeaderText">HeaderText</a> property values.</p>
+<p>If the column allows sorting, image or text will be created as
+a button which issues <b>Sort</b> command upon user click.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setViewState" id="setViewState" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setViewState"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setViewState">setViewState</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$key</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$value</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">null|mixed&nbsp;</span><var>$defaultValue</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Sets a viewstate value.
+                    <p>Make sure that the viewstate value must be serializable and unserializable.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getAllowSorting">getAllowSorting</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getApplication">getApplication</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getEnableCellGrouping">getEnableCellGrouping</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterRenderer">getFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterStyle">getFooterStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getFooterText">getFooterText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderImageUrl">getHeaderImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderRenderer">getHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderStyle">getHeaderStyle</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getHeaderText">getHeaderText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getID">getID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getItemStyle">getItemStyle</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getOwner">getOwner</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getRequest">getRequest</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getResponse">getResponse</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getService">getService</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getSession">getSession</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getSortExpression">getSortExpression</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_getUser">getUser</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getVisible">getVisible</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initialize">initialize</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeCell">initializeCell</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_loadState">loadState</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishAsset">publishAsset</a>,                             <a href="classes/Prado-TApplicationComponent.html#method_publishFilePath">publishFilePath</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_saveState">saveState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setEnableCellGrouping">setEnableCellGrouping</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterRenderer">setFooterRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setFooterText">setFooterText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderImageUrl">setHeaderImageUrl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderRenderer">setHeaderRenderer</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setHeaderText">setHeaderText</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setID">setID</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setOwner">setOwner</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setSortExpression">setSortExpression</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setVisible">setVisible</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_formatDataValue">formatDataValue</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getDataFieldValue">getDataFieldValue</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_getViewState">getViewState</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeCellRendererControl">initializeCellRendererControl</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeFooterCell">initializeFooterCell</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_initializeHeaderCell">initializeHeaderCell</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-Web-UI-WebControls-TDataGridColumn.html#method_setViewState">setViewState</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"><b>\Prado\TApplicationComponent::APP_COMPONENT_FX_CACHE</b></a>,                                     <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    TCachePageStatePersister &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,329 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-web.html">Web</a>\<a href="namespaces/prado-web-ui.html">UI</a>\<a href="classes/Prado-Web-UI-TCachePageStatePersister.html">TCachePageStatePersister</a>
+    </h1>
+
+    <div class="description">
+        TCachePageStatePersister class
+        <p>TCachePageStatePersister implements a page state persistent method based on cache.
+Page state are stored in cache (e.g. memcache, DB cache, etc.), and only a small token
+is passed to the client side to identify the state. This greatly reduces the size of
+the page state that needs to be transmitted between the server and the client. Of course,
+this is at the cost of using server side resource.</p>
+<p>A cache module has to be loaded in order to use TCachePageStatePersister.
+By default, TCachePageStatePersister will use the primary cache module.
+A non-primary cache module can be used by setting <a href="setCacheModuleID">CacheModuleID</a>.
+Any cache module, as long as it implements the interface <a href="ICache"></a>, may be used.
+For example, one can use <a href="TDbCache"></a>, <a href="TMemCache"></a>, <a href="TAPCCache"></a>, etc.</p>
+<p>TCachePageStatePersister uses <a href="setCacheTimeout">CacheTimeout</a> to limit the data
+that stores in cache.</p>
+<p>Since server resource is often limited, be cautious if you plan to use TCachePageStatePersister
+for high-traffic Web pages. You may consider using a small <a href="setCacheTimeout">CacheTimeout</a>.</p>
+<p>There are a couple of ways to use TCachePageStatePersister.
+One can override the page's <a href="TPage::getStatePersister()"></a> method and
+create a TCachePageStatePersister instance there.
+Or one can configure the pages to use TCachePageStatePersister in page configurations
+as follows,
+<code class="prettyprint">
+&lt;pages StatePersisterClass=&quot;Prado\Web\UI\TCachePageStatePersister&quot;
+StatePersister.CacheModuleID=&quot;mycache&quot;
+StatePersister.CacheTimeout=&quot;3600&quot; /&gt;
+</code>
+Note in the above, we use StatePersister.CacheModuleID to configure the cache module ID
+for the TCachePageStatePersister instance.</p>
+<p>The above configuration will affect the pages under the directory containing
+this configuration and all its subdirectories.
+To configure individual pages to use TCachePageStatePersister, use
+<code class="prettyprint">
+<pages>
+&lt;page id=&quot;PageID&quot; StatePersisterClass=&quot;Prado\Web\UI\TCachePageStatePersister&quot; /&gt;
+</pages>
+</code></p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-Web-UI-TCachePageStatePersister.html">\Prado\Web\UI\TCachePageStatePersister</a>
+                    implements
+                            <a href="classes/Prado-Web-UI-IPageStatePersister.html">\Prado\Web\UI\IPageStatePersister</a>                        </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-TComponent.html">\Prado\TComponent</a>
+            </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\Web\UI<br/>
+                <b>Author:</b> <br/>
+                <b>Since:</b> 3.1.1<br/>
+                    <b>Located at:</b> <a href="framework/Web/UI/TCachePageStatePersister.php"><abbr title="framework/Web/UI/TCachePageStatePersister.php">TCachePageStatePersister.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="getCache" id="getCache" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCache"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getCache">getCache</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Caching-ICache.html"><abbr title="\Prado\Caching\ICache">ICache</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCacheModuleID" id="getCacheModuleID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCacheModuleID"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getCacheModuleID">getCacheModuleID</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCacheTimeout" id="getCacheTimeout" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCacheTimeout"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getCacheTimeout">getCacheTimeout</a><span>(</span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getKeyPrefix" id="getKeyPrefix" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getKeyPrefix"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getKeyPrefix">getKeyPrefix</a><span>(</span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getPage" id="getPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getPage">getPage</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="load" id="load" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_load"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_load">load</a><span>(</span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Loads page state from cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="save" id="save" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_save"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_save">save</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$data</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Saves state in cache.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCacheModuleID" id="setCacheModuleID" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCacheModuleID"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setCacheModuleID">setCacheModuleID</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setCacheTimeout" id="setCacheTimeout" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setCacheTimeout"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setCacheTimeout">setCacheTimeout</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setKeyPrefix" id="setKeyPrefix" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setKeyPrefix"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setKeyPrefix">setKeyPrefix</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$value</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="setPage" id="setPage" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_setPage"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setPage">setPage</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/Prado-Web-UI-TPage.html"><abbr title="\Prado\Web\UI\TPage">TPage</abbr></a>&nbsp;</span><var>$page</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="calculateKey" id="calculateKey" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_calculateKey"></a>
+                <code>
+                    <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_calculateKey">calculateKey</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$timestamp</var></span><span>)</span><span> : </span><span>string</span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-TComponent.html#method___call">__call</a>,                             <a href="classes/Prado-TComponent.html#method___construct">__construct</a>,                             <a href="classes/Prado-TComponent.html#method___destruct">__destruct</a>,                             <a href="classes/Prado-TComponent.html#method___get">__get</a>,                             <a href="classes/Prado-TComponent.html#method___isset">__isset</a>,                             <a href="classes/Prado-TComponent.html#method___set">__set</a>,                             <a href="classes/Prado-TComponent.html#method___sleep">__sleep</a>,                             <a href="classes/Prado-TComponent.html#method___unset">__unset</a>,                             <a href="classes/Prado-TComponent.html#method_addParsedObject">addParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_asa">asa</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehavior">attachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachBehaviors">attachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_attachClassBehavior">attachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_attachEventHandler">attachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_canGetProperty">canGetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_canSetProperty">canSetProperty</a>,                             <a href="classes/Prado-TComponent.html#method_clearBehaviors">clearBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_createdOnTemplate">createdOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehavior">detachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachBehaviors">detachBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_detachClassBehavior">detachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_detachEventHandler">detachEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehavior">disableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_disableBehaviors">disableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyAddParsedObject">dyAddParsedObject</a>,                             <a href="classes/Prado-TComponent.html#method_dyAttachBehavior">dyAttachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyCreatedOnTemplate">dyCreatedOnTemplate</a>,                             <a href="classes/Prado-TComponent.html#method_dyDetachBehavior">dyDetachBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehavior">dyDisableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyDisableBehaviors">dyDisableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehavior">dyEnableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_dyEnableBehaviors">dyEnableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateExpressionFilter">dyEvaluateExpressionFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyEvaluateStatementsFilter">dyEvaluateStatementsFilter</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventPostHandler">dyIntraRaiseEventPostHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyIntraRaiseEventTestHandler">dyIntraRaiseEventTestHandler</a>,                             <a href="classes/Prado-TComponent.html#method_dyListen">dyListen</a>,                             <a href="classes/Prado-TComponent.html#method_dyPostRaiseEvent">dyPostRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyPreRaiseEvent">dyPreRaiseEvent</a>,                             <a href="classes/Prado-TComponent.html#method_dyUnlisten">dyUnlisten</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehavior">enableBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_enableBehaviors">enableBehaviors</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateExpression">evaluateExpression</a>,                             <a href="classes/Prado-TComponent.html#method_evaluateStatements">evaluateStatements</a>,                             <a href="classes/Prado-TComponent.html#method_fxAttachClassBehavior">fxAttachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_fxDetachClassBehavior">fxDetachClassBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_getAutoGlobalListen">getAutoGlobalListen</a>,                             <a href="classes/Prado-TComponent.html#method_getBehaviorsEnabled">getBehaviorsEnabled</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getCache">getCache</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getCacheModuleID">getCacheModuleID</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getCacheTimeout">getCacheTimeout</a>,                             <a href="classes/Prado-TComponent.html#method_getClassHierarchy">getClassHierarchy</a>,                             <a href="classes/Prado-TComponent.html#method_getEventHandlers">getEventHandlers</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getKeyPrefix">getKeyPrefix</a>,                             <a href="classes/Prado-TComponent.html#method_getListeningToGlobalEvents">getListeningToGlobalEvents</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_getPage">getPage</a>,                             <a href="classes/Prado-TComponent.html#method_getSubProperty">getSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_hasEvent">hasEvent</a>,                             <a href="classes/Prado-TComponent.html#method_hasEventHandler">hasEventHandler</a>,                             <a href="classes/Prado-TComponent.html#method_hasProperty">hasProperty</a>,                             <a href="classes/Prado-TComponent.html#method_isa">isa</a>,                             <a href="classes/Prado-TComponent.html#method_listen">listen</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_load">load</a>,                             <a href="classes/Prado-TComponent.html#method_raiseEvent">raiseEvent</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_save">save</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setCacheModuleID">setCacheModuleID</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setCacheTimeout">setCacheTimeout</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setKeyPrefix">setKeyPrefix</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_setPage">setPage</a>,                             <a href="classes/Prado-TComponent.html#method_setSubProperty">setSubProperty</a>,                             <a href="classes/Prado-TComponent.html#method_unlisten">unlisten</a>,                             <a href="classes/Prado-TComponent.html#method__getZappableSleepProps">_getZappableSleepProps</a>,                             <a href="classes/Prado-Web-UI-TCachePageStatePersister.html#method_calculateKey">calculateKey</a>,                             <a href="classes/Prado-TComponent.html#method_getClassFxEvents">getClassFxEvents</a>,                             <a href="classes/Prado-TComponent.html#method_instanceBehavior">instanceBehavior</a>,                             <a href="classes/Prado-TComponent.html#method_filter_prado_fx">filter_prado_fx</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+                <table class="summary inherited" >
+        <caption>Inherited constants</caption>
+        <tbody><tr>
+            <td><code>
+                                    <a href="classes/Prado-TComponent.html#constant_GLOBAL_RAISE_EVENT_LISTENER"><b>\Prado\TComponent::GLOBAL_RAISE_EVENT_LISTENER</b></a>                            </code></td>
+        </tr>
+        </tbody></table>
+        </article>
                 </div>
             </div>
             <div id="footer">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title> Prado 4.2.0 API Manual</title>
+            <title>    MessageSource_Database &raquo; Prado 4.2.0 API Manual
+</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <base href="../">
     <link rel="icon" href="imgs/favicon.ico"/>
             <link rel="stylesheet" href="css/style.css">
                 <script src="js/jquery-3.6.0.min.js"></script>
@@ -764,7 +765,314 @@
                     </ul>
                 </div>
                 <div id="content">
-                        <h1>Prado 4.2.0 API Manual</h1>
+                        <h1>Class
+        \<a href="namespaces/prado.html">Prado</a>\<a href="namespaces/prado-i18n.html">I18N</a>\<a href="namespaces/prado-i18n-core.html">core</a>\<a href="classes/Prado-I18N-core-MessageSource-Database.html">MessageSource_Database</a>
+    </h1>
+
+    <div class="description">
+        MessageSource_Database class.
+        <p>Retrive the message translation from a database.</p>
+<p>See the MessageSource::factory() method to instantiate this class.</p>
+
+    </div>
+
+            <h4>Class hierarchy</h4>
+        <dl class="tree">
+            <dd style="padding-left:0px">
+                <a href="classes/Prado-I18N-core-MessageSource-Database.html">\Prado\I18N\core\MessageSource_Database</a>
+            </dd>
+                <dd style="padding-left:30px">
+                    <img src="imgs/inherit.png" alt="Extended by">
+                <a href="classes/Prado-I18N-core-MessageSource.html">\Prado\I18N\core\MessageSource</a>
+                    implements
+                        </dd>
+    
+    
+        </dl>
+    
+            <b>Namespace:</b> \Prado\I18N\core<br/>
+                <b>Author:</b> <br/>
+                        <b>Located at:</b> <a href="framework/I18N/core/MessageSource_Database.php"><abbr title="framework/I18N/core/MessageSource_Database.php">MessageSource_Database.php</abbr></a><br/>
+    
+        <table class="summary methods" id="methods">
+    <caption>Methods summary</caption>
+                <tr data-order="__construct" id="__construct" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method___construct"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method___construct">__construct</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$source</var></span><span>)</span><span> : </span><span>mixed</span>                </code>
+
+                <div class="description short">
+                    Constructor.
+                    <p>Create a new message source using a Database</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="catalogues" id="catalogues" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_catalogues"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_catalogues">catalogues</a><span>(</span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Returns a list of catalogue as key and all it variants as value.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="delete" id="delete" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_delete"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_delete">delete</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$message</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;messages&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Delete a particular message from the specified catalogue.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getDbConnection" id="getDbConnection" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getDbConnection">getDbConnection</a><span>(</span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="save" id="save" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_save"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_save">save</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;messages&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Save the list of untranslated blocks to the translation source.
+                    <p>If the translation was not found, you should add those
+strings to the translation source via the <b>append()</b> method.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="update" id="update" n:class="">
+        <td class="attributes"><code>
+            public
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_update"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_update">update</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$text</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$target</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$comments</var></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;messages&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Update the translation.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="createDbConnection" id="createDbConnection" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_createDbConnection"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_createDbConnection">createDbConnection</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$connectionID</var></span><span>)</span><span> : </span><span><a href="classes/Prado-Data-TDbConnection.html"><abbr title="\Prado\Data\TDbConnection">TDbConnection</abbr></a></span>                </code>
+
+                <div class="description short">
+                    Creates the DB connection.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCatalogueList" id="getCatalogueList" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCatalogueList"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getCatalogueList">getCatalogueList</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Get all the variants of a particular catalogue.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getLastModified" id="getLastModified" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getLastModified"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getLastModified">getLastModified</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$source</var></span><span>)</span><span> : </span><span>int</span>                </code>
+
+                <div class="description short">
+                    Get the last modified unix-time for this particular catalogue+variant.
+                    <p>We need to query the database to get the date_modified.</p>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="isValidSource" id="isValidSource" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_isValidSource"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_isValidSource">isValidSource</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$variant</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Check if a particular catalogue+variant exists in the database.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="loadData" id="loadData" n:class="">
+        <td class="attributes"><code>
+            protected
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_loadData"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_loadData">loadData</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$variant</var></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Get an array of messages for a particular catalogue and cultural
+variant.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="getCatalogueDetails" id="getCatalogueDetails" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_getCatalogueDetails"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getCatalogueDetails">getCatalogueDetails</a><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><var>$catalogue</var><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;messages&#039;</span><span> ]</span></span><span>)</span><span> : </span><span>array&lt;string|int, mixed&gt;</span>                </code>
+
+                <div class="description short">
+                    Retrive catalogue details, array($cat_id, $variant, $count).
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+                <tr data-order="updateCatalogueTime" id="updateCatalogueTime" n:class="">
+        <td class="attributes"><code>
+            private
+                                                            </code>
+        </td>
+
+        <td class="name">
+            <div>
+                <a name="method_updateCatalogueTime"></a>
+                <code>
+                    <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_updateCatalogueTime">updateCatalogueTime</a><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$cat_id</var></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><var>$variant</var></span><span>)</span><span> : </span><span>bool</span>                </code>
+
+                <div class="description short">
+                    Update the catalogue last modified time.
+                    
+                </div>
+            </div>
+        </td>
+    </tr>
+
+        </table>
+
+        <table class="summary inherited" >
+    <caption>Inherited methods</caption>
+    <tbody><tr>
+        <td><code>
+                            <a href="classes/Prado-I18N-core-MessageSource-Database.html#method___construct">__construct</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_append">append</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_catalogues">catalogues</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_delete">delete</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_factory">factory</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_getCache">getCache</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_getCulture">getCulture</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getDbConnection">getDbConnection</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_load">load</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_read">read</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_save">save</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_setCache">setCache</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_setCulture">setCulture</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_update">update</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_createDbConnection">createDbConnection</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getCatalogueList">getCatalogueList</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getLastModified">getLastModified</a>,                             <a href="classes/Prado-I18N-core-MessageSource.html#method_getSource">getSource</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_isValidSource">isValidSource</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_loadData">loadData</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_getCatalogueDetails">getCatalogueDetails</a>,                             <a href="classes/Prado-I18N-core-MessageSource-Database.html#method_updateCatalogueTime">updateCatalogueTime</a>                    </code></td>
+    </tr>
+    </tbody></table>
+
+        
+            </article>
                 </div>
             </div>
             <div id="footer">
