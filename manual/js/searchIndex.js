@@ -263,7 +263,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Caching\\TDbCache\u003A\u003AflushCacheExpired\u0028\u0029",
             "name": "flushCacheExpired",
-            "summary": "Flush\u0020expired\u0020values\u0020from\u0020cache\u0020depending\u0020on\u0020\u007B\u0040link\u0020setFlushInterval\u0020FlushInterval\u007D",
+            "summary": "Flush\u0020expired\u0020values\u0020from\u0020cache\u0020depending\u0020on\u0020\u007B\u0040see\u0020\\Prado\\Caching\\TDbCache\u003A\u003AsetFlushInterval\u0028\u0029\u0020FlushInterval\u007D",
             "url": "classes/Prado-Caching-TDbCache.html#method_flushCacheExpired"
         },                {
             "fqsen": "\\Prado\\Caching\\TDbCache\u003A\u003AfxGetCronTaskInfos\u0028\u0029",
@@ -896,6 +896,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Caching-TRedisCache.html#property__index"
         },                {
+            "fqsen": "\\Prado\\Collections\\ICollectionFilter",
+            "name": "ICollectionFilter",
+            "summary": "ICollectionFilter\u0020interface",
+            "url": "classes/Prado-Collections-ICollectionFilter.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\ICollectionFilter\u003A\u003AfilterItemForInput\u0028\u0029",
+            "name": "filterItemForInput",
+            "summary": "Converts\u0020an\u0020item\u0020into\u0020an\u0020internal\u0020storage\u0020format.\u0020\u0020For\u0020instance,\u0020IWeakCollection\nwill\u0020convert\u0020objects\u0020into\u0020WeakReferences.",
+            "url": "classes/Prado-Collections-ICollectionFilter.html#method_filterItemForInput"
+        },                {
+            "fqsen": "\\Prado\\Collections\\ICollectionFilter\u003A\u003AfilterItemForOutput\u0028\u0029",
+            "name": "filterItemForOutput",
+            "summary": "Converts\u0020an\u0020item\u0020from\u0020an\u0020internal\u0020storage\u0020format\u0020back\u0020to\u0020its\u0020normal\u0020state.",
+            "url": "classes/Prado-Collections-ICollectionFilter.html#method_filterItemForOutput"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IPriorityCapture",
+            "name": "IPriorityCapture",
+            "summary": "IPriorityCapture\u0020interface",
+            "url": "classes/Prado-Collections-IPriorityCapture.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IPriorityCapture\u003A\u003AsetPriority\u0028\u0029",
+            "name": "setPriority",
+            "summary": "",
+            "url": "classes/Prado-Collections-IPriorityCapture.html#method_setPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IPriorityCollection",
+            "name": "IPriorityCollection",
+            "summary": "IPriorityCollection\u0020interface",
+            "url": "classes/Prado-Collections-IPriorityCollection.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IPriorityCollection\u003A\u003AgetDefaultPriority\u0028\u0029",
+            "name": "getDefaultPriority",
+            "summary": "",
+            "url": "classes/Prado-Collections-IPriorityCollection.html#method_getDefaultPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IPriorityCollection\u003A\u003AgetPrecision\u0028\u0029",
+            "name": "getPrecision",
+            "summary": "",
+            "url": "classes/Prado-Collections-IPriorityCollection.html#method_getPrecision"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IPriorityCollection\u003A\u003ApriorityAt\u0028\u0029",
+            "name": "priorityAt",
+            "summary": "Returns\u0020the\u0020priority\u0020of\u0020an\u0020item\u0020at\u0020a\u0020particular\u0020key\/index.\u0020\u0020This\u0020searches\u0020the\u0020map\u0020for\u0020the\u0020item.",
+            "url": "classes/Prado-Collections-IPriorityCollection.html#method_priorityAt"
+        },                {
             "fqsen": "\\Prado\\Collections\\IPriorityItem",
             "name": "IPriorityItem",
             "summary": "IPriorityItem\u0020interface",
@@ -905,6 +950,141 @@ Search.appendIndex(
             "name": "getPriority",
             "summary": "",
             "url": "classes/Prado-Collections-IPriorityItem.html#method_getPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IPriorityProperty",
+            "name": "IPriorityProperty",
+            "summary": "IPriorityProperty\u0020interface",
+            "url": "classes/Prado-Collections-IPriorityProperty.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IWeakCollection",
+            "name": "IWeakCollection",
+            "summary": "IWeakCollection\u0020interface",
+            "url": "classes/Prado-Collections-IWeakCollection.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\IWeakRetainable",
+            "name": "IWeakRetainable",
+            "summary": "IWeakRetainable\u0020interface",
+            "url": "classes/Prado-Collections-IWeakRetainable.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription",
+            "name": "TArraySubscription",
+            "summary": "TArraySubscription\u0020class.",
+            "url": "classes/Prado-Collections-TArraySubscription.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructs\u0020the\u0020TArraySubscription.\u0020\u0020If\u0020there\u0020is\u0020an\u0020key\u0020or\u0020item\u0020then\u0020the\u0020item\u0020is\nautomatically\u0020subscribed\u0020to\u0020the\u0020array\u0020when\u0020\u0024autoSubscribe\u0020is\u0020the\u0020default\u0020null.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A__destruct\u0028\u0029",
+            "name": "__destruct",
+            "summary": "Cleans\u0020up\u0020the\u0020instance\u0020on\u0020destruction.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method___destruct"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AgetArray\u0028\u0029",
+            "name": "getArray",
+            "summary": "Returns\u0020the\u0020collection\u0020to\u0020which\u0020the\u0020item\u0020is\u0020subscribed.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_getArray"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AsetArray\u0028\u0029",
+            "name": "setArray",
+            "summary": "Sets\u0020the\u0020array\u0020or\u0020ArrayAccess\u0020object.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_setArray"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AgetKey\u0028\u0029",
+            "name": "getKey",
+            "summary": "If\u0020the\u0020item\u0020is\u0020subscribed\u0020and\u0020the\u0020key\u0020is\u0020null,\u0020the\u0020item\u0020key\u0020will\u0020be\u0020discovered\nwith\u0020the\u0020TList\u0020\u0028by\u0020\u007B\u0040see\u0020\\Prado\\Collections\\TList\u003A\u003AindexOf\u0028\u0029\u007D\u0029\u0020or\u0020array\u0020\u0028by\u0020array_search\u0029.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_getKey"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AsetKey\u0028\u0029",
+            "name": "setKey",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_setKey"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AgetItem\u0028\u0029",
+            "name": "getItem",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_getItem"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AsetItem\u0028\u0029",
+            "name": "setItem",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_setItem"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AsetPriority\u0028\u0029",
+            "name": "setPriority",
+            "summary": "This\u0020is\u0020on\u0020applicable\u0020to\u0020\u007B\u0040see\u0020\\Prado\\Collections\\IPriorityCollection\u007D.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_setPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AgetIsAssociative\u0028\u0029",
+            "name": "getIsAssociative",
+            "summary": "Whether\u0020to\u0020add\u0020to\u0020the\u0020array\u0020by\u0020association\u0020or\u0020by\u0020splicing\u0020\u0028for\u0020an\u0020ordered\u0020list\u0029.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_getIsAssociative"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AsetIsAssociative\u0028\u0029",
+            "name": "setIsAssociative",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_setIsAssociative"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003AgetIsSubscribed\u0028\u0029",
+            "name": "getIsSubscribed",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_getIsSubscribed"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003Asubscribe\u0028\u0029",
+            "name": "subscribe",
+            "summary": "Places\u0020the\u0020item\u0020in\u0020the\u0020array\u0020at\u0020the\u0020key\u0020\u0028and\u0020priority,\u0020where\u0020possible\u0029.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_subscribe"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003Aunsubscribe\u0028\u0029",
+            "name": "unsubscribe",
+            "summary": "Removes\u0020the\u0020item\u0020from\u0020the\u0020array\u0020at\u0020the\u0020key\u0020\u0028and\u0020priority,\u0020where\u0020possible\u0029.",
+            "url": "classes/Prado-Collections-TArraySubscription.html#method_unsubscribe"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_array",
+            "name": "_array",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__array"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_key",
+            "name": "_key",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__key"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_item",
+            "name": "_item",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__item"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_filterClass",
+            "name": "_filterClass",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__filterClass"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_isAssoc",
+            "name": "_isAssoc",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__isAssoc"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_isSubscribed",
+            "name": "_isSubscribed",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__isSubscribed"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_isReplacing",
+            "name": "_isReplacing",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__isReplacing"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_originalItem",
+            "name": "_originalItem",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__originalItem"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TArraySubscription\u003A\u003A\u0024_originalPriority",
+            "name": "_originalPriority",
+            "summary": "",
+            "url": "classes/Prado-Collections-TArraySubscription.html#property__originalPriority"
         },                {
             "fqsen": "\\Prado\\Collections\\TAttributeCollection",
             "name": "TAttributeCollection",
@@ -975,6 +1155,26 @@ Search.appendIndex(
             "name": "_caseSensitive",
             "summary": "",
             "url": "classes/Prado-Collections-TAttributeCollection.html#property__caseSensitive"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TCollectionSubscription",
+            "name": "TCollectionSubscription",
+            "summary": "TCollectionSubscription\u0020class.",
+            "url": "classes/Prado-Collections-TCollectionSubscription.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TCollectionSubscription\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-Collections-TCollectionSubscription.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TCollectionSubscription\u003A\u003AgetCollection\u0028\u0029",
+            "name": "getCollection",
+            "summary": "The\u0020ArrayAccess\u0020collection\u0020for\u0020getting\u0020the\u0020array\u0020without\u0020pass\u0020by\u0020reference.",
+            "url": "classes/Prado-Collections-TCollectionSubscription.html#method_getCollection"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TCollectionSubscription\u003A\u003AsetCollection\u0028\u0029",
+            "name": "setCollection",
+            "summary": "The\u0020ArrayAccess\u0020collection\u0020for\u0020setting\u0020the\u0020array\u0020without\u0020pass\u0020by\u0020reference.",
+            "url": "classes/Prado-Collections-TCollectionSubscription.html#method_setCollection"
         },                {
             "fqsen": "\\Prado\\Collections\\TDummyDataSource",
             "name": "TDummyDataSource",
@@ -1070,6 +1270,11 @@ Search.appendIndex(
             "name": "setReadOnly",
             "summary": "",
             "url": "classes/Prado-Collections-TList.html#method_setReadOnly"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TList\u003A\u003AcollapseReadOnly\u0028\u0029",
+            "name": "collapseReadOnly",
+            "summary": "This\u0020sets\u0020the\u0020read\u0020only\u0020property.",
+            "url": "classes/Prado-Collections-TList.html#method_collapseReadOnly"
         },                {
             "fqsen": "\\Prado\\Collections\\TList\u003A\u003AgetIterator\u0028\u0029",
             "name": "getIterator",
@@ -1171,6 +1376,11 @@ Search.appendIndex(
             "summary": "Unsets\u0020the\u0020item\u0020at\u0020the\u0020specified\u0020offset.",
             "url": "classes/Prado-Collections-TList.html#method_offsetUnset"
         },                {
+            "fqsen": "\\Prado\\Collections\\TList\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Collections-TList.html#method__getZappableSleepProps"
+        },                {
             "fqsen": "\\Prado\\Collections\\TList\u003A\u003A\u0024_d",
             "name": "_d",
             "summary": "internal\u0020data\u0020storage",
@@ -1241,11 +1451,6 @@ Search.appendIndex(
             "summary": "TMap\u0020class",
             "url": "classes/Prado-Collections-TMap.html"
         },                {
-            "fqsen": "\\Prado\\Collections\\TMap\u003A\u003A_getZappableSleepProps\u0028\u0029",
-            "name": "_getZappableSleepProps",
-            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
-            "url": "classes/Prado-Collections-TMap.html#method__getZappableSleepProps"
-        },                {
             "fqsen": "\\Prado\\Collections\\TMap\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "Constructor.",
@@ -1260,6 +1465,11 @@ Search.appendIndex(
             "name": "setReadOnly",
             "summary": "",
             "url": "classes/Prado-Collections-TMap.html#method_setReadOnly"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TMap\u003A\u003AcollapseReadOnly\u0028\u0029",
+            "name": "collapseReadOnly",
+            "summary": "This\u0020sets\u0020the\u0020read\u0020only\u0020property.",
+            "url": "classes/Prado-Collections-TMap.html#method_collapseReadOnly"
         },                {
             "fqsen": "\\Prado\\Collections\\TMap\u003A\u003AgetIterator\u0028\u0029",
             "name": "getIterator",
@@ -1296,6 +1506,11 @@ Search.appendIndex(
             "summary": "Removes\u0020an\u0020item\u0020from\u0020the\u0020map\u0020by\u0020its\u0020key.",
             "url": "classes/Prado-Collections-TMap.html#method_remove"
         },                {
+            "fqsen": "\\Prado\\Collections\\TMap\u003A\u003AremoveItem\u0028\u0029",
+            "name": "removeItem",
+            "summary": "Removes\u0020an\u0020item\u0020from\u0020the\u0020map.\u0020\u0020This\u0020removes\u0020all\u0020of\u0020an\u0020item\u0020from\u0020the\u0020map.",
+            "url": "classes/Prado-Collections-TMap.html#method_removeItem"
+        },                {
             "fqsen": "\\Prado\\Collections\\TMap\u003A\u003Aclear\u0028\u0029",
             "name": "clear",
             "summary": "Removes\u0020all\u0020items\u0020in\u0020the\u0020map.",
@@ -1305,6 +1520,11 @@ Search.appendIndex(
             "name": "contains",
             "summary": "",
             "url": "classes/Prado-Collections-TMap.html#method_contains"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TMap\u003A\u003AkeyOf\u0028\u0029",
+            "name": "keyOf",
+            "summary": "",
+            "url": "classes/Prado-Collections-TMap.html#method_keyOf"
         },                {
             "fqsen": "\\Prado\\Collections\\TMap\u003A\u003AtoArray\u0028\u0029",
             "name": "toArray",
@@ -1340,6 +1560,11 @@ Search.appendIndex(
             "name": "offsetUnset",
             "summary": "Unsets\u0020the\u0020element\u0020at\u0020the\u0020specified\u0020offset.",
             "url": "classes/Prado-Collections-TMap.html#method_offsetUnset"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TMap\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Collections-TMap.html#method__getZappableSleepProps"
         },                {
             "fqsen": "\\Prado\\Collections\\TMap\u003A\u003A\u0024_d",
             "name": "_d",
@@ -1821,6 +2046,111 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Collections-TPagedMapIterator.html#property__iterator"
         },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait",
+            "name": "TPriorityCollectionTrait",
+            "summary": "TPriorityCollectionTrait\u0020class",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AgetDefaultPriority\u0028\u0029",
+            "name": "getDefaultPriority",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_getDefaultPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AsetDefaultPriority\u0028\u0029",
+            "name": "setDefaultPriority",
+            "summary": "This\u0020must\u0020be\u0020called\u0020internally\u0020or\u0020when\u0020instantiated.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_setDefaultPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AgetPrecision\u0028\u0029",
+            "name": "getPrecision",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_getPrecision"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AsetPrecision\u0028\u0029",
+            "name": "setPrecision",
+            "summary": "This\u0020must\u0020be\u0020called\u0020internally\u0020or\u0020when\u0020instantiated.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_setPrecision"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AensurePriority\u0028\u0029",
+            "name": "ensurePriority",
+            "summary": "Taken\u0020an\u0020input\u0020Priority\u0020and\u0020ensures\u0020its\u0020value.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_ensurePriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AsortPriorities\u0028\u0029",
+            "name": "sortPriorities",
+            "summary": "This\u0020orders\u0020the\u0020priority\u0020list\u0020internally.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_sortPriorities"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AflattenPriorities\u0028\u0029",
+            "name": "flattenPriorities",
+            "summary": "This\u0020flattens\u0020the\u0020priority\u0020list\u0020into\u0020a\u0020flat\u0020array\u0020\u005B0,...,n\u002D1\u005D\u0020\u0028with\u0020array_merge\u0029\nand\u0020a\u0020priority\u0020map\u0020into\u0020a\u0020single\u0020flat\u0020map\u0020of\u0020keys\u0020and\u0020values\u0020\u0028with\u0020array_replace\u0029.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_flattenPriorities"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AgetPriorities\u0028\u0029",
+            "name": "getPriorities",
+            "summary": "This\u0020returns\u0020a\u0020list\u0020of\u0020the\u0020priorities\u0020within\u0020this\u0020list,\u0020ordered\u0020lowest\u0020to\u0020highest.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_getPriorities"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AgetPriorityCount\u0028\u0029",
+            "name": "getPriorityCount",
+            "summary": "Gets\u0020the\u0020number\u0020of\u0020items\u0020at\u0020a\u0020priority\u0020within\u0020the\u0020list",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_getPriorityCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AgetIterator\u0028\u0029",
+            "name": "getIterator",
+            "summary": "Returns\u0020an\u0020iterator\u0020for\u0020traversing\u0020the\u0020items\u0020in\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_getIterator"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AitemsAtPriority\u0028\u0029",
+            "name": "itemsAtPriority",
+            "summary": "Gets\u0020all\u0020the\u0020items\u0020at\u0020a\u0020specific\u0020priority.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_itemsAtPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_toArray"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AtoPriorityArray\u0028\u0029",
+            "name": "toPriorityArray",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_toPriorityArray"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AtoArrayBelowPriority\u0028\u0029",
+            "name": "toArrayBelowPriority",
+            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020below\u0020the\u0020parameter\u0020value",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_toArrayBelowPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003AtoArrayAbovePriority\u0028\u0029",
+            "name": "toArrayAbovePriority",
+            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020above\u0020the\u0020parameter\u0020value",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method_toArrayAbovePriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003A_priorityZappableSleepProps\u0028\u0029",
+            "name": "_priorityZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#method__priorityZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003A\u0024_o",
+            "name": "_o",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#property__o"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003A\u0024_fd",
+            "name": "_fd",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#property__fd"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003A\u0024_dp",
+            "name": "_dp",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#property__dp"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityCollectionTrait\u003A\u003A\u0024_p",
+            "name": "_p",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityCollectionTrait.html#property__p"
+        },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList",
             "name": "TPriorityList",
             "summary": "TPriorityList\u0020class",
@@ -1831,75 +2161,15 @@ Search.appendIndex(
             "summary": "Constructor.",
             "url": "classes/Prado-Collections-TPriorityList.html#method___construct"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003Acount\u0028\u0029",
-            "name": "count",
-            "summary": "Returns\u0020the\u0020number\u0020of\u0020items\u0020in\u0020the\u0020list.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_count"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AgetCount\u0028\u0029",
-            "name": "getCount",
-            "summary": "Returns\u0020the\u0020total\u0020number\u0020of\u0020items\u0020in\u0020the\u0020list",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_getCount"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AgetPriorityCount\u0028\u0029",
-            "name": "getPriorityCount",
-            "summary": "Gets\u0020the\u0020number\u0020of\u0020items\u0020at\u0020a\u0020priority\u0020within\u0020the\u0020list",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_getPriorityCount"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AgetDefaultPriority\u0028\u0029",
-            "name": "getDefaultPriority",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_getDefaultPriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AsetDefaultPriority\u0028\u0029",
-            "name": "setDefaultPriority",
-            "summary": "This\u0020must\u0020be\u0020called\u0020internally\u0020or\u0020when\u0020instantiated.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_setDefaultPriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AgetPrecision\u0028\u0029",
-            "name": "getPrecision",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_getPrecision"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AsetPrecision\u0028\u0029",
-            "name": "setPrecision",
-            "summary": "This\u0020must\u0020be\u0020called\u0020internally\u0020or\u0020when\u0020instantiated.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_setPrecision"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AensurePriority\u0028\u0029",
-            "name": "ensurePriority",
-            "summary": "Taken\u0020an\u0020input\u0020Priority\u0020and\u0020ensures\u0020its\u0020value.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_ensurePriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AgetIterator\u0028\u0029",
-            "name": "getIterator",
-            "summary": "Returns\u0020an\u0020iterator\u0020for\u0020traversing\u0020the\u0020items\u0020in\u0020the\u0020list.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_getIterator"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AgetPriorities\u0028\u0029",
-            "name": "getPriorities",
-            "summary": "This\u0020returns\u0020a\u0020list\u0020of\u0020the\u0020priorities\u0020within\u0020this\u0020list,\u0020ordered\u0020lowest\u0020to\u0020highest.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_getPriorities"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AsortPriorities\u0028\u0029",
-            "name": "sortPriorities",
-            "summary": "This\u0020orders\u0020the\u0020priority\u0020list\u0020internally.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_sortPriorities"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AflattenPriorities\u0028\u0029",
-            "name": "flattenPriorities",
-            "summary": "This\u0020flattens\u0020the\u0020priority\u0020list\u0020into\u0020a\u0020flat\u0020array\u0020\u005B0,...,n\u002D1\u005D",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_flattenPriorities"
+            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AgetPriorityCombineStyle\u0028\u0029",
+            "name": "getPriorityCombineStyle",
+            "summary": "This\u0020is\u0020required\u0020for\u0020TPriorityCollectionTrait\u0020to\u0020determine\u0020the\u0020style\u0020of\u0020combining\narrays.",
+            "url": "classes/Prado-Collections-TPriorityList.html#method_getPriorityCombineStyle"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AitemAt\u0028\u0029",
             "name": "itemAt",
             "summary": "Returns\u0020the\u0020item\u0020at\u0020the\u0020index\u0020of\u0020a\u0020flattened\u0020priority\u0020list.",
             "url": "classes/Prado-Collections-TPriorityList.html#method_itemAt"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AitemsAtPriority\u0028\u0029",
-            "name": "itemsAtPriority",
-            "summary": "Gets\u0020all\u0020the\u0020items\u0020at\u0020a\u0020specific\u0020priority.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_itemsAtPriority"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AitemAtIndexInPriority\u0028\u0029",
             "name": "itemAtIndexInPriority",
@@ -1941,11 +2211,6 @@ Search.appendIndex(
             "summary": "Removes\u0020all\u0020items\u0020in\u0020the\u0020priority\u0020list\u0020by\u0020calling\u0020removeAtIndexInPriority\u0020from\u0020the\u0020last\u0020item\u0020to\u0020the\u0020first.",
             "url": "classes/Prado-Collections-TPriorityList.html#method_clear"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003Acontains\u0028\u0029",
-            "name": "contains",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_contains"
-        },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AindexOf\u0028\u0029",
             "name": "indexOf",
             "summary": "",
@@ -1958,7 +2223,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003ApriorityAt\u0028\u0029",
             "name": "priorityAt",
-            "summary": "Retutrns\u0020the\u0020priority\u0020of\u0020an\u0020item\u0020at\u0020a\u0020particular\u0020flattened\u0020index.",
+            "summary": "Returns\u0020the\u0020priority\u0020of\u0020an\u0020item\u0020at\u0020a\u0020particular\u0020flattened\u0020index.\u0020\u0020The\u0020index\u0020after\nthe\u0020last\u0020item\u0020does\u0020not\u0020exist\u0020but\u0020receives\u0020a\u0020priority\u0020from\u0020the\u0020last\u0020item\u0020so\u0020that\npriority\u0020information\u0020about\u0020any\u0020new\u0020items\u0020being\u0020appended\u0020is\u0020available.",
             "url": "classes/Prado-Collections-TPriorityList.html#method_priorityAt"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AinsertBefore\u0028\u0029",
@@ -1970,26 +2235,6 @@ Search.appendIndex(
             "name": "insertAfter",
             "summary": "This\u0020inserts\u0020an\u0020item\u0020after\u0020another\u0020item\u0020within\u0020the\u0020list.\u0020\u0020It\u0020uses\u0020the\u0020same\u0020priority\u0020as\u0020the\nfound\u0020index\u0020item\u0020and\u0020places\u0020the\u0020new\u0020item\u0020after\u0020it.",
             "url": "classes/Prado-Collections-TPriorityList.html#method_insertAfter"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_toArray"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AtoPriorityArray\u0028\u0029",
-            "name": "toPriorityArray",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_toPriorityArray"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AtoArrayBelowPriority\u0028\u0029",
-            "name": "toArrayBelowPriority",
-            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020below\u0020the\u0020parameter\u0020value",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_toArrayBelowPriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AtoArrayAbovePriority\u0028\u0029",
-            "name": "toArrayAbovePriority",
-            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020above\u0020the\u0020parameter\u0020value",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_toArrayAbovePriority"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AcopyFrom\u0028\u0029",
             "name": "copyFrom",
@@ -2006,11 +2251,6 @@ Search.appendIndex(
             "summary": "Returns\u0020whether\u0020there\u0020is\u0020an\u0020element\u0020at\u0020the\u0020specified\u0020offset.",
             "url": "classes/Prado-Collections-TPriorityList.html#method_offsetExists"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AoffsetGet\u0028\u0029",
-            "name": "offsetGet",
-            "summary": "Returns\u0020the\u0020element\u0020at\u0020the\u0020specified\u0020offset.",
-            "url": "classes/Prado-Collections-TPriorityList.html#method_offsetGet"
-        },                {
             "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003AoffsetSet\u0028\u0029",
             "name": "offsetSet",
             "summary": "Sets\u0020the\u0020element\u0020at\u0020the\u0020specified\u0020offset.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020interface\u0020\\ArrayAccess.",
@@ -2021,35 +2261,10 @@ Search.appendIndex(
             "summary": "Unsets\u0020the\u0020element\u0020at\u0020the\u0020specified\u0020offset.",
             "url": "classes/Prado-Collections-TPriorityList.html#method_offsetUnset"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003A\u0024_d",
-            "name": "_d",
-            "summary": "internal\u0020data\u0020storage",
-            "url": "classes/Prado-Collections-TPriorityList.html#property__d"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003A\u0024_o",
-            "name": "_o",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#property__o"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003A\u0024_fd",
-            "name": "_fd",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#property__fd"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003A\u0024_c",
-            "name": "_c",
-            "summary": "number\u0020of\u0020items",
-            "url": "classes/Prado-Collections-TPriorityList.html#property__c"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003A\u0024_dp",
-            "name": "_dp",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#property__dp"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003A\u0024_p",
-            "name": "_p",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityList.html#property__p"
+            "fqsen": "\\Prado\\Collections\\TPriorityList\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Collections-TPriorityList.html#method__getZappableSleepProps"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap",
             "name": "TPriorityMap",
@@ -2061,60 +2276,20 @@ Search.appendIndex(
             "summary": "Constructor.",
             "url": "classes/Prado-Collections-TPriorityMap.html#method___construct"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetDefaultPriority\u0028\u0029",
-            "name": "getDefaultPriority",
+            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetPriorityCombineStyle\u0028\u0029",
+            "name": "getPriorityCombineStyle",
+            "summary": "This\u0020is\u0020required\u0020for\u0020TPriorityCollectionTrait\u0020to\u0020determine\u0020the\u0020style\u0020of\u0020combining\narrays.",
+            "url": "classes/Prado-Collections-TPriorityMap.html#method_getPriorityCombineStyle"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetNextIntegerKey\u0028\u0029",
+            "name": "getNextIntegerKey",
             "summary": "",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_getDefaultPriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AsetDefaultPriority\u0028\u0029",
-            "name": "setDefaultPriority",
-            "summary": "This\u0020must\u0020be\u0020called\u0020internally\u0020or\u0020when\u0020instantiated.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_setDefaultPriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetPrecision\u0028\u0029",
-            "name": "getPrecision",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_getPrecision"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AsetPrecision\u0028\u0029",
-            "name": "setPrecision",
-            "summary": "This\u0020must\u0020be\u0020called\u0020internally\u0020or\u0020when\u0020instantiated.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_setPrecision"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AensurePriority\u0028\u0029",
-            "name": "ensurePriority",
-            "summary": "Takes\u0020an\u0020input\u0020Priority\u0020and\u0020ensures\u0020its\u0020value.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_ensurePriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetIterator\u0028\u0029",
-            "name": "getIterator",
-            "summary": "Returns\u0020an\u0020iterator\u0020for\u0020traversing\u0020the\u0020items\u0020in\u0020the\u0020map.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_getIterator"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AsortPriorities\u0028\u0029",
-            "name": "sortPriorities",
-            "summary": "Orders\u0020the\u0020priority\u0020list\u0020internally.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_sortPriorities"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AflattenPriorities\u0028\u0029",
-            "name": "flattenPriorities",
-            "summary": "This\u0020flattens\u0020the\u0020priority\u0020map\u0020into\u0020a\u0020flat\u0020array\u0020\u005B0,...,n\u002D1\u005D",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_flattenPriorities"
+            "url": "classes/Prado-Collections-TPriorityMap.html#method_getNextIntegerKey"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetCount\u0028\u0029",
             "name": "getCount",
             "summary": "",
             "url": "classes/Prado-Collections-TPriorityMap.html#method_getCount"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetPriorityCount\u0028\u0029",
-            "name": "getPriorityCount",
-            "summary": "Gets\u0020the\u0020number\u0020of\u0020items\u0020at\u0020a\u0020priority\u0020within\u0020the\u0020map.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_getPriorityCount"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetPriorities\u0028\u0029",
-            "name": "getPriorities",
-            "summary": "This\u0020returns\u0020a\u0020list\u0020of\u0020the\u0020priorities\u0020within\u0020this\u0020map,\u0020ordered\u0020lowest\u0020to\u0020highest.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_getPriorities"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AgetKeys\u0028\u0029",
             "name": "getKeys",
@@ -2123,18 +2298,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AitemAt\u0028\u0029",
             "name": "itemAt",
-            "summary": "Returns\u0020the\u0020item\u0020with\u0020the\u0020specified\u0020key.\u0020\u0020If\u0020a\u0020priority\u0020is\u0020specified,\u0020only\u0020items\nwithin\u0020that\u0020specific\u0020priority\u0020will\u0020be\u0020selected",
+            "summary": "Returns\u0020the\u0020item\u0020with\u0020the\u0020specified\u0020key.\u0020\u0020If\u0020a\u0020priority\u0020is\u0020specified,\u0020only\u0020items\nwithin\u0020that\u0020specific\u0020priority\u0020will\u0020be\u0020selected.",
             "url": "classes/Prado-Collections-TPriorityMap.html#method_itemAt"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AsetPriorityAt\u0028\u0029",
             "name": "setPriorityAt",
             "summary": "This\u0020changes\u0020an\u0020item\u0027s\u0020priority.\u0020\u0020Specify\u0020the\u0020item\u0020and\u0020the\u0020new\u0020priority.",
             "url": "classes/Prado-Collections-TPriorityMap.html#method_setPriorityAt"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AitemsAtPriority\u0028\u0029",
-            "name": "itemsAtPriority",
-            "summary": "Gets\u0020all\u0020the\u0020items\u0020at\u0020a\u0020specific\u0020priority.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_itemsAtPriority"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003ApriorityOf\u0028\u0029",
             "name": "priorityOf",
@@ -2143,7 +2313,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003ApriorityAt\u0028\u0029",
             "name": "priorityAt",
-            "summary": "Retutrns\u0020the\u0020priority\u0020of\u0020an\u0020item\u0020at\u0020a\u0020particular\u0020flattened\u0020index.",
+            "summary": "Returns\u0020the\u0020priority\u0020of\u0020an\u0020item\u0020at\u0020a\u0020particular\u0020key.\u0020\u0020This\u0020searches\u0020the\u0020map\u0020for\u0020the\u0020item.",
             "url": "classes/Prado-Collections-TPriorityMap.html#method_priorityAt"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003Aadd\u0028\u0029",
@@ -2158,7 +2328,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003Aclear\u0028\u0029",
             "name": "clear",
-            "summary": "Removes\u0020all\u0020items\u0020in\u0020the\u0020map.\u0020\u0020\u007B\u0040link\u0020remove\u007D\u0020is\u0020called\u0020on\u0020all\u0020items.",
+            "summary": "Removes\u0020all\u0020items\u0020in\u0020the\u0020map.\u0020\u0020\u007B\u0040see\u0020remove\u007D\u0020is\u0020called\u0020on\u0020all\u0020items.",
             "url": "classes/Prado-Collections-TPriorityMap.html#method_clear"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003Acontains\u0028\u0029",
@@ -2166,20 +2336,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Collections-TPriorityMap.html#method_contains"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AtoArray\u0028\u0029",
-            "name": "toArray",
-            "summary": "When\u0020the\u0020map\u0020is\u0020flattened\u0020into\u0020an\u0020array,\u0020the\u0020priorities\u0020are\u0020taken\u0020into\naccount\u0020and\u0020elements\u0020of\u0020the\u0020map\u0020are\u0020ordered\u0020in\u0020the\u0020array\u0020according\u0020to\ntheir\u0020priority.",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_toArray"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AtoArrayBelowPriority\u0028\u0029",
-            "name": "toArrayBelowPriority",
-            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020below\u0020the\u0020parameter\u0020value",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_toArrayBelowPriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AtoArrayAbovePriority\u0028\u0029",
-            "name": "toArrayAbovePriority",
-            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020above\u0020the\u0020parameter\u0020value",
-            "url": "classes/Prado-Collections-TPriorityMap.html#method_toArrayAbovePriority"
+            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AkeyOf\u0028\u0029",
+            "name": "keyOf",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityMap.html#method_keyOf"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003AcopyFrom\u0028\u0029",
             "name": "copyFrom",
@@ -2191,30 +2351,45 @@ Search.appendIndex(
             "summary": "Merges\u0020iterable\u0020data\u0020into\u0020the\u0020map.",
             "url": "classes/Prado-Collections-TPriorityMap.html#method_mergeWith"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003A\u0024_o",
-            "name": "_o",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityMap.html#property__o"
-        },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003A\u0024_fd",
-            "name": "_fd",
-            "summary": "",
-            "url": "classes/Prado-Collections-TPriorityMap.html#property__fd"
+            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Collections-TPriorityMap.html#method__getZappableSleepProps"
         },                {
             "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003A\u0024_c",
             "name": "_c",
             "summary": "",
             "url": "classes/Prado-Collections-TPriorityMap.html#property__c"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003A\u0024_dp",
-            "name": "_dp",
+            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003A\u0024_ic",
+            "name": "_ic",
             "summary": "",
-            "url": "classes/Prado-Collections-TPriorityMap.html#property__dp"
+            "url": "classes/Prado-Collections-TPriorityMap.html#property__ic"
         },                {
-            "fqsen": "\\Prado\\Collections\\TPriorityMap\u003A\u003A\u0024_p",
-            "name": "_p",
+            "fqsen": "\\Prado\\Collections\\TPriorityPropertyTrait",
+            "name": "TPriorityPropertyTrait",
+            "summary": "TPriorityPropertyTrait\u0020class",
+            "url": "classes/Prado-Collections-TPriorityPropertyTrait.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityPropertyTrait\u003A\u003AgetPriority\u0028\u0029",
+            "name": "getPriority",
             "summary": "",
-            "url": "classes/Prado-Collections-TPriorityMap.html#property__p"
+            "url": "classes/Prado-Collections-TPriorityPropertyTrait.html#method_getPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityPropertyTrait\u003A\u003AsetPriority\u0028\u0029",
+            "name": "setPriority",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityPropertyTrait.html#method_setPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityPropertyTrait\u003A\u003A_priorityItemZappableSleepProps\u0028\u0029",
+            "name": "_priorityItemZappableSleepProps",
+            "summary": "Call\u0020this\u0020to\u0020exclude\u0020the\u0020priority\u0020property\u0020from\u0020sleep\u0020properties\u0020when\u0020there\nis\u0020no\u0020priority.",
+            "url": "classes/Prado-Collections-TPriorityPropertyTrait.html#method__priorityItemZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TPriorityPropertyTrait\u003A\u003A\u0024_priority",
+            "name": "_priority",
+            "summary": "",
+            "url": "classes/Prado-Collections-TPriorityPropertyTrait.html#property__priority"
         },                {
             "fqsen": "\\Prado\\Collections\\TQueue",
             "name": "TQueue",
@@ -2416,24 +2591,39 @@ Search.appendIndex(
             "summary": "Constructor.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method___construct"
         },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003A__clone\u0028\u0029",
+            "name": "__clone",
+            "summary": "Cloning\u0020a\u0020TWeakCallableCollection\u0020requires\u0020cloning\u0020the\u0020WeakMap",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method___clone"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003A__wakeup\u0028\u0029",
+            "name": "__wakeup",
+            "summary": "Waking\u0020up\u0020a\u0020TWeakCallableCollection\u0020requires\u0020creating\u0020the\u0020WeakMap.\u0020\u0020No\u0020items\nare\u0020saved\u0020in\u0020TWeakList\u0020so\u0020only\u0020initialization\u0020of\u0020the\u0020WeakMap\u0020is\u0020required.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method___wakeup"
+        },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AgetAutoGlobalListen\u0028\u0029",
             "name": "getAutoGlobalListen",
-            "summary": "TWeakCallableCollection\u0020cannot\u0020auto\u0020listen\u0020to\u0020global\u0020events\u0020or\u0020there\u0020will\u0020be\u0020a\u0020loop.",
+            "summary": "TWeakCallableCollection\u0020cannot\u0020auto\u0020listen\u0020to\u0020global\u0020events\u0020or\u0020there\u0020will\u0020be\ncatastrophic\u0020recursion.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_getAutoGlobalListen"
         },                {
-            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AgetWeakReferenceEnabled\u0028\u0029",
-            "name": "getWeakReferenceEnabled",
-            "summary": "returns\u0020whether\u0020or\u0020not\u0020WeakReference\u0020is\u0020enabled,\u0020thus\u0020the\u0020PHP\u0020version\u0020is\u0020over\u00207.4.0",
-            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_getWeakReferenceEnabled"
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AweakCustomAdd\u0028\u0029",
+            "name": "weakCustomAdd",
+            "summary": "This\u0020is\u0020a\u0020custom\u0020function\u0020for\u0020adding\u0020objects\u0020to\u0020the\u0020weak\u0020map.\u0020\u0020Specifically,\nif\u0020the\u0020object\u0020being\u0020added\u0020is\u0020a\u0020TEventHandler,\u0020we\u0020use\u0020the\u0020\u007B\u0040see\u0020\\Prado\\TEventHandler\u003A\u003AgetHandlerObject\u007D\nobject\u0020instead\u0020of\u0020the\u0020TEventHandler\u0020itself.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_weakCustomAdd"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AweakCustomRemove\u0028\u0029",
+            "name": "weakCustomRemove",
+            "summary": "This\u0020is\u0020a\u0020custom\u0020function\u0020for\u0020removing\u0020objects\u0020to\u0020the\u0020weak\u0020map.\u0020\u0020Specifically,\nif\u0020the\u0020object\u0020being\u0020removed\u0020is\u0020a\u0020TEventHandler,\u0020we\u0020use\u0020the\u0020\u007B\u0040see\u0020\\Prado\\TEventHandler\u003A\u003AgetHandlerObject\u007D\nobject\u0020instead\u0020of\u0020the\u0020TEventHandler\u0020itself.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_weakCustomRemove"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AfilterItemsForOutput\u0028\u0029",
             "name": "filterItemsForOutput",
-            "summary": "If\u0020WeakReference\u0020is\u0020available,\u0020converts\u0020the\u0020\u0024items\u0020array\u0020of\u0020callable\u0020that\nhas\u0020WeakReferences\u0020rather\u0020than\u0020the\u0020actual\u0020object\u0020back\u0020into\u0020a\u0020regular\u0020callable.",
+            "summary": "This\u0020converts\u0020the\u0020\u0024items\u0020array\u0020of\u0020callable\u0020with\u0020WeakReferences\u0020back\u0020into\u0020the\nactual\u0020callable.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_filterItemsForOutput"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AfilterItemForOutput\u0028\u0029",
             "name": "filterItemForOutput",
-            "summary": "Converts\u0020the\u0020\u0024handler\u0020callable\u0020that\u0020has\u0020WeakReferences\u0020rather\u0020than\u0020the\u0020actual\u0020object\nback\u0020into\u0020a\u0020regular\u0020callable.",
+            "summary": "This\u0020converts\u0020the\u0020\u0024items\u0020array\u0020of\u0020callable\u0020with\u0020WeakReferences\u0020back\u0020into\u0020the\nactual\u0020callable.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_filterItemForOutput"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AfilterItemForInput\u0028\u0029",
@@ -2441,19 +2631,54 @@ Search.appendIndex(
             "summary": "Converts\u0020the\u0020\u0024handler\u0020callable\u0020into\u0020a\u0020WeakReference\u0020version\u0020for\u0020storage",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_filterItemForInput"
         },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AscrubWeakReferences\u0028\u0029",
+            "name": "scrubWeakReferences",
+            "summary": "When\u0020a\u0020change\u0020in\u0020the\u0020WeakMap\u0020is\u0020detected,\u0020scrub\u0020the\u0020list\u0020of\u0020WeakReference\u0020that\nhave\u0020lost\u0020their\u0020object.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_scrubWeakReferences"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AgetDiscardInvalid\u0028\u0029",
+            "name": "getDiscardInvalid",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_getDiscardInvalid"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AcollapseDiscardInvalid\u0028\u0029",
+            "name": "collapseDiscardInvalid",
+            "summary": "Ensures\u0020that\u0020DiscardInvalid\u0020is\u0020set.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_collapseDiscardInvalid"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AsetDiscardInvalid\u0028\u0029",
+            "name": "setDiscardInvalid",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020on\u0020\u0024value\n\u0020being\u0020\u0022true\u0022.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_setDiscardInvalid"
+        },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AflattenPriorities\u0028\u0029",
             "name": "flattenPriorities",
-            "summary": "This\u0020flattens\u0020the\u0020priority\u0020list\u0020into\u0020a\u0020flat\u0020array\u0020\u005B0,...,n\u002D1\u005D.\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
+            "summary": "This\u0020flattens\u0020the\u0020priority\u0020list\u0020into\u0020a\u0020flat\u0020array\u0020\u005B0,...,n\u002D1\u005D.\u0020This\u0020is\u0020needed\u0020to\nfilter\u0020the\u0020output.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_flattenPriorities"
         },                {
-            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AflattenPrioritiesWeak\u0028\u0029",
-            "name": "flattenPrioritiesWeak",
-            "summary": "This\u0020flattens\u0020the\u0020priority\u0020list\u0020into\u0020a\u0020flat\u0020array\u0020\u005B0,...,n\u002D1\u005D,\u0020but\nleaves\u0020the\u0020objects\u0020in\u0020the\u0020array\u0020as\u0020WeakReference\u0020rather\u0020than\u0020standard\ncallable.",
-            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_flattenPrioritiesWeak"
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AgetPriorities\u0028\u0029",
+            "name": "getPriorities",
+            "summary": "This\u0020returns\u0020a\u0020list\u0020of\u0020the\u0020priorities\u0020within\u0020this\u0020list,\u0020ordered\u0020lowest\u0020\u0028first\u0029\nto\u0020highest\u0020\u0028last\u0029.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_getPriorities"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AgetPriorityCount\u0028\u0029",
+            "name": "getPriorityCount",
+            "summary": "Gets\u0020the\u0020number\u0020of\u0020items\u0020at\u0020a\u0020priority\u0020within\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_getPriorityCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AgetIterator\u0028\u0029",
+            "name": "getIterator",
+            "summary": "Returns\u0020an\u0020iterator\u0020for\u0020traversing\u0020the\u0020items\u0020in\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_getIterator"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AgetCount\u0028\u0029",
+            "name": "getCount",
+            "summary": "Returns\u0020the\u0020total\u0020number\u0020of\u0020items\u0020in\u0020the\u0020list\nAll\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020before\u0020counting.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_getCount"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AitemAt\u0028\u0029",
             "name": "itemAt",
-            "summary": "Returns\u0020the\u0020item\u0020at\u0020the\u0020index\u0020of\u0020a\u0020flattened\u0020priority\u0020list.\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
+            "summary": "Returns\u0020the\u0020item\u0020at\u0020the\u0020index\u0020of\u0020a\u0020flattened\u0020priority\u0020list.\u0020This\u0020is\u0020needed\u0020to\n\u0020filter\u0020the\u0020output.\u0020\u0020\u007B\u0040see\u0020offsetGet\u007D\u0020calls\u0020this\u0020method.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_itemAt"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AitemsAtPriority\u0028\u0029",
@@ -2463,22 +2688,57 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AitemAtIndexInPriority\u0028\u0029",
             "name": "itemAtIndexInPriority",
-            "summary": "Returns\u0020the\u0020item\u0020at\u0020an\u0020index\u0020within\u0020a\u0020priority.\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
+            "summary": "Returns\u0020the\u0020item\u0020at\u0020an\u0020index\u0020within\u0020a\u0020priority.\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\noutput.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_itemAtIndexInPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AinsertAt\u0028\u0029",
+            "name": "insertAt",
+            "summary": "Inserts\u0020an\u0020item\u0020at\u0020an\u0020index.\u0020\u0020It\u0020reads\u0020the\u0020priority\u0020of\u0020the\u0020item\u0020at\u0020index\u0020within\u0020the\nflattened\u0020list\u0020and\u0020then\u0020inserts\u0020the\u0020item\u0020at\u0020that\u0020priority\u002Dindex.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_insertAt"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AinsertAtIndexInPriority\u0028\u0029",
             "name": "insertAtIndexInPriority",
-            "summary": "Inserts\u0020an\u0020item\u0020at\u0020the\u0020specified\u0020index\u0020within\u0020a\u0020priority.\u0020\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020input.",
+            "summary": "Inserts\u0020an\u0020item\u0020at\u0020the\u0020specified\u0020index\u0020within\u0020a\u0020priority.\u0020\u0020This\u0020scrubs\u0020the\u0020list\u0020and\ncalls\u0020\u007B\u0040see\u0020internalInsertAtIndexInPriority\u007D.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_insertAtIndexInPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AinternalInsertAtIndexInPriority\u0028\u0029",
+            "name": "internalInsertAtIndexInPriority",
+            "summary": "Inserts\u0020an\u0020item\u0020at\u0020the\u0020specified\u0020index\u0020within\u0020a\u0020priority.\u0020\u0020This\u0020does\u0020not\u0020scrub\u0020the\nlist\u0020of\u0020WeakReference.\u0020\u0020This\u0020converts\u0020the\u0020item\u0020into\u0020a\u0020WeakReference\u0020if\u0020it\u0020is\u0020an\u0020object\nor\u0020contains\u0020an\u0020object\u0020in\u0020its\u0020callable.\u0020\u0020This\u0020does\u0020not\u0020convert\u0020Closure\u0020into\u0020WeakReference.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_internalInsertAtIndexInPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Removes\u0020an\u0020item\u0020from\u0020the\u0020priority\u0020list.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_remove"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AremoveAt\u0028\u0029",
+            "name": "removeAt",
+            "summary": "Removes\u0020an\u0020item\u0020at\u0020the\u0020specified\u0020index\u0020in\u0020the\u0020flattened\u0020list.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_removeAt"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AremoveAtIndexInPriority\u0028\u0029",
             "name": "removeAtIndexInPriority",
-            "summary": "Removes\u0020the\u0020item\u0020at\u0020a\u0020specific\u0020index\u0020within\u0020a\u0020priority.\u0020\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
+            "summary": "Removes\u0020the\u0020item\u0020at\u0020a\u0020specific\u0020index\u0020within\u0020a\u0020priority.\u0020\u0020This\u0020is\u0020needed\u0020to\u0020filter\nthe\u0020output.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_removeAtIndexInPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AinternalRemoveAtIndexInPriority\u0028\u0029",
+            "name": "internalRemoveAtIndexInPriority",
+            "summary": "Removes\u0020the\u0020item\u0020at\u0020a\u0020specific\u0020index\u0020within\u0020a\u0020priority.\u0020\u0020This\u0020is\u0020needed\u0020to\u0020filter\nthe\u0020output.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_internalRemoveAtIndexInPriority"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003Aclear\u0028\u0029",
+            "name": "clear",
+            "summary": "Removes\u0020all\u0020items\u0020in\u0020the\u0020priority\u0020list\u0020by\u0020calling\u0020removeAtIndexInPriority\u0020from\u0020the\nlast\u0020item\u0020to\u0020the\u0020first.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_clear"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003Acontains\u0028\u0029",
+            "name": "contains",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_contains"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AindexOf\u0028\u0029",
             "name": "indexOf",
-            "summary": "This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020input.",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020before\u0020indexing.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_indexOf"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003ApriorityOf\u0028\u0029",
@@ -2486,30 +2746,305 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020priority\u0020of\u0020a\u0020particular\u0020item.\u0020\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020input.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_priorityOf"
         },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003ApriorityAt\u0028\u0029",
+            "name": "priorityAt",
+            "summary": "Returns\u0020the\u0020priority\u0020of\u0020an\u0020item\u0020at\u0020a\u0020particular\u0020flattened\u0020index.\u0020\u0020The\u0020index\u0020after\nthe\u0020last\u0020item\u0020does\u0020not\u0020exist\u0020but\u0020receives\u0020a\u0020priority\u0020from\u0020the\u0020last\u0020item\u0020so\u0020that\npriority\u0020information\u0020about\u0020any\u0020new\u0020items\u0020being\u0020appended\u0020is\u0020available.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_priorityAt"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AinsertBefore\u0028\u0029",
+            "name": "insertBefore",
+            "summary": "This\u0020inserts\u0020an\u0020item\u0020before\u0020another\u0020item\u0020within\u0020the\u0020list.\u0020\u0020It\u0020uses\u0020the\u0020same\u0020priority\nas\u0020the\u0020found\u0020index\u0020item\u0020and\u0020places\u0020the\u0020new\u0020item\u0020before\u0020it.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_insertBefore"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AinsertAfter\u0028\u0029",
+            "name": "insertAfter",
+            "summary": "This\u0020inserts\u0020an\u0020item\u0020after\u0020another\u0020item\u0020within\u0020the\u0020list.\u0020\u0020It\u0020uses\u0020the\u0020same\u0020priority\nas\u0020the\u0020found\u0020index\u0020item\u0020and\u0020places\u0020the\u0020new\u0020item\u0020after\u0020it.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_insertAfter"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020before\u0020returning.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_toArray"
+        },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AtoPriorityArray\u0028\u0029",
             "name": "toPriorityArray",
-            "summary": "This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020before\u0020returning.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_toPriorityArray"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AtoPriorityArrayWeak\u0028\u0029",
             "name": "toPriorityArrayWeak",
-            "summary": "",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020before\u0020returning.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_toPriorityArrayWeak"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AtoArrayBelowPriority\u0028\u0029",
             "name": "toArrayBelowPriority",
-            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020below\u0020the\u0020parameter\u0020value.\u0020\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
+            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020below\u0020the\u0020parameter\u0020value.\u0020\u0020This\nis\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_toArrayBelowPriority"
         },                {
             "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AtoArrayAbovePriority\u0028\u0029",
             "name": "toArrayAbovePriority",
-            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020above\u0020the\u0020parameter\u0020value.\u0020This\u0020is\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
+            "summary": "Combines\u0020the\u0020map\u0020elements\u0020which\u0020have\u0020a\u0020priority\u0020above\u0020the\u0020parameter\u0020value.\u0020This\nis\u0020needed\u0020to\u0020filter\u0020the\u0020output.",
             "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_toArrayAbovePriority"
         },                {
-            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003A\u0024_weak",
-            "name": "_weak",
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AcopyFrom\u0028\u0029",
+            "name": "copyFrom",
+            "summary": "Copies\u0020iterable\u0020data\u0020into\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_copyFrom"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AmergeWith\u0028\u0029",
+            "name": "mergeWith",
+            "summary": "Merges\u0020iterable\u0020data\u0020into\u0020the\u0020priority\u0020list.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_mergeWith"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003AoffsetSet\u0028\u0029",
+            "name": "offsetSet",
+            "summary": "Sets\u0020the\u0020element\u0020at\u0020the\u0020specified\u0020offset.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020interface\n\\ArrayAccess.\u0020\u0020Setting\u0020elements\u0020in\u0020a\u0020priority\u0020list\u0020is\u0020not\u0020straight\u0020forword\u0020when\nappending\u0020and\u0020setting\u0020at\u0020the\u0020end\u0020boundary.\u0020\u0020When\u0020appending\u0020without\u0020an\u0020offset\u0020\u0028a\nnull\u0020offset\u0029,\u0020the\u0020item\u0020will\u0020be\u0020added\u0020at\u0020the\u0020default\u0020priority.\u0020\u0020The\u0020item\u0020may\u0020not\u0020be\nthe\u0020last\u0020item\u0020in\u0020the\u0020list.\u0020\u0020When\u0020appending\u0020with\u0020an\u0020offset\u0020equal\u0020to\u0020the\u0020count\u0020of\u0020the\nlist,\u0020the\u0020item\u0020will\u0020get\u0020be\u0020appended\u0020with\u0020the\u0020last\u0020items\u0020priority.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method_offsetSet"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\nNOT\u0020be\u0020serialized\u0020because\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\nfor\u0020the\u0020next\u0020page\u0020loads.\u0020\u0020Reimplement\u0020in\u0020derived\u0020classes\u0020to\u0020add\u0020new\u0020variables,\nbut\u0020remember\u0020to\u0020\u0020also\u0020to\u0020call\u0020the\u0020parent\u0020implementation\u0020first.",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#method__getZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003A\u0024_discardInvalid",
+            "name": "_discardInvalid",
             "summary": "",
-            "url": "classes/Prado-Collections-TWeakCallableCollection.html#property__weak"
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#property__discardInvalid"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCallableCollection\u003A\u003A\u0024_eventHandlerCount",
+            "name": "_eventHandlerCount",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCallableCollection.html#property__eventHandlerCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait",
+            "name": "TWeakCollectionTrait",
+            "summary": "TWeakCollectionTrait\u0020trait",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakStart\u0028\u0029",
+            "name": "weakStart",
+            "summary": "Initializes\u0020a\u0020new\u0020WeakMap",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakStart"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakRestart\u0028\u0029",
+            "name": "weakRestart",
+            "summary": "Restarts\u0020the\u0020WeakMap\u0020cache\u0020if\u0020it\u0020exists.",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakRestart"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakClone\u0028\u0029",
+            "name": "weakClone",
+            "summary": "Stops\u0020the\u0020WeakMap\u0020cache.",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakClone"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakChanged\u0028\u0029",
+            "name": "weakChanged",
+            "summary": "Checks\u0020if\u0020the\u0020WeakMap\u0020has\u0020changed.",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakChanged"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakResetCount\u0028\u0029",
+            "name": "weakResetCount",
+            "summary": "Resets\u0020the\u0020new\u0020number\u0020of\u0020known\u0020objects\u0020in\u0020the\u0020list\u0020to\u0020the\u0020current\u0020WeakMap\u0020count.",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakResetCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakCount\u0028\u0029",
+            "name": "weakCount",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakAdd\u0028\u0029",
+            "name": "weakAdd",
+            "summary": "Adds\u0020or\u0020updates\u0020an\u0020object\u0020to\u0020track\u0020with\u0020the\u0020WeakMap.",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakAdd"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakObjectCount\u0028\u0029",
+            "name": "weakObjectCount",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakObjectCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakRemove\u0028\u0029",
+            "name": "weakRemove",
+            "summary": "Removes\u0020or\u0020updates\u0020an\u0020object\u0020from\u0020WeakMap\u0020tracking.",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakRemove"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003AweakStop\u0028\u0029",
+            "name": "weakStop",
+            "summary": "Stops\u0020the\u0020WeakMap\u0020cache.",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method_weakStop"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003A_weakZappableSleepProps\u0028\u0029",
+            "name": "_weakZappableSleepProps",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#method__weakZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003A\u0024_weakMap",
+            "name": "_weakMap",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#property__weakMap"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakCollectionTrait\u003A\u003A\u0024_weakCount",
+            "name": "_weakCount",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakCollectionTrait.html#property__weakCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList",
+            "name": "TWeakList",
+            "summary": "TWeakList\u0020class",
+            "url": "classes/Prado-Collections-TWeakList.html"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-Collections-TWeakList.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003A__clone\u0028\u0029",
+            "name": "__clone",
+            "summary": "Cloning\u0020a\u0020TWeakList\u0020requires\u0020cloning\u0020the\u0020WeakMap",
+            "url": "classes/Prado-Collections-TWeakList.html#method___clone"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003A__wakeup\u0028\u0029",
+            "name": "__wakeup",
+            "summary": "Waking\u0020up\u0020a\u0020TWeakList\u0020requires\u0020creating\u0020the\u0020WeakMap.\u0020\u0020No\u0020items\u0020are\u0020saved\u0020in\nTWeakList\u0020so\u0020only\u0020initialization\u0020of\u0020the\u0020WeakMap\u0020is\u0020required.",
+            "url": "classes/Prado-Collections-TWeakList.html#method___wakeup"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AweakCustomAdd\u0028\u0029",
+            "name": "weakCustomAdd",
+            "summary": "This\u0020is\u0020a\u0020custom\u0020function\u0020for\u0020adding\u0020objects\u0020to\u0020the\u0020weak\u0020map.\u0020\u0020Specifically,\nif\u0020the\u0020object\u0020being\u0020added\u0020is\u0020a\u0020TEventHandler,\u0020we\u0020use\u0020the\u0020\u007B\u0040see\u0020\\Prado\\TEventHandler\u003A\u003AgetHandlerObject\u007D\nobject\u0020instead\u0020of\u0020the\u0020TEventHandler\u0020itself.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_weakCustomAdd"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AweakCustomRemove\u0028\u0029",
+            "name": "weakCustomRemove",
+            "summary": "This\u0020is\u0020a\u0020custom\u0020function\u0020for\u0020removing\u0020objects\u0020to\u0020the\u0020weak\u0020map.\u0020\u0020Specifically,\nif\u0020the\u0020object\u0020being\u0020removed\u0020is\u0020a\u0020TEventHandler,\u0020we\u0020use\u0020the\u0020\u007B\u0040see\u0020\\Prado\\TEventHandler\u003A\u003AgetHandlerObject\u007D\nobject\u0020instead\u0020of\u0020the\u0020TEventHandler\u0020itself.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_weakCustomRemove"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AfilterItemForOutput\u0028\u0029",
+            "name": "filterItemForOutput",
+            "summary": "Converts\u0020the\u0020\u0024item\u0020callable\u0020that\u0020has\u0020WeakReference\u0020rather\u0020than\u0020the\u0020actual\u0020object\nback\u0020into\u0020a\u0020regular\u0020callable.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_filterItemForOutput"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AfilterItemForInput\u0028\u0029",
+            "name": "filterItemForInput",
+            "summary": "Converts\u0020the\u0020\u0024item\u0020object\u0020and\u0020objects\u0020in\u0020an\u0020array\u0020into\u0020their\u0020WeakReference\u0020version\nfor\u0020storage.\u0020\u0020Closure\u005Bs\u005D\u0020are\u0020not\u0020converted\u0020into\u0020WeakReference\u0020and\u0020so\u0020act\u0020like\u0020a\nbasic\u0020PHP\u0020type.\u0020\u0020Closures\u0020are\u0020added\u0020to\u0020the\u0020the\u0020WeakMap\u0020cache\u0020but\u0020has\u0020no\u0020weak\neffect\u0020because\u0020the\u0020TWeakList\u0020maintains\u0020references\u0020to\u0020Closure\u005Bs\u005D\u0020preventing\u0020their\ninvalidation.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_filterItemForInput"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AscrubWeakReferences\u0028\u0029",
+            "name": "scrubWeakReferences",
+            "summary": "When\u0020a\u0020change\u0020in\u0020the\u0020WeakMap\u0020is\u0020detected,\u0020scrub\u0020the\u0020list\u0020of\u0020invalid\u0020WeakReference.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_scrubWeakReferences"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AgetDiscardInvalid\u0028\u0029",
+            "name": "getDiscardInvalid",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakList.html#method_getDiscardInvalid"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AcollapseDiscardInvalid\u0028\u0029",
+            "name": "collapseDiscardInvalid",
+            "summary": "Ensures\u0020that\u0020DiscardInvalid\u0020is\u0020set.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_collapseDiscardInvalid"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AsetDiscardInvalid\u0028\u0029",
+            "name": "setDiscardInvalid",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakList.html#method_setDiscardInvalid"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AgetIterator\u0028\u0029",
+            "name": "getIterator",
+            "summary": "Returns\u0020an\u0020iterator\u0020for\u0020traversing\u0020the\u0020items\u0020in\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_getIterator"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AgetCount\u0028\u0029",
+            "name": "getCount",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020before\u0020counting.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_getCount"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AitemAt\u0028\u0029",
+            "name": "itemAt",
+            "summary": "Returns\u0020the\u0020item\u0020at\u0020the\u0020specified\u0020offset.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_itemAt"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "Appends\u0020an\u0020item\u0020at\u0020the\u0020end\u0020of\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_add"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AinsertAt\u0028\u0029",
+            "name": "insertAt",
+            "summary": "Inserts\u0020an\u0020item\u0020at\u0020the\u0020specified\u0020position.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_insertAt"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Removes\u0020an\u0020item\u0020from\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_remove"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AremoveAt\u0028\u0029",
+            "name": "removeAt",
+            "summary": "Removes\u0020an\u0020item\u0020at\u0020the\u0020specified\u0020position.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_removeAt"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003Aclear\u0028\u0029",
+            "name": "clear",
+            "summary": "Removes\u0020all\u0020items\u0020in\u0020the\u0020list\u0020and\u0020resets\u0020the\u0020Weak\u0020Cache.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_clear"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003Acontains\u0028\u0029",
+            "name": "contains",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakList.html#method_contains"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AindexOf\u0028\u0029",
+            "name": "indexOf",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list\u0020before\u0020indexing.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_indexOf"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AinsertBefore\u0028\u0029",
+            "name": "insertBefore",
+            "summary": "Finds\u0020the\u0020base\u0020item.\u0020\u0020If\u0020found,\u0020the\u0020item\u0020is\u0020inserted\u0020before\u0020it.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_insertBefore"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AinsertAfter\u0028\u0029",
+            "name": "insertAfter",
+            "summary": "Finds\u0020the\u0020base\u0020item.\u0020\u0020If\u0020found,\u0020the\u0020item\u0020is\u0020inserted\u0020after\u0020it.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_insertAfter"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "All\u0020invalid\u0020WeakReference\u005Bs\u005D\u0020are\u0020optionally\u0020removed\u0020from\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_toArray"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AcopyFrom\u0028\u0029",
+            "name": "copyFrom",
+            "summary": "Copies\u0020iterable\u0020data\u0020into\u0020the\u0020list.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_copyFrom"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AmergeWith\u0028\u0029",
+            "name": "mergeWith",
+            "summary": "Merges\u0020iterable\u0020data\u0020into\u0020the\u0020map.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_mergeWith"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AoffsetExists\u0028\u0029",
+            "name": "offsetExists",
+            "summary": "Returns\u0020whether\u0020there\u0020is\u0020an\u0020item\u0020at\u0020the\u0020specified\u0020offset.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_offsetExists"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003AoffsetSet\u0028\u0029",
+            "name": "offsetSet",
+            "summary": "Sets\u0020the\u0020item\u0020at\u0020the\u0020specified\u0020offset.",
+            "url": "classes/Prado-Collections-TWeakList.html#method_offsetSet"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\nNOT\u0020be\u0020serialized\u0020because\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\nfor\u0020the\u0020next\u0020page\u0020loads.\u0020\u0020Reimplement\u0020in\u0020derived\u0020classes\u0020to\u0020add\u0020new\u0020variables,\nbut\u0020remember\u0020to\u0020\u0020also\u0020to\u0020call\u0020the\u0020parent\u0020implementation\u0020first.",
+            "url": "classes/Prado-Collections-TWeakList.html#method__getZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003A\u0024_discardInvalid",
+            "name": "_discardInvalid",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakList.html#property__discardInvalid"
+        },                {
+            "fqsen": "\\Prado\\Collections\\TWeakList\u003A\u003A\u0024_eventHandlerCount",
+            "name": "_eventHandlerCount",
+            "summary": "",
+            "url": "classes/Prado-Collections-TWeakList.html#property__eventHandlerCount"
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\Exceptions\\TActiveRecordConfigurationException",
             "name": "TActiveRecordConfigurationException",
@@ -3528,7 +4063,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\Scaffold\\TScaffoldSearch",
             "name": "TScaffoldSearch",
-            "summary": "TScaffoldSearch\u0020provide\u0020a\u0020simple\u0020textbox\u0020and\u0020a\u0020button\u0020that\u0020is\u0020used\nto\u0020perform\u0020search\u0020on\u0020a\u0020TScaffoldListView\u0020with\u0020ID\u0020given\u0020by\u0020\u007B\u0040link\u0020setListViewID\u0020ListViewID\u007D.",
+            "summary": "TScaffoldSearch\u0020provide\u0020a\u0020simple\u0020textbox\u0020and\u0020a\u0020button\u0020that\u0020is\u0020used\nto\u0020perform\u0020search\u0020on\u0020a\u0020TScaffoldListView\u0020with\u0020ID\u0020given\u0020by\u0020\u007B\u0040see\u0020setListViewID\u0020ListViewID\u007D.",
             "url": "classes/Prado-Data-ActiveRecord-Scaffold-TScaffoldSearch.html"
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\Scaffold\\TScaffoldSearch\u003A\u003AgetListView\u0028\u0029",
@@ -4063,12 +4598,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordConfig\u003A\u003A\u0024_managerClass",
             "name": "_managerClass",
-            "summary": "Defaults\u0020to\u0020\u007B\u0040link\u0020TActiveRecordConfig\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_MANAGER_CLASS\u007D",
+            "summary": "Defaults\u0020to\u0020\u007B\u0040see\u0020\\Prado\\Data\\ActiveRecord\\TActiveRecordConfig\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_MANAGER_CLASS\u007D",
             "url": "classes/Prado-Data-ActiveRecord-TActiveRecordConfig.html#property__managerClass"
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordConfig\u003A\u003A\u0024_gatewayClass",
             "name": "_gatewayClass",
-            "summary": "Defaults\u0020to\u0020\u007B\u0040link\u0020TActiveRecordConfig\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_GATEWAY_CLASS\u007D",
+            "summary": "Defaults\u0020to\u0020\u007B\u0040see\u0020\\Prado\\Data\\ActiveRecord\\TActiveRecordConfig\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_GATEWAY_CLASS\u007D",
             "url": "classes/Prado-Data-ActiveRecord-TActiveRecordConfig.html#property__gatewayClass"
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordConfig\u003A\u003A\u0024_manager",
@@ -4083,7 +4618,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordConfig\u003A\u003A\u0024_invalidFinderResult",
             "name": "_invalidFinderResult",
-            "summary": "Defaults\u0020to\u0020\u0027\u007B\u0040link\u0020TActiveRecordInvalidFinderResult\u003A\u003ANull\u0020Null\u007D\u0027",
+            "summary": "Defaults\u0020to\u0020\u0027\u007B\u0040see\u0020\\Prado\\Data\\ActiveRecord\\TActiveRecordInvalidFinderResult\u003A\u003ANull\u0020Null\u007D\u0027",
             "url": "classes/Prado-Data-ActiveRecord-TActiveRecordConfig.html#property__invalidFinderResult"
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordCriteria",
@@ -4248,7 +4783,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordGateway\u003A\u003A\u0024_dataGatewayClass",
             "name": "_dataGatewayClass",
-            "summary": "Defaults\u0020to\u0020\u007B\u0040link\u0020TActiveRecordGateway\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_GATEWAY_CLASS\u007D",
+            "summary": "Defaults\u0020to\u0020\u007B\u0040see\u0020\\Prado\\Data\\ActiveRecord\\TActiveRecordGateway\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_GATEWAY_CLASS\u007D",
             "url": "classes/Prado-Data-ActiveRecord-TActiveRecordGateway.html#property__dataGatewayClass"
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordGateway\u003A\u003A\u0024_manager",
@@ -4358,7 +4893,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordManager\u003A\u003A\u0024_gatewayClass",
             "name": "_gatewayClass",
-            "summary": "Defaults\u0020to\u0020\u007B\u0040link\u0020TActiveRecordManager\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_GATEWAY_CLASS\u007D",
+            "summary": "Defaults\u0020to\u0020\u007B\u0040see\u0020\\Prado\\Data\\ActiveRecord\\TActiveRecordManager\u003A\u003ADEFAULT_GATEWAY_CLASS\u0020DEFAULT_GATEWAY_CLASS\u007D",
             "url": "classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#property__gatewayClass"
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordManager\u003A\u003A\u0024_gateway",
@@ -4383,7 +4918,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\ActiveRecord\\TActiveRecordManager\u003A\u003A\u0024_invalidFinderResult",
             "name": "_invalidFinderResult",
-            "summary": "Defaults\u0020to\u0020\u0027\u007B\u0040link\u0020TActiveRecordInvalidFinderResult\u003A\u003ANull\u0020Null\u007D\u0027",
+            "summary": "Defaults\u0020to\u0020\u0027\u007B\u0040see\u0020\\Prado\\Data\\ActiveRecord\\TActiveRecordInvalidFinderResult\u003A\u003ANull\u0020Null\u007D\u0027",
             "url": "classes/Prado-Data-ActiveRecord-TActiveRecordManager.html#property__invalidFinderResult"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\Mssql\\TMssqlCommandBuilder",
@@ -5198,12 +5733,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder",
             "name": "TDbCommandBuilder",
-            "summary": "TDbCommandBuilder\u0020provides\u0020basic\u0020methods\u0020to\u0020create\u0020query\u0020commands\u0020for\u0020tables\ngiving\u0020by\u0020\u007B\u0040link\u0020setTableInfo\u0020TableInfo\u007D\u0020the\u0020property.",
+            "summary": "TDbCommandBuilder\u0020provides\u0020basic\u0020methods\u0020to\u0020create\u0020query\u0020commands\u0020for\u0020tables\ngiving\u0020by\u0020\u007B\u0040see\u0020setTableInfo\u0020TableInfo\u007D\u0020the\u0020property.",
             "url": "classes/Prado-Data-Common-TDbCommandBuilder.html"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Data-Common-TDbCommandBuilder.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder\u003A\u003AgetDbConnection\u0028\u0029",
@@ -5268,22 +5803,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder\u003A\u003AcreateCountCommand\u0028\u0029",
             "name": "createCountCommand",
-            "summary": "Creates\u0020a\u0020count\u0028\u002A\u0029\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040link\u0020setTableInfo\u0020TableInfo\u007D.",
+            "summary": "Creates\u0020a\u0020count\u0028\u002A\u0029\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040see\u0020setTableInfo\u0020TableInfo\u007D.",
             "url": "classes/Prado-Data-Common-TDbCommandBuilder.html#method_createCountCommand"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder\u003A\u003AcreateDeleteCommand\u0028\u0029",
             "name": "createDeleteCommand",
-            "summary": "Creates\u0020a\u0020delete\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040link\u0020setTableInfo\u0020TableInfo\u007D.",
+            "summary": "Creates\u0020a\u0020delete\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040see\u0020setTableInfo\u0020TableInfo\u007D.",
             "url": "classes/Prado-Data-Common-TDbCommandBuilder.html#method_createDeleteCommand"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder\u003A\u003AcreateInsertCommand\u0028\u0029",
             "name": "createInsertCommand",
-            "summary": "Creates\u0020an\u0020insert\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040link\u0020setTableInfo\u0020TableInfo\u007D\u0020for\u0020the\u0020given\u0020data.",
+            "summary": "Creates\u0020an\u0020insert\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040see\u0020setTableInfo\u0020TableInfo\u007D\u0020for\u0020the\u0020given\u0020data.",
             "url": "classes/Prado-Data-Common-TDbCommandBuilder.html#method_createInsertCommand"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder\u003A\u003AcreateUpdateCommand\u0028\u0029",
             "name": "createUpdateCommand",
-            "summary": "Creates\u0020an\u0020update\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040link\u0020setTableInfo\u0020TableInfo\u007D\u0020for\u0020the\u0020given\u0020data.",
+            "summary": "Creates\u0020an\u0020update\u0020command\u0020for\u0020the\u0020table\u0020described\u0020in\u0020\u007B\u0040see\u0020setTableInfo\u0020TableInfo\u007D\u0020for\u0020the\u0020given\u0020data.",
             "url": "classes/Prado-Data-Common-TDbCommandBuilder.html#method_createUpdateCommand"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbCommandBuilder\u003A\u003AgetInsertFieldBindings\u0028\u0029",
@@ -5338,7 +5873,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbMetaData\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Data-Common-TDbMetaData.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\Common\\TDbMetaData\u003A\u003AgetDbConnection\u0028\u0029",
@@ -5628,7 +6163,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\DataGateway\\TDataGatewayCommand\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Data-DataGateway-TDataGatewayCommand.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\DataGateway\\TDataGatewayCommand\u003A\u003AgetTableInfo\u0028\u0029",
@@ -5778,7 +6313,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\DataGateway\\TDataGatewayEventParameter\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructor.",
             "url": "classes/Prado-Data-DataGateway-TDataGatewayEventParameter.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\DataGateway\\TDataGatewayEventParameter\u003A\u003AgetCommand\u0028\u0029",
@@ -5803,12 +6338,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\DataGateway\\TDataGatewayResultEventParameter",
             "name": "TDataGatewayResultEventParameter",
-            "summary": "TDataGatewayResultEventParameter\u0020contains\u0020the\u0020TDbCommand\u0020executed\u0020and\u0020the\u0020resulting\ndata\u0020returned\u0020from\u0020the\u0020database.\u0020The\u0020data\u0020can\u0020be\u0020changed\u0020by\u0020changing\u0020the\n\u007B\u0040link\u0020setResult\u0020Result\u007D\u0020property.",
+            "summary": "TDataGatewayResultEventParameter\u0020contains\u0020the\u0020TDbCommand\u0020executed\u0020and\u0020the\u0020resulting\ndata\u0020returned\u0020from\u0020the\u0020database.\u0020The\u0020data\u0020can\u0020be\u0020changed\u0020by\u0020changing\u0020the\n\u007B\u0040see\u0020setResult\u0020Result\u007D\u0020property.",
             "url": "classes/Prado-Data-DataGateway-TDataGatewayResultEventParameter.html"
         },                {
             "fqsen": "\\Prado\\Data\\DataGateway\\TDataGatewayResultEventParameter\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructor.",
             "url": "classes/Prado-Data-DataGateway-TDataGatewayResultEventParameter.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\DataGateway\\TDataGatewayResultEventParameter\u003A\u003AgetCommand\u0028\u0029",
@@ -6288,7 +6823,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TParameterMap\u003A\u003AcreateTypeHandler\u0028\u0029",
             "name": "createTypeHandler",
-            "summary": "Create\u0020type\u0020handler\u0020from\u0020\u007B\u0040link\u0020Type\u0020setType\u0028\u0029\u007D\u0020or\u0020\u007B\u0040link\u0020TypeHandler\u0020setTypeHandler\u007D.",
+            "summary": "Create\u0020type\u0020handler\u0020from\u0020\u007B\u0040see\u0020Type\u0020setType\u0028\u0029\u007D\u0020or\u0020\u007B\u0040see\u0020TypeHandler\u0020setTypeHandler\u007D.",
             "url": "classes/Prado-Data-SqlMap-Configuration-TParameterMap.html#method_createTypeHandler"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TParameterMap\u003A\u003AgetObjectValue\u0028\u0029",
@@ -6298,7 +6833,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TParameterMap\u003A\u003AnullifyDefaultValue\u0028\u0029",
             "name": "nullifyDefaultValue",
-            "summary": "When\u0020the\u0020actual\u0020value\u0020matches\u0020the\u0020\u007B\u0040link\u0020NullValue\u0020TParameterProperty\u003A\u003AsetNullValue\u0028\u0029\u007D,\nset\u0020the\u0020current\u0020value\u0020to\u0020null.",
+            "summary": "When\u0020the\u0020actual\u0020value\u0020matches\u0020the\u0020\u007B\u0040see\u0020NullValue\u0020TParameterProperty\u003A\u003AsetNullValue\u0028\u0029\u007D,\nset\u0020the\u0020current\u0020value\u0020to\u0020null.",
             "url": "classes/Prado-Data-SqlMap-Configuration-TParameterMap.html#method_nullifyDefaultValue"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TParameterMap\u003A\u003A\u0024_extend",
@@ -6663,7 +7198,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TResultProperty\u003A\u003AcreateTypeHandler\u0028\u0029",
             "name": "createTypeHandler",
-            "summary": "Create\u0020type\u0020handler\u0020from\u0020\u007B\u0040link\u0020Type\u0020setType\u0028\u0029\u007D\u0020or\u0020\u007B\u0040link\u0020TypeHandler\u0020setTypeHandler\u007D.",
+            "summary": "Create\u0020type\u0020handler\u0020from\u0020\u007B\u0040see\u0020Type\u0020setType\u0028\u0029\u007D\u0020or\u0020\u007B\u0040see\u0020TypeHandler\u0020setTypeHandler\u007D.",
             "url": "classes/Prado-Data-SqlMap-Configuration-TResultProperty.html#method_createTypeHandler"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TResultProperty\u003A\u003AgetPropertyValueType\u0028\u0029",
@@ -6673,12 +7208,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TResultProperty\u003A\u003AinstanceOfListType\u0028\u0029",
             "name": "instanceOfListType",
-            "summary": "Returns\u0020true\u0020if\u0020the\u0020result\u0020property\u0020\u007B\u0040link\u0020Type\u0020getType\u0028\u0029\u007D\u0020is\u0020of\u0020TList\u0020type\nor\u0020that\u0020the\u0020actual\u0020result\u0020object\u0020is\u0020an\u0020instance\u0020of\u0020TList.",
+            "summary": "Returns\u0020true\u0020if\u0020the\u0020result\u0020property\u0020\u007B\u0040see\u0020Type\u0020getType\u0028\u0029\u007D\u0020is\u0020of\u0020TList\u0020type\nor\u0020that\u0020the\u0020actual\u0020result\u0020object\u0020is\u0020an\u0020instance\u0020of\u0020TList.",
             "url": "classes/Prado-Data-SqlMap-Configuration-TResultProperty.html#method_instanceOfListType"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TResultProperty\u003A\u003AinstanceOfArrayType\u0028\u0029",
             "name": "instanceOfArrayType",
-            "summary": "Returns\u0020true\u0020if\u0020the\u0020result\u0020property\u0020\u007B\u0040link\u0020Type\u0020getType\u0028\u0029\u007D\u0020is\u0020of\u0020\\ArrayAccess\nor\u0020that\u0020the\u0020actual\u0020result\u0020object\u0020is\u0020an\u0020array\u0020or\u0020implements\u0020\\ArrayAccess",
+            "summary": "Returns\u0020true\u0020if\u0020the\u0020result\u0020property\u0020\u007B\u0040see\u0020Type\u0020getType\u0028\u0029\u007D\u0020is\u0020of\u0020\\ArrayAccess\nor\u0020that\u0020the\u0020actual\u0020result\u0020object\u0020is\u0020an\u0020array\u0020or\u0020implements\u0020\\ArrayAccess",
             "url": "classes/Prado-Data-SqlMap-Configuration-TResultProperty.html#method_instanceOfArrayType"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TResultProperty\u003A\u003A__sleep\u0028\u0029",
@@ -7053,7 +7588,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TSqlMapStatement\u003A\u003AsetParameterClass\u0028\u0029",
             "name": "setParameterClass",
-            "summary": "If\u0020a\u0020\u007B\u0040link\u0020ParameterMap\u0020setParameterMap\u0028\u0029\u007D\u0020property\u0020is\u0020not\u0020specified,\nyou\u0020may\u0020specify\u0020a\u0020ParameterClass\u0020instead\u0020and\u0020use\u0020inline\u0020parameters.",
+            "summary": "If\u0020a\u0020\u007B\u0040see\u0020ParameterMap\u0020setParameterMap\u0028\u0029\u007D\u0020property\u0020is\u0020not\u0020specified,\nyou\u0020may\u0020specify\u0020a\u0020ParameterClass\u0020instead\u0020and\u0020use\u0020inline\u0020parameters.",
             "url": "classes/Prado-Data-SqlMap-Configuration-TSqlMapStatement.html#method_setParameterClass"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TSqlMapStatement\u003A\u003AgetResultMap\u0028\u0029",
@@ -7073,7 +7608,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TSqlMapStatement\u003A\u003AsetResultClass\u0028\u0029",
             "name": "setResultClass",
-            "summary": "If\u0020a\u0020\u007B\u0040link\u0020ResultMap\u0020setResultMap\u0028\u0029\u007D\u0020is\u0020not\u0020specified,\u0020you\u0020may\u0020specify\u0020a\nResultClass\u0020instead.\u0020The\u0020value\u0020of\u0020the\u0020ResultClass\u0020property\u0020can\u0020be\u0020the\nname\u0020of\u0020a\u0020PHP\u0020class\u0020or\u0020primitives\u0020like\u0020integer,\u0020string,\u0020or\u0020array.\u0020The\nclass\u0020specified\u0020will\u0020be\u0020automatically\u0020mapped\u0020to\u0020the\u0020columns\u0020in\u0020the\nresult,\u0020based\u0020on\u0020the\u0020result\u0020metadata.",
+            "summary": "If\u0020a\u0020\u007B\u0040see\u0020ResultMap\u0020setResultMap\u0028\u0029\u007D\u0020is\u0020not\u0020specified,\u0020you\u0020may\u0020specify\u0020a\nResultClass\u0020instead.\u0020The\u0020value\u0020of\u0020the\u0020ResultClass\u0020property\u0020can\u0020be\u0020the\nname\u0020of\u0020a\u0020PHP\u0020class\u0020or\u0020primitives\u0020like\u0020integer,\u0020string,\u0020or\u0020array.\u0020The\nclass\u0020specified\u0020will\u0020be\u0020automatically\u0020mapped\u0020to\u0020the\u0020columns\u0020in\u0020the\nresult,\u0020based\u0020on\u0020the\u0020result\u0020metadata.",
             "url": "classes/Prado-Data-SqlMap-Configuration-TSqlMapStatement.html#method_setResultClass"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Configuration\\TSqlMapStatement\u003A\u003AgetCacheModel\u0028\u0029",
@@ -8078,7 +8613,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TCachingStatement\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Data-SqlMap-Statements-TCachingStatement.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TCachingStatement\u003A\u003AgetID\u0028\u0029",
@@ -8353,7 +8888,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TMappedStatement\u003A\u003A__wakeup\u0028\u0029",
             "name": "__wakeup",
-            "summary": "",
+            "summary": "The\u0020common\u0020__wakeup\u0020magic\u0020method\u0020from\u0020PHP\u0027s\u0020\u0022unserialize\u0022.",
             "url": "classes/Prado-Data-SqlMap-Statements-TMappedStatement.html#method___wakeup"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TMappedStatement\u003A\u003A__sleep\u0028\u0029",
@@ -8603,7 +9138,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TResultSetListItemParameter\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Data-SqlMap-Statements-TResultSetListItemParameter.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TResultSetListItemParameter\u003A\u003AgetResult\u0028\u0029",
@@ -8643,7 +9178,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TResultSetMapItemParameter\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Data-SqlMap-Statements-TResultSetMapItemParameter.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\Statements\\TResultSetMapItemParameter\u003A\u003AgetKey\u0028\u0029",
@@ -8918,7 +9453,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\TSqlMapGateway\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Data-SqlMap-TSqlMapGateway.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\TSqlMapGateway\u003A\u003AgetSqlMapManager\u0028\u0029",
@@ -9038,7 +9573,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\TSqlMapManager\u003A\u003AcreateSqlMapGateway\u0028\u0029",
             "name": "createSqlMapGateway",
-            "summary": "Configures\u0020the\u0020current\u0020TSqlMapManager\u0020using\u0020the\u0020given\u0020xml\u0020configuration\u0020file\ndefined\u0020in\u0020\u007B\u0040link\u0020ConfigFile\u0020setConfigFile\u0028\u0029\u007D.",
+            "summary": "Configures\u0020the\u0020current\u0020TSqlMapManager\u0020using\u0020the\u0020given\u0020xml\u0020configuration\u0020file\ndefined\u0020in\u0020\u007B\u0040see\u0020ConfigFile\u0020setConfigFile\u0028\u0029\u007D.",
             "url": "classes/Prado-Data-SqlMap-TSqlMapManager.html#method_createSqlMapGateway"
         },                {
             "fqsen": "\\Prado\\Data\\SqlMap\\TSqlMapManager\u003A\u003AgetMappedStatements\u0028\u0029",
@@ -9153,7 +9688,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\TDataSourceConfig\u003A\u003AsetConnectionID\u0028\u0029",
             "name": "setConnectionID",
-            "summary": "The\u0020module\u0020ID\u0020of\u0020another\u0020TDataSourceConfig.\u0020The\u0020\u007B\u0040link\u0020getDbConnection\u0020DbConnection\u007D\nproperty\u0020of\u0020this\u0020configuration\u0020will\u0020equal\u0020to\u0020\u007B\u0040link\u0020getDbConnection\u0020DbConnection\u007D\nof\u0020the\u0020given\u0020TDataSourceConfig\u0020module.",
+            "summary": "The\u0020module\u0020ID\u0020of\u0020another\u0020TDataSourceConfig.\u0020The\u0020\u007B\u0040see\u0020getDbConnection\u0020DbConnection\u007D\nproperty\u0020of\u0020this\u0020configuration\u0020will\u0020equal\u0020to\u0020\u007B\u0040see\u0020getDbConnection\u0020DbConnection\u007D\nof\u0020the\u0020given\u0020TDataSourceConfig\u0020module.",
             "url": "classes/Prado-Data-TDataSourceConfig.html#method_setConnectionID"
         },                {
             "fqsen": "\\Prado\\Data\\TDataSourceConfig\u003A\u003AgetConnectionID\u0028\u0029",
@@ -9163,7 +9698,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\TDataSourceConfig\u003A\u003AgetDbConnection\u0028\u0029",
             "name": "getDbConnection",
-            "summary": "Gets\u0020the\u0020TDbConnection\u0020from\u0020another\u0020module\u0020if\u0020\u007B\u0040link\u0020setConnectionID\u0020ConnectionID\u007D\nis\u0020supplied\u0020and\u0020valid.\u0020Otherwise,\u0020a\u0020connection\u0020of\u0020type\u0020given\u0020by\n\u007B\u0040link\u0020setConnectionClass\u0020ConnectionClass\u007D\u0020is\u0020created.",
+            "summary": "Gets\u0020the\u0020TDbConnection\u0020from\u0020another\u0020module\u0020if\u0020\u007B\u0040see\u0020setConnectionID\u0020ConnectionID\u007D\nis\u0020supplied\u0020and\u0020valid.\u0020Otherwise,\u0020a\u0020connection\u0020of\u0020type\u0020given\u0020by\n\u007B\u0040see\u0020setConnectionClass\u0020ConnectionClass\u007D\u0020is\u0020created.",
             "url": "classes/Prado-Data-TDataSourceConfig.html#method_getDbConnection"
         },                {
             "fqsen": "\\Prado\\Data\\TDataSourceConfig\u003A\u003AgetDatabase\u0028\u0029",
@@ -9178,7 +9713,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Data\\TDataSourceConfig\u003A\u003AsetConnectionClass\u0028\u0029",
             "name": "setConnectionClass",
-            "summary": "The\u0020database\u0020connection\u0020class\u0020name\u0020to\u0020be\u0020created\u0020when\u0020\u007B\u0040link\u0020getDbConnection\u007D\nmethod\u0020is\u0020called\u0020\u003Cb\u003Eand\u003C\/b\u003E\u0020\u007B\u0040link\u0020setConnectionID\u0020ConnectionID\u007D\u0020is\u0020null.\u0020The\n\u007B\u0040link\u0020setConnectionClass\u0020ConnectionClass\u007D\u0020property\u0020must\u0020be\u0020set\u0020before\ncalling\u0020\u007B\u0040link\u0020getDbConnection\u007D\u0020if\u0020you\u0020wish\u0020to\u0020create\u0020the\u0020connection\u0020using\u0020the\ngiven\u0020class\u0020name.",
+            "summary": "The\u0020database\u0020connection\u0020class\u0020name\u0020to\u0020be\u0020created\u0020when\u0020\u007B\u0040see\u0020getDbConnection\u007D\nmethod\u0020is\u0020called\u0020\u003Cb\u003Eand\u003C\/b\u003E\u0020\u007B\u0040see\u0020setConnectionID\u0020ConnectionID\u007D\u0020is\u0020null.\u0020The\n\u007B\u0040see\u0020setConnectionClass\u0020ConnectionClass\u007D\u0020property\u0020must\u0020be\u0020set\u0020before\ncalling\u0020\u007B\u0040see\u0020getDbConnection\u007D\u0020if\u0020you\u0020wish\u0020to\u0020create\u0020the\u0020connection\u0020using\u0020the\ngiven\u0020class\u0020name.",
             "url": "classes/Prado-Data-TDataSourceConfig.html#method_setConnectionClass"
         },                {
             "fqsen": "\\Prado\\Data\\TDataSourceConfig\u003A\u003AfindConnectionByID\u0028\u0029",
@@ -9976,6 +10511,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Exceptions-TException.html#property__messageCache"
         },                {
+            "fqsen": "\\Prado\\Exceptions\\TExitException",
+            "name": "TExitException",
+            "summary": "TExitException\u0020class",
+            "url": "classes/Prado-Exceptions-TExitException.html"
+        },                {
+            "fqsen": "\\Prado\\Exceptions\\TExitException\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-Exceptions-TExitException.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Exceptions\\TExitException\u003A\u003AgetExitCode\u0028\u0029",
+            "name": "getExitCode",
+            "summary": "",
+            "url": "classes/Prado-Exceptions-TExitException.html#method_getExitCode"
+        },                {
+            "fqsen": "\\Prado\\Exceptions\\TExitException\u003A\u003A\u0024_exitCode",
+            "name": "_exitCode",
+            "summary": "",
+            "url": "classes/Prado-Exceptions-TExitException.html#property__exitCode"
+        },                {
             "fqsen": "\\Prado\\Exceptions\\THttpException",
             "name": "THttpException",
             "summary": "THttpException\u0020class",
@@ -10016,6 +10571,16 @@ Search.appendIndex(
             "summary": "TIOException\u0020class",
             "url": "classes/Prado-Exceptions-TIOException.html"
         },                {
+            "fqsen": "\\Prado\\Exceptions\\TLogException",
+            "name": "TLogException",
+            "summary": "TLogException\u0020class",
+            "url": "classes/Prado-Exceptions-TLogException.html"
+        },                {
+            "fqsen": "\\Prado\\Exceptions\\TNetworkException",
+            "name": "TNetworkException",
+            "summary": "TNetworkException\u0020class",
+            "url": "classes/Prado-Exceptions-TNetworkException.html"
+        },                {
             "fqsen": "\\Prado\\Exceptions\\TNotSupportedException",
             "name": "TNotSupportedException",
             "summary": "TNotSupportedException\u0020class",
@@ -10040,6 +10605,16 @@ Search.appendIndex(
             "name": "TPhpFatalErrorException",
             "summary": "TPhpFatalErrorException\u0020class",
             "url": "classes/Prado-Exceptions-TPhpFatalErrorException.html"
+        },                {
+            "fqsen": "\\Prado\\Exceptions\\TSocketException",
+            "name": "TSocketException",
+            "summary": "TSocketException\u0020class",
+            "url": "classes/Prado-Exceptions-TSocketException.html"
+        },                {
+            "fqsen": "\\Prado\\Exceptions\\TSocketException\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-Exceptions-TSocketException.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Exceptions\\TSystemException",
             "name": "TSystemException",
@@ -10095,6 +10670,11 @@ Search.appendIndex(
             "name": "_fileName",
             "summary": "",
             "url": "classes/Prado-Exceptions-TTemplateException.html#property__fileName"
+        },                {
+            "fqsen": "\\Prado\\Exceptions\\TUserException",
+            "name": "TUserException",
+            "summary": "TUserException\u0020class",
+            "url": "classes/Prado-Exceptions-TUserException.html"
         },                {
             "fqsen": "\\Prado\\I18N\\core\\ChoiceFormat",
             "name": "ChoiceFormat",
@@ -10158,7 +10738,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\I18N\\core\\CultureInfo\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "Initializes\u0020a\u0020new\u0020instance\u0020of\u0020the\u0020CultureInfo\u0020class\u0020based\u0020on\u0020the\nculture\u0020specified\u0020by\u0020name.\u0020E.g.\u0020\u003Ccode\u003Enew\u0020CultureInfo\u0028\u0027en_AU\u0027\u0029\u003B\u003C\/cdoe\u003E\nThe\u0020culture\u0020indentifier\u0020must\u0020be\u0020of\u0020the\u0020form\n\u0022language_\u0028country\/region\/variant\u0029\u0022.",
+            "summary": "Initializes\u0020a\u0020new\u0020instance\u0020of\u0020the\u0020CultureInfo\u0020class\u0020based\u0020on\u0020the\nculture\u0020specified\u0020by\u0020name.\u0020E.g.",
             "url": "classes/Prado-I18N-core-CultureInfo.html#method___construct"
         },                {
             "fqsen": "\\Prado\\I18N\\core\\CultureInfo\u003A\u003AvalidCulture\u0028\u0029",
@@ -10198,7 +10778,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\I18N\\core\\CultureInfo\u003A\u003AgetNativeName\u0028\u0029",
             "name": "getNativeName",
-            "summary": "Gets\u0020the\u0020culture\u0020name\u0020in\u0020the\u0020language\u0020that\u0020the\u0020culture\u0020is\u0020set\nto\u0020display.\u0020Returns\u0020\u003Ccode\u003Earray\u0028\u0027Language\u0027,\u0027Country\u0027\u0029\u003B\u003C\/code\u003E\n\u0027Country\u0027\u0020is\u0020omitted\u0020if\u0020the\u0020culture\u0020is\u0020neutral.",
+            "summary": "Gets\u0020the\u0020culture\u0020name\u0020in\u0020the\u0020language\u0020that\u0020the\u0020culture\u0020is\u0020set\nto\u0020display.\u0020Returns\n\u0060\u0060\u0060php\narray\u0028\u0027Language\u0027,\u0027Country\u0027\u0029\u003B\n\u0060\u0060\u0060\n\u0027Country\u0027\u0020is\u0020omitted\u0020if\u0020the\u0020culture\u0020is\u0020neutral.",
             "url": "classes/Prado-I18N-core-CultureInfo.html#method_getNativeName"
         },                {
             "fqsen": "\\Prado\\I18N\\core\\CultureInfo\u003A\u003AgetEnglishName\u0028\u0029",
@@ -11263,7 +11843,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\I18N\\TDateFormat",
             "name": "TDateFormat",
-            "summary": "To\u0020format\u0020dates\u0020and\/or\u0020time\u0020according\u0020to\u0020the\u0020current\u0020locale\u0020use\n\u003Ccode\u003E\n\u003Ccom\u003ATDateFormat\u0020Pattern\u003D\u0022dd\u003AMMM\u003Ayyyy\u0022\u0020Value\u003D\u002201\/01\/2001\u0022\u0020\/\u003E\n\u003C\/code\u003E\nThe\u0020date\u0020will\u0020be\u0020formatted\u0020according\u0020to\u0020the\u0020current\u0020locale\u0020\u0028or\u0020culture\u0029\nusing\u0020the\u0020format\u0020specified\u0020by\u0020\u0027Pattern\u0027\u0020attribute.",
+            "summary": "To\u0020format\u0020dates\u0020and\/or\u0020time\u0020according\u0020to\u0020the\u0020current\u0020locale\u0020use",
             "url": "classes/Prado-I18N-TDateFormat.html"
         },                {
             "fqsen": "\\Prado\\I18N\\TDateFormat\u003A\u003AsetPattern\u0028\u0029",
@@ -11403,7 +11983,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\I18N\\TGlobalization\u003A\u003AsetTranslationConfiguration\u0028\u0029",
             "name": "setTranslationConfiguration",
-            "summary": "Sets\u0020the\u0020translation\u0020configuration.\u0020Example\u0020configuration\u003A\n\u003Ccode\u003E\n\u0024config\u005B\u0027type\u0027\u005D\u0020\u003D\u0020\u0027XLIFF\u0027\u003B\u0020\/\/XLIFF,\u0020gettext,\u0020PHP\u0020or\u0020Database\n\u0024config\u005B\u0027source\u0027\u005D\u0020\u003D\u0020\u0027Path\\to\\directory\u0027\u003B\u0020\/\/\u0020for\u0020types\u0020XLIFF,\u0020PHP\u0020and\u0020gettext\n\u0024config\u005B\u0027source\u0027\u005D\u0020\u003D\u0020\u0027connectionId\u0027\u003B\u0020\/\/\u0020for\u0020type\u0020Database\n\u0024config\u005B\u0027catalogue\u0027\u005D\u0020\u003D\u0020\u0027messages\u0027\u003B\u0020\/\/default\u0020catalog\n\u0024config\u005B\u0027autosave\u0027\u005D\u0020\u003D\u0020\u0027true\u0027\u003B\u0020\/\/save\u0020untranslated\u0020message\n\u0024config\u005B\u0027cache\u0027\u005D\u0020\u003D\u0020\u0027true\u0027\u003B\u0020\/\/cache\u0020translated\u0020message\n\u0024config\u005B\u0027marker\u0027\u005D\u0020\u003D\u0020\u0027\u0040\u0040\u0027\u003B\u0020\/\/\u0020surround\u0020untranslated\u0020text\u0020with\u0020\u0027\u0040\u0040\u0027\n\u003C\/code\u003E\nThrows\u0020exception\u0020is\u0020source\u0020is\u0020not\u0020found.",
+            "summary": "Sets\u0020the\u0020translation\u0020configuration.\u0020Example\u0020configuration\u003A\n\u0060\u0060\u0060php\n\u0024config\u005B\u0027type\u0027\u005D\u0020\u003D\u0020\u0027XLIFF\u0027\u003B\u0020\/\/XLIFF,\u0020gettext,\u0020PHP\u0020or\u0020Database\n\u0024config\u005B\u0027source\u0027\u005D\u0020\u003D\u0020\u0027Path\\to\\directory\u0027\u003B\u0020\/\/\u0020for\u0020types\u0020XLIFF,\u0020PHP\u0020and\u0020gettext\n\u0024config\u005B\u0027source\u0027\u005D\u0020\u003D\u0020\u0027connectionId\u0027\u003B\u0020\/\/\u0020for\u0020type\u0020Database\n\u0024config\u005B\u0027catalogue\u0027\u005D\u0020\u003D\u0020\u0027messages\u0027\u003B\u0020\/\/default\u0020catalog\n\u0024config\u005B\u0027autosave\u0027\u005D\u0020\u003D\u0020\u0027true\u0027\u003B\u0020\/\/save\u0020untranslated\u0020message\n\u0024config\u005B\u0027cache\u0027\u005D\u0020\u003D\u0020\u0027true\u0027\u003B\u0020\/\/cache\u0020translated\u0020message\n\u0024config\u005B\u0027marker\u0027\u005D\u0020\u003D\u0020\u0027\u0040\u0040\u0027\u003B\u0020\/\/\u0020surround\u0020untranslated\u0020text\u0020with\u0020\u0027\u0040\u0040\u0027\n\u0060\u0060\u0060\nThrows\u0020exception\u0020is\u0020source\u0020is\u0020not\u0020found.",
             "url": "classes/Prado-I18N-TGlobalization.html#method_setTranslationConfiguration"
         },                {
             "fqsen": "\\Prado\\I18N\\TGlobalization\u003A\u003AgetTranslationCatalogue\u0028\u0029",
@@ -11423,7 +12003,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\I18N\\TGlobalization\u003A\u003AgetLocalizedResource\u0028\u0029",
             "name": "getLocalizedResource",
-            "summary": "Returns\u0020a\u0020list\u0020of\u0020possible\u0020localized\u0020files.\u0020Example\n\u003Ccode\u003E\n\u0024files\u0020\u003D\u0020\u0024app\u002D\u003EgetLocalizedResource\u0028\u0022path\/to\/Home.page\u0022,\u0022en_US\u0022\u0029\u003B\n\u003C\/code\u003E\nwill\u0020return\n\u003Cpre\u003E\narray\n\u0020\u00200\u0020\u003D\u003E\u0020\u0027path\/to\/en_US\/Home.page\u0027\n\u0020\u00201\u0020\u003D\u003E\u0020\u0027path\/to\/en\/Home.page\u0027\n\u0020\u00202\u0020\u003D\u003E\u0020\u0027path\/to\/Home.en_US.page\u0027\n\u0020\u00203\u0020\u003D\u003E\u0020\u0027path\/to\/Home.en.page\u0027\n\u0020\u00204\u0020\u003D\u003E\u0020\u0027path\/to\/Home.page\u0027\n\u003C\/pre\u003E\nNote\u0020that\u0020you\u0020still\u0020need\u0020to\u0020verify\u0020the\u0020existance\u0020of\u0020these\u0020files.",
+            "summary": "Returns\u0020a\u0020list\u0020of\u0020possible\u0020localized\u0020files.\u0020Example\n\u0060\u0060\u0060php\n\u0024files\u0020\u003D\u0020\u0024app\u002D\u003EgetLocalizedResource\u0028\u0022path\/to\/Home.page\u0022,\u0022en_US\u0022\u0029\u003B\n\u0060\u0060\u0060\nwill\u0020return\n\u003Cpre\u003E\narray\n\u0020\u00200\u0020\u003D\u003E\u0020\u0027path\/to\/en_US\/Home.page\u0027\n\u0020\u00201\u0020\u003D\u003E\u0020\u0027path\/to\/en\/Home.page\u0027\n\u0020\u00202\u0020\u003D\u003E\u0020\u0027path\/to\/Home.en_US.page\u0027\n\u0020\u00203\u0020\u003D\u003E\u0020\u0027path\/to\/Home.en.page\u0027\n\u0020\u00204\u0020\u003D\u003E\u0020\u0027path\/to\/Home.page\u0027\n\u003C\/pre\u003E\nNote\u0020that\u0020you\u0020still\u0020need\u0020to\u0020verify\u0020the\u0020existance\u0020of\u0020these\u0020files.",
             "url": "classes/Prado-I18N-TGlobalization.html#method_getLocalizedResource"
         },                {
             "fqsen": "\\Prado\\I18N\\TGlobalization\u003A\u003AgetIsCultureRTL\u0028\u0029",
@@ -11558,7 +12138,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\I18N\\TNumberFormat",
             "name": "TNumberFormat",
-            "summary": "To\u0020format\u0020numbers\u0020in\u0020locale\u0020sensitive\u0020manner\u0020use\n\u003Ccode\u003E\n\u003Ccom\u003ATNumberFormat\u0020Pattern\u003D\u00220.\u0023\u0023\u0022\u0020value\u003D\u00222.0\u0022\u0020\/\u003E\n\u003C\/code\u003E",
+            "summary": "To\u0020format\u0020numbers\u0020in\u0020locale\u0020sensitive\u0020manner\u0020use\n\u0060\u0060\u0060php\n\u003Ccom\u003ATNumberFormat\u0020Pattern\u003D\u00220.\u0023\u0023\u0022\u0020value\u003D\u00222.0\u0022\u0020\/\u003E\n\u0060\u0060\u0060",
             "url": "classes/Prado-I18N-TNumberFormat.html"
         },                {
             "fqsen": "\\Prado\\I18N\\TNumberFormat\u003A\u003AgetPattern\u0028\u0029",
@@ -11811,6 +12391,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-IDataRenderer.html#method_setData"
         },                {
+            "fqsen": "\\Prado\\IEventParameter",
+            "name": "IEventParameter",
+            "summary": "IEventParameter\u0020class.",
+            "url": "classes/Prado-IEventParameter.html"
+        },                {
+            "fqsen": "\\Prado\\IEventParameter\u003A\u003AgetEventName\u0028\u0029",
+            "name": "getEventName",
+            "summary": "Gets\u0020the\u0020Event\u0020Name\u0020specified.",
+            "url": "classes/Prado-IEventParameter.html#method_getEventName"
+        },                {
+            "fqsen": "\\Prado\\IEventParameter\u003A\u003AsetEventName\u0028\u0029",
+            "name": "setEventName",
+            "summary": "Sets\u0020the\u0020Event\u0020Name.",
+            "url": "classes/Prado-IEventParameter.html#method_setEventName"
+        },                {
             "fqsen": "\\Prado\\IModule",
             "name": "IModule",
             "summary": "IModule\u0020interface.",
@@ -11855,6 +12450,296 @@ Search.appendIndex(
             "name": "flush",
             "summary": "Flushes\u0020the\u0020content\u0020that\u0020has\u0020been\u0020written.",
             "url": "classes/Prado-IO-TOutputWriter.html#method_flush"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback",
+            "name": "TStreamNotificationCallback",
+            "summary": "TStreamNotificationCallback\u0020class.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AfilterStreamContext\u0028\u0029",
+            "name": "filterStreamContext",
+            "summary": "This\u0020converts\u0020the\u0020input\u0020TStreamNotificationCallback\u0020or\u0020array\u0020into\u0020a\u0020proper\u0020stream\ncontext\u0020with\u0020options\u0020and\u0020parameters\u0020\u0028notification\u0029.\u0020\u0020If\u0020\u0024context\u0020is\u0020an\u0020array\nthis\u0020can\u0020use\u0020or\u0020convert\u0020the\u0020\u0022notification\u0022\u0020into\u0020a\u0020stream\u0020context\u0020parameter.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_filterStreamContext"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetContextNotificationCallback\u0028\u0029",
+            "name": "getContextNotificationCallback",
+            "summary": "Given\u0020a\u0020Stream\u0020Context,\u0020this\u0020returns\u0020that\u0020stream\u0020context\u0020\u0022notification\u0022\u0020callback.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getContextNotificationCallback"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "The\u0020registers\u0020the\u0020callbacks.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetCallbacks\u0028\u0029",
+            "name": "getCallbacks",
+            "summary": "This\u0020holds\u0020any\u0020direct\u0020notification\u0020callbacks\u0020so\u0020multiple\u0020callbacks\u0020are\u0020supported.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getCallbacks"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetSeverity\u0028\u0029",
+            "name": "getSeverity",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getSeverity"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetMessage\u0028\u0029",
+            "name": "getMessage",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getMessage"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetMessageCode\u0028\u0029",
+            "name": "getMessageCode",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getMessageCode"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetBytesTransferred\u0028\u0029",
+            "name": "getBytesTransferred",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getBytesTransferred"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetFileSize\u0028\u0029",
+            "name": "getFileSize",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getFileSize"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetMimeType\u0028\u0029",
+            "name": "getMimeType",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getMimeType"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetCharset\u0028\u0029",
+            "name": "getCharset",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getCharset"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetIsCompleted\u0028\u0029",
+            "name": "getIsCompleted",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getIsCompleted"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetIsFailure\u0028\u0029",
+            "name": "getIsFailure",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getIsFailure"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AgetParameter\u0028\u0029",
+            "name": "getParameter",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_getParameter"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "The\u0020callback\u0020for\u0020stream\u0020notifications.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method___invoke"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonResolve\u0028\u0029",
+            "name": "onResolve",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_RESOLVE.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onResolve"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonConnected\u0028\u0029",
+            "name": "onConnected",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_CONNECT.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onConnected"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonAuthRequired\u0028\u0029",
+            "name": "onAuthRequired",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_AUTH_REQUIRED.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onAuthRequired"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonAuthResult\u0028\u0029",
+            "name": "onAuthResult",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_AUTH_RESULT.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onAuthResult"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonRedirected\u0028\u0029",
+            "name": "onRedirected",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_REDIRECTED.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onRedirected"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonMimeType\u0028\u0029",
+            "name": "onMimeType",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_MIME_TYPE_IS.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onMimeType"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonFileSize\u0028\u0029",
+            "name": "onFileSize",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_FILE_SIZE_IS.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onFileSize"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonProgress\u0028\u0029",
+            "name": "onProgress",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_PROGRESS.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onProgress"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonCompleted\u0028\u0029",
+            "name": "onCompleted",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_COMPLETED.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onCompleted"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003AonFailure\u0028\u0029",
+            "name": "onFailure",
+            "summary": "Raised\u0020when\u0020the\u0020Notification\u0020Code\u0020is\u0020STREAM_NOTIFY_FAILURE.",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#method_onFailure"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003ANOTIFICATION",
+            "name": "NOTIFICATION",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#constant_NOTIFICATION"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_callbacks",
+            "name": "_callbacks",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__callbacks"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_severity",
+            "name": "_severity",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__severity"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_message",
+            "name": "_message",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__message"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_messageCode",
+            "name": "_messageCode",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__messageCode"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_bytesTrasferred",
+            "name": "_bytesTrasferred",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__bytesTrasferred"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_fileSize",
+            "name": "_fileSize",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__fileSize"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_mimeType",
+            "name": "_mimeType",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__mimeType"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_charset",
+            "name": "_charset",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__charset"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_completed",
+            "name": "_completed",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__completed"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_failure",
+            "name": "_failure",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__failure"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationCallback\u003A\u003A\u0024_parameter",
+            "name": "_parameter",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationCallback.html#property__parameter"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter",
+            "name": "TStreamNotificationParameter",
+            "summary": "TStreamNotificationParameter\u0020class.",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AgetNotificationCode\u0028\u0029",
+            "name": "getNotificationCode",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_getNotificationCode"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AsetNotificationCode\u0028\u0029",
+            "name": "setNotificationCode",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_setNotificationCode"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AgetSeverity\u0028\u0029",
+            "name": "getSeverity",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_getSeverity"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AsetSeverity\u0028\u0029",
+            "name": "setSeverity",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_setSeverity"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AgetMessage\u0028\u0029",
+            "name": "getMessage",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_getMessage"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AsetMessage\u0028\u0029",
+            "name": "setMessage",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_setMessage"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AgetMessageCode\u0028\u0029",
+            "name": "getMessageCode",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_getMessageCode"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AsetMessageCode\u0028\u0029",
+            "name": "setMessageCode",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_setMessageCode"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AgetBytesTransferred\u0028\u0029",
+            "name": "getBytesTransferred",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_getBytesTransferred"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AsetBytesTransferred\u0028\u0029",
+            "name": "setBytesTransferred",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_setBytesTransferred"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AgetBytesMax\u0028\u0029",
+            "name": "getBytesMax",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_getBytesMax"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003AsetBytesMax\u0028\u0029",
+            "name": "setBytesMax",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#method_setBytesMax"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003A\u0024_notification_code",
+            "name": "_notification_code",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#property__notification_code"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003A\u0024_severity",
+            "name": "_severity",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#property__severity"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003A\u0024_message",
+            "name": "_message",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#property__message"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003A\u0024_message_code",
+            "name": "_message_code",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#property__message_code"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003A\u0024_bytes_transferred",
+            "name": "_bytes_transferred",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#property__bytes_transferred"
+        },                {
+            "fqsen": "\\Prado\\IO\\TStreamNotificationParameter\u003A\u003A\u0024_bytes_max",
+            "name": "_bytes_max",
+            "summary": "",
+            "url": "classes/Prado-IO-TStreamNotificationParameter.html#property__bytes_max"
         },                {
             "fqsen": "\\Prado\\IO\\TTarFileExtractor",
             "name": "TTarFileExtractor",
@@ -12031,6 +12916,111 @@ Search.appendIndex(
             "summary": "Saves\u0020state\u0020into\u0020a\u0020persistent\u0020storage.",
             "url": "classes/Prado-IStatePersister.html#method_save"
         },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection",
+            "name": "DynamicMethodReflection",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetDeclaringClass\u0028\u0029",
+            "name": "getDeclaringClass",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getDeclaringClass"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisStatic\u0028\u0029",
+            "name": "isStatic",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isStatic"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisPrivate\u0028\u0029",
+            "name": "isPrivate",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isPrivate"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisPublic\u0028\u0029",
+            "name": "isPublic",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isPublic"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetDocComment\u0028\u0029",
+            "name": "getDocComment",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getDocComment"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getName"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetPrototype\u0028\u0029",
+            "name": "getPrototype",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getPrototype"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetVariants\u0028\u0029",
+            "name": "getVariants",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getVariants"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisDeprecated\u0028\u0029",
+            "name": "isDeprecated",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isDeprecated"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetDeprecatedDescription\u0028\u0029",
+            "name": "getDeprecatedDescription",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getDeprecatedDescription"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisFinal\u0028\u0029",
+            "name": "isFinal",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isFinal"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisInternal\u0028\u0029",
+            "name": "isInternal",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isInternal"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetThrowType\u0028\u0029",
+            "name": "getThrowType",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getThrowType"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AhasSideEffects\u0028\u0029",
+            "name": "hasSideEffects",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_hasSideEffects"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003A\u0024_classReflection",
+            "name": "_classReflection",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#property__classReflection"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003A\u0024_methodName",
+            "name": "_methodName",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#property__methodName"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodsClassReflectionExtension",
+            "name": "DynamicMethodsClassReflectionExtension",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodsClassReflectionExtension.html"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodsClassReflectionExtension\u003A\u003AhasMethod\u0028\u0029",
+            "name": "hasMethod",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodsClassReflectionExtension.html#method_hasMethod"
+        },                {
+            "fqsen": "\\Prado\\PHPStan\\DynamicMethodsClassReflectionExtension\u003A\u003AgetMethod\u0028\u0029",
+            "name": "getMethod",
+            "summary": "",
+            "url": "classes/Prado-PHPStan-DynamicMethodsClassReflectionExtension.html#method_getMethod"
+        },                {
             "fqsen": "\\PRADO_DIR",
             "name": "PRADO_DIR",
             "summary": "",
@@ -12151,6 +13141,26 @@ Search.appendIndex(
             "summary": "Uses\u0020a\u0020namespace.",
             "url": "classes/Prado-Prado.html#method_using"
         },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Amethod_visible\u0028\u0029",
+            "name": "method_visible",
+            "summary": "This\u0020conforms\u0020PHP\u0027s\u0020Magic\u0020Methods\u0020to\u0020PHP\u0027s\u0020Visibility\u0020standards\u0020for\u0020public,\nprotected,\u0020and\u0020private\u0020properties,\u0020methods,\u0020and\u0020constants.\u0020This\u0020method\u0020checks\nif\u0020the\u0020object\u0020calling\u0020your\u0020method\u0020can\u0020access\u0020your\u0020object\u0027s\u0020property,\u0020method,\nor\u0020constant\u0020based\u0020upon\u0020the\u0020defined\u0020visibility.\u0020\u0020External\u0020objects\u0020can\u0020only\u0020access\npublic\u0020properties,\u0020methods,\u0020and\u0020constants.\u0020\u0020When\u0020calling\u0020the\u0020self,\u0020private\nproperties,\u0020methods,\u0020and\u0020constants\u0020are\u0020allowed\u0020to\u0020be\u0020accessed\u0020by\u0020the\u0020same\u0020class.",
+            "url": "classes/Prado-Prado.html#method_method_visible"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003AcallingObject\u0028\u0029",
+            "name": "callingObject",
+            "summary": "This\u0020method\u0020return\u0020the\u0020object\u0020that\u0020is\u0020calling\u0020your\u0020method.",
+            "url": "classes/Prado-Prado.html#method_callingObject"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003AisCallingSelf\u0028\u0029",
+            "name": "isCallingSelf",
+            "summary": "This\u0020checks\u0020if\u0020object\u0020calling\u0020your\u0020object\u0020method\u0020is\u0020the\u0020same\u0020object.\u0020\u0020In\u0020effect,\nthis\u0020signifies\u0020if\u0020self,\u0020parents,\u0020and\u0020children\u0020have\u0020visibility\u0020to\u0020\u0022protected\u0022\nproperties,\u0020methods,\u0020and\u0020constants.",
+            "url": "classes/Prado-Prado.html#method_isCallingSelf"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003AisCallingSelfClass\u0028\u0029",
+            "name": "isCallingSelfClass",
+            "summary": "This\u0020checks\u0020if\u0020object\u0020calling\u0020your\u0020object\u0020method\u0020is\u0020the\u0020same\u0020object\u0020and\u0020same\u0020class.",
+            "url": "classes/Prado-Prado.html#method_isCallingSelfClass"
+        },                {
             "fqsen": "\\Prado\\Prado\u003A\u003AgetPathOfNamespace\u0028\u0029",
             "name": "getPathOfNamespace",
             "summary": "Translates\u0020a\u0020namespace\u0020into\u0020a\u0020file\u0020path.",
@@ -12186,10 +13196,55 @@ Search.appendIndex(
             "summary": "Returns\u0020the\u0020most\u0020preferred\u0020language\u0020by\u0020the\u0020client\u0020user.",
             "url": "classes/Prado-Prado.html#method_getPreferredLanguage"
         },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003AprofileBegin\u0028\u0029",
+            "name": "profileBegin",
+            "summary": "Writes\u0020a\u0020profile\u0020begin\u0020message.",
+            "url": "classes/Prado-Prado.html#method_profileBegin"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003AprofileEnd\u0028\u0029",
+            "name": "profileEnd",
+            "summary": "Writes\u0020a\u0020profile\u0020end\u0020message.",
+            "url": "classes/Prado-Prado.html#method_profileEnd"
+        },                {
             "fqsen": "\\Prado\\Prado\u003A\u003Atrace\u0028\u0029",
             "name": "trace",
             "summary": "Writes\u0020a\u0020log\u0020message.",
             "url": "classes/Prado-Prado.html#method_trace"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Adebug\u0028\u0029",
+            "name": "debug",
+            "summary": "Writes\u0020a\u0020debug\u0020log\u0020message.",
+            "url": "classes/Prado-Prado.html#method_debug"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Ainfo\u0028\u0029",
+            "name": "info",
+            "summary": "Writes\u0020an\u0020info\u0020log\u0020message.",
+            "url": "classes/Prado-Prado.html#method_info"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Anotice\u0028\u0029",
+            "name": "notice",
+            "summary": "Writes\u0020a\u0020notice\u0020log\u0020message.",
+            "url": "classes/Prado-Prado.html#method_notice"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Awarning\u0028\u0029",
+            "name": "warning",
+            "summary": "Writes\u0020a\u0020warning\u0020log\u0020message.",
+            "url": "classes/Prado-Prado.html#method_warning"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Aerror\u0028\u0029",
+            "name": "error",
+            "summary": "Writes\u0020an\u0020error\u0020log\u0020message.",
+            "url": "classes/Prado-Prado.html#method_error"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Aalert\u0028\u0029",
+            "name": "alert",
+            "summary": "Writes\u0020an\u0020alert\u0020log\u0020message.",
+            "url": "classes/Prado-Prado.html#method_alert"
+        },                {
+            "fqsen": "\\Prado\\Prado\u003A\u003Afatal\u0028\u0029",
+            "name": "fatal",
+            "summary": "Writes\u0020a\u0020fatal\u0020log\u0020message.",
+            "url": "classes/Prado-Prado.html#method_fatal"
         },                {
             "fqsen": "\\Prado\\Prado\u003A\u003Alog\u0028\u0029",
             "name": "log",
@@ -12506,14 +13561,9 @@ Search.appendIndex(
             "summary": "TPermissionsBehavior\u0020class.",
             "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html"
         },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html#method___construct"
-        },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003Aattach\u0028\u0029",
             "name": "attach",
-            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020the\u0020component.",
+            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020the\u0020new\u0020owner\u0020component.\u0020\u0020This\u0020is\u0020normally\u0020called\nby\u0020the\u0020new\u0020owner\u0020when\u0020attaching\u0020a\u0020behavior,\u0020by\u0020\u007B\u0040see\u0020\\Prado\\TComponent\u003A\u003AattachBehavior\u007D,\nand\u0020not\u0020directly\u0020called.",
             "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_attach"
         },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003A__dycall\u0028\u0029",
@@ -12526,20 +13576,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_getPermissionEvents"
         },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003AgetManager\u0028\u0029",
-            "name": "getManager",
-            "summary": "Gets\u0020the\u0020TPermissionsManager\u0020for\u0020the\u0020behavior",
-            "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_getManager"
-        },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003AsetManager\u0028\u0029",
-            "name": "setManager",
-            "summary": "Sets\u0020the\u0020TPermissionsManager\u0020for\u0020the\u0020behavior",
-            "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_setManager"
-        },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003A\u0024_manager",
-            "name": "_manager",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html#property__manager"
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003AdyLogPermissionFailed\u0028\u0029",
+            "name": "dyLogPermissionFailed",
+            "summary": "This\u0020logs\u0020permissions\u0020failures\u0020in\u0020the\u0020Prado\u003A\u003Alog\u0020and\u0020with\u0020the\u0020shell\u0020when\nthe\u0020Application\u0020is\u0020a\u0020TShellApplication.\u0020\u0020When\u0020the\u0020Application\u0020is\u0020in\u0020Debug\nmode,\u0020the\u0020failed\u0020permission\u0020is\u0020written\u0020to\u0020shell\u002Dcli,\u0020otherwise\u0020the\u0020exact\npermission\u0020is\u0020keep\u0020hidden\u0020from\u0020the\u0020shell\u0020user\u0020for\u0020security\u0020purposes.",
+            "url": "classes/Prado-Security-Permissions-TPermissionsBehavior.html#method_dyLogPermissionFailed"
         },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsBehavior\u003A\u003A\u0024_permissionEvents",
             "name": "_permissionEvents",
@@ -12556,11 +13596,6 @@ Search.appendIndex(
             "summary": "TPermissionsConfigurationBehavior\u0020class.",
             "url": "classes/Prado-Security-Permissions-TPermissionsConfigurationBehavior.html"
         },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsConfigurationBehavior\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TPermissionsConfigurationBehavior.html#method___construct"
-        },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsConfigurationBehavior\u003A\u003AdyLoadPageConfigurationFromPhp\u0028\u0029",
             "name": "dyLoadPageConfigurationFromPhp",
             "summary": "Loads\u0020the\u0020configuration\u0020specific\u0020for\u0020page\u0020service.\u0020This\u0020may\u0020be\u0020called\u0020multiple\ntimes.",
@@ -12576,21 +13611,6 @@ Search.appendIndex(
             "summary": "Applies\u0020the\u0020permissions\u0020hierarchy\u0020and\u0020permission\u0020rules",
             "url": "classes/Prado-Security-Permissions-TPermissionsConfigurationBehavior.html#method_dyApplyConfiguration"
         },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsConfigurationBehavior\u003A\u003AgetManager\u0028\u0029",
-            "name": "getManager",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TPermissionsConfigurationBehavior.html#method_getManager"
-        },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsConfigurationBehavior\u003A\u003AsetManager\u0028\u0029",
-            "name": "setManager",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TPermissionsConfigurationBehavior.html#method_setManager"
-        },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsConfigurationBehavior\u003A\u003A\u0024_manager",
-            "name": "_manager",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TPermissionsConfigurationBehavior.html#property__manager"
-        },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsConfigurationBehavior\u003A\u003A\u0024_permissions",
             "name": "_permissions",
             "summary": "",
@@ -12600,6 +13620,11 @@ Search.appendIndex(
             "name": "TPermissionsManager",
             "summary": "TPermissionsManager\u0020class.",
             "url": "classes/Prado-Security-Permissions-TPermissionsManager.html"
+        },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManager\u003A\u003AgetManager\u0028\u0029",
+            "name": "getManager",
+            "summary": "",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManager.html#method_getManager"
         },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManager\u003A\u003AgetPermissions\u0028\u0029",
             "name": "getPermissions",
@@ -12901,6 +13926,41 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Security-Permissions-TPermissionsManager.html#property__parameter"
         },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManagerPropertyTrait",
+            "name": "TPermissionsManagerPropertyTrait",
+            "summary": "TPermissionsManagerPropertyTrait\u0020class.",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManagerPropertyTrait.html"
+        },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManagerPropertyTrait\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManagerPropertyTrait.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManagerPropertyTrait\u003A\u003A__wakeup\u0028\u0029",
+            "name": "__wakeup",
+            "summary": "Sets\u0020the\u0020TPermissionsManager\u0020to\u0020the\u0020current\u0020singleton\u0020instance.",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManagerPropertyTrait.html#method___wakeup"
+        },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManagerPropertyTrait\u003A\u003AgetPermissionsManager\u0028\u0029",
+            "name": "getPermissionsManager",
+            "summary": "",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManagerPropertyTrait.html#method_getPermissionsManager"
+        },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManagerPropertyTrait\u003A\u003AsetPermissionsManager\u0028\u0029",
+            "name": "setPermissionsManager",
+            "summary": "",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManagerPropertyTrait.html#method_setPermissionsManager"
+        },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManagerPropertyTrait\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManagerPropertyTrait.html#method__getZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Security\\Permissions\\TPermissionsManagerPropertyTrait\u003A\u003A\u0024_permissionsManager",
+            "name": "_permissionsManager",
+            "summary": "",
+            "url": "classes/Prado-Security-Permissions-TPermissionsManagerPropertyTrait.html#property__permissionsManager"
+        },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TUserOwnerRule",
             "name": "TUserOwnerRule",
             "summary": "TUserOwnerRule\u0020class",
@@ -12916,11 +13976,6 @@ Search.appendIndex(
             "summary": "TUserPermissionsBehavior\u0020class.",
             "url": "classes/Prado-Security-Permissions-TUserPermissionsBehavior.html"
         },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TUserPermissionsBehavior\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TUserPermissionsBehavior.html#method___construct"
-        },                {
             "fqsen": "\\Prado\\Security\\Permissions\\TUserPermissionsBehavior\u003A\u003Acan\u0028\u0029",
             "name": "can",
             "summary": "Gets\u0020all\u0020the\u0020rules\u0020for\u0020the\u0020permission\u0020and\u0020checks\u0020against\u0020the\u0020TUser.",
@@ -12935,21 +13990,6 @@ Search.appendIndex(
             "name": "dyIsInRole",
             "summary": "This\u0020handles\u0020the\u0020dynamic\u0020event\u0020where\u0020the\u0020\u0024role\u0020does\u0020not\u0020match\u0020the\u0020user\nroles.\u0020\u0020It\u0020checks\u0020the\u0020hierarchy\u0020of\u0020roles\/permissions",
             "url": "classes/Prado-Security-Permissions-TUserPermissionsBehavior.html#method_dyIsInRole"
-        },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TUserPermissionsBehavior\u003A\u003AgetManager\u0028\u0029",
-            "name": "getManager",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TUserPermissionsBehavior.html#method_getManager"
-        },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TUserPermissionsBehavior\u003A\u003AsetManager\u0028\u0029",
-            "name": "setManager",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TUserPermissionsBehavior.html#method_setManager"
-        },                {
-            "fqsen": "\\Prado\\Security\\Permissions\\TUserPermissionsBehavior\u003A\u003A\u0024_manager",
-            "name": "_manager",
-            "summary": "",
-            "url": "classes/Prado-Security-Permissions-TUserPermissionsBehavior.html#property__manager"
         },                {
             "fqsen": "\\Prado\\Security\\TAuthManager",
             "name": "TAuthManager",
@@ -13468,17 +14508,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Security\\TSecurityManager\u003A\u003AsetCryptAlgorithm\u0028\u0029",
             "name": "setCryptAlgorithm",
-            "summary": "Sets\u0020the\u0020crypt\u0020algorithm\u0020\u0028also\u0020known\u0020as\u0020cipher\u0020or\u0020cypher\u0029\u0020that\u0020will\u0020be\u0020used\u0020for\u0020\u007B\u0040link\u0020encrypt\u007D\u0020and\u0020\u007B\u0040link\u0020decrypt\u007D.",
+            "summary": "Sets\u0020the\u0020crypt\u0020algorithm\u0020\u0028also\u0020known\u0020as\u0020cipher\u0020or\u0020cypher\u0029\u0020that\u0020will\u0020be\u0020used\u0020for\u0020\u007B\u0040see\u0020encrypt\u007D\u0020and\u0020\u007B\u0040see\u0020decrypt\u007D.",
             "url": "classes/Prado-Security-TSecurityManager.html#method_setCryptAlgorithm"
         },                {
             "fqsen": "\\Prado\\Security\\TSecurityManager\u003A\u003Aencrypt\u0028\u0029",
             "name": "encrypt",
-            "summary": "Encrypts\u0020data\u0020with\u0020\u007B\u0040link\u0020getEncryptionKey\u0020EncryptionKey\u007D.",
+            "summary": "Encrypts\u0020data\u0020with\u0020\u007B\u0040see\u0020getEncryptionKey\u0020EncryptionKey\u007D.",
             "url": "classes/Prado-Security-TSecurityManager.html#method_encrypt"
         },                {
             "fqsen": "\\Prado\\Security\\TSecurityManager\u003A\u003Adecrypt\u0028\u0029",
             "name": "decrypt",
-            "summary": "Decrypts\u0020data\u0020with\u0020\u007B\u0040link\u0020getEncryptionKey\u0020EncryptionKey\u007D.",
+            "summary": "Decrypts\u0020data\u0020with\u0020\u007B\u0040see\u0020getEncryptionKey\u0020EncryptionKey\u007D.",
             "url": "classes/Prado-Security-TSecurityManager.html#method_decrypt"
         },                {
             "fqsen": "\\Prado\\Security\\TSecurityManager\u003A\u003AhashData\u0028\u0029",
@@ -13493,7 +14533,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Security\\TSecurityManager\u003A\u003AcomputeHMAC\u0028\u0029",
             "name": "computeHMAC",
-            "summary": "Computes\u0020the\u0020HMAC\u0020for\u0020the\u0020data\u0020with\u0020\u007B\u0040link\u0020getValidationKey\u0020ValidationKey\u007D.",
+            "summary": "Computes\u0020the\u0020HMAC\u0020for\u0020the\u0020data\u0020with\u0020\u007B\u0040see\u0020getValidationKey\u0020ValidationKey\u007D.",
             "url": "classes/Prado-Security-TSecurityManager.html#method_computeHMAC"
         },                {
             "fqsen": "\\Prado\\Security\\TSecurityManager\u003A\u003Astrlen\u0028\u0029",
@@ -14313,12 +15353,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Shell\\TShellLoginBehavior\u003A\u003Aevents\u0028\u0029",
             "name": "events",
-            "summary": "Declares\u0020events\u0020and\u0020the\u0020corresponding\u0020event\u0020handler\u0020methods.",
+            "summary": "",
             "url": "classes/Prado-Shell-TShellLoginBehavior.html#method_events"
         },                {
             "fqsen": "\\Prado\\Shell\\TShellLoginBehavior\u003A\u003Aattach\u0028\u0029",
             "name": "attach",
-            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020the\u0020component.",
+            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020the\u0020new\u0020owner\u0020component.\u0020\u0020This\u0020is\u0020normally\u0020called\nby\u0020the\u0020new\u0020owner\u0020when\u0020attaching\u0020a\u0020behavior,\u0020by\u0020\u007B\u0040see\u0020\\Prado\\TComponent\u003A\u003AattachBehavior\u007D,\nand\u0020not\u0020directly\u0020called.",
             "url": "classes/Prado-Shell-TShellLoginBehavior.html#method_attach"
         },                {
             "fqsen": "\\Prado\\Shell\\TShellLoginBehavior\u003A\u003AreadPassword\u0028\u0029",
@@ -14483,7 +15523,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Shell\\TShellWriter\u003A\u003ArestoreCursorPosition\u0028\u0029",
             "name": "restoreCursorPosition",
-            "summary": "Restores\u0020the\u0020cursor\u0020position\u0020saved\u0020with\u0020\u007B\u0040link\u0020saveCursorPosition\u007D\u0020by\u0020sending\u0020ANSI\u0020control\u0020code\u0020RCP\u0020to\u0020the\u0020terminal.",
+            "summary": "Restores\u0020the\u0020cursor\u0020position\u0020saved\u0020with\u0020\u007B\u0040see\u0020saveCursorPosition\u007D\u0020by\u0020sending\u0020ANSI\u0020control\u0020code\u0020RCP\u0020to\u0020the\u0020terminal.",
             "url": "classes/Prado-Shell-TShellWriter.html#method_restoreCursorPosition"
         },                {
             "fqsen": "\\Prado\\Shell\\TShellWriter\u003A\u003AhideCursor\u0028\u0029",
@@ -14493,7 +15533,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Shell\\TShellWriter\u003A\u003AshowCursor\u0028\u0029",
             "name": "showCursor",
-            "summary": "Will\u0020show\u0020a\u0020cursor\u0020again\u0020when\u0020it\u0020has\u0020been\u0020hidden\u0020by\u0020\u007B\u0040link\u0020hideCursor\u007D\u0020\u0020by\u0020sending\u0020ANSI\u0020DECTCEM\u0020code\u0020\u003F25h\u0020to\u0020the\u0020terminal.",
+            "summary": "Will\u0020show\u0020a\u0020cursor\u0020again\u0020when\u0020it\u0020has\u0020been\u0020hidden\u0020by\u0020\u007B\u0040see\u0020hideCursor\u007D\u0020\u0020by\u0020sending\u0020ANSI\u0020DECTCEM\u0020code\u0020\u003F25h\u0020to\u0020the\u0020terminal.",
             "url": "classes/Prado-Shell-TShellWriter.html#method_showCursor"
         },                {
             "fqsen": "\\Prado\\Shell\\TShellWriter\u003A\u003AclearScreen\u0028\u0029",
@@ -15011,6 +16051,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-TApplication.html#method_setAssetManager"
         },                {
+            "fqsen": "\\Prado\\TApplication\u003A\u003AgetTemplateManager\u0028\u0029",
+            "name": "getTemplateManager",
+            "summary": "",
+            "url": "classes/Prado-TApplication.html#method_getTemplateManager"
+        },                {
+            "fqsen": "\\Prado\\TApplication\u003A\u003AsetTemplateManager\u0028\u0029",
+            "name": "setTemplateManager",
+            "summary": "",
+            "url": "classes/Prado-TApplication.html#method_setTemplateManager"
+        },                {
+            "fqsen": "\\Prado\\TApplication\u003A\u003AgetThemeManager\u0028\u0029",
+            "name": "getThemeManager",
+            "summary": "",
+            "url": "classes/Prado-TApplication.html#method_getThemeManager"
+        },                {
+            "fqsen": "\\Prado\\TApplication\u003A\u003AsetThemeManager\u0028\u0029",
+            "name": "setThemeManager",
+            "summary": "",
+            "url": "classes/Prado-TApplication.html#method_setThemeManager"
+        },                {
             "fqsen": "\\Prado\\TApplication\u003A\u003AgetApplicationStatePersister\u0028\u0029",
             "name": "getApplicationStatePersister",
             "summary": "",
@@ -15356,6 +16416,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-TApplication.html#property__assetManager"
         },                {
+            "fqsen": "\\Prado\\TApplication\u003A\u003A\u0024_templateManager",
+            "name": "_templateManager",
+            "summary": "",
+            "url": "classes/Prado-TApplication.html#property__templateManager"
+        },                {
+            "fqsen": "\\Prado\\TApplication\u003A\u003A\u0024_themeManager",
+            "name": "_themeManager",
+            "summary": "",
+            "url": "classes/Prado-TApplication.html#property__themeManager"
+        },                {
             "fqsen": "\\Prado\\TApplication\u003A\u003A\u0024_authRules",
             "name": "_authRules",
             "summary": "",
@@ -15426,10 +16496,10 @@ Search.appendIndex(
             "summary": "Publishes\u0020a\u0020file\u0020or\u0020directory\u0020and\u0020returns\u0020its\u0020URL.",
             "url": "classes/Prado-TApplicationComponent.html#method_publishFilePath"
         },                {
-            "fqsen": "\\Prado\\TApplicationComponent\u003A\u003AAPP_COMPONENT_FX_CACHE",
-            "name": "APP_COMPONENT_FX_CACHE",
+            "fqsen": "\\Prado\\TApplicationComponent\u003A\u003AFX_CACHE_FILE",
+            "name": "FX_CACHE_FILE",
             "summary": "",
-            "url": "classes/Prado-TApplicationComponent.html#constant_APP_COMPONENT_FX_CACHE"
+            "url": "classes/Prado-TApplicationComponent.html#constant_FX_CACHE_FILE"
         },                {
             "fqsen": "\\Prado\\TApplicationConfiguration",
             "name": "TApplicationConfiguration",
@@ -15473,7 +16543,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TApplicationConfiguration\u003A\u003AgetComposerExtensionClass\u0028\u0029",
             "name": "getComposerExtensionClass",
-            "summary": "Given\u0020a\u0020module\u0020id\u0020as\u0020a\u0020composer\u0020package\u0020name,\u0020returns\u0020the\u0020extension\u0020bootstrap\n\u007B\u0040link\u0020TModule\u007D\u0020class.",
+            "summary": "Given\u0020a\u0020module\u0020id\u0020as\u0020a\u0020composer\u0020package\u0020name,\u0020returns\u0020the\u0020extension\u0020bootstrap\n\u007B\u0040see\u0020\\Prado\\TModule\u007D\u0020class.",
             "url": "classes/Prado-TApplicationConfiguration.html#method_getComposerExtensionClass"
         },                {
             "fqsen": "\\Prado\\TApplicationConfiguration\u003A\u003AloadModulesPhp\u0028\u0029",
@@ -15668,8 +16738,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-TComponent.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\TComponent\u003A\u003A__clone\u0028\u0029",
+            "name": "__clone",
+            "summary": "The\u0020common\u0020__clone\u0020magic\u0020method\u0020from\u0020PHP\u0027s\u0020\u0022clone\u0022.",
+            "url": "classes/Prado-TComponent.html#method___clone"
+        },                {
+            "fqsen": "\\Prado\\TComponent\u003A\u003A__wakeup\u0028\u0029",
+            "name": "__wakeup",
+            "summary": "The\u0020common\u0020__wakeup\u0020magic\u0020method\u0020from\u0020PHP\u0027s\u0020\u0022unserialize\u0022.",
+            "url": "classes/Prado-TComponent.html#method___wakeup"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AgetAutoGlobalListen\u0028\u0029",
             "name": "getAutoGlobalListen",
@@ -15678,7 +16758,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003A__destruct\u0028\u0029",
             "name": "__destruct",
-            "summary": "The\u0020common\u0020__destruct\nThis\u0020unlistens\u0020from\u0020the\u0020global\u0020event\u0020routines\u0020if\u0020listening",
+            "summary": "The\u0020common\u0020__destruct\nWhen\u0020listening,\u0020this\u0020unlistens\u0020from\u0020the\u0020global\u0020event\u0020routines.\u0020\u0020It\u0020also\u0020detaches\nall\u0020the\u0020behaviors\u0020so\u0020they\u0020can\u0020clean\u0020up,\u0020eg\u0020remove\u0020handlers.",
             "url": "classes/Prado-TComponent.html#method___destruct"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003Afilter_prado_fx\u0028\u0029",
@@ -15688,7 +16768,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AgetClassHierarchy\u0028\u0029",
             "name": "getClassHierarchy",
-            "summary": "This\u0020returns\u0020an\u0020array\u0020of\u0020the\u0020class\u0020name\u0020and\u0020the\u0020names\u0020of\u0020all\u0020its\u0020parents.\u0020\u0020The\u0020base\u0020object\u0020last,\n\u007B\u0040link\u0020TComponent\u007D,\u0020and\u0020the\u0020deepest\u0020subclass\u0020is\u0020first.",
+            "summary": "This\u0020returns\u0020an\u0020array\u0020of\u0020the\u0020class\u0020name\u0020and\u0020the\u0020names\u0020of\u0020all\u0020its\u0020parents.\u0020\u0020The\u0020base\u0020object\u0020last,\n\u007B\u0040see\u0020\\Prado\\TComponent\u007D,\u0020and\u0020the\u0020deepest\u0020subclass\u0020is\u0020first.",
             "url": "classes/Prado-TComponent.html#method_getClassHierarchy"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AgetClassFxEvents\u0028\u0029",
@@ -15698,7 +16778,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003Alisten\u0028\u0029",
             "name": "listen",
-            "summary": "This\u0020adds\u0020an\u0020object\u0027s\u0020fx\u0020event\u0020handlers\u0020into\u0020the\u0020global\u0020broadcaster\u0020to\u0020listen\u0020into\u0020any\nbroadcast\u0020global\u0020events\u0020called\u0020through\u0020\u007B\u0040link\u0020raiseEvent\u007D",
+            "summary": "This\u0020adds\u0020an\u0020object\u0027s\u0020fx\u0020event\u0020handlers\u0020into\u0020the\u0020global\u0020broadcaster\u0020to\u0020listen\u0020into\u0020any\nbroadcast\u0020global\u0020events\u0020called\u0020through\u0020\u007B\u0040see\u0020raiseEvent\u007D",
             "url": "classes/Prado-TComponent.html#method_listen"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003Aunlisten\u0028\u0029",
@@ -15761,6 +16841,16 @@ Search.appendIndex(
             "summary": "Sets\u0020a\u0020value\u0020to\u0020a\u0020property\u0020path.",
             "url": "classes/Prado-TComponent.html#method_setSubProperty"
         },                {
+            "fqsen": "\\Prado\\TComponent\u003A\u003AcallBehaviorsMethod\u0028\u0029",
+            "name": "callBehaviorsMethod",
+            "summary": "Calls\u0020a\u0020method\u0020on\u0020a\u0020component\u0027s\u0020behaviors.\u0020\u0020When\u0020the\u0020method\u0020is\u0020a\ndynamic\u0020event,\u0020it\u0020is\u0020raised\u0020with\u0020all\u0020the\u0020behaviors.\u0020\u0020When\u0020a\u0020class\u0020implements\na\u0020dynamic\u0020event\u0020\u0028eg.\u0020for\u0020patching\u0029,\u0020the\u0020class\u0020can\u0020customize\u0020raising\u0020the\ndynamic\u0020event\u0020with\u0020the\u0020classes\u0020behaviors\u0020using\u0020this\u0020method.",
+            "url": "classes/Prado-TComponent.html#method_callBehaviorsMethod"
+        },                {
+            "fqsen": "\\Prado\\TComponent\u003A\u003AgetCallChain\u0028\u0029",
+            "name": "getCallChain",
+            "summary": "This\u0020gets\u0020the\u0020chain\u0020of\u0020methods\u0020implemented\u0020by\u0020attached\u0020and\u0020enabled\u0020behaviors.",
+            "url": "classes/Prado-TComponent.html#method_getCallChain"
+        },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AhasMethod\u0028\u0029",
             "name": "hasMethod",
             "summary": "Determines\u0020whether\u0020a\u0020method\u0020is\u0020defined.\u0020When\u0020behaviors\u0020are\u0020enabled,\u0020this\nwill\u0020loop\u0020through\u0020all\u0020enabled\u0020behaviors\u0020checking\u0020for\u0020the\u0020method\u0020as\u0020well.",
@@ -15818,12 +16908,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AfxAttachClassBehavior\u0028\u0029",
             "name": "fxAttachClassBehavior",
-            "summary": "This\u0020is\u0020the\u0020method\u0020registered\u0020for\u0020all\u0020instanced\u0020objects\u0020should\u0020a\u0020class\u0020behavior\u0020be\u0020added\u0020after\nthe\u0020class\u0020is\u0020instanced.\u0020\u0020Only\u0020when\u0020the\u0020class\u0020to\u0020which\u0020the\u0020behavior\u0020is\u0020being\u0020added\u0020is\u0020in\u0020this\nobject\u0027s\u0020class\u0020hierarchy,\u0020via\u0020\u007B\u0040link\u0020getClassHierarchy\u007D,\u0020is\u0020the\u0020behavior\u0020added\u0020to\u0020this\u0020instance.",
+            "summary": "This\u0020is\u0020the\u0020method\u0020registered\u0020for\u0020all\u0020instanced\u0020objects\u0020should\u0020a\u0020class\u0020behavior\u0020be\u0020added\u0020after\nthe\u0020class\u0020is\u0020instanced.\u0020\u0020Only\u0020when\u0020the\u0020class\u0020to\u0020which\u0020the\u0020behavior\u0020is\u0020being\u0020added\u0020is\u0020in\u0020this\nobject\u0027s\u0020class\u0020hierarchy,\u0020via\u0020\u007B\u0040see\u0020getClassHierarchy\u007D,\u0020is\u0020the\u0020behavior\u0020added\u0020to\u0020this\u0020instance.",
             "url": "classes/Prado-TComponent.html#method_fxAttachClassBehavior"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AfxDetachClassBehavior\u0028\u0029",
             "name": "fxDetachClassBehavior",
-            "summary": "This\u0020is\u0020the\u0020method\u0020registered\u0020for\u0020all\u0020instanced\u0020objects\u0020should\u0020a\u0020class\u0020behavior\u0020be\u0020removed\u0020after\nthe\u0020class\u0020is\u0020instanced.\u0020\u0020Only\u0020when\u0020the\u0020class\u0020to\u0020which\u0020the\u0020behavior\u0020is\u0020being\u0020added\u0020is\u0020in\u0020this\nobject\u0027s\u0020class\u0020hierarchy,\u0020via\u0020\u007B\u0040link\u0020getClassHierarchy\u007D,\u0020is\u0020the\u0020behavior\u0020removed\u0020from\u0020this\u0020instance.",
+            "summary": "This\u0020is\u0020the\u0020method\u0020registered\u0020for\u0020all\u0020instanced\u0020objects\u0020should\u0020a\u0020class\u0020behavior\u0020be\u0020removed\u0020after\nthe\u0020class\u0020is\u0020instanced.\u0020\u0020Only\u0020when\u0020the\u0020class\u0020to\u0020which\u0020the\u0020behavior\u0020is\u0020being\u0020added\u0020is\u0020in\u0020this\nobject\u0027s\u0020class\u0020hierarchy,\u0020via\u0020\u007B\u0040see\u0020getClassHierarchy\u007D,\u0020is\u0020the\u0020behavior\u0020removed\u0020from\u0020this\u0020instance.",
             "url": "classes/Prado-TComponent.html#method_fxDetachClassBehavior"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AinstanceBehavior\u0028\u0029",
@@ -15843,7 +16933,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003Aasa\u0028\u0029",
             "name": "asa",
-            "summary": "Returns\u0020the\u0020named\u0020behavior\u0020object.",
+            "summary": "Returns\u0020the\u0020named\u0020behavior\u0020object.\u0020\u0020If\u0020the\u0020\u0024behaviorname\u0020is\u0020not\u0020found,\u0020but\u0020is\nan\u0020existing\u0020class\u0020or\u0020interface,\u0020this\u0020will\u0020return\u0020the\u0020first\u0020instanceof.",
             "url": "classes/Prado-TComponent.html#method_asa"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003Aisa\u0028\u0029",
@@ -15853,7 +16943,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AgetBehaviors\u0028\u0029",
             "name": "getBehaviors",
-            "summary": "Returns\u0020all\u0020the\u0020behaviors\u0020attached\u0020to\u0020the\u0020TComponent.\u0020\u0020IBehavior\u005Bs\u005D\u0020may\nbe\u0020attached\u0020but\u0020not\u0020\u007B\u0040link\u0020\\Prado\\Util\\IBehavior\u003A\u003AgetEnabled\u0020Enabled\u007D.",
+            "summary": "Returns\u0020all\u0020the\u0020behaviors\u0020attached\u0020to\u0020the\u0020TComponent.\u0020\u0020IBaseBehavior\u005Bs\u005D\u0020may\nbe\u0020attached\u0020but\u0020not\u0020\u007B\u0040see\u0020\\Prado\\Util\\IBaseBehavior\u003A\u003AgetEnabled\u0020Enabled\u007D.",
             "url": "classes/Prado-TComponent.html#method_getBehaviors"
         },                {
             "fqsen": "\\Prado\\TComponent\u003A\u003AattachBehaviors\u0028\u0029",
@@ -16061,10 +17151,140 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-TEnumerable.html#property__enums"
         },                {
+            "fqsen": "\\Prado\\TEventHandler",
+            "name": "TEventHandler",
+            "summary": "TEventHandler\u0020class",
+            "url": "classes/Prado-TEventHandler.html"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructs\u0020a\u0020new\u0020TEventHandler\u0020and\u0020initializes\u0020the\u0020Event\u0020Handler\u0020and\u0020Data.",
+            "url": "classes/Prado-TEventHandler.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "This\u0020calls\u0020the\u0020handler\u0020with\u0020the\u0020specified\u0020data.\u0020\u0020If\u0020no\u0020\u0024data\u0020is\u0020specified\u0020then\nTEventHandler\u0020injects\u0020its\u0020own\u0020data\u0020for\u0020the\u0020event\u0020handler.\u0020\u0020When\u0020\u0024data\u0020is\u0020an\u0020array\nand\u0020the\u0020TEventHandler\u0020data\u0020is\u0020an\u0020array,\u0020the\u0020data\u0020is\u0020combined\u0020by\u0020\u0060array_replace\u0060,\nwith\u0020the\u0020function\u0020input\u0020array\u0020data\u0020\u0020taking\u0020precedence\u0020over\u0020TEventHandler\u0020data.",
+            "url": "classes/Prado-TEventHandler.html#method___invoke"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AgetHandler\u0028\u0029",
+            "name": "getHandler",
+            "summary": "Gets\u0020the\u0020handler\u0020being\u0020managed.\u0020The\u0020WeakReference\u0020version\u0020of\u0020the\u0020handler\u0020can\nbe\u0020retrieved\u0020by\u0020passing\u0020true\u0020to\u0020the\u0020\u0024weak\u0020parameter.\u0020\u0020When\u0020there\u0020are\u0020nested\nTEventHandlers,\u0020this\u0020will\u0020return\u0020the\u0020next\u0020TEventHandler\u0020as\u0020an\u0020invokable\u0020and\u0020will\nnot\u0020link\u0020to\u0020the\u0020last\u0020and\u0020actual\u0020callable\u0020handler.",
+            "url": "classes/Prado-TEventHandler.html#method_getHandler"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AisSameHandler\u0028\u0029",
+            "name": "isSameHandler",
+            "summary": "This\u0020methods\u0020checks\u0020if\u0020the\u0020item\u0020is\u0020the\u0020same\u0020as\u0020the\u0020handler.\u0020\u0020When\u0020TEventHandler\nare\u0020nested,\u0020we\u0020check\u0020the\u0020nested\u0020TEventHandler\u0020for\u0020isSameHandler.",
+            "url": "classes/Prado-TEventHandler.html#method_isSameHandler"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AgetHandlerObject\u0028\u0029",
+            "name": "getHandlerObject",
+            "summary": "If\u0020there\u0020is\u0020an\u0020object\u0020referenced\u0020in\u0020the\u0020callable,\u0020this\u0020method\u0020returns\u0020the\u0020object.",
+            "url": "classes/Prado-TEventHandler.html#method_getHandlerObject"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AhasHandler\u0028\u0029",
+            "name": "hasHandler",
+            "summary": "This\u0020checks\u0020if\u0020the\u0020managed\u0020handler\u0020is\u0020still\u0020valid.\u0020\u0020When\u0020TEventHandler\u0020are\u0020nested,\nthis\u0020returns\u0020if\u0020the\u0020last\u0020and\u0020actual\u0020handler\u0020is\u0020still\u0020valid\u0020\u0028from\u0020WeakReference\u0029.",
+            "url": "classes/Prado-TEventHandler.html#method_hasHandler"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AgetData\u0028\u0029",
+            "name": "getData",
+            "summary": "Returns\u0020the\u0020data\u0020associated\u0020with\u0020the\u0020managed\u0020event\u0020handler.\u0020By\u0020passing\u0020true\u0020to\n\u0024withHandlerData,\u0020this\u0020will\u0020combine\u0020the\u0020data\u0020from\u0020nested\u0020TEventHandlers\u0020when\u0020the\ndata\u0020is\u0020in\u0020array\u0020format.\u0020\u0020The\u0020children\u0020data\u0020take\u0020precedence\u0020in\u0020the\u0020combining\nof\u0020data.",
+            "url": "classes/Prado-TEventHandler.html#method_getData"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AsetData\u0028\u0029",
+            "name": "setData",
+            "summary": "",
+            "url": "classes/Prado-TEventHandler.html#method_setData"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AhasWeakObject\u0028\u0029",
+            "name": "hasWeakObject",
+            "summary": "Does\u0020the\u0020object\u0020contain\u0020any\u0020WeakReference\u0020objects\u003F\u0020\u0020When\u0020there\u0020are\u0020nested\u0020TEventHandler\nthis\u0020will\u0020return\u0020the\u0020last\u0020and\u0020actual\u0020data\u0020from\u0020the\u0020actual\u0020callable.",
+            "url": "classes/Prado-TEventHandler.html#method_hasWeakObject"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003Acount\u0028\u0029",
+            "name": "count",
+            "summary": "Returns\u0020the\u0020number\u0020of\u0020items\u0020in\u0020the\u0020managed\u0020event\u0020handler\u0020\u0028with\u0020data\u0029.",
+            "url": "classes/Prado-TEventHandler.html#method_count"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AgetCount\u0028\u0029",
+            "name": "getCount",
+            "summary": "There\u0020are\u00203\u0020items\u0020when\u0020the\u0020handler\u0020is\u0020an\u0020array,\u0020and\u00202\u0020items\u0020when\u0020the\u0020handler\nis\u0020an\u0020invokable\u0020object\u0020or\u0020string.",
+            "url": "classes/Prado-TEventHandler.html#method_getCount"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AoffsetExists\u0028\u0029",
+            "name": "offsetExists",
+            "summary": "These\u0020values\u0020exist\u003A\u0020null\u0020\u0028the\u0020handler\u0029,\u00200,\u00202,\u0020and\u0020conditionally\u00201\u0020on\u0020the\u0020handler\nbeing\u0020an\u0020array.",
+            "url": "classes/Prado-TEventHandler.html#method_offsetExists"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AoffsetGet\u0028\u0029",
+            "name": "offsetGet",
+            "summary": "This\u0020is\u0020a\u0020convenience\u0020method\u0020for\u0020getting\u0020the\u0020data\u0020of\u0020the\u0020TEventHandler.",
+            "url": "classes/Prado-TEventHandler.html#method_offsetGet"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AoffsetSet\u0028\u0029",
+            "name": "offsetSet",
+            "summary": "This\u0020is\u0020a\u0020convenience\u0020method\u0020for\u0020setting\u0020the\u0020data\u0020of\u0020the\u0020managed\u0020event\u0020handler.",
+            "url": "classes/Prado-TEventHandler.html#method_offsetSet"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003AoffsetUnset\u0028\u0029",
+            "name": "offsetUnset",
+            "summary": "This\u0020is\u0020a\u0020convenience\u0020method\u0020for\u0020resetting\u0020the\u0020data\u0020to\u0020null.\u0020\u0020The\u0020Handler\u0020cannot\nbe\u0020unset.\u0020\u0020However,\u0020the\u0020data\u0020can\u0020be\u0020unset.\u0020\u0020The\u0020only\u0020valid\u0020index\u0020for\u0020unsetting\nthe\u0020handler\u0020data\u0020is\u0020\u00272\u0027.",
+            "url": "classes/Prado-TEventHandler.html#method_offsetUnset"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003A\u0024_handler",
+            "name": "_handler",
+            "summary": "",
+            "url": "classes/Prado-TEventHandler.html#property__handler"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003A\u0024_data",
+            "name": "_data",
+            "summary": "",
+            "url": "classes/Prado-TEventHandler.html#property__data"
+        },                {
+            "fqsen": "\\Prado\\TEventHandler\u003A\u003A\u0024_weakObject",
+            "name": "_weakObject",
+            "summary": "",
+            "url": "classes/Prado-TEventHandler.html#property__weakObject"
+        },                {
             "fqsen": "\\Prado\\TEventParameter",
             "name": "TEventParameter",
             "summary": "TEventParameter\u0020class.",
             "url": "classes/Prado-TEventParameter.html"
+        },                {
+            "fqsen": "\\Prado\\TEventParameter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-TEventParameter.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\TEventParameter\u003A\u003AgetEventName\u0028\u0029",
+            "name": "getEventName",
+            "summary": "Gets\u0020the\u0020Event\u0020Name\u0020specified.",
+            "url": "classes/Prado-TEventParameter.html#method_getEventName"
+        },                {
+            "fqsen": "\\Prado\\TEventParameter\u003A\u003AsetEventName\u0028\u0029",
+            "name": "setEventName",
+            "summary": "Sets\u0020the\u0020Event\u0020Name.",
+            "url": "classes/Prado-TEventParameter.html#method_setEventName"
+        },                {
+            "fqsen": "\\Prado\\TEventParameter\u003A\u003AgetParameter\u0028\u0029",
+            "name": "getParameter",
+            "summary": "",
+            "url": "classes/Prado-TEventParameter.html#method_getParameter"
+        },                {
+            "fqsen": "\\Prado\\TEventParameter\u003A\u003AsetParameter\u0028\u0029",
+            "name": "setParameter",
+            "summary": "",
+            "url": "classes/Prado-TEventParameter.html#method_setParameter"
+        },                {
+            "fqsen": "\\Prado\\TEventParameter\u003A\u003A\u0024_eventName",
+            "name": "_eventName",
+            "summary": "",
+            "url": "classes/Prado-TEventParameter.html#property__eventName"
+        },                {
+            "fqsen": "\\Prado\\TEventParameter\u003A\u003A\u0024_param",
+            "name": "_param",
+            "summary": "",
+            "url": "classes/Prado-TEventParameter.html#property__param"
         },                {
             "fqsen": "\\Prado\\TEventResults",
             "name": "TEventResults",
@@ -16085,6 +17305,61 @@ Search.appendIndex(
             "name": "EVENT_RESULT_ALL",
             "summary": "",
             "url": "classes/Prado-TEventResults.html#constant_EVENT_RESULT_ALL"
+        },                {
+            "fqsen": "\\Prado\\TEventResults\u003A\u003AEVENT_REVERSE",
+            "name": "EVENT_REVERSE",
+            "summary": "",
+            "url": "classes/Prado-TEventResults.html#constant_EVENT_REVERSE"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription",
+            "name": "TEventSubscription",
+            "summary": "TEventSubscription\u0020class.",
+            "url": "classes/Prado-TEventSubscription.html"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-TEventSubscription.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003AgetArray\u0028\u0029",
+            "name": "getArray",
+            "summary": "Gets\u0020the\u0020component\u0020event\u0020handler.",
+            "url": "classes/Prado-TEventSubscription.html#method_getArray"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003AsetArray\u0028\u0029",
+            "name": "setArray",
+            "summary": "The\u0020Array\u0020for\u0020a\u0020TEventSubscription\u0020cannot\u0020be\u0020set",
+            "url": "classes/Prado-TEventSubscription.html#method_setArray"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003AgetComponent\u0028\u0029",
+            "name": "getComponent",
+            "summary": "",
+            "url": "classes/Prado-TEventSubscription.html#method_getComponent"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003AsetComponent\u0028\u0029",
+            "name": "setComponent",
+            "summary": "",
+            "url": "classes/Prado-TEventSubscription.html#method_setComponent"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003AgetEvent\u0028\u0029",
+            "name": "getEvent",
+            "summary": "",
+            "url": "classes/Prado-TEventSubscription.html#method_getEvent"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003AsetEvent\u0028\u0029",
+            "name": "setEvent",
+            "summary": "",
+            "url": "classes/Prado-TEventSubscription.html#method_setEvent"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003A\u0024_component",
+            "name": "_component",
+            "summary": "",
+            "url": "classes/Prado-TEventSubscription.html#property__component"
+        },                {
+            "fqsen": "\\Prado\\TEventSubscription\u003A\u003A\u0024_event",
+            "name": "_event",
+            "summary": "",
+            "url": "classes/Prado-TEventSubscription.html#property__event"
         },                {
             "fqsen": "\\Prado\\TModule",
             "name": "TModule",
@@ -16156,6 +17431,11 @@ Search.appendIndex(
             "summary": "Converts\u0020the\u0020value\u0020to\u0020\u0027null\u0027\u0020if\u0020the\u0020given\u0020value\u0020is\u0020empty",
             "url": "classes/Prado-TPropertyValue.html#method_ensureNullIfEmpty"
         },                {
+            "fqsen": "\\Prado\\TPropertyValue\u003A\u003AensureHexColor\u0028\u0029",
+            "name": "ensureHexColor",
+            "summary": "Converts\u0020the\u0020value\u0020to\u0020a\u0020web\u0020\u0022\u0023RRGGBB\u0022\u0020hex\u0020color.",
+            "url": "classes/Prado-TPropertyValue.html#method_ensureHexColor"
+        },                {
             "fqsen": "\\Prado\\TService",
             "name": "TService",
             "summary": "TService\u0020class.",
@@ -16163,7 +17443,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\TService\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "Initializes\u0020the\u0020service\u0020and\u0020attaches\u0020\u007B\u0040link\u0020run\u007D\u0020to\u0020the\u0020RunService\u0020event\u0020of\u0020application.",
+            "summary": "Initializes\u0020the\u0020service\u0020and\u0020attaches\u0020\u007B\u0040see\u0020run\u007D\u0020to\u0020the\u0020RunService\u0020event\u0020of\u0020application.",
             "url": "classes/Prado-TService.html#method_init"
         },                {
             "fqsen": "\\Prado\\TService\u003A\u003AgetID\u0028\u0029",
@@ -16213,7 +17493,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\Behaviors\\TBehaviorParameterLoader\u003A\u003AattachTPageServiceHandler\u0028\u0029",
             "name": "attachTPageServiceHandler",
-            "summary": "TApplication\u003A\u003AonBeginRequest\u0020Handler\u0020that\u0020adds\u0020\u007B\u0040link\u0020attachTPageBehaviors\u007D\u0020to\nTPageService\u003A\u003AonPreRunPage.\u0020In\u0020turn,\u0020this\u0020attaches\u0020\u007B\u0040link\u0020attachTPageBehaviors\u007D\nto\u0020TPageService\u0020to\u0020then\u0020adds\u0020the\u0020page\u0020behaviors.",
+            "summary": "TApplication\u003A\u003AonBeginRequest\u0020Handler\u0020that\u0020adds\u0020\u007B\u0040see\u0020attachTPageBehaviors\u007D\u0020to\nTPageService\u003A\u003AonPreRunPage.\u0020In\u0020turn,\u0020this\u0020attaches\u0020\u007B\u0040see\u0020attachTPageBehaviors\u007D\nto\u0020TPageService\u0020to\u0020then\u0020adds\u0020the\u0020page\u0020behaviors.",
             "url": "classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_attachTPageServiceHandler"
         },                {
             "fqsen": "\\Prado\\Util\\Behaviors\\TBehaviorParameterLoader\u003A\u003AattachModuleBehaviors\u0028\u0029",
@@ -16250,16 +17530,6 @@ Search.appendIndex(
             "name": "setBehaviorClass",
             "summary": "sets\u0020the\u0020class\u0020of\u0020the\u0020attaching\u0020behavior.",
             "url": "classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setBehaviorClass"
-        },                {
-            "fqsen": "\\Prado\\Util\\Behaviors\\TBehaviorParameterLoader\u003A\u003AgetPriority\u0028\u0029",
-            "name": "getPriority",
-            "summary": "gets\u0020the\u0020priority\u0020of\u0020the\u0020attaching\u0020behavior.",
-            "url": "classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_getPriority"
-        },                {
-            "fqsen": "\\Prado\\Util\\Behaviors\\TBehaviorParameterLoader\u003A\u003AsetPriority\u0028\u0029",
-            "name": "setPriority",
-            "summary": "sets\u0020the\u0020priority\u0020of\u0020the\u0020attaching\u0020behavior.",
-            "url": "classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#method_setPriority"
         },                {
             "fqsen": "\\Prado\\Util\\Behaviors\\TBehaviorParameterLoader\u003A\u003AgetAttachTo\u0028\u0029",
             "name": "getAttachTo",
@@ -16300,11 +17570,6 @@ Search.appendIndex(
             "name": "_behaviorClass",
             "summary": "",
             "url": "classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#property__behaviorClass"
-        },                {
-            "fqsen": "\\Prado\\Util\\Behaviors\\TBehaviorParameterLoader\u003A\u003A\u0024_priority",
-            "name": "_priority",
-            "summary": "",
-            "url": "classes/Prado-Util-Behaviors-TBehaviorParameterLoader.html#property__priority"
         },                {
             "fqsen": "\\Prado\\Util\\Behaviors\\TBehaviorParameterLoader\u003A\u003A\u0024_attachto",
             "name": "_attachto",
@@ -16390,6 +17655,26 @@ Search.appendIndex(
             "name": "_handler",
             "summary": "",
             "url": "classes/Prado-Util-Behaviors-TMapRouteBehavior.html#property__handler"
+        },                {
+            "fqsen": "\\Prado\\Util\\Behaviors\\TNoUnserializeBehaviorTrait",
+            "name": "TNoUnserializeBehaviorTrait",
+            "summary": "TNoUnserializeBehaviorTrait\u0020class.",
+            "url": "classes/Prado-Util-Behaviors-TNoUnserializeBehaviorTrait.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\Behaviors\\TNoUnserializeBehaviorTrait\u003A\u003AdyWakeUp\u0028\u0029",
+            "name": "dyWakeUp",
+            "summary": "This\u0020is\u0020raised\u0020when\u0020an\u0020owner\u0020is\u0020completed\u0020its\u0020unserialize\u0028\u0029\u0020method\u0020call\u0020to\n__wakeup.\u0020\u0020This\u0020method\u0020removes\u0020it\u0020behavior\u0020from\u0020the\u0020owner.",
+            "url": "classes/Prado-Util-Behaviors-TNoUnserializeBehaviorTrait.html#method_dyWakeUp"
+        },                {
+            "fqsen": "\\Prado\\Util\\Behaviors\\TNoUnserializeClassBehaviorTrait",
+            "name": "TNoUnserializeClassBehaviorTrait",
+            "summary": "TNoUnserializeClassBehaviorTrait\u0020class.",
+            "url": "classes/Prado-Util-Behaviors-TNoUnserializeClassBehaviorTrait.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\Behaviors\\TNoUnserializeClassBehaviorTrait\u003A\u003AdyWakeUp\u0028\u0029",
+            "name": "dyWakeUp",
+            "summary": "This\u0020is\u0020raised\u0020when\u0020an\u0020owner\u0020is\u0020completed\u0020its\u0020unserialize\u0028\u0029\u0020method\u0020call\u0020to\n__wakeup.\u0020\u0020This\u0020method\u0020removes\u0020its\u0020behavior\u0020from\u0020the\u0020owner.",
+            "url": "classes/Prado-Util-Behaviors-TNoUnserializeClassBehaviorTrait.html#method_dyWakeUp"
         },                {
             "fqsen": "\\Prado\\Util\\Behaviors\\TPageGlobalizationCharsetBehavior",
             "name": "TPageGlobalizationCharsetBehavior",
@@ -16488,7 +17773,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\Behaviors\\TParameterizeBehavior\u003A\u003Aattach\u0028\u0029",
             "name": "attach",
-            "summary": "This\u0020method\u0020sets\u0020the\u0020Owner\u0020Property\u0020to\u0020the\u0020Application\u0020Parameter\u0020of\u0020Parameter.\u0020When\n\u007B\u0040link\u0020getRouteBehaviorName\u007D\u0020is\u0020set,\u0020a\u0020\u007B\u0040link\u0020TMapRouteBehavior\u007D\u0020is\u0020attached\u0020to\nthe\u0020Application\u0020Parameter\u0020on\u0020the\u0020key\u0020so\u0020any\u0020changes\u0020are\u0020also\u0020routed\u0020to\u0020the\u0020Property.",
+            "summary": "This\u0020method\u0020sets\u0020the\u0020Owner\u0020Property\u0020to\u0020the\u0020Application\u0020Parameter\u0020of\u0020Parameter.\u0020When\n\u007B\u0040see\u0020getRouteBehaviorName\u007D\u0020is\u0020set,\u0020a\u0020\u007B\u0040see\u0020\\Prado\\Util\\Behaviors\\TMapRouteBehavior\u007D\u0020is\u0020attached\u0020to\nthe\u0020Application\u0020Parameter\u0020on\u0020the\u0020key\u0020so\u0020any\u0020changes\u0020are\u0020also\u0020routed\u0020to\u0020the\u0020Property.",
             "url": "classes/Prado-Util-Behaviors-TParameterizeBehavior.html#method_attach"
         },                {
             "fqsen": "\\Prado\\Util\\Behaviors\\TParameterizeBehavior\u003A\u003AattachParamMapRoute\u0028\u0029",
@@ -16693,7 +17978,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TCronMethodTask\u003A\u003AgetModule\u0028\u0029",
             "name": "getModule",
-            "summary": "Gets\u0020the\u0020module\u0020for\u0020the\u0020task\u0020based\u0020upon\u0020the\u0020\u007B\u0040link\u0020getModuleId\u007D.",
+            "summary": "Gets\u0020the\u0020module\u0020for\u0020the\u0020task\u0020based\u0020upon\u0020the\u0020\u007B\u0040see\u0020getModuleId\u007D.",
             "url": "classes/Prado-Util-Cron-TCronMethodTask.html#method_getModule"
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TCronMethodTask\u003A\u003AgetMethod\u0028\u0029",
@@ -16753,7 +18038,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TCronModule\u003A\u003AgetRawTasks\u0028\u0029",
             "name": "getRawTasks",
-            "summary": "These\u0020are\u0020the\u0020tasks\u0020specified\u0020in\u0020the\u0020configuration\u0020and\u0020getAdditionalCronTasks\nuntil\u0020\u007B\u0040link\u0020ensureTasks\u007D\u0020is\u0020called.",
+            "summary": "These\u0020are\u0020the\u0020tasks\u0020specified\u0020in\u0020the\u0020configuration\u0020and\u0020getAdditionalCronTasks\nuntil\u0020\u007B\u0040see\u0020ensureTasks\u007D\u0020is\u0020called.",
             "url": "classes/Prado-Util-Cron-TCronModule.html#method_getRawTasks"
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TCronModule\u003A\u003AgetTask\u0028\u0029",
@@ -16798,7 +18083,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TCronModule\u003A\u003ArunTask\u0028\u0029",
             "name": "runTask",
-            "summary": "Runs\u0020a\u0020specific\u0020task.\u0020Sets\u0020the\u0020user\u0020to\u0020the\u0020Task\u0020user\u0020or\u0020the\u0020cron\u0020module\n\u007B\u0040link\u0020getDefaultUserName\u007D.",
+            "summary": "Runs\u0020a\u0020specific\u0020task.\u0020Sets\u0020the\u0020user\u0020to\u0020the\u0020Task\u0020user\u0020or\u0020the\u0020cron\u0020module\n\u007B\u0040see\u0020getDefaultUserName\u007D.",
             "url": "classes/Prado-Util-Cron-TCronModule.html#method_runTask"
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TCronModule\u003A\u003AlogCronTask\u0028\u0029",
@@ -17323,12 +18608,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TDbCronModule\u003A\u003AexecuteRuntimeTasks\u0028\u0029",
             "name": "executeRuntimeTasks",
-            "summary": "This\u0020executes\u0020the\u0020Run\u0020Time\u0020Tasks,\u0020this\u0020method\u0020is\u0020automatically\u0020added\nto\u0020TApplication\u003A\u003AonEndRequest\u0020when\u0020there\u0020are\u0020RuntimeTasks\u0020via\u0020\u007B\u0040link\u0020addRuntimeTask\u007D.",
+            "summary": "This\u0020executes\u0020the\u0020Run\u0020Time\u0020Tasks,\u0020this\u0020method\u0020is\u0020automatically\u0020added\nto\u0020TApplication\u003A\u003AonEndRequest\u0020when\u0020there\u0020are\u0020RuntimeTasks\u0020via\u0020\u007B\u0040see\u0020addRuntimeTask\u007D.",
             "url": "classes/Prado-Util-Cron-TDbCronModule.html#method_executeRuntimeTasks"
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TDbCronModule\u003A\u003AaddRuntimeTask\u0028\u0029",
             "name": "addRuntimeTask",
-            "summary": "Adds\u0020a\u0020task\u0020to\u0020being\u0020run\u0020time.\u0020\u0020If\u0020this\u0020is\u0020the\u0020first\u0020runtime\u0020task\u0020this\nmethod\u0020adds\u0020\u007B\u0040link\u0020executeRuntimeTasks\u007D\u0020to\u0020TApplication\u003A\u003AonEndRequest.",
+            "summary": "Adds\u0020a\u0020task\u0020to\u0020being\u0020run\u0020time.\u0020\u0020If\u0020this\u0020is\u0020the\u0020first\u0020runtime\u0020task\u0020this\nmethod\u0020adds\u0020\u007B\u0040see\u0020executeRuntimeTasks\u007D\u0020to\u0020TApplication\u003A\u003AonEndRequest.",
             "url": "classes/Prado-Util-Cron-TDbCronModule.html#method_addRuntimeTask"
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TDbCronModule\u003A\u003AgetRuntimeTasks\u0028\u0029",
@@ -17338,7 +18623,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TDbCronModule\u003A\u003AremoveRuntimeTask\u0028\u0029",
             "name": "removeRuntimeTask",
-            "summary": "Removes\u0020a\u0020task\u0020from\u0020being\u0020run\u0020time.\u0020\u0020If\u0020there\u0020are\u0020no\u0020runtime\u0020tasks\u0020left\nthen\u0020it\u0020removes\u0020\u007B\u0040link\u0020executeRuntimeTasks\u007D\u0020from\u0020TApplication\u003A\u003AonEndRequest.",
+            "summary": "Removes\u0020a\u0020task\u0020from\u0020being\u0020run\u0020time.\u0020\u0020If\u0020there\u0020are\u0020no\u0020runtime\u0020tasks\u0020left\nthen\u0020it\u0020removes\u0020\u007B\u0040see\u0020executeRuntimeTasks\u007D\u0020from\u0020TApplication\u003A\u003AonEndRequest.",
             "url": "classes/Prado-Util-Cron-TDbCronModule.html#method_removeRuntimeTask"
         },                {
             "fqsen": "\\Prado\\Util\\Cron\\TDbCronModule\u003A\u003AclearRuntimeTasks\u0028\u0029",
@@ -17836,14 +19121,309 @@ Search.appendIndex(
             "summary": "validation\u0020is\u0020computed\u0020only\u0020once",
             "url": "classes/Prado-Util-Cron-TTimeScheduler.html#property__validatorCache"
         },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TArrayHelper",
+            "name": "TArrayHelper",
+            "summary": "TArrayHelper\u0020class.",
+            "url": "classes/Prado-Util-Helpers-TArrayHelper.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TArrayHelper\u003A\u003Aarray_is_list\u0028\u0029",
+            "name": "array_is_list",
+            "summary": "Determines\u0020if\u0020the\u0020given\u0020array\u0020is\u0020a\u0020list.\u0020An\u0020array\u0020is\u0020considered\u0020a\u0020list\u0020if\u0020its\nkeys\u0020consist\u0020of\u0020consecutive\u0020numbers\u0020from\u00200\u0020to\u0020count\u0028\u0024array\u0029\u002D1.",
+            "url": "classes/Prado-Util-Helpers-TArrayHelper.html#method_array_is_list"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper",
+            "name": "TBitHelper",
+            "summary": "TBitHelper\u0020class.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AisSystemBigEndian\u0028\u0029",
+            "name": "isSystemBigEndian",
+            "summary": "Motorola\u0020is\u0020Big\u0020Endian\u0020with\u0020the\u0020Most\u0020Significant\u0020Byte\u0020first\u0020whereas\u0020Intel\u0020uses\nLittle\u0020Endian\u0020with\u0020the\u0020Least\u0020Significant\u0020Byte\u0020first.\u0020\u0020This\u0020mainly\u0020only\u0020affects\nthe\u0020binary\u0020reading\u0020and\u0020writing\u0020of\u0020data\u0020types\u0020that\u0020are\u00202\u0020bytes\u0020or\u0020larger.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_isSystemBigEndian"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AhasLongLong\u0028\u0029",
+            "name": "hasLongLong",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_hasLongLong"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003Acrc32\u0028\u0029",
+            "name": "crc32",
+            "summary": "This\u0020is\u0020a\u0020CRC32\u0020replacement\u0020multi\u002Dtool.\u0020\u0020This\u0020acts\u0020exactly\u0020as\u0020crc32\u0020with\u0020the\nadded\u0020functionality\u0020that\u0020it\u0020accepts\u0020file\u0020paths\u0020\u0028when\u0020\u0024crc\u0020\u003D\u0020true\u0029\u0020which\u0020computes\nthe\u0020CRC32\u0020of\u0020the\u0020file.\u0020\u0020This\u0020also\u0020accepts\u0020a\u0020\u0024crc\u0020computed\u0020from\u0020existing\u0020data\u0020and\ncontinues\u0020to\u0020update\u0020the\u0020\u0024crc\u0020with\u0020new\u0020data\u0020form\u0020\u0024string\u0020as\u0020if\u0020\u0024string\u0020were\u0020appended.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_crc32"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AisNegativeFloat\u0028\u0029",
+            "name": "isNegativeFloat",
+            "summary": "This\u0020returns\u0020true\u0020with\u0020all\u0020negative\u0020floats,\u0020including\u0020\u002D0.0.\u0020\u0020Normally\u0020\u0022\u0024float\u0020\u003C\u00200\u0022\nwill\u0020not\u0020include\u0020\u002D0.0,\u0020where\u0020this\u0020function\u0020does\u0020include\u0020\u002D0.0.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_isNegativeFloat"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AisNegativeZero\u0028\u0029",
+            "name": "isNegativeZero",
+            "summary": "This\u0020returns\u0020true\u0020with\u0020negative\u0020zero\u0020\u0028\u002D0.0\u0029.\u0020\u0020Checking\u0020for\u0020negative\u0020zero\u0020floats\nrequires\u0020this\u0020special\u0020function\u0020because\u0020PHP\u0020cannot\u0020be\u0020directly\u0020check\u0020for\u0020negative\nzero\u0020due\u0020to\u0020\u0027\u002D0.0\u0020\u003D\u003D\u003D\u00200.0\u0027.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_isNegativeZero"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AfloatToFpXX\u0028\u0029",
+            "name": "floatToFpXX",
+            "summary": "Encodes\u0020a\u0020PHP\u0020float\u0020into\u0020an\u0020N\u002Dbit\u0020floating\u0020point\u0020number\u0020\u0028in\u0020an\u0020integer\u0029\u0020representation.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_floatToFpXX"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AfloatToFp16\u0028\u0029",
+            "name": "floatToFp16",
+            "summary": "This\u0020encodes\u0020a\u0020PHP\u0020float\u0020into\u0020a\u0020Fp16\u0020\u00281\u0020bit\u0020sign,\u00205\u0020bits\u0020exponent,\u002010\u0020bits\u0020mantissa\u0029\u0020float.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_floatToFp16"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AfloatToBf16\u0028\u0029",
+            "name": "floatToBf16",
+            "summary": "This\u0020encodes\u0020a\u0020PHP\u0020float\u0020into\u0020a\u0020Bf16\u0020\u00281\u0020bit\u0020sign,\u00208\u0020bits\u0020exponent,\u00207\u0020bits\u0020mantissa\u0029\nfloat.\u0020\u0020This\u0020preserves\u0020the\u0020range\u0020of\u0020typical\u00204\u0020byte\u0020floats\u0020but\u0020drops\u00202\u0020bytes\u0020of\nprecision\u0020from\u002023\u0020bits\u0020to\u00207\u0020bits.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_floatToBf16"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AfloatToFp8Range\u0028\u0029",
+            "name": "floatToFp8Range",
+            "summary": "This\u0020encodes\u0020a\u0020PHP\u0020float\u0020into\u0020an\u0020FP8\u0020\u00281\u0020bit\u0020sign,\u00205\u0020bits\u0020exponent,\u00202\u0020bits\u0020mantissa\u0029\u0020float.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_floatToFp8Range"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AfloatToFp8Precision\u0028\u0029",
+            "name": "floatToFp8Precision",
+            "summary": "This\u0020encodes\u0020a\u0020PHP\u0020float\u0020into\u0020an\u0020FP8\u0020\u00281\u0020bit\u0020sign,\u00204\u0020bits\u0020exponent,\u00203\u0020bits\u0020mantissa\u0029\u0020float.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_floatToFp8Precision"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AfpXXToFloat\u0028\u0029",
+            "name": "fpXXToFloat",
+            "summary": "Decodes\u0020an\u0020N\u002Dbit\u0020floating\u0020point\u0020encoded\u0020as\u0020an\u0020integer\u0020to\u0020a\u0020PHP\u0020floating\u002Dpoint\u0020number.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_fpXXToFloat"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003Afp16ToFloat\u0028\u0029",
+            "name": "fp16ToFloat",
+            "summary": "This\u0020decodes\u0020a\u0020Fp16\u0020\u00285\u0020bits\u0020exponent,\u002010\u0020bits\u0020mantissa\u0029\u0020encoded\u0020float\u0020into\u0020a\u0020PHP\u0020Float.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_fp16ToFloat"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003Abf16ToFloat\u0028\u0029",
+            "name": "bf16ToFloat",
+            "summary": "This\u0020decodes\u0020a\u0020Bf16\u0020\u00288\u0020bits\u0020exponent,\u00207\u0020bits\u0020mantissa\u0029\u0020encoded\u0020float\u0020into\u0020a\u0020PHP\nFloat.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_bf16ToFloat"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003Afp8RangeToFloat\u0028\u0029",
+            "name": "fp8RangeToFloat",
+            "summary": "This\u0020decodes\u0020a\u0020FP8\u0020\u00285\u0020bits\u0020exponent,\u00202\u0020bits\u0020mantissa\u0029\u0020encoded\u0020float\u0020into\u0020a\u0020PHP\u0020Float.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_fp8RangeToFloat"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003Afp8PrecisionToFloat\u0028\u0029",
+            "name": "fp8PrecisionToFloat",
+            "summary": "This\u0020decodes\u0020a\u0020FP8\u0020\u00284\u0020bits\u0020exponent,\u00203\u0020bits\u0020mantissa\u0029\u0020encoded\u0020float\u0020into\u0020a\u0020PHP\u0020Float.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_fp8PrecisionToFloat"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AbitCount\u0028\u0029",
+            "name": "bitCount",
+            "summary": "This\u0020calculates\u0020the\u0020number\u0020of\u0020bits\u0020required\u0020to\u0020represent\u0020a\u0020given\u0020number.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_bitCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AcolorBitShift\u0028\u0029",
+            "name": "colorBitShift",
+            "summary": "This\u0020method\u0020shifts\u0020color\u0020bits.\u0020\u0020When\u0020removing\u0020bits,\u0020they\u0020are\u0020simply\u0020dropped.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_colorBitShift"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AunsignedShift\u0028\u0029",
+            "name": "unsignedShift",
+            "summary": "This\u0020does\u0020a\u0020right\u0020bit\u0020shift\u0020but\u0020the\u0020signed\u0020bit\u0020is\u0020not\u0020replicated\u0020in\u0020the\u0020high\nbit\u0020\u0028with\u0020a\u0020bit\u002Dand\u0029.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_unsignedShift"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AmirrorBits\u0028\u0029",
+            "name": "mirrorBits",
+            "summary": "This\u0020mirrors\u0020\u0024nbit\u0020bits\u0020from\u0020\u0024value.\u0020For\u0020example,\u00200b100\u0020becomes\u00200b001\u0020\u0040\u0020\u0024nbit\u0020\u003D\u00203\nand\u00200x0100\u0020become\u00200x0010\u0020\u0040\u0020\u0024nbit\u0020\u003D\u00204.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_mirrorBits"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AmirrorByte\u0028\u0029",
+            "name": "mirrorByte",
+            "summary": "This\u0020quickly\u0020mirrors\u0020the\u00208\u0020bits\u0020in\u0020each\u0020byte\u0020of\u0020\u0024n.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_mirrorByte"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AmirrorShort\u0028\u0029",
+            "name": "mirrorShort",
+            "summary": "This\u0020quickly\u0020mirrors\u0020the\u002016\u0020bits\u0020in\u0020each\u0020\u005B2\u0020byte\u005D\u0020short\u0020of\u0020\u0024n.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_mirrorShort"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AmirrorLong\u0028\u0029",
+            "name": "mirrorLong",
+            "summary": "This\u0020quickly\u0020mirrors\u0020the\u002032\u0020bits\u0020in\u0020each\u0020\u005B4\u0020byte\u005D\u0020long\u0020of\u0020\u0024n.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_mirrorLong"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AmirrorLongLong\u0028\u0029",
+            "name": "mirrorLongLong",
+            "summary": "This\u0020quickly\u0020mirrors\u0020the\u002064\u0020bits\u0020of\u0020\u0024n.\u0020\u0020This\u0020only\u0020works\u0020with\u002064\u0020bit\u0020PHP\u0020systems.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_mirrorLongLong"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AflipEndianShort\u0028\u0029",
+            "name": "flipEndianShort",
+            "summary": "This\u0020quickly\u0020flips\u0020the\u0020endian\u0020in\u0020each\u0020\u005B2\u0020byte\u005D\u0020short\u0020of\u0020\u0024n.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_flipEndianShort"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AflipEndianLong\u0028\u0029",
+            "name": "flipEndianLong",
+            "summary": "This\u0020quickly\u0020flips\u0020the\u0020endian\u0020in\u0020each\u0020\u005B4\u0020byte\u005D\u0020long\u0020of\u0020\u0024n.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_flipEndianLong"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AflipEndianLongLong\u0028\u0029",
+            "name": "flipEndianLongLong",
+            "summary": "This\u0020quickly\u0020fligs\u0020the\u0020\u0020endian\u0020of\u0020an\u00208\u0020byte\u0020integer.\u0020\u0020This\u0020only\u0020works\u0020with\u002064\nbit\u0020PHP\u0020systems.\u002032\u0020bit\u0020systems\u0020will\u0020treat\u0020the\u0020bit\u0020field\u0020as\u0020floats\u0020and\u0020invariably\nfail.",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#method_flipEndianLongLong"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT32_MIN",
+            "name": "PHP_INT32_MIN",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT32_MIN"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT32_MAX",
+            "name": "PHP_INT32_MAX",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT32_MAX"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT32_UMAX",
+            "name": "PHP_INT32_UMAX",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT32_UMAX"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT32_MASK",
+            "name": "PHP_INT32_MASK",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT32_MASK"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT64_MIN",
+            "name": "PHP_INT64_MIN",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT64_MIN"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT64_MAX",
+            "name": "PHP_INT64_MAX",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT64_MAX"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT64_UMAX",
+            "name": "PHP_INT64_UMAX",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT64_UMAX"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003APHP_INT64_MASK",
+            "name": "PHP_INT64_MASK",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_PHP_INT64_MASK"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ALevel1",
+            "name": "Level1",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Level1"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ANLevel1",
+            "name": "NLevel1",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_NLevel1"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AMask1",
+            "name": "Mask1",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Mask1"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ALevel2",
+            "name": "Level2",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Level2"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ANLevel2",
+            "name": "NLevel2",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_NLevel2"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AMask2",
+            "name": "Mask2",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Mask2"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ALevel3",
+            "name": "Level3",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Level3"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ANLevel3",
+            "name": "NLevel3",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_NLevel3"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AMask3",
+            "name": "Mask3",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Mask3"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ALevel4",
+            "name": "Level4",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Level4"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ANLevel4",
+            "name": "NLevel4",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_NLevel4"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AMask4",
+            "name": "Mask4",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Mask4"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ALevel5",
+            "name": "Level5",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Level5"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ANLevel5",
+            "name": "NLevel5",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_NLevel5"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AMask5",
+            "name": "Mask5",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Mask5"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ALevel6",
+            "name": "Level6",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Level6"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003ANLevel6",
+            "name": "NLevel6",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_NLevel6"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TBitHelper\u003A\u003AMask6",
+            "name": "Mask6",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TBitHelper.html#constant_Mask6"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TEscCharsetConverter",
+            "name": "TEscCharsetConverter",
+            "summary": "TEscCharsetConverter\u0020class.",
+            "url": "classes/Prado-Util-Helpers-TEscCharsetConverter.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TEscCharsetConverter\u003A\u003AdecodeEscapeCharset\u0028\u0029",
+            "name": "decodeEscapeCharset",
+            "summary": "Convert\u0020an\u0020Escape\u0020Character\u0020Code\u0020Encoding\u0020to\u0020the\u0020iconv\u0020character\nencoding.",
+            "url": "classes/Prado-Util-Helpers-TEscCharsetConverter.html#method_decodeEscapeCharset"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TEscCharsetConverter\u003A\u003AencodeEscapeCharset\u0028\u0029",
+            "name": "encodeEscapeCharset",
+            "summary": "Convert\u0020an\u0020Escape\u0020Character\u0020Code\u0020Encoding\u0020to\u0020the\u0020iconv\u0020character\nencoding.",
+            "url": "classes/Prado-Util-Helpers-TEscCharsetConverter.html#method_encodeEscapeCharset"
+        },                {
+            "fqsen": "\\Prado\\Util\\Helpers\\TEscCharsetConverter\u003A\u003AESC_CHAR_ENCODINGS_MAP",
+            "name": "ESC_CHAR_ENCODINGS_MAP",
+            "summary": "",
+            "url": "classes/Prado-Util-Helpers-TEscCharsetConverter.html#constant_ESC_CHAR_ENCODINGS_MAP"
+        },                {
             "fqsen": "\\Prado\\Util\\IBaseBehavior",
             "name": "IBaseBehavior",
-            "summary": "IBaseBehavior\u0020interface\u0020is\u0020the\u0020base\u0020behavior\u0020class\u0020from\u0020which\u0020all\u0020other\nbehaviors\u0020types\u0020are\u0020derived",
+            "summary": "IBaseBehavior\u0020interface\u0020is\u0020the\u0020base\u0020behavior\u0020interface\u0020from\u0020which\u0020the\u0020two\u0020PRADO\nbehaviors\u0020interface\u0020types\u0020are\u0020derived.\u0020\u0020All\u0020behaviors\u0020are\u0020attached\u0020to\u0020an\u0020owner\nTComponent,\u0020essentially\u0020extending\u0020it\u0020with\u0020run\u0020time\u0020traits\u003B\u0020implementing\u0020new\u0020methods,\nproperties,\u0020and\u0020fine\u0020internal\u0020process\u0020control\u0020for\u0020the\u0020owner\u0020component\u0020at\u0020run\u0020time.",
             "url": "classes/Prado-Util-IBaseBehavior.html"
         },                {
             "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "Handles\u0020behavior\u0020configurations\u0020from\u0020TBehaviorsModule",
+            "summary": "Handles\u0020behavior\u0020configurations\u0020from\u0020TBehaviorsModule\u0020and\u0020TBehaviorParameterLoader.",
             "url": "classes/Prado-Util-IBaseBehavior.html#method_init"
         },                {
             "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003Aattach\u0028\u0029",
@@ -17856,6 +19436,46 @@ Search.appendIndex(
             "summary": "Detaches\u0020the\u0020behavior\u0020object\u0020from\u0020the\u0020component.",
             "url": "classes/Prado-Util-IBaseBehavior.html#method_detach"
         },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_getName"
+        },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_setName"
+        },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AgetEnabled\u0028\u0029",
+            "name": "getEnabled",
+            "summary": "",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_getEnabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AsetEnabled\u0028\u0029",
+            "name": "setEnabled",
+            "summary": "",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_setEnabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AgetOwners\u0028\u0029",
+            "name": "getOwners",
+            "summary": "",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_getOwners"
+        },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AhasOwner\u0028\u0029",
+            "name": "hasOwner",
+            "summary": "",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_hasOwner"
+        },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AisOwner\u0028\u0029",
+            "name": "isOwner",
+            "summary": "",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_isOwner"
+        },                {
+            "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003AsyncEventHandlers\u0028\u0029",
+            "name": "syncEventHandlers",
+            "summary": "Synchronize\u0020the\u0020\u0024component\u0020or\u0020all\u0020owners\u0027\u0020events\u0020of\u0020the\u0020behavior\u0020event\u0020handlers\nby\u0020attaching\u0020or\u0020detaching\u0020handlers\u0020where\u0020needed.",
+            "url": "classes/Prado-Util-IBaseBehavior.html#method_syncEventHandlers"
+        },                {
             "fqsen": "\\Prado\\Util\\IBaseBehavior\u003A\u003ACONFIG_KEY",
             "name": "CONFIG_KEY",
             "summary": "The\u0020array\u0020key\u0020for\u0020the\u0020\u0024config\u0020data\u0020in\u0020instancing\u0020behaviors\u0020with\u0020init\u0028\u0024config\u0029,",
@@ -17863,22 +19483,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\IBehavior",
             "name": "IBehavior",
-            "summary": "IBehavior\u0020interfaces\u0020is\u0020implemented\u0020by\u0020instance\u0020behavior\u0020classes.",
+            "summary": "IBehavior\u0020is\u0020the\u0020base\u0020interface\u0020for\u0020behaviors\u0020that\u0020extend\u0020an\u0020owner\u0020component\u0020with\nnew\u0020state\u0020information,\u0020properties,\u0020run\u0020time\u0020methods,\u0020and\u0020fine\u0020process\u0020modification.",
             "url": "classes/Prado-Util-IBehavior.html"
         },                {
-            "fqsen": "\\Prado\\Util\\IBehavior\u003A\u003AgetEnabled\u0028\u0029",
-            "name": "getEnabled",
+            "fqsen": "\\Prado\\Util\\IBehavior\u003A\u003AgetOwner\u0028\u0029",
+            "name": "getOwner",
             "summary": "",
-            "url": "classes/Prado-Util-IBehavior.html#method_getEnabled"
-        },                {
-            "fqsen": "\\Prado\\Util\\IBehavior\u003A\u003AsetEnabled\u0028\u0029",
-            "name": "setEnabled",
-            "summary": "",
-            "url": "classes/Prado-Util-IBehavior.html#method_setEnabled"
+            "url": "classes/Prado-Util-IBehavior.html#method_getOwner"
         },                {
             "fqsen": "\\Prado\\Util\\IClassBehavior",
             "name": "IClassBehavior",
-            "summary": "IClassBehavior\u0020interface\u0020is\u0020implements\u0020behaviors\u0020across\u0020all\u0020instances\u0020of\na\u0020particular\u0020class",
+            "summary": "IClassBehavior\u0020is\u0020the\u0020base\u0020interface\u0020for\u0020class\u0020behaviors\u0020that\u0020extend\u0020owner\u0020objects\nwith\u0020new\u0020information,\u0020properties,\u0020run\u0020time\u0020methods,\u0020and\u0020fine\u0020process\u0020modification.",
             "url": "classes/Prado-Util-IClassBehavior.html"
         },                {
             "fqsen": "\\Prado\\Util\\IDbModule",
@@ -17913,13 +19528,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\IInstanceCheck",
             "name": "IInstanceCheck",
-            "summary": "IInstanceCheck\u0020This\u0020interface\u0020allows\u0020objects\u0020to\u0020determine\u0020their\u0020own\n\u0027instanceof\u0027\u0020results\u0020when\u0020\u007B\u0040link\u0020TComponent\u003A\u003Aisa\u007D\u0020is\u0020called.\u0020\u0020This\u0020is\nimportant\u0020with\u0020behaviors\u0020because\u0020behaviors\u0020may\u0020want\u0020to\u0020look\u0020like\nparticular\u0020objects\u0020other\u0020than\u0020themselves.",
+            "summary": "IInstanceCheck\u0020This\u0020interface\u0020allows\u0020objects\u0020to\u0020determine\u0020their\u0020own\n\u0027instanceof\u0027\u0020results\u0020when\u0020\u007B\u0040see\u0020\\Prado\\TComponent\u003A\u003Aisa\u007D\u0020is\u0020called.\u0020\u0020This\u0020is\nimportant\u0020with\u0020behaviors\u0020because\u0020behaviors\u0020may\u0020want\u0020to\u0020look\u0020like\nparticular\u0020objects\u0020other\u0020than\u0020themselves.",
             "url": "classes/Prado-Util-IInstanceCheck.html"
         },                {
             "fqsen": "\\Prado\\Util\\IInstanceCheck\u003A\u003Aisinstanceof\u0028\u0029",
             "name": "isinstanceof",
             "summary": "The\u0020method\u0020checks\u0020\u0024this\u0020or,\u0020if\u0020needed,\u0020the\u0020parameter\u0020\u0024instance\u0020is\u0020of\u0020type\nclass.\u0020\u0020In\u0020the\u0020case\u0020of\u0020a\u0020Class\u0020Behavior,\u0020the\u0020instance\u0020to\u0020which\u0020the\u0020behavior\nis\u0020attached\u0020may\u0020be\u0020important\u0020to\u0020determine\u0020if\u0020\u0024this\u0020is\u0020an\u0020instance\nof\u0020a\u0020particular\u0020class.",
             "url": "classes/Prado-Util-IInstanceCheck.html#method_isinstanceof"
+        },                {
+            "fqsen": "\\Prado\\Util\\IOutputLogRoute",
+            "name": "IOutputLogRoute",
+            "summary": "IOutputLogRoute\u0020class.",
+            "url": "classes/Prado-Util-IOutputLogRoute.html"
         },                {
             "fqsen": "\\Prado\\Util\\IPluginModule",
             "name": "IPluginModule",
@@ -17931,55 +19551,340 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-IPluginModule.html#method_getPluginPath"
         },                {
-            "fqsen": "\\Prado\\Util\\TBehavior",
-            "name": "TBehavior",
-            "summary": "TBehavior\u0020is\u0020a\u0020convenient\u0020base\u0020class\u0020for\u0020behavior\u0020classes.",
-            "url": "classes/Prado-Util-TBehavior.html"
+            "fqsen": "\\Prado\\Util\\Math\\TRational",
+            "name": "TRational",
+            "summary": "TRational\u0020class.",
+            "url": "classes/Prado-Util-Math-TRational.html"
         },                {
-            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003Ainit\u0028\u0029",
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AgetIsUnsigned\u0028\u0029",
+            "name": "getIsUnsigned",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#method_getIsUnsigned"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "This\u0020initializes\u0020a\u0020TRational\u0020with\u0020no\u0020value\u0020\u005Bnull\u005D,\u0020a\u0020float\u0020that\u0020gets\u0020deconstructed\ninto\u0020a\u0020numerator\u0020and\u0020denominator,\u0020a\u0020string\u0020with\u0020the\u0020numerator\u0020and\u0020denominator\nwith\u0020a\u0020\u0027\/\u0027\u0020between\u0020them,\u0020an\u0020array\u0020with\u0020\u005B0\u0020\u003D\u003E\u0020\u0024numerator,\u00201\u0020\u003D\u003E\u0020\u0024denominator\u005D,\nor\u0020both\u0020the\u0020numerator\u0020and\u0020denominator\u0020as\u0020two\u0020parameters.",
+            "url": "classes/Prado-Util-Math-TRational.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AgetNumerator\u0028\u0029",
+            "name": "getNumerator",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#method_getNumerator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AsetNumerator\u0028\u0029",
+            "name": "setNumerator",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#method_setNumerator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AgetDenominator\u0028\u0029",
+            "name": "getDenominator",
+            "summary": "Unless\u0020specifically\u0020set,\u0020the\u0020denominator\u0020usually\u0020only\u0020has\u0020a\u0020positive\u0020value.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_getDenominator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AsetDenominator\u0028\u0029",
+            "name": "setDenominator",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#method_setDenominator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AgetValue\u0028\u0029",
+            "name": "getValue",
+            "summary": "This\u0020returns\u0020the\u0020float\u0020value\u0020of\u0020the\u0020Numerator\u0020divided\u0020by\u0020the\u0020denominator.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_getValue"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AsetValue\u0028\u0029",
+            "name": "setValue",
+            "summary": "When\u0020setting\u0020a\u0020float\u0020value,\u0020this\u0020computes\u0020the\u0020numerator\u0020and\u0020denominator\u0020from\nthe\u0020Continued\u0020Fraction\u0020mathematical\u0020computation\u0020to\u0020a\u0020specific\u0020\u0024tolerance.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_setValue"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#method___toString"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AtoArray\u0028\u0029",
+            "name": "toArray",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#method_toArray"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AoffsetExists\u0028\u0029",
+            "name": "offsetExists",
+            "summary": "Checks\u0020for\u0020the\u0020existence\u0020of\u0020the\u0020values\u0020TRational\u0020uses\u003A\u00200,\u00201,\u0020\u0027numerator\u0027,\u0020and\n\u0027denominator\u0027.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_offsetExists"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AoffsetGet\u0028\u0029",
+            "name": "offsetGet",
+            "summary": "This\u0020is\u0020a\u0020convenience\u0020method\u0020for\u0020getting\u0020the\u0020numerator\u0020and\u0020denominator.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_offsetGet"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AoffsetSet\u0028\u0029",
+            "name": "offsetSet",
+            "summary": "This\u0020is\u0020a\u0020convenience\u0020method\u0020for\u0020setting\u0020the\u0020numerator\u0020and\u0020denominator.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_offsetSet"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003AoffsetUnset\u0028\u0029",
+            "name": "offsetUnset",
+            "summary": "This\u0020is\u0020a\u0020convenience\u0020method\u0020for\u0020resetting\u0020the\u0020numerator\u0020and\u0020denominator\u0020to\ndefault.\u0020\u0020Index\u0020\u00270\u0027\u0020and\u0020\u0027numerator\u0027\u0020will\u0020reset\u0020the\u0020\u007B\u0040see\u0020setNumerator\u0020Numerator\u007D\nto\u0020\u00220\u0022,\u0020and\u0020Index\u0020\u00271\u0027\u0020and\u0020\u0027denominator\u0027\u0020will\u0020reset\u0020the\u0020\u007B\u0040see\u0020setDenominator\nDenominator\u007D\u0020to\u0020\u00221\u0022.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_offsetUnset"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003Afloat2rational\u0028\u0029",
+            "name": "float2rational",
+            "summary": "This\u0020uses\u0020the\u0020Continued\u0020Fraction\u0020to\u0020make\u0020a\u0020float\u0020into\u0020a\u0020fraction\u0020of\u0020two\u0020integers.",
+            "url": "classes/Prado-Util-Math-TRational.html#method_float2rational"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003ANUMERATOR",
+            "name": "NUMERATOR",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#constant_NUMERATOR"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003ADENOMINATOR",
+            "name": "DENOMINATOR",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#constant_DENOMINATOR"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003ADEFAULT_TOLERANCE",
+            "name": "DEFAULT_TOLERANCE",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#constant_DEFAULT_TOLERANCE"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003A\u0024_numerator",
+            "name": "_numerator",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#property__numerator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TRational\u003A\u003A\u0024_denominator",
+            "name": "_denominator",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TRational.html#property__denominator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TURational",
+            "name": "TURational",
+            "summary": "TURational\u0020class.",
+            "url": "classes/Prado-Util-Math-TURational.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TURational\u003A\u003AgetIsUnsigned\u0028\u0029",
+            "name": "getIsUnsigned",
+            "summary": "",
+            "url": "classes/Prado-Util-Math-TURational.html#method_getIsUnsigned"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TURational\u003A\u003AsetNumerator\u0028\u0029",
+            "name": "setNumerator",
+            "summary": "This\u0020only\u0020accepts\u00200\u0020and\u0020positive\u0020values.\u0020For\u002032\u0020bit\u0020systems\u0020this\u0020accepts\u0020a\u0020float\nto\u0020represent\u0020numbers\u0020larger\u0020than\u0020PHP_INT_MAX.",
+            "url": "classes/Prado-Util-Math-TURational.html#method_setNumerator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TURational\u003A\u003AsetDenominator\u0028\u0029",
+            "name": "setDenominator",
+            "summary": "This\u0020only\u0020accepts\u00200\u0020and\u0020positive\u0020values.\u0020For\u002032\u0020bit\u0020systems\u0020this\u0020accepts\u0020a\u0020float\nto\u0020represent\u0020numbers\u0020larger\u0020than\u0020PHP_INT_MAX.",
+            "url": "classes/Prado-Util-Math-TURational.html#method_setDenominator"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math\\TURational\u003A\u003AgetValue\u0028\u0029",
+            "name": "getValue",
+            "summary": "This\u0020returns\u0020the\u0020float\u0020value\u0020of\u0020the\u0020Numerator\u0020divided\u0020by\u0020the\u0020denominator.",
+            "url": "classes/Prado-Util-Math-TURational.html#method_getValue"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior",
+            "name": "TBaseBehavior",
+            "summary": "TBaseBehavior\u0020is\u0020the\u0020base\u0020implementing\u0020class\u0020for\u0020both\u0020PRADO\u0020behaviors\u0020types\n\u007B\u0040see\u0020\\Prado\\Util\\TClassBehavior\u007D\u0020and\u0020\u007B\u0040see\u0020\u0040TBehavior\u007D.",
+            "url": "classes/Prado-Util-TBaseBehavior.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003A__clone\u0028\u0029",
+            "name": "__clone",
+            "summary": "Cloning\u0020a\u0020new\u0020instance\u0020clears\u0020the\u0020behavior\u0020name.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method___clone"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AgetAutoGlobalListen\u0028\u0029",
+            "name": "getAutoGlobalListen",
+            "summary": "Behaviors\u0020do\u0020not\u0020automatically\u0020listen\u0020to\u0020global\u0020events.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_getAutoGlobalListen"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "This\u0020processes\u0020configuration\u0020elements\u0020from\u0020TBehaviorsModule.\u0020\u0020This\u0020is\u0020usually\ncalled\u0020after\u0020attach\u0020but\u0020cannot\u0020be\u0020guaranteed\u0020to\u0020be\u0020called\u0020outside\u0020the\u0020\u007B\u0040link\nTBehaviorsModule\u007D\u0020environment.\u0020This\u0020is\u0020only\u0020needed\u0020for\u0020complex\u0020behavior\nconfigurations.",
-            "url": "classes/Prado-Util-TBehavior.html#method_init"
+            "summary": "This\u0020processes\u0020behavior\u0020configuration\u0020elements.\u0020\u0020This\u0020is\u0020usually\u0020called\u0020before\nattach.\u0020This\u0020is\u0020only\u0020needed\u0020for\u0020complex\u0020behavior\u0020configurations.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_init"
         },                {
-            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003Aevents\u0028\u0029",
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003Aevents\u0028\u0029",
             "name": "events",
             "summary": "Declares\u0020events\u0020and\u0020the\u0020corresponding\u0020event\u0020handler\u0020methods.",
-            "url": "classes/Prado-Util-TBehavior.html#method_events"
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_events"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AeventsLog\u0028\u0029",
+            "name": "eventsLog",
+            "summary": "Returns\u0020the\u0020cached\u0020events\u0020of\u0020the\u0020behavior\u0020where\u0020Closures\u0020are\u0020retained.\u0020\u0020TClassBehavior\nowners\u0020will\u0020all\u0020have\u0020the\u0020same\u0020Closure\u0020instances.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_eventsLog"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AgetStrictEvents\u0028\u0029",
+            "name": "getStrictEvents",
+            "summary": "By\u0020default,\u0020all\u0020events\u0020with\u0020handlers\u0020in\u0020\u007B\u0040see\u0020eventsLog\u007D\u0020are\u0020attached\u0020or\u0020there\nwill\u0020be\u0020an\u0020error.\u0020\u0020When\u0020this\u0020is\u0020false,\u0020attaching\u0020behavior\u0020event\u0020handlers\u0020will\nnot\u0020fail\u0020if\u0020the\u0020owner\u0020is\u0020missing\u0020events\u0020and\u0020handlers\u0020are\u0020not\u0020attached.\u0020\u0020Put\nanother\u0020way,\u0020when\u0020false,\u0020behavior\u0020event\u0020handlers\u0020are\u0020optional\u0020rather\u0020than\u0020made\nmandatory.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_getStrictEvents"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AmergeHandlers\u0028\u0029",
+            "name": "mergeHandlers",
+            "summary": "Merges\u0020the\u0020handlers\u0020of\u0020an\u0020event\u0020into\u0020an\u0020array\u0020of\u0020keys\u0020\u0028as\u0020event\u0020names\u0029\u0020and\u0020values\nas\u0020an\u0020array\u0020of\u0020behavior\u0020method\u0020names\u0020\u0028strings\u0029\u0020and\u0020callable.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_mergeHandlers"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003Aattach\u0028\u0029",
+            "name": "attach",
+            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020a\u0020new\u0020owner\u0020component.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_attach"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003Adetach\u0028\u0029",
+            "name": "detach",
+            "summary": "Detaches\u0020the\u0020behavior\u0020object\u0020from\u0020an\u0020owner\u0020component.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_detach"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_getName"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_setName"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AgetEnabled\u0028\u0029",
+            "name": "getEnabled",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_getEnabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AsetEnabled\u0028\u0029",
+            "name": "setEnabled",
+            "summary": "This\u0020method\u0020sets\u0020the\u0020enabled\u0020flag\u0020and\u0020synchronizes\u0020the\u0020behavior\u0027s\u0020handlers\u0020with\nits\u0020owner\u005Bs\u005D.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_setEnabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AgetRetainDisabledHandlers\u0028\u0029",
+            "name": "getRetainDisabledHandlers",
+            "summary": "RetainDisabledHandlers\u0020has\u0020three\u0020states\u003A\n\u0020\u00201\u0029\u0020\u0022true\u0022\u0020is\u0020to\u0020always\u0020install\u0020the\u0020event\u0020handlers\u0020regardless\u0020of\u0020behavior\u0020enabled\n\u0020\u0020\u0020\u0020\u0020or\u0020owner\u0020behaviors\u0020enabled\u0020status.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_getRetainDisabledHandlers"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AsetRetainDisabledHandlers\u0028\u0029",
+            "name": "setRetainDisabledHandlers",
+            "summary": "This\u0020changes\u0020the\u0020retaining\u0020of\u0020disabled\u0020behavior\u0020handlers\u0020and\u0020then\u0020synchronizes\nthe\u0020behavior\u0027s\u0020handlers\u0020with\u0020its\u0020owner\u005Bs\u005D.\u0020\u0020There\u0020are\u0020three\u0020acceptable\u0020values\u003A\n\u0020\u00201\u0029\u0020\u0022true\u0022\u0020is\u0020to\u0020always\u0020install\u0020the\u0020event\u0020handlers\u0020regardless\u0020of\u0020behavior\u0020enabled\n\u0020\u0020\u0020\u0020\u0020or\u0020owner\u0020behaviors\u0020enabled\u0020status.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_setRetainDisabledHandlers"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AsyncEventHandlers\u0028\u0029",
+            "name": "syncEventHandlers",
+            "summary": "This\u0020synchronizes\u0020an\u0020owner\u0027s\u0020events\u0020of\u0020the\u0020behavior\u0020event\u0020handlers\u0020by\u0020attaching\nor\u0020detaching\u0020where\u0020needed.\u0020\u0020A\u0020behaviors\u0020handlers\u0020are\u0020attached\u0020depending\u0020on\u0020whether\n\u007B\u0040see\u0020getRetainDisabledHandlers\u007D\u0020is\u0020true\u0020\u0028or\u0020null\u0029\u0020or\u0020both\u0020the\u0020owner\u0020and\u0020behavior\u0020are\n\u005BBehavior\u005D\u0020enabled.\u0020\u0020The\u0020\u0024attachOverride\u0020will\u0020set\u0020RetainDisabledHandlers\u0020when\u0020not\nits\u0020default\u0020value\u00200\u0020and\u0020thus\u0020can\u0020act\u0020like\u0020\u007B\u0040see\u0020setRetainDisabledHandlers\u007D.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_syncEventHandlers"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AattachEventHandlers\u0028\u0029",
+            "name": "attachEventHandlers",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_attachEventHandlers"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AdetachEventHandlers\u0028\u0029",
+            "name": "detachEventHandlers",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_detachEventHandlers"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AgetHandlersStatus\u0028\u0029",
+            "name": "getHandlersStatus",
+            "summary": "This\u0020gets\u0020the\u0020attachment\u0020status\u0020of\u0020the\u0020behavior\u0020event\u0020handlers\u0020on\u0020the\u0020given\ncomponent.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_getHandlersStatus"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003AsetHandlersStatus\u0028\u0029",
+            "name": "setHandlersStatus",
+            "summary": "This\u0020sets\u0020the\u0020attachment\u0020status\u0020of\u0020the\u0020behavior\u0020event\u0020handlers\u0020on\u0020the\u0020given\ncomponent.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method_setHandlersStatus"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Util-TBaseBehavior.html#method__getZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003A\u0024_name",
+            "name": "_name",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#property__name"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003A\u0024_enabled",
+            "name": "_enabled",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#property__enabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003A\u0024_retainDisabledHandlers",
+            "name": "_retainDisabledHandlers",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#property__retainDisabledHandlers"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBaseBehavior\u003A\u003A\u0024_eventsLog",
+            "name": "_eventsLog",
+            "summary": "",
+            "url": "classes/Prado-Util-TBaseBehavior.html#property__eventsLog"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior",
+            "name": "TBehavior",
+            "summary": "TBehavior\u0020is\u0020the\u0020base\u0020class\u0020for\u0020behaviors\u0020that\u0020extend\u0020owner\u0020components\u0020with\u0020new\nstate\u0020information,\u0020properties,\u0020run\u0020time\u0020methods,\u0020and\u0020process\u0020modification.\u0020\u0020Each\ninstance\u0020of\u0020the\u0020TBehavior\u0020can\u0020only\u0020have\u0020one\u0020owner.\u0020\u0020This\u0020tracks\u0020behavior\u0020event\nhandlers\u0020attachment\u0020status\u0020on\u0020its\u0020owner.",
+            "url": "classes/Prado-Util-TBehavior.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003A__clone\u0028\u0029",
+            "name": "__clone",
+            "summary": "This\u0020resets\u0020the\u0020owner\u0020and\u0020_handlersInstalled\u0020flag\u0020on\u0020cloning.",
+            "url": "classes/Prado-Util-TBehavior.html#method___clone"
         },                {
             "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003Aattach\u0028\u0029",
             "name": "attach",
-            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020the\u0020component.",
+            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020the\u0020new\u0020owner\u0020component.\u0020\u0020This\u0020is\u0020normally\u0020called\nby\u0020the\u0020new\u0020owner\u0020when\u0020attaching\u0020a\u0020behavior,\u0020by\u0020\u007B\u0040see\u0020\\Prado\\TComponent\u003A\u003AattachBehavior\u007D,\nand\u0020not\u0020directly\u0020called.",
             "url": "classes/Prado-Util-TBehavior.html#method_attach"
         },                {
             "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003Adetach\u0028\u0029",
             "name": "detach",
-            "summary": "Detaches\u0020the\u0020behavior\u0020object\u0020from\u0020the\u0020component.",
+            "summary": "Detaches\u0020the\u0020behavior\u0020object\u0020from\u0020the\u0020owner\u0020component.\u0020\u0020This\u0020is\u0020normally\u0020called\nby\u0020the\u0020owner\u0020when\u0020detaching\u0020a\u0020behavior,\u0020by\u0020\u007B\u0040see\u0020\\Prado\\TComponent\u003A\u003AdetachBehavior\u007D,\nand\u0020not\u0020directly\u0020called.",
             "url": "classes/Prado-Util-TBehavior.html#method_detach"
         },                {
             "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AgetOwner\u0028\u0029",
             "name": "getOwner",
-            "summary": "",
+            "summary": "This\u0020class\u0020stores\u0020the\u0020owner\u0020as\u0020a\u0020WeakReference.\u0020\u0020This\u0020method\u0020retrieves\u0020and\u0020re\u002Dreferences\nthe\u0020owner.",
             "url": "classes/Prado-Util-TBehavior.html#method_getOwner"
         },                {
-            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AgetEnabled\u0028\u0029",
-            "name": "getEnabled",
-            "summary": "",
-            "url": "classes/Prado-Util-TBehavior.html#method_getEnabled"
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AgetOwners\u0028\u0029",
+            "name": "getOwners",
+            "summary": "This\u0020returns\u0020an\u0020array\u0020of\u0020the\u0020one\u0020owner\u0020that\u0020the\u0020TBehavior\u0020is\u0020attached\u0020to.",
+            "url": "classes/Prado-Util-TBehavior.html#method_getOwners"
         },                {
-            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AsetEnabled\u0028\u0029",
-            "name": "setEnabled",
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AhasOwner\u0028\u0029",
+            "name": "hasOwner",
             "summary": "",
-            "url": "classes/Prado-Util-TBehavior.html#method_setEnabled"
+            "url": "classes/Prado-Util-TBehavior.html#method_hasOwner"
         },                {
-            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003A\u0024_enabled",
-            "name": "_enabled",
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AisOwner\u0028\u0029",
+            "name": "isOwner",
             "summary": "",
-            "url": "classes/Prado-Util-TBehavior.html#property__enabled"
+            "url": "classes/Prado-Util-TBehavior.html#method_isOwner"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AdyEnableBehaviors\u0028\u0029",
+            "name": "dyEnableBehaviors",
+            "summary": "This\u0020dynamic\u0020event\u0020method\u0020tracks\u0020the\u0020\u0022behaviors\u0020enabled\u0022\u0020status\u0020of\u0020an\u0020owner.\u0020Subclasses\ncan\u0020call\u0020this\u0020method\u0020\u0028as\u0020\u0022parent\u003A\u003AdyEnableBehaviors\u0028\u0029\u0022\u0029\u0020without\u0020the\u0020\u0024chain\u0020and\u0020it\u0020will\ndelegate\u0020the\u0020\u0024chain\u0020continuation\u0020to\u0020the\u0020subclass\u0020implementation.\u0020At\u0020this\u0020point,\nthe\u0020behaviors\u0020are\u0020already\u0020enabled\u0020in\u0020the\u0020owner.",
+            "url": "classes/Prado-Util-TBehavior.html#method_dyEnableBehaviors"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AdyDisableBehaviors\u0028\u0029",
+            "name": "dyDisableBehaviors",
+            "summary": "This\u0020dynamic\u0020event\u0020method\u0020tracks\u0020the\u0020\u0022behaviors\u0020disabled\u0022\u0020status\u0020of\u0020an\u0020owner.\u0020Subclasses\ncan\u0020call\u0020this\u0020parent\u0020method\u0020\u0028as\u0020\u0022parent\u003A\u003AdyDisableBehaviors\u0028\u0029\u0022\u0029\u0020without\u0020the\u0020\u0024chain\nand\u0020it\u0020will\u0020delegate\u0020the\u0020\u0024chain\u0020continuation\u0020to\u0020the\u0020subclass\u0020implementation.",
+            "url": "classes/Prado-Util-TBehavior.html#method_dyDisableBehaviors"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AgetHandlersStatus\u0028\u0029",
+            "name": "getHandlersStatus",
+            "summary": "This\u0020gets\u0020the\u0020attachment\u0020status\u0020of\u0020the\u0020behavior\u0020event\u0020handlers\u0020on\u0020the\u0020owner\ncomponent.",
+            "url": "classes/Prado-Util-TBehavior.html#method_getHandlersStatus"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003AsetHandlersStatus\u0028\u0029",
+            "name": "setHandlersStatus",
+            "summary": "This\u0020sets\u0020the\u0020attachment\u0020status\u0020of\u0020the\u0020behavior\u0020handlers\u0020on\u0020the\u0020owner.\u0020It\u0020only\nreturns\u0020true\u0020when\u0020there\u0020is\u0020a\u0020change\u0020in\u0020status.",
+            "url": "classes/Prado-Util-TBehavior.html#method_setHandlersStatus"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\nNOT\u0020be\u0020serialized\u0020because\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\nfor\u0020the\u0020next\u0020page\u0020loads.\u0020\u0020Reimplement\u0020in\u0020derived\u0020classes\u0020to\u0020add\u0020new\u0020variables,\nbut\u0020remember\u0020to\u0020also\u0020to\u0020call\u0020the\u0020parent\u0020implementation\u0020first.",
+            "url": "classes/Prado-Util-TBehavior.html#method__getZappableSleepProps"
         },                {
             "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003A\u0024_owner",
             "name": "_owner",
             "summary": "",
             "url": "classes/Prado-Util-TBehavior.html#property__owner"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBehavior\u003A\u003A\u0024_handlersInstalled",
+            "name": "_handlersInstalled",
+            "summary": "",
+            "url": "classes/Prado-Util-TBehavior.html#property__handlersInstalled"
         },                {
             "fqsen": "\\Prado\\Util\\TBehaviorsModule",
             "name": "TBehaviorsModule",
@@ -17998,7 +19903,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TBehaviorsModule\u003A\u003AattachTPageServiceHandler\u0028\u0029",
             "name": "attachTPageServiceHandler",
-            "summary": "TApplication\u003A\u003AonBeginRequest\u0020Handler\u0020that\u0020adds\u0020\u007B\u0040link\u0020attachTPageBehaviors\u007D\u0020to\nTPageService\u003A\u003AonPreRunPage.\u0020In\u0020turn,\u0020this\u0020attaches\u0020\u007B\u0040link\u0020attachTPageBehaviors\u007D\nto\u0020TPageService\u0020to\u0020then\u0020adds\u0020the\u0020page\u0020behaviors.",
+            "summary": "TApplication\u003A\u003AonBeginRequest\u0020Handler\u0020that\u0020adds\u0020\u007B\u0040see\u0020attachTPageBehaviors\u007D\u0020to\nTPageService\u003A\u003AonPreRunPage.\u0020In\u0020turn,\u0020this\u0020attaches\u0020\u007B\u0040see\u0020attachTPageBehaviors\u007D\nto\u0020TPageService\u0020to\u0020then\u0020adds\u0020the\u0020page\u0020behaviors.",
             "url": "classes/Prado-Util-TBehaviorsModule.html#method_attachTPageServiceHandler"
         },                {
             "fqsen": "\\Prado\\Util\\TBehaviorsModule\u003A\u003AattachTPageBehaviors\u0028\u0029",
@@ -18020,11 +19925,6 @@ Search.appendIndex(
             "name": "setAdditionalBehaviors",
             "summary": "this\u0020will\u0020take\u0020a\u0020string\u0020that\u0020is\u0020an\u0020array\u0020of\u0020behaviors\u0020that\u0020has\u0020been\nthrough\u0020serialize\u0028\u0029,\u0020or\u0020json\u0020array\u0020of\u0020behaviors.\u0020\u0020If\u0020one\u0020behavior\u0020is\nset\u0020as\u0020an\u0020array,\u0020then\u0020it\u0020is\u0020automatically\u0020placed\u0020into\u0020an\u0020array.",
             "url": "classes/Prado-Util-TBehaviorsModule.html#method_setAdditionalBehaviors"
-        },                {
-            "fqsen": "\\Prado\\Util\\TBehaviorsModule\u003A\u003A\u0024_weak",
-            "name": "_weak",
-            "summary": "",
-            "url": "classes/Prado-Util-TBehaviorsModule.html#property__weak"
         },                {
             "fqsen": "\\Prado\\Util\\TBehaviorsModule\u003A\u003A\u0024_behaviors",
             "name": "_behaviors",
@@ -18053,18 +19953,38 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AprocessLogs\u0028\u0029",
             "name": "processLogs",
-            "summary": "Processes\u0020log\u0020messages\u0020and\u0020sends\u0020them\u0020to\u0020specific\u0020destination.",
+            "summary": "Renders\u0020the\u0020logs\u0020in\u0020HTML\u0020to\u0020the\u0020browser.",
             "url": "classes/Prado-Util-TBrowserLogRoute.html#method_processLogs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AgetCssClass\u0028\u0029",
+            "name": "getCssClass",
+            "summary": "",
+            "url": "classes/Prado-Util-TBrowserLogRoute.html#method_getCssClass"
         },                {
             "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AsetCssClass\u0028\u0029",
             "name": "setCssClass",
             "summary": "",
             "url": "classes/Prado-Util-TBrowserLogRoute.html#method_setCssClass"
         },                {
-            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AgetCssClass\u0028\u0029",
-            "name": "getCssClass",
+            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AgetColorizeDelta\u0028\u0029",
+            "name": "getColorizeDelta",
             "summary": "",
-            "url": "classes/Prado-Util-TBrowserLogRoute.html#method_getCssClass"
+            "url": "classes/Prado-Util-TBrowserLogRoute.html#method_getColorizeDelta"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AsetColorizeDelta\u0028\u0029",
+            "name": "setColorizeDelta",
+            "summary": "",
+            "url": "classes/Prado-Util-TBrowserLogRoute.html#method_setColorizeDelta"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AgetAddPrefix\u0028\u0029",
+            "name": "getAddPrefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TBrowserLogRoute.html#method_getAddPrefix"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003AsetAddPrefix\u0028\u0029",
+            "name": "setAddPrefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TBrowserLogRoute.html#method_setAddPrefix"
         },                {
             "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003ArenderHeader\u0028\u0029",
             "name": "renderHeader",
@@ -18091,9 +20011,19 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-TBrowserLogRoute.html#property__cssClass"
         },                {
+            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003A\u0024_colorizeDelta",
+            "name": "_colorizeDelta",
+            "summary": "",
+            "url": "classes/Prado-Util-TBrowserLogRoute.html#property__colorizeDelta"
+        },                {
+            "fqsen": "\\Prado\\Util\\TBrowserLogRoute\u003A\u003A\u0024_addPrefix",
+            "name": "_addPrefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TBrowserLogRoute.html#property__addPrefix"
+        },                {
             "fqsen": "\\Prado\\Util\\TCallChain",
             "name": "TCallChain",
-            "summary": "TCallChain\u0020is\u0020a\u0020recursive\u0020event\u0020calling\u0020mechanism.\u0020\u0020This\u0020class\u0020implements\nthe\u0020\u007B\u0040link\u0020IDynamicMethods\u007D\u0020class\u0020so\u0020that\u0020any\u0020\u0027dy\u0027\u0020event\u0020calls\u0020can\u0020be\u0020caught\nand\u0020patched\u0020through\u0020to\u0020the\u0020intended\u0020recipient",
+            "summary": "TCallChain\u0020is\u0020a\u0020recursive\u0020event\u0020calling\u0020mechanism.\u0020\u0020This\u0020class\u0020implements\nthe\u0020\u007B\u0040see\u0020\\Prado\\Util\\IDynamicMethods\u007D\u0020class\u0020so\u0020that\u0020any\u0020\u0027dy\u0027\u0020event\u0020calls\u0020can\u0020be\u0020caught\nand\u0020patched\u0020through\u0020to\u0020the\u0020intended\u0020recipient",
             "url": "classes/Prado-Util-TCallChain.html"
         },                {
             "fqsen": "\\Prado\\Util\\TCallChain\u003A\u003A__construct\u0028\u0029",
@@ -18113,7 +20043,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TCallChain\u003A\u003A__dycall\u0028\u0029",
             "name": "__dycall",
-            "summary": "This\u0020catches\u0020all\u0020the\u0020unpatched\u0020dynamic\u0020events.\u0020\u0020When\u0020the\u0020method\u0020call\u0020matches\u0020the\ncall\u0020chain\u0020method,\u0020it\u0020passes\u0020the\u0020arguments\u0020to\u0020the\u0020original\u0020__call\u0020\u0028of\u0020the\u0020dynamic\nevent\u0020being\u0020unspecified\u0020in\u0020TCallChain\u0029\u0020and\u0020funnels\u0020into\u0020the\u0020method\u0020\u007B\u0040link\u0020call\u007D,\nso\u0020the\u0020next\u0020dynamic\u0020event\u0020handler\u0020can\u0020be\u0020called.",
+            "summary": "This\u0020catches\u0020all\u0020the\u0020unpatched\u0020dynamic\u0020events.\u0020\u0020When\u0020the\u0020method\u0020call\u0020matches\u0020the\ncall\u0020chain\u0020method,\u0020it\u0020passes\u0020the\u0020arguments\u0020to\u0020the\u0020original\u0020__call\u0020\u0028of\u0020the\u0020dynamic\nevent\u0020being\u0020unspecified\u0020in\u0020TCallChain\u0029\u0020and\u0020funnels\u0020into\u0020the\u0020method\u0020\u007B\u0040see\u0020call\u007D,\nso\u0020the\u0020next\u0020dynamic\u0020event\u0020handler\u0020can\u0020be\u0020called.",
             "url": "classes/Prado-Util-TCallChain.html#method___dycall"
         },                {
             "fqsen": "\\Prado\\Util\\TCallChain\u003A\u003A\u0024_iterator",
@@ -18128,23 +20058,78 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TClassBehavior",
             "name": "TClassBehavior",
-            "summary": "TClassBehavior\u0020is\u0020a\u0020convenient\u0020base\u0020class\u0020for\u0020whole\u0020class\u0020behaviors.",
+            "summary": "TClassBehavior\u0020is\u0020the\u0020base\u0020class\u0020for\u0020class\u002Dwide\u0020behaviors\u0020that\u0020extend\u0020owner\u0020components\nwith\u0020new\u0020stateless\u0020information,\u0020properties,\u0020run\u0020time\u0020methods,\u0020and\u0020process\u0020modification.",
             "url": "classes/Prado-Util-TClassBehavior.html"
         },                {
-            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "This\u0020processes\u0020configuration\u0020elements\u0020\u005Bfrom\u0020TBehaviorsModule\u005D.\u0020\u0020This\u0020is\u0020usually\ncalled\u0020before\u0020attach\u0020but\u0020cannot\u0020be\u0020guaranteed\u0020to\u0020be\u0020called\u0020outside\u0020the\u0020\u007B\u0040link\nTBehaviorsModule\u007D\u0020environment.\u0020This\u0020is\u0020only\u0020needed\u0020for\u0020complex\u0020behavior\nconfigurations.",
-            "url": "classes/Prado-Util-TClassBehavior.html#method_init"
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003A__clone\u0028\u0029",
+            "name": "__clone",
+            "summary": "Cloning\u0020a\u0020new\u0020instance\u0020clears\u0020both\u0020the\u0020owners\u0020and\u0020handler\u0020attachment\u0020tracking",
+            "url": "classes/Prado-Util-TClassBehavior.html#method___clone"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AinitMap\u0028\u0029",
+            "name": "initMap",
+            "summary": "Initializes\u0020the\u0020WeakMap\u0020to\u0020manager\u0020the\u0020attachment\u0020status\u0020of\u0020owners.",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_initMap"
         },                {
             "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003Aattach\u0028\u0029",
             "name": "attach",
-            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020the\u0020component.",
+            "summary": "Attaches\u0020the\u0020behavior\u0020object\u0020to\u0020a\u0020new\u0020owner\u0020component.\u0020\u0020This\u0020is\u0020normally\u0020called\nby\u0020the\u0020new\u0020owner\u0020when\u0020attaching\u0020a\u0020behavior,\u0020by\u0020\u007B\u0040see\u0020\\Prado\\TComponent\u003A\u003AattachBehavior\u007D,\nand\u0020not\u0020directly\u0020called.",
             "url": "classes/Prado-Util-TClassBehavior.html#method_attach"
         },                {
             "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003Adetach\u0028\u0029",
             "name": "detach",
-            "summary": "Detaches\u0020the\u0020behavior\u0020object\u0020from\u0020the\u0020component.",
+            "summary": "Detaches\u0020the\u0020behavior\u0020object\u0020from\u0020an\u0020owner\u0020component.\u0020\u0020This\u0020is\u0020normally\u0020called\nby\u0020the\u0020owner\u0020when\u0020detaching\u0020a\u0020behavior,\u0020by\u0020\u007B\u0040see\u0020\\Prado\\TComponent\u003A\u003AdetachBehavior\u007D,\nand\u0020not\u0020directly\u0020called.",
             "url": "classes/Prado-Util-TClassBehavior.html#method_detach"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AgetOwners\u0028\u0029",
+            "name": "getOwners",
+            "summary": "",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_getOwners"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AhasOwner\u0028\u0029",
+            "name": "hasOwner",
+            "summary": "",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_hasOwner"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AisOwner\u0028\u0029",
+            "name": "isOwner",
+            "summary": "",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_isOwner"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AdyEnableBehaviors\u0028\u0029",
+            "name": "dyEnableBehaviors",
+            "summary": "This\u0020dynamic\u0020event\u0020method\u0020tracks\u0020the\u0020behaviors\u0020enabled\u0020status\u0020of\u0020an\u0020owner.\u0020Subclasses\ncan\u0020call\u0020this\u0020method\u0020\u0028as\u0020\u0022parent\u003A\u003AdyEnableBehaviors\u0028\u0029\u0022\u0029\u0020without\u0020the\u0020\u0024chain\u0020and\u0020it\nwill\u0020delegate\u0020the\u0020\u0024chain\u0020continuation\u0020to\u0020the\u0020subclass\u0020implementation.\u0020At\u0020this\u0020point,\nthe\u0020behaviors\u0020are\u0020already\u0020enabled\u0020in\u0020the\u0020owner.",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_dyEnableBehaviors"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AdyDisableBehaviors\u0028\u0029",
+            "name": "dyDisableBehaviors",
+            "summary": "This\u0020dynamic\u0020event\u0020method\u0020tracks\u0020the\u0020\u0022behaviors\u0020disabled\u0022\u0020status\u0020of\u0020an\u0020owner.\u0020Subclasses\ncan\u0020call\u0020this\u0020method\u0020\u0028as\u0020\u0022parent\u003A\u003AdyDisableBehaviors\u0028\u0029\u0022\u0029\u0020without\u0020the\u0020\u0024chain\u0020and\nit\u0020will\u0020delegate\u0020the\u0020\u0024chain\u0020continuation\u0020to\u0020the\u0020subclass\u0020implementation.",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_dyDisableBehaviors"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AgetHandlersStatus\u0028\u0029",
+            "name": "getHandlersStatus",
+            "summary": "This\u0020gets\u0020the\u0020attachment\u0020status\u0020of\u0020the\u0020behavior\u0020handlers\u0020on\u0020the\u0020given\u0020component.",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_getHandlersStatus"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003AsetHandlersStatus\u0028\u0029",
+            "name": "setHandlersStatus",
+            "summary": "This\u0020sets\u0020the\u0020attachment\u0020status\u0020of\u0020the\u0020behavior\u0020handlers\u0020on\u0020the\u0020given\u0020owner\ncomponent.\u0020\u0020It\u0020only\u0020returns\u0020true\u0020when\u0020there\u0020is\u0020a\u0020change\u0020in\u0020status.",
+            "url": "classes/Prado-Util-TClassBehavior.html#method_setHandlersStatus"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003A_getZappableSleepProps\u0028\u0029",
+            "name": "_getZappableSleepProps",
+            "summary": "Returns\u0020an\u0020array\u0020with\u0020the\u0020names\u0020of\u0020all\u0020variables\u0020of\u0020this\u0020object\u0020that\u0020should\u0020NOT\u0020be\u0020serialized\nbecause\u0020their\u0020value\u0020is\u0020the\u0020default\u0020one\u0020or\u0020useless\u0020to\u0020be\u0020cached\u0020for\u0020the\u0020next\u0020page\u0020loads.",
+            "url": "classes/Prado-Util-TClassBehavior.html#method__getZappableSleepProps"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003A\u0024_owners",
+            "name": "_owners",
+            "summary": "",
+            "url": "classes/Prado-Util-TClassBehavior.html#property__owners"
+        },                {
+            "fqsen": "\\Prado\\Util\\TClassBehavior\u003A\u003A\u0024_handlersInstalled",
+            "name": "_handlersInstalled",
+            "summary": "",
+            "url": "classes/Prado-Util-TClassBehavior.html#property__handlersInstalled"
         },                {
             "fqsen": "\\Prado\\Util\\TClassBehaviorEventParameter",
             "name": "TClassBehaviorEventParameter",
@@ -18226,6 +20211,26 @@ Search.appendIndex(
             "summary": "Stores\u0020log\u0020messages\u0020into\u0020database.",
             "url": "classes/Prado-Util-TDbLogRoute.html#method_processLogs"
         },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AgetLogWhere\u0028\u0029",
+            "name": "getLogWhere",
+            "summary": "Computes\u0020the\u0020where\u0020SQL\u0020clause\u0020based\u0020upon\u0020level,\u0020categories,\u0020minimum\u0020time\u0020and\u0020maximum\u0020time.",
+            "url": "classes/Prado-Util-TDbLogRoute.html#method_getLogWhere"
+        },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AgetDBLogCount\u0028\u0029",
+            "name": "getDBLogCount",
+            "summary": "Gets\u0020the\u0020number\u0020of\u0020logs\u0020in\u0020the\u0020database\u0020fitting\u0020the\u0020provided\u0020criteria.",
+            "url": "classes/Prado-Util-TDbLogRoute.html#method_getDBLogCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AgetDBLogs\u0028\u0029",
+            "name": "getDBLogs",
+            "summary": "Gets\u0020the\u0020number\u0020of\u0020logs\u0020in\u0020the\u0020database\u0020fitting\u0020the\u0020provided\u0020criteria.",
+            "url": "classes/Prado-Util-TDbLogRoute.html#method_getDBLogs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AdeleteDBLog\u0028\u0029",
+            "name": "deleteDBLog",
+            "summary": "Deletes\u0020log\u0020items\u0020from\u0020the\u0020database\u0020that\u0020match\u0020the\u0020criteria.",
+            "url": "classes/Prado-Util-TDbLogRoute.html#method_deleteDBLog"
+        },                {
             "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AcreateDbTable\u0028\u0029",
             "name": "createDbTable",
             "summary": "Creates\u0020the\u0020DB\u0020table\u0020for\u0020storing\u0020log\u0020messages.",
@@ -18271,6 +20276,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-TDbLogRoute.html#method_setAutoCreateLogTable"
         },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AgetRetainPeriod\u0028\u0029",
+            "name": "getRetainPeriod",
+            "summary": "",
+            "url": "classes/Prado-Util-TDbLogRoute.html#method_getRetainPeriod"
+        },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AsetRetainPeriod\u0028\u0029",
+            "name": "setRetainPeriod",
+            "summary": "",
+            "url": "classes/Prado-Util-TDbLogRoute.html#method_setRetainPeriod"
+        },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003AtimespanToSeconds\u0028\u0029",
+            "name": "timespanToSeconds",
+            "summary": "",
+            "url": "classes/Prado-Util-TDbLogRoute.html#method_timespanToSeconds"
+        },                {
             "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003A\u0024_connID",
             "name": "_connID",
             "summary": "",
@@ -18290,6 +20310,11 @@ Search.appendIndex(
             "name": "_autoCreate",
             "summary": "",
             "url": "classes/Prado-Util-TDbLogRoute.html#property__autoCreate"
+        },                {
+            "fqsen": "\\Prado\\Util\\TDbLogRoute\u003A\u003A\u0024_retainPeriod",
+            "name": "_retainPeriod",
+            "summary": "",
+            "url": "classes/Prado-Util-TDbLogRoute.html#property__retainPeriod"
         },                {
             "fqsen": "\\Prado\\Util\\TDbParameterModule",
             "name": "TDbParameterModule",
@@ -18313,7 +20338,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TDbParameterModule\u003A\u003AattachTPageServiceHandler\u0028\u0029",
             "name": "attachTPageServiceHandler",
-            "summary": "TApplication\u003A\u003AonBeginRequest\u0020Handler\u0020that\u0020adds\u0020\u007B\u0040link\u0020attachTPageBehaviors\u007D\u0020to\nTPageService\u003A\u003AonPreRunPage.\u0020In\u0020turn,\u0020this\u0020attaches\u0020\u007B\u0040link\u0020attachTPageBehaviors\u007D\nto\u0020TPageService\u0020to\u0020then\u0020adds\u0020the\u0020page\u0020behaviors.",
+            "summary": "TApplication\u003A\u003AonBeginRequest\u0020Handler\u0020that\u0020adds\u0020\u007B\u0040see\u0020attachTPageBehaviors\u007D\u0020to\nTPageService\u003A\u003AonPreRunPage.\u0020In\u0020turn,\u0020this\u0020attaches\u0020\u007B\u0040see\u0020attachTPageBehaviors\u007D\nto\u0020TPageService\u0020to\u0020then\u0020adds\u0020the\u0020page\u0020behaviors.",
             "url": "classes/Prado-Util-TDbParameterModule.html#method_attachTPageServiceHandler"
         },                {
             "fqsen": "\\Prado\\Util\\TDbParameterModule\u003A\u003AregisterShellAction\u0028\u0029",
@@ -18383,7 +20408,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TDbParameterModule\u003A\u003AcreateDbConnection\u0028\u0029",
             "name": "createDbConnection",
-            "summary": "Creates\u0020the\u0020DB\u0020connection.\u0020\u0020If\u0020no\u0020ConnectionID\u0020is\u0020set,\u0020this\u0020creates\u0020a\nsqlite3\u0020database\u0020in\u0020the\u0020RuntimePath\u0020\u0022sqlite3.params\u0022.\u0020\u0020If\u0020the\n\u007B\u0040link\u0020getAutoLoadField\u007D\u0020is\u0020not\u0020set,\u0020the\u0020default,\u0020then\u0020the\u0020autoLoadField\nis\u0020set\u0020to\u0020\u0022autoload\u0022\u0020to\u0020enable\u0020the\u0020feature\u0020by\u0020default.",
+            "summary": "Creates\u0020the\u0020DB\u0020connection.\u0020\u0020If\u0020no\u0020ConnectionID\u0020is\u0020set,\u0020this\u0020creates\u0020a\nsqlite3\u0020database\u0020in\u0020the\u0020RuntimePath\u0020\u0022sqlite3.params\u0022.\u0020\u0020If\u0020the\n\u007B\u0040see\u0020getAutoLoadField\u007D\u0020is\u0020not\u0020set,\u0020the\u0020default,\u0020then\u0020the\u0020autoLoadField\nis\u0020set\u0020to\u0020\u0022autoload\u0022\u0020to\u0020enable\u0020the\u0020feature\u0020by\u0020default.",
             "url": "classes/Prado-Util-TDbParameterModule.html#method_createDbConnection"
         },                {
             "fqsen": "\\Prado\\Util\\TDbParameterModule\u003A\u003AgetKeyField\u0028\u0029",
@@ -18593,7 +20618,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TDbPluginModule\u003A\u003AcreateDbConnection\u0028\u0029",
             "name": "createDbConnection",
-            "summary": "Creates\u0020the\u0020DB\u0020connection.\u0020\u0020If\u0020no\u0020ConnectionId\u0020is\u0020available,\u0020this\nwill\u0020try\u0020to\u0020start\u0020a\u0020sqlite\u0020database\u0020if\u0020the\u0020subclass\u0020has\u0020a\u0020name\u0020via\n\u007B\u0040link\u0020getSqliteDatabaseName\u007D.",
+            "summary": "Creates\u0020the\u0020DB\u0020connection.\u0020\u0020If\u0020no\u0020ConnectionId\u0020is\u0020available,\u0020this\nwill\u0020try\u0020to\u0020start\u0020a\u0020sqlite\u0020database\u0020if\u0020the\u0020subclass\u0020has\u0020a\u0020name\u0020via\n\u007B\u0040see\u0020getSqliteDatabaseName\u007D.",
             "url": "classes/Prado-Util-TDbPluginModule.html#method_createDbConnection"
         },                {
             "fqsen": "\\Prado\\Util\\TDbPluginModule\u003A\u003AgetSqliteDatabaseName\u0028\u0029",
@@ -18763,7 +20788,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TFirebugLogRoute\u003A\u003AprocessLogs\u0028\u0029",
             "name": "processLogs",
-            "summary": "Processes\u0020log\u0020messages\u0020and\u0020sends\u0020them\u0020to\u0020specific\u0020destination.",
+            "summary": "Logs\u0020via\u0020Firebug.",
             "url": "classes/Prado-Util-TFirebugLogRoute.html#method_processLogs"
         },                {
             "fqsen": "\\Prado\\Util\\TFirebugLogRoute\u003A\u003ArenderHeader\u0028\u0029",
@@ -18786,6 +20811,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-TFirebugLogRoute.html#method_renderFooter"
         },                {
+            "fqsen": "\\Prado\\Util\\TFirebugLogRoute\u003A\u003AformatFirebugLogMessage\u0028\u0029",
+            "name": "formatFirebugLogMessage",
+            "summary": "Formats\u0020a\u0020log\u0020message\u0020given\u0020different\u0020fields.",
+            "url": "classes/Prado-Util-TFirebugLogRoute.html#method_formatFirebugLogMessage"
+        },                {
             "fqsen": "\\Prado\\Util\\TFirebugLogRoute\u003A\u003AgetFirebugLoggingFunction\u0028\u0029",
             "name": "getFirebugLoggingFunction",
             "summary": "",
@@ -18798,7 +20828,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TFirePhpLogRoute\u003A\u003AprocessLogs\u0028\u0029",
             "name": "processLogs",
-            "summary": "Processes\u0020log\u0020messages\u0020and\u0020sends\u0020them\u0020to\u0020specific\u0020destination.",
+            "summary": "Logs\u0020via\u0020FirePhp.",
             "url": "classes/Prado-Util-TFirePhpLogRoute.html#method_processLogs"
         },                {
             "fqsen": "\\Prado\\Util\\TFirePhpLogRoute\u003A\u003AtranslateLogLevel\u0028\u0029",
@@ -18851,40 +20881,120 @@ Search.appendIndex(
             "summary": "TLogger\u0020class.",
             "url": "classes/Prado-Util-TLogger.html"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "The\u0020common\u0020__construct.",
+            "url": "classes/Prado-Util-TLogger.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AgetFlushCount\u0028\u0029",
+            "name": "getFlushCount",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#method_getFlushCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AsetFlushCount\u0028\u0029",
+            "name": "setFlushCount",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#method_setFlushCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AgetTraceLevel\u0028\u0029",
+            "name": "getTraceLevel",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#method_getTraceLevel"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AsetTraceLevel\u0028\u0029",
+            "name": "setTraceLevel",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#method_setTraceLevel"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AgetLogCount\u0028\u0029",
+            "name": "getLogCount",
+            "summary": "This\u0020returns\u0020the\u0020number\u0020of\u0020logs\u0020being\u0020held.\u0020\u0020When\u0020the\u0020\u0024selector\u0020the\u0020following\nis\u0020returned\u003A\n\u0020\u0020\u002D\u0020null\u0020is\u0020the\u0020\u007E\u0020number\u0020of\u0020logs\u0020a\u0020route\u0020will\u0020receive\n\u0020\u0020\u002D\u00200\u0020is\u0020the\u0020\u007E\u0020number\u0020of\u0020logs\u0020to\u0020be\u0020collected\u0020before\u0020removing\u0020static\u003A\u003ALOGGGED\u0020logs\n\u0020\u0020\u002D\u0020true\u0020is\u0020the\u0020number\u0020of\u0020logs\u0020without\u0020profile\u0020begin\n\u0020\u0020\u002D\u0020false\u0020is\u0020the\u0020number\u0020of\u0020profile\u0020begin\u0020logs",
+            "url": "classes/Prado-Util-TLogger.html#method_getLogCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AgetLoggedProfileLogCount\u0028\u0029",
+            "name": "getLoggedProfileLogCount",
+            "summary": "This\u0020is\u0020the\u0020number\u0020of\u0020Profile\u0020Begin\u0020Logs\u0020that\u0020have\u0020been\u0020logged.",
+            "url": "classes/Prado-Util-TLogger.html#method_getLoggedProfileLogCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AensureFlushing\u0028\u0029",
+            "name": "ensureFlushing",
+            "summary": "Ensures\u0020that\u0020the\u0020logger\u0020is\u0020registered\u0020with\u0020the\u0020Application\u0020onEndRequest.",
+            "url": "classes/Prado-Util-TLogger.html#method_ensureFlushing"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AaddLog\u0028\u0029",
+            "name": "addLog",
+            "summary": "Adds\u0020a\u0020single\u0020log\u0020item",
+            "url": "classes/Prado-Util-TLogger.html#method_addLog"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AcheckProfileLogsSize\u0028\u0029",
+            "name": "checkProfileLogsSize",
+            "summary": "When\u0020the\u0020ProfileLog\u0020Count\u0020is\u0020equal\u0020or\u0020more\u0020than\u0020the\u0020FlushCount,\u0020then\u0020the\u0020Retained\nprofile\u0020logs\u0020are\u0020deleted\u0020and\u0020a\u0020WARNING\u0020is\u0020logged.",
+            "url": "classes/Prado-Util-TLogger.html#method_checkProfileLogsSize"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AcheckLogsSize\u0028\u0029",
+            "name": "checkLogsSize",
+            "summary": "If\u0020we\u0020allow\u0020a\u0020flush\u0020\u0028not\u0020a\u0020bulk\u0020logging\u0029,\u0020and\u0020the\u0020log\u0020count\u0020is\u0020equal\u0020to\u0020or\u0020more\nthan\u0020the\u0020FlushCount\u0020then\u0020we\u0020flush\u0020the\u0020logs.",
+            "url": "classes/Prado-Util-TLogger.html#method_checkLogsSize"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003Alog\u0028\u0029",
             "name": "log",
             "summary": "Logs\u0020a\u0020message.",
             "url": "classes/Prado-Util-TLogger.html#method_log"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AonFlushLogs\u0028\u0029",
+            "name": "onFlushLogs",
+            "summary": "This\u0020is\u0020an\u0020Event\u0020and\u0020an\u0020event\u0020handler.\u0020\u0020When\u0020\u007B\u0040see\u0020Application\u003A\u003AonEndRequest\u0028\u0029\u007D\nis\u0020raised\u0020and\u0020as\u0020a\u0020\u0060register_shutdown_function\u0060\u0020function,\u0020this\u0020is\u0020called.",
+            "url": "classes/Prado-Util-TLogger.html#method_onFlushLogs"
         },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AgetLogs\u0028\u0029",
             "name": "getLogs",
             "summary": "Retrieves\u0020log\u0020messages.",
             "url": "classes/Prado-Util-TLogger.html#method_getLogs"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AmergeLogs\u0028\u0029",
+            "name": "mergeLogs",
+            "summary": "This\u0020merges\u0020a\u0020set\u0020of\u0020logs\u0020with\u0020the\u0020current\u0020running\u0020logs.",
+            "url": "classes/Prado-Util-TLogger.html#method_mergeLogs"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AdeleteLogs\u0028\u0029",
             "name": "deleteLogs",
             "summary": "Deletes\u0020log\u0020messages\u0020from\u0020the\u0020queue.",
             "url": "classes/Prado-Util-TLogger.html#method_deleteLogs"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AdeleteProfileLogs\u0028\u0029",
+            "name": "deleteProfileLogs",
+            "summary": "Deletes\u0020the\u0020retained\u0020Profile\u0020Begin\u0020logs.",
+            "url": "classes/Prado-Util-TLogger.html#method_deleteProfileLogs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AorderByTimeStamp\u0028\u0029",
+            "name": "orderByTimeStamp",
+            "summary": "Order\u0020function\u0020used\u0020by\u0020\u007B\u0040see\u0020static\u003A\u003AgetLogs\u0028\u0029\u007D.",
+            "url": "classes/Prado-Util-TLogger.html#method_orderByTimeStamp"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AfilterByCategories\u0028\u0029",
             "name": "filterByCategories",
-            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040link\u0020getLogs\u007D.",
+            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040see\u0020static\u003A\u003AgetLogs\u0028\u0029\u007D.",
             "url": "classes/Prado-Util-TLogger.html#method_filterByCategories"
         },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AfilterByLevels\u0028\u0029",
             "name": "filterByLevels",
-            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040link\u0020getLogs\u007D",
+            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040see\u0020static\u003A\u003AgetLogs\u0028\u0029\u007D",
             "url": "classes/Prado-Util-TLogger.html#method_filterByLevels"
         },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AfilterByControl\u0028\u0029",
             "name": "filterByControl",
-            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040link\u0020getLogs\u007D",
+            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040see\u0020static\u003A\u003AgetLogs\u0028\u0029\u007D",
             "url": "classes/Prado-Util-TLogger.html#method_filterByControl"
         },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AfilterByTimeStamp\u0028\u0029",
             "name": "filterByTimeStamp",
-            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040link\u0020getLogs\u007D",
+            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040see\u0020static\u003A\u003AgetLogs\u0028\u0029\u007D",
             "url": "classes/Prado-Util-TLogger.html#method_filterByTimeStamp"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003AfilterByPID\u0028\u0029",
+            "name": "filterByPID",
+            "summary": "Filter\u0020function\u0020used\u0020by\u0020\u007B\u0040see\u0020static\u003A\u003AgetLogs\u0028\u0029\u007D",
+            "url": "classes/Prado-Util-TLogger.html#method_filterByPID"
         },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ADEBUG",
             "name": "DEBUG",
@@ -18921,10 +21031,95 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-TLogger.html#constant_FATAL"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003APROFILE",
+            "name": "PROFILE",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_PROFILE"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003APROFILE_BEGIN",
+            "name": "PROFILE_BEGIN",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_PROFILE_BEGIN"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003APROFILE_END",
+            "name": "PROFILE_END",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_PROFILE_END"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003APROFILE_BEGIN_SELECT",
+            "name": "PROFILE_BEGIN_SELECT",
+            "summary": "These\u0020are\u0020for\u0020selecting\u0020just\u0020the\u0020PROFILE_BEGIN\u0020and\u0020PROFILE_END\u0020logs\u0020without\nthe\u0020PROFILE\u0020bit.",
+            "url": "classes/Prado-Util-TLogger.html#constant_PROFILE_BEGIN_SELECT"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003APROFILE_END_SELECT",
+            "name": "PROFILE_END_SELECT",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_PROFILE_END_SELECT"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOGGED",
+            "name": "LOGGED",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOGGED"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_MESSAGE",
+            "name": "LOG_MESSAGE",
+            "summary": "Log\u0020Information\u0020Index.",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_MESSAGE"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_LEVEL",
+            "name": "LOG_LEVEL",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_LEVEL"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_CATEGORY",
+            "name": "LOG_CATEGORY",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_CATEGORY"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_TIME",
+            "name": "LOG_TIME",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_TIME"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_MEMORY",
+            "name": "LOG_MEMORY",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_MEMORY"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_CONTROL",
+            "name": "LOG_CONTROL",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_CONTROL"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_TRACES",
+            "name": "LOG_TRACES",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_TRACES"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003ALOG_PID",
+            "name": "LOG_PID",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#constant_LOG_PID"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_logs",
             "name": "_logs",
             "summary": "",
             "url": "classes/Prado-Util-TLogger.html#property__logs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_profileLogs",
+            "name": "_profileLogs",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__profileLogs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_profileLogsCount",
+            "name": "_profileLogsCount",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__profileLogsCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_profileBeginTimes",
+            "name": "_profileBeginTimes",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__profileBeginTimes"
         },                {
             "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_levels",
             "name": "_levels",
@@ -18946,6 +21141,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-TLogger.html#property__timestamp"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_pid",
+            "name": "_pid",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__pid"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_flushCount",
+            "name": "_flushCount",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__flushCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_flushing",
+            "name": "_flushing",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__flushing"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_flushingLog",
+            "name": "_flushingLog",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__flushingLog"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_traceLevel",
+            "name": "_traceLevel",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__traceLevel"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogger\u003A\u003A\u0024_registered",
+            "name": "_registered",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogger.html#property__registered"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogRoute",
             "name": "TLogRoute",
             "summary": "TLogRoute\u0020class.",
@@ -18955,6 +21180,11 @@ Search.appendIndex(
             "name": "init",
             "summary": "Initializes\u0020the\u0020route.",
             "url": "classes/Prado-Util-TLogRoute.html#method_init"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetLogCount\u0028\u0029",
+            "name": "getLogCount",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getLogCount"
         },                {
             "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetLevels\u0028\u0029",
             "name": "getLevels",
@@ -18986,10 +21216,70 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-TLogRoute.html#method_getLevelValue"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetEnabled\u0028\u0029",
+            "name": "getEnabled",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getEnabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AsetEnabled\u0028\u0029",
+            "name": "setEnabled",
+            "summary": "This\u0020can\u0020be\u0020a\u0020boolean\u0020or\u0020a\u0020callable\u0020in\u0020the\u0020format\u003A\n\u0060\u0060\u0060php\n\t\u0024route\u002D\u003EsetEnabled\u0028\n\t\t\tfunction\u0028TLogRoute\u0020\u0024route\u0029\u003Abool\u0020\u007B\n\t\t\t\t\treturn\u0020\u0021Prado\u003A\u003AgetUser\u0028\u0029\u003F\u002D\u003EgetIsGuest\u0028\u0029\n\t\t\t\u007D\n\t\t\u0029\u003B\n\u0060\u0060\u0060",
+            "url": "classes/Prado-Util-TLogRoute.html#method_setEnabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetProcessInterval\u0028\u0029",
+            "name": "getProcessInterval",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getProcessInterval"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AsetProcessInterval\u0028\u0029",
+            "name": "setProcessInterval",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_setProcessInterval"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetPrefixCallback\u0028\u0029",
+            "name": "getPrefixCallback",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getPrefixCallback"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AsetPrefixCallback\u0028\u0029",
+            "name": "setPrefixCallback",
+            "summary": "This\u0020is\u0020the\u0020application\u0020callback\u0020for\u0020changing\u0020the\u0020prefix\u0020in\u0020the\u0020format\u0020of\u003A\n\u0060\u0060\u0060php\n\t\u0024route\u002D\u003EsetPrefixCallback\u0028function\u0028array\u0020\u0024log,\u0020string\u0020\u0024prefix\u0029\u0020\u007B\n\t\t\t\treturn\u0020\u0024prefix\u0020.\u0020\u0027\u005Bmy\u0020data\u005D\u0027\u003B\n\t\t\u007D\u0029\u003B\n\u0060\u0060\u0060",
+            "url": "classes/Prado-Util-TLogRoute.html#method_setPrefixCallback"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetDisplaySubSeconds\u0028\u0029",
+            "name": "getDisplaySubSeconds",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getDisplaySubSeconds"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AsetDisplaySubSeconds\u0028\u0029",
+            "name": "setDisplaySubSeconds",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_setDisplaySubSeconds"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AformatLogMessage\u0028\u0029",
             "name": "formatLogMessage",
             "summary": "Formats\u0020a\u0020log\u0020message\u0020given\u0020different\u0020fields.",
             "url": "classes/Prado-Util-TLogRoute.html#method_formatLogMessage"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetLogPrefix\u0028\u0029",
+            "name": "getLogPrefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getLogPrefix"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetTime\u0028\u0029",
+            "name": "getTime",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getTime"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AgetLogColor\u0028\u0029",
+            "name": "getLogColor",
+            "summary": "Given\u0020\u0024normalizedTime\u0020between\u00200\u0020and\u00201\u0020will\u0020produce\u0020an\u0020associated\u0020color.",
+            "url": "classes/Prado-Util-TLogRoute.html#method_getLogColor"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AfilterLogs\u0028\u0029",
+            "name": "filterLogs",
+            "summary": "This\u0020filters\u0020the\u0020logs\u0020to\u0020calculate\u0020the\u0020delta\u0020and\u0020total\u0020times.\u0020\u0020It\u0020also\u0020calculates\nthe\u0020Profile\u0020times\u0020based\u0020upon\u0020the\u0020begin\u0020and\u0020end\u0020logged\u0020profile\u0020logs",
+            "url": "classes/Prado-Util-TLogRoute.html#method_filterLogs"
         },                {
             "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003AcollectLogs\u0028\u0029",
             "name": "collectLogs",
@@ -19011,6 +21301,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Util-TLogRoute.html#property__levelValues"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_logs",
+            "name": "_logs",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#property__logs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_processInterval",
+            "name": "_processInterval",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#property__processInterval"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_levels",
             "name": "_levels",
             "summary": "",
@@ -19020,6 +21320,31 @@ Search.appendIndex(
             "name": "_categories",
             "summary": "",
             "url": "classes/Prado-Util-TLogRoute.html#property__categories"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_enabled",
+            "name": "_enabled",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#property__enabled"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_prefix",
+            "name": "_prefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#property__prefix"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_displaySubSeconds",
+            "name": "_displaySubSeconds",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#property__displaySubSeconds"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_maxDelta",
+            "name": "_maxDelta",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#property__maxDelta"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRoute\u003A\u003A\u0024_totalTime",
+            "name": "_totalTime",
+            "summary": "",
+            "url": "classes/Prado-Util-TLogRoute.html#property__totalTime"
         },                {
             "fqsen": "\\Prado\\Util\\TLogRouter",
             "name": "TLogRouter",
@@ -19041,6 +21366,21 @@ Search.appendIndex(
             "summary": "Adds\u0020a\u0020TLogRoute\u0020instance\u0020to\u0020the\u0020log\u0020router.",
             "url": "classes/Prado-Util-TLogRouter.html#method_addRoute"
         },                {
+            "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AgetRoutesCount\u0028\u0029",
+            "name": "getRoutesCount",
+            "summary": "Gets\u0020the\u0020number\u0020of\u0020log\u0020routes.",
+            "url": "classes/Prado-Util-TLogRouter.html#method_getRoutesCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AgetRoutes\u0028\u0029",
+            "name": "getRoutes",
+            "summary": "Gets\u0020the\u0020log\u0020routes.",
+            "url": "classes/Prado-Util-TLogRouter.html#method_getRoutes"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AremoveRoute\u0028\u0029",
+            "name": "removeRoute",
+            "summary": "Removes\u0020a\u0020TLogRoute\u0020instance\u0020to\u0020the\u0020log\u0020router.",
+            "url": "classes/Prado-Util-TLogRouter.html#method_removeRoute"
+        },                {
             "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AgetConfigFile\u0028\u0029",
             "name": "getConfigFile",
             "summary": "",
@@ -19055,6 +21395,26 @@ Search.appendIndex(
             "name": "collectLogs",
             "summary": "Collects\u0020log\u0020messages\u0020from\u0020a\u0020logger.",
             "url": "classes/Prado-Util-TLogRouter.html#method_collectLogs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AgetFlushCount\u0028\u0029",
+            "name": "getFlushCount",
+            "summary": "This\u0020is\u0020a\u0020passthrough\u0020to\u0020the\u0020Application\u0020TLogger.",
+            "url": "classes/Prado-Util-TLogRouter.html#method_getFlushCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AsetFlushCount\u0028\u0029",
+            "name": "setFlushCount",
+            "summary": "This\u0020is\u0020a\u0020passthrough\u0020to\u0020the\u0020Application\u0020TLogger.",
+            "url": "classes/Prado-Util-TLogRouter.html#method_setFlushCount"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AgetTraceLevel\u0028\u0029",
+            "name": "getTraceLevel",
+            "summary": "This\u0020is\u0020a\u0020passthrough\u0020to\u0020the\u0020Application\u0020TLogger.",
+            "url": "classes/Prado-Util-TLogRouter.html#method_getTraceLevel"
+        },                {
+            "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003AsetTraceLevel\u0028\u0029",
+            "name": "setTraceLevel",
+            "summary": "This\u0020is\u0020a\u0020passthrough\u0020to\u0020the\u0020Application\u0020TLogger.",
+            "url": "classes/Prado-Util-TLogRouter.html#method_setTraceLevel"
         },                {
             "fqsen": "\\Prado\\Util\\TLogRouter\u003A\u003A\u0024_routes",
             "name": "_routes",
@@ -19108,7 +21468,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Util\\TPluginModule\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "initializes\u0020the\u0020plugin\u0020module,\u0020looks\u0020for\u0020a\u0020Pages\u0020directory\u0020and\u0020adds\u0020a\u0020new\u0020\u007B\u0040link\u0020TBehavior\u007D\nto\u0020help\u0020TPageService\u0020find\u0020any\u0020plugin\u0020module\u0020pages",
+            "summary": "initializes\u0020the\u0020plugin\u0020module,\u0020looks\u0020for\u0020a\u0020Pages\u0020directory\u0020and\u0020adds\u0020a\u0020new\u0020\u007B\u0040see\u0020\\Prado\\Util\\TBehavior\u007D\nto\u0020help\u0020TPageService\u0020find\u0020any\u0020plugin\u0020module\u0020pages",
             "url": "classes/Prado-Util-TPluginModule.html#method_init"
         },                {
             "fqsen": "\\Prado\\Util\\TPluginModule\u003A\u003AattachPageServiceBehavior\u0028\u0029",
@@ -19366,6 +21726,71 @@ Search.appendIndex(
             "summary": "Charset,\u0020default\u0020is\u0020\u0027UTF\u002D8\u0027",
             "url": "classes/Prado-Util-TSimpleDateFormatter.html#property_charset"
         },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute",
+            "name": "TSysLogRoute",
+            "summary": "TSysLogRoute\u0020class.",
+            "url": "classes/Prado-Util-TSysLogRoute.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AprocessLogs\u0028\u0029",
+            "name": "processLogs",
+            "summary": "Processes\u0020log\u0020messages\u0020and\u0020sends\u0020them\u0020to\u0020specific\u0020destination.",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_processLogs"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AtranslateLogLevel\u0028\u0029",
+            "name": "translateLogLevel",
+            "summary": "Translates\u0020a\u0020PRADO\u0020log\u0020level\u0020attribute\u0020into\u0020one\u0020understood\u0020by\u0020syslog",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_translateLogLevel"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AgetSysLogPrefix\u0028\u0029",
+            "name": "getSysLogPrefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_getSysLogPrefix"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AsetSysLogPrefix\u0028\u0029",
+            "name": "setSysLogPrefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_setSysLogPrefix"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AgetSysLogFlags\u0028\u0029",
+            "name": "getSysLogFlags",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_getSysLogFlags"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AsetSysLogFlags\u0028\u0029",
+            "name": "setSysLogFlags",
+            "summary": "This\u0020sets\u0020the\u0020\u0060openlog\u0060\u0020flags.\u0020\u0020It\u0020can\u0020be\u0020an\u0020integer,\u0020a\u0020string\u0020or\u0020an\u0020array\u0020of\u0020strings.",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_setSysLogFlags"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AgetFacility\u0028\u0029",
+            "name": "getFacility",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_getFacility"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AsetFacility\u0028\u0029",
+            "name": "setFacility",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_setFacility"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003AformatLogMessage\u0028\u0029",
+            "name": "formatLogMessage",
+            "summary": "Formats\u0020a\u0020log\u0020message\u0020given\u0020different\u0020fields.",
+            "url": "classes/Prado-Util-TSysLogRoute.html#method_formatLogMessage"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003A\u0024_sysLogPrefix",
+            "name": "_sysLogPrefix",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#property__sysLogPrefix"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003A\u0024_sysLogFlags",
+            "name": "_sysLogFlags",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#property__sysLogFlags"
+        },                {
+            "fqsen": "\\Prado\\Util\\TSysLogRoute\u003A\u003A\u0024_facility",
+            "name": "_facility",
+            "summary": "",
+            "url": "classes/Prado-Util-TSysLogRoute.html#property__facility"
+        },                {
             "fqsen": "\\Prado\\Util\\TUtf8Converter",
             "name": "TUtf8Converter",
             "summary": "TUtf8Converter\u0020class.",
@@ -19380,6 +21805,11 @@ Search.appendIndex(
             "name": "fromUTF8",
             "summary": "Convert\u0020UTF\u002D8\u0020strings\u0020to\u0020a\u0020different\u0020encoding.\u0020NB.\u0020The\u0020result\nmay\u0020not\u0020have\u0020been\u0020encoded\u0020if\u0020iconv\u0020fails.",
             "url": "classes/Prado-Util-TUtf8Converter.html#method_fromUTF8"
+        },                {
+            "fqsen": "\\Prado\\Util\\TUtf8Converter\u003A\u003AparseEncodingLanguage\u0028\u0029",
+            "name": "parseEncodingLanguage",
+            "summary": "This\u0020parses\u0020a\u0020Character\u0020Set\u0020Encoding\u0020for\u0020an\u0020appended\/embedded\u0020language.",
+            "url": "classes/Prado-Util-TUtf8Converter.html#method_parseEncodingLanguage"
         },                {
             "fqsen": "\\Prado\\Util\\TVarDumper",
             "name": "TVarDumper",
@@ -19430,6 +21860,21 @@ Search.appendIndex(
             "name": "create",
             "summary": "Creates\u0020an\u0020instance\u0020of\u0020TXmlRpcClient",
             "url": "classes/Prado-Util-TXmlRpcClient.html#method_create"
+        },                {
+            "fqsen": "\\Prado\\Web\\Behaviors\\TRequestConnectionUpgrade",
+            "name": "TRequestConnectionUpgrade",
+            "summary": "TRequestConnectionUpgrade\u0020class.",
+            "url": "classes/Prado-Web-Behaviors-TRequestConnectionUpgrade.html"
+        },                {
+            "fqsen": "\\Prado\\Web\\Behaviors\\TRequestConnectionUpgrade\u003A\u003Aevents\u0028\u0029",
+            "name": "events",
+            "summary": "",
+            "url": "classes/Prado-Web-Behaviors-TRequestConnectionUpgrade.html#method_events"
+        },                {
+            "fqsen": "\\Prado\\Web\\Behaviors\\TRequestConnectionUpgrade\u003A\u003AprocessHeaders\u0028\u0029",
+            "name": "processHeaders",
+            "summary": "Move\u0020the\u0020contents\u0020of\u0020the\u0020Upgrade\u0020header\u0020to\u0020the\u0020urlParams.",
+            "url": "classes/Prado-Web-Behaviors-TRequestConnectionUpgrade.html#method_processHeaders"
         },                {
             "fqsen": "\\Prado\\Web\\Javascripts\\TJavaScript",
             "name": "TJavaScript",
@@ -19496,11 +21941,6 @@ Search.appendIndex(
             "summary": "Decodes\u0020a\u0020javascript\u0020string\u0020into\u0020PHP\u0020variable.",
             "url": "classes/Prado-Web-Javascripts-TJavaScript.html#method_jsonDecode"
         },                {
-            "fqsen": "\\Prado\\Web\\Javascripts\\TJavaScript\u003A\u003AcheckJsonError\u0028\u0029",
-            "name": "checkJsonError",
-            "summary": "",
-            "url": "classes/Prado-Web-Javascripts-TJavaScript.html#method_checkJsonError"
-        },                {
             "fqsen": "\\Prado\\Web\\Javascripts\\TJavaScript\u003A\u003AJSMin\u0028\u0029",
             "name": "JSMin",
             "summary": "Minimize\u0020the\u0020size\u0020of\u0020a\u0020javascript\u0020script.",
@@ -19553,7 +21993,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\Javascripts\\TJavaScriptLiteral",
             "name": "TJavaScriptLiteral",
-            "summary": "TJavaScriptLiteral\u0020class\u0020that\u0020encloses\u0020string\u0020literals\u0020that\u0020are\u0020not\nsupposed\u0020to\u0020be\u0020escaped\u0020by\u0020\u007B\u0040link\u0020TJavaScript\u003A\u003Aencode\u0028\u0029\u0020\u007D",
+            "summary": "TJavaScriptLiteral\u0020class\u0020that\u0020encloses\u0020string\u0020literals\u0020that\u0020are\u0020not\nsupposed\u0020to\u0020be\u0020escaped\u0020by\u0020\u007B\u0040see\u0020\\Prado\\Web\\Javascripts\\TJavaScript\u003A\u003Aencode\u0028\u0029\u0020\u007D",
             "url": "classes/Prado-Web-Javascripts-TJavaScriptLiteral.html"
         },                {
             "fqsen": "\\Prado\\Web\\Javascripts\\TJavaScriptLiteral\u003A\u003A__construct\u0028\u0029",
@@ -19690,11 +22130,6 @@ Search.appendIndex(
             "name": "encode",
             "summary": "Encodes\u0020PHP\u0020data\u0020into\u0020JSON\u0020data",
             "url": "classes/Prado-Web-Services-TJsonRpcProtocol.html#method_encode"
-        },                {
-            "fqsen": "\\Prado\\Web\\Services\\TJsonRpcProtocol\u003A\u003AcheckJsonError\u0028\u0029",
-            "name": "checkJsonError",
-            "summary": "",
-            "url": "classes/Prado-Web-Services-TJsonRpcProtocol.html#method_checkJsonError"
         },                {
             "fqsen": "\\Prado\\Web\\Services\\TJsonRpcProtocol\u003A\u003AcallApiMethod\u0028\u0029",
             "name": "callApiMethod",
@@ -20045,16 +22480,6 @@ Search.appendIndex(
             "name": "_initialized",
             "summary": "",
             "url": "classes/Prado-Web-Services-TPageService.html#property__initialized"
-        },                {
-            "fqsen": "\\Prado\\Web\\Services\\TPageService\u003A\u003A\u0024_themeManager",
-            "name": "_themeManager",
-            "summary": "",
-            "url": "classes/Prado-Web-Services-TPageService.html#property__themeManager"
-        },                {
-            "fqsen": "\\Prado\\Web\\Services\\TPageService\u003A\u003A\u0024_templateManager",
-            "name": "_templateManager",
-            "summary": "",
-            "url": "classes/Prado-Web-Services-TPageService.html#property__templateManager"
         },                {
             "fqsen": "\\Prado\\Web\\Services\\TRpcApiProvider",
             "name": "TRpcApiProvider",
@@ -21176,6 +23601,11 @@ Search.appendIndex(
             "summary": "Resolves\u0020the\u0020requested\u0020service.",
             "url": "classes/Prado-Web-THttpRequest.html#method_resolveRequest"
         },                {
+            "fqsen": "\\Prado\\Web\\THttpRequest\u003A\u003AonResolveRequest\u0028\u0029",
+            "name": "onResolveRequest",
+            "summary": "Raised\u0020when\u0020resolving\u0020the\u0020request.\u0020\u0020This\u0020is\u0020for\u0020application\u0020specific\u0020request\nresolution.\u0020\u0020Event\u0020Handlers\u0020can\u0020return\u0020\u0060false\u0060\u0020for\u0020no\u0020service,\u0020a\u0020\u0060string\u0060\u0020of\u0020the\nservice\u0020id\u0020to\u0020use,\u0020or\u0020an\u0020array\u0020replacing\u0020the\u0020\u0024urlParams.\u0020\u0020By\u0020returning\u0020null,\nthe\u0020result\u0020is\u0020skipped\u0020and\u0020has\u0020no\u0020effect.\u0020\u0020Event\u0020Handler\u0020results\u0020are\u0020stacked\u0020and\nresults\u0020are\u0020popped\u0020until\u0020a\u0020valid\u0020result\u0020is\u0020found.\u0020\u0020The\u0020only\u0020invalid\u0020result\u0020is\nif\u0020a\u0020string\u0020is\u0020provided\u0020that\u0020is\u0020not\u0020in\u0020the\u0020\u0024serviceIDs.",
+            "url": "classes/Prado-Web-THttpRequest.html#method_onResolveRequest"
+        },                {
             "fqsen": "\\Prado\\Web\\THttpRequest\u003A\u003AgetRequestResolved\u0028\u0029",
             "name": "getRequestResolved",
             "summary": "",
@@ -21375,6 +23805,46 @@ Search.appendIndex(
             "name": "_items",
             "summary": "",
             "url": "classes/Prado-Web-THttpRequest.html#property__items"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestParameter",
+            "name": "THttpRequestParameter",
+            "summary": "THttpRequestParameter\u0020class.",
+            "url": "classes/Prado-Web-THttpRequestParameter.html"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestParameter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor.",
+            "url": "classes/Prado-Web-THttpRequestParameter.html#method___construct"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestParameter\u003A\u003AgetServiceIDs\u0028\u0029",
+            "name": "getServiceIDs",
+            "summary": "",
+            "url": "classes/Prado-Web-THttpRequestParameter.html#method_getServiceIDs"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestParameter\u003A\u003AsetServiceIDs\u0028\u0029",
+            "name": "setServiceIDs",
+            "summary": "",
+            "url": "classes/Prado-Web-THttpRequestParameter.html#method_setServiceIDs"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestParameter\u003A\u003A\u0024_serviceIDs",
+            "name": "_serviceIDs",
+            "summary": "",
+            "url": "classes/Prado-Web-THttpRequestParameter.html#property__serviceIDs"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestResolveMethod",
+            "name": "THttpRequestResolveMethod",
+            "summary": "THttpRequestResolveMethod\u0020class.",
+            "url": "classes/Prado-Web-THttpRequestResolveMethod.html"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestResolveMethod\u003A\u003AServiceOrder",
+            "name": "ServiceOrder",
+            "summary": "",
+            "url": "classes/Prado-Web-THttpRequestResolveMethod.html#constant_ServiceOrder"
+        },                {
+            "fqsen": "\\Prado\\Web\\THttpRequestResolveMethod\u003A\u003AParameterOrder",
+            "name": "ParameterOrder",
+            "summary": "",
+            "url": "classes/Prado-Web-THttpRequestResolveMethod.html#constant_ParameterOrder"
         },                {
             "fqsen": "\\Prado\\Web\\THttpRequestUrlFormat",
             "name": "THttpRequestUrlFormat",
@@ -21853,7 +24323,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\THttpSession\u003A\u003AsetUseTransparentSessionID\u0028\u0029",
             "name": "setUseTransparentSessionID",
-            "summary": "Ensure\u0020that\u0020\u007B\u0040link\u0020setCookieMode\u0020CookieMode\u007D\u0020is\u0020not\u0020set\u0020to\u0020\u0022None\u0022\u0020before\u0020enabling\nthe\u0020use\u0020of\u0020transparent\u0020session\u0020ids.\u0020Refer\u0020to\u0020the\u0020main\u0020documentation\u0020of\u0020the\u0020class\nTHttpSession\u0020class\u0020for\u0020a\u0020configuration\u0020example.",
+            "summary": "Ensure\u0020that\u0020\u007B\u0040see\u0020setCookieMode\u0020CookieMode\u007D\u0020is\u0020not\u0020set\u0020to\u0020\u0022None\u0022\u0020before\u0020enabling\nthe\u0020use\u0020of\u0020transparent\u0020session\u0020ids.\u0020Refer\u0020to\u0020the\u0020main\u0020documentation\u0020of\u0020the\u0020class\nTHttpSession\u0020class\u0020for\u0020a\u0020configuration\u0020example.",
             "url": "classes/Prado-Web-THttpSession.html#method_setUseTransparentSessionID"
         },                {
             "fqsen": "\\Prado\\Web\\THttpSession\u003A\u003AgetTimeout\u0028\u0029",
@@ -22483,7 +24953,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\TUrlMappingPattern\u003A\u003AapplySecureConnectionPrefix\u0028\u0029",
             "name": "applySecureConnectionPrefix",
-            "summary": "Apply\u0020behavior\u0020of\u0020\u007B\u0040link\u0020SecureConnection\u007D\u0020property\u0020by\u0020conditionaly\u0020prefixing\nURL\u0020with\u0020\u007B\u0040link\u0020THttpRequest\u003A\u003AgetBaseUrl\u0028\u0029\u007D",
+            "summary": "Apply\u0020behavior\u0020of\u0020\u007B\u0040see\u0020SecureConnection\u007D\u0020property\u0020by\u0020conditionaly\u0020prefixing\nURL\u0020with\u0020\u007B\u0040see\u0020\\Prado\\Web\\THttpRequest\u003A\u003AgetBaseUrl\u0028\u0029\u007D",
             "url": "classes/Prado-Web-TUrlMappingPattern.html#method_applySecureConnectionPrefix"
         },                {
             "fqsen": "\\Prado\\Web\\TUrlMappingPattern\u003A\u003A\u0024_serviceParameter",
@@ -22633,7 +25103,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveButton\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040link\u0020ICallbackEventHandler\u007D\u0020interface.\u0020If\u0020\u007B\u0040link\u0020getCausesValidation\u0020CausesValidation\u007D\nis\u0020true,\u0020it\u0020will\u0020invoke\u0020the\u0020page\u0027s\u0020\u007B\u0040link\u0020TPage\u003A\u003Avalidate\u0020validate\u007D\nmethod\u0020first.\u0020It\u0020will\u0020raise\u0020\u007B\u0040link\u0020onClick\u0020OnClick\u007D\u0020event\u0020first\nand\u0020then\u0020the\u0020\u007B\u0040link\u0020onCallback\u0020OnCallback\u007D\u0020event.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\u0020interface.\u0020If\u0020\u007B\u0040see\u0020getCausesValidation\u0020CausesValidation\u007D\nis\u0020true,\u0020it\u0020will\u0020invoke\u0020the\u0020page\u0027s\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\TPage\u003A\u003Avalidate\u0020validate\u007D\nmethod\u0020first.\u0020It\u0020will\u0020raise\u0020\u007B\u0040see\u0020onClick\u0020OnClick\u007D\u0020event\u0020first\nand\u0020then\u0020the\u0020\u007B\u0040see\u0020onCallback\u0020OnCallback\u007D\u0020event.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveButton.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveButton\u003A\u003AonCallback\u0028\u0029",
@@ -22643,12 +25113,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveButton\u003A\u003AsetText\u0028\u0029",
             "name": "setText",
-            "summary": "Updates\u0020the\u0020button\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040link\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
+            "summary": "Updates\u0020the\u0020button\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040see\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveButton.html#method_setText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveButton\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveButton.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveButton\u003A\u003AaddAttributesToRender\u0028\u0029",
@@ -22693,7 +25163,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBox\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveCheckBox.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBox\u003A\u003AonCallback\u0028\u0029",
@@ -22703,7 +25173,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBox\u003A\u003AsetText\u0028\u0029",
             "name": "setText",
-            "summary": "Updates\u0020the\u0020button\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040link\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
+            "summary": "Updates\u0020the\u0020button\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040see\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveCheckBox.html#method_setText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBox\u003A\u003AsetChecked\u0028\u0029",
@@ -22713,7 +25183,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBox\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveCheckBox.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBox\u003A\u003ArenderInputTag\u0028\u0029",
@@ -22783,7 +25253,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBoxList\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveCheckBoxList.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBoxList\u003A\u003AcreateRepeatedControl\u0028\u0029",
@@ -22793,7 +25263,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBoxList\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveCheckBoxList.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCheckBoxList\u003A\u003AonCallback\u0028\u0029",
@@ -22948,7 +25418,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCustomValidator\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.\u0020The\u0020\u007B\u0040link\u0020onServerValidate\nOnServerValidate\u007D\u0020event\u0020is\u0020raised\u0020first\u0020and\u0020then\u0020the\n\u007B\u0040link\u0020onCallback\u0020OnCallback\u007D\u0020event.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.\u0020The\u0020\u007B\u0040see\u0020onServerValidate\nOnServerValidate\u007D\u0020event\u0020is\u0020raised\u0020first\u0020and\u0020then\u0020the\n\u007B\u0040see\u0020onCallback\u0020OnCallback\u007D\u0020event.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveCustomValidator.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveCustomValidator\u003A\u003AsetIsValid\u0028\u0029",
@@ -23093,12 +25563,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDataGrid\u003A\u003ArenderPager\u0028\u0029",
             "name": "renderPager",
-            "summary": "Loops\u0020through\u0020all\u0020\u007B\u0040link\u0020TActivePager\u007D\u0020on\u0020the\u0020page\u0020and\u0020registers\u0020the\u0020ones\u0020which\u0020are\u0020set\u0020to\u0020paginate\nthe\u0020datagrid\u0020for\u0020rendering.\u0020This\u0020is\u0020to\u0020ensure\u0020that\u0020the\u0020connected\u0020pagers\u0020are\u0020also\u0020rendered\u0020if\u0020the\ndata\u0020source\u0020changed.",
+            "summary": "Loops\u0020through\u0020all\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActivePager\u007D\u0020on\u0020the\u0020page\u0020and\u0020registers\u0020the\u0020ones\u0020which\u0020are\u0020set\u0020to\u0020paginate\nthe\u0020datagrid\u0020for\u0020rendering.\u0020This\u0020is\u0020to\u0020ensure\u0020that\u0020the\u0020connected\u0020pagers\u0020are\u0020also\u0020rendered\u0020if\u0020the\ndata\u0020source\u0020changed.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveDataGrid.html#method_renderPager"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDataGrid\u003A\u003ArenderDataGrid\u0028\u0029",
             "name": "renderDataGrid",
-            "summary": "Renders\u0020the\u0020datagrid\u0020by\u0020writing\u0020a\u0020\u007B\u0040link\u0020getSurroundingTag\u0028\u0029\u007D\u0020with\u0020the\u0020container\u0020id\u0020obtained\nfrom\u0020\u007B\u0040link\u0020getSurroundingTagId\u0028\u0029\u007D\u0020which\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\nscript\u0020to\u0020update\u0020it\u0027s\u0020content.",
+            "summary": "Renders\u0020the\u0020datagrid\u0020by\u0020writing\u0020a\u0020\u007B\u0040see\u0020getSurroundingTag\u0028\u0029\u007D\u0020with\u0020the\u0020container\u0020id\u0020obtained\nfrom\u0020\u007B\u0040see\u0020getSurroundingTagId\u0028\u0029\u007D\u0020which\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\nscript\u0020to\u0020update\u0020it\u0027s\u0020content.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveDataGrid.html#method_renderDataGrid"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDataGrid\u003A\u003A\u0024_surroundingTag",
@@ -23163,12 +25633,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDataList\u003A\u003ArenderPager\u0028\u0029",
             "name": "renderPager",
-            "summary": "Loops\u0020through\u0020all\u0020\u007B\u0040link\u0020TActivePager\u007D\u0020on\u0020the\u0020page\u0020and\u0020registers\u0020the\u0020ones\u0020which\u0020are\u0020set\u0020to\u0020paginate\nthe\u0020repeater\u0020for\u0020rendering.\u0020This\u0020is\u0020to\u0020ensure\u0020that\u0020the\u0020connected\u0020pagers\u0020are\u0020also\u0020rendered\u0020if\u0020the\ndata\u0020source\u0020changed.",
+            "summary": "Loops\u0020through\u0020all\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActivePager\u007D\u0020on\u0020the\u0020page\u0020and\u0020registers\u0020the\u0020ones\u0020which\u0020are\u0020set\u0020to\u0020paginate\nthe\u0020repeater\u0020for\u0020rendering.\u0020This\u0020is\u0020to\u0020ensure\u0020that\u0020the\u0020connected\u0020pagers\u0020are\u0020also\u0020rendered\u0020if\u0020the\ndata\u0020source\u0020changed.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveDataList.html#method_renderPager"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDataList\u003A\u003ArenderDataList\u0028\u0029",
             "name": "renderDataList",
-            "summary": "Renders\u0020the\u0020repeater\u0020by\u0020writing\u0020a\u0020span\u0020tag\u0020with\u0020the\u0020container\u0020id\u0020obtained\u0020from\u0020\u007B\u0040link\u0020getContainerID\u0028\u0029\u007D\nwhich\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\u0020script\u0020to\u0020update\u0020it\u0027s\u0020content.",
+            "summary": "Renders\u0020the\u0020repeater\u0020by\u0020writing\u0020a\u0020span\u0020tag\u0020with\u0020the\u0020container\u0020id\u0020obtained\u0020from\u0020\u007B\u0040see\u0020getContainerID\u0028\u0029\u007D\nwhich\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\u0020script\u0020to\u0020update\u0020it\u0027s\u0020content.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveDataList.html#method_renderDataList"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDatePicker",
@@ -23208,7 +25678,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDatePicker\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveDatePicker.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDatePicker\u003A\u003AonCallback\u0028\u0029",
@@ -23278,7 +25748,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDropDownList\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveDropDownList.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDropDownList\u003A\u003AaddAttributesToRender\u0028\u0029",
@@ -23288,7 +25758,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDropDownList\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveDropDownList.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveDropDownList\u003A\u003AonCallback\u0028\u0029",
@@ -23483,7 +25953,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveFileUploadCallbackParams",
             "name": "TActiveFileUploadCallbackParams",
-            "summary": "TActiveFileUploadCallbackParams\u0020is\u0020an\u0020internal\u0020class\u0020used\u0020by\u0020\u007B\u0040link\u0020TActiveFileUpload\u007D.",
+            "summary": "TActiveFileUploadCallbackParams\u0020is\u0020an\u0020internal\u0020class\u0020used\u0020by\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActiveFileUpload\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveFileUploadCallbackParams.html"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveFileUploadCallbackParams\u003A\u003A\u0024files",
@@ -23548,12 +26018,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveHtmlArea\u003A\u003AsetText\u0028\u0029",
             "name": "setText",
-            "summary": "Client\u002Dside\u0020Text\u0020property\u0020can\u0020only\u0020be\u0020updated\u0020after\u0020the\u0020OnLoad\u0020stage.\u0020Setting\u0020WYSIWYG\ntext\u0020editor\u0020content\u0020is\u0020only\u0020available\u0020if\u0020\u007B\u0040link\u0020getEnableVisualEdit\u007D\u0020is\u0020enabled.",
+            "summary": "Client\u002Dside\u0020Text\u0020property\u0020can\u0020only\u0020be\u0020updated\u0020after\u0020the\u0020OnLoad\u0020stage.\u0020Setting\u0020WYSIWYG\ntext\u0020editor\u0020content\u0020is\u0020only\u0020available\u0020if\u0020\u007B\u0040see\u0020getEnableVisualEdit\u007D\u0020is\u0020enabled.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveHtmlArea.html#method_setText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveHtmlArea\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveHtmlArea.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveHtmlArea\u003A\u003AonCallback\u0028\u0029",
@@ -23583,12 +26053,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveHtmlArea5\u003A\u003AsetText\u0028\u0029",
             "name": "setText",
-            "summary": "Client\u002Dside\u0020Text\u0020property\u0020can\u0020only\u0020be\u0020updated\u0020after\u0020the\u0020OnLoad\u0020stage.\u0020Setting\u0020WYSIWYG\ntext\u0020editor\u0020content\u0020is\u0020only\u0020available\u0020if\u0020\u007B\u0040link\u0020getEnableVisualEdit\u007D\u0020is\u0020enabled.",
+            "summary": "Client\u002Dside\u0020Text\u0020property\u0020can\u0020only\u0020be\u0020updated\u0020after\u0020the\u0020OnLoad\u0020stage.\u0020Setting\u0020WYSIWYG\ntext\u0020editor\u0020content\u0020is\u0020only\u0020available\u0020if\u0020\u007B\u0040see\u0020getEnableVisualEdit\u007D\u0020is\u0020enabled.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveHtmlArea5.html#method_setText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveHtmlArea5\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveHtmlArea5.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveHtmlArea5\u003A\u003AonCallback\u0028\u0029",
@@ -23718,7 +26188,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveImageButton\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040link\u0020ICallbackEventHandler\u0020ICallbackEventHandler\u007D\u0020interface.\u0020If\n\u007B\u0040link\u0020getCausesValidation\u0020CausesValidation\u007D\u0020is\u0020true,\u0020it\u0020will\u0020invoke\u0020the\u0020page\u0027s\n\u007B\u0040link\u0020TPage\u003A\u003Avalidate\u007D\u0020method\u0020first.\u0020It\u0020will\u0020raise\n\u007B\u0040link\u0020onClick\u0020OnClick\u007D\u0020event\u0020first\u0020and\u0020then\u0020the\u0020\u007B\u0040link\u0020onCallback\u0020OnCallback\u007D\u0020event.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040see\u0020ICallbackEventHandler\u0020ICallbackEventHandler\u007D\u0020interface.\u0020If\n\u007B\u0040see\u0020getCausesValidation\u0020CausesValidation\u007D\u0020is\u0020true,\u0020it\u0020will\u0020invoke\u0020the\u0020page\u0027s\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\TPage\u003A\u003Avalidate\u007D\u0020method\u0020first.\u0020It\u0020will\u0020raise\n\u007B\u0040see\u0020onClick\u0020OnClick\u007D\u0020event\u0020first\u0020and\u0020then\u0020the\u0020\u007B\u0040see\u0020onCallback\u0020OnCallback\u007D\u0020event.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveImageButton.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveImageButton\u003A\u003AonCallback\u0028\u0029",
@@ -23728,7 +26198,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveImageButton\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveImageButton.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveImageButton\u003A\u003AaddAttributesToRender\u0028\u0029",
@@ -23793,7 +26263,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveLinkButton\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040link\u0020ICallbackEventHandlerICallbackEventHandler\u007D\u0020interface.\u0020If\n\u007B\u0040link\u0020getCausesValidation\u0020CausesValidation\u007D\u0020is\u0020true,\u0020it\u0020will\ninvoke\u0020the\u0020page\u0027s\u0020\u007B\u0040link\u0020TPage\u003A\u003Avalidate\u0020validate\u007D\u0020method\u0020first.\u0020It\u0020will\u0020raise\n\u007B\u0040link\u0020onClick\u0020OnClick\u007D\u0020event\u0020first\u0020and\u0020then\u0020the\u0020\u007B\u0040link\u0020onCallback\u0020OnCallback\u007D\nevent.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040see\u0020ICallbackEventHandlerICallbackEventHandler\u007D\u0020interface.\u0020If\n\u007B\u0040see\u0020getCausesValidation\u0020CausesValidation\u007D\u0020is\u0020true,\u0020it\u0020will\ninvoke\u0020the\u0020page\u0027s\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\TPage\u003A\u003Avalidate\u0020validate\u007D\u0020method\u0020first.\u0020It\u0020will\u0020raise\n\u007B\u0040see\u0020onClick\u0020OnClick\u007D\u0020event\u0020first\u0020and\u0020then\u0020the\u0020\u007B\u0040see\u0020onCallback\u0020OnCallback\u007D\nevent.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveLinkButton.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveLinkButton\u003A\u003AonCallback\u0028\u0029",
@@ -23803,12 +26273,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveLinkButton\u003A\u003AsetText\u0028\u0029",
             "name": "setText",
-            "summary": "Updates\u0020the\u0020link\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040link\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
+            "summary": "Updates\u0020the\u0020link\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040see\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveLinkButton.html#method_setText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveLinkButton\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveLinkButton.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveLinkButton\u003A\u003AaddAttributesToRender\u0028\u0029",
@@ -23858,12 +26328,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveListBox\u003A\u003AsetSelectionMode\u0028\u0029",
             "name": "setSelectionMode",
-            "summary": "Sets\u0020the\u0020selection\u0020mode\u0020of\u0020the\u0020list\u0020control\u0020\u0028Single,\u0020Multiple\u0029\non\u0020the\u0020client\u002Dside\u0020if\u0020the\u0020\u0020\u007B\u0040link\u0020setEnableUpdate\u0020EnableUpdate\u007D\nproperty\u0020is\u0020set\u0020to\u0020true.",
+            "summary": "Sets\u0020the\u0020selection\u0020mode\u0020of\u0020the\u0020list\u0020control\u0020\u0028Single,\u0020Multiple\u0029\non\u0020the\u0020client\u002Dside\u0020if\u0020the\u0020\u0020\u007B\u0040see\u0020setEnableUpdate\u0020EnableUpdate\u007D\nproperty\u0020is\u0020set\u0020to\u0020true.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveListBox.html#method_setSelectionMode"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveListBox\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveListBox.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveListBox\u003A\u003AonCallback\u0028\u0029",
@@ -23878,7 +26348,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveListBox\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveListBox.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveListBox\u003A\u003AaddAttributesToRender\u0028\u0029",
@@ -24013,7 +26483,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveMultiView\u003A\u003ArenderMultiView\u0028\u0029",
             "name": "renderMultiView",
-            "summary": "Renders\u0020the\u0020TActiveMultiView\u0020by\u0020writing\u0020a\u0020span\u0020tag\u0020with\u0020the\u0020container\u0020id\u0020obtained\u0020from\u0020\u007B\u0040link\u0020getContainerID\u0028\u0029\u007D\nwhich\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\u0020script\u0020to\u0020update\u0020it\u0027s\u0020content.",
+            "summary": "Renders\u0020the\u0020TActiveMultiView\u0020by\u0020writing\u0020a\u0020span\u0020tag\u0020with\u0020the\u0020container\u0020id\u0020obtained\u0020from\u0020\u007B\u0040see\u0020getContainerID\u0028\u0029\u007D\nwhich\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\u0020script\u0020to\u0020update\u0020it\u0027s\u0020content.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveMultiView.html#method_renderMultiView"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveMultiView\u003A\u003AsetActiveViewIndex\u0028\u0029",
@@ -24193,7 +26663,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActivePager\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActivePager.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActivePager\u003A\u003AonCallback\u0028\u0029",
@@ -24268,7 +26738,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButton\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRadioButton.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButton\u003A\u003AonCallback\u0028\u0029",
@@ -24278,7 +26748,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButton\u003A\u003AsetText\u0028\u0029",
             "name": "setText",
-            "summary": "Updates\u0020the\u0020button\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040link\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
+            "summary": "Updates\u0020the\u0020button\u0020text\u0020on\u0020the\u0020client\u002Dside\u0020if\u0020the\n\u007B\u0040see\u0020setEnableUpdate\u0020EnableUpdate\u007D\u0020property\u0020is\u0020set\u0020to\u0020true.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRadioButton.html#method_setText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButton\u003A\u003AsetChecked\u0028\u0029",
@@ -24288,7 +26758,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButton\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRadioButton.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButton\u003A\u003ArenderInputTag\u0028\u0029",
@@ -24348,7 +26818,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButtonList\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRadioButtonList.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButtonList\u003A\u003AcreateRepeatedControl\u0028\u0029",
@@ -24358,7 +26828,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButtonList\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRadioButtonList.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRadioButtonList\u003A\u003AonCallback\u0028\u0029",
@@ -24398,7 +26868,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRatingList\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRatingList.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRatingList\u003A\u003AonCallback\u0028\u0029",
@@ -24478,12 +26948,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRepeater\u003A\u003ArenderPager\u0028\u0029",
             "name": "renderPager",
-            "summary": "Loops\u0020through\u0020all\u0020\u007B\u0040link\u0020TActivePager\u007D\u0020on\u0020the\u0020page\u0020and\u0020registers\u0020the\u0020ones\u0020which\u0020are\u0020set\u0020to\u0020paginate\nthe\u0020repeater\u0020for\u0020rendering.\u0020This\u0020is\u0020to\u0020ensure\u0020that\u0020the\u0020connected\u0020pagers\u0020are\u0020also\u0020rendered\u0020if\u0020the\ndata\u0020source\u0020changed.",
+            "summary": "Loops\u0020through\u0020all\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActivePager\u007D\u0020on\u0020the\u0020page\u0020and\u0020registers\u0020the\u0020ones\u0020which\u0020are\u0020set\u0020to\u0020paginate\nthe\u0020repeater\u0020for\u0020rendering.\u0020This\u0020is\u0020to\u0020ensure\u0020that\u0020the\u0020connected\u0020pagers\u0020are\u0020also\u0020rendered\u0020if\u0020the\ndata\u0020source\u0020changed.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRepeater.html#method_renderPager"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRepeater\u003A\u003ArenderRepeater\u0028\u0029",
             "name": "renderRepeater",
-            "summary": "Renders\u0020the\u0020repeater\u0020by\u0020writing\u0020a\u0020\u007B\u0040link\u0020getSurroundingTag\u0028\u0029\u007D\u0020with\u0020the\u0020container\u0020id\u0020obtained\nfrom\u0020\u007B\u0040link\u0020getSurroundingTagID\u0028\u0029\u007D\u0020which\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\nscript\u0020to\u0020update\u0020it\u0027s\u0020content.",
+            "summary": "Renders\u0020the\u0020repeater\u0020by\u0020writing\u0020a\u0020\u007B\u0040see\u0020getSurroundingTag\u0028\u0029\u007D\u0020with\u0020the\u0020container\u0020id\u0020obtained\nfrom\u0020\u007B\u0040see\u0020getSurroundingTagID\u0028\u0029\u007D\u0020which\u0020will\u0020be\u0020called\u0020by\u0020the\u0020replacement\u0020method\u0020of\u0020the\u0020client\nscript\u0020to\u0020update\u0020it\u0027s\u0020content.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveRepeater.html#method_renderRepeater"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveRepeater\u003A\u003A\u0024_surroundingTag",
@@ -24518,7 +26988,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.\u0020It\u0020will\u0020raise\u0020\u007B\u0040link\u0020onCellSelected\u0020OnCellSelected\u007D\u0020event\u0020with\u0020a\n\u007B\u0040link\u0020TActiveTableCellEventParameter\u007D\u0020containing\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\nTActiveTableCell.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.\u0020It\u0020will\u0020raise\u0020\u007B\u0040see\u0020onCellSelected\u0020OnCellSelected\u007D\u0020event\u0020with\u0020a\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCellEventParameter\u007D\u0020containing\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\nTActiveTableCell.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableCell.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u003A\u003AonCellSelected\u0028\u0029",
@@ -24528,7 +26998,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u003A\u003AaddAttributesToRender\u0028\u0029",
             "name": "addAttributesToRender",
-            "summary": "Ensure\u0020that\u0020the\u0020ID\u0020attribute\u0020is\u0020rendered\u0020and\u0020registers\u0020the\u0020javascript\u0020code\nfor\u0020initializing\u0020the\u0020active\u0020control\u0020if\u0020the\u0020event\u0020handler\u0020for\u0020the\n\u007B\u0040link\u0020onCellSelected\u0020OnCellSelected\u007D\u0020event\u0020is\u0020set.",
+            "summary": "Ensure\u0020that\u0020the\u0020ID\u0020attribute\u0020is\u0020rendered\u0020and\u0020registers\u0020the\u0020javascript\u0020code\nfor\u0020initializing\u0020the\u0020active\u0020control\u0020if\u0020the\u0020event\u0020handler\u0020for\u0020the\n\u007B\u0040see\u0020onCellSelected\u0020OnCellSelected\u007D\u0020event\u0020is\u0020set.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableCell.html#method_addAttributesToRender"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u003A\u003Arender\u0028\u0029",
@@ -24543,12 +27013,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u003A\u003AgetCellIndex\u0028\u0029",
             "name": "getCellIndex",
-            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020TActiveTableCell\u0020within\u0020the\u0020\u007B\u0040link\u0020TTableCellCollection\u007D\nof\u0020the\u0020parent\u0020\u007B\u0040link\u0020TTableRow\u007D\u0020control.\u0020Raises\u0020a\u0020\u007B\u0040link\u0020TConfigurationException\u007D\u0020if\u0020the\u0020cell\nis\u0020no\u0020member\u0020of\u0020the\u0020cell\u0020collection.",
+            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020TActiveTableCell\u0020within\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableCellCollection\u007D\nof\u0020the\u0020parent\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableRow\u007D\u0020control.\u0020Raises\u0020a\u0020\u007B\u0040see\u0020\\Prado\\Exceptions\\TConfigurationException\u007D\u0020if\u0020the\u0020cell\nis\u0020no\u0020member\u0020of\u0020the\u0020cell\u0020collection.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableCell.html#method_getCellIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u003A\u003AgetRow\u0028\u0029",
             "name": "getRow",
-            "summary": "Returns\u0020the\u0020parent\u0020\u007B\u0040link\u0020TTableRow\u007D\u0020control\u0020by\u0020looping\u0020through\u0020all\u0020parents\u0020until\u0020a\u0020\u007B\u0040link\u0020TTableRow\u007D\nis\u0020found.\u0020Raises\u0020a\u0020\u007B\u0040link\u0020TConfigurationException\u007D\u0020if\u0020no\u0020row\u0020control\u0020is\u0020found.",
+            "summary": "Returns\u0020the\u0020parent\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableRow\u007D\u0020control\u0020by\u0020looping\u0020through\u0020all\u0020parents\u0020until\u0020a\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableRow\u007D\nis\u0020found.\u0020Raises\u0020a\u0020\u007B\u0040see\u0020\\Prado\\Exceptions\\TConfigurationException\u007D\u0020if\u0020no\u0020row\u0020control\u0020is\u0020found.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableCell.html#method_getRow"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u003A\u003A\u0024_row",
@@ -24568,7 +27038,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCellEventParameter\u003A\u003AgetSelectedCellIndex\u0028\u0029",
             "name": "getSelectedCellIndex",
-            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020\u007B\u0040link\u0020TActiveTableCell\u007D\u0020within\u0020the\n\u007B\u0040link\u0020TTableCellCollection\u007D\u0020of\u0020the\u0020parent\u0020\u007B\u0040link\u0020TTableRow\u007D\u0020control.",
+            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCell\u007D\u0020within\u0020the\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableCellCollection\u007D\u0020of\u0020the\u0020parent\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableRow\u007D\u0020control.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableCellEventParameter.html#method_getSelectedCellIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableCellEventParameter\u003A\u003A\u0024_selectedCellIndex",
@@ -24603,12 +27073,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.\u0020It\u0020will\u0020raise\u0020\u007B\u0040link\u0020onRowSelected\u0020OnRowSelected\u007D\u0020event\u0020with\u0020a\n\u007B\u0040link\u0020TActiveTableRowEventParameter\u007D\u0020containing\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\nTActiveTableRow.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.\u0020It\u0020will\u0020raise\u0020\u007B\u0040see\u0020onRowSelected\u0020OnRowSelected\u007D\u0020event\u0020with\u0020a\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRowEventParameter\u007D\u0020containing\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\nTActiveTableRow.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableRow.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003AbubbleEvent\u0028\u0029",
             "name": "bubbleEvent",
-            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020and\u0020raises\u0020the\u0020control\u0027s\ncallback\u0020event.\u0020This\u0020will\u0020fire\u0020the\u0020\u007B\u0040link\u0020onRowSelected\u0020OnRowSelected\u007D\nevent\u0020if\u0020an\u0020appropriate\u0020event\u0020handler\u0020is\u0020implemented.",
+            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020and\u0020raises\u0020the\u0020control\u0027s\ncallback\u0020event.\u0020This\u0020will\u0020fire\u0020the\u0020\u007B\u0040see\u0020onRowSelected\u0020OnRowSelected\u007D\nevent\u0020if\u0020an\u0020appropriate\u0020event\u0020handler\u0020is\u0020implemented.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableRow.html#method_bubbleEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003AonRowSelected\u0028\u0029",
@@ -24618,7 +27088,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003AaddAttributesToRender\u0028\u0029",
             "name": "addAttributesToRender",
-            "summary": "Ensure\u0020that\u0020the\u0020ID\u0020attribute\u0020is\u0020rendered\u0020and\u0020registers\u0020the\u0020javascript\u0020code\nfor\u0020initializing\u0020the\u0020active\u0020control\u0020if\u0020the\u0020event\u0020handler\u0020for\u0020the\n\u007B\u0040link\u0020onRowSelected\u0020OnRowSelected\u007D\u0020event\u0020is\u0020set.",
+            "summary": "Ensure\u0020that\u0020the\u0020ID\u0020attribute\u0020is\u0020rendered\u0020and\u0020registers\u0020the\u0020javascript\u0020code\nfor\u0020initializing\u0020the\u0020active\u0020control\u0020if\u0020the\u0020event\u0020handler\u0020for\u0020the\n\u007B\u0040see\u0020onRowSelected\u0020OnRowSelected\u007D\u0020event\u0020is\u0020set.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableRow.html#method_addAttributesToRender"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003Arender\u0028\u0029",
@@ -24633,12 +27103,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003AgetRowIndex\u0028\u0029",
             "name": "getRowIndex",
-            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020TActiveTableRow\u0020within\u0020the\u0020\u007B\u0040link\u0020TTableRowCollection\u007D\nof\u0020the\u0020parent\u0020\u007B\u0040link\u0020TTable\u007D\u0020control.\u0020Raises\u0020a\u0020\u007B\u0040link\u0020TConfigurationException\u007D\u0020if\u0020the\u0020row\nis\u0020no\u0020member\u0020of\u0020the\u0020row\u0020collection.",
+            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020TActiveTableRow\u0020within\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableRowCollection\u007D\nof\u0020the\u0020parent\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTable\u007D\u0020control.\u0020Raises\u0020a\u0020\u007B\u0040see\u0020\\Prado\\Exceptions\\TConfigurationException\u007D\u0020if\u0020the\u0020row\nis\u0020no\u0020member\u0020of\u0020the\u0020row\u0020collection.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableRow.html#method_getRowIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003AgetTable\u0028\u0029",
             "name": "getTable",
-            "summary": "Returns\u0020the\u0020parent\u0020\u007B\u0040link\u0020TTable\u007D\u0020control\u0020by\u0020looping\u0020through\u0020all\u0020parents\u0020until\u0020a\u0020\u007B\u0040link\u0020TTable\u007D\nis\u0020found.\u0020Raises\u0020a\u0020\u007B\u0040link\u0020TConfigurationException\u007D\u0020if\u0020no\u0020table\u0020control\u0020is\u0020found.",
+            "summary": "Returns\u0020the\u0020parent\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTable\u007D\u0020control\u0020by\u0020looping\u0020through\u0020all\u0020parents\u0020until\u0020a\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTable\u007D\nis\u0020found.\u0020Raises\u0020a\u0020\u007B\u0040see\u0020\\Prado\\Exceptions\\TConfigurationException\u007D\u0020if\u0020no\u0020table\u0020control\u0020is\u0020found.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableRow.html#method_getTable"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u003A\u003A\u0024_table",
@@ -24658,7 +27128,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRowEventParameter\u003A\u003AgetSelectedRowIndex\u0028\u0029",
             "name": "getSelectedRowIndex",
-            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020\u007B\u0040link\u0020TActiveTableRow\u007D\u0020within\u0020the\n\u007B\u0040link\u0020TTableRowCollection\u007D\u0020of\u0020the\u0020parent\u0020\u007B\u0040link\u0020TTable\u007D\u0020control.",
+            "summary": "Returns\u0020the\u0020zero\u002Dbased\u0020index\u0020of\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRow\u007D\u0020within\u0020the\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTableRowCollection\u007D\u0020of\u0020the\u0020parent\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTable\u007D\u0020control.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTableRowEventParameter.html#method_getSelectedRowIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTableRowEventParameter\u003A\u003A\u0024_selectedRowIndex",
@@ -24703,7 +27173,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTextBox\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\nICallbackEventHandler\u007D\u0020interface.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\nICallbackEventHandler\u007D\u0020interface.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTextBox.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTextBox\u003A\u003AonCallback\u0028\u0029",
@@ -24718,7 +27188,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTextBox\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TActiveTextBox.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TActiveTextBox\u003A\u003AaddAttributesToRender\u0028\u0029",
@@ -24733,7 +27203,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AgetClientSide\u0028\u0029",
             "name": "getClientSide",
-            "summary": "Callback\u0020client\u002Dside\u0020options\u0020can\u0020be\u0020set\u0020by\u0020setting\u0020the\u0020properties\u0020of\nthe\u0020ClientSide\u0020property.\u0020E.g.\u0020\u003Ccom\u003ATCallback\u0020ActiveControl.ClientSide.OnSuccess\u003D\u0022...\u0022\u0020\/\u003E\nSee\u0020\u007B\u0040link\u0020TCallbackClientSide\u007D\u0020for\u0020details\u0020on\u0020the\u0020properties\u0020of\u0020ClientSide.",
+            "summary": "Callback\u0020client\u002Dside\u0020options\u0020can\u0020be\u0020set\u0020by\u0020setting\u0020the\u0020properties\u0020of\nthe\u0020ClientSide\u0020property.\u0020E.g.\u0020\u003Ccom\u003ATCallback\u0020ActiveControl.ClientSide.OnSuccess\u003D\u0022...\u0022\u0020\/\u003E\nSee\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TCallbackClientSide\u007D\u0020for\u0020details\u0020on\u0020the\u0020properties\u0020of\u0020ClientSide.",
             "url": "classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getClientSide"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AsetClientSide\u0028\u0029",
@@ -24748,7 +27218,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AsetCallbackOptions\u0028\u0029",
             "name": "setCallbackOptions",
-            "summary": "Sets\u0020default\u0020callback\u0020options.\u0020Takes\u0020the\u0020ID\u0020of\u0020a\u0020TCallbackOptions\ncomponent\u0020to\u0020duplicate\u0020the\u0020client\u002Dside\noptions\u0020for\u0020this\u0020control.\u0020The\u0020\u007B\u0040link\u0020getClientSide\u0020ClientSide\u007D\nsubproperties\u0020takes\u0020precedence\u0020over\u0020the\u0020CallbackOptions\u0020property.",
+            "summary": "Sets\u0020default\u0020callback\u0020options.\u0020Takes\u0020the\u0020ID\u0020of\u0020a\u0020TCallbackOptions\ncomponent\u0020to\u0020duplicate\u0020the\u0020client\u002Dside\noptions\u0020for\u0020this\u0020control.\u0020The\u0020\u007B\u0040see\u0020getClientSide\u0020ClientSide\u007D\nsubproperties\u0020takes\u0020precedence\u0020over\u0020the\u0020CallbackOptions\u0020property.",
             "url": "classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_setCallbackOptions"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AgetCallbackOptions\u0028\u0029",
@@ -24758,7 +27228,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AgetDefaultClientSideOptions\u0028\u0029",
             "name": "getDefaultClientSideOptions",
-            "summary": "Returns\u0020an\u0020array\u0020of\u0020default\u0020callback\u0020client\u002Dside\u0020options.\u0020The\u0020default\u0020options\nare\u0020obtained\u0020from\u0020the\u0020client\u002Dside\u0020options\u0020of\u0020a\u0020TCallbackOptions\u0020control\u0020with\nID\u0020specified\u0020by\u0020\u007B\u0040link\u0020setCallbackOptions\u0020CallbackOptions\u007D.",
+            "summary": "Returns\u0020an\u0020array\u0020of\u0020default\u0020callback\u0020client\u002Dside\u0020options.\u0020The\u0020default\u0020options\nare\u0020obtained\u0020from\u0020the\u0020client\u002Dside\u0020options\u0020of\u0020a\u0020TCallbackOptions\u0020control\u0020with\nID\u0020specified\u0020by\u0020\u007B\u0040see\u0020setCallbackOptions\u0020CallbackOptions\u007D.",
             "url": "classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getDefaultClientSideOptions"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AgetCausesValidation\u0028\u0029",
@@ -24803,12 +27273,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AregisterCallbackClientScript\u0028\u0029",
             "name": "registerCallbackClientScript",
-            "summary": "Registers\u0020the\u0020callback\u0020control\u0020javascript\u0020code.\u0020Client\u002Dside\u0020options\u0020are\nmerged\u0020and\u0020passed\u0020to\u0020the\u0020javascript\u0020code.\u0020This\u0020method\u0020should\u0020be\u0020called\u0020by\nActive\u0020component\u0020developers\u0020wanting\u0020to\u0020register\u0020the\u0020javascript\u0020to\u0020initialize\nthe\u0020active\u0020component\u0020with\u0020additional\u0020options\u0020offered\u0020by\u0020the\n\u007B\u0040link\u0020getClientSide\u0020ClientSide\u007D\u0020property.",
+            "summary": "Registers\u0020the\u0020callback\u0020control\u0020javascript\u0020code.\u0020Client\u002Dside\u0020options\u0020are\nmerged\u0020and\u0020passed\u0020to\u0020the\u0020javascript\u0020code.\u0020This\u0020method\u0020should\u0020be\u0020called\u0020by\nActive\u0020component\u0020developers\u0020wanting\u0020to\u0020register\u0020the\u0020javascript\u0020to\u0020initialize\nthe\u0020active\u0020component\u0020with\u0020additional\u0020options\u0020offered\u0020by\u0020the\n\u007B\u0040see\u0020getClientSide\u0020ClientSide\u007D\u0020property.",
             "url": "classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_registerCallbackClientScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AgetJavascript\u0028\u0029",
             "name": "getJavascript",
-            "summary": "Returns\u0020the\u0020javascript\u0020callback\u0020request\u0020instance.\u0020To\u0020invoke\u0020a\u0020callback\nrequest\u0020for\u0020this\u0020control\u0020call\u0020the\u0020\u003Ctt\u003Edispatch\u0028\u0029\u003C\/tt\u003E\u0020method\u0020on\u0020the\nrequest\u0020instance.\u0020Example\u0020code\u0020in\u0020javascript\n\u003Ccode\u003E\n\u0020\u0020var\u0020request\u0020\u003D\u0020\u003C\u0025\u003D\u0020\u0024this\u002D\u003Emycallback\u002D\u003EActiveControl\u002D\u003EJavascript\u0020\u0025\u003E\u003B\n\u0020\u0020request.setParameter\u0028\u0027hello\u0027\u0029\u003B\n\u0020\u0020request.dispatch\u0028\u0029\u003B\u0020\/\/make\u0020the\u0020callback\u0020request.",
+            "summary": "Returns\u0020the\u0020javascript\u0020callback\u0020request\u0020instance.\u0020To\u0020invoke\u0020a\u0020callback\nrequest\u0020for\u0020this\u0020control\u0020call\u0020the\u0020\u003Ctt\u003Edispatch\u0028\u0029\u003C\/tt\u003E\u0020method\u0020on\u0020the\nrequest\u0020instance.\u0020Example\u0020code\u0020in\u0020javascript\n\u0060\u0060\u0060js\n\u0020\u0020var\u0020request\u0020\u003D\u0020\u003C\u0025\u003D\u0020\u0024this\u002D\u003Emycallback\u002D\u003EActiveControl\u002D\u003EJavascript\u0020\u0025\u003E\u003B\n\u0020\u0020request.setParameter\u0028\u0027hello\u0027\u0029\u003B\n\u0020\u0020request.dispatch\u0028\u0029\u003B\u0020\/\/make\u0020the\u0020callback\u0020request.",
             "url": "classes/Prado-Web-UI-ActiveControls-TBaseActiveCallbackControl.html#method_getJavascript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveCallbackControl\u003A\u003AgetJsCallbackOptions\u0028\u0029",
@@ -24818,7 +27288,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveControl",
             "name": "TBaseActiveControl",
-            "summary": "TBaseActiveControl\u0020class\u0020provided\u0020additional\u0020basic\u0020property\u0020for\u0020every\nactive\u0020control.\u0020An\u0020instance\u0020of\u0020TBaseActiveControl\u0020or\u0020its\u0020decendent\nTBaseActiveCallbackControl\u0020is\u0020created\u0020by\u0020\u007B\u0040link\u0020TActiveControlAdapter\u003A\u003AgetBaseActiveControl\u0028\u0029\u007D\nmethod.",
+            "summary": "TBaseActiveControl\u0020class\u0020provided\u0020additional\u0020basic\u0020property\u0020for\u0020every\nactive\u0020control.\u0020An\u0020instance\u0020of\u0020TBaseActiveControl\u0020or\u0020its\u0020decendent\nTBaseActiveCallbackControl\u0020is\u0020created\u0020by\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TActiveControlAdapter\u003A\u003AgetBaseActiveControl\u0028\u0029\u007D\nmethod.",
             "url": "classes/Prado-Web-UI-ActiveControls-TBaseActiveControl.html"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TBaseActiveControl\u003A\u003A__construct\u0028\u0029",
@@ -24898,7 +27368,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TCallback\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040link\u0020ICallbackEventHandler\u0020ICallbackEventHandler\u007D\u0020interface.\u0020If\n\u007B\u0040link\u0020getCausesValidation\u0020ActiveControl.CausesValidation\u007D\u0020is\u0020true,\nit\u0020will\u0020invoke\u0020the\u0020page\u0027s\u0020\u007B\u0040link\u0020TPage\u003A\u003Avalidate\u0020validate\u007D\u0020method\u0020first.",
+            "summary": "Raises\u0020the\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\n\u007B\u0040see\u0020ICallbackEventHandler\u0020ICallbackEventHandler\u007D\u0020interface.\u0020If\n\u007B\u0040see\u0020getCausesValidation\u0020ActiveControl.CausesValidation\u007D\u0020is\u0020true,\nit\u0020will\u0020invoke\u0020the\u0020page\u0027s\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\TPage\u003A\u003Avalidate\u0020validate\u007D\u0020method\u0020first.",
             "url": "classes/Prado-Web-UI-ActiveControls-TCallback.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TCallback\u003A\u003AonCallback\u0028\u0029",
@@ -25433,7 +27903,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TCallbackOptions\u003A\u003AgetClientSide\u0028\u0029",
             "name": "getClientSide",
-            "summary": "Callback\u0020client\u002Dside\u0020options\u0020can\u0020be\u0020set\u0020by\u0020setting\u0020the\u0020properties\u0020of\nthe\u0020ClientSide\u0020property.\u0020E.g.\u0020\u003Ccom\u003ATCallbackOptions\u0020ClientSide.OnSuccess\u003D\u0022...\u0022\u0020\/\u003E\nSee\u0020\u007B\u0040link\u0020TCallbackClientSide\u007D\u0020for\u0020details\u0020on\u0020the\u0020properties\u0020of\nClientSide.",
+            "summary": "Callback\u0020client\u002Dside\u0020options\u0020can\u0020be\u0020set\u0020by\u0020setting\u0020the\u0020properties\u0020of\nthe\u0020ClientSide\u0020property.\u0020E.g.\u0020\u003Ccom\u003ATCallbackOptions\u0020ClientSide.OnSuccess\u003D\u0022...\u0022\u0020\/\u003E\nSee\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\TCallbackClientSide\u007D\u0020for\u0020details\u0020on\u0020the\u0020properties\u0020of\nClientSide.",
             "url": "classes/Prado-Web-UI-ActiveControls-TCallbackOptions.html#method_getClientSide"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\ActiveControls\\TCallbackOptions\u003A\u003AcreateClientSide\u0028\u0029",
@@ -26171,6 +28641,11 @@ Search.appendIndex(
             "summary": "Instantiates\u0020the\u0020template.",
             "url": "classes/Prado-Web-UI-ITemplate.html#method_instantiateIn"
         },                {
+            "fqsen": "\\Prado\\Web\\UI\\ITemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
+            "name": "getIncludedFiles",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
+            "url": "classes/Prado-Web-UI-ITemplate.html#method_getIncludedFiles"
+        },                {
             "fqsen": "\\Prado\\Web\\UI\\ITheme",
             "name": "ITheme",
             "summary": "ITheme\u0020interface.",
@@ -26358,7 +28833,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoComplete\u003A\u003AdataBind\u0028\u0029",
             "name": "dataBind",
-            "summary": "Overrides\u0020parent\u0020implementation.\u0020Callback\u0020\u007B\u0040link\u0020renderSuggestions\u0028\u0029\u007D\u0020when\npage\u0027s\u0020IsCallback\u0020property\u0020is\u0020true.",
+            "summary": "Overrides\u0020parent\u0020implementation.\u0020Callback\u0020\u007B\u0040see\u0020renderSuggestions\u0028\u0029\u007D\u0020when\npage\u0027s\u0020IsCallback\u0020property\u0020is\u0020true.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiAutoComplete.html#method_dataBind"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoComplete\u003A\u003AgetResultPanel\u0028\u0029",
@@ -26408,7 +28883,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoComplete\u003A\u003ArenderClientControlScript\u0028\u0029",
             "name": "renderClientControlScript",
-            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040link\u0020addAttributesToRender\u007D.",
+            "summary": "Override\u0020parent\u0020implementation,\u0020no\u0020javascript\u0020is\u0020rendered\u0020here\u0020instead\nthe\u0020javascript\u0020required\u0020for\u0020active\u0020control\u0020is\u0020registered\u0020in\u0020\u007B\u0040see\u0020addAttributesToRender\u007D.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiAutoComplete.html#method_renderClientControlScript"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoComplete\u003A\u003AgetClientClassName\u0028\u0029",
@@ -26428,7 +28903,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoCompleteEventParameter",
             "name": "TJuiAutoCompleteEventParameter",
-            "summary": "TJuiAutoCompleteEventParameter\u0020contains\u0020the\u0020\u007B\u0040link\u0020getToken\u0020Token\u007D\u0020requested\u0020by\nthe\u0020user\u0020for\u0020a\u0020partial\u0020match\u0020of\u0020the\u0020suggestions.",
+            "summary": "TJuiAutoCompleteEventParameter\u0020contains\u0020the\u0020\u007B\u0040see\u0020getToken\u0020Token\u007D\u0020requested\u0020by\nthe\u0020user\u0020for\u0020a\u0020partial\u0020match\u0020of\u0020the\u0020suggestions.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiAutoCompleteEventParameter.html"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoCompleteEventParameter\u003A\u003A__construct\u0028\u0029",
@@ -26458,13 +28933,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoCompleteTemplate\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiAutoCompleteTemplate.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoCompleteTemplate\u003A\u003AinstantiateIn\u0028\u0029",
             "name": "instantiateIn",
             "summary": "Instantiates\u0020the\u0020template.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiAutoCompleteTemplate.html#method_instantiateIn"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoCompleteTemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
+            "name": "getIncludedFiles",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
+            "url": "classes/Prado-Web-UI-JuiControls-TJuiAutoCompleteTemplate.html#method_getIncludedFiles"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiAutoCompleteTemplate\u003A\u003A\u0024_template",
             "name": "_template",
@@ -26478,7 +28958,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiCallbackPageStateTracker\u003A\u003AaddStatesToTrack\u0028\u0029",
             "name": "addStatesToTrack",
-            "summary": "Add\u0020the\u0020\u007B\u0040link\u0020TJuiControlOptions\u007D\u0020to\u0020the\u0020states\u0020to\u0020track.",
+            "summary": "Add\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\JuiControls\\TJuiControlOptions\u007D\u0020to\u0020the\u0020states\u0020to\u0020track.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiCallbackPageStateTracker.html#method_addStatesToTrack"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiCallbackPageStateTracker\u003A\u003AupdateJuiOptions\u0028\u0029",
@@ -26493,7 +28973,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiControlAdapter\u003A\u003AonInit\u0028\u0029",
             "name": "onInit",
-            "summary": "Replace\u0020default\u0020StateTracker\u0020with\u0020\u007B\u0040link\u0020TJuiCallbackPageStateTracker\u007D\u0020for\noptions\u0020tracking\u0020in\u0020ViewState.",
+            "summary": "Replace\u0020default\u0020StateTracker\u0020with\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\JuiControls\\TJuiCallbackPageStateTracker\u007D\u0020for\noptions\u0020tracking\u0020in\u0020ViewState.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiControlAdapter.html#method_onInit"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiControlAdapter\u003A\u003AsetJuiBaseStyle\u0028\u0029",
@@ -26523,7 +29003,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiControlAdapter\u003A\u003AloadState\u0028\u0029",
             "name": "loadState",
-            "summary": "Calls\u0020the\u0020parent\u0020implementation\u0020first\u0020and\u0020sets\u0020the\u0020parent\u0020control\u0020for\u0020the\n\u007B\u0040link\u0020TJuiControlOptions\u007D\u0020again\u0020afterwards\u0020since\u0020it\u0020was\u0020not\u0020serialized\u0020in\u0020viewstate.",
+            "summary": "Calls\u0020the\u0020parent\u0020implementation\u0020first\u0020and\u0020sets\u0020the\u0020parent\u0020control\u0020for\u0020the\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\JuiControls\\TJuiControlOptions\u007D\u0020again\u0020afterwards\u0020since\u0020it\u0020was\u0020not\u0020serialized\u0020in\u0020viewstate.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiControlAdapter.html#method_loadState"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiControlAdapter\u003A\u003ACSS_PATH",
@@ -26753,7 +29233,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiDialog\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiDialog.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiDialog\u003A\u003AonOpen\u0028\u0029",
@@ -26878,7 +29358,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiDraggable\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiDraggable.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiDraggable\u003A\u003AonCreate\u0028\u0029",
@@ -26953,7 +29433,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiDroppable\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiDroppable.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiDroppable\u003A\u003AonActivate\u0028\u0029",
@@ -27058,7 +29538,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiProgressbar\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiProgressbar.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiProgressbar\u003A\u003AonChange\u0028\u0029",
@@ -27128,7 +29608,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiResizable\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiResizable.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiResizable\u003A\u003AonCreate\u0028\u0029",
@@ -27203,7 +29683,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSelectable\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSelectable.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSelectable\u003A\u003AonCreate\u0028\u0029",
@@ -27273,13 +29753,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSelectableTemplate\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSelectableTemplate.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSelectableTemplate\u003A\u003AinstantiateIn\u0028\u0029",
             "name": "instantiateIn",
             "summary": "Instantiates\u0020the\u0020template.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSelectableTemplate.html#method_instantiateIn"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSelectableTemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
+            "name": "getIncludedFiles",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
+            "url": "classes/Prado-Web-UI-JuiControls-TJuiSelectableTemplate.html#method_getIncludedFiles"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSelectableTemplate\u003A\u003A\u0024_template",
             "name": "_template",
@@ -27333,7 +29818,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSlider\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSlider.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSlider\u003A\u003AonChange\u0028\u0029",
@@ -27408,7 +29893,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortable\u003A\u003AraiseCallbackEvent\u0028\u0029",
             "name": "raiseCallbackEvent",
-            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040link\u0020ICallbackEventHandler\u007D\ninterface.",
+            "summary": "Raises\u0020callback\u0020event.\u0020This\u0020method\u0020is\u0020required\u0020by\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\ActiveControls\\ICallbackEventHandler\u007D\ninterface.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSortable.html#method_raiseCallbackEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortable\u003A\u003AonActivate\u0028\u0029",
@@ -27483,7 +29968,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortable\u003A\u003AdataBind\u0028\u0029",
             "name": "dataBind",
-            "summary": "Overrides\u0020parent\u0020implementation.\u0020Callback\u0020\u007B\u0040link\u0020renderSortables\u0028\u0029\u007D\u0020when\npage\u0027s\u0020IsCallback\u0020property\u0020is\u0020true.",
+            "summary": "Overrides\u0020parent\u0020implementation.\u0020Callback\u0020\u007B\u0040see\u0020renderSortables\u0028\u0029\u007D\u0020when\npage\u0027s\u0020IsCallback\u0020property\u0020is\u0020true.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSortable.html#method_dataBind"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortable\u003A\u003AgetSortables\u0028\u0029",
@@ -27513,13 +29998,18 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortableTemplate\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSortableTemplate.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortableTemplate\u003A\u003AinstantiateIn\u0028\u0029",
             "name": "instantiateIn",
             "summary": "Instantiates\u0020the\u0020template.",
             "url": "classes/Prado-Web-UI-JuiControls-TJuiSortableTemplate.html#method_instantiateIn"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortableTemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
+            "name": "getIncludedFiles",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
+            "url": "classes/Prado-Web-UI-JuiControls-TJuiSortableTemplate.html#method_getIncludedFiles"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\JuiControls\\TJuiSortableTemplate\u003A\u003A\u0024_template",
             "name": "_template",
@@ -27546,25 +30036,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Web-UI-TBroadcastEventParameter.html#method_setName"
         },                {
-            "fqsen": "\\Prado\\Web\\UI\\TBroadcastEventParameter\u003A\u003AgetParameter\u0028\u0029",
-            "name": "getParameter",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-TBroadcastEventParameter.html#method_getParameter"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\TBroadcastEventParameter\u003A\u003AsetParameter\u0028\u0029",
-            "name": "setParameter",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-TBroadcastEventParameter.html#method_setParameter"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\TBroadcastEventParameter\u003A\u003A\u0024_name",
-            "name": "_name",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-TBroadcastEventParameter.html#property__name"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\TBroadcastEventParameter\u003A\u003A\u0024_param",
-            "name": "_param",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-TBroadcastEventParameter.html#property__param"
+            "fqsen": "\\Prado\\Web\\UI\\TBroadcastEventParameter\u003A\u003AsetEventName\u0028\u0029",
+            "name": "setEventName",
+            "summary": "Sets\u0020the\u0020Event\u0020Name.",
+            "url": "classes/Prado-Web-UI-TBroadcastEventParameter.html#method_setEventName"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TCachePageStatePersister",
             "name": "TCachePageStatePersister",
@@ -28103,7 +30578,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TClientSideOptions\u003A\u003AensureFunction\u0028\u0029",
             "name": "ensureFunction",
-            "summary": "Ensure\u0020that\u0020the\u0020javascript\u0020statements\u0020are\u0020wrapped\u0020in\u0020a\u0020javascript\nfunction\u0020block\u0020as\u0020\u003Ccode\u003Efunction\u0028sender,\u0020parameter\u0029\u007B\u0020\/\/code\u0020\u007D\u003C\/code\u003E.",
+            "summary": "Ensure\u0020that\u0020the\u0020javascript\u0020statements\u0020are\u0020wrapped\u0020in\u0020a\u0020javascript\nfunction\u0020block\u0020as\n\u0060\u0060\u0060js\nfunction\u0028sender,\u0020parameter\u0029\u007B\u0020\/\/code\u0020\u007D\n\u0060\u0060\u0060",
             "url": "classes/Prado-Web-UI-TClientSideOptions.html#method_ensureFunction"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TClientSideOptions\u003A\u003A\u0024_options",
@@ -29068,7 +31543,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TControlCollection\u003A\u003Aclear\u0028\u0029",
             "name": "clear",
-            "summary": "Overrides\u0020the\u0020parent\u0020implementation\u0020by\u0020invoking\u0020\u007B\u0040link\u0020TControl\u003A\u003AclearNamingContainer\u007D",
+            "summary": "Overrides\u0020the\u0020parent\u0020implementation\u0020by\u0020invoking\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\TControl\u003A\u003AclearNamingContainer\u007D",
             "url": "classes/Prado-Web-UI-TControlCollection.html#method_clear"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TControlCollection\u003A\u003A\u0024_o",
@@ -30058,7 +32533,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TTemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
             "name": "getIncludedFiles",
-            "summary": "",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
             "url": "classes/Prado-Web-UI-TTemplate.html#method_getIncludedFiles"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TTemplate\u003A\u003AhandleException\u0028\u0029",
@@ -30341,6 +32816,16 @@ Search.appendIndex(
             "summary": "Finds\u0020a\u0020localized\u0020template\u0020file.",
             "url": "classes/Prado-Web-UI-TTemplateManager.html#method_getLocalizedTemplate"
         },                {
+            "fqsen": "\\Prado\\Web\\UI\\TTemplateManager\u003A\u003AgetDefaultTemplateClass\u0028\u0029",
+            "name": "getDefaultTemplateClass",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TTemplateManager.html#method_getDefaultTemplateClass"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TTemplateManager\u003A\u003AsetDefaultTemplateClass\u0028\u0029",
+            "name": "setDefaultTemplateClass",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TTemplateManager.html#method_setDefaultTemplateClass"
+        },                {
             "fqsen": "\\Prado\\Web\\UI\\TTemplateManager\u003A\u003ATEMPLATE_FILE_EXT",
             "name": "TEMPLATE_FILE_EXT",
             "summary": "Template\u0020file\u0020extension",
@@ -30350,6 +32835,11 @@ Search.appendIndex(
             "name": "TEMPLATE_CACHE_PREFIX",
             "summary": "Prefix\u0020of\u0020the\u0020cache\u0020variable\u0020name\u0020for\u0020storing\u0020parsed\u0020templates",
             "url": "classes/Prado-Web-UI-TTemplateManager.html#constant_TEMPLATE_CACHE_PREFIX"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TTemplateManager\u003A\u003A\u0024_defaultTemplateClass",
+            "name": "_defaultTemplateClass",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TTemplateManager.html#property__defaultTemplateClass"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\TTheme",
             "name": "TTheme",
@@ -30550,6 +33040,716 @@ Search.appendIndex(
             "name": "_baseUrl",
             "summary": "",
             "url": "classes/Prado-Web-UI-TThemeManager.html#property__baseUrl"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors",
+            "name": "TWebColors",
+            "summary": "TWebColors\u0020class.",
+            "url": "classes/Prado-Web-UI-TWebColors.html"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AWhite",
+            "name": "White",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_White"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASilver",
+            "name": "Silver",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Silver"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AGray",
+            "name": "Gray",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Gray"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABlack",
+            "name": "Black",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Black"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ARed",
+            "name": "Red",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Red"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMaroon",
+            "name": "Maroon",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Maroon"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AOrange",
+            "name": "Orange",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Orange"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AYellow",
+            "name": "Yellow",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Yellow"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AOlive",
+            "name": "Olive",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Olive"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALime",
+            "name": "Lime",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Lime"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AGreen",
+            "name": "Green",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Green"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AAqua",
+            "name": "Aqua",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Aqua"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ACyan",
+            "name": "Cyan",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Cyan"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ATeal",
+            "name": "Teal",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Teal"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABlue",
+            "name": "Blue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Blue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ANavy",
+            "name": "Navy",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Navy"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AFuchsia",
+            "name": "Fuchsia",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Fuchsia"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMagenta",
+            "name": "Magenta",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Magenta"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APurple",
+            "name": "Purple",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Purple"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkSlateGray",
+            "name": "DarkSlateGray",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkSlateGray"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADimGray",
+            "name": "DimGray",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DimGray"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASlateGray",
+            "name": "SlateGray",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SlateGray"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightSlateGray",
+            "name": "LightSlateGray",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightSlateGray"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkGray",
+            "name": "DarkGray",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkGray"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightGray",
+            "name": "LightGray",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightGray"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AGainsboro",
+            "name": "Gainsboro",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Gainsboro"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMistyRose",
+            "name": "MistyRose",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MistyRose"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AAntiqueWhite",
+            "name": "AntiqueWhite",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_AntiqueWhite"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALinen",
+            "name": "Linen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Linen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABeige",
+            "name": "Beige",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Beige"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AWhiteSmoke",
+            "name": "WhiteSmoke",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_WhiteSmoke"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALavenderBlush",
+            "name": "LavenderBlush",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LavenderBlush"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AOldLace",
+            "name": "OldLace",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_OldLace"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AAliceBlue",
+            "name": "AliceBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_AliceBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASeashell",
+            "name": "Seashell",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Seashell"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AGhostWhite",
+            "name": "GhostWhite",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_GhostWhite"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AHoneydew",
+            "name": "Honeydew",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Honeydew"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AFloralWhite",
+            "name": "FloralWhite",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_FloralWhite"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AAzure",
+            "name": "Azure",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Azure"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMintCream",
+            "name": "MintCream",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MintCream"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASnow",
+            "name": "Snow",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Snow"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AIvory",
+            "name": "Ivory",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Ivory"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumVioletRed",
+            "name": "MediumVioletRed",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumVioletRed"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADeepPink",
+            "name": "DeepPink",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DeepPink"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APaleVioletRed",
+            "name": "PaleVioletRed",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_PaleVioletRed"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AHotPink",
+            "name": "HotPink",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_HotPink"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightPink",
+            "name": "LightPink",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightPink"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APink",
+            "name": "Pink",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Pink"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkRed",
+            "name": "DarkRed",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkRed"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AFirebrick",
+            "name": "Firebrick",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Firebrick"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ACrimson",
+            "name": "Crimson",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Crimson"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AIndianRed",
+            "name": "IndianRed",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_IndianRed"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightCoral",
+            "name": "LightCoral",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightCoral"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASalmon",
+            "name": "Salmon",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Salmon"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkSalmon",
+            "name": "DarkSalmon",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkSalmon"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightSalmon",
+            "name": "LightSalmon",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightSalmon"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AOrangeRed",
+            "name": "OrangeRed",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_OrangeRed"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ATomato",
+            "name": "Tomato",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Tomato"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkOrange",
+            "name": "DarkOrange",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkOrange"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ACoral",
+            "name": "Coral",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Coral"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkKhaki",
+            "name": "DarkKhaki",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkKhaki"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AGold",
+            "name": "Gold",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Gold"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AKhaki",
+            "name": "Khaki",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Khaki"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APeachPuff",
+            "name": "PeachPuff",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_PeachPuff"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APaleGoldenrod",
+            "name": "PaleGoldenrod",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_PaleGoldenrod"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMoccasin",
+            "name": "Moccasin",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Moccasin"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APapayaWhip",
+            "name": "PapayaWhip",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_PapayaWhip"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightGoldenrodYellow",
+            "name": "LightGoldenrodYellow",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightGoldenrodYellow"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALemonChiffon",
+            "name": "LemonChiffon",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LemonChiffon"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightYellow",
+            "name": "LightYellow",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightYellow"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABrown",
+            "name": "Brown",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Brown"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASaddleBrown",
+            "name": "SaddleBrown",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SaddleBrown"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASienna",
+            "name": "Sienna",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Sienna"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AChocolate",
+            "name": "Chocolate",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Chocolate"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkGoldenrod",
+            "name": "DarkGoldenrod",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkGoldenrod"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APeru",
+            "name": "Peru",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Peru"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ARosyBrown",
+            "name": "RosyBrown",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_RosyBrown"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AGoldenrod",
+            "name": "Goldenrod",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Goldenrod"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASandyBrown",
+            "name": "SandyBrown",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SandyBrown"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ATan",
+            "name": "Tan",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Tan"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABurlywood",
+            "name": "Burlywood",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Burlywood"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AWheat",
+            "name": "Wheat",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Wheat"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ANavajoWhite",
+            "name": "NavajoWhite",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_NavajoWhite"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABisque",
+            "name": "Bisque",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Bisque"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABlanchedAlmond",
+            "name": "BlanchedAlmond",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_BlanchedAlmond"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ACornsilk",
+            "name": "Cornsilk",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Cornsilk"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkGreen",
+            "name": "DarkGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkOliveGreen",
+            "name": "DarkOliveGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkOliveGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AForestGreen",
+            "name": "ForestGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_ForestGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASeaGreen",
+            "name": "SeaGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SeaGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AOliveDrab",
+            "name": "OliveDrab",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_OliveDrab"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumSeaGreen",
+            "name": "MediumSeaGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumSeaGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALimeGreen",
+            "name": "LimeGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LimeGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASpringGreen",
+            "name": "SpringGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SpringGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumSpringGreen",
+            "name": "MediumSpringGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumSpringGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkSeaGreen",
+            "name": "DarkSeaGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkSeaGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumAquamarine",
+            "name": "MediumAquamarine",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumAquamarine"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AYellowGreen",
+            "name": "YellowGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_YellowGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALawnGreen",
+            "name": "LawnGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LawnGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AChartreuse",
+            "name": "Chartreuse",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Chartreuse"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightGreen",
+            "name": "LightGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AGreenYellow",
+            "name": "GreenYellow",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_GreenYellow"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APaleGreen",
+            "name": "PaleGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_PaleGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkCyan",
+            "name": "DarkCyan",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkCyan"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightSeaGreen",
+            "name": "LightSeaGreen",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightSeaGreen"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ACadetBlue",
+            "name": "CadetBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_CadetBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkTurquoise",
+            "name": "DarkTurquoise",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkTurquoise"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumTurquoise",
+            "name": "MediumTurquoise",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumTurquoise"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ATurquoise",
+            "name": "Turquoise",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Turquoise"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AAquamarine",
+            "name": "Aquamarine",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Aquamarine"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APaleTurquoise",
+            "name": "PaleTurquoise",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_PaleTurquoise"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightCyan",
+            "name": "LightCyan",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightCyan"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMidnightBlue",
+            "name": "MidnightBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MidnightBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkBlue",
+            "name": "DarkBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumBlue",
+            "name": "MediumBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ARoyalBlue",
+            "name": "RoyalBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_RoyalBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASteelBlue",
+            "name": "SteelBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SteelBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADodgerBlue",
+            "name": "DodgerBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DodgerBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADeepSkyBlue",
+            "name": "DeepSkyBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DeepSkyBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ACornflowerBlue",
+            "name": "CornflowerBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_CornflowerBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASkyBlue",
+            "name": "SkyBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SkyBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightSkyBlue",
+            "name": "LightSkyBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightSkyBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightSteelBlue",
+            "name": "LightSteelBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightSteelBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALightBlue",
+            "name": "LightBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_LightBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APowderBlue",
+            "name": "PowderBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_PowderBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AIndigo",
+            "name": "Indigo",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Indigo"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkMagenta",
+            "name": "DarkMagenta",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkMagenta"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkViolet",
+            "name": "DarkViolet",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkViolet"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkSlateBlue",
+            "name": "DarkSlateBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkSlateBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ABlueViolet",
+            "name": "BlueViolet",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_BlueViolet"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ADarkOrchid",
+            "name": "DarkOrchid",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_DarkOrchid"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ASlateBlue",
+            "name": "SlateBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_SlateBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumSlateBlue",
+            "name": "MediumSlateBlue",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumSlateBlue"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumOrchid",
+            "name": "MediumOrchid",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumOrchid"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AMediumPurple",
+            "name": "MediumPurple",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_MediumPurple"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AOrchid",
+            "name": "Orchid",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Orchid"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AViolet",
+            "name": "Violet",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Violet"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003APlum",
+            "name": "Plum",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Plum"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003AThistle",
+            "name": "Thistle",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Thistle"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ALavender",
+            "name": "Lavender",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_Lavender"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\TWebColors\u003A\u003ARebeccaPurple",
+            "name": "RebeccaPurple",
+            "summary": "",
+            "url": "classes/Prado-Web-UI-TWebColors.html#constant_RebeccaPurple"
         },                {
             "fqsen": "\\THEME_OPAQUE_BACKGROUND",
             "name": "THEME_OPAQUE_BACKGROUND",
@@ -31193,7 +34393,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TBaseValidator\u003A\u003AsetEnabled\u0028\u0029",
             "name": "setEnabled",
-            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020by\u0020setting\u0020\u007B\u0040link\u0020setIsValid\u0020IsValid\u007D\u0020to\u0020true\u0020if\u0020disabled.",
+            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020by\u0020setting\u0020\u007B\u0040see\u0020setIsValid\u0020IsValid\u007D\u0020to\u0020true\u0020if\u0020disabled.",
             "url": "classes/Prado-Web-UI-WebControls-TBaseValidator.html#method_setEnabled"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TBaseValidator\u003A\u003AgetDisplay\u0028\u0029",
@@ -31248,12 +34448,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TBaseValidator\u003A\u003AgetFocusElementID\u0028\u0029",
             "name": "getFocusElementID",
-            "summary": "Gets\u0020the\u0020ID\u0020of\u0020the\u0020HTML\u0020element\u0020that\u0020will\u0020receive\u0020focus\u0020if\u0020validation\u0020fails\u0020and\u0020\u007B\u0040link\u0020getFocusOnError\u0020FocusOnError\u007D\u0020is\u0020true.",
+            "summary": "Gets\u0020the\u0020ID\u0020of\u0020the\u0020HTML\u0020element\u0020that\u0020will\u0020receive\u0020focus\u0020if\u0020validation\u0020fails\u0020and\u0020\u007B\u0040see\u0020getFocusOnError\u0020FocusOnError\u007D\u0020is\u0020true.",
             "url": "classes/Prado-Web-UI-WebControls-TBaseValidator.html#method_getFocusElementID"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TBaseValidator\u003A\u003AsetFocusElementID\u0028\u0029",
             "name": "setFocusElementID",
-            "summary": "Sets\u0020the\u0020ID\u0020of\u0020the\u0020HTML\u0020element\u0020that\u0020will\u0020receive\u0020focus\u0020if\u0020validation\u0020fails\u0020and\u0020\u007B\u0040link\u0020getFocusOnError\u0020FocusOnError\u007D\u0020is\u0020true.",
+            "summary": "Sets\u0020the\u0020ID\u0020of\u0020the\u0020HTML\u0020element\u0020that\u0020will\u0020receive\u0020focus\u0020if\u0020validation\u0020fails\u0020and\u0020\u007B\u0040see\u0020getFocusOnError\u0020FocusOnError\u007D\u0020is\u0020true.",
             "url": "classes/Prado-Web-UI-WebControls-TBaseValidator.html#method_setFocusElementID"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TBaseValidator\u003A\u003AgetValidationGroup\u0028\u0029",
@@ -31593,7 +34793,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TBulletedListEventParameter",
             "name": "TBulletedListEventParameter",
-            "summary": "TBulletedListEventParameter\nEvent\u0020parameter\u0020for\u0020\u007B\u0040link\u0020TBulletedList\u003A\u003AonClick\u0020Click\u007D\u0020event\u0020of\u0020the\nbulleted\u0020list.\u0020The\u0020\u007B\u0040link\u0020getIndex\u0020Index\u007D\u0020gives\u0020the\u0020zero\u002Dbased\u0020index\nof\u0020the\u0020item\u0020that\u0020is\u0020currently\u0020being\u0020clicked.",
+            "summary": "TBulletedListEventParameter\nEvent\u0020parameter\u0020for\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TBulletedList\u003A\u003AonClick\u0020Click\u007D\u0020event\u0020of\u0020the\nbulleted\u0020list.\u0020The\u0020\u007B\u0040see\u0020getIndex\u0020Index\u007D\u0020gives\u0020the\u0020zero\u002Dbased\u0020index\nof\u0020the\u0020item\u0020that\u0020is\u0020currently\u0020being\u0020clicked.",
             "url": "classes/Prado-Web-UI-WebControls-TBulletedListEventParameter.html"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TBulletedListEventParameter\u003A\u003A__construct\u0028\u0029",
@@ -32263,7 +35463,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TCheckBox\u003A\u003AonCheckedChanged\u0028\u0029",
             "name": "onCheckedChanged",
-            "summary": "Raises\u0020\u003Cb\u003EOnCheckedChanged\u003C\/b\u003E\u0020event\u0020when\u0020\u007B\u0040link\u0020getChecked\u0020Checked\u007D\u0020changes\u0020value\u0020during\u0020postback.",
+            "summary": "Raises\u0020\u003Cb\u003EOnCheckedChanged\u003C\/b\u003E\u0020event\u0020when\u0020\u007B\u0040see\u0020getChecked\u0020Checked\u007D\u0020changes\u0020value\u0020during\u0020postback.",
             "url": "classes/Prado-Web-UI-WebControls-TCheckBox.html#method_onCheckedChanged"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TCheckBox\u003A\u003AonPreRender\u0028\u0029",
@@ -33208,7 +36408,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TCustomValidator\u003A\u003AregisterClientScriptValidator\u0028\u0029",
             "name": "registerClientScriptValidator",
-            "summary": "Only\u0020register\u0020the\u0020client\u002Dside\u0020validator\u0020if\n\u007B\u0040link\u0020setClientValidationFunction\u0020ClientValidationFunction\u007D\u0020is\u0020set.",
+            "summary": "Only\u0020register\u0020the\u0020client\u002Dside\u0020validator\u0020if\n\u007B\u0040see\u0020setClientValidationFunction\u0020ClientValidationFunction\u007D\u0020is\u0020set.",
             "url": "classes/Prado-Web-UI-WebControls-TCustomValidator.html#method_registerClientScriptValidator"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl",
@@ -33243,7 +36443,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl\u003A\u003AonDataSourceChanged\u0028\u0029",
             "name": "onDataSourceChanged",
-            "summary": "Sets\u0020\u007B\u0040link\u0020setRequiresDataBinding\u0020RequiresDataBinding\u007D\u0020as\u0020true\u0020if\u0020the\u0020control\u0020is\u0020initialized.",
+            "summary": "Sets\u0020\u007B\u0040see\u0020setRequiresDataBinding\u0020RequiresDataBinding\u007D\u0020as\u0020true\u0020if\u0020the\u0020control\u0020is\u0020initialized.",
             "url": "classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_onDataSourceChanged"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl\u003A\u003AgetInitialized\u0028\u0029",
@@ -33333,7 +36533,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl\u003A\u003AensureDataBound\u0028\u0029",
             "name": "ensureDataBound",
-            "summary": "Ensures\u0020any\u0020pending\u0020\u007B\u0040link\u0020dataBind\u007D\u0020is\u0020called.",
+            "summary": "Ensures\u0020any\u0020pending\u0020\u007B\u0040see\u0020dataBind\u007D\u0020is\u0020called.",
             "url": "classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_ensureDataBound"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl\u003A\u003AcreatePagedDataSource\u0028\u0029",
@@ -33373,12 +36573,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl\u003A\u003AonInit\u0028\u0029",
             "name": "onInit",
-            "summary": "Sets\u0020page\u0027s\u0020\u003Cb\u003EOnPreLoad\u003C\/b\u003E\u0020event\u0020handler\u0020as\u0020\u007B\u0040link\u0020pagePreLoad\u007D.",
+            "summary": "Sets\u0020page\u0027s\u0020\u003Cb\u003EOnPreLoad\u003C\/b\u003E\u0020event\u0020handler\u0020as\u0020\u007B\u0040see\u0020pagePreLoad\u007D.",
             "url": "classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_onInit"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl\u003A\u003ApagePreLoad\u0028\u0029",
             "name": "pagePreLoad",
-            "summary": "Sets\u0020\u007B\u0040link\u0020getInitialized\u007D\u0020as\u0020true.",
+            "summary": "Sets\u0020\u007B\u0040see\u0020getInitialized\u007D\u0020as\u0020true.",
             "url": "classes/Prado-Web-UI-WebControls-TDataBoundControl.html#method_pagePreLoad"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataBoundControl\u003A\u003AonPreRender\u0028\u0029",
@@ -33623,7 +36823,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataGrid\u003A\u003AsetSelectedItemIndex\u0028\u0029",
             "name": "setSelectedItemIndex",
-            "summary": "Selects\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040link\u0020getItems\u0020Items\u007D.",
+            "summary": "Selects\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040see\u0020getItems\u0020Items\u007D.",
             "url": "classes/Prado-Web-UI-WebControls-TDataGrid.html#method_setSelectedItemIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataGrid\u003A\u003AgetEditItem\u0028\u0029",
@@ -33638,7 +36838,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataGrid\u003A\u003AsetEditItemIndex\u0028\u0029",
             "name": "setEditItemIndex",
-            "summary": "Edits\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040link\u0020getItems\u0020Items\u007D.",
+            "summary": "Edits\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040see\u0020getItems\u0020Items\u007D.",
             "url": "classes/Prado-Web-UI-WebControls-TDataGrid.html#method_setEditItemIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataGrid\u003A\u003AgetAllowSorting\u0028\u0029",
@@ -33693,7 +36893,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataGrid\u003A\u003AbubbleEvent\u0028\u0029",
             "name": "bubbleEvent",
-            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020to\u0020handle\n\u007B\u0040link\u0020onItemCommand\u0020OnItemCommand\u007D\u0020event\u0020which\u0020is\u0020bubbled\u0020from\n\u007B\u0040link\u0020TDataGridItem\u007D\u0020child\u0020controls.",
+            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020to\u0020handle\n\u007B\u0040see\u0020onItemCommand\u0020OnItemCommand\u007D\u0020event\u0020which\u0020is\u0020bubbled\u0020from\n\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TDataGridItem\u007D\u0020child\u0020controls.",
             "url": "classes/Prado-Web-UI-WebControls-TDataGrid.html#method_bubbleEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataGrid\u003A\u003AonCancelCommand\u0028\u0029",
@@ -34853,7 +38053,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataList\u003A\u003AsetSelectedItemIndex\u0028\u0029",
             "name": "setSelectedItemIndex",
-            "summary": "Selects\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040link\u0020getItems\u0020Items\u007D.",
+            "summary": "Selects\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040see\u0020getItems\u0020Items\u007D.",
             "url": "classes/Prado-Web-UI-WebControls-TDataList.html#method_setSelectedItemIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataList\u003A\u003AgetSelectedItem\u0028\u0029",
@@ -34873,7 +38073,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataList\u003A\u003AsetEditItemIndex\u0028\u0029",
             "name": "setEditItemIndex",
-            "summary": "Edits\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040link\u0020getItems\u0020Items\u007D.",
+            "summary": "Edits\u0020an\u0020item\u0020by\u0020its\u0020index\u0020in\u0020\u007B\u0040see\u0020getItems\u0020Items\u007D.",
             "url": "classes/Prado-Web-UI-WebControls-TDataList.html#method_setEditItemIndex"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataList\u003A\u003AgetEditItem\u0028\u0029",
@@ -34958,7 +38158,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataList\u003A\u003AbubbleEvent\u0028\u0029",
             "name": "bubbleEvent",
-            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020to\u0020handle\n\u007B\u0040link\u0020onItemCommand\u0020OnItemCommand\u007D\u0020event\u0020which\u0020is\u0020bubbled\u0020from\ndatalist\u0020items\u0020and\u0020their\u0020child\u0020controls.",
+            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020to\u0020handle\n\u007B\u0040see\u0020onItemCommand\u0020OnItemCommand\u007D\u0020event\u0020which\u0020is\u0020bubbled\u0020from\ndatalist\u0020items\u0020and\u0020their\u0020child\u0020controls.",
             "url": "classes/Prado-Web-UI-WebControls-TDataList.html#method_bubbleEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataList\u003A\u003AonItemCreated\u0028\u0029",
@@ -35358,7 +38558,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataListItemRenderer\u003A\u003ArenderBeginTag\u0028\u0029",
             "name": "renderBeginTag",
-            "summary": "Renders\u0020the\u0020openning\u0020tag\u0020for\u0020the\u0020control\u0020\u0028including\u0020attributes\u0029\nThis\u0020method\u0020is\u0020invoked\u0020when\u0020\u007B\u0040link\u0020getTagName\u0020TagName\u007D\u0020is\u0020not\u0020empty.",
+            "summary": "Renders\u0020the\u0020openning\u0020tag\u0020for\u0020the\u0020control\u0020\u0028including\u0020attributes\u0029\nThis\u0020method\u0020is\u0020invoked\u0020when\u0020\u007B\u0040see\u0020getTagName\u0020TagName\u007D\u0020is\u0020not\u0020empty.",
             "url": "classes/Prado-Web-UI-WebControls-TDataListItemRenderer.html#method_renderBeginTag"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataListItemRenderer\u003A\u003ArenderContents\u0028\u0029",
@@ -35368,7 +38568,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataListItemRenderer\u003A\u003ArenderEndTag\u0028\u0029",
             "name": "renderEndTag",
-            "summary": "Renders\u0020the\u0020closing\u0020tag\u0020for\u0020the\u0020control\nThis\u0020method\u0020is\u0020invoked\u0020when\u0020\u007B\u0040link\u0020getTagName\u0020TagName\u007D\u0020is\u0020not\u0020empty.",
+            "summary": "Renders\u0020the\u0020closing\u0020tag\u0020for\u0020the\u0020control\nThis\u0020method\u0020is\u0020invoked\u0020when\u0020\u007B\u0040see\u0020getTagName\u0020TagName\u007D\u0020is\u0020not\u0020empty.",
             "url": "classes/Prado-Web-UI-WebControls-TDataListItemRenderer.html#method_renderEndTag"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataRenderer",
@@ -35558,7 +38758,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataSourceView\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Web-UI-WebControls-TDataSourceView.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TDataSourceView\u003A\u003Aselect\u0028\u0029",
@@ -36608,7 +39808,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TFileUploadItem\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Web-UI-WebControls-TFileUploadItem.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TFileUploadItem\u003A\u003AgetFileName\u0028\u0029",
@@ -37138,7 +40338,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\THiddenField\u003A\u003AonValueChanged\u0028\u0029",
             "name": "onValueChanged",
-            "summary": "This\u0020method\u0020is\u0020invoked\u0020when\u0020the\u0020value\u0020of\u0020the\u0020\u007B\u0040link\u0020getValue\u0020Value\u007D\u0020property\u0020changes\u0020between\u0020posts\u0020to\u0020the\u0020server.",
+            "summary": "This\u0020method\u0020is\u0020invoked\u0020when\u0020the\u0020value\u0020of\u0020the\u0020\u007B\u0040see\u0020getValue\u0020Value\u007D\u0020property\u0020changes\u0020between\u0020posts\u0020to\u0020the\u0020server.",
             "url": "classes/Prado-Web-UI-WebControls-THiddenField.html#method_onValueChanged"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\THiddenField\u003A\u003AgetValue\u0028\u0029",
@@ -38368,7 +41568,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TInlineFrame\u003A\u003AgetData\u0028\u0029",
             "name": "getData",
-            "summary": "Returns\u0020the\u0020URL\u0020that\u0020this\u0020iframe\u0020will\u0020load\u0020content\u0020from\nThis\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040link\u0020\\Prado\\IDataRenderer\u007D.",
+            "summary": "Returns\u0020the\u0020URL\u0020that\u0020this\u0020iframe\u0020will\u0020load\u0020content\u0020from\nThis\u0020method\u0020is\u0020required\u0020by\u0020\u007B\u0040see\u0020\\Prado\\IDataRenderer\u007D.",
             "url": "classes/Prado-Web-UI-WebControls-TInlineFrame.html#method_getData"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TInlineFrame\u003A\u003AsetData\u0028\u0029",
@@ -38568,7 +41768,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TKeyboard\u003A\u003AsetForControl\u0028\u0029",
             "name": "setForControl",
-            "summary": "Sets\u0020the\u0020ID\u0020path\u0020of\u0020the\u0020\u007B\u0040link\u0020TTextBox\u007D\u0020control.",
+            "summary": "Sets\u0020the\u0020ID\u0020path\u0020of\u0020the\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TTextBox\u007D\u0020control.",
             "url": "classes/Prado-Web-UI-WebControls-TKeyboard.html#method_setForControl"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TKeyboard\u003A\u003AgetAutoHide\u0028\u0029",
@@ -41003,17 +44203,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRatingList\u003A\u003AgetAllowInput\u0028\u0029",
             "name": "getAllowInput",
-            "summary": "Wrapper\u0020for\u0020\u007B\u0040link\u0020setReadOnly\u0020ReadOnly\u007D\u0020property.",
+            "summary": "Wrapper\u0020for\u0020\u007B\u0040see\u0020setReadOnly\u0020ReadOnly\u007D\u0020property.",
             "url": "classes/Prado-Web-UI-WebControls-TRatingList.html#method_getAllowInput"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRatingList\u003A\u003AsetAllowInput\u0028\u0029",
             "name": "setAllowInput",
-            "summary": "Wrapper\u0020for\u0020\u007B\u0040link\u0020setReadOnly\u0020ReadOnly\u007D\u0020property.",
+            "summary": "Wrapper\u0020for\u0020\u007B\u0040see\u0020setReadOnly\u0020ReadOnly\u007D\u0020property.",
             "url": "classes/Prado-Web-UI-WebControls-TRatingList.html#method_setAllowInput"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRatingList\u003A\u003AsetEnabled\u0028\u0029",
             "name": "setEnabled",
-            "summary": "Wrapper\u0020for\u0020\u007B\u0040link\u0020setReadOnly\u0020ReadOnly\u007D\u0020property.",
+            "summary": "Wrapper\u0020for\u0020\u007B\u0040see\u0020setReadOnly\u0020ReadOnly\u007D\u0020property.",
             "url": "classes/Prado-Web-UI-WebControls-TRatingList.html#method_setEnabled"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRatingList\u003A\u003AsetRepeatLayout\u0028\u0029",
@@ -41133,7 +44333,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRatingList\u003A\u003Arender\u0028\u0029",
             "name": "render",
-            "summary": "Add\u0020rating\u0020style\u0020class\u0020name\u0020to\u0020the\u0020class\u0020attribute\nwhen\u0020\u007B\u0040link\u0020setReadOnly\u0020ReadOnly\u007D\u0020property\u0020is\u0020true\u0020and\u0020when\u0020the\n\u007B\u0040link\u0020setCssClass\u0020CssClass\u007D\u0020property\u0020is\u0020empty.",
+            "summary": "Add\u0020rating\u0020style\u0020class\u0020name\u0020to\u0020the\u0020class\u0020attribute\nwhen\u0020\u007B\u0040see\u0020setReadOnly\u0020ReadOnly\u007D\u0020property\u0020is\u0020true\u0020and\u0020when\u0020the\n\u007B\u0040see\u0020setCssClass\u0020CssClass\u007D\u0020property\u0020is\u0020empty.",
             "url": "classes/Prado-Web-UI-WebControls-TRatingList.html#method_render"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRatingList\u003A\u003AgetClientClassName\u0028\u0029",
@@ -41183,7 +44383,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TReadOnlyDataSourceView\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "The\u0020common\u0020__construct\nIf\u0020desired\u0020by\u0020the\u0020new\u0020object,\u0020this\u0020will\u0020auto\u0020install\u0020and\u0020listen\u0020to\u0020global\u0020event\u0020functions\nas\u0020defined\u0020by\u0020the\u0020object\u0020via\u0020\u0027fx\u0027\u0020methods.\u0020This\u0020also\u0020attaches\u0020any\u0020predefined\u0020behaviors.",
+            "summary": "The\u0020common\u0020__construct.",
             "url": "classes/Prado-Web-UI-WebControls-TReadOnlyDataSourceView.html#method___construct"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TReadOnlyDataSourceView\u003A\u003Aselect\u0028\u0029",
@@ -41983,7 +45183,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRepeater\u003A\u003AbubbleEvent\u0028\u0029",
             "name": "bubbleEvent",
-            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020to\u0020handle\n\u007B\u0040link\u0020onItemCommand\u0020OnItemCommand\u007D\u0020event\u0020which\u0020is\u0020bubbled\u0020from\nrepeater\u0020items\u0020and\u0020their\u0020child\u0020controls.",
+            "summary": "This\u0020method\u0020overrides\u0020parent\u0027s\u0020implementation\u0020to\u0020handle\n\u007B\u0040see\u0020onItemCommand\u0020OnItemCommand\u007D\u0020event\u0020which\u0020is\u0020bubbled\u0020from\nrepeater\u0020items\u0020and\u0020their\u0020child\u0020controls.",
             "url": "classes/Prado-Web-UI-WebControls-TRepeater.html#method_bubbleEvent"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TRepeater\u003A\u003AonItemCreated\u0028\u0029",
@@ -44351,165 +47551,20 @@ Search.appendIndex(
             "summary": "TTextBoxAutoCompleteType\u0020class.",
             "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html"
         },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessCity",
-            "name": "BusinessCity",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessCity"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessCountryRegion",
-            "name": "BusinessCountryRegion",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessCountryRegion"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessFax",
-            "name": "BusinessFax",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessFax"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessPhone",
-            "name": "BusinessPhone",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessPhone"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessState",
-            "name": "BusinessState",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessState"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessStreetAddress",
-            "name": "BusinessStreetAddress",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessStreetAddress"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessUrl",
-            "name": "BusinessUrl",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessUrl"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ABusinessZipCode",
-            "name": "BusinessZipCode",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_BusinessZipCode"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ACellular",
-            "name": "Cellular",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Cellular"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ACompany",
-            "name": "Company",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Company"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ADepartment",
-            "name": "Department",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Department"
-        },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ADisabled",
             "name": "Disabled",
             "summary": "",
             "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Disabled"
         },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ADisplayName",
-            "name": "DisplayName",
+            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AEnabled",
+            "name": "Enabled",
             "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_DisplayName"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AEmail",
-            "name": "Email",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Email"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AFirstName",
-            "name": "FirstName",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_FirstName"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AGender",
-            "name": "Gender",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Gender"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomeCity",
-            "name": "HomeCity",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_HomeCity"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomeCountryRegion",
-            "name": "HomeCountryRegion",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_HomeCountryRegion"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomeFax",
-            "name": "HomeFax",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_HomeFax"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomepage",
-            "name": "Homepage",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Homepage"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomePhone",
-            "name": "HomePhone",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_HomePhone"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomeState",
-            "name": "HomeState",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_HomeState"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomeStreetAddress",
-            "name": "HomeStreetAddress",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_HomeStreetAddress"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AHomeZipCode",
-            "name": "HomeZipCode",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_HomeZipCode"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AJobTitle",
-            "name": "JobTitle",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_JobTitle"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ALastName",
-            "name": "LastName",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_LastName"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AMiddleName",
-            "name": "MiddleName",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_MiddleName"
+            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Enabled"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ANone",
             "name": "None",
             "summary": "",
             "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_None"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ANotes",
-            "name": "Notes",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Notes"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003AOffice",
-            "name": "Office",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Office"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003APager",
-            "name": "Pager",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Pager"
-        },                {
-            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxAutoCompleteType\u003A\u003ASearch",
-            "name": "Search",
-            "summary": "",
-            "url": "classes/Prado-Web-UI-WebControls-TTextBoxAutoCompleteType.html#constant_Search"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TTextBoxMode",
             "name": "TTextBoxMode",
@@ -45508,22 +48563,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWebControlDecorator\u003A\u003ArenderPreTagText\u0028\u0029",
             "name": "renderPreTagText",
-            "summary": "This\u0020method\u0020places\u0020the\u0020pre\u0020tag\u0020text\u0020into\u0020the\u0020\u007B\u0040link\u0020TTextWriter\u007D",
+            "summary": "This\u0020method\u0020places\u0020the\u0020pre\u0020tag\u0020text\u0020into\u0020the\u0020\u007B\u0040see\u0020\\Prado\\IO\\TTextWriter\u007D",
             "url": "classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPreTagText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWebControlDecorator\u003A\u003ArenderPreContentsText\u0028\u0029",
             "name": "renderPreContentsText",
-            "summary": "This\u0020method\u0020places\u0020the\u0020pre\u0020contents\u0020text\u0020into\u0020the\u0020\u007B\u0040link\u0020TTextWriter\u007D",
+            "summary": "This\u0020method\u0020places\u0020the\u0020pre\u0020contents\u0020text\u0020into\u0020the\u0020\u007B\u0040see\u0020\\Prado\\IO\\TTextWriter\u007D",
             "url": "classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPreContentsText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWebControlDecorator\u003A\u003ArenderPostContentsText\u0028\u0029",
             "name": "renderPostContentsText",
-            "summary": "This\u0020method\u0020places\u0020the\u0020post\u0020contents\u0020text\u0020into\u0020the\u0020\u007B\u0040link\u0020TTextWriter\u007D",
+            "summary": "This\u0020method\u0020places\u0020the\u0020post\u0020contents\u0020text\u0020into\u0020the\u0020\u007B\u0040see\u0020\\Prado\\IO\\TTextWriter\u007D",
             "url": "classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPostContentsText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWebControlDecorator\u003A\u003ArenderPostTagText\u0028\u0029",
             "name": "renderPostTagText",
-            "summary": "This\u0020method\u0020places\u0020the\u0020post\u0020tag\u0020text\u0020into\u0020the\u0020\u007B\u0040link\u0020TTextWriter\u007D",
+            "summary": "This\u0020method\u0020places\u0020the\u0020post\u0020tag\u0020text\u0020into\u0020the\u0020\u007B\u0040see\u0020\\Prado\\IO\\TTextWriter\u007D",
             "url": "classes/Prado-Web-UI-WebControls-TWebControlDecorator.html#method_renderPostTagText"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWebControlDecorator\u003A\u003A\u0024_internalonly",
@@ -45603,7 +48658,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizard\u003A\u003AaddParsedObject\u0028\u0029",
             "name": "addParsedObject",
-            "summary": "Adds\u0020\u007B\u0040link\u0020TWizardStep\u007D\u0020objects\u0020into\u0020step\u0020collection.",
+            "summary": "Adds\u0020\u007B\u0040see\u0020\\Prado\\Web\\UI\\WebControls\\TWizardStep\u007D\u0020objects\u0020into\u0020step\u0020collection.",
             "url": "classes/Prado-Web-UI-WebControls-TWizard.html#method_addParsedObject"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizard\u003A\u003AgetActiveStep\u0028\u0029",
@@ -46366,6 +49421,11 @@ Search.appendIndex(
             "summary": "Instantiates\u0020the\u0020template.",
             "url": "classes/Prado-Web-UI-WebControls-TWizardNavigationTemplate.html#method_instantiateIn"
         },                {
+            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizardNavigationTemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
+            "name": "getIncludedFiles",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
+            "url": "classes/Prado-Web-UI-WebControls-TWizardNavigationTemplate.html#method_getIncludedFiles"
+        },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizardNavigationTemplate\u003A\u003AcreateNavigationButton\u0028\u0029",
             "name": "createNavigationButton",
             "summary": "Creates\u0020a\u0020navigation\u0020button.",
@@ -46386,6 +49446,11 @@ Search.appendIndex(
             "summary": "Instantiates\u0020the\u0020template.",
             "url": "classes/Prado-Web-UI-WebControls-TWizardSideBarListItemTemplate.html#method_instantiateIn"
         },                {
+            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizardSideBarListItemTemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
+            "name": "getIncludedFiles",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
+            "url": "classes/Prado-Web-UI-WebControls-TWizardSideBarListItemTemplate.html#method_getIncludedFiles"
+        },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizardSideBarTemplate",
             "name": "TWizardSideBarTemplate",
             "summary": "TWizardSideBarTemplate\u0020class.",
@@ -46395,6 +49460,11 @@ Search.appendIndex(
             "name": "instantiateIn",
             "summary": "Instantiates\u0020the\u0020template.",
             "url": "classes/Prado-Web-UI-WebControls-TWizardSideBarTemplate.html#method_instantiateIn"
+        },                {
+            "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizardSideBarTemplate\u003A\u003AgetIncludedFiles\u0028\u0029",
+            "name": "getIncludedFiles",
+            "summary": "TTemplateManager\u0020calls\u0020this\u0020method\u0020for\u0020caching\u0020the\u0020included\u0020file\u0020modification\u0020times.",
+            "url": "classes/Prado-Web-UI-WebControls-TWizardSideBarTemplate.html#method_getIncludedFiles"
         },                {
             "fqsen": "\\Prado\\Web\\UI\\WebControls\\TWizardStartNavigationTemplate",
             "name": "TWizardStartNavigationTemplate",
@@ -46821,141 +49891,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Prado-Xml-TXmlElementList.html#property__o"
         },                {
-            "fqsen": "\\Prado\\Collections\\IPriorityCapture",
-            "name": "IPriorityCapture",
-            "summary": "IPriorityCapture\u0020interface",
-            "url": "classes/Prado-Collections-IPriorityCapture.html"
-        },                {
-            "fqsen": "\\Prado\\Collections\\IPriorityCapture\u003A\u003AsetPriority\u0028\u0029",
-            "name": "setPriority",
-            "summary": "",
-            "url": "classes/Prado-Collections-IPriorityCapture.html#method_setPriority"
-        },                {
-            "fqsen": "\\Prado\\Collections\\IPriorityProperty",
-            "name": "IPriorityProperty",
-            "summary": "IPriorityProperty\u0020interface",
-            "url": "classes/Prado-Collections-IPriorityProperty.html"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection",
-            "name": "DynamicMethodReflection",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method___construct"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetDeclaringClass\u0028\u0029",
-            "name": "getDeclaringClass",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getDeclaringClass"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisStatic\u0028\u0029",
-            "name": "isStatic",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isStatic"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisPrivate\u0028\u0029",
-            "name": "isPrivate",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isPrivate"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisPublic\u0028\u0029",
-            "name": "isPublic",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isPublic"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetDocComment\u0028\u0029",
-            "name": "getDocComment",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getDocComment"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetName\u0028\u0029",
-            "name": "getName",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getName"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetPrototype\u0028\u0029",
-            "name": "getPrototype",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getPrototype"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetVariants\u0028\u0029",
-            "name": "getVariants",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getVariants"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisDeprecated\u0028\u0029",
-            "name": "isDeprecated",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isDeprecated"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetDeprecatedDescription\u0028\u0029",
-            "name": "getDeprecatedDescription",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getDeprecatedDescription"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisFinal\u0028\u0029",
-            "name": "isFinal",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isFinal"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AisInternal\u0028\u0029",
-            "name": "isInternal",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_isInternal"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AgetThrowType\u0028\u0029",
-            "name": "getThrowType",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_getThrowType"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003AhasSideEffects\u0028\u0029",
-            "name": "hasSideEffects",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#method_hasSideEffects"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003A\u0024_classReflection",
-            "name": "_classReflection",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#property__classReflection"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodReflection\u003A\u003A\u0024_methodName",
-            "name": "_methodName",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodReflection.html#property__methodName"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodsClassReflectionExtension",
-            "name": "DynamicMethodsClassReflectionExtension",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodsClassReflectionExtension.html"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodsClassReflectionExtension\u003A\u003AhasMethod\u0028\u0029",
-            "name": "hasMethod",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodsClassReflectionExtension.html#method_hasMethod"
-        },                {
-            "fqsen": "\\Prado\\PHPStan\\DynamicMethodsClassReflectionExtension\u003A\u003AgetMethod\u0028\u0029",
-            "name": "getMethod",
-            "summary": "",
-            "url": "classes/Prado-PHPStan-DynamicMethodsClassReflectionExtension.html#method_getMethod"
-        },                {
-            "fqsen": "\\Prado\\Web\\THttpRequestResolveMethod",
-            "name": "THttpRequestResolveMethod",
-            "summary": "THttpRequestResolveMethod\u0020class.",
-            "url": "classes/Prado-Web-THttpRequestResolveMethod.html"
-        },                {
-            "fqsen": "\\Prado\\Web\\THttpRequestResolveMethod\u003A\u003AServiceOrder",
-            "name": "ServiceOrder",
-            "summary": "",
-            "url": "classes/Prado-Web-THttpRequestResolveMethod.html#constant_ServiceOrder"
-        },                {
-            "fqsen": "\\Prado\\Web\\THttpRequestResolveMethod\u003A\u003AParameterOrder",
-            "name": "ParameterOrder",
-            "summary": "",
-            "url": "classes/Prado-Web-THttpRequestResolveMethod.html#constant_ParameterOrder"
-        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -47121,10 +50056,25 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/prado-util-cron.html"
         },                {
+            "fqsen": "\\Prado\\Util\\Helpers",
+            "name": "Helpers",
+            "summary": "",
+            "url": "namespaces/prado-util-helpers.html"
+        },                {
             "fqsen": "\\Prado\\Util",
             "name": "Util",
             "summary": "",
             "url": "namespaces/prado-util.html"
+        },                {
+            "fqsen": "\\Prado\\Util\\Math",
+            "name": "Math",
+            "summary": "",
+            "url": "namespaces/prado-util-math.html"
+        },                {
+            "fqsen": "\\Prado\\Web\\Behaviors",
+            "name": "Behaviors",
+            "summary": "",
+            "url": "namespaces/prado-web-behaviors.html"
         },                {
             "fqsen": "\\Prado\\Web\\Javascripts",
             "name": "Javascripts",
